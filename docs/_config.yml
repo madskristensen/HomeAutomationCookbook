@@ -1,0 +1,121 @@
+# Home Automation Cookbook
+# Documentation Jekyll configuration
+
+# Site settings
+title: Home Automation Cookbook
+email: your-email@example.com
+description: >-
+  A comprehensive guide for home automation enthusiasts.
+  Learn about smart home devices, automation platforms, and best practices.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+repository: madskristensen/HomeAutomationCookbook # Replace with your GitHub username/repo
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-cayman
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Philosophy
+    url: /philosophy/
+  - title: Automations
+    url: /automation/
+    subitems:
+      - title: Motion detection
+        url: /automation/motion/
+        subitems:
+          - title: Lights on motion
+            url: /automation/motion/lights-on-motion/
+          - title: Lights off after motion
+            url: /automation/motion/lights-off-after-motion/
+          - title: Bathroom night light
+            url: /automation/motion/bathroom-night-light/
+      - title: Contact sensors
+        url: /automation/contact/
+        subitems:
+          - title: Toggle lights on door
+            url: /automation/contact/toggle-lights-door/
+          - title: Disable on door close
+            url: /automation/contact/disable-on-door-close/
+      - title: Presence & modes
+        url: /automation/presence/
+        subitems:
+          - title: Away mode
+            url: /automation/presence/away-mode/
+          - title: Unlock door on arrival
+            url: /automation/presence/unlock-door-arrival/
+          - title: Morning routine
+            url: /automation/presence/morning-routine/
+          - title: Bedtime routine
+            url: /automation/presence/bedtime-routine/
+      - title: Climate
+        url: /automation/climate/
+        subitems:
+          - title: Thermostat - windows open
+            url: /automation/climate/thermostat-windows-open/
+          - title: Thermostat - windows close
+            url: /automation/climate/thermostat-windows-close/
+          - title: Window notifications
+            url: /automation/climate/window-notifications/
+          - title: Air quality purifier
+            url: /automation/climate/air-quality-purifier/
+          - title: Fan after shower
+            url: /automation/climate/fan-shower/
+          - title: Room heater temp control
+            url: /automation/climate/room-heater-maintain-temp/
+      - title: Media
+        url: /automation/media/
+        subitems:
+          - title: TV dims lights
+            url: /automation/media/tv-dim-lights/
+          - title: Welcome home music
+            url: /automation/media/welcome-home-music/
+          - title: Shower music
+            url: /automation/media/shower-music/
+          - title: Music switch control
+            url: /automation/media/music-switch-control/
+          - title: Speaker volume presets
+            url: /automation/media/speaker-volume-presets/
+      - title: Appliances
+        url: /automation/appliances/
+        subitems:
+          - title: Washer done notification
+            url: /automation/appliances/washer-done-notification/
+          - title: Dryer done notification
+            url: /automation/appliances/dryer-done-notification/
+          - title: Dishwasher done alert
+            url: /automation/appliances/dishwasher-done-notification/
+          - title: Coffee maker morning
+            url: /automation/appliances/coffee-maker-morning/
+          - title: Robot vacuum auto start
+            url: /automation/appliances/robot-vacuum-auto-start/
+  - title: Tips & tricks
+    url: /tips/
+  - title: Resources
+    url: /resources/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

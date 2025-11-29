@@ -1,0 +1,18 @@
+source "https://rubygems.org"
+
+# Jekyll version compatible with GitHub Pages
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 3.9"
+
+# Plugins
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+end
+
+# Windows and JRuby does not include zoneinfo files
+gem "tzinfo-data", platforms: [:windows, :jruby]
+
+# Webrick for Ruby 3.0+
+gem "webrick", "~> 1.7"

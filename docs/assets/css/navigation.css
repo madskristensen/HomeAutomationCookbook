@@ -1,0 +1,274 @@
+/* Navigation Styles */
+.main-navigation {
+  background: #2c3e50;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.site-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 0;
+  display: inline-block;
+}
+
+.site-title:hover {
+  color: #3498db;
+}
+
+/* Hide the checkbox visually but keep it functional */
+.nav-toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+/* Hide hamburger menu on desktop */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 1.25rem;
+  display: block;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background: #34495e;
+  color: #3498db;
+}
+
+.dropdown-arrow {
+  margin-left: 0.25rem;
+  font-size: 0.8em;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #34495e;
+  min-width: 220px;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 0 0 4px 4px;
+}
+
+.nav-item.has-dropdown:hover .dropdown-menu,
+.nav-item.has-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  margin: 0;
+  position: relative;
+}
+
+.dropdown-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dropdown-item a:hover {
+  background: #2c3e50;
+  color: #3498db;
+}
+
+/* Flyout arrow indicator */
+.flyout-arrow {
+  float: right;
+  margin-left: 0.5rem;
+  font-size: 0.9em;
+}
+
+/* Third-level flyout menu (appears to the right) */
+.flyout-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #2c3e50;
+  min-width: 240px;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 1001;
+}
+
+.dropdown-item.has-flyout:hover .flyout-menu,
+.dropdown-item.has-flyout:focus-within .flyout-menu {
+  display: block;
+}
+
+.flyout-item {
+  margin: 0;
+}
+
+.flyout-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.65rem 1.25rem;
+  display: block;
+  transition: background 0.3s;
+  font-size: 0.95em;
+}
+
+.flyout-item a:hover {
+  background: #34495e;
+  color: #3498db;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    align-items: center;
+  }
+
+  .site-title {
+    order: 1;
+    flex: 1;
+  }
+  
+  /* Show hamburger menu toggle */
+  .nav-toggle {
+    display: block;
+    order: 3;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #2c3e50;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    order: 2;
+    width: 100%;
+  }
+  
+  /* Show menu when checkbox is checked - use :has() selector */
+  .nav-container:has(.nav-toggle-checkbox:checked) .nav-menu {
+    display: flex;
+  }
+  
+  .nav-item {
+    width: 100%;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    background: #2c3e50;
+  }
+  
+  /* Show dropdown on focus-within (tap/click/keyboard) */
+  .nav-item.has-dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+  
+  .nav-link {
+    padding: 0.75rem 1.25rem;
+  }
+  
+  .dropdown-item a {
+    padding-left: 2.5rem;
+  }
+  
+  /* Mobile flyout menu (nested inline) */
+  .flyout-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    background: #1a252f;
+  }
+  
+  /* Show flyout on focus-within (tap/click/keyboard) */
+  .dropdown-item.has-flyout:focus-within .flyout-menu {
+    display: block;
+  }
+  
+  .flyout-item a {
+    padding-left: 3.75rem;
+    font-size: 0.9em;
+  }
+  
+  .flyout-arrow {
+    float: right;
+  }
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #7f8c8d;
+  margin: 0 0.5rem;
+}

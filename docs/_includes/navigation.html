@@ -1,0 +1,46 @@
+<nav class="main-navigation">
+  <div class="nav-container">
+    <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+    
+    <ul class="nav-menu">
+      {% for item in site.navigation %}
+        <li class="nav-item {% if item.subitems %}has-dropdown{% endif %}" tabindex="0">
+          <a href="{{ item.url | relative_url }}" class="nav-link">
+            {{ item.title }}
+            {% if item.subitems %}<span class="dropdown-arrow">▾</span>{% endif %}
+          </a>
+          
+          {% if item.subitems %}
+          <ul class="dropdown-menu">
+            {% for subitem in item.subitems %}
+              <li class="dropdown-item {% if subitem.subitems %}has-flyout{% endif %}" tabindex="0">
+                <a href="{{ subitem.url | relative_url }}">
+                  {{ subitem.title }}
+                  {% if subitem.subitems %}<span class="flyout-arrow">▸</span>{% endif %}
+                </a>
+                
+                {% if subitem.subitems %}
+                <ul class="flyout-menu">
+                  {% for subsubitem in subitem.subitems %}
+                    <li class="flyout-item">
+                      <a href="{{ subsubitem.url | relative_url }}">{{ subsubitem.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+</nav>

@@ -1,0 +1,137 @@
+/* Card Layout Styles */
+.automation-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.automation-card {
+  background: #fff;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.automation-card h3,
+.automation-card h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.automation-card h3 a,
+.automation-card h4 a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.automation-card p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.automation-card p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.automation-card .card-meta {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.automation-card .card-link {
+  display: inline-block;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.automation-card .card-link:hover {
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Category intro section */
+.category-intro {
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+.category-intro h2 {
+  margin-top: 0;
+  color: #27ae60;
+}
+
+.category-intro ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.category-intro li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+/* Section headings */
+.section-heading {
+  color: #2c3e50;
+  border-bottom: 2px solid #e1e8ed;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation links at bottom */
+.page-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e1e8ed;
+}
+
+.page-navigation a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.page-navigation a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .automation-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-navigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,26 @@
+# Home Automation Cookbook
+# Jekyll configuration
+
+# Site settings
+title: Home Automation Cookbook
+description: A comprehensive guide for home automation enthusiasts
+author: Home Automation Community
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-cayman
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude files from processing
+exclude:
+  - .vs/
+  - .vscode/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
