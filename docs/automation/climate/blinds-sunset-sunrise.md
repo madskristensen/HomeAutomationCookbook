@@ -141,12 +141,21 @@ THEN close all blinds to 0%</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Open: Trigger on sun rising, action cover.open</li>
-      <li>Close: Trigger on sun setting, action cover.close</li>
-      <li>Use sun.sun entity for dynamic times</li>
-      <li>Add offset: sunrise + 30 minutes for delayed open</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Open</span>
+        <span class="step-content">Trigger on sun rising, action cover.open</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Close</span>
+        <span class="step-content">Trigger on sun setting, action cover.close</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Tip:</strong> Add offset: sunrise + 30 minutes for delayed open
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -154,12 +163,21 @@ THEN close all blinds to 0%</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Time is sunrise THEN Open blinds</li>
-      <li>IF Time is sunset THEN Close blinds</li>
-      <li>Use location-based sunrise/sunset times</li>
-      <li>Add routines for weekend variations</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Time is sunrise THEN Open blinds</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Time is sunset THEN Close blinds</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Add routines for weekend variations
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -167,12 +185,21 @@ THEN close all blinds to 0%</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Simple Automation Rules or Rule Machine</li>
-      <li>Trigger: Sunrise/Sunset (built-in)</li>
-      <li>Action: Set shade level to 0% or 100%</li>
-      <li>Add offsets as needed</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Sunrise/Sunset (built-in)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set shade level to 0% or 100%</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Simple Automation Rules or Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -180,12 +207,21 @@ THEN close all blinds to 0%</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Create automation: When sunrise, open blinds</li>
-      <li>Create automation: When sunset, close blinds</li>
-      <li>Add time offsets in automation settings</li>
-      <li>Can also use "A time of day" with actual times</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Sunrise</span>
+        <span class="step-content">Create automation: When sunrise, open blinds</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Sunset</span>
+        <span class="step-content">Create automation: When sunset, close blinds</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Add time offsets in automation settings
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -193,11 +229,21 @@ THEN close all blinds to 0%</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Routine: When sunrise → Open blinds</li>
-      <li>Routine: When sunset → Close blinds</li>
-      <li>OR use scheduled times that you adjust seasonally</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Sunrise</span>
+        <span class="step-content">Routine: When sunrise → Open blinds</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Sunset</span>
+        <span class="step-content">Routine: When sunset → Close blinds</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Works with compatible blind devices
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -205,11 +251,21 @@ THEN close all blinds to 0%</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Automation: Sunrise starter → Open blinds</li>
-      <li>Automation: Sunset starter → Close blinds</li>
-      <li>Use household routines for time-based triggers</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Sunrise</span>
+        <span class="step-content">Starter: Sunrise → Open blinds</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Sunset</span>
+        <span class="step-content">Starter: Sunset → Close blinds</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Requires Works with Google compatible shades
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
