@@ -43,6 +43,18 @@ Automatically turn on outdoor lights when it gets dark for safety, aesthetics, a
 
 <div class="automation-card" markdown="1">
 
+### Low battery alerts
+
+Get proactive notifications when device batteries are low to maintain reliable automation.
+
+<span class="card-meta">**Best for:** Maintenance, preventing automation failures</span>
+
+<p><a href="/automation/misc/low-battery-alerts.html" class="card-link">View Automation →</a></p>
+
+</div>
+
+<div class="automation-card" markdown="1">
+
 ### Baby sleep mode
 
 Disable automations in baby's room when they're sleeping using power monitoring on white noise machine.
@@ -290,6 +302,7 @@ Know when packages arrive:
 
 **Get Started:**
 - [Outdoor Night Lights →](/automation/misc/outdoor-night-lights.html)
+- [Low Battery Alerts →](/automation/misc/low-battery-alerts.html)
 - [Doorbell Notification →](/automation/misc/doorbell-notification.html)
 - [Baby Sleep Mode →](/automation/misc/baby-sleep-mode.html)
 - [Teeth Brushing Reminder →](/automation/misc/teeth-brushing-reminder.html)
