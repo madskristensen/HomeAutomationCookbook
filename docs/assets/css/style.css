@@ -1200,6 +1200,9 @@ th {
     border-bottom: 1px solid #e0e0e0;
     order: 2;
     width: 100%;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   
   .nav-container:has(.nav-toggle-checkbox:checked) .nav-menu {
