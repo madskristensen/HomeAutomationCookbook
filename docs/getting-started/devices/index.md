@@ -139,6 +139,6 @@ Smart control for your media.
 
 ## Next steps
 
-- [Choose your platform →](/platforms/)
+- [Choose your platform →](/getting-started/platforms/)
 - [Create automations →](/automation/)
 - [Setup best practices →](/best-practices/)

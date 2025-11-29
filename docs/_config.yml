@@ -24,10 +24,13 @@ navigation:
     url: /
   - title: Getting started
     url: /getting-started/
+    subitems:
+      - title: Platforms
+        url: /getting-started/platforms/
+      - title: Devices
+        url: /getting-started/devices/
   - title: Philosophy
     url: /philosophy/
-  - title: Platforms
-    url: /platforms/
   - title: Automations
     url: /automation/
     subitems:

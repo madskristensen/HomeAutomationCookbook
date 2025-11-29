@@ -57,6 +57,11 @@ Before purchasing devices, consider:
 - **Pros**: Strong voice control, affordable devices
 - **Cons**: Privacy concerns
 
+#### Amazon Alexa
+- **Best for**: Voice control enthusiasts, Amazon ecosystem users
+- **Pros**: Huge skill library, excellent voice recognition, affordable devices
+- **Cons**: Cloud-dependent, privacy concerns
+
 ## Essential first devices
 
 Start with these categories:
@@ -75,10 +80,10 @@ Start with these categories:
 
 ## Next steps
 
-- [Explore platforms](/platforms/) in detail
-- [Browse device recommendations](/devices/)
+- [Explore platforms](/getting-started/platforms/) in detail
+- [Browse device recommendations](/getting-started/devices/)
 - [Create your first automation](/automation/)
 
 ---
 
-[Continue to platforms →](/platforms/)
+[Continue to platforms →](/getting-started/platforms/)
