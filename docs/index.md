@@ -25,8 +25,8 @@ description: Transform your house into a truly smart home with tested automation
     </div>
   </div>
   <div class="hero-cta">
-    <a href="/automation/" class="cta-primary">Browse automations</a>
-    <a href="/philosophy/" class="cta-secondary">Learn the principles</a>
+    <a href="/automation/index.html" class="cta-primary">Browse automations</a>
+    <a href="/philosophy/index.html" class="cta-secondary">Learn the principles</a>
   </div>
 </div>
 
@@ -86,43 +86,43 @@ This cookbook is different. Every automation here follows proven principles:
 ## Browse all automations
 
 <div class="category-grid">
-  <a href="/automation/lighting/" class="category-card">
+  <a href="/automation/lighting/index.html" class="category-card">
     <h3>Lighting</h3>
     <p>Motion-triggered, door-activated, and scheduled lighting</p>
     <span class="category-count">6 automations</span>
   </a>
   
-  <a href="/automation/daily-routines/" class="category-card">
+  <a href="/automation/daily-routines/index.html" class="category-card">
     <h3>Daily routines</h3>
     <p>Morning, bedtime, away, and arrival automations</p>
     <span class="category-count">4 automations</span>
   </a>
   
-  <a href="/automation/climate/" class="category-card">
+  <a href="/automation/climate/index.html" class="category-card">
     <h3>Climate and comfort</h3>
     <p>Temperature, humidity, and air quality</p>
     <span class="category-count">7 automations</span>
   </a>
   
-  <a href="/automation/entertainment/" class="category-card">
+  <a href="/automation/entertainment/index.html" class="category-card">
     <h3>Entertainment</h3>
     <p>Music and TV automations</p>
     <span class="category-count">5 automations</span>
   </a>
   
-  <a href="/automation/appliances/" class="category-card">
+  <a href="/automation/appliances/index.html" class="category-card">
     <h3>Appliances</h3>
     <p>Washer, dryer, vacuum automations</p>
     <span class="category-count">5 automations</span>
   </a>
   
-  <a href="/automation/security/" class="category-card">
+  <a href="/automation/security/index.html" class="category-card">
     <h3>Safety and security</h3>
     <p>Fire, water leak, and intrusion response</p>
     <span class="category-count">5 automations</span>
   </a>
   
-  <a href="/automation/notifications/" class="category-card">
+  <a href="/automation/notifications/index.html" class="category-card">
     <h3>Notifications</h3>
     <p>Alerts, reminders, and dashboard tiles</p>
     <span class="category-count">7 automations</span>
@@ -132,7 +132,7 @@ This cookbook is different. Every automation here follows proven principles:
 <div class="getting-started-box">
   <h2>New to home automation?</h2>
   <p>Start with our philosophy guide to understand what makes automations truly helpful (versus just technically impressive).</p>
-  <a href="/philosophy/" class="cta-primary">Read the philosophy →</a>
+  <a href="/philosophy/index.html" class="cta-primary">Read the philosophy →</a>
 </div>
 
 <div class="community-section">
@@ -143,11 +143,11 @@ This cookbook is different. Every automation here follows proven principles:
       <strong>GitHub</strong>
       <span>Contribute recipes</span>
     </a>
-    <a href="/resources/" class="community-link">
+    <a href="/getting-started/resources.html" class="community-link">
       <strong>Resources</strong>
       <span>Recommended communities</span>
     </a>
-    <a href="/tips/" class="community-link">
+    <a href="/getting-started/tips.html" class="community-link">
       <strong>Tips and tricks</strong>
       <span>Expert advice</span>
     </a>

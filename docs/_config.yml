@@ -29,13 +29,17 @@ navigation:
         url: /getting-started/choose-the-right-platform.html
       - title: Device guide
         url: /getting-started/device-guide.html
+      - title: Tips and tricks
+        url: /getting-started/tips.html
+      - title: Resources
+        url: /getting-started/resources.html
   - title: Philosophy
-    url: /philosophy/
+    url: /philosophy/index.html
   - title: Automations
-    url: /automation/
+    url: /automation/index.html
     subitems:
       - title: Lighting
-        url: /automation/lighting/
+        url: /automation/lighting/index.html
         subitems:
           - title: Lights on motion
             url: /automation/lighting/lights-on-motion.html
@@ -50,7 +54,7 @@ navigation:
           - title: Outdoor night lights
             url: /automation/lighting/outdoor-night-lights.html
       - title: Daily routines
-        url: /automation/daily-routines/
+        url: /automation/daily-routines/index.html
         subitems:
           - title: Away mode
             url: /automation/daily-routines/away-mode.html
@@ -61,7 +65,7 @@ navigation:
           - title: Bedtime routine
             url: /automation/daily-routines/bedtime-routine.html
       - title: Climate and comfort
-        url: /automation/climate/
+        url: /automation/climate/index.html
         subitems:
           - title: Thermostat - windows open
             url: /automation/climate/thermostat-windows-open.html
@@ -78,7 +82,7 @@ navigation:
           - title: Blinds at sunset/sunrise
             url: /automation/climate/blinds-sunset-sunrise.html
       - title: Entertainment
-        url: /automation/entertainment/
+        url: /automation/entertainment/index.html
         subitems:
           - title: TV dims lights
             url: /automation/entertainment/tv-dim-lights.html
@@ -91,7 +95,7 @@ navigation:
           - title: Speaker volume presets
             url: /automation/entertainment/speaker-volume-presets.html
       - title: Appliances
-        url: /automation/appliances/
+        url: /automation/appliances/index.html
         subitems:
           - title: Washer done notification
             url: /automation/appliances/washer-done-notification.html
@@ -104,7 +108,7 @@ navigation:
           - title: Robot vacuum auto start
             url: /automation/appliances/robot-vacuum-auto-start.html
       - title: Safety and security
-        url: /automation/security/
+        url: /automation/security/index.html
         subitems:
           - title: Away lights
             url: /automation/security/away-lights.html
@@ -117,7 +121,7 @@ navigation:
           - title: Garage door notification
             url: /automation/security/garage-door-notification.html
       - title: Notifications and alerts
-        url: /automation/notifications/
+        url: /automation/notifications/index.html
         subitems:
           - title: Low battery alerts
             url: /automation/notifications/low-battery-alerts.html
@@ -133,12 +137,8 @@ navigation:
             url: /automation/notifications/teeth-brushing-reminder.html
           - title: Music controls
             url: /automation/notifications/music-controls.html
-  - title: Tips and tricks
-    url: /tips/
-  - title: Resources
-    url: /resources/
   - title: FAQ
-    url: /faq/
+    url: /faq/index.html
 
 # Plugins
 plugins:

@@ -314,4 +314,4 @@ This guide is open source and welcomes contributions!
 
 ---
 
-[← Back to Home](/)
+[← Back to Getting started](/getting-started/) | [← Back to Home](/)

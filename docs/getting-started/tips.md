@@ -261,4 +261,4 @@ Mark switches with special capabilities:
 
 ---
 
-[← Back to Home](/) | [View Resources →](/resources/)
+[← Back to Home](/) | [View Resources →](/getting-started/resources.html)
