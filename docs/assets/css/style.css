@@ -970,48 +970,96 @@ th {
 /* Homepage Components
    ========================================================================== */
 
-/* Tips and tricks page styles */
-.tips-grid {
+/* Page-specific card grids (tips, philosophy, resources, platform comparison) */
+.tips-grid,
+.philosophy-grid,
+.resources-grid {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   margin: 3rem 0;
 }
 
-.tip-card {
+.platform-comparison-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+/* Shared card styles for tips, philosophy, platform detail, and resource cards */
+.tip-card,
+.philosophy-card,
+.platform-detail-card,
+.resource-category {
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
   border-radius: 12px;
   overflow: hidden;
-  transition: box-shadow 0.2s ease;
 }
 
-.tip-card:hover {
+.tip-card:hover,
+.philosophy-card:hover,
+.platform-detail-card:hover {
   box-shadow: var(--shadow-lg);
 }
 
-.tip-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+/* Shared header styles for card headers */
+.tip-header,
+.philosophy-header,
+.platform-detail-header,
+.resource-category-header {
   padding: 2rem;
   background: var(--color-bg-muted);
   border-bottom: 2px solid var(--color-border);
 }
 
-.tip-icon {
+.resource-category-header {
+  padding: 1.5rem 2rem;
+}
+
+.tip-header,
+.philosophy-header,
+.platform-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Shared icon styles */
+.tip-icon,
+.philosophy-icon {
   font-size: 2.5rem;
   line-height: 1;
   flex-shrink: 0;
 }
 
-.tip-header h2 {
+/* Shared heading styles within card headers */
+.tip-header h2,
+.philosophy-header h2,
+.resource-category-header h2 {
   margin: 0;
-  font-size: 1.6rem;
   color: var(--color-text-heading);
 }
 
-.tip-intro {
+.tip-header h2,
+.philosophy-header h2 {
+  font-size: 1.6rem;
+}
+
+.resource-category-header h2 {
+  font-size: 1.5rem;
+}
+
+.platform-detail-header h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  color: var(--color-text-heading);
+}
+
+/* Shared intro/description sections */
+.tip-intro,
+.philosophy-intro {
   padding: 1.5rem 2rem;
   font-size: 1.05rem;
   line-height: 1.7;
@@ -1021,56 +1069,91 @@ th {
   margin: 0;
 }
 
-.tip-section {
+/* Shared section styles */
+.tip-section,
+.philosophy-section {
   padding: 1.5rem 2rem;
   border-bottom: 1px solid var(--color-border);
 }
 
-.tip-section:last-child {
+.tip-section:last-child,
+.philosophy-section:last-child {
   border-bottom: none;
 }
 
-.tip-section h3 {
+.tip-section h3,
+.philosophy-section h3,
+.setup-steps h3,
+.philosophy-checklist h3 {
   margin: 0 0 1rem;
   font-size: 1.2rem;
   color: var(--color-text-heading);
 }
 
-.tip-section p {
-  margin: 0;
+.setup-steps h3 {
+  margin-bottom: 1.5rem;
+}
+
+.tip-section p,
+.philosophy-section p {
+  margin: 0 0 1rem;
   line-height: 1.7;
 }
 
-.tip-section ul {
+.tip-section p:last-child,
+.philosophy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.tip-section ul,
+.philosophy-section ul {
   margin: 0.5rem 0 0;
   padding-left: 1.5rem;
 }
 
-.tip-section li {
+.tip-section li,
+.philosophy-section li {
   margin-bottom: 0.5rem;
 }
 
 /* Subscription examples */
-.subscription-examples {
+.subscription-examples,
+.status-examples {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 1rem;
+}
+
+.subscription-examples {
+  gap: 1rem;
+}
+
+.subscription-item,
+.status-category {
+  padding: 1.25rem;
+  background: var(--color-bg-muted);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
 }
 
 .subscription-item {
   padding: 1rem;
-  background: var(--color-bg-muted);
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.subscription-item strong {
+.subscription-item strong,
+.status-category strong {
   color: var(--color-text-heading);
   font-size: 1rem;
+}
+
+.status-category strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
 }
 
 .subscription-item span {
@@ -1078,53 +1161,92 @@ th {
   font-size: 0.9rem;
 }
 
-/* Benefits section */
-.tip-benefits {
-  padding: 1.5rem 2rem;
-  background: var(--color-bg-subtle);
+.status-category ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
 }
 
-.benefit-item {
+.status-category li {
+  margin-bottom: 0.5rem;
+}
+
+/* Benefits section and checklist items - shared styles */
+.tip-benefits,
+.philosophy-checklist {
+  padding: 2rem;
+}
+
+.tip-benefits {
+  background: var(--color-bg-subtle);
+  padding: 1.5rem 2rem;
+}
+
+.philosophy-checklist {
+  background: var(--color-bg-muted);
+}
+
+.benefit-item,
+.checklist-item {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 0.75rem;
   line-height: 1.6;
+}
+
+.checklist-item {
+  align-items: flex-start;
+  padding: 1rem;
+  background: var(--color-bg-elevated);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 0;
+}
+
+.checklist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .benefit-item:last-child {
   margin-bottom: 0;
 }
 
-.benefit-icon {
+.benefit-icon,
+.checklist-icon,
+.reason-icon {
   color: #16a34a;
   font-weight: bold;
   font-size: 1.2em;
   flex-shrink: 0;
 }
 
-/* Requirements section */
-.tip-requirements {
+.checklist-icon {
+  font-size: 1.3em;
+  line-height: 1;
+}
+
+.checklist-item strong {
+  color: var(--color-text-heading);
+  font-weight: 600;
+}
+
+/* Requirements and implementation sections */
+.tip-requirements,
+.tip-implementation {
   padding: 1.5rem 2rem;
-  background: var(--color-bg-muted);
   border-bottom: 1px solid var(--color-border);
 }
 
-.tip-requirements h3 {
-  margin: 0 0 1rem;
-  font-size: 1.2rem;
-  color: var(--color-text-heading);
+.tip-requirements {
+  background: var(--color-bg-muted);
 }
 
 .tip-requirements ul {
   margin: 0;
   padding-left: 1.5rem;
-}
-
-/* Implementation flow */
-.tip-implementation {
-  padding: 1.5rem 2rem;
-  border-bottom: 1px solid var(--color-border);
 }
 
 .implementation-flow {
@@ -1163,26 +1285,23 @@ th {
   color: var(--color-text);
 }
 
-/* Example scenario */
-.example-scenario {
+/* Example scenario and pattern example - shared styles */
+.example-scenario,
+.pattern-example {
   padding: 1.5rem 2rem;
   background: var(--color-bg-subtle);
   border-bottom: 1px solid var(--color-border);
 }
 
-.example-scenario h3 {
-  margin: 0 0 1rem;
-  font-size: 1.2rem;
-  color: var(--color-text-heading);
-}
-
-.scenario-steps {
+.scenario-steps,
+.pattern-reasons {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.scenario-step {
+.scenario-step,
+.pattern-reason {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -1190,6 +1309,11 @@ th {
   background: var(--color-bg-elevated);
   border-radius: 8px;
   border: 1px solid var(--color-border);
+}
+
+.pattern-reason {
+  padding: 0.75rem;
+  border-radius: 6px;
 }
 
 .step-number {
@@ -1247,112 +1371,11 @@ th {
 }
 
 /* Status examples */
-.status-examples {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
 
-.status-category {
-  padding: 1.25rem;
-  background: var(--color-bg-muted);
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-}
+/* Removed - consolidated above with subscription-examples */
 
-.status-category strong {
-  display: block;
-  margin-bottom: 0.75rem;
-  color: var(--color-text-heading);
-  font-size: 1.05rem;
-}
-
-.status-category ul {
-  margin: 0;
-  padding-left: 1.25rem;
-  font-size: 0.9rem;
-}
-
-.status-category li {
-  margin-bottom: 0.5rem;
-}
-
-/* Implementation tips grid */
-.implementation-tips {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.tip-subsection {
-  padding: 1.25rem;
-  background: var(--color-bg-muted);
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-}
-
-.tip-subsection h4 {
-  margin: 0 0 0.5rem;
-  font-size: 1rem;
-  color: var(--color-text-heading);
-}
-
-.tip-subsection p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-/* Pattern sections */
-.pattern-example {
-  padding: 1.5rem 2rem;
-  background: var(--color-bg-subtle);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.pattern-example h3 {
-  margin: 0 0 1rem;
-  font-size: 1.2rem;
-  color: var(--color-text-heading);
-}
-
-.pattern-benefit {
-  padding: 1rem;
-  background: var(--color-bg-elevated);
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-}
-
-.pattern-benefit strong {
-  color: var(--color-text-heading);
-}
-
-.pattern-reasons {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.pattern-reason {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  background: var(--color-bg-elevated);
-  border-radius: 6px;
-}
-
-.reason-icon {
-  color: #16a34a;
-  font-weight: bold;
-  font-size: 1.2em;
-  flex-shrink: 0;
-}
-
+/* Implementation tips grid and pattern ideas - shared grid styles */
+.implementation-tips,
 .pattern-ideas {
   display: flex;
   flex-direction: column;
@@ -1360,6 +1383,13 @@ th {
   margin-top: 1rem;
 }
 
+.implementation-tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-subsection,
 .pattern-idea {
   padding: 1.25rem;
   background: var(--color-bg-muted);
@@ -1367,97 +1397,54 @@ th {
   border: 1px solid var(--color-border);
 }
 
+.tip-subsection h4,
+.pattern-idea strong {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text-heading);
+}
+
 .pattern-idea strong {
   display: block;
-  margin-bottom: 0.5rem;
-  color: var(--color-text-heading);
   font-size: 1.05rem;
 }
 
+.tip-subsection p,
 .pattern-idea p {
   margin: 0;
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
+/* Pattern sections */
+
+.pattern-benefit strong {
+  color: var(--color-text-heading);
+}
+
+/* Removed redundant pattern styles - consolidated above */
+
 /* Philosophy page styles */
-.philosophy-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin: 3rem 0;
-}
 
-.philosophy-card {
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: box-shadow 0.2s ease;
-}
+/* Removed - consolidated above with tip card styles */
 
-.philosophy-card:hover {
-  box-shadow: var(--shadow-lg);
-}
-
-.philosophy-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  background: var(--color-bg-muted);
-  border-bottom: 2px solid var(--color-border);
-}
-
-.philosophy-icon {
-  font-size: 2.5rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.philosophy-header h2 {
-  margin: 0;
-  font-size: 1.6rem;
-  color: var(--color-text-heading);
-}
-
-.philosophy-intro {
-  padding: 1.5rem 2rem;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--color-text);
-  background: var(--color-bg-subtle);
-  border-bottom: 1px solid var(--color-border);
-  margin: 0;
-}
-
-.philosophy-section {
+.philosophy-example,
+.philosophy-fix,
+.philosophy-takeaway {
   padding: 1.5rem 2rem;
   border-bottom: 1px solid var(--color-border);
-}
-
-.philosophy-section:last-child {
-  border-bottom: none;
-}
-
-.philosophy-section h3 {
-  margin: 0 0 1rem;
-  font-size: 1.2rem;
-  color: var(--color-text-heading);
-}
-
-.philosophy-section p {
-  margin: 0 0 1rem;
-  line-height: 1.7;
-}
-
-.philosophy-section p:last-child {
-  margin-bottom: 0;
 }
 
 .philosophy-example {
-  padding: 1.5rem 2rem;
   background: var(--color-bg-muted);
-  border-bottom: 1px solid var(--color-border);
+}
+
+.philosophy-fix {
+  background: var(--color-bg-subtle);
+}
+
+.philosophy-takeaway {
+  background: var(--color-info-bg);
 }
 
 .philosophy-example h3 {
@@ -1467,21 +1454,6 @@ th {
   font-style: italic;
 }
 
-.philosophy-example p {
-  margin: 0 0 1rem;
-  line-height: 1.7;
-}
-
-.philosophy-example p:last-child {
-  margin-bottom: 0;
-}
-
-.philosophy-fix {
-  padding: 1.5rem 2rem;
-  background: var(--color-bg-subtle);
-  border-bottom: 1px solid var(--color-border);
-}
-
 .philosophy-fix h3 {
   margin: 0 0 1rem;
   font-size: 1.1rem;
@@ -1489,19 +1461,15 @@ th {
   font-weight: 600;
 }
 
+.philosophy-example p,
 .philosophy-fix p {
   margin: 0 0 1rem;
   line-height: 1.7;
 }
 
+.philosophy-example p:last-child,
 .philosophy-fix p:last-child {
   margin-bottom: 0;
-}
-
-.philosophy-takeaway {
-  padding: 1.5rem 2rem;
-  background: var(--color-info-bg);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .philosophy-takeaway strong {
@@ -1531,42 +1499,6 @@ th {
 
 .pyramid-level:last-child {
   margin-bottom: 0;
-}
-
-.pyramid-level-1 {
-  background: #dcfce7;
-  border-color: #16a34a;
-}
-
-@media (prefers-color-scheme: dark) {
-  .pyramid-level-1 {
-    background: #1a3d26;
-    border-color: #16a34a;
-  }
-}
-
-.pyramid-level-2 {
-  background: #dbeafe;
-  border-color: #2563eb;
-}
-
-@media (prefers-color-scheme: dark) {
-  .pyramid-level-2 {
-    background: #1e3a5f;
-    border-color: #3b82f6;
-  }
-}
-
-.pyramid-level-3 {
-  background: #fef3c7;
-  border-color: #f59e0b;
-}
-
-@media (prefers-color-scheme: dark) {
-  .pyramid-level-3 {
-    background: #3d3520;
-    border-color: #f59e0b;
-  }
 }
 
 .pyramid-level h3 {
@@ -1599,73 +1531,45 @@ th {
   color: var(--color-text-heading);
 }
 
+/* Pyramid level colors */
+.pyramid-level-1 {
+  background: #dcfce7;
+  border-color: #16a34a;
+}
+
+.pyramid-level-2 {
+  background: #dbeafe;
+  border-color: #2563eb;
+}
+
+.pyramid-level-3 {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+/* Dark mode pyramid colors */
+@media (prefers-color-scheme: dark) {
+  .pyramid-level-1 {
+    background: #1a3d26;
+  }
+  
+  .pyramid-level-2 {
+    background: #1e3a5f;
+    border-color: #3b82f6;
+  }
+  
+  .pyramid-level-3 {
+    background: #3d3520;
+  }
+}
+
 /* Checklist section */
-.philosophy-checklist {
-  padding: 2rem;
-  background: var(--color-bg-muted);
-}
 
-.philosophy-checklist h3 {
-  margin: 0 0 1.5rem;
-  font-size: 1.2rem;
-  color: var(--color-text-heading);
-}
-
-.checklist-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.checklist-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--color-bg-elevated);
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-}
-
-.checklist-icon {
-  color: #16a34a;
-  font-weight: bold;
-  font-size: 1.3em;
-  flex-shrink: 0;
-  line-height: 1;
-}
-
-.checklist-item strong {
-  color: var(--color-text-heading);
-  font-weight: 600;
-}
+/* Removed - consolidated above with benefit-item styles */
 
 /* Resources page styles */
-.resources-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin: 3rem 0;
-}
 
-.resource-category {
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.resource-category-header {
-  padding: 1.5rem 2rem;
-  background: var(--color-bg-muted);
-  border-bottom: 2px solid var(--color-border);
-}
-
-.resource-category-header h2 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: var(--color-text-heading);
-}
+/* Removed - consolidated above with other card styles */
 
 .resource-items {
   display: flex;
@@ -1804,45 +1708,14 @@ th {
 }
 
 /* Platform comparison page styles */
-.platform-comparison-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  margin: 3rem 0;
-}
 
-.platform-detail-card {
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: box-shadow 0.2s ease;
-}
-
-.platform-detail-card:hover {
-  box-shadow: var(--shadow-lg);
-}
-
-.platform-detail-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  background: var(--color-bg-muted);
-  border-bottom: 2px solid var(--color-border);
-}
+/* Removed - consolidated above with other card styles */
 
 .platform-detail-header img {
   width: 48px;
   height: 48px;
   object-fit: contain;
   flex-shrink: 0;
-}
-
-.platform-detail-header h3 {
-  margin: 0 0 0.25rem;
-  font-size: 1.5rem;
-  color: var(--color-text-heading);
 }
 
 .platform-tagline {
@@ -2533,7 +2406,9 @@ th {
     font-size: 1.3rem;
   }
 
-  .platform-description {
+  .platform-description,
+  .highlight-section,
+  .platform-quickstart {
     padding: 1.25rem 1.5rem;
   }
 
@@ -2546,51 +2421,44 @@ th {
     border-bottom: 1px solid var(--color-border);
   }
 
-  .highlight-section {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .platform-quickstart {
-    padding: 1.25rem 1.5rem;
-  }
-
-  /* Tips and tricks mobile */
-  .tip-header {
+  /* Shared padding adjustments for card headers and sections */
+  .tip-header,
+  .philosophy-header {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem;
   }
 
-  .tip-icon {
+  .tip-icon,
+  .philosophy-icon {
     font-size: 2rem;
   }
 
-  .tip-header h2 {
+  .tip-header h2,
+  .philosophy-header h2 {
     font-size: 1.4rem;
   }
 
-  .tip-intro {
+  .tip-intro,
+  .philosophy-intro,
+  .tip-section,
+  .philosophy-section,
+  .philosophy-example,
+  .philosophy-fix,
+  .philosophy-takeaway,
+  .tip-benefits,
+  .tip-requirements,
+  .tip-implementation,
+  .example-scenario,
+  .pattern-example {
     padding: 1.25rem 1.5rem;
   }
 
-  .tip-section {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .subscription-examples {
+  .subscription-examples,
+  .status-examples,
+  .implementation-tips,
+  .resource-subitems {
     grid-template-columns: 1fr;
-  }
-
-  .tip-benefits {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .tip-requirements {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .tip-implementation {
-    padding: 1.25rem 1.5rem;
   }
 
   .flow-step {
@@ -2601,10 +2469,6 @@ th {
   .flow-arrow {
     text-align: center;
     transform: rotate(90deg);
-  }
-
-  .example-scenario {
-    padding: 1.25rem 1.5rem;
   }
 
   .comparison-section {
@@ -2620,54 +2484,8 @@ th {
     padding: 1.25rem 1.5rem;
   }
 
-  .status-examples {
-    grid-template-columns: 1fr;
-  }
-
-  .implementation-tips {
-    grid-template-columns: 1fr;
-  }
-
-  .pattern-example {
-    padding: 1.25rem 1.5rem;
-  }
-
-  /* Philosophy page mobile */
-  .philosophy-header {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .philosophy-icon {
-    font-size: 2rem;
-  }
-
-  .philosophy-header h2 {
-    font-size: 1.4rem;
-  }
-
-  .philosophy-intro {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .philosophy-section {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .philosophy-example {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .philosophy-fix {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .philosophy-takeaway {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .pyramid-container {
+  .pyramid-container,
+  .philosophy-checklist {
     padding: 1.5rem;
   }
 
@@ -2675,21 +2493,10 @@ th {
     padding: 1.25rem;
   }
 
-  .philosophy-checklist {
-    padding: 1.5rem;
-  }
-
   /* Resources page mobile */
-  .resource-category-header {
-    padding: 1.25rem 1.5rem;
-  }
-
+  .resource-category-header,
   .resource-item {
     padding: 1.25rem 1.5rem;
-  }
-
-  .resource-subitems {
-    grid-template-columns: 1fr;
   }
   
   .device-starter-grid {

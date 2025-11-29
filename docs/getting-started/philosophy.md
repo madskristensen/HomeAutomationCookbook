@@ -3,7 +3,7 @@ layout: default
 title: Home Automation Philosophy
 ---
 
-# Home Automation Philosophy
+# Home automation philosophy
 
 The best smart home is one that works seamlessly for everyone, requires no explanation, and continues functioning even when things go wrong. These core principles should guide every automation you create.
 
