@@ -152,13 +152,25 @@ AND set dishwasher_clean to true</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Create two boolean helpers: "dishwasher_running" and "dishwasher_clean"</li>
-      <li>Start: Door closes → Turn on "dishwasher_running"</li>
-      <li>Done: Temp > 90°F AND door closed 60min AND running</li>
-      <li>Actions: Notify, Turn off running, Turn on clean</li>
-      <li>Reset: Door opens → Turn off both booleans</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Door closes → Turn on "dishwasher_running"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Done</span>
+        <span class="step-content">Temp > 90°F AND door closed 60min AND running</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Notify, Turn off running, Turn on clean</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Reset:</strong> Door opens → Turn off both booleans
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -166,11 +178,21 @@ AND set dishwasher_clean to true</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Routine 1: Temp > 90°F AND door closed 60+ min</li>
-      <li>Actions: Notify, Turn on virtual switch "Dishwasher Clean"</li>
-      <li>Routine 2: Door opens → Turn off virtual switch</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Routine 1</span>
+        <span class="step-content">Temp > 90°F AND door closed 60+ min</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Notify, Turn on virtual switch "Dishwasher Clean"</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Routine 2:</strong> Door opens → Turn off virtual switch
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -178,12 +200,21 @@ AND set dishwasher_clean to true</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine with temperature sensor</li>
-      <li>Start: Door closes → Set "running" variable</li>
-      <li>Done: Temp > 90°F AND door closed 60min → Notify</li>
-      <li>Reset: Door opens → Clear variables</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Door closes → Set "running" variable</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Done</span>
+        <span class="step-content">Temp > 90°F AND door closed 60min → Notify</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine with temperature sensor
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -191,11 +222,20 @@ AND set dishwasher_clean to true</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Temperature sensor above 90°F</li>
-      <li>Conditions: Contact sensor closed for 60+ minutes</li>
-      <li>Do: Send notification</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Temperature sensor above 90°F</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Contact sensor closed for 60+ minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Send notification</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -203,11 +243,20 @@ AND set dishwasher_clean to true</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Temperature sensor value above 90°F</li>
-      <li>Condition: Contact sensor closed</li>
-      <li>Actions: Send notification, Alexa announces "dishwasher is done"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Temperature sensor value above 90°F</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Contact sensor closed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Send notification, Alexa announces</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -215,10 +264,16 @@ AND set dishwasher_clean to true</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Limited native support for temperature triggers</li>
-      <li>Use Home Assistant or IFTTT for logic</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited native support for temperature triggers</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home Assistant or IFTTT for logic</span>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -116,12 +116,25 @@ THEN set all speakers to 70-80%</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Create dropdown helper with Low/Medium/Loud options</li>
-      <li>Trigger: Input select state changes</li>
-      <li>Action: Set speaker volumes based on selection</li>
-      <li>Auto-reset to Low at 4 AM daily</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create dropdown helper with Low/Medium/Loud options</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Input select state changes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set speaker volumes based on selection</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Reset:</strong> Auto-reset to Low at 4 AM daily
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -129,12 +142,16 @@ THEN set all speakers to 70-80%</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Create scene for each volume preset</li>
-      <li>Low: All Echos 30%, speakers 20%</li>
-      <li>Medium: All Echos 50%, speakers 45%</li>
-      <li>Party: Echos 60%, speakers 80%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create scene for each volume preset</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Presets</span>
+        <span class="step-content">Low: Echos 30%, Medium: Echos 50%, Party: Echos 60%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -142,12 +159,21 @@ THEN set all speakers to 70-80%</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Groups and Scenes or Rule Machine</li>
-      <li>Create scenes: Low, Medium, Loud</li>
-      <li>Trigger via button, time, or mode change</li>
-      <li>Set all speaker volumes in each scene</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create scenes: Low, Medium, Loud</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Button, time, or mode change</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Use:</strong> Groups and Scenes or Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -155,11 +181,16 @@ THEN set all speakers to 70-80%</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Create scene: Low Volume (HomePods 30%)</li>
-      <li>Create scene: Medium Volume (HomePods 50%)</li>
-      <li>Activate: "Hey Siri, set low volume"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Scene: Low Volume (HomePods 30%)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Activate</span>
+        <span class="step-content">"Hey Siri, set low volume"</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -167,11 +198,16 @@ THEN set all speakers to 70-80%</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Create routine: Low Volume (all Echos to level 3)</li>
-      <li>Create routine: Party Volume (all Echos to level 7)</li>
-      <li>Activate: "Alexa, low volume"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Routine: Low Volume (all Echos level 3)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Activate</span>
+        <span class="step-content">"Alexa, low volume"</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -179,11 +215,16 @@ THEN set all speakers to 70-80%</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Create routine: Party Volume</li>
-      <li>Set all speakers to 80%, Home devices to 60%</li>
-      <li>Activate: "Hey Google, party volume"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Routine: Party Volume - speakers 80%, Home 60%</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Activate</span>
+        <span class="step-content">"Hey Google, party volume"</span>
+      </div>
+    </div>
   </div>
 </div>
 

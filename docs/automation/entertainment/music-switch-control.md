@@ -116,12 +116,21 @@ AND adjust volume to preset level</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Kitchen button pressed</li>
-      <li>Action: Set speaker volume to 40%</li>
-      <li>Play specific Spotify playlist on kitchen speaker</li>
-      <li>Option: Toggle play/pause for simple control</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Kitchen button pressed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set speaker volume 40%, Play playlist</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Option:</strong> Toggle play/pause for simple control
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -129,12 +138,21 @@ AND adjust volume to preset level</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Button pressed (or switch on)</li>
-      <li>THEN Play music on speaker</li>
-      <li>THEN Set volume to 40%</li>
-      <li>Toggle: IF playing → Pause, ELSE → Play</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Button pressed (or switch on)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Play music, Set volume to 40%</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Toggle:</strong> IF playing → Pause, ELSE → Play
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -142,12 +160,21 @@ AND adjust volume to preset level</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Button Controllers or Rule Machine</li>
-      <li>Trigger: Button pressed</li>
-      <li>Action: Set speaker volume to 40%</li>
-      <li>Play favorite playlist on speaker</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Button pressed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set volume 40%, Play playlist</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Button Controllers or Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -155,12 +182,21 @@ AND adjust volume to preset level</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Button is pressed</li>
-      <li>Do: Play music on HomePod/AirPlay speaker</li>
-      <li>Set volume to 40%</li>
-      <li>Note: Best with Apple Music and HomePods</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Button is pressed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Play music on HomePod, Set volume 40%</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Best with Apple Music and HomePods
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -168,11 +204,16 @@ AND adjust volume to preset level</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Smart Home button pressed</li>
-      <li>Action: Play music from [service] on [Echo device]</li>
-      <li>Action: Set volume to level 4</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Smart Home button pressed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Play music on Echo, Set volume to level 4</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -180,11 +221,16 @@ AND adjust volume to preset level</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Button pressed</li>
-      <li>Action: Play music on speaker</li>
-      <li>Action: Set volume to 40%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">Button pressed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Play music, Set volume to 40%</span>
+      </div>
+    </div>
   </div>
 </div>
 

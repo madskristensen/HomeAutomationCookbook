@@ -118,12 +118,25 @@ AND disable nursery automations</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Create input_boolean helper: "baby_sleeping"</li>
-      <li>Automation 1: Power > 5W → Turn on helper</li>
-      <li>Automation 2: Power < 2W for 2 min → Turn off helper</li>
-      <li>In nursery automations, add condition: baby_sleeping is off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create input_boolean helper: "baby_sleeping"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Power > 5W → Turn on helper</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">End</span>
+        <span class="step-content">Power < 2W for 2 min → Turn off helper</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Usage:</strong> Add condition "baby_sleeping is off" to nursery automations
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -131,12 +144,25 @@ AND disable nursery automations</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Create virtual switch "Baby Sleeping"</li>
-      <li>Routine 1: Power > 5W → Switch on</li>
-      <li>Routine 2: Power < 2W → Switch off</li>
-      <li>Add "Baby Sleeping is off" condition to nursery routines</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switch "Baby Sleeping"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Power > 5W → Switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">End</span>
+        <span class="step-content">Power < 2W → Switch off</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Usage:</strong> Add "Baby Sleeping is off" to nursery routines
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -144,11 +170,21 @@ AND disable nursery automations</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Create virtual switch "Baby Sleeping"</li>
-      <li>Rule Machine: Power monitoring triggers switch</li>
-      <li>Add condition to nursery rules: Switch is off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switch "Baby Sleeping"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Power monitoring triggers switch</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine, add condition to nursery rules
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -156,11 +192,21 @@ AND disable nursery automations</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Create dummy switch or use HomeKit-compatible virtual switch</li>
-      <li>Automation: Power rises → Switch on</li>
-      <li>Add switch state as condition to nursery automations</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create dummy switch or HomeKit-compatible virtual switch</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Automation</span>
+        <span class="step-content">Power rises → Switch on</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Usage:</strong> Add switch state as condition to nursery automations
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -168,11 +214,21 @@ AND disable nursery automations</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Create virtual switch via SmartThings or similar</li>
-      <li>Routine: Power rises → Switch on</li>
-      <li>Use switch state in routine conditions</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switch via SmartThings or similar</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Routine</span>
+        <span class="step-content">Power rises → Switch on</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Usage:</strong> Use switch state in routine conditions
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -180,11 +236,16 @@ AND disable nursery automations</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Limited power monitoring support natively</li>
-      <li>Use Home Assistant or Hubitat for logic</li>
-      <li>Expose result to Google Home</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited power monitoring support natively</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home Assistant or Hubitat for logic</span>
+      </div>
+    </div>
   </div>
 </div>
 

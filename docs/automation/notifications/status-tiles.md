@@ -132,12 +132,20 @@ THEN set "Washer Done" switch OFF
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Create input_boolean for each status</li>
-      <li>Use automations to toggle based on events</li>
-      <li>Add conditional cards to Lovelace dashboard</li>
-      <li>Use card-mod for custom colors</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create input_boolean for each status</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Automation</span>
+        <span class="step-content">Toggle based on events</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Dashboard</span>
+        <span class="step-content">Conditional cards in Lovelace with card-mod colors</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -145,11 +153,20 @@ THEN set "Washer Done" switch OFF
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Create virtual switches for each status</li>
-      <li>Use routines to toggle on events</li>
-      <li>Display in SharpTools with color rules</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switches for each status</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Routines</span>
+        <span class="step-content">Toggle on events</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Display</span>
+        <span class="step-content">SharpTools with color rules</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -157,22 +174,38 @@ THEN set "Washer Done" switch OFF
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Create virtual switches</li>
-      <li>Use Rule Machine for complex logic</li>
-      <li>Add to Hubitat Dashboard with templates</li>
-      <li>Configure state-based colors</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switches</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Logic</span>
+        <span class="step-content">Rule Machine for complex logic</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Dashboard</span>
+        <span class="step-content">Hubitat Dashboard with state-based colors</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
     <h4>SharpTools</h4>
-    <ol>
-      <li>Link virtual switches from hub</li>
-      <li>Use Hero tiles for visibility</li>
-      <li>Configure Active/Inactive colors</li>
-      <li>Group related tiles together</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Link virtual switches from hub</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Tiles</span>
+        <span class="step-content">Hero tiles for visibility</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Config</span>
+        <span class="step-content">Active/Inactive colors, group related tiles</span>
+      </div>
+    </div>
   </div>
 </div>
 

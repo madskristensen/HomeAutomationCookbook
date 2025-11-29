@@ -108,12 +108,25 @@ THEN send notification "Open windows for free heating!"</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Outside temp rises above heating setpoint</li>
-      <li>Condition: Windows closed, heating mode, daytime</li>
-      <li>Action: Send notification with current temps</li>
-      <li>Option: Add temperature difference threshold (5°F min)</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Outside temp rises above heating setpoint</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Windows closed, heating mode, daytime</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send notification with current temps</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Option:</strong> Add temperature difference threshold (5°F min)
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -121,11 +134,20 @@ THEN send notification "Open windows for free heating!"</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Outdoor temp sensor > thermostat setpoint</li>
-      <li>AND All windows are closed</li>
-      <li>THEN Send notification "Open windows for free heating"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Outdoor temp sensor > thermostat setpoint</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">AND</span>
+        <span class="step-content">All windows are closed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Send notification "Open windows for free heating"</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -133,12 +155,25 @@ THEN send notification "Open windows for free heating!"</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine with temperature comparison</li>
-      <li>Trigger: Outdoor temp rises above indoor temp + 5°F</li>
-      <li>Condition: Windows closed, heating season</li>
-      <li>Action: Send notification "Open windows for free heating"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Outdoor temp rises above indoor temp + 5°F</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Windows closed, heating season</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send notification "Open windows for free heating"</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine with temperature comparison
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -146,11 +181,16 @@ THEN send notification "Open windows for free heating!"</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Limited native temperature comparison</li>
-      <li>Use Home Assistant or similar hub for logic</li>
-      <li>Create notification through external service</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited native temperature comparison</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home Assistant or similar hub for logic</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -158,11 +198,20 @@ THEN send notification "Open windows for free heating!"</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Outdoor temperature changes</li>
-      <li>Condition: Outdoor temp > Indoor temp by 5°</li>
-      <li>Action: Send notification to phone</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Outdoor temperature changes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Outdoor temp > Indoor temp by 5°</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send notification to phone</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -170,11 +219,16 @@ THEN send notification "Open windows for free heating!"</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Limited native support for complex temp comparisons</li>
-      <li>Use IFTTT for notifications</li>
-      <li>Or Home Assistant for logic</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited native support for complex temp comparisons</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use IFTTT or Home Assistant for logic</span>
+      </div>
+    </div>
   </div>
 </div>
 

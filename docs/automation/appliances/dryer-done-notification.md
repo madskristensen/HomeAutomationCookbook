@@ -150,13 +150,25 @@ AND set dryer_running to false</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Create two boolean helpers: "dryer_running" and "dryer_needs_emptying"</li>
-      <li>Start: Vibration changes AND door closed AND active 5min</li>
-      <li>Done: Vibration inactive 5min AND door closed AND running</li>
-      <li>Actions: Notify, Turn off running, Turn on needs_emptying, Flash light</li>
-      <li>Reset: Door opens → Turn off both booleans</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Vibration changes AND door closed AND active 5min</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Done</span>
+        <span class="step-content">Vibration inactive 5min AND door closed AND running</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Notify, Turn off running, Turn on needs_emptying</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Reset:</strong> Door opens → Turn off both booleans
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -164,12 +176,25 @@ AND set dryer_running to false</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Use WebCoRE or SharpTools for complex logic</li>
-      <li>Start: Vibration changes AND door closed AND active 5min → Virtual switch on</li>
-      <li>Done: Vibration inactive 5min AND door closed AND switch on</li>
-      <li>Actions: Notify, Switch off, Flash light</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Vibration AND door closed AND active 5min → Switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Done</span>
+        <span class="step-content">Vibration inactive 5min AND door closed AND switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Notify, Switch off, Flash light</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use WebCoRE or SharpTools for complex logic
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -177,12 +202,21 @@ AND set dryer_running to false</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Create virtual switch "Dryer Running"</li>
-      <li>Use Rule Machine with vibration sensor</li>
-      <li>Start: Vibration active 5min AND door closed → Switch on</li>
-      <li>Done: Vibration inactive 5min AND switch on → Notify, Switch off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Vibration active 5min AND door closed → Switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Done</span>
+        <span class="step-content">Vibration inactive 5min AND switch on → Notify</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Create virtual switch, use Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -190,11 +224,16 @@ AND set dryer_running to false</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Cannot directly handle complex vibration+contact logic</li>
-      <li>Use Home Assistant or Hubitat as bridge</li>
-      <li>Expose notification trigger to HomeKit</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Cannot directly handle complex vibration+contact logic</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home Assistant or Hubitat as bridge</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -202,11 +241,16 @@ AND set dryer_running to false</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa / Google Home</h4>
     </div>
-    <ol>
-      <li>Limited support for complex vibration+contact logic</li>
-      <li>Use Home Assistant or SmartThings for automation</li>
-      <li>Trigger Alexa/Google actions from primary platform</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited support for complex vibration+contact logic</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home Assistant or SmartThings for automation</span>
+      </div>
+    </div>
   </div>
 </div>
 

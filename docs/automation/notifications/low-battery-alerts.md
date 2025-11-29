@@ -127,13 +127,25 @@ AND add to low battery list on dashboard</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Create sensor group for all battery entities</li>
-      <li>Trigger: Any battery drops below 20%</li>
-      <li>Use template to get device friendly name</li>
-      <li>Action: Send notification with device and level</li>
-      <li>Optional: Create Lovelace card showing all batteries</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create sensor group for all battery entities</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Any battery drops below 20%</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send notification with device name and level</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Optional:</strong> Create Lovelace card showing all batteries
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -141,12 +153,21 @@ AND add to low battery list on dashboard</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Use SmartApps or automations</li>
-      <li>IF Device battery is less than 20%</li>
-      <li>THEN Send notification to phone</li>
-      <li>Set up for each critical device</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Device battery is less than 20%</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Send notification to phone</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Set up for each critical device
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -154,12 +175,21 @@ AND add to low battery list on dashboard</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Device Watchdog app or Rule Machine</li>
-      <li>Configure battery threshold (20%)</li>
-      <li>Set notification method (push, email)</li>
-      <li>Device Watchdog provides dashboard view</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Use Device Watchdog app or Rule Machine</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Config</span>
+        <span class="step-content">Battery threshold (20%), notification method</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Benefit:</strong> Device Watchdog provides dashboard view
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -167,12 +197,21 @@ AND add to low battery list on dashboard</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Limited native support</li>
-      <li>Use Home+ app for advanced automations</li>
-      <li>Some devices show battery in Home app</li>
-      <li>Consider Home Assistant bridge for full monitoring</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited native support</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home+ app for advanced automations</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Consider Home Assistant bridge for full monitoring
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -180,12 +219,21 @@ AND add to low battery list on dashboard</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Check device health in Alexa app</li>
-      <li>Some devices show battery status</li>
-      <li>Limited automation for battery alerts</li>
-      <li>Use third-party integration for full monitoring</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Check</span>
+        <span class="step-content">Device health in Alexa app</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited automation for battery alerts</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Workaround:</strong> Use third-party integration
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -193,12 +241,21 @@ AND add to low battery list on dashboard</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Battery status varies by device</li>
-      <li>Check device settings in app</li>
-      <li>Limited native battery automations</li>
-      <li>Use Home Assistant for comprehensive monitoring</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Check</span>
+        <span class="step-content">Battery status in device settings</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited native battery automations</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Workaround:</strong> Use Home Assistant for comprehensive monitoring
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

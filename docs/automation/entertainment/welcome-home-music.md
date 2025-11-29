@@ -116,12 +116,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Home mode changes from 'Away' to 'Home'</li>
-      <li>Condition: Time is after 4 PM</li>
-      <li>Action: Activate welcome scene, Set volume 35%</li>
-      <li>Play welcome playlist from Spotify</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Home mode changes from 'Away' to 'Home'</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time is after 4 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Activate welcome scene, Set volume 35%, Play playlist</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -129,12 +137,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Home mode changes to "Home"</li>
-      <li>AND Time is after 4:00 PM</li>
-      <li>THEN Turn on welcome scene</li>
-      <li>THEN Play music, Set volume 35%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Home mode changes to "Home"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">AND</span>
+        <span class="step-content">Time is after 4:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Turn on welcome scene, Play music, Set volume 35%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -142,12 +158,25 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Mode Manager for presence detection</li>
-      <li>Trigger: Mode changes to "Home"</li>
-      <li>Condition: Time is after 4 PM</li>
-      <li>Action: Set volume 35%, Play welcome playlist</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Mode changes to "Home"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time is after 4 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set volume 35%, Play welcome playlist</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Mode Manager for presence detection
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -155,12 +184,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: First person arrives home</li>
-      <li>Conditions: Time is after 4:00 PM</li>
-      <li>Do: Welcome scene, Play music on HomePod</li>
-      <li>Set volume to 35%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">First person arrives home</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time is after 4:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Welcome scene, Play music, Set volume 35%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -168,12 +205,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: You arrive home (location-based)</li>
-      <li>Condition: Time after 4:00 PM</li>
-      <li>Action: Turn on lights, Play Spotify music</li>
-      <li>Alexa says "Welcome home"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">You arrive home (location-based)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time after 4:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on lights, Play music, Alexa says "Welcome home"</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -181,12 +226,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: When you get home (location)</li>
-      <li>Condition: Time after 4:00 PM</li>
-      <li>Action: Activate welcome scene</li>
-      <li>Play music, Adjust volume to 35%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">When you get home (location)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time after 4:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Activate welcome scene, Play music, Adjust volume</span>
+      </div>
+    </div>
   </div>
 </div>
 

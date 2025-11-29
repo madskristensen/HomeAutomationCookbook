@@ -140,12 +140,20 @@ AND turn on entry lights</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Any person arrives home (state changes to 'home') for 20 seconds</li>
-      <li>Condition: Person was previously 'not_home' + Optional: Driveway motion sensor detected movement</li>
-      <li>Actions: Unlock front door + Send notification: "Welcome home! Door unlocked."</li>
-      <li>Advanced: Trigger on door unlock (any source) → If mode is "Away" → Set to "Home" + Turn on entry lights + Start music + Set thermostat + Stop robot vacuum</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Person arrives home (state 'home') for 20 sec</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Was previously 'not_home' + driveway motion (optional)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Unlock door, send notification, set mode "Home"</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -153,10 +161,16 @@ AND turn on entry lights</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Routine 1: IF Member arrives home (location) AND After 20 seconds → THEN Unlock front door</li>
-      <li>Routine 2: IF Front door unlocks → THEN Change mode to "Home" + Turn on entry lights + Run welcome scene</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Routine 1</span>
+        <span class="step-content">Member arrives + 20 sec → Unlock door</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Routine 2</span>
+        <span class="step-content">Door unlocks → Mode "Home", lights, welcome scene</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -164,13 +178,25 @@ AND turn on entry lights</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Combined Presence or Life360 integration</li>
-      <li>Trigger: Presence sensor arrives for 20 seconds</li>
-      <li>Condition: Previous state was "not present"</li>
-      <li>Action: Unlock front door + Change mode to "Home"</li>
-      <li>Use Rule Machine for welcome actions: lights, music, thermostat</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Presence sensor arrives for 20 sec</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Previous state was "not present"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Unlock door, Mode "Home", welcome actions</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Combined Presence or Life360 + Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -178,22 +204,35 @@ AND turn on entry lights</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: I arrive home</li>
-      <li>Time: Anytime • People: Anyone arrives</li>
-      <li>Do: Unlock front door + Turn on lights + Activate home scene</li>
-      <li>Note: HomeKit automation runs on iPhone/iPad, requires device to be home hub</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">I arrive home (or anyone arrives)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Unlock door, Turn on lights, Activate home scene</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Requires device to be home hub
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
     <h4>August/Yale App</h4>
-    <ol>
-      <li>Most smart locks have built-in auto-unlock</li>
-      <li>Open lock app → Settings → Auto-Unlock</li>
-      <li>Enable auto-unlock + Set distance threshold (usually 200ft)</li>
-      <li>Enable for each person</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Built-in</span>
+        <span class="step-content">Most smart locks have auto-unlock feature</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Settings → Auto-Unlock → Set distance threshold</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -201,11 +240,16 @@ AND turn on entry lights</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: You arrive home (location-based) + Wait 20 seconds</li>
-      <li>Actions: Unlock front door (requires voice PIN) + Turn on lights + Start music</li>
-      <li>Security Note: Alexa requires voice PIN confirmation for unlock commands in routines</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">You arrive home + Wait 20 sec</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Unlock door (requires voice PIN), lights, music</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -213,10 +257,16 @@ AND turn on entry lights</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: When I arrive home + Delay: 20 seconds</li>
-      <li>Actions: Unlock front door + Turn on lights + Change mode</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">When I arrive home + Delay 20 sec</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Unlock door, Turn on lights, Change mode</span>
+      </div>
+    </div>
   </div>
 </div>
 

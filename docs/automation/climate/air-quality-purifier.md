@@ -128,12 +128,21 @@ AND send notification "Poor air quality detected"</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Air quality sensor drops below 35 AQI</li>
-      <li>Action: Turn on air purifier at 100% (high speed)</li>
-      <li>Send notification with current AQI</li>
-      <li>Alternative: Use PM2.5 sensor above 50 μg/m³</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Air quality sensor drops below 35 AQI</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on air purifier at 100%, send notification</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Alternative:</strong> Use PM2.5 sensor above 50 μg/m³
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -141,11 +150,16 @@ AND send notification "Poor air quality detected"</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Air quality sensor reports AQI below 35</li>
-      <li>THEN Turn on air purifier smart plug</li>
-      <li>THEN Send notification "Air quality poor"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Air quality sensor reports AQI below 35</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Turn on air purifier smart plug, send notification</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -153,12 +167,21 @@ AND send notification "Poor air quality detected"</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine with air quality device</li>
-      <li>Trigger: AQI sensor drops below 35</li>
-      <li>Action: Turn on air purifier at high</li>
-      <li>Send notification with current reading</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">AQI sensor drops below 35</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on air purifier at high, send notification</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine with air quality device
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -166,11 +189,20 @@ AND send notification "Poor air quality detected"</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Air quality sensor detects poor air quality</li>
-      <li>Conditions: AQI below threshold (if supported)</li>
-      <li>Do: Turn on air purifier</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Air quality sensor detects poor air quality</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">AQI below threshold (if supported)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn on air purifier</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -178,11 +210,16 @@ AND send notification "Poor air quality detected"</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Air quality sensor value below 35 AQI</li>
-      <li>Action: Turn on air purifier smart plug</li>
-      <li>Action: Send notification to phone</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Air quality sensor value below 35 AQI</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on air purifier, send notification</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -190,11 +227,16 @@ AND send notification "Poor air quality detected"</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Air quality sensor detects poor quality</li>
-      <li>Action: Turn on air purifier</li>
-      <li>Action: Announce "Air quality low, purifier activated"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">Air quality sensor detects poor quality</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on air purifier, announce status</span>
+      </div>
+    </div>
   </div>
 </div>
 

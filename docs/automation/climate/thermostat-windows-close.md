@@ -113,12 +113,25 @@ AND send notification "Climate control resumed"</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Any window or door closes</li>
-      <li>Condition: ALL windows/doors closed AND thermostat is "off"</li>
-      <li>Action: Restore thermostat to saved previous mode</li>
-      <li>Tip: Use group sensor for simplified "all closed" check</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Any window or door closes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">ALL windows/doors closed AND thermostat is "off"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Restore thermostat to saved previous mode</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Tip:</strong> Use group sensor for simplified "all closed" check
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -126,12 +139,20 @@ AND send notification "Climate control resumed"</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Living room window closes</li>
-      <li>AND ALL other windows/doors are closed</li>
-      <li>AND Thermostat mode is "Off"</li>
-      <li>THEN Set thermostat mode to "Auto"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Living room window closes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">AND</span>
+        <span class="step-content">ALL windows/doors closed AND Thermostat is "Off"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Set thermostat mode to "Auto"</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -139,12 +160,25 @@ AND send notification "Climate control resumed"</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine with contact group</li>
-      <li>Trigger: Any contact sensor closes</li>
-      <li>Condition: All contacts in group closed AND thermostat is "off"</li>
-      <li>Action: Restore thermostat to previous saved mode</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Any contact sensor closes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">All contacts closed AND thermostat is "off"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Restore thermostat to previous saved mode</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine with contact group
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -152,11 +186,20 @@ AND send notification "Climate control resumed"</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Any window or door closes</li>
-      <li>Conditions: All windows/doors closed, Thermostat is off</li>
-      <li>Do: Turn on thermostat to Auto mode</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Any window or door closes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">All windows/doors closed, Thermostat is off</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn on thermostat to Auto mode</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -164,11 +207,20 @@ AND send notification "Climate control resumed"</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Smart Home sensor closes</li>
-      <li>Condition: All other windows/doors closed, Thermostat "Off"</li>
-      <li>Action: Set thermostat to Auto mode</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Smart Home sensor closes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">All windows/doors closed, Thermostat "Off"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat to Auto mode</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -176,11 +228,20 @@ AND send notification "Climate control resumed"</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Window sensor closes</li>
-      <li>Condition: All windows and doors are closed</li>
-      <li>Action: Set thermostat to Heat-Cool mode</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">Window sensor closes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">All windows and doors are closed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat to Heat-Cool mode</span>
+      </div>
+    </div>
   </div>
 </div>
 

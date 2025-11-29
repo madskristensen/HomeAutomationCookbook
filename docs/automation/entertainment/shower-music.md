@@ -114,12 +114,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Shower lights turn on</li>
-      <li>Condition: Home mode, Time 6-10 AM, Weekdays</li>
-      <li>Action: Set bathroom speaker volume to 35%</li>
-      <li>Play Spotify playlist with Spotcast service</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Shower lights turn on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Home mode, Time 6-10 AM, Weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set volume 35%, Play Spotify playlist</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -127,12 +135,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Shower lights turn on</li>
-      <li>AND Home mode "Home", Time 6-10 AM</li>
-      <li>THEN Play music on bathroom speaker</li>
-      <li>THEN Set speaker volume to 35%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Shower lights turn on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">AND</span>
+        <span class="step-content">Home mode "Home", Time 6-10 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Play music, Set volume to 35%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -140,12 +156,25 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine with speaker integration</li>
-      <li>Trigger: Shower light turns on</li>
-      <li>Condition: Mode is "Home", Time 6-10 AM, Weekdays</li>
-      <li>Action: Set speaker volume to 35%, Play playlist</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Shower light turns on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Mode is "Home", Time 6-10 AM, Weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set volume 35%, Play playlist</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine with speaker integration
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -153,12 +182,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Shower light turns on</li>
-      <li>Conditions: Time 6-10 AM, Weekdays only</li>
-      <li>Do: Play music on HomePod/AirPlay speaker</li>
-      <li>Set volume to 35%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Shower light turns on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time 6-10 AM, Weekdays only</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Play music on HomePod, Set volume 35%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -166,12 +203,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Shower light turns on</li>
-      <li>Condition: Time 6-10 AM, Days Mon-Fri</li>
-      <li>Action: Play specific playlist on bathroom Echo</li>
-      <li>Action: Set volume to level 4</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Shower light turns on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time 6-10 AM, Days Mon-Fri</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Play playlist, Set volume to level 4</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -179,12 +224,20 @@ AND set volume to 35%</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Shower light turns on</li>
-      <li>Condition: Time 6-10 AM, weekdays</li>
-      <li>Action: Play music on bathroom speaker</li>
-      <li>Action: Adjust volume to 35%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">Shower light turns on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time 6-10 AM, weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Play music, Adjust volume to 35%</span>
+      </div>
+    </div>
   </div>
 </div>
 
