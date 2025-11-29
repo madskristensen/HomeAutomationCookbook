@@ -1,4 +1,11 @@
-/* Base */
+/* ==========================================================================
+   Home Automation Cookbook Stylesheet
+   Consolidated and optimized CSS
+   ========================================================================== */
+
+/* Base Styles
+   ========================================================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -21,7 +28,10 @@ body {
   min-height: calc(100vh - 150px);
 }
 
-/* Typography */
+
+/* Typography
+   ========================================================================== */
+
 h1, h2, h3, h4, h5, h6 {
   margin: 3rem 0 1.5rem;
   font-weight: 600;
@@ -33,7 +43,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin: 0 0 2rem;
   font-size: 2.2rem;
-  font-weight: 600;
 }
 
 h2 {
@@ -55,7 +64,24 @@ p {
   line-height: 1.8;
 }
 
-/* Links */
+blockquote {
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid #e0e0e0;
+  font-size: 1.05em;
+  color: #666;
+}
+
+hr {
+  margin: 4rem 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+
+/* Links
+   ========================================================================== */
+
 a {
   color: #0066cc;
   text-decoration: none;
@@ -66,15 +92,22 @@ a:hover {
   color: #004499;
 }
 
-/* Lists */
+/* Lists
+   ========================================================================== */
+
 ul, ol {
   margin-bottom: 1.5rem;
   padding-left: 1.5rem;
   line-height: 1.8;
 }
 
-ul { list-style-type: none; }
-ol { list-style-type: decimal; }
+ul {
+  list-style-type: none;
+}
+
+ol {
+  list-style-type: decimal;
+}
 
 li {
   margin-bottom: 0.75rem;
@@ -84,7 +117,9 @@ ul ul, ol ul, ul ol, ol ol {
   margin: 0.75rem 0 0.5rem;
 }
 
-/* Code */
+/* Code
+   ========================================================================== */
+
 code {
   padding: 0.2rem 0.5rem;
   background: #f5f5f5;
@@ -112,7 +147,375 @@ pre code {
   color: inherit;
 }
 
-/* Components */
+/* Tables
+   ========================================================================== */
+
+table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Navigation
+   ========================================================================== */
+
+.main-navigation {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.site-title {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1.25rem 0 1.25rem 60px;
+  display: inline-block;
+  letter-spacing: -0.01em;
+  background: url(/assets/img/icon-48x48.png) no-repeat left center;
+}
+
+.site-title:hover {
+  color: #0066cc;
+}
+
+.nav-toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #666;
+  text-decoration: none;
+  padding: 1.25rem 1rem;
+  display: block;
+  transition: color 0.2s;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  color: #0066cc;
+}
+
+.dropdown-arrow {
+  margin-left: 0.25rem;
+  font-size: 0.8em;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.nav-item.has-dropdown:hover .dropdown-menu,
+.nav-item.has-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  margin: 0;
+  position: relative;
+}
+
+.dropdown-item a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  display: block;
+  transition: background 0.2s, color 0.2s;
+  font-size: 0.95rem;
+}
+
+.dropdown-item a:hover {
+  background: #f5f5f5;
+  color: #0066cc;
+}
+
+.flyout-arrow {
+  float: right;
+  margin-left: 0.5rem;
+  font-size: 0.9em;
+}
+
+.flyout-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  min-width: 240px;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  z-index: 1001;
+}
+
+.dropdown-item.has-flyout:hover .flyout-menu,
+.dropdown-item.has-flyout:focus-within .flyout-menu {
+  display: block;
+}
+
+.flyout-item {
+  margin: 0;
+}
+
+.flyout-item a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.65rem 1.25rem;
+  display: block;
+  transition: background 0.2s, color 0.2s;
+  font-size: 0.9rem;
+}
+
+.flyout-item a:hover {
+  background: #f5f5f5;
+  color: #0066cc;
+}
+
+.breadcrumb {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.breadcrumb a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #004499;
+}
+
+.breadcrumb span {
+  color: #999;
+  margin: 0 0.5rem;
+}
+
+
+/* Card Components
+   ========================================================================== */
+
+.automation-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.automation-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.automation-card:hover {
+  border-color: #0066cc;
+  box-shadow: 0 4px 20px rgba(0,102,204,0.08);
+}
+
+.automation-card h3,
+.automation-card h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.automation-card h3 a,
+.automation-card h4 a {
+  color: #000;
+  text-decoration: none;
+}
+
+.automation-card h3 a:hover,
+.automation-card h4 a:hover {
+  color: #0066cc;
+}
+
+.automation-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.automation-card p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.automation-card .card-meta {
+  font-size: 0.875rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.automation-card .card-link {
+  display: inline-block;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.automation-card .card-link:hover {
+  color: #004499;
+}
+
+.category-intro {
+  background: #fafafa;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+}
+
+.category-intro h2 {
+  margin-top: 0;
+  color: #000;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.category-intro p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  max-width: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.category-intro p strong {
+  color: #000;
+  font-weight: 600;
+  flex: 0 0 220px;
+}
+
+.category-intro ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.category-intro li {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  padding-left: 0;
+}
+
+.section-heading {
+  color: #000;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.page-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  gap: 1rem;
+}
+
+.page-navigation a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.page-navigation a:hover {
+  color: #004499;
+}
+
+/* Automation Components
+   ========================================================================== */
+
 .automation-step {
   margin: 2.5rem 0 1.5rem;
   padding: 1rem 1.5rem;
@@ -135,7 +538,7 @@ pre code {
   line-height: 1.6;
   white-space: pre-wrap;
 }
-   
+
 .use-case-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -343,7 +746,10 @@ th {
   color: #000;
 }
 
-/* Footer */
+
+/* Footer
+   ========================================================================== */
+
 .site-footer {
   margin-top: 4rem;
   padding: 3rem 0 2rem;
@@ -379,12 +785,122 @@ th {
   color: #0066cc;
 }
 
-/* Responsive */
+/* Responsive Design
+   ========================================================================== */
+
 @media (max-width: 768px) {
-  body { font-size: 16px; }
-  .container { padding: 2rem 1.5rem; }
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; margin-top: 3rem; }
-  h3 { font-size: 1.25rem; }
+  body {
+    font-size: 16px;
+  }
+  
+  .container {
+    padding: 2rem 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Navigation mobile */
+  .nav-container {
+    align-items: center;
+  }
+
+  .site-title {
+    order: 1;
+    flex: 1;
+  }
+  
+  .nav-toggle {
+    display: block;
+    order: 3;
+  }
+  
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e0e0e0;
+    order: 2;
+    width: 100%;
+  }
+  
+  .nav-container:has(.nav-toggle-checkbox:checked) .nav-menu {
+    display: flex;
+  }
+  
+  .nav-item {
+    width: 100%;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    background: #fafafa;
+    border: none;
+  }
+  
+  .nav-item.has-dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+  
+  .nav-link {
+    padding: 0.75rem 1.25rem;
+    color: #333;
+  }
+  
+  .dropdown-item a {
+    padding-left: 2.5rem;
+    color: #666;
+  }
+  
+  .flyout-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    background: #f0f0f0;
+    border: none;
+  }
+  
+  .dropdown-item.has-flyout:focus-within .flyout-menu {
+    display: block;
+  }
+  
+  .flyout-item a {
+    padding-left: 3.75rem;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .flyout-arrow {
+    float: right;
+  }
+  
+  /* Cards mobile */
+  .automation-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-navigation {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
 }
 

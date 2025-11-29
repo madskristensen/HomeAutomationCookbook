@@ -32,70 +32,70 @@ navigation:
         url: /automation/motion/
         subitems:
           - title: Lights on motion
-            url: /automation/motion/lights-on-motion/
+            url: /automation/motion/lights-on-motion.html
           - title: Lights off after motion
-            url: /automation/motion/lights-off-after-motion/
+            url: /automation/motion/lights-off-after-motion.html
           - title: Bathroom night light
-            url: /automation/motion/bathroom-night-light/
+            url: /automation/motion/bathroom-night-light.html
       - title: Contact sensors
         url: /automation/contact/
         subitems:
           - title: Toggle lights on door
-            url: /automation/contact/toggle-lights-door/
+            url: /automation/contact/toggle-lights-door.html
           - title: Disable on door close
-            url: /automation/contact/disable-on-door-close/
+            url: /automation/contact/disable-on-door-close.html
       - title: Presence & modes
         url: /automation/presence/
         subitems:
           - title: Away mode
-            url: /automation/presence/away-mode/
+            url: /automation/presence/away-mode.html
           - title: Unlock door on arrival
-            url: /automation/presence/unlock-door-arrival/
+            url: /automation/presence/unlock-door-arrival.html
           - title: Morning routine
-            url: /automation/presence/morning-routine/
+            url: /automation/presence/morning-routine.html
           - title: Bedtime routine
-            url: /automation/presence/bedtime-routine/
+            url: /automation/presence/bedtime-routine.html
       - title: Climate
         url: /automation/climate/
         subitems:
           - title: Thermostat - windows open
-            url: /automation/climate/thermostat-windows-open/
+            url: /automation/climate/thermostat-windows-open.html
           - title: Thermostat - windows close
-            url: /automation/climate/thermostat-windows-close/
+            url: /automation/climate/thermostat-windows-close.html
           - title: Window notifications
-            url: /automation/climate/window-notifications/
+            url: /automation/climate/window-notifications.html
           - title: Air quality purifier
-            url: /automation/climate/air-quality-purifier/
+            url: /automation/climate/air-quality-purifier.html
           - title: Fan after shower
-            url: /automation/climate/fan-shower/
+            url: /automation/climate/fan-shower.html
           - title: Room heater temp control
-            url: /automation/climate/room-heater-maintain-temp/
+            url: /automation/climate/room-heater-maintain-temp.html
       - title: Media
         url: /automation/media/
         subitems:
           - title: TV dims lights
-            url: /automation/media/tv-dim-lights/
+            url: /automation/media/tv-dim-lights.html
           - title: Welcome home music
-            url: /automation/media/welcome-home-music/
+            url: /automation/media/welcome-home-music.html
           - title: Shower music
-            url: /automation/media/shower-music/
+            url: /automation/media/shower-music.html
           - title: Music switch control
-            url: /automation/media/music-switch-control/
+            url: /automation/media/music-switch-control.html
           - title: Speaker volume presets
-            url: /automation/media/speaker-volume-presets/
+            url: /automation/media/speaker-volume-presets.html
       - title: Appliances
         url: /automation/appliances/
         subitems:
           - title: Washer done notification
-            url: /automation/appliances/washer-done-notification/
+            url: /automation/appliances/washer-done-notification.html
           - title: Dryer done notification
-            url: /automation/appliances/dryer-done-notification/
+            url: /automation/appliances/dryer-done-notification.html
           - title: Dishwasher done alert
-            url: /automation/appliances/dishwasher-done-notification/
+            url: /automation/appliances/dishwasher-done-notification.html
           - title: Coffee maker morning
-            url: /automation/appliances/coffee-maker-morning/
+            url: /automation/appliances/coffee-maker-morning.html
           - title: Robot vacuum auto start
-            url: /automation/appliances/robot-vacuum-auto-start/
+            url: /automation/appliances/robot-vacuum-auto-start.html
   - title: Tips & tricks
     url: /tips/
   - title: Resources
