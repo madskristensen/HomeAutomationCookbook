@@ -147,12 +147,25 @@ AND send notification "Coffee brewing ☕"</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Time is 7:00 AM</li>
-      <li>Condition: Weekdays, Plug is OFF (ready)</li>
-      <li>Action: Turn on coffee maker plug</li>
-      <li>Safety: Auto-shutoff after 30 minutes</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Time is 7:00 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Weekdays, Plug is OFF (ready)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on coffee maker plug</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Safety:</strong> Auto-shutoff after 30 minutes
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -160,12 +173,25 @@ AND send notification "Coffee brewing ☕"</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Time is 7:00 AM</li>
-      <li>AND Day is Mon-Fri, Plug is OFF</li>
-      <li>THEN Turn on coffee maker plug</li>
-      <li>Safety routine: Turn off after 30 min</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Time is 7:00 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">AND</span>
+        <span class="step-content">Day is Mon-Fri, Plug is OFF</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Turn on coffee maker plug</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Safety:</strong> Create routine to turn off after 30 min
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -173,12 +199,25 @@ AND send notification "Coffee brewing ☕"</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Simple Automation Rules or Rule Machine</li>
-      <li>Trigger: Time is 7:00 AM, Weekdays</li>
-      <li>Condition: Plug is OFF</li>
-      <li>Action: Turn on plug, Auto-shutoff after 30 min</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Time is 7:00 AM, Weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Plug is OFF</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on plug, Auto-shutoff after 30 min</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Simple Automation Rules or Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -186,12 +225,25 @@ AND send notification "Coffee brewing ☕"</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Time is 7:00 AM</li>
-      <li>Conditions: Weekdays only</li>
-      <li>Do: Turn on coffee maker plug</li>
-      <li>Separate: Auto-shutoff after 30 min</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Time is 7:00 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Weekdays only</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn on coffee maker plug</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Safety:</strong> Create separate auto-shutoff after 30 min
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -199,11 +251,21 @@ AND send notification "Coffee brewing ☕"</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Schedule 7:00 AM weekdays</li>
-      <li>Action: Turn on coffee maker plug</li>
-      <li>Safety: Turn off after 30 minutes</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Schedule 7:00 AM weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on coffee maker plug</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Safety:</strong> Turn off after 30 minutes
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -211,11 +273,21 @@ AND send notification "Coffee brewing ☕"</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Time 7:00 AM on weekdays</li>
-      <li>Action: Turn on coffee maker plug</li>
-      <li>Note: Add separate safety shutoff</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">Time 7:00 AM on weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on coffee maker plug</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Add separate safety shutoff routine
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

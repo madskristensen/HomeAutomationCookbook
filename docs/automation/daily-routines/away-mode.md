@@ -144,12 +144,20 @@ AND adjust thermostat to eco</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: All persons leave home for 10 minutes</li>
-      <li>Conditions: No motion detected for 9 minutes + TV is off</li>
-      <li>Actions: Set house mode to "Away" + Send notification: "Home is now in Away mode"</li>
-      <li>Away mode actions automation: Trigger on mode change to "Away" → Turn off all lights + Lock all doors + Set thermostat to away/eco + Arm security + Optional: Start robot vacuum</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">All persons leave home for 10 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">No motion for 9 minutes + TV is off</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set mode "Away", Turn off lights, Lock doors, Set thermostat</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -157,10 +165,21 @@ AND adjust thermostat to eco</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Routine 1: IF All members away for 10 minutes AND No motion detected for 9 minutes AND TVs are off → THEN Change mode to "Away"</li>
-      <li>Routine 2 for Actions: IF Mode changes to "Away" → THEN Turn off all lights + Lock doors + Set thermostat to Away + Arm security</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">All members away 10 min AND No motion 9 min</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Change mode to "Away"</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Routine 2:</strong> Mode "Away" → Lights off, Lock doors, Set thermostat
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -168,13 +187,25 @@ AND adjust thermostat to eco</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Mode Manager for presence-based mode switching</li>
-      <li>Trigger: All presence sensors show "not present" for 10 minutes</li>
-      <li>Conditions: No motion for 9 minutes + Media devices off</li>
-      <li>Action: Change mode to "Away"</li>
-      <li>Use Rule Machine for Away mode actions: lights off, doors locked, thermostat eco</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">All presence sensors "not present" 10 min</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">No motion for 9 min + Media off</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Change mode to "Away"</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Mode Manager + Rule Machine for Away actions
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -182,11 +213,20 @@ AND adjust thermostat to eco</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Last person leaves</li>
-      <li>Conditions: After 10 minutes + No motion detected</li>
-      <li>Do: Turn off lights + Lock doors + Set thermostat + Activate security scene</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Last person leaves</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">After 10 minutes + No motion detected</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Lights off, Lock doors, Set thermostat, Arm security</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -194,11 +234,20 @@ AND adjust thermostat to eco</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Last person leaves (via Alexa app location)</li>
-      <li>Wait: 10 minutes</li>
-      <li>Actions: Change mode to "Away" + Turn off lights + Lock doors + Adjust thermostat</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Last person leaves (via Alexa app location)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Wait</span>
+        <span class="step-content">10 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Mode "Away", Lights off, Lock doors, Adjust thermostat</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -206,11 +255,20 @@ AND adjust thermostat to eco</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Last person leaves home</li>
-      <li>Delay: 10 minutes</li>
-      <li>Actions: Set home to Away + Turn off lights + Lock doors</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">Last person leaves home</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Delay</span>
+        <span class="step-content">10 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Set home to Away, Turn off lights, Lock doors</span>
+      </div>
+    </div>
   </div>
 </div>
 

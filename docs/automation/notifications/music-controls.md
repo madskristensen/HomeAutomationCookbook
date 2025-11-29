@@ -129,22 +129,38 @@ AND set volume to 40%</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Use media_player cards for now playing</li>
-      <li>Create scripts for favorite playlists</li>
-      <li>Add button cards to trigger scripts</li>
-      <li>Use slider for volume control</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Now Playing</span>
+        <span class="step-content">Use media_player cards</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Presets</span>
+        <span class="step-content">Create scripts for favorite playlists</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Controls</span>
+        <span class="step-content">Button cards + slider for volume</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
     <h4>SharpTools</h4>
-    <ol>
-      <li>Add media tile for now playing display</li>
-      <li>Create virtual switches for each preset</li>
-      <li>Link automation to play music on switch</li>
-      <li>Add Hero tiles for playlist buttons</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Display</span>
+        <span class="step-content">Media tile for now playing</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Presets</span>
+        <span class="step-content">Virtual switches + automation for each</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Tiles</span>
+        <span class="step-content">Hero tiles for playlist buttons</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -152,12 +168,20 @@ AND set volume to 40%</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Limited native music control</li>
-      <li>Use SmartThings-Sonos integration</li>
-      <li>Create routines for playlist presets</li>
-      <li>Display in SharpTools dashboard</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited native music control</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Integration</span>
+        <span class="step-content">SmartThings-Sonos integration</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Display</span>
+        <span class="step-content">SharpTools dashboard</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -165,12 +189,20 @@ AND set volume to 40%</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Sonos or Chromecast integration</li>
-      <li>Create virtual switches for presets</li>
-      <li>Rule Machine to play on switch</li>
-      <li>Add to Hubitat Dashboard</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Integration</span>
+        <span class="step-content">Sonos or Chromecast integration</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Presets</span>
+        <span class="step-content">Virtual switches + Rule Machine</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Dashboard</span>
+        <span class="step-content">Hubitat Dashboard</span>
+      </div>
+    </div>
   </div>
 </div>
 

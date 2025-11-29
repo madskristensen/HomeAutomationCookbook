@@ -112,12 +112,25 @@ THEN start robot vacuum</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Home mode 'Away' for 15 min</li>
-      <li>Condition: Time 9am-6pm, weekdays, vacuum docked</li>
-      <li>Action: Start robot vacuum cleaning cycle</li>
-      <li>Stop when home: Send vacuum to dock</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Home mode 'Away' for 15 min</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time 9am-6pm, weekdays, vacuum docked</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Start robot vacuum cleaning cycle</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Stop:</strong> When home → Send vacuum to dock
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -125,11 +138,20 @@ THEN start robot vacuum</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Home mode "Away" for 15 minutes</li>
-      <li>AND Time 9 AM - 6 PM, Mon-Fri</li>
-      <li>THEN Start robot vacuum</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Home mode "Away" for 15 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">AND</span>
+        <span class="step-content">Time 9 AM - 6 PM, Mon-Fri</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Start robot vacuum</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -137,12 +159,25 @@ THEN start robot vacuum</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Mode Manager with vacuum integration</li>
-      <li>Trigger: Mode changes to "Away" for 15 min</li>
-      <li>Condition: Time 9am-6pm, weekdays</li>
-      <li>Action: Start vacuum cleaning cycle</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Mode changes to "Away" for 15 min</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time 9am-6pm, weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Start vacuum cleaning cycle</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Mode Manager with vacuum integration
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -150,11 +185,20 @@ THEN start robot vacuum</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Last person leaves home</li>
-      <li>Conditions: Time 9 AM - 6 PM, Weekdays</li>
-      <li>Do: Start vacuum (if HomeKit supported)</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Last person leaves home</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time 9 AM - 6 PM, Weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Start vacuum (if HomeKit supported)</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -162,11 +206,20 @@ THEN start robot vacuum</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Last person leaves (location)</li>
-      <li>Condition: Time 9 AM - 6 PM, Weekdays</li>
-      <li>Action: Start vacuum</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Last person leaves (location)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time 9 AM - 6 PM, Weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Start vacuum</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -174,11 +227,20 @@ THEN start robot vacuum</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Last person leaves home</li>
-      <li>Condition: Time 9 AM - 6 PM, weekdays</li>
-      <li>Action: Start robot vacuum</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">Last person leaves home</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time 9 AM - 6 PM, weekdays</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Start robot vacuum</span>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -99,12 +99,25 @@ THEN turn on "Garbage Out" virtual switch
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Create input_boolean helper "garbage_out"</li>
-      <li>Time trigger: Wednesday at 6:00 PM</li>
-      <li>Action: Turn on input_boolean.garbage_out</li>
-      <li>Add button card to dashboard with color conditions</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create input_boolean helper "garbage_out"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Time Wednesday at 6:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on input_boolean.garbage_out</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Dashboard:</strong> Add button card with color conditions
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -112,12 +125,25 @@ THEN turn on "Garbage Out" virtual switch
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Create virtual switch "Garbage Out"</li>
-      <li>Create routine: Time is Wednesday 6 PM</li>
-      <li>Action: Turn on virtual switch</li>
-      <li>Add to SharpTools dashboard with colors</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switch "Garbage Out"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Time is Wednesday 6 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on virtual switch</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Dashboard:</strong> Add to SharpTools with colors
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -125,22 +151,38 @@ THEN turn on "Garbage Out" virtual switch
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Create virtual switch "Garbage Out"</li>
-      <li>Use Simple Automation Rules for time trigger</li>
-      <li>Add to Hubitat Dashboard with templates</li>
-      <li>Configure ON/OFF colors</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switch "Garbage Out"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Time trigger via Simple Automation Rules</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Dashboard</span>
+        <span class="step-content">Add with templates, configure ON/OFF colors</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
     <h4>SharpTools</h4>
-    <ol>
-      <li>Link virtual switch from your hub</li>
-      <li>Add Hero tile to dashboard</li>
-      <li>Configure "Active" color as red</li>
-      <li>Configure "Inactive" color as green</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Link virtual switch from your hub</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Dashboard</span>
+        <span class="step-content">Add Hero tile to dashboard</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Colors</span>
+        <span class="step-content">Active = red, Inactive = green</span>
+      </div>
+    </div>
   </div>
 </div>
 

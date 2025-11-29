@@ -123,13 +123,25 @@ THEN turn off space heater</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Bedroom temp below 68°F for 5 min</li>
-      <li>Condition: Window closed AND time 6 PM - 8 AM</li>
-      <li>Action: Turn on heater smart plug</li>
-      <li>Trigger 2: Temp above 70°F for 2 min</li>
-      <li>Action 2: Turn off heater plug</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Bedroom temp below 68°F for 5 min</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Window closed AND time 6 PM - 8 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on heater smart plug</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Create second rule: Temp above 70°F for 2 min → Turn off
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -137,12 +149,20 @@ THEN turn off space heater</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Bedroom temp sensor below 68°F</li>
-      <li>AND Bedroom window is closed</li>
-      <li>AND Time is 6:00 PM - 8:00 AM</li>
-      <li>THEN Turn on bedroom heater plug</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Bedroom temp sensor below 68°F</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">AND</span>
+        <span class="step-content">Window closed AND Time 6 PM - 8 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Turn on bedroom heater plug</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -150,13 +170,25 @@ THEN turn off space heater</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Thermostat Controller or Rule Machine</li>
-      <li>Trigger: Temp sensor below 68°F for 5 min</li>
-      <li>Condition: Window closed AND time 6 PM - 8 AM</li>
-      <li>Action: Turn on heater plug</li>
-      <li>Create second rule: Temp above 70°F → Turn off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Temp sensor below 68°F for 5 min</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Window closed AND time 6 PM - 8 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on heater plug</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Thermostat Controller or Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -164,11 +196,20 @@ THEN turn off space heater</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Bedroom temperature falls below 68°F</li>
-      <li>Conditions: Window closed, Time 6 PM - 8 AM</li>
-      <li>Do: Turn on heater smart plug</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Bedroom temperature falls below 68°F</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Window closed, Time 6 PM - 8 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn on heater smart plug</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -176,11 +217,20 @@ THEN turn off space heater</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Temperature sensor below 68°F</li>
-      <li>Condition: Window closed, Time 6 PM - 8 AM</li>
-      <li>Action: Turn on heater smart plug</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Temperature sensor below 68°F</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Window closed, Time 6 PM - 8 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on heater smart plug</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -188,11 +238,20 @@ THEN turn off space heater</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Temperature sensor below 68°F</li>
-      <li>Condition: Window closed, Time 6 PM - 8 AM</li>
-      <li>Action: Turn on heater smart plug</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Starter</span>
+        <span class="step-content">Temperature sensor below 68°F</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Window closed, Time 6 PM - 8 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on heater smart plug</span>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -129,12 +129,25 @@ THEN announce "It's time to brush your teeth, kids!"</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Create input_boolean: "teeth_brushed_evening"</li>
-      <li>Automation 1: Power > 2W between 6 PM-10 PM → Turn on helper</li>
-      <li>Automation 2: At 8:30 PM if helper off → TTS announcement</li>
-      <li>Automation 3: At 6 PM → Reset helper to off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create input_boolean: "teeth_brushed_evening"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Detection</span>
+        <span class="step-content">Power > 2W between 6 PM-10 PM → Turn on helper</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Reminder</span>
+        <span class="step-content">At 8:30 PM if helper off → TTS announcement</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Reset:</strong> At 6 PM → Reset helper to off
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -142,12 +155,25 @@ THEN announce "It's time to brush your teeth, kids!"</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Create virtual switch "Teeth Brushed"</li>
-      <li>Routine 1: Power > 2W between 6-10 PM → Switch on</li>
-      <li>Routine 2: 8:30 PM + Switch off → Speaker announcement</li>
-      <li>Routine 3: 6 PM → Switch off (reset)</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switch "Teeth Brushed"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Detection</span>
+        <span class="step-content">Power > 2W between 6-10 PM → Switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Reminder</span>
+        <span class="step-content">8:30 PM + Switch off → Speaker announcement</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Reset:</strong> 6 PM → Switch off
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -155,12 +181,25 @@ THEN announce "It's time to brush your teeth, kids!"</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Create virtual switch for tracking</li>
-      <li>Rule Machine: Power trigger with time window</li>
-      <li>Scheduled reminder if switch not set</li>
-      <li>Daily reset automation</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switch for tracking</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Detection</span>
+        <span class="step-content">Power trigger with time window</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Reminder</span>
+        <span class="step-content">Scheduled if switch not set, daily reset</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -168,12 +207,20 @@ THEN announce "It's time to brush your teeth, kids!"</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Create virtual switch via Homebridge or HomePod</li>
-      <li>Automation: Power rises → Switch on</li>
-      <li>Time-based reminder automation if switch off</li>
-      <li>Scheduled reset</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Create virtual switch via Homebridge</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Automation</span>
+        <span class="step-content">Power rises → Switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Reminder</span>
+        <span class="step-content">Time-based reminder if switch off</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -181,12 +228,21 @@ THEN announce "It's time to brush your teeth, kids!"</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Create virtual switch via SmartThings</li>
-      <li>Routine 1: Power > 2W → Switch on</li>
-      <li>Routine 2: Time 8:30 PM + Switch off → Alexa says reminder</li>
-      <li>Routine 3: 6 PM → Switch off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Detection</span>
+        <span class="step-content">Power > 2W → Switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Reminder</span>
+        <span class="step-content">8:30 PM + Switch off → Alexa says reminder</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Virtual switch via SmartThings
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -194,11 +250,16 @@ THEN announce "It's time to brush your teeth, kids!"</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Limited native power monitoring</li>
-      <li>Use Home Assistant or Hubitat for logic</li>
-      <li>Trigger Google Home speaker for announcement</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited native power monitoring</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home Assistant or Hubitat for logic</span>
+      </div>
+    </div>
   </div>
 </div>
 
