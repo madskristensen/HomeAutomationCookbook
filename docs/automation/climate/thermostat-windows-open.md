@@ -113,12 +113,21 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Window or door opens for 1 minute</li>
-      <li>Action: Set thermostat HVAC mode to "off"</li>
-      <li>Send notification showing which window/door opened</li>
-      <li>Tip: Save previous state to helper variable for restoration</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Window or door opens for 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat HVAC mode to "off"</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Tip:</strong> Save previous state to helper variable for restoration
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -126,11 +135,16 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Living room window opens</li>
-      <li>AND Window stays open for 1 minute</li>
-      <li>THEN Set thermostat mode to "Off"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Living room window opens AND stays open for 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Set thermostat mode to "Off"</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -138,12 +152,21 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine or Thermostat Scheduler</li>
-      <li>Trigger: Contact sensor open for 1 minute</li>
-      <li>Action: Set thermostat mode to "off"</li>
-      <li>Tip: Use variable to save previous mode for restoration</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Contact sensor open for 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat mode to "off"</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine or Thermostat Scheduler
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -151,11 +174,20 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Any window or door opens</li>
-      <li>Conditions: Stays open for at least 1 minute</li>
-      <li>Do: Turn off thermostat</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Any window or door opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Stays open for at least 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn off thermostat</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -163,11 +195,20 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Smart Home sensor opens</li>
-      <li>Wait: 1 minute</li>
-      <li>Action: Set thermostat to Off mode</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Smart Home sensor opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Wait</span>
+        <span class="step-content">1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat to Off mode</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -175,29 +216,40 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Window sensor opens</li>
-      <li>Condition: Sensor open for at least 1 minute</li>
-      <li>Action: Set thermostat to Off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Window sensor opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Sensor open for at least 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat to Off</span>
+      </div>
+    </div>
   </div>
 </div>
 
 ## Advanced features
 
-### Different delays per window
-
-Set different time delays based on window location and impact:
-- **Front door:** 1 minute delay (high-traffic area, brief openings expected)
-- **Remote bedroom window:** 5 minutes delay (room far from thermostat, less impact)
-
-Create separate automations for different delay requirements.
-
-### Visual feedback dashboard
-
-Display which windows/doors are open and thermostat status:
-
-- Show count of open windows
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Different delays per window</h3>
+    <p>Set different delays based on window location:</p>
+    <ul>
+      <li><strong>Front door:</strong> 1 minute delay (high-traffic)</li>
+      <li><strong>Remote bedroom:</strong> 5 minutes delay (less impact)</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Visual feedback dashboard</h3>
+    <p>Display which windows/doors are open and thermostat status:</p>
+    <ul>
+      <li>Show count of open windows</li>
 - List specific windows currently open
 - Thermostat current status (Off due to windows)
 - Time since thermostat turned off

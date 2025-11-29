@@ -111,12 +111,25 @@ THEN turn on bathroom fan</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Shower lights turn on</li>
-      <li>Condition: Time is between 5 AM and 11 PM</li>
-      <li>Action: Turn on bathroom fan switch</li>
-      <li>Humidity option: Trigger when humidity rises above 75%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Shower lights turn on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time is between 5 AM and 11 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on bathroom fan switch</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Alt trigger:</strong> Humidity rises above 75%
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -124,11 +137,16 @@ THEN turn on bathroom fan</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Shower lights turn on</li>
-      <li>AND Time is between 5:00 AM and 11:00 PM</li>
-      <li>THEN Turn on bathroom fan switch</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Shower lights turn on AND Time is 5 AM - 11 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Turn on bathroom fan switch</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -136,13 +154,25 @@ THEN turn on bathroom fan</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Simple Automation Rules or Rule Machine</li>
-      <li>Trigger: Shower light turns on</li>
-      <li>Condition: Time 5 AM - 11 PM</li>
-      <li>Action: Turn on bathroom fan</li>
-      <li>Humidity option: Trigger when humidity > 75%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Shower light turns on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time 5 AM - 11 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on bathroom fan</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Simple Automation Rules or Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -150,11 +180,20 @@ THEN turn on bathroom fan</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Shower light turns on</li>
-      <li>Conditions: Time is between 5:00 AM and 11:00 PM</li>
-      <li>Do: Turn on bathroom fan</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Shower light turns on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time is between 5:00 AM and 11:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn on bathroom fan</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -162,11 +201,20 @@ THEN turn on bathroom fan</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Shower light turns on</li>
-      <li>Condition: Time between 5:00 AM - 11:00 PM</li>
-      <li>Action: Turn on bathroom fan</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Shower light turns on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time between 5:00 AM - 11:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on bathroom fan</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -174,41 +222,58 @@ THEN turn on bathroom fan</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Shower light turns on</li>
-      <li>Condition: Time between 5:00 AM - 11:00 PM</li>
-      <li>Action: Turn on bathroom fan</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Shower light turns on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time between 5:00 AM - 11:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on bathroom fan</span>
+      </div>
+    </div>
   </div>
 </div>
 
 ## Advanced features
 
-### Automatic fan shutoff
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Automatic fan shutoff</h3>
+    <p>Turn off the fan automatically after the shower ends:</p>
+    <ul>
+      <li><strong>Trigger:</strong> Shower lights turn off for 10 minutes</li>
+      <li><strong>Action:</strong> Turn off bathroom fan</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Humidity-based shutoff</h3>
+    <p>Turn off when humidity returns to normal:</p>
+    <ul>
+      <li><strong>Trigger:</strong> Humidity drops below 60% for 5 min</li>
+      <li><strong>Condition:</strong> Fan is currently on</li>
+      <li><strong>Action:</strong> Turn off bathroom fan</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Bonus automations</h3>
+    <p>Since your smart home now knows when you're showering:</p>
+    <ul>
+      <li><strong>Play Music:</strong> Start shower playlist on speaker</li>
+      <li><strong>Flash Lights:</strong> Alert when doorbell rings</li>
+      <li><strong>Lock Front Door:</strong> Secure home while showering</li>
+      <li><strong>Adjust Thermostat:</strong> Increase bathroom temp</li>
+    </ul>
+  </div>
+</div>
 
-Turn off the fan automatically after the shower ends:
-
-Create automation with these elements:
-- **Trigger:** Shower lights turn off for 10 minutes
-- **Action:** Turn off bathroom fan
-
-**Humidity-based shutoff:**
-
-Turn off when humidity returns to normal:
-- **Trigger:** Bathroom humidity drops below 60% for 5 minutes
-- **Condition:** Fan is currently on
-- **Action:** Turn off bathroom fan
-
-### Bonus automations
-
-Since your smart home now knows when you're showering:
-
-* **Play Music** - Start shower playlist on bathroom speaker
-* **Flash Lights** - Alert you when doorbell rings (can't hear over shower)
-* **Lock Front Door** - Secure home while you're in the shower
-* **Adjust Thermostat** - Increase bathroom temperature slightly for comfort
-
-## Troubleshooting
+## Common issues and solutions
 
 ### Issue: Fan doesn't turn on
 
