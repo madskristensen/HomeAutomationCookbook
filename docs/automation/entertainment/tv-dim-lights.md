@@ -118,12 +118,25 @@ AND close blinds</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: TV plug power > 50W for 5 sec</li>
-      <li>Condition: Time after sunset, before sunrise</li>
-      <li>Action: Dim living room lights to 10%</li>
-      <li>Alternative: Use media player 'playing' state</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">TV plug power > 50W for 5 sec</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time after sunset, before sunrise</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Dim living room lights to 10%</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Alternative:</strong> Use media player 'playing' state
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -131,12 +144,16 @@ AND close blinds</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF TV plug power > 50W for 5 seconds</li>
-      <li>AND Time is after sunset</li>
-      <li>THEN Set lights to 10%</li>
-      <li>THEN Close blinds</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">TV plug power > 50W for 5 sec AND after sunset</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Set lights to 10% AND Close blinds</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -144,12 +161,25 @@ AND close blinds</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine with power monitoring plug</li>
-      <li>Trigger: TV plug power > 50W for 5 sec</li>
-      <li>Condition: Time after sunset</li>
-      <li>Action: Set living room lights to 10%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">TV plug power > 50W for 5 sec</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time after sunset</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set living room lights to 10%</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine with power monitoring plug
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -157,11 +187,20 @@ AND close blinds</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: TV power monitor > 50W</li>
-      <li>Conditions: Time after sunset</li>
-      <li>Do: Dim lights to 10%, Close blinds</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">TV power monitor > 50W</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time after sunset</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Dim lights to 10%, Close blinds</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -169,12 +208,20 @@ AND close blinds</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: TV plug power above 50W</li>
-      <li>Condition: Time after 6:00 PM</li>
-      <li>Action: Set lights to 10%</li>
-      <li>Action: Close smart blinds</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">TV plug power above 50W</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time after 6:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set lights to 10%, Close smart blinds</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -182,11 +229,20 @@ AND close blinds</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: TV plug power above 50 watts</li>
-      <li>Condition: Time after 6:00 PM</li>
-      <li>Action: Dim living room lights to 10%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">TV plug power above 50 watts</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time after 6:00 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Dim living room lights to 10%</span>
+      </div>
+    </div>
   </div>
 </div>
 

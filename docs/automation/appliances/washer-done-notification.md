@@ -143,12 +143,20 @@ AND set washer_running to false</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Create boolean helper "washer_running"</li>
-      <li>Start: Power > 50W → Turn on helper</li>
-      <li>Done: Power < 10W for 3 min AND helper on</li>
-      <li>Action: Notify, Turn off helper, Flash light</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Power > 50W → Turn on "washer_running" helper</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Done</span>
+        <span class="step-content">Power < 10W for 3 min AND helper on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Notify, Turn off helper, Flash light</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -156,12 +164,20 @@ AND set washer_running to false</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Create virtual switch "Washer Running"</li>
-      <li>Routine 1: Power > 50W → Switch on</li>
-      <li>Routine 2: Power < 10W for 3 min AND switch on</li>
-      <li>Actions: Notify, Switch off, Flash light</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Power > 50W → Virtual switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Done</span>
+        <span class="step-content">Power < 10W for 3 min AND switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Notify, Switch off, Flash light</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -169,12 +185,21 @@ AND set washer_running to false</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Create virtual switch "Washer Running"</li>
-      <li>Use Rule Machine with power monitoring plug</li>
-      <li>Start: Power > 50W → Switch on</li>
-      <li>Done: Power < 10W for 3 min AND switch on → Notify, Switch off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Power > 50W → Virtual switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Done</span>
+        <span class="step-content">Power < 10W for 3 min AND switch on → Notify</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine with power monitoring plug
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -182,12 +207,16 @@ AND set washer_running to false</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Limited power monitoring support</li>
-      <li>Use Home Assistant or Hubitat for logic</li>
-      <li>Expose notification to HomeKit</li>
-      <li>OR use IFTTT for notification trigger</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited power monitoring support</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home Assistant or Hubitat for logic</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -195,11 +224,20 @@ AND set washer_running to false</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Start: Power > 50W → Virtual switch on</li>
-      <li>Done: Power < 10W AND switch on</li>
-      <li>Action: Notify phone, Alexa announces</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Start</span>
+        <span class="step-content">Power > 50W → Virtual switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Done</span>
+        <span class="step-content">Power < 10W AND switch on</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Notify phone, Alexa announces</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -207,11 +245,16 @@ AND set washer_running to false</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Limited native support</li>
-      <li>Use Home Assistant for power monitoring</li>
-      <li>OR use IFTTT for notification logic</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited native support</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home Assistant for power monitoring</span>
+      </div>
+    </div>
   </div>
 </div>
 

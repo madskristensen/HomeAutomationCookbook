@@ -121,12 +121,20 @@ AND read morning briefing</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Bedroom motion sensor detects motion</li>
-      <li>Conditions: House mode is "Night" AND Time is between 6 AM and 10 AM</li>
-      <li>Actions: Set house mode to "Home"</li>
-      <li>Turn on lights in kitchen, bathroom, and hallway at 100% brightness</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Bedroom motion sensor detects motion</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">House mode is "Night" AND Time is 6 AM - 10 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set mode to "Home", turn on morning lights</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -134,12 +142,16 @@ AND read morning briefing</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF: Motion in bedroom</li>
-      <li>AND: Time between 6 AM - 10 AM AND Mode is "Night"</li>
-      <li>THEN: Change mode to "Home"</li>
-      <li>AND: Turn on morning lights</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Motion in bedroom AND Time 6 AM - 10 AM AND Mode "Night"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Change mode to "Home" AND Turn on morning lights</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -147,12 +159,25 @@ AND read morning briefing</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Mode Manager or Rule Machine</li>
-      <li>Trigger: Bedroom motion sensor active</li>
-      <li>Condition: Mode is "Night" AND Time 6 AM - 10 AM</li>
-      <li>Action: Change mode to "Day" + Turn on morning lights</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Bedroom motion sensor active</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Mode is "Night" AND Time 6 AM - 10 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Change mode to "Day" + Turn on morning lights</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Mode Manager or Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -160,11 +185,20 @@ AND read morning briefing</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Motion detected in bedroom</li>
-      <li>Time: Between 6 AM and 10 AM</li>
-      <li>Do: Activate "Good Morning" scene</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Motion detected in bedroom</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Time</span>
+        <span class="step-content">Between 6 AM and 10 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Activate "Good Morning" scene</span>
+      </div>
+    </div>
   </div>
 </div>
 
