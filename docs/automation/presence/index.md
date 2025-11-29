@@ -5,13 +5,13 @@ description: Master presence detection and mode-based automations. Away mode, ar
 keywords: presence detection, location automation, home modes, away mode, arrival automation, GPS automation, smart home presence
 ---
 
-# Presence and Modes Automations
+# Presence and modes automations
 
 Presence detection and home modes unlock powerful automations based on location and daily routines. While notoriously tricky to perfect, these fundamentals enable energy savings, security, and seamless smart home experiences.
 
 <div class="category-intro" markdown="1">
 
-## Why Presence Detection?
+## Why presence detection?
 
 **Automatic Home/Away** — House knows when everyone leaves or arrives
 
@@ -33,7 +33,7 @@ Presence detection and home modes unlock powerful automations based on location 
 
 <div class="automation-card" markdown="1">
 
-#### [Set Away Mode When Everyone Leaves](/automation/presence/away-mode.html)
+#### [Set away mode when everyone leaves](/automation/presence/away-mode.html)
 
 Automatically activate Away Mode when the last person leaves. Includes energy savings, security activation, and verification strategies.
 
@@ -45,7 +45,7 @@ Automatically activate Away Mode when the last person leaves. Includes energy sa
 
 <div class="automation-card" markdown="1">
 
-#### [Morning Routine Automation](/automation/presence/morning-routine.html)
+#### [Morning routine automation](/automation/presence/morning-routine.html)
 
 Wake up to an automated morning routine. Lights, coffee, weather, and climate all prepared automatically.
 
@@ -59,11 +59,11 @@ Wake up to an automated morning routine. Lights, coffee, weather, and climate al
 
 ---
 
-## Understanding Home Modes
+## Understanding home modes
 
 Most smart home platforms include default modes:
 
-### Home Mode
+### Home mode
 **When:** Someone is home and awake
 **Actions:**
 - Normal lighting automation
@@ -71,7 +71,7 @@ Most smart home platforms include default modes:
 - Interior sensors disabled
 - Music/entertainment available
 
-### Away Mode  
+### Away mode  
 **When:** No one is home
 **Actions:**
 - Lights off (or away pattern)
@@ -79,7 +79,7 @@ Most smart home platforms include default modes:
 - Security armed
 - Cameras active
 
-### Night Mode
+### Night mode
 **When:** Sleeping hours
 **Actions:**
 - Low-brightness lighting only
@@ -87,7 +87,7 @@ Most smart home platforms include default modes:
 - Minimal notifications
 - Quiet hours enabled
 
-### Custom Modes
+### Custom modes
 Many platforms allow custom modes:
 - **Guest Mode** - Modified automation for visitors
 - **Vacation Mode** - Extended away with security
@@ -96,9 +96,9 @@ Many platforms allow custom modes:
 
 ---
 
-## Quick Start Guide
+## Quick start guide
 
-### 1. Set Up Location Tracking
+### 1. Set up location tracking
 
 **Enable on All Phones:**
 - Download platform app
@@ -112,7 +112,7 @@ Many platforms allow custom modes:
 - Life360 (integrates with many)
 - Apple Home (built-in)
 
-### 2. Create Home Zones
+### 2. Create home zones
 
 **Home Zone:**
 - Radius: 50-100 meters
@@ -124,7 +124,7 @@ Many platforms allow custom modes:
 - Pre-heat/cool home
 - Turn on exterior lights
 
-### 3. Configure Modes
+### 3. Configure modes
 
 **Create mode input:**
 - Home
@@ -137,7 +137,7 @@ Many platforms allow custom modes:
 - Transition behaviors
 - Fallback rules
 
-### 4. Build Basic Automations
+### 4. Build basic automations
 
 **Start Simple:**
 1. Away mode when everyone leaves
@@ -153,7 +153,7 @@ Many platforms allow custom modes:
 
 ---
 
-## Presence Detection Methods
+## Presence detection methods
 
 ### GPS/Location Services
 
@@ -204,7 +204,7 @@ Many platforms allow custom modes:
 
 **Use case:** Room presence, not home/away
 
-### Combined Approach (Recommended)
+### Combined approach (recommended)
 
 Use multiple methods for accuracy:
 
@@ -215,9 +215,9 @@ Use multiple methods for accuracy:
 
 ---
 
-## Common Challenges & Solutions
+## Common challenges & solutions
 
-### Challenge: False Away Mode Activation
+### Challenge: False away mode activation
 
 **Causes:**
 - GPS drift
@@ -231,7 +231,7 @@ Use multiple methods for accuracy:
 - ✅ Check door activity
 - ✅ Verify TV/music status
 
-### Challenge: Delayed Presence Detection
+### Challenge: Delayed presence detection
 
 **Causes:**
 - Background app restrictions
@@ -245,7 +245,7 @@ Use multiple methods for accuracy:
 - ✅ Use local processing
 - ✅ Add WiFi presence backup
 
-### Challenge: Battery Drain from Location
+### Challenge: Battery drain from location
 
 **Causes:**
 - Continuous GPS polling
@@ -258,7 +258,7 @@ Use multiple methods for accuracy:
 - ✅ Enable battery-saving mode
 - ✅ Consider dedicated device (tablet)
 
-### Challenge: Kids Without Phones
+### Challenge: Kids without phones
 
 **Causes:**
 - Young kids don't have phones
@@ -272,9 +272,9 @@ Use multiple methods for accuracy:
 
 ---
 
-## Advanced Techniques
+## Advanced techniques
 
-### Graduated Geofences
+### Graduated geofences
 
 Create multiple zones for progressive actions:
 
@@ -292,7 +292,7 @@ Create multiple zones for progressive actions:
 **Home (50m):**
 - Inside home zone
 
-### Room-Level Presence
+### Room-level presence
 
 Track which room each person is in:
 
@@ -308,7 +308,7 @@ Track which room each person is in:
 - Follow-me music
 - Presence-based scenes
 
-### Predictive Presence
+### Predictive presence
 
 Learn patterns and predict:
 - Typical arrival times
@@ -321,7 +321,7 @@ Learn patterns and predict:
 - Adjust timing based on traffic
 - Skip automation if running late
 
-### Multi-Person Logic
+### Multi-person logic
 
 Different behaviors based on who's home:
 
@@ -343,7 +343,7 @@ action:
 
 ## Best Practices
 
-### Start Conservative
+### Start conservative
 
 **Initial Setup:**
 - Longer delays (15 minutes)
@@ -357,7 +357,7 @@ action:
 - Expand automation actions
 - Adjust geofence as needed
 
-### Notification Strategy
+### Notification strategy
 
 **Always Notify For:**
 - Away mode activation
@@ -370,7 +370,7 @@ action:
 - Someone left home
 - Mode changes
 
-### Fail-Safe Design
+### Fail-safe design
 
 **When Uncertain:**
 - Don't activate away mode
@@ -384,7 +384,7 @@ action:
 - Voice command override
 - Automation disable switch
 
-### Testing Protocol
+### Testing protocol
 
 **Before Trusting:**
 1. Test for 2 weeks with notifications only
@@ -396,9 +396,9 @@ action:
 
 ---
 
-## Additional Presence & Mode Ideas
+## Additional presence & mode ideas
 
-### Guest Mode
+### Guest mode
 
 Create a special mode when guests are staying:
 
@@ -407,7 +407,7 @@ Create a special mode when guests are staying:
 * Extend "away" timing before activating (guests may not have app)
 * Provide simple physical controls
 
-### Vacation Mode
+### Vacation mode
 
 Extended away period with extra security:
 
@@ -417,7 +417,7 @@ Extended away period with extra security:
 * Pause routine notifications
 * Hold mail/package delivery alerts
 
-### Work From Home Mode
+### Work from home mode
 
 Optimize for home office use:
 
@@ -426,7 +426,7 @@ Optimize for home office use:
 * Enable focus mode (minimize notifications)
 * Disable daytime vacuum routines
 
-### Sleep Mode vs. Night Mode
+### Sleep mode vs. night mode
 
 Differentiate between being awake at night and sleeping:
 
@@ -442,9 +442,9 @@ Differentiate between being awake at night and sleeping:
 
 ---
 
-## Best Practices
+## Best practices (continued)
 
-### Presence Detection Accuracy
+### Presence detection accuracy
 
 **Multiple Data Points:**
 Don't rely on GPS alone. Combine with:
@@ -463,7 +463,7 @@ Don't rely on GPS alone. Combine with:
 * Check for motion during that time
 * Confirm all departure conditions met
 
-### Zone-Based Presence
+### Zone-based presence
 
 Create zones around your home:
 
@@ -474,7 +474,7 @@ Create zones around your home:
   - Turn on exterior lights
   - Prepare arrival routine
 
-### Handling Edge Cases
+### Handling edge cases
 
 **Dead Phone Battery:**
 * Manual override buttons

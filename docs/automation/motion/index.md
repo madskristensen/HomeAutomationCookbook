@@ -5,13 +5,13 @@ description: Master motion sensor automations for smart home lighting. Learn to 
 keywords: motion sensor automation, automatic lighting, PIR sensor, occupancy detection, smart home motion, motion activated lights
 ---
 
-# Motion Detection Automations
+# Motion detection automations
 
 Motion detection is one of the most powerful tools in a home automator's arsenal. Motion sensors come in many varieties and can be customized to fit any scenario. Proper use of motion detection to turn on lights, music, and more will seem like magic to guests and make your life easier.
 
 <div class="category-intro" markdown="1">
 
-## Why Motion Detection?
+## Why motion detection?
 
 **Hands-Free Lighting** — Lights turn on automatically as you enter any room
 
@@ -33,7 +33,7 @@ Motion detection is one of the most powerful tools in a home automator's arsenal
 
 <div class="automation-card" markdown="1">
 
-#### [Turn On Lights When Motion is Detected](/automation/motion/lights-on-motion.html)
+#### [Turn on lights when motion is detected](/automation/motion/lights-on-motion.html)
 
 The most common and useful automation. Automatically turn on lights when entering a room.
 
@@ -45,7 +45,7 @@ The most common and useful automation. Automatically turn on lights when enterin
 
 <div class="automation-card" markdown="1">
 
-#### [Turn Off Lights After Motion Stops](/automation/motion/lights-off-after-motion.html)
+#### [Turn off lights after motion stops](/automation/motion/lights-off-after-motion.html)
 
 Complete the cycle by turning lights off when a room is no longer occupied.
 
@@ -59,9 +59,9 @@ Complete the cycle by turning lights off when a room is no longer occupied.
 
 ---
 
-## Quick Start Guide
+## Quick start guide
 
-### 1. Choose Your Motion Sensor
+### 1. Choose your motion sensor
 
 **Indoor Sensors:**
 - Philips Hue Motion Sensor (includes lux sensor)
@@ -75,7 +75,7 @@ Complete the cycle by turning lights off when a room is no longer occupied.
 - Philips Hue Outdoor Motion
 - Any sensor in weatherproof enclosure
 
-### 2. Select Communication Protocol
+### 2. Select communication protocol
 
 **Zigbee:**
 - ✅ Low power, long battery life
@@ -101,7 +101,7 @@ Complete the cycle by turning lights off when a room is no longer occupied.
 - ❌ Limited range
 - ❌ No mesh
 
-### 3. Plan Your Installation
+### 3. Plan your installation
 
 **Coverage Mapping:**
 1. Identify all areas needing automation
@@ -115,7 +115,7 @@ Complete the cycle by turning lights off when a room is no longer occupied.
 - **Avoid:** Windows, heat sources, moving objects
 - **Test:** Verify coverage before permanent mounting
 
-### 4. Create Your First Automation
+### 4. Create your first automation
 
 Start simple:
 1. **Trigger:** Motion detected
@@ -131,9 +131,9 @@ Then enhance:
 
 ---
 
-## Motion Sensor Types
+## Motion sensor types
 
-### Passive Infrared (PIR)
+### Passive infrared (PIR)
 
 **How it works:** Detects changes in infrared radiation (body heat)
 
@@ -199,9 +199,9 @@ Then enhance:
 
 ---
 
-## Common Challenges & Solutions
+## Common challenges & solutions
 
-### Challenge: False Triggers
+### Challenge: False triggers
 
 **Causes:**
 - Pets triggering sensor
@@ -216,7 +216,7 @@ Then enhance:
 ✅ Add lux sensor condition (only in dark)
 ✅ Time-based conditions
 
-### Challenge: Missed Detection
+### Challenge: Missed detection
 
 **Causes:**
 - Dead zones in coverage
@@ -231,7 +231,7 @@ Then enhance:
 ✅ Regular battery maintenance
 ✅ Test coverage thoroughly
 
-### Challenge: Lights Turn Off While Occupied
+### Challenge: Lights turn off while occupied
 
 **Causes:**
 - Timeout too short
@@ -245,7 +245,7 @@ Then enhance:
 ✅ Add manual extension button
 ✅ Consider presence sensors
 
-### Challenge: Slow Response Time
+### Challenge: Slow response time
 
 **Causes:**
 - Cloud processing delays
@@ -262,9 +262,9 @@ Then enhance:
 
 ---
 
-## Best Practices
+## Best practices
 
-### Testing & Optimization
+### Testing & optimization
 
 **Initial Setup:**
 1. Mount temporarily with tape
@@ -281,7 +281,7 @@ Then enhance:
 - Update firmware when available
 - Adjust for seasonal changes (if outdoor)
 
-### Room-by-Room Strategy
+### Room-by-room strategy
 
 **Start Small:**
 1. Choose one high-traffic room
@@ -296,7 +296,7 @@ Then enhance:
 - Learn what works for your household
 - Build confidence in system
 
-### Family Acceptance
+### Family acceptance
 
 **Make It Work for Everyone:**
 - Get feedback from all household members
@@ -313,9 +313,9 @@ Then enhance:
 
 ---
 
-## Advanced Techniques
+## Advanced techniques
 
-### Multi-Sensor Logic
+### Multi-sensor logic
 
 Combine multiple sensor types for better accuracy:
 
@@ -339,7 +339,7 @@ condition:
         state: 'on'
 ```
 
-### Zone-Based Lighting
+### Zone-based lighting
 
 Different areas of large room get different lighting:
 
@@ -348,7 +348,7 @@ Different areas of large room get different lighting:
 - Reading nook: Warm, focused light
 - TV area: Dim ambient light
 
-### Adaptive Brightness
+### Adaptive brightness
 
 Adjust brightness based on:
 - Time of day (gradual changes)
@@ -356,7 +356,7 @@ Adjust brightness based on:
 - Activity type (watching TV vs. reading)
 - Personal preferences (per-person detection)
 
-### Activity Detection
+### Activity detection
 
 Use motion patterns to detect activity:
 - Rapid movement: Cleaning, playing

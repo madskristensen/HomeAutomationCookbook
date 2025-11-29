@@ -9,11 +9,11 @@ Not all home automation requires complex technology. Sometimes the simplest solu
 
 ---
 
-## Amazon Subscriptions for Automation
+## Amazon subscriptions for automation
 
 Not all automations have to go through your smart home system. You can use Amazon subscriptions to automate yourself to complete repetitive maintenance tasks.
 
-### How It Works
+### How it works
 
 Subscribe to certain products to be automatically ordered and delivered at specific time intervals. When items arrive, install them right away. This eliminates the need to remember when to order and replace items.
 
@@ -28,7 +28,7 @@ Subscribe to certain products to be automatically ordered and delivered at speci
 - Schedule: Every 4 months
 - Action: Replace filters right away
 
-**Other Subscription Ideas:**
+**Other subscription ideas:**
 - HVAC filters (quarterly)
 - Batteries for sensors (annually)
 - Pet supplies (monthly)
@@ -44,11 +44,11 @@ Subscribe to certain products to be automatically ordered and delivered at speci
 
 ---
 
-## Manually Disable Automation in a Room
+## Manually disable automation in a room
 
 Sometimes you don't want automations to run. For example, kids love turning lights off to play with flashlights. It ruins the fun if lights come on automatically when motion is detected.
 
-### The Solution
+### The solution
 
 Disable automation when lights are manually switched off. When lights are manually switched on again, re-enable automations automatically.
 
@@ -67,7 +67,7 @@ Disable automation when lights are manually switched off. When lights are manual
 * Re-enable motion-based light automations
 * Resume normal automated behavior
 
-### Supported Platforms
+### Supported platforms
 
 Most smart switches support this feature:
 - Zooz switches (Z-Wave)
@@ -76,7 +76,7 @@ Most smart switches support this feature:
 - Lutron Caseta (proprietary)
 - Many others - check specifications
 
-### Platform Setup
+### Platform setup
 
 **Home Assistant:**
 Look for "physical" vs "digital" button press events
@@ -89,15 +89,15 @@ Most switches report button events that can differentiate manual vs automated
 
 ---
 
-## Turn Off All Lights in Room from One Switch
+## Turn off all lights in room from one switch
 
 In most rooms, the main light switch by the door can turn off all lights in the room with a special gesture.
 
-### The Double-Tap Trick
+### The double-tap trick
 
 Many smart switches support double-tap actions. Configure double-tap on the OFF button to turn off all lights and smart plugs in that room.
 
-### Example Use Case
+### Example use case
 
 **Leaving the Living Room:**
 1. Walk to door
@@ -105,7 +105,7 @@ Many smart switches support double-tap actions. Configure double-tap on the OFF 
 3. All room lights, lamps, and floor fans turn off
 4. Exit room
 
-### Setup Instructions
+### Setup instructions
 
 **Step 1: Identify Devices**
 - List all lights and plugs in each room
@@ -124,16 +124,16 @@ Many smart switches support double-tap actions. Configure double-tap on the OFF 
 - Verify all devices turn off
 - Adjust timing if needed
 
-### Compatible Switches
+### Compatible switches
 
-**Switches with Double-Tap:**
+**Switches with double-tap:**
 - Inovelli (Red/Blue series)
 - Zooz (ZEN switches)
 - GE/Jasco
 - Leviton
 - HomeSeer
 
-**Multi-Tap Options:**
+**Multi-tap options:**
 Some switches support more gestures:
 - Double-tap UP: All on at 100%
 - Double-tap DOWN: All off
@@ -142,25 +142,25 @@ Some switches support more gestures:
 
 ---
 
-## Dashboard Status Tiles
+## Dashboard status tiles
 
 Replace notifications with visual status tiles on a dashboard. Instead of getting push notifications that get dismissed and forgotten, display status on a tablet you see regularly.
 
-### Why Dashboards Beat Notifications
+### Why dashboards beat notifications
 
-**Problems with Notifications:**
+**Problems with notifications:**
 - Easy to dismiss and forget
 - Interrupt your flow
 - Don't provide persistent status
 - Require checking phone
 
-**Benefits of Dashboards:**
+**Benefits of dashboards:**
 - Always visible status at a glance
 - No interruptions
 - Entire household can see
 - Multiple statuses visible simultaneously
 
-### Use Cases
+### Use cases
 
 **Appliances:**
 * ✅ Washer is done, time to move to dryer
@@ -192,7 +192,7 @@ Replace notifications with visual status tiles on a dashboard. Instead of gettin
 * ActionTiles (SmartThings)
 * Fully Kiosk Browser
 
-### Implementation Tips
+### Implementation tips
 
 **Placement:**
 - Kitchen counter or wall mount
@@ -219,11 +219,11 @@ Replace notifications with visual status tiles on a dashboard. Instead of gettin
 
 ---
 
-## Creating Patterns Throughout Your Home
+## Creating patterns throughout your home
 
 When you implement a feature in one room, consider making it a pattern throughout the house.
 
-### Example: Light Switch Double-Tap
+### Example: Light switch double-tap
 
 **Pattern:** Double-tap any light switch to control all lights in that room
 
@@ -233,7 +233,7 @@ When you implement a feature in one room, consider making it a pattern throughou
 - No explanation needed after initial teaching
 - Intuitive and consistent
 
-### Other Pattern Ideas
+### Other pattern ideas
 
 **Long-Press for Scenes:**
 * Long-press light switch → Activate room scene
@@ -251,7 +251,7 @@ When you implement a feature in one room, consider making it a pattern throughou
 * Hold DOWN → Gradually dim
 * Works across all dimmers
 
-### Visual Markers
+### Visual markers
 
 Mark switches with special capabilities:
 - Small colored dots or stickers

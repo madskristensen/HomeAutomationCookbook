@@ -9,7 +9,7 @@ Learn more about home automation through these excellent online resources, commu
 
 ---
 
-## YouTube Channels
+## YouTube channels
 
 Great YouTube channels that review smart home products, show how to make automations, and much more.
 
@@ -49,7 +49,7 @@ Honest reviews with a British sense of humor. Great for:
 
 ---
 
-## Reddit Communities
+## Reddit communities
 
 On [Reddit.com](https://reddit.com) you'll find lots of smart home related content, Q&As, troubleshooting help, and more. It's a great place to explore and participate.
 
@@ -124,7 +124,7 @@ Amazon Alexa and Echo devices.
 
 ---
 
-## Additional Resources
+## Additional resources
 
 ### Forums
 
@@ -143,7 +143,7 @@ Amazon Alexa and Echo devices.
 - Device handlers and SmartApps
 - Platform updates
 
-### Blogs & Websites
+### Blogs and websites
 
 **[Home Assistant Blog](https://www.home-assistant.io/blog/)**
 - Official updates and releases
@@ -172,7 +172,7 @@ Amazon Alexa and Echo devices.
 - Community Q&A
 - Product discussions
 
-### Discord Servers
+### Discord servers
 
 **[Home Assistant Discord](https://discord.gg/home-assistant)**
 - Real-time chat support
@@ -186,9 +186,9 @@ Amazon Alexa and Echo devices.
 
 ---
 
-## Getting Involved
+## Getting involved
 
-### Contribute to Open Source
+### Contribute to open source
 
 **Home Assistant:**
 - [GitHub Repository](https://github.com/home-assistant)
@@ -201,15 +201,15 @@ Amazon Alexa and Echo devices.
 - Create custom sensors
 - Share configurations
 
-### Share Your Knowledge
+### Share your knowledge
 
-**Create Content:**
+**Create content:**
 - Write blog posts
 - Make YouTube videos
 - Share automation blueprints
 - Help others in forums
 
-**Document Your Setup:**
+**Document your setup:**
 - Share your configurations
 - Post to Reddit/forums
 - Create GitHub repositories
@@ -217,17 +217,17 @@ Amazon Alexa and Echo devices.
 
 ---
 
-## Stay Updated
+## Stay updated
 
-### Follow Smart Home News
+### Follow smart home news
 
-**Major Tech Sites:**
+**Major tech sites:**
 - The Verge
 - Ars Technica
 - CNET
 - Engadget
 
-**Twitter/X Accounts:**
+**Twitter/X accounts:**
 * @homeassistant
 * @SmartThings
 * @amazon (Alexa updates)
@@ -248,18 +248,18 @@ Amazon Alexa and Echo devices.
 
 ---
 
-## Product Research
+## Product research
 
-### Before You Buy
+### Before you buy
 
-**Check These Resources:**
+**Check these resources:**
 1. **YouTube Reviews** - Watch multiple reviewers
 2. **Reddit Discussions** - Search for product name
 3. **Amazon Reviews** - Read the 3-star reviews
 4. **Compatibility Lists** - Check your platform's compatibility
 5. **Return Policy** - Know before you buy
 
-### Recommended Retailers
+### Recommended retailers
 
 **Online:**
 - Amazon (easy returns)
@@ -267,25 +267,25 @@ Amazon Alexa and Echo devices.
 - Home Depot / Lowe's (construction-related)
 - B&H Photo (wide selection)
 
-**Direct from Manufacturer:**
+**Direct from manufacturer:**
 - Often better support
 - Latest firmware
 - Warranty service
 
 ---
 
-## Contributing to This Site
+## Contributing to this site
 
 This guide is open source and welcomes contributions!
 
-**How to Contribute:**
+**How to contribute:**
 1. Visit our [GitHub Repository](https://github.com/madskristensen/HomeAutomationCookbook)
 2. Submit issues for corrections
 3. Create pull requests for additions
 4. Share your automation recipes
 5. Improve documentation
 
-**What We Need:**
+**What we need:**
 - More automation examples
 - Platform-specific guides
 - Product reviews

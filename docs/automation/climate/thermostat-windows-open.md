@@ -13,7 +13,7 @@ Let fresh air into your house without wasting energy heating or cooling the outd
 
 <div class="use-case-grid">
   <div class="use-case-card">
-    <h4>Energy Savings</h4>
+    <h4>Energy savings</h4>
     <ul>
       <li><strong>Fresh Air</strong> - Stop thermostat when opening windows to air out the house</li>
       <li><strong>Nice Weather</strong> - Save energy during pleasant weather when windows are open</li>
@@ -21,7 +21,7 @@ Let fresh air into your house without wasting energy heating or cooling the outd
     </ul>
   </div>
   <div class="use-case-card">
-    <h4>Smart Control</h4>
+    <h4>Smart control</h4>
     <ul>
       <li><strong>Guest Traffic</strong> - Pause HVAC when front door is open as guests come and go</li>
       <li><strong>Spring/Fall Optimization</strong> - Take advantage of natural ventilation</li>
@@ -32,7 +32,7 @@ Let fresh air into your house without wasting energy heating or cooling the outd
 ## Products needed
 
 <div class="product-section">
-  <h4>Essential Equipment</h4>
+  <h4>Essential equipment</h4>
   
   <div class="product-list">
     <div class="product-item">
@@ -54,7 +54,7 @@ Let fresh air into your house without wasting energy heating or cooling the outd
 </div>
 
 <div class="product-section">
-  <h4>Optional Enhancements</h4>
+  <h4>Optional enhancements</h4>
   
   <div class="product-list">
     <div class="product-item">

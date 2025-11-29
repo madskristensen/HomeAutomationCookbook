@@ -3,13 +3,13 @@ layout: default
 title: Appliance Automations
 ---
 
-# Appliance Automations
+# Appliance automations
 
 The latest generation of appliances have WiFi connectivity and phone apps. But you may want deeper integration with your smart home, or you may have "dumb" appliances that need creative solutions. Here are ways to automate any appliance.
 
 <div class="category-intro" markdown="1">
 
-## Why Appliance Automation?
+## Why appliance automation?
 
 **Never Forget** — Get notified when washer, dryer, or dishwasher finishes
 
@@ -31,7 +31,7 @@ The latest generation of appliances have WiFi connectivity and phone apps. But y
 
 <div class="automation-card" markdown="1">
 
-### Washer Done Notification
+### Washer done notification
 
 Get notified when the washing machine cycle completes so you can transfer clothes to dryer promptly.
 
@@ -43,7 +43,7 @@ Get notified when the washing machine cycle completes so you can transfer clothe
 
 <div class="automation-card" markdown="1">
 
-### Auto-Start Robot Vacuum When Away
+### Auto-start robot vacuum when away
 
 Robot vacuum automatically cleans your home when everyone leaves.
 
@@ -57,9 +57,9 @@ Robot vacuum automatically cleans your home when everyone leaves.
 
 ---
 
-## Quick Start Guide
+## Quick start guide
 
-### 1. Power Monitoring Smart Plugs
+### 1. Power monitoring smart plugs
 
 **Best for Appliance Detection:**
 - TP-Link Kasa EP25 (16A, energy monitoring)
@@ -69,7 +69,7 @@ Robot vacuum automatically cleans your home when everyone leaves.
 
 **Note:** Most dryers use 240V special outlets and can't use standard smart plugs. Use vibration sensors instead.
 
-### 2. Alternative Detection Methods
+### 2. Alternative detection methods
 
 **Vibration Sensors:**
 - Aqara Vibration Sensor
@@ -82,7 +82,7 @@ Robot vacuum automatically cleans your home when everyone leaves.
 - Track open/close cycles
 - Verify state changes
 
-### 3. Learn Power Patterns
+### 3. Learn power patterns
 
 **Before Automating:**
 1. Plug appliance into power monitoring plug
@@ -95,7 +95,7 @@ Robot vacuum automatically cleans your home when everyone leaves.
 
 ---
 
-## Common Use Cases
+## Common use cases
 
 ### 🔔 Completion Notifications
 - Washer/dryer cycle finished
@@ -123,7 +123,7 @@ Robot vacuum automatically cleans your home when everyone leaves.
 
 ---
 
-## Best Practices
+## Best practices
 
 ### ✅ Power Monitoring Tips
 

@@ -3,13 +3,13 @@ layout: default
 title: Climate Automations
 ---
 
-# Climate Automations
+# Climate automations
 
 Controlling your indoor climate for optimal comfort and energy savings is at the core of a smart home. These automations will elevate both your wellbeing and wallet.
 
 <div class="category-intro" markdown="1">
 
-## Why Climate Automation?
+## Why climate automation?
 
 **Energy Savings** — Save 10-30% on heating and cooling costs
 
@@ -31,7 +31,7 @@ Controlling your indoor climate for optimal comfort and energy savings is at the
 
 <div class="automation-card" markdown="1">
 
-### Stop Thermostat When Windows Open
+### Stop thermostat when windows open
 
 Pause heating or cooling when windows open to save energy and avoid conditioning the outdoors.
 
@@ -43,7 +43,7 @@ Pause heating or cooling when windows open to save energy and avoid conditioning
 
 <div class="automation-card" markdown="1">
 
-### Turn On Fan When Shower Starts
+### Turn on fan when shower starts
 
 Automatically turn on the bathroom fan when you start a shower to prevent humidity buildup and mirror fog.
 
@@ -57,9 +57,9 @@ Automatically turn on the bathroom fan when you start a shower to prevent humidi
 
 ---
 
-## Quick Start Guide
+## Quick start guide
 
-### 1. Choose Your Smart Thermostat
+### 1. Choose your smart thermostat
 
 **WiFi Thermostats (Most Popular):**
 - Ecobee SmartThermostat (room sensors, Alexa built-in)
@@ -72,7 +72,7 @@ Automatically turn on the bathroom fan when you start a shower to prevent humidi
 - No cloud dependency
 - Integrates with mesh network
 
-### 2. Essential Sensors
+### 2. Essential sensors
 
 **Must-Have:**
 - 🌡️ Temperature sensors (per-room accuracy)
@@ -84,7 +84,7 @@ Automatically turn on the bathroom fan when you start a shower to prevent humidi
 - 🌤️ Outdoor weather station
 - ⚡ Smart plugs with power monitoring
 
-### 3. Start Simple
+### 3. Start simple
 
 **Easy First Automations:**
 1. **Window opens** → Pause thermostat
@@ -99,7 +99,7 @@ Automatically turn on the bathroom fan when you start a shower to prevent humidi
 
 ---
 
-## Common Use Cases
+## Common use cases
 
 ### 💰 Energy Savings
 - Stop HVAC when windows/doors open
@@ -127,7 +127,7 @@ Automatically turn on the bathroom fan when you start a shower to prevent humidi
 
 ---
 
-## Best Practices
+## Best practices
 
 ### ✅ Thermostat Control
 - Add 1-2 minute delays before disabling

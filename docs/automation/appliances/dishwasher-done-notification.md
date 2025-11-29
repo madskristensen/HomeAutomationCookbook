@@ -144,7 +144,7 @@ AND set dishwasher_clean to true</div>
   </div>
 </div>
 
-## Platform-Specific Examples
+## Platform-specific examples
 
 <div class="platform-grid">
   <div class="platform-card">

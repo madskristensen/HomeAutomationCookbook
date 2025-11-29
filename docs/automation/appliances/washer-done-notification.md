@@ -135,7 +135,7 @@ AND set washer_running to false</div>
   </div>
 </div>
 
-## Platform-Specific Examples
+## Platform-specific examples
 
 <div class="platform-grid">
   <div class="platform-card">

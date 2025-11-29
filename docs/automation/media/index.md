@@ -3,13 +3,13 @@ layout: default
 title: Media Automations
 ---
 
-# Media Automations
+# Media automations
 
 Music and entertainment control automations make your smart home feel more alive and responsive. From automatic shower music to movie mode lighting, these automations enhance your daily routines.
 
 <div class="category-intro" markdown="1">
 
-## Why Media Automation?
+## Why media automation?
 
 **Soundtrack Your Life** — Music starts automatically for different activities
 
@@ -31,7 +31,7 @@ Music and entertainment control automations make your smart home feel more alive
 
 <div class="automation-card" markdown="1">
 
-### Dim Lights When TV Turns On
+### Dim lights when TV turns on
 
 Automatically dim lights for optimal movie watching experience.
 
@@ -43,7 +43,7 @@ Automatically dim lights for optimal movie watching experience.
 
 <div class="automation-card" markdown="1">
 
-### Physical Switch Music Control
+### Physical switch music control
 
 Use smart buttons or switches to instantly play/pause your favorite stations.
 
@@ -57,9 +57,9 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 
 ---
 
-## Quick Start Guide
+## Quick start guide
 
-### 1. Choose Your Smart Speakers
+### 1. Choose your smart speakers
 
 **Multi-Room Music:**
 - Sonos System (best quality, easy grouping)
@@ -72,7 +72,7 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 - JBL Flip or similar IP67 rated
 - Mount away from direct water spray
 
-### 2. Physical Controls
+### 2. Physical controls
 
 **Smart Buttons/Switches:**
 - Philips Hue Dimmer Switch
@@ -86,7 +86,7 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 - Kitchen counter for cooking music
 - Next to favorite chair
 
-### 3. Set Up Music Services
+### 3. Set up music services
 
 **Popular Integrations:**
 - Spotify (most flexible)
@@ -97,7 +97,7 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 
 ---
 
-## Common Use Cases
+## Common use cases
 
 ### 🎵 Automatic Music
 - Shower music when bathroom lights on
@@ -129,7 +129,7 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 
 ---
 
-## Best Practices
+## Best practices
 
 ### ✅ Speaker Placement
 
@@ -199,9 +199,9 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 
 ---
 
-## Advanced Techniques
+## Advanced techniques
 
-### Context-Aware Music
+### Context-aware music
 
 **Based on Time:**
 - Morning: News/podcasts
@@ -222,7 +222,7 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 - Party mode: Crowd-pleasers
 - Guest mode: Background music only
 
-### Multi-Room Scenes
+### Multi-room scenes
 
 **Whole House:**
 - Same music everywhere
@@ -235,7 +235,7 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 - Bedrooms independent
 - Outdoor speakers separate
 
-### Movie Mode Variations
+### Movie mode variations
 
 **Regular TV:**
 - Lights: 15-20%

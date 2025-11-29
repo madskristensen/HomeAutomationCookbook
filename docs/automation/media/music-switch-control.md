@@ -108,7 +108,7 @@ AND adjust volume to preset level</div>
   </div>
 </div>
 
-## Platform-Specific Examples
+## Platform-specific examples
 
 <div class="platform-grid">
   <div class="platform-card">

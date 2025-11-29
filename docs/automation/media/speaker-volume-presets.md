@@ -108,7 +108,7 @@ THEN set all speakers to 70-80%</div>
   </div>
 </div>
 
-## Platform-Specific Examples
+## Platform-specific examples
 
 <div class="platform-grid">
   <div class="platform-card">

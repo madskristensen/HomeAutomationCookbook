@@ -139,7 +139,7 @@ AND send notification "Coffee brewing ☕"</div>
   </ul>
 </div>
 
-## Platform-Specific Examples
+## Platform-specific examples
 
 <div class="platform-grid">
   <div class="platform-card">

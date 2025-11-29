@@ -5,13 +5,13 @@ description: Master contact sensor automations for doors and windows. Automatic 
 keywords: contact sensor automation, door sensor, window sensor, magnetic sensor, smart door automation, door contact sensor
 ---
 
-# Contact Sensor Automations
+# Contact sensor automations
 
 Contact sensors are among the most versatile and reliable smart home devices. These simple magnetic sensors detect when doors, windows, cabinets, or gates open or close, enabling instant automation triggers.
 
 <div class="category-intro" markdown="1">
 
-## Why Contact Sensors?
+## Why contact sensors?
 
 **Instant Response** — Detect open/close immediately with no delay
 
@@ -31,7 +31,7 @@ Contact sensors are among the most versatile and reliable smart home devices. Th
 
 <div class="automation-card" markdown="1">
 
-### Toggle Lights When Door Opens
+### Toggle lights when door opens
 
 Automatically turn lights on when doors open, off when they close. Perfect for closets, pantries, and storage areas.
 
@@ -43,7 +43,7 @@ Automatically turn lights on when doors open, off when they close. Perfect for c
 
 <div class="automation-card" markdown="1">
 
-### Disable Motion Lights When Door Closes
+### Disable motion lights when door closes
 
 Prevent motion sensors from turning lights back on after you've left. Essential bathroom light control.
 
@@ -57,9 +57,9 @@ Prevent motion sensors from turning lights back on after you've left. Essential 
 
 ---
 
-## Quick Start Guide
+## Quick start guide
 
-### 1. Choose Your Sensors
+### 1. Choose your sensors
 
 **Zigbee/Z-Wave (Recommended):**
 - Aqara, SmartThings, Ring, Sonoff
@@ -73,7 +73,7 @@ Prevent motion sensors from turning lights back on after you've left. Essential 
 - No hub required
 - Higher battery consumption
 
-### 2. Strategic Placement
+### 2. Strategic placement
 
 **High-Value Locations:**
 - 🚪 Entry doors (front, back, garage)
@@ -88,7 +88,7 @@ Prevent motion sensors from turning lights back on after you've left. Essential 
 - Clean surfaces before mounting
 - Test before permanent installation
 
-### 3. Start with Simple Automations
+### 3. Start with simple automations
 
 **Easy Wins:**
 1. **Closet door opens** → Turn on closet light
@@ -103,7 +103,7 @@ Prevent motion sensors from turning lights back on after you've left. Essential 
 
 ---
 
-## Common Use Cases
+## Common use cases
 
 ### 💡 Lighting Automation
 - Closet/pantry lights on door open
@@ -131,7 +131,7 @@ Prevent motion sensors from turning lights back on after you've left. Essential 
 
 ---
 
-## Best Practices
+## Best practices
 
 ### ✅ Installation
 - Test alignment before permanent mounting

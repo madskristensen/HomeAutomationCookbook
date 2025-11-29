@@ -3,7 +3,7 @@ layout: default
 title: Automation Recipes
 ---
 
-# Automation Recipes
+# Automation recipes
 
 This is the main section with dozens of practical automation recipes for your smart home. These automations have been tested and refined over years to be as accurate and easy to set up as possible.
 
@@ -20,7 +20,7 @@ Motion sensors are powerful automation tools. Learn how to:
 
 ---
 
-### 🚪 [Contact (Door/Window) Sensors](/automation/contact/)
+### 🚪 [Contact (door/window) sensors](/automation/contact/)
 
 Versatile sensors that enable many useful automations:
 - Toggle lights when doors open
@@ -31,7 +31,7 @@ Versatile sensors that enable many useful automations:
 
 ---
 
-### 📍 [Presence and Modes](/automation/presence/)
+### 📍 [Presence and modes](/automation/presence/)
 
 Location-based and mode-driven automations:
 - Set Away Mode when everybody leaves
@@ -102,15 +102,15 @@ Additional helpful automations:
 
 ---
 
-## Getting Started with Automations
+## Getting started with automations
 
-### 1. Start Simple
+### 1. Start simple
 Begin with a single trigger and single action. Test thoroughly before adding complexity.
 
-### 2. Add Conditions
+### 2. Add conditions
 Enhance automations with time of day, presence detection, or sensor state conditions.
 
-### 3. Test Thoroughly
+### 3. Test thoroughly
 Run automations in "test mode" before enabling permanently. Monitor for a few days.
 
 ### 4. Document
@@ -119,7 +119,7 @@ Name automations clearly and add descriptions for future reference.
 ### 5. Iterate
 Gather feedback from household members and refine based on real-world usage.
 
-## Automation Patterns
+## Automation patterns
 
 ### If/Then/Else
 ```
@@ -128,19 +128,19 @@ THEN turn on light
 ELSE (after 5 min) turn off light
 ```
 
-### Multiple Conditions
+### Multiple conditions
 ```
 IF (motion detected) AND (lux < 100) AND (time after sunset)
 THEN turn on light
 ```
 
-### Time-Based
+### Time-based
 ```
 EVERY weekday at 7:00 AM
 DO run morning routine
 ```
 
-## Best Practices
+## Best practices
 
 ✅ **Keep It Simple** - Simple automations are reliable automations
 ✅ **Include Delays** - Avoid rapid on/off toggling
