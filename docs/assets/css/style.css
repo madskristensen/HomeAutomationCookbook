@@ -880,6 +880,7 @@ th {
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--color-border);
+  height: 30px;
 }
 
 .platform-card-header img {
@@ -890,13 +891,15 @@ th {
   vertical-align: middle;
 }
 
-.platform-card-header h4 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.05rem;
-  color: var(--color-text-heading);
-  line-height: 28px;
-}
+    .platform-card-header h4 {
+        margin: 0;
+        padding: 10px 0 0 0;
+        position: relative;
+        top: 6px;
+        /*font-size: 1.05rem;*/
+        /*color: var(--color-text-heading);*/
+        /*line-height: 30px;*/
+    }
 
 .platform-card h4 {
   margin: 0 0 1rem;
