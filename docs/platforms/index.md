@@ -9,14 +9,14 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 
 ## Platform comparison
 
-| Feature | Home Assistant | Apple HomeKit | SmartThings | Google Home | Alexa |
-|---------|---------------|---------------|-------------|-------------|-------|
-| **Cost** | Free | Free | Free | Free | Free |
-| **Hardware** | Optional | Apple Device | Optional | Optional | Optional |
-| **Difficulty** | Advanced | Easy | Easy | Easy | Easy |
-| **Privacy** | Excellent | Excellent | Fair | Poor | Fair |
-| **Customization** | Excellent | Limited | Good | Limited | Good |
-| **Device Support** | Excellent | Limited | Excellent | Good | Excellent |
+| Feature | Home Assistant | Hubitat | Apple HomeKit | SmartThings | Google Home | Alexa |
+|---------|---------------|---------|---------------|-------------|-------------|-------|
+| **Cost** | Free | $150+ | Free | Free | Free | Free |
+| **Hardware** | Optional | Required | Apple Device | Optional | Optional | Optional |
+| **Difficulty** | Advanced | Intermediate | Easy | Easy | Easy | Easy |
+| **Privacy** | Excellent | Excellent | Excellent | Fair | Poor | Fair |
+| **Customization** | Excellent | Excellent | Limited | Good | Limited | Good |
+| **Device Support** | Excellent | Excellent | Limited | Excellent | Good | Excellent |
 
 ## Detailed platform guides
 
@@ -43,6 +43,33 @@ Home Assistant is an open-source platform that runs on various hardware (Raspber
 2. Install Home Assistant OS
 3. Configure integrations
 4. Set up automations
+
+---
+
+### Hubitat
+
+**Best for**: Users wanting local control without complex setup
+
+Hubitat Elevation is a local-first home automation hub that runs entirely on your network.
+
+**Pros:**
+- 100% local processing (no cloud required)
+- Works without internet
+- Built-in Z-Wave and Zigbee radios
+- Good automation engine (Rule Machine)
+- Active community and marketplace
+
+**Cons:**
+- Hardware purchase required
+- Less polished interface than cloud platforms
+- Steeper learning curve than consumer platforms
+- Smaller integration library than Home Assistant
+
+**Getting Started:**
+1. Purchase Hubitat Elevation hub
+2. Connect to your network
+3. Pair Zigbee/Z-Wave devices
+4. Create rules with Rule Machine
 
 ---
 
