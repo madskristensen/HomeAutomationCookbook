@@ -11,103 +11,147 @@ Remembering to turn on the ceiling fan when taking a shower early in the morning
 
 ## Use cases
 
-* **Morning Shower** - Automatically turn on fan when starting your morning shower
-* **Prevent Mirror Fog** - Keep bathroom mirrors clear during showers
-* **Humidity Control** - Reduce excess moisture to prevent mold and mildew
-* **Bathroom Ventilation** - Improve air quality automatically
-* **Multi-User Households** - Everyone gets fan benefits without remembering
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Convenience & Comfort</h4>
+    <ul>
+      <li><strong>Morning Shower</strong> - Automatically turn on fan when starting your morning shower</li>
+      <li><strong>Prevent Mirror Fog</strong> - Keep bathroom mirrors clear during showers</li>
+      <li><strong>Multi-User Households</strong> - Everyone gets fan benefits without remembering</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Health & Safety</h4>
+    <ul>
+      <li><strong>Humidity Control</strong> - Reduce excess moisture to prevent mold and mildew</li>
+      <li><strong>Bathroom Ventilation</strong> - Improve air quality automatically</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **Smart Fan Switch** - WiFi or Zigbee ceiling fan control
-  - Popular brands: Lutron, GE, Leviton, Inovelli
-  - Key features: Works with existing fan, load rating sufficient for fan motor
-
-**PLUS one of these trigger options:**
-
-* **Option 1: Smart Light Switch** - Trigger when shower lights turn on
-  - Easiest method if you have smart shower lights
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Option 2: Contact Sensor** - Trigger when shower door opens
-  - Best for glass shower enclosures with door
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Fan Switch</strong>
+      <div class="product-details">
+        Popular brands: Lutron, GE, Leviton, Inovelli<br>
+        WiFi or Zigbee • Works with existing fan • Load rating sufficient for fan motor
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Trigger Option (choose one)</strong>
+      <div class="product-details">
+        <strong>Smart Light Switch:</strong> Trigger when shower lights turn on (easiest method)<br>
+        <strong>Contact Sensor:</strong> Trigger when shower door opens (best for glass enclosures)<br>
+        <strong>Humidity Sensor:</strong> Trigger when humidity rises (most accurate - Aqara, Sonoff, Zigbee)
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
   
-* **Option 3: Humidity Sensor** - Trigger when humidity rises
-  - Most accurate but requires sensor placement
-  - Options: Aqara, Sonoff, Zigbee sensors
-
-### Optional enhancements
-
-* **Multi-Sensor** - Combines temperature, humidity, and motion for advanced control
-* **Smart Speaker** - Announce "Fan turned on" or play shower music
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Multi-Sensor</strong>
+      <div class="product-details">
+        Combines temperature, humidity, and motion for advanced control
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Speaker</strong>
+      <div class="product-details">
+        Announce "Fan turned on" or play shower music
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers (choose one method)
+<div class="automation-example">IF shower lights turn on
+THEN turn on bathroom fan</div>
 
-**Method 1: Light-based**
-* Shower lights turn on
-
-**Method 2: Door sensor**
-* Shower door opens (contact sensor)
-
-**Method 3: Humidity-based**
-* Bathroom humidity rises above 75%
-
-### Conditions (optional)
-
-* **Time-Based:** Only between 5 AM and 11 PM (quiet hours at night)
-* **Home Mode:** Only when someone is home
-
-### Actions
-
-* Turn on bathroom fan switch
-* Optional: Set fan to specific speed if multi-speed fan
-* Optional: Send notification "Bathroom fan activated"
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers (choose one method)</h4>
+    <strong>Method 1 - Light-based:</strong> Shower lights turn on<br>
+    <strong>Method 2 - Door sensor:</strong> Shower door opens (contact sensor)<br>
+    <strong>Method 3 - Humidity-based:</strong> Bathroom humidity rises above 75%
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions (optional)</h4>
+    <strong>Time-Based:</strong> Only between 5 AM and 11 PM (quiet hours at night)<br>
+    <strong>Home Mode:</strong> Only when someone is home
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn on bathroom fan switch</li>
+      <li>Optional: Set fan to specific speed if multi-speed fan</li>
+      <li>Optional: Send notification "Bathroom fan activated"</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** Shower lights turn on
-- **Condition:** Time is between 5 AM and 11 PM
-- **Action:** Turn on bathroom fan switch
-
-**Humidity-based example:**
-
-Create automation with these elements:
-- **Trigger:** Bathroom humidity rises above 75%
-- **Action:** Turn on bathroom fan
-
-### SmartThings
-
-Create routine:
-1. **IF** Shower lights turn on
-2. **AND** Time is between 5:00 AM and 11:00 PM
-3. **THEN** Turn on bathroom fan switch
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** Shower light turns on
-3. **Conditions:** Time is between 5:00 AM and 11:00 PM
-4. **Do:** Turn on bathroom fan
-
-### Alexa
-
-Create routine:
-1. **When:** Smart Home device (shower light) turns on
-2. **Add condition:** Time between 5:00 AM - 11:00 PM
-3. **Action:** Turn on bathroom fan
-
-### Google Home
-
-Create automation:
-1. **Starter:** Shower light turns on
-2. **Condition:** Time between 5:00 AM - 11:00 PM
-3. **Action:** Turn on bathroom fan
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Shower lights turn on</li>
+      <li>Condition: Time is between 5 AM and 11 PM</li>
+      <li>Action: Turn on bathroom fan switch</li>
+      <li>Humidity option: Trigger when humidity rises above 75%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF Shower lights turn on</li>
+      <li>AND Time is between 5:00 AM and 11:00 PM</li>
+      <li>THEN Turn on bathroom fan switch</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Shower light turns on</li>
+      <li>Conditions: Time is between 5:00 AM and 11:00 PM</li>
+      <li>Do: Turn on bathroom fan</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Shower light turns on</li>
+      <li>Condition: Time between 5:00 AM - 11:00 PM</li>
+      <li>Action: Turn on bathroom fan</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: Shower light turns on</li>
+      <li>Condition: Time between 5:00 AM - 11:00 PM</li>
+      <li>Action: Turn on bathroom fan</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

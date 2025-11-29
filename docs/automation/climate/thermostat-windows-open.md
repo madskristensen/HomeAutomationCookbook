@@ -11,90 +11,149 @@ Let fresh air into your house without wasting energy heating or cooling the outd
 
 ## Use cases
 
-* **Fresh Air** - Stop thermostat when opening windows to air out the house
-* **Guest Traffic** - Pause HVAC when front door is open as guests come and go
-* **Nice Weather** - Save energy during pleasant weather when windows are open
-* **Prevent Energy Waste** - Don't heat or cool the outdoors
-* **Spring/Fall Optimization** - Take advantage of natural ventilation
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Energy Savings</h4>
+    <ul>
+      <li><strong>Fresh Air</strong> - Stop thermostat when opening windows to air out the house</li>
+      <li><strong>Nice Weather</strong> - Save energy during pleasant weather when windows are open</li>
+      <li><strong>Prevent Energy Waste</strong> - Don't heat or cool the outdoors</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Smart Control</h4>
+    <ul>
+      <li><strong>Guest Traffic</strong> - Pause HVAC when front door is open as guests come and go</li>
+      <li><strong>Spring/Fall Optimization</strong> - Take advantage of natural ventilation</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **Smart Thermostat** - WiFi or Zigbee enabled
-  - Popular brands: Nest, Ecobee, Honeywell, Sensi
-  - Key features: API control, ability to turn off remotely
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Contact Sensors** - On windows and frequently-used doors
-  - Popular brands: Aqara, Wyze, SmartThings, Ring
-  - Options: Zigbee, Z-Wave, or WiFi depending on ecosystem
-  - Quantity: Start with frequently opened windows, add more over time
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Thermostat</strong>
+      <div class="product-details">
+        Popular brands: Nest, Ecobee, Honeywell, Sensi<br>
+        WiFi or Zigbee enabled • API control • Remote off capability
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Contact Sensors</strong>
+      <div class="product-details">
+        Popular brands: Aqara, Wyze, SmartThings, Ring<br>
+        Zigbee, Z-Wave, or WiFi options • Start with frequently opened windows
+      </div>
+    </div>
+  </div>
+</div>
 
-### Optional enhancements
-
-* **Weather Station** - Track outdoor temperature to optimize window opening decisions
-* **Dashboard Display** - Visual indicator showing which windows are open and thermostat status
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Weather Station</strong>
+      <div class="product-details">
+        Track outdoor temperature to optimize window opening decisions
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Dashboard Display</strong>
+      <div class="product-details">
+        Visual indicator showing which windows are open and thermostat status
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Any window or door has been open for over 1 minute
-* OR specific high-traffic door (front, back) open for 30 seconds
+<div class="automation-example">IF window open for 1 minute
+THEN turn off thermostat
+AND send notification "Thermostat off - living room window open"</div>
 
-### Conditions (optional)
-* **HVAC Currently Running:** Only trigger if heating or cooling is active
-* **Time-Based:** Only during typical awake hours
-* **Temperature Check:** Outside temp not extreme (optional safety)
-
-### Actions
-* Turn off thermostat (or set to "off" mode)
-* Optional: Send notification "Thermostat paused - window open"
-* Optional: Update dashboard tile to show status
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Any window or door has been open for over 1 minute</li>
+      <li>OR specific high-traffic door (front, back) open for 30 seconds</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions (optional)</h4>
+    <strong>HVAC Currently Running:</strong> Only trigger if heating or cooling is active<br>
+    <strong>Time-Based:</strong> Only during typical awake hours<br>
+    <strong>Temperature Check:</strong> Outside temp not extreme (optional safety)
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn off thermostat (or set to "off" mode)</li>
+      <li>Optional: Send notification "Thermostat paused - window open"</li>
+      <li>Optional: Update dashboard tile to show status</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** Window or door opens for 1 minute (multiple sensors can trigger)
-- **Action:** 
-  - Set thermostat HVAC mode to "off"
-  - Send notification showing which window/door opened
-
-**Save previous state:**
-Before turning off thermostat:
-- Save current thermostat mode to helper variable
-- Then turn off thermostat
-
-This allows restoration of exact previous state (heat, cool, or auto) when windows close.
-
-### SmartThings
-
-Create routine:
-1. **IF** Living room window opens
-2. **AND** Window stays open for 1 minute
-3. **THEN** Set thermostat mode to "Off"
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** Any window or door opens
-3. **Conditions:** Stays open for at least 1 minute
-4. **Do:** Turn off thermostat
-
-### Alexa
-
-Create routine:
-1. **When:** Smart Home sensor opens (select window sensor)
-2. **Wait:** 1 minute
-3. **Action:** Set thermostat to Off mode
-
-### Google Home
-
-Create automation:
-1. **Starter:** Window sensor opens
-2. **Condition:** Sensor open for at least 1 minute
-3. **Action:** Set thermostat to Off
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Window or door opens for 1 minute</li>
+      <li>Action: Set thermostat HVAC mode to "off"</li>
+      <li>Send notification showing which window/door opened</li>
+      <li>Tip: Save previous state to helper variable for restoration</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF Living room window opens</li>
+      <li>AND Window stays open for 1 minute</li>
+      <li>THEN Set thermostat mode to "Off"</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Any window or door opens</li>
+      <li>Conditions: Stays open for at least 1 minute</li>
+      <li>Do: Turn off thermostat</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Smart Home sensor opens</li>
+      <li>Wait: 1 minute</li>
+      <li>Action: Set thermostat to Off mode</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: Window sensor opens</li>
+      <li>Condition: Sensor open for at least 1 minute</li>
+      <li>Action: Set thermostat to Off</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

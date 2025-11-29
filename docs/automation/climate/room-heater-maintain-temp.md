@@ -11,128 +11,161 @@ In colder rooms, add supplemental heating to maintain comfortable temperature au
 
 ## Use cases
 
-* **Cold Bedroom** - Room gets too cold during the night
-* **Kids' Room Warmer** - Children want warmer bedroom than rest of house
-* **Garage Office** - Converted workspace needs extra heat
-* **Basement Room** - Lower levels stay consistently cold
-* **Guest Room** - Maintain comfortable temperature only when occupied
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Bedrooms & Living</h4>
+    <ul>
+      <li><strong>Cold Bedroom</strong> - Room gets too cold during the night</li>
+      <li><strong>Kids' Room Warmer</strong> - Children want warmer bedroom than rest of house</li>
+      <li><strong>Guest Room</strong> - Maintain comfortable temperature only when occupied</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Workspaces</h4>
+    <ul>
+      <li><strong>Garage Office</strong> - Converted workspace needs extra heat</li>
+      <li><strong>Basement Room</strong> - Lower levels stay consistently cold</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **Temperature Sensor** - Room-specific temperature monitoring
-  - Popular brands: Aqara, Sonoff, SmartThings, Zigbee sensors
-  - Key features: Accurate temperature, fast updates, good battery life
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Room Heater** - Electric space heater
-  - Must have simple on/off switch (stays in "on" position when power applied)
-  - Certified safety: UL, ETL, or CE certification required
-  - Features: Tip-over protection, overheat protection
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Temperature Sensor</strong>
+      <div class="product-details">
+        Popular brands: Aqara, Sonoff, SmartThings, Zigbee sensors<br>
+        Accurate temperature • Fast updates • Good battery life
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Room Heater</strong>
+      <div class="product-details">
+        Electric space heater with simple on/off switch<br>
+        UL, ETL, or CE certified • Tip-over protection • Overheat protection
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Plug</strong>
+      <div class="product-details">
+        Popular brands: TP-Link Kasa, Wyze, Zigbee plugs<br>
+        Must handle 1500W heater • Power monitoring recommended
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
   
-* **Smart Plug** - Control power to heater
-  - Popular brands: TP-Link Kasa, Wyze, Zigbee plugs
-  - Requirements: Must handle heater wattage (usually 1500W)
-  - Features: Power monitoring recommended
-
-### Optional enhancements
-
-* **Contact Sensor** - On window for safety (prevent running with window open)
-* **Presence Sensor** - Only heat when room is occupied
-* **Smart Outlet** - In-wall alternative to smart plug
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Contact Sensor</strong>
+      <div class="product-details">
+        On window for safety (prevent running with window open)
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Presence Sensor</strong>
+      <div class="product-details">
+        Only heat when room is occupied
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Part 1: Turn on heater when cold
+<div class="automation-example">IF room temperature < 68°F
+THEN turn on space heater
+ELSE IF temperature > 70°F
+THEN turn off space heater</div>
 
-**Triggers:**
-* Room temperature drops below 68°F (20°C)
+<div class="info-box">
+  <strong>⚠️ Critical Safety</strong>
+  <ul>
+    <li>Never operate heater with window open</li>
+    <li>Use only certified heaters (UL, ETL, CE)</li>
+    <li>Ensure 3 feet clearance on all sides</li>
+    <li>Implement maximum runtime shutoff (8 hours)</li>
+    <li>Always check window sensor in conditions</li>
+  </ul>
+</div>
 
-**Conditions:**
-* Window is closed (safety - critical condition)
-* Time is between 6 PM and 8 AM (typical heating hours)
-
-**Actions:**
-* Turn on smart plug with room heater
-
-### Part 2: Turn off heater when warm
-
-**Triggers:**
-* Room temperature rises above 70°F (21°C)
-
-**Conditions:**
-* None (always turn off when warm enough)
-
-**Actions:**
-* Turn off smart plug with room heater
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Part 1: Turn On When Cold</h4>
+    <strong>Trigger:</strong> Room temperature drops below 68°F (20°C)<br>
+    <strong>Conditions:</strong> Window is closed (CRITICAL) • Time between 6 PM - 8 AM<br>
+    <strong>Action:</strong> Turn on smart plug with room heater
+  </div>
+  
+  <div class="setup-step">
+    <h4>Part 2: Turn Off When Warm</h4>
+    <strong>Trigger:</strong> Room temperature rises above 70°F (21°C)<br>
+    <strong>Conditions:</strong> None (always turn off when warm enough)<br>
+    <strong>Action:</strong> Turn off smart plug with room heater
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-**Turn on when cold:**
-
-Create automation with these elements:
-- **Trigger:** Bedroom temperature drops below 68°F for 5 minutes
-- **Conditions:**
-  - Window is closed (critical safety check)
-  - Time is between 6 PM and 8 AM (typical cold hours)
-- **Action:** Turn on heater smart plug
-
-**Turn off when warm:**
-
-Create automation with these elements:
-- **Trigger:** Bedroom temperature rises above 70°F for 2 minutes
-- **Action:** Turn off heater smart plug
-
-**With power monitoring safety:**
-
-Create safety automation:
-- **Trigger:** Heater plug has been on for 8 hours continuously
-- **Actions:**
-  - Turn off heater plug
-  - Send notification: "Bedroom heater auto shut-off after 8 hours" as safety alert
-
-### SmartThings
-
-Create routine for turning on:
-1. **IF** Bedroom temperature sensor reports below 68°F
-2. **AND** Bedroom window is closed
-3. **AND** Time is between 6:00 PM and 8:00 AM
-4. **THEN** Turn on bedroom heater smart plug
-
-Create routine for turning off:
-1. **IF** Bedroom temperature sensor reports above 70°F
-2. **THEN** Turn off bedroom heater smart plug
-
-### Apple HomeKit
-
-**Turn On Automation:**
-1. Create automation in Home app
-2. **When:** Bedroom temperature falls below 68°F
-3. **Conditions:** 
-   - Window is closed
-   - Time between 6:00 PM - 8:00 AM
-4. **Do:** Turn on heater smart plug
-
-**Turn Off Automation:**
-1. **When:** Bedroom temperature rises above 70°F
-2. **Do:** Turn off heater smart plug
-
-### Alexa
-
-Create routine for turning on:
-1. **When:** Smart Home sensor detects temperature below 68°F
-2. **Add condition:** Window sensor is closed
-3. **Add condition:** Time between 6:00 PM - 8:00 AM
-4. **Action:** Turn on heater smart plug
-
-### Google Home
-
-Create automation for turning on:
-1. **Starter:** Temperature sensor below 68°F
-2. **Condition:** Window closed and time between 6 PM - 8 AM
-3. **Action:** Turn on heater smart plug
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Bedroom temp below 68°F for 5 min</li>
+      <li>Condition: Window closed AND time 6 PM - 8 AM</li>
+      <li>Action: Turn on heater smart plug</li>
+      <li>Trigger 2: Temp above 70°F for 2 min</li>
+      <li>Action 2: Turn off heater plug</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF Bedroom temp sensor below 68°F</li>
+      <li>AND Bedroom window is closed</li>
+      <li>AND Time is 6:00 PM - 8:00 AM</li>
+      <li>THEN Turn on bedroom heater plug</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Bedroom temperature falls below 68°F</li>
+      <li>Conditions: Window closed, Time 6 PM - 8 AM</li>
+      <li>Do: Turn on heater smart plug</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Temperature sensor below 68°F</li>
+      <li>Condition: Window closed, Time 6 PM - 8 AM</li>
+      <li>Action: Turn on heater smart plug</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: Temperature sensor below 68°F</li>
+      <li>Condition: Window closed, Time 6 PM - 8 AM</li>
+      <li>Action: Turn on heater smart plug</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

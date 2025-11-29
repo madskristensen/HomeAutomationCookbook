@@ -9,179 +9,187 @@ keywords: auto unlock door, smart lock automation, arrival home automation, auto
 
 Arriving home with arms full of groceries and having the door automatically unlock is a luxury that becomes essential once you experience it. Combined with lights turning on and music starting, it creates a truly welcoming smart home experience.
 
-## Why this automation is valuable
-
-**Convenience:**
-- No fumbling for keys with groceries
-- Hands-free entry
-- Works automatically for everyone with app
-
-**Combined experience:**
-- Door unlocks
-- Lights turn on
-- Music starts playing
-- Thermostat adjusts
-- Perfect welcome home
-
-**Universal:**
-- Works for all household members
-- Kids arriving from school
-- Partners coming home from work
-- Anyone with location enabled
+<div class="info-box">
+  <strong>🏡 Why This Automation Is Valuable</strong>
+  <ul>
+    <li><strong>Convenience:</strong> No fumbling for keys with groceries. Hands-free entry. Works automatically for everyone with app.</li>
+    <li><strong>Combined Experience:</strong> Door unlocks, lights turn on, music starts playing, thermostat adjusts - perfect welcome home</li>
+    <li><strong>Universal:</strong> Works for all household members - kids arriving from school, partners coming home from work, anyone with location enabled</li>
+  </ul>
+</div>
 
 ## Use cases
 
-* **Grocery Shopping** - Arms full, can't reach keys
-* **After Work** - Seamless entry after commute
-* **Kids from School** - Safe automatic entry
-* **Package Delivery** - Easy re-entry after retrieving packages
-* **Late Night** - No searching for keys in the dark
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Daily Arrivals</h4>
+    <ul>
+      <li><strong>Grocery Shopping</strong> - Arms full, can't reach keys</li>
+      <li><strong>After Work</strong> - Seamless entry after commute</li>
+      <li><strong>Kids from School</strong> - Safe automatic entry</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Special Situations</h4>
+    <ul>
+      <li><strong>Package Delivery</strong> - Easy re-entry after retrieving packages</li>
+      <li><strong>Late Night</strong> - No searching for keys in the dark</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **Smart home platform app** - On every adult's phone
-  - Home Assistant Companion
-  - SmartThings
-  - August App
-  - HomeKit (Apple)
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Smart lock or deadbolt**
-  - August Smart Lock
-  - Yale Assure Lock
-  - Schlage Encode
-  - Kwikset Halo
-  - Zigbee/Z-Wave locks
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Home Platform App</strong>
+      <div class="product-details">
+        On every adult's phone<br>
+        Options: Home Assistant Companion, SmartThings, August App, HomeKit (Apple)<br>
+        <em>Requires location services enabled on all phones</em>
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Lock or Deadbolt</strong>
+      <div class="product-details">
+        Brands: August Smart Lock, Yale Assure Lock, Schlage Encode, Kwikset Halo, Zigbee/Z-Wave locks
+      </div>
+    </div>
+  </div>
+</div>
 
-* **Location services** - Enabled on all phones
-
-### Optional enhancements
-
-* **Driveway motion sensor** - Additional verification
-* **Smart doorbell** - Visual confirmation
-* **Geofence zones** - Approaching/arriving triggers
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Driveway Motion Sensor</strong>
+      <div class="product-details">
+        Additional verification for security
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Doorbell</strong>
+      <div class="product-details">
+        Visual confirmation of arrival
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Geofence Zones</strong>
+      <div class="product-details">
+        Approaching/arriving triggers for staged actions
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
+<div class="automation-example">IF person arrives home
+AND within 50 feet of front door
+THEN unlock front door
+AND turn on entry lights</div>
 
-**Primary:**
-* Any phone/person arrives home (enters geofence)
-* Person state changes to "home"
+<div class="info-box">
+  <strong>🔒 Security: Multiple Verification Points Required</strong>
+  <ul>
+    <li><strong>Never rely solely on GPS!</strong> Use multiple signals for safety.</li>
+    <li><strong>✅ Recommended Verification:</strong> Phone location (primary) + Motion in driveway (physical confirmation) + Time delay (20-30 seconds to confirm) + Away → Home state change (must have left first)</li>
+    <li><strong>❌ Don't Do:</strong> Unlock based only on GPS, no delay/verification, no motion confirmation</li>
+  </ul>
+</div>
 
-**Verification:**
-* Person has been "away" before arriving
-* Prevent unlocking if already home
-
-### Conditions (recommended)
-
-**Security verification:**
-* Motion detected in driveway (optional but recommended)
-* Person was away for at least 5 minutes
-* Time delay: Present for 20 seconds before unlocking
-
-**Time-based (optional):**
-* Only during typical arrival times
-* Not during sleeping hours
-
-### Actions
-
-**Immediate:**
-* Unlock front door
-
-**Associated actions:**
-* Change house mode to "Home"
-* Turn on entry lights
-* Start music
-* Adjust thermostat
-* Stop robot vacuum
-* Disarm security
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Any phone/person arrives home (enters geofence)</li>
+      <li>Person state changes to "home"</li>
+    </ul>
+    <p><em>Verification: Person has been "away" before arriving (prevent unlocking if already home)</em></p>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions (Recommended for Security)</h4>
+    <ul>
+      <li>Motion detected in driveway (optional but recommended)</li>
+      <li>Person was away for at least 5 minutes</li>
+      <li>Time delay: Present for 20 seconds before unlocking</li>
+    </ul>
+    <p><em>Optional: Only during typical arrival times, not during sleeping hours</em></p>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <strong>Immediate:</strong> Unlock front door<br>
+    <strong>Associated:</strong> Change house mode to "Home" • Turn on entry lights • Start music • Adjust thermostat • Stop robot vacuum • Disarm security
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** Any person arrives home (state changes to 'home') for 20 seconds
-- **Condition:** 
-  - Person was previously 'not_home'
-  - Optional: Driveway motion sensor detected movement
-- **Actions:**
-  - Unlock front door
-  - Send notification: "Welcome home! Door unlocked."
-
-### Advanced: Home mode trigger
-
-Better approach - trigger on door unlock from ANY source:
-- **Trigger:** Front door unlocks
-- **Condition:** House mode is currently "Away"
-- **Actions:**
-  - Set house mode to "Home"
-  - Turn on entry lights
-  - Start music on house speakers
-  - Set thermostat to "home" preset
-  - Stop robot vacuum (return to dock)
-
-### SmartThings
-
-**Create Routine:**
-1. **IF** Member arrives home (location)
-2. **AND** After 20 seconds
-3. **THEN** Unlock front door
-
-**Create Second Routine:**
-1. **IF** Front door unlocks
-2. **THEN**
-   - Change mode to "Home"
-   - Turn on entry lights
-   - Run welcome scene
-
-### Apple HomeKit
-
-**Create Automation:**
-1. When: I arrive home
-2. Time: Anytime
-3. People: Anyone arrives
-4. Do:
-   - Unlock front door
-   - Turn on lights
-   - Activate home scene
-
-**Note:** HomeKit automation runs on iPhone/iPad, so requires device to be home hub.
-
-### August/Yale App
-
-Most smart locks have built-in auto-unlock:
-
-**Setup:**
-1. Open lock app
-2. Settings → Auto-Unlock
-3. Enable auto-unlock
-4. Set distance threshold (usually 200ft)
-5. Enable for each person
-
-### Alexa
-
-**Create Routine:**
-1. When: You arrive home (location-based)
-2. Add: Wait 20 seconds
-3. Actions:
-   - Unlock front door (requires voice PIN)
-   - Turn on lights
-   - Start music
-
-**Security Note:** Alexa requires voice PIN confirmation for unlock commands in routines.
-
-### Google Home
-
-**Create Automation:**
-1. Starter: When I arrive home
-2. Delay: 20 seconds
-3. Actions:
-   - Unlock front door
-   - Turn on lights
-   - Change mode
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Any person arrives home (state changes to 'home') for 20 seconds</li>
+      <li>Condition: Person was previously 'not_home' + Optional: Driveway motion sensor detected movement</li>
+      <li>Actions: Unlock front door + Send notification: "Welcome home! Door unlocked."</li>
+      <li>Advanced: Trigger on door unlock (any source) → If mode is "Away" → Set to "Home" + Turn on entry lights + Start music + Set thermostat + Stop robot vacuum</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>Routine 1: IF Member arrives home (location) AND After 20 seconds → THEN Unlock front door</li>
+      <li>Routine 2: IF Front door unlocks → THEN Change mode to "Home" + Turn on entry lights + Run welcome scene</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: I arrive home</li>
+      <li>Time: Anytime • People: Anyone arrives</li>
+      <li>Do: Unlock front door + Turn on lights + Activate home scene</li>
+      <li>Note: HomeKit automation runs on iPhone/iPad, requires device to be home hub</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>August/Yale App</h4>
+    <ol>
+      <li>Most smart locks have built-in auto-unlock</li>
+      <li>Open lock app → Settings → Auto-Unlock</li>
+      <li>Enable auto-unlock + Set distance threshold (usually 200ft)</li>
+      <li>Enable for each person</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: You arrive home (location-based) + Wait 20 seconds</li>
+      <li>Actions: Unlock front door (requires voice PIN) + Turn on lights + Start music</li>
+      <li>Security Note: Alexa requires voice PIN confirmation for unlock commands in routines</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: When I arrive home + Delay: 20 seconds</li>
+      <li>Actions: Unlock front door + Turn on lights + Change mode</li>
+    </ol>
+  </div>
+</div>
 
 ## Home mode actions
 

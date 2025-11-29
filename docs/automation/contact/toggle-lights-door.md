@@ -11,126 +11,154 @@ Automatically turning on lights when doors open is a versatile automation that s
 
 ## Use cases
 
-### Indoor applications
-* **Closets** - Turn on closet lights when door opens, illuminate contents automatically
-* **Hallway closets** - Lights spill into hallway to light both areas
-* **Pantry** - See all shelves clearly when door opens
-* **Linen closet** - Find what you need without searching in dim light
-* **Room entry** - Automatic lighting when entering any room
-* **Bathroom** - Combined with motion for complete coverage
-
-### Outdoor applications  
-* **Garage entry** - Light up garage when opening door from house
-* **Exterior doors** - Porch/patio lights when doors open
-* **Shed/storage** - Outdoor building illumination
-* **Gate entry** - Pathway lights when gate opens
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Indoor Applications</h4>
+    <ul>
+      <li>Closets - Illuminate contents automatically</li>
+      <li>Pantry - See all shelves clearly</li>
+      <li>Linen closet - Find items easily</li>
+      <li>Room entry - Automatic lighting</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Outdoor Applications</h4>
+    <ul>
+      <li>Garage entry - Light up when arriving</li>
+      <li>Exterior doors - Porch/patio lights</li>
+      <li>Shed/storage - Building illumination</li>
+      <li>Gate entry - Pathway lighting</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential equipment
-
-* **Contact sensor** (door/window sensor)
-  - Popular brands: Aqara, SmartThings, Ring, Wyze
-  - Battery-powered for easy installation
-  - Zigbee/Z-Wave for reliability
-  - Recessed options for clean look
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Smart light switch or bulb**
-  - In-wall switch for permanent fixtures
-  - Smart bulbs for flexibility
-  - Dimming capability recommended
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Contact Sensor</strong>
+      <div class="product-details">
+        Popular brands: Aqara, SmartThings, Ring, Wyze<br>
+        Battery-powered for easy installation • Zigbee/Z-Wave for reliability
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Light Switch or Bulb</strong>
+      <div class="product-details">
+        In-wall switch for permanent fixtures • Smart bulbs for flexibility • Dimming capability recommended
+      </div>
+    </div>
+  </div>
+</div>
 
-### Outdoor requirements
-
-> **💡 Important:** For outdoor installations:
-> - Use weather-rated sensors (IP65+)
-> - Protect with weatherproof enclosures
-> - Consider temperature range (-20°F to 120°F)
-> - Use UV-resistant materials
+<div class="info-box">
+  <strong>💡 Outdoor Installation Tips</strong>
+  <ul>
+    <li>Use weather-rated sensors (IP65+)</li>
+    <li>Protect with weatherproof enclosures</li>
+    <li>Consider temperature range (-20°F to 120°F)</li>
+    <li>Use UV-resistant materials</li>
+  </ul>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Contact sensor state changes to "open"
-* Door opens (specific door)
+<div class="automation-example">IF closet door opens
+THEN turn on closet light to 100%</div>
 
-### Conditions (optional)
-* **Time-based:** Only during certain hours
-* **Occupancy:** Only when home is occupied
-* **Lux sensor:** Only if room is dark (below threshold)
-* **Day vs. Night:** Different brightness levels
-
-### Actions
-* Turn on light switch/bulb
-* Set to preferred brightness level
-* Optional: Set color temperature
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Contact sensor changes to "open"</li>
+      <li>Door opens (specific door)</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions (optional)</h4>
+    <strong>Time-based:</strong> Only during certain hours<br>
+    <strong>Lux sensor:</strong> Only if room is dark<br>
+    <strong>Day vs. Night:</strong> Different brightness levels
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn on light switch/bulb</li>
+      <li>Set to preferred brightness level</li>
+      <li>Optional: Set color temperature</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Closet door opens</li>
+      <li>Condition: Light level below 50 lux</li>
+      <li>Action: Turn on light at 100%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF "Closet Door Sensor" opens</li>
+      <li>THEN Turn on "Closet Light" to 100%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Door sensor detects open</li>
+      <li>Time: Anytime (or add condition)</li>
+      <li>Do: Turn on Closet Light</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: "Door Sensor" opens</li>
+      <li>Add condition: Time between sunrise/sunset</li>
+      <li>Action: Turn on light to 100%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: "Door Sensor" opens</li>
+      <li>Condition: Time of day (optional)</li>
+      <li>Action: Turn on "Closet Light"</li>
+    </ol>
+  </div>
+</div>
 
-Create automation with these elements:
-- **Trigger:** Closet door sensor changes to "open"
-- **Condition (optional):** Room light level below 50 lux (only activate if dark)
-- **Action:** Turn on closet light at 100% brightness
+## Advanced features
 
-### Advanced: Day vs. night brightness
+### Day vs. night brightness
 
 Adjust brightness based on time of day:
 - **Nighttime (10 PM - 6 AM):** 30% brightness with warm white (2200K)
 - **Daytime:** 100% brightness
 
-Use conditional logic to check time and adjust brightness accordingly.
+### Auto turn-off when door closes
 
-### SmartThings
+**Simple auto-off:** Turn off light 2 minutes after door closes
 
-Create routine:
-1. **IF** "Closet Door Sensor" opens
-2. **THEN** Turn on "Closet Light" to 100%
-
-For day/night variation, create two routines with time conditions.
-
-### Apple HomeKit
-
-1. Open Home app → Automation
-2. **When:** Closet door sensor detects open
-3. **Time:** Anytime (or add time condition)
-4. **Do:** Turn on Closet Light
-5. Optional: Add "Convert to Shortcut" for brightness control
-
-### Alexa
-
-Create routine:
-1. **When:** "Closet Door Sensor" opens
-2. **Add condition:** Time between sunrise and sunset (optional)
-3. **Action:** Turn on "Closet Light" to 100%
-
-### Google Home
-
-Create automation:
-1. **Starter:** "Closet Door Sensor" opens
-2. **Condition:** Time of day (optional)
-3. **Action:** Turn on "Closet Light"
-
-## Auto turn-off when door closes
-
-Complete the automation cycle by turning lights off when the door closes:
-
-### Simple auto-off
-
-Create automation with these elements:
-- **Trigger:** Closet door sensor changes to "closed" for 2 minutes
-- **Action:** Turn off closet light
-
-### Why the delay?
-
-**Without delay:** Lights turn off immediately when door closes
-- Problem: Door swings closed while you're still in closet
-- Problem: Multiple in/out trips cause rapid toggling
-
-**With 2-minute delay:** Buffer time for normal use
-- Allows door to close naturally
-- Prevents annoying on/off cycles
+**Why the 2-minute delay?**
+- Prevents lights turning off while door swings closed
+- Avoids rapid on/off cycles during multiple trips
 - Still energy efficient
 
 ---

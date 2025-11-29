@@ -9,164 +9,181 @@ keywords: away mode automation, presence detection, leave home automation, GPS a
 
 Automatically transition your home to Away Mode when the last person leaves. This foundational automation enables energy savings, security activation, and peace of mind that your home is properly secured.
 
-## Why this matters
-
-**Energy savings:**
-- Turn off unnecessary lights
-- Adjust thermostat to eco mode
-- Stop running appliances
-
-**Security:**
-- Lock all doors automatically
-- Arm security system
-- Activate surveillance cameras
-
-**Convenience:**
-- No manual mode switching needed
-- Works automatically for everyone
-- Consistent behavior
+<div class="info-box">
+  <strong>⭐ Why This Matters</strong>
+  <ul>
+    <li><strong>Energy Savings:</strong> Turn off unnecessary lights, adjust thermostat to eco mode, stop running appliances</li>
+    <li><strong>Security:</strong> Lock all doors automatically, arm security system, activate surveillance cameras</li>
+    <li><strong>Convenience:</strong> No manual mode switching needed. Works automatically for everyone with consistent behavior.</li>
+  </ul>
+</div>
 
 ## Use cases
 
-* **Daily Work Commute** - Everyone leaves for work/school
-* **Weekend Trips** - Family leaves for activities
-* **Vacations** - Extended absence from home
-* **Evening Outings** - Dinner, movies, events
-* **Running Errands** - Quick trips away from home
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Daily & Short Trips</h4>
+    <ul>
+      <li><strong>Daily Work Commute</strong> - Everyone leaves for work/school</li>
+      <li><strong>Running Errands</strong> - Quick trips away from home</li>
+      <li><strong>Evening Outings</strong> - Dinner, movies, events</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Extended Absences</h4>
+    <ul>
+      <li><strong>Weekend Trips</strong> - Family leaves for activities</li>
+      <li><strong>Vacations</strong> - Extended absence from home</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **Smart home platform app** - Installed on every adult's phone
-  - Home Assistant Companion
-  - SmartThings app
-  - Life360 (works with multiple platforms)
-  - Apple Home (for HomeKit)
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Location services enabled** - On each phone
-  - GPS/location always on
-  - Background app refresh enabled
-  - Battery optimization exceptions
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Home Platform App</strong>
+      <div class="product-details">
+        Installed on every adult's phone<br>
+        Options: Home Assistant Companion, SmartThings app, Life360, Apple Home (for HomeKit)<br>
+        <em>Requirements: GPS/location always on, background app refresh enabled, battery optimization exceptions</em>
+      </div>
+    </div>
+  </div>
+</div>
 
-### Optional enhancements
-
-* **Motion sensors** - Verify no one home
-* **Smart locks** - Auto-lock doors
-* **Smart thermostat** - Energy savings
-* **Security cameras** - Visual verification
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Motion Sensors</strong>
+      <div class="product-details">
+        Verify no one home
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Locks</strong>
+      <div class="product-details">
+        Auto-lock doors
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Thermostat</strong>
+      <div class="product-details">
+        Energy savings
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Security Cameras</strong>
+      <div class="product-details">
+        Visual verification
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
+<div class="automation-example">IF everyone leaves home
+THEN set house to Away mode
+AND turn off all lights
+AND adjust thermostat to eco</div>
 
-**Primary:**
-* Last phone leaves home geofence
+<div class="info-box">
+  <strong>⚠️ Important: Verify Truly Empty (Multiple Conditions Recommended)</strong>
+  <ul>
+    <li>Both phones not present for 10 minutes</li>
+    <li>No motion detected in any room for 9 minutes</li>
+    <li>No TV is currently on</li>
+    <li>No music playing</li>
+    <li>Optional: No computers active</li>
+    <li><strong>Why?</strong> Phone GPS can drift. Someone without phone may be home (kids, guests, nanny). Prevents false away activation.</li>
+  </ul>
+</div>
 
-**Alternative triggers:**
-* Person 1 leaves AND Person 2 leaves
-* All tracked devices leave home zone
-
-### Conditions (important!)
-
-**Verify truly empty:**
-* Both phones not present for 10 minutes
-* No motion detected in any room for 9 minutes
-* No TV is currently on
-* No music playing
-* Optional: No computers active
-
-**Why multiple conditions?**
-- Phone GPS can drift
-- Someone without phone may be home (kids, guests, nanny)
-- Prevents false away activation
-
-### Actions
-
-**Immediate:**
-* Set house mode to "Away"
-* Send confirmation notification
-
-**Triggered by Away Mode:**
-* Turn off all lights
-* Lock all doors
-* Adjust thermostat
-* Arm security system
-* Start robot vacuum (optional)
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Last phone leaves home geofence</li>
+      <li>OR Person 1 leaves AND Person 2 leaves</li>
+      <li>OR All tracked devices leave home zone</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions (Important!)</h4>
+    <ul>
+      <li>Both phones not present for 10 minutes</li>
+      <li>No motion detected in any room for 9 minutes</li>
+      <li>No TV is currently on</li>
+      <li>No music playing</li>
+      <li>Optional: No computers active</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <strong>Immediate:</strong> Set house mode to "Away" • Send confirmation notification<br>
+    <strong>Triggered by Away Mode:</strong> Turn off all lights • Lock all doors • Adjust thermostat • Arm security system • Start robot vacuum (optional)
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** All persons leave home for 10 minutes
-- **Conditions:** 
-  - No motion detected for 9 minutes
-  - TV is off
-- **Actions:**
-  - Set house mode to "Away"
-  - Send notification: "Home is now in Away mode"
-
-### Away mode actions automation
-
-Create separate automation that responds to Away mode:
-- **Trigger:** House mode changes to "Away"
-- **Actions:**
-  - Turn off all lights
-  - Lock all doors
-  - Set thermostat to away/eco preset
-  - Arm security system
-  - Optional: Start robot vacuum
-
-### SmartThings
-
-**Create Routine:**
-1. **IF** All members away for 10 minutes
-2. **AND** No motion detected for 9 minutes
-3. **AND** TVs are off
-4. **THEN** Change mode to "Away"
-
-**Create Second Routine for Actions:**
-1. **IF** Mode changes to "Away"
-2. **THEN** 
-   - Turn off all lights
-   - Lock doors
-   - Set thermostat to Away
-   - Arm security
-
-### Apple HomeKit
-
-**Automation:**
-1. When: Last person leaves
-2. Conditions: 
-   - After 10 minutes
-   - No motion detected
-3. Do: 
-   - Turn off lights
-   - Lock doors
-   - Set thermostat
-   - Activate security scene
-
-### Alexa
-
-**Create Routine:**
-1. When: Last person leaves (via Alexa app location)
-2. Wait: 10 minutes
-3. Actions:
-   - Change mode to "Away"
-   - Turn off lights
-   - Lock doors
-   - Adjust thermostat
-
-### Google Home
-
-**Create Automation:**
-1. Starter: Last person leaves home
-2. Delay: 10 minutes
-3. Actions:
-   - Set home to Away
-   - Turn off lights
-   - Lock doors
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: All persons leave home for 10 minutes</li>
+      <li>Conditions: No motion detected for 9 minutes + TV is off</li>
+      <li>Actions: Set house mode to "Away" + Send notification: "Home is now in Away mode"</li>
+      <li>Away mode actions automation: Trigger on mode change to "Away" → Turn off all lights + Lock all doors + Set thermostat to away/eco + Arm security + Optional: Start robot vacuum</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>Routine 1: IF All members away for 10 minutes AND No motion detected for 9 minutes AND TVs are off → THEN Change mode to "Away"</li>
+      <li>Routine 2 for Actions: IF Mode changes to "Away" → THEN Turn off all lights + Lock doors + Set thermostat to Away + Arm security</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Last person leaves</li>
+      <li>Conditions: After 10 minutes + No motion detected</li>
+      <li>Do: Turn off lights + Lock doors + Set thermostat + Activate security scene</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Last person leaves (via Alexa app location)</li>
+      <li>Wait: 10 minutes</li>
+      <li>Actions: Change mode to "Away" + Turn off lights + Lock doors + Adjust thermostat</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: Last person leaves home</li>
+      <li>Delay: 10 minutes</li>
+      <li>Actions: Set home to Away + Turn off lights + Lock doors</li>
+    </ol>
+  </div>
+</div>
 
 ## Away mode actions checklist
 

@@ -11,105 +11,149 @@ Automatically turning on lights when motion is detected is one of the most popul
 
 ## Use cases
 
-* **Nighttime navigation** - Bathroom lights turn on at low brightness when you get up at night
-* **Home office** - Lights automatically turn on when you enter your workspace
-* **Garden shed** - Motion sensor triggers light when you enter
-* **Porch light** - Automatically lights up for guests and delivery drivers
-* **Hallways** - Lights turn on as you move through the house
-* **Closets** - No more fumbling for switches in dark spaces
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Indoor Automation</h4>
+    <ul>
+      <li><strong>Nighttime Navigation</strong> - Bathroom lights turn on at low brightness when you get up at night</li>
+      <li><strong>Home Office</strong> - Lights automatically turn on when you enter your workspace</li>
+      <li><strong>Hallways</strong> - Lights turn on as you move through the house</li>
+      <li><strong>Closets</strong> - No more fumbling for switches in dark spaces</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Outdoor Automation</h4>
+    <ul>
+      <li><strong>Garden Shed</strong> - Motion sensor triggers light when you enter</li>
+      <li><strong>Porch Light</strong> - Automatically lights up for guests and delivery drivers</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential equipment
+<div class="product-section">
+  <h4>Essential Equipment</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Motion Sensor</strong>
+      <div class="product-details">
+        Popular brands: Philips Hue, Aqara, SmartThings, Wyze<br>
+        Indoor: Standard motion sensors • Outdoor: Weatherproof IP65+ rated sensors
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Light Switch or Bulb</strong>
+      <div class="product-details">
+        Switches: Lutron, GE, Inovelli, Leviton<br>
+        Bulbs: Philips Hue, LIFX, Wyze, Sengled
+      </div>
+    </div>
+  </div>
+</div>
 
-* **Motion sensor** - Indoor or outdoor rated depending on location
-  - Popular brands: Philips Hue, Aqara, SmartThings, Wyze
-  - Indoor: Standard motion sensors
-  - Outdoor: Weatherproof IP65+ rated sensors
-* **Smart light switch or bulb** - To control the lighting
-  - Smart switches: Lutron, GE, Inovelli, Leviton
-  - Smart bulbs: Philips Hue, LIFX, Wyze, Sengled
-
-### Outdoor motion sensing tip
-
-> **💡 Important:** For outdoor applications, either:
-> - Use sensors specifically rated for outdoor use (IP65 or higher)
-> - Protect indoor sensors with weatherproof enclosures
-> - Place sensors under eaves to avoid direct water exposure
+<div class="info-box">
+  <strong>💡 Outdoor Motion Sensing Tip</strong>
+  <ul>
+    <li>Use sensors specifically rated for outdoor use (IP65 or higher)</li>
+    <li>OR protect indoor sensors with weatherproof enclosures</li>
+    <li>OR place sensors under eaves to avoid direct water exposure</li>
+  </ul>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Motion detected by sensor
+<div class="automation-example">IF motion detected
+THEN turn on lights to 100%</div>
 
-### Conditions (optional)
-* Time-based: Different behavior for day vs. night
-* Lux sensor: Only activate if room is dark (below certain lux level)
-* Home mode: Only when home is occupied
+<div class="info-box">
+  <strong>🌞 Day vs. Night Dimming Enhancement</strong>
+  <ul>
+    <li><strong>Daytime:</strong> Brightness 100% OR skip turning on if room has natural light (use lux sensor)</li>
+    <li><strong>Nighttime (9 PM - 11 PM):</strong> Medium brightness 50%</li>
+    <li><strong>Deep Night (11 PM - 6 AM):</strong> Low brightness 10-20% with warm color temperature</li>
+    <li><strong>Early Morning (6 AM - 9 AM):</strong> Full brightness 100%</li>
+  </ul>
+</div>
 
-### Actions
-* Turn on light switch or bulb
-* Set to preferred brightness level (dimming percentage)
-
-## Elevation tips: day vs. night dimming
-
-One of the best enhancements is adjusting brightness based on time of day:
-
-**Daytime automation:**
-- Brightness: 100%
-- Or skip turning on if room has natural light (use lux sensor)
-
-**Nighttime automation:**
-- Brightness: 10-30%
-- Warm color temperature (if using color bulbs)
-- Reduces eye strain and doesn't disturb sleep
-
-**Example schedule:**
-- 6 AM - 9 PM: Full brightness (100%)
-- 9 PM - 11 PM: Medium brightness (50%)
-- 11 PM - 6 AM: Low brightness (10-20%)
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Motion detected by sensor</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions</h4>
+    <strong>Time-based:</strong> Different behavior for day vs. night<br>
+    <strong>Lux sensor:</strong> Only activate if room is dark (below certain lux level)<br>
+    <strong>Home mode:</strong> Only when home is occupied
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn on light switch or bulb</li>
+      <li>Set to preferred brightness level (dimming percentage)</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create an automation with these elements:
-- **Trigger:** Motion sensor state changes to "on"
-- **Condition:** Light level (lux) is below 100
-- **Action:** Turn on bathroom light
-  - If time is between 10 PM and 6 AM: Set brightness to 10%
-  - If time is between 6 AM and 10 PM: Set brightness to 100%
-
-### SmartThings
-
-Create a routine:
-1. **IF** Motion is detected on "Bathroom Motion Sensor"
-2. **AND** Time is between 10 PM and 6 AM
-3. **THEN** Turn on "Bathroom Light" to 10%
-
-Create a second routine for daytime with 100% brightness.
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. When: Motion sensor detects motion
-3. Time: Between 10 PM and 6 AM
-4. Do: Turn on bathroom light at 10%
-5. Repeat for daytime hours at 100%
-
-### Alexa
-
-Create routine:
-1. When: "Bathroom Motion" detects motion
-2. Add condition: Between 10 PM and 6 AM
-3. Action: Turn on "Bathroom Light" to 10%
-
-### Google Home
-
-Create household routine:
-1. When: "Bathroom Motion Sensor" detects motion
-2. Add starter condition: Time between 10 PM - 6 AM
-3. Action: Set "Bathroom Light" to 10%
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Motion sensor state changes to "on"</li>
+      <li>Condition: Light level (lux) is below 100</li>
+      <li>Action: Turn on bathroom light</li>
+      <li>If time 10 PM - 6 AM: Set brightness to 10%</li>
+      <li>If time 6 AM - 10 PM: Set brightness to 100%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF: Motion is detected on sensor</li>
+      <li>AND: Time is between 10 PM and 6 AM</li>
+      <li>THEN: Turn on light to 10%</li>
+      <li>Create second routine for daytime with 100% brightness</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Motion sensor detects motion</li>
+      <li>Time: Between 10 PM and 6 AM</li>
+      <li>Do: Turn on bathroom light at 10%</li>
+      <li>Repeat for daytime hours at 100%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Motion sensor detects motion</li>
+      <li>Condition: Between 10 PM and 6 AM</li>
+      <li>Action: Turn on light to 10%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>When: Motion sensor detects motion</li>
+      <li>Condition: Time between 10 PM - 6 AM</li>
+      <li>Action: Set light to 10%</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

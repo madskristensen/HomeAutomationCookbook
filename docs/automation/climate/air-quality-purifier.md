@@ -11,109 +11,164 @@ Indoor air quality fluctuates throughout the day from cooking, outdoor pollution
 
 ## Use cases
 
-* **Cooking Smoke** - Air quality drops when cooking creates smoke or strong odors
-* **Seasonal Allergies** - Outdoor pollen affecting indoor air quality
-* **Poor Outdoor AQI** - Wildfire smoke or pollution entering home
-* **Pet Odors** - Dander and smells accumulating in living spaces
-* **Health Maintenance** - Proactive air quality management for respiratory health
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Indoor Sources</h4>
+    <ul>
+      <li><strong>Cooking Smoke</strong> - Air quality drops when cooking creates smoke or strong odors</li>
+      <li><strong>Pet Odors</strong> - Dander and smells accumulating in living spaces</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>External Factors</h4>
+    <ul>
+      <li><strong>Seasonal Allergies</strong> - Outdoor pollen affecting indoor air quality</li>
+      <li><strong>Poor Outdoor AQI</strong> - Wildfire smoke or pollution entering home</li>
+      <li><strong>Health Maintenance</strong> - Proactive air quality management for respiratory health</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-**Option 1: Smart air purifier**
-* **Air Quality Sensor** - Measures AQI or PM2.5
-  - Popular brands: Awair, IQAir, Aqara, PurpleAir
-  - Key features: PM2.5 detection, WiFi connectivity
+<div class="product-section">
+  <h4>Essential Equipment - Option 1: Smart Air Purifier</h4>
   
-* **Smart Air Purifier** - WiFi-enabled purifier
-  - Brands: Coway, Levoit, Dyson, Winix
-  - OR Regular purifier on **Smart Plug** (simpler option)
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Air Quality Sensor</strong>
+      <div class="product-details">
+        Popular brands: Awair, IQAir, Aqara, PurpleAir<br>
+        PM2.5 detection • WiFi connectivity • Measures AQI or PM2.5
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Air Purifier</strong>
+      <div class="product-details">
+        Brands: Coway, Levoit, Dyson, Winix<br>
+        WiFi-enabled OR regular purifier on smart plug (simpler option)
+      </div>
+    </div>
+  </div>
+</div>
 
-**Option 2: HVAC-based**
-* **Air Quality Sensor**
-* **Smart Thermostat** with air filter/circulation mode
-  - Brands: Ecobee, Honeywell
+<div class="product-section">
+  <h4>Essential Equipment - Option 2: HVAC-Based</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Air Quality Sensor + Smart Thermostat</strong>
+      <div class="product-details">
+        Brands: Ecobee, Honeywell<br>
+        Smart thermostat with air filter/circulation mode
+      </div>
+    </div>
+  </div>
+</div>
 
-### Optional enhancements
-
-* **Multiple Sensors** - Track air quality in different rooms
-* **Outdoor Air Quality Monitor** - Compare indoor vs outdoor
-* **Smart Notifications** - Alert when air quality poor
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Multiple Sensors</strong>
+      <div class="product-details">
+        Track air quality in different rooms
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Outdoor Air Quality Monitor</strong>
+      <div class="product-details">
+        Compare indoor vs outdoor conditions
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Air quality (AQI) drops below 35
-* OR PM2.5 concentration above 50 μg/m³
-* OR VOC (Volatile Organic Compounds) exceeds threshold
+<div class="automation-example">IF air quality poor (AQI > 100)
+THEN turn on air purifier to high
+AND send notification "Poor air quality detected"</div>
 
-### Conditions (optional)
-* None - air quality is health-critical and should be addressed immediately
-* Optional: Only during occupied hours
-
-### Actions
-* Turn on air purifier at high speed
-* OR activate HVAC fan with filter
-* Optional: Close smart windows/vents
-* Optional: Send notification with current air quality reading
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Air quality (AQI) drops below 35</li>
+      <li>OR PM2.5 concentration above 50 μg/m³</li>
+      <li>OR VOC (Volatile Organic Compounds) exceeds threshold</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions (optional)</h4>
+    <strong>Note:</strong> Air quality is health-critical and should be addressed immediately<br>
+    <strong>Optional:</strong> Only during occupied hours
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn on air purifier at high speed</li>
+      <li>OR activate HVAC fan with filter</li>
+      <li>Optional: Close smart windows/vents</li>
+      <li>Optional: Send notification with current air quality reading</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** Air quality sensor drops below 35 AQI
-- **Action:**
-  - Turn on air purifier fan at 100% (high speed)
-  - Send notification: "Air quality poor ([current AQI]) - Purifier activated"
-
-**Using PM2.5 instead:**
-
-Create automation with these elements:
-- **Trigger:** PM2.5 sensor rises above 50 μg/m³
-- **Action:** Turn on air purifier smart plug
-
-**Multi-level response:**
-
-Create two separate automations:
-
-**Moderate quality (AQI 35-50):**
-- **Trigger:** AQI between 35 and 50
-- **Action:** Turn on purifier at 50% speed (medium)
-
-**Poor quality (AQI below 35):**
-- **Trigger:** AQI below 35
-- **Action:** Turn on purifier at 100% speed (high)
-
-### SmartThings
-
-Create routine:
-1. **IF** Air quality sensor reports AQI below 35
-2. **THEN** Turn on air purifier smart plug
-3. **THEN** Send notification "Air quality poor - purifier activated"
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** Air quality sensor detects poor air quality
-3. **Conditions:** AQI below threshold (if sensor supports)
-4. **Do:** Turn on air purifier (via smart plug or direct control)
-
-### Alexa
-
-Create routine:
-1. **When:** Smart Home sensor detects value (air quality sensor)
-2. **Add condition:** Value below 35 AQI
-3. **Action:** Turn on air purifier smart plug
-4. **Action:** Send notification to phone
-
-### Google Home
-
-Create automation:
-1. **Starter:** Air quality sensor detects poor quality
-2. **Action:** Turn on air purifier
-3. **Action:** Announce "Air quality low, purifier activated"
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Air quality sensor drops below 35 AQI</li>
+      <li>Action: Turn on air purifier at 100% (high speed)</li>
+      <li>Send notification with current AQI</li>
+      <li>Alternative: Use PM2.5 sensor above 50 μg/m³</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF Air quality sensor reports AQI below 35</li>
+      <li>THEN Turn on air purifier smart plug</li>
+      <li>THEN Send notification "Air quality poor"</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Air quality sensor detects poor air quality</li>
+      <li>Conditions: AQI below threshold (if supported)</li>
+      <li>Do: Turn on air purifier</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Air quality sensor value below 35 AQI</li>
+      <li>Action: Turn on air purifier smart plug</li>
+      <li>Action: Send notification to phone</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: Air quality sensor detects poor quality</li>
+      <li>Action: Turn on air purifier</li>
+      <li>Action: Announce "Air quality low, purifier activated"</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

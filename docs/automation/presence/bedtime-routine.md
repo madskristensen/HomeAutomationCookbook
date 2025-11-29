@@ -11,88 +11,150 @@ This automation is a real time-saver that can be customized for more than just b
 
 ## Use cases
 
-* **Bedtime** - Turn off lights throughout house
-* **One-button routine** - Single trigger for multiple actions
-* **Voice command** - "Good night" to Alexa/Google/Siri
-* **Scheduled** - Automatic at set time
-* **Button press** - Physical bedside button
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Trigger Methods</h4>
+    <ul>
+      <li><strong>Bedtime</strong> - Turn off lights throughout house</li>
+      <li><strong>Voice Command</strong> - "Good night" to Alexa/Google/Siri</li>
+      <li><strong>Button Press</strong> - Physical bedside button</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Automation Styles</h4>
+    <ul>
+      <li><strong>One-Button Routine</strong> - Single trigger for multiple actions</li>
+      <li><strong>Scheduled</strong> - Automatic at set time</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-* **Smart lights** - Throughout house
-* **Smart button** (optional) - Bedside trigger
-* **Smart locks** - Auto-lock doors
-* **Smart thermostat** - Temperature adjustment
+<div class="product-section">
+  <h4>Essential Equipment</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Lights</strong>
+      <div class="product-details">
+        Throughout house for automation control
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Button</strong>
+      <div class="product-details">
+        Bedside trigger for one-press routine
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Locks</strong>
+      <div class="product-details">
+        Auto-lock doors at bedtime
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Thermostat</strong>
+      <div class="product-details">
+        Temperature adjustment for sleep
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Time is 10:00 PM
-* OR button is pressed
-* OR voice command "Good night"
+<div class="automation-example">IF bedtime button pressed (or time is 10:30 PM)
+THEN turn off all downstairs lights
+AND lock doors
+AND set thermostat to sleep mode</div>
 
-### Conditions
-* None (immediate execution desired)
-
-### Actions
-* Turn off all main lights in house
-* Keep nightlights on (optional)
-* Put house in Night Mode
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Time is 10:00 PM</li>
+      <li>OR button is pressed</li>
+      <li>OR voice command "Good night"</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions</h4>
+    <p>None (immediate execution desired)</p>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn off all main lights in house</li>
+      <li>Keep nightlights on (optional)</li>
+      <li>Put house in Night Mode</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Triggers:**
-  - Time is 10:00 PM
-  - OR bedside button pressed
-- **Actions:**
-  - Turn off main lights in living room, kitchen, and office
-  - Turn on nightlights (bedroom and bathroom) at 10% brightness
-  - Set house mode to "Night"
-
-### SmartThings
-
-Create routine:
-1. **WHEN** Time is 10:00 PM OR button pressed
-2. **THEN** 
-   - Change mode to "Night"
-   - Turn off main lights
-   - Keep nightlights on
-
-### Apple HomeKit
-
-Create "Good Night" scene:
-1. Turn off main lights
-2. Set nightlights to 10%
-3. Lock doors
-4. Set thermostat
-
-Trigger via:
-- Voice: "Hey Siri, good night"
-- Button automation
-- Time automation
-
-### Alexa
-
-Create routine:
-1. **WHEN** You say "Good night"
-2. **ALEXA WILL:**
-   - Turn off lights (select rooms)
-   - Lock doors
-   - Set thermostat
-   - Play white noise (optional)
-
-### Google Home
-
-Create routine:
-1. **WHEN** I say "Good night"
-2. **ASSISTANT WILL:**
-   - Adjust lights and plugs
-   - Lock doors
-   - Set thermostat
-   - Play sleep sounds
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Triggers: Time is 10:00 PM OR bedside button pressed</li>
+      <li>Actions: Turn off main lights (living room, kitchen, office)</li>
+      <li>Turn on nightlights (bedroom and bathroom) at 10% brightness</li>
+      <li>Set house mode to "Night"</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>WHEN: Time is 10:00 PM OR button pressed</li>
+      <li>THEN: Change mode to "Night"</li>
+      <li>Turn off main lights</li>
+      <li>Keep nightlights on</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>Create "Good Night" scene</li>
+      <li>Turn off main lights, set nightlights to 10%, lock doors, set thermostat</li>
+      <li>Trigger via: Voice "Hey Siri, good night", button automation, or time automation</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>WHEN: You say "Good night"</li>
+      <li>ALEXA WILL: Turn off lights (select rooms)</li>
+      <li>Lock doors, set thermostat</li>
+      <li>Optional: Play white noise</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>WHEN: I say "Good night"</li>
+      <li>ASSISTANT WILL: Adjust lights and plugs</li>
+      <li>Lock doors, set thermostat</li>
+      <li>Optional: Play sleep sounds</li>
+    </ol>
+  </div>
+</div>
 
 ## Night mode actions
 

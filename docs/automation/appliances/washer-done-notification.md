@@ -11,133 +11,181 @@ Don't forget wet clothes in the washer. Get notified when the cycle completes so
 
 ## Use cases
 
-* **Transfer to Dryer Promptly** - Be reminded when washer finishes
-* **Start Next Load** - Know when machine is available
-* **Avoid Forgetting Clothes** - No more wet clothes sitting for hours
-* **Laundry Flow** - Keep laundry moving efficiently
-* **Multi-Tasking** - Get alerted while doing other things
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Efficiency</h4>
+    <ul>
+      <li><strong>Transfer to Dryer Promptly</strong> - Be reminded when washer finishes</li>
+      <li><strong>Start Next Load</strong> - Know when machine is available</li>
+      <li><strong>Laundry Flow</strong> - Keep laundry moving efficiently</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Convenience</h4>
+    <ul>
+      <li><strong>Avoid Forgetting Clothes</strong> - No more wet clothes sitting for hours</li>
+      <li><strong>Multi-Tasking</strong> - Get alerted while doing other things</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
+<div class="product-section">
+  <h4>Essential Equipment - Option 1: Power Monitoring (Recommended)</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Power Metering Smart Plug</strong>
+      <div class="product-details">
+        Popular brands: TP-Link Kasa, Shelly, Zigbee power monitoring plugs<br>
+        Real-time wattage measurement • 15A rating minimum • Plug washer into smart plug
+      </div>
+    </div>
+  </div>
+</div>
 
-**Option 1: Power Monitoring (Recommended)**
-* **Power Metering Smart Plug** - Measures washer electricity usage
-  - Popular brands: TP-Link Kasa, Shelly, Zigbee power monitoring plugs
-  - Key features: Real-time wattage measurement, 15A rating minimum
-  - Plug washer into smart plug
+<div class="product-section">
+  <h4>Essential Equipment - Option 2: Contact Sensor (Alternative)</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Contact Sensor or Multi-Sensor</strong>
+      <div class="product-details">
+        Contact sensor on washer door OR Multi-sensor with vibration detection
+      </div>
+    </div>
+  </div>
+</div>
 
-**Option 2: Contact Sensor (Alternative)**
-* **Contact Sensor** on washer door
-* **Multi-Sensor** with vibration detection
-
-### Optional Enhancements
-
-* **Smart Light** in laundry room for visual alert
-* **Dashboard Tile** showing washer status
-* **Voice Announcement** on smart speaker
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Light</strong>
+      <div class="product-details">
+        In laundry room for visual alert when done
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Voice Announcement</strong>
+      <div class="product-details">
+        On smart speaker for audio notification
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Automation setup - Power monitoring
 
-This is the most reliable method for front-load and top-load washers.
+<div class="automation-example">IF washer power < 10W for 3 minutes
+AND washer was running
+THEN send notification \"Washer done - move to dryer!\"
+AND set washer_running to false</div>
 
-### Step 1: Learn power consumption pattern
+<div class="info-box">
+  <strong>💡 Learn Power Consumption Pattern First</strong>
+  <ul>
+    <li>Plug washer into power monitoring plug</li>
+    <li>Run a full cycle and note the power levels:
+      <ul>
+        <li><strong>Idle:</strong> < 5 watts (or 0W)</li>
+        <li><strong>Running:</strong> 100-500 watts (varies by cycle phase)</li>
+        <li><strong>Done:</strong> < 5 watts</li>
+      </ul>
+    </li>
+    <li>Key insight: Washing machines cycle through different phases (fill, agitate, spin) with varying power use. Detect when power drops and STAYS low.</li>
+  </ul>
+</div>
 
-1. Plug washer into power monitoring plug
-2. Run a full cycle
-3. Note the power levels:
-   - **Idle:** < 5 watts (or 0W)
-   - **Running:** 100-500 watts (varies by cycle phase)
-   - **Done:** < 5 watts
-
-Washing machines cycle through different phases (fill, agitate, spin) with varying power use. The key is detecting when power drops and STAYS low.
-
-### Step 2: Create start detection
-
-**Triggers:**
-* Power consumption rises above 50 watts (washer starts)
-
-**Actions:**
-* Set variable "washer_running" to true
-* OR turn on virtual switch
-* Optional: Start timer
-
-### Step 3: Create done notification
-
-**Triggers:**
-* Power consumption drops below 10 watts for 3 minutes
-
-**Conditions:**
-* Variable "washer_running" is true (confirms washer was actually running)
-
-**Actions:**
-* Send notification: "Washer is done!"
-* Set variable "washer_running" to false
-* Flash laundry room light (optional)
-* Update dashboard tile
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Step 1: Detect Washer Start</h4>
+    <h4>Triggers</h4>
+    <ul>
+      <li>Power consumption rises above 50 watts (washer starts)</li>
+    </ul>
+    <h4>Actions</h4>
+    <ul>
+      <li>Set variable "washer_running" to true</li>
+      <li>OR turn on virtual switch</li>
+      <li>Optional: Start timer</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Step 2: Detect Washer Done</h4>
+    <h4>Triggers</h4>
+    <ul>
+      <li>Power consumption drops below 10 watts for 3 minutes</li>
+    </ul>
+    <h4>Conditions</h4>
+    <ul>
+      <li>Variable "washer_running" is true (confirms washer was actually running)</li>
+    </ul>
+    <h4>Actions</h4>
+    <ul>
+      <li>Send notification: "Washer is done!"</li>
+      <li>Set variable "washer_running" to false</li>
+      <li>Flash laundry room light (optional)</li>
+      <li>Update dashboard tile</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-Specific Examples
 
-### Home Assistant
-
-**Create Helper Boolean:**
-
-Create a boolean helper (toggle) named "washer_running" with initial value off. This tracks whether the washer is currently running a cycle.
-
-**Automation - Detect washer start:**
-
-Create automation with these elements:
-- **Trigger:** Washer plug power consumption rises above 50W
-- **Action:** Turn on "washer_running" boolean helper
-
-**Automation - Detect washer done:**
-
-Create automation with these elements:
-- **Trigger:** Washer plug power drops below 10W for 3 minutes
-- **Condition:** "washer_running" boolean is on
-- **Action 1:** Send notification "Washer is done! Transfer clothes to dryer."
-- **Action 2:** Turn off "washer_running" boolean
-- **Action 3 (optional):** Flash laundry room light for visual alert
-
-### SmartThings
-
-Create two routines:
-
-**Routine 1: Washer Start**
-1. **IF** Washer plug power above 50W
-2. **THEN** Turn on virtual switch "Washer Running"
-
-**Routine 2: Washer Done**
-1. **IF** Washer plug power below 10W for 3 minutes
-2. **AND** Virtual switch "Washer Running" is on
-3. **THEN** Send notification "Washer is done"
-4. **THEN** Turn off virtual switch
-5. **THEN** Flash laundry room light
-
-### Apple HomeKit
-
-HomeKit has limited power monitoring automation. Use workaround:
-1. Use Home Assistant or Hubitat for logic
-2. Expose notification to HomeKit
-3. OR use IFTTT for notification trigger
-
-### Alexa
-
-Create routines:
-
-**Routine 1: Start Detection**
-1. **When:** Washer plug power above 50W
-2. **Action:** Turn on virtual switch "Washer Running"
-
-**Routine 2: Done Notification**
-1. **When:** Washer plug power below 10W
-2. **Add condition:** Virtual switch "Washer Running" is on
-3. **Action:** Send notification to phone
-4. **Action:** Alexa announces "The washer is done"
-
-### Google Home
-
-Limited native support. Use Home Assistant or IFTTT for power monitoring logic.
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Create boolean helper "washer_running"</li>
+      <li>Start: Power > 50W → Turn on helper</li>
+      <li>Done: Power < 10W for 3 min AND helper on</li>
+      <li>Action: Notify, Turn off helper, Flash light</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>Create virtual switch "Washer Running"</li>
+      <li>Routine 1: Power > 50W → Switch on</li>
+      <li>Routine 2: Power < 10W for 3 min AND switch on</li>
+      <li>Actions: Notify, Switch off, Flash light</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>Limited power monitoring support</li>
+      <li>Use Home Assistant or Hubitat for logic</li>
+      <li>Expose notification to HomeKit</li>
+      <li>OR use IFTTT for notification trigger</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>Start: Power > 50W → Virtual switch on</li>
+      <li>Done: Power < 10W AND switch on</li>
+      <li>Action: Notify phone, Alexa announces</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Limited native support</li>
+      <li>Use Home Assistant for power monitoring</li>
+      <li>OR use IFTTT for notification logic</li>
+    </ol>
+  </div>
+</div>
 
 ## Automation setup - Door sensor (alternative)
 

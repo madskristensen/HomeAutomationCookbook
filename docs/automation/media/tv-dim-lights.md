@@ -11,129 +11,156 @@ Enhance movie watching by automatically dimming lights when the TV turns on. Cre
 
 ## Use cases
 
-* **Movie Watching** - Optimize lighting for better screen visibility
-* **TV Show Viewing** - Reduce glare and eye strain
-* **Gaming** - Create immersive gaming environment
-* **Afternoon Viewing** - Close blinds when sun hits screen
-* **Theater Experience** - Automatic cinema mode in your living room
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Entertainment</h4>
+    <ul>
+      <li><strong>Movie Watching</strong> - Optimize lighting for better screen visibility</li>
+      <li><strong>TV Show Viewing</strong> - Reduce glare and eye strain</li>
+      <li><strong>Gaming</strong> - Create immersive gaming environment</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Comfort & Ambiance</h4>
+    <ul>
+      <li><strong>Afternoon Viewing</strong> - Close blinds when sun hits screen</li>
+      <li><strong>Theater Experience</strong> - Automatic cinema mode in your living room</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-**Option 1: Power monitoring (most universal)**
-* **Smart Plug with Power Monitoring** - Measure TV power consumption
-  - Popular brands: TP-Link Kasa, Shelly, Zigbee power monitoring plugs
-  - Key features: Real-time power measurement, relay control
+<div class="product-section">
+  <h4>Essential Equipment - Option 1: Power Monitoring (Most Universal)</h4>
   
-**Option 2: Smart TV integration (more reliable)**
-* **Smart TV** with platform integration
-  - Compatible: Chromecast, Fire TV, Roku, Apple TV, Samsung, LG
-  - Platform integration: Home Assistant, SmartThings
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Plug with Power Monitoring</strong>
+      <div class="product-details">
+        Popular brands: TP-Link Kasa, Shelly, Zigbee power monitoring plugs<br>
+        Real-time power measurement • Relay control
+      </div>
+    </div>
+  </div>
+</div>
 
-**Plus:**
-* **Smart Lights or Light Switches** - Dimmable lights
-  - Popular brands: Philips Hue, LIFX, Lutron, Inovelli
-* **Smart Blinds** (optional) - For daytime glare control
+<div class="product-section">
+  <h4>Essential Equipment - Option 2: Smart TV Integration (More Reliable)</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart TV with Platform Integration</strong>
+      <div class="product-details">
+        Compatible: Chromecast, Fire TV, Roku, Apple TV, Samsung, LG<br>
+        Works with: Home Assistant, SmartThings
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Lights or Light Switches</strong>
+      <div class="product-details">
+        Popular brands: Philips Hue, LIFX, Lutron, Inovelli<br>
+        Dimmable capability required
+      </div>
+    </div>
+  </div>
+</div>
 
-### Optional enhancements
-
-* **RGB Bias Lighting** - Colored LED strip behind TV
-* **Motion Sensor** - Pause dimming if someone walking around
-* **Voice Control** - Manual theater mode activation
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>RGB Bias Lighting</strong>
+      <div class="product-details">
+        Colored LED strip behind TV for enhanced viewing
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Blinds</strong>
+      <div class="product-details">
+        For daytime glare control
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Using power monitor
+<div class="automation-example">IF TV power > 50W
+AND time after sunset
+THEN dim living room lights to 10%
+AND close blinds</div>
 
-**Triggers:**
-* Smart plug power consumption rises above 50 watts (TV turns on)
-
-**Conditions:**
-* Time between sunset and sunrise (optional - different daytime behavior)
-* OR anytime for consistent behavior
-
-**Actions:**
-* Dim lights to 10%
-* OR turn lights off completely
-* Optional: Close blinds/curtains
-
-### Using smart TV
-
-**Triggers:**
-* TV turns on
-* OR specific app opens (Netflix, Disney+, etc.)
-
-**Conditions:**
-* Time is between 6 PM and midnight (movie hours)
-* Optional: Only for video apps (not menu/settings)
-
-**Actions:**
-* Dim lights to 10-20%
-* Close blinds if daytime
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Using Power Monitor</h4>
+    <strong>Trigger:</strong> Smart plug power consumption rises above 50 watts (TV turns on)<br>
+    <strong>Conditions:</strong> Time between sunset and sunrise (optional)<br>
+    <strong>Actions:</strong> Dim lights to 10% OR turn off completely • Optional: Close blinds/curtains
+  </div>
+  
+  <div class="setup-step">
+    <h4>Using Smart TV</h4>
+    <strong>Trigger:</strong> TV turns on OR specific app opens (Netflix, Disney+, etc.)<br>
+    <strong>Conditions:</strong> Time between 6 PM - midnight (movie hours) • Only for video apps<br>
+    <strong>Actions:</strong> Dim lights to 10-20% • Close blinds if daytime
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-**Power monitoring method:**
-
-Create automation with these elements:
-- **Trigger:** TV plug power consumption rises above 50W for 5 seconds
-- **Condition:** Time is after sunset and before sunrise
-- **Actions:**
-  - Dim living room lights to 10% brightness
-  - Use 2-second smooth transition
-
-**Smart TV integration:**
-
-Create automation with these elements:
-- **Trigger:** TV media player state changes to 'playing'
-- **Condition:** Time is between 6 PM and midnight
-- **Actions:**
-  - Dim living room lights to 15% brightness with 3-second transition
-  - Close living room blinds
-
-**Reverse automation (lights on when TV off):**
-
-Create automation to restore lights:
-- **Trigger:** TV plug power drops below 10W for 2 minutes
-- **Condition:** TV mode is currently active
-- **Actions:**
-  - Restore lights to 50% brightness
-  - Deactivate TV mode flag
-
-### SmartThings
-
-Create routine using power monitoring:
-1. **IF** TV smart plug power above 50W for 5 seconds
-2. **AND** Time is after sunset
-3. **THEN** Set living room lights to 10%
-4. **THEN** Close blinds
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** TV (power monitor) power above 50W
-3. **Conditions:** Time after sunset
-4. **Do:** 
-   - Dim lights to 10%
-   - Close blinds
-
-### Alexa
-
-Create routine:
-1. **When:** Smart Home device (TV plug) power above 50W
-2. **Add condition:** Time after 6:00 PM
-3. **Action:** Set lights to 10% brightness
-4. **Action:** Close smart blinds
-
-### Google Home
-
-Create automation:
-1. **Starter:** TV smart plug power above 50 watts
-2. **Condition:** Time after 6:00 PM
-3. **Action:** Dim living room lights to 10%
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: TV plug power > 50W for 5 sec</li>
+      <li>Condition: Time after sunset, before sunrise</li>
+      <li>Action: Dim living room lights to 10%</li>
+      <li>Alternative: Use media player 'playing' state</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF TV plug power > 50W for 5 seconds</li>
+      <li>AND Time is after sunset</li>
+      <li>THEN Set lights to 10%</li>
+      <li>THEN Close blinds</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: TV power monitor > 50W</li>
+      <li>Conditions: Time after sunset</li>
+      <li>Do: Dim lights to 10%, Close blinds</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: TV plug power above 50W</li>
+      <li>Condition: Time after 6:00 PM</li>
+      <li>Action: Set lights to 10%</li>
+      <li>Action: Close smart blinds</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: TV plug power above 50 watts</li>
+      <li>Condition: Time after 6:00 PM</li>
+      <li>Action: Dim living room lights to 10%</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

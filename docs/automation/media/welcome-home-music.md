@@ -11,109 +11,156 @@ Coming home to a house with lights on and music playing feels welcoming. It's th
 
 ## Use cases
 
-* **After Work Greeting** - Welcome yourself home after long day
-* **Morning Wake-Up** - Greet you as morning routine starts
-* **Pleasant Atmosphere** - Create welcoming ambiance automatically
-* **Energy Boost** - Uplifting music when arriving home
-* **Guest Welcome** - Music plays when guests arrive
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Daily Arrivals</h4>
+    <ul>
+      <li><strong>After Work Greeting</strong> - Welcome yourself home after long day</li>
+      <li><strong>Morning Wake-Up</strong> - Greet you as morning routine starts</li>
+      <li><strong>Energy Boost</strong> - Uplifting music when arriving home</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Atmosphere</h4>
+    <ul>
+      <li><strong>Pleasant Atmosphere</strong> - Create welcoming ambiance automatically</li>
+      <li><strong>Guest Welcome</strong> - Music plays when guests arrive</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **Smart Speaker/Music System** - Throughout home or specific rooms
-  - Popular brands: Sonos, Amazon Echo, Google Home, Apple HomePod
-  - Options: Single room or multi-room audio
-  - Key features: WiFi connectivity, streaming service integration
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Presence Detection** - Know when you arrive home
-  - Phone app/GPS location services
-  - OR smart lock unlock detection
-  - OR garage door sensor
-  - Popular platforms: Home Assistant, SmartThings, Life360
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Speaker/Music System</strong>
+      <div class="product-details">
+        Popular brands: Sonos, Amazon Echo, Google Home, Apple HomePod<br>
+        Single room or multi-room audio • WiFi connectivity • Streaming service integration
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Presence Detection</strong>
+      <div class="product-details">
+        Phone app/GPS location services, Smart lock unlock detection, OR Garage door sensor<br>
+        Platforms: Home Assistant, SmartThings, Life360
+      </div>
+    </div>
+  </div>
+</div>
 
-### Optional enhancements
-
-* **Multiple Speakers** - Music in entry, kitchen, and living room
-* **Smart Lights** - Also turn on lights when arriving
-* **Voice Announcement** - "Welcome home" greeting
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Multiple Speakers</strong>
+      <div class="product-details">
+        Music in entry, kitchen, and living room for full-home welcome
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Lights</strong>
+      <div class="product-details">
+        Also turn on lights when arriving for complete welcome scene
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Home goes into Home mode (when first person arrives)
-* OR specific person arrives home
-* OR morning routine starts (wake-up music)
+<div class="automation-example">IF person arrives home
+AND time between 5:00 PM - 9:00 PM
+THEN play welcome playlist on main speaker
+AND set volume to 35%</div>
 
-### Conditions (optional)
-* **NOT between 7 AM and 10 AM** - If you don't want morning music
-* **Time is after 4 PM** - Only afternoon/evening arrivals
-* **Music not already playing** - Don't interrupt existing playback
-
-### Actions
-* Play music on selected speakers
-* Set volume to appropriate level
-* Optionally announce "Welcome home"
-* Optional: Turn on lights, unlock door
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Home goes into Home mode (when first person arrives)</li>
+      <li>OR specific person arrives home</li>
+      <li>OR morning routine starts (wake-up music)</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions (optional)</h4>
+    <strong>NOT between 7 AM - 10 AM:</strong> If you don't want morning music<br>
+    <strong>Time is after 4 PM:</strong> Only afternoon/evening arrivals<br>
+    <strong>Music not already playing:</strong> Don't interrupt existing playback
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Play music on selected speakers</li>
+      <li>Set volume to appropriate level</li>
+      <li>Optionally announce "Welcome home"</li>
+      <li>Optional: Turn on lights, unlock door</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** Home mode changes from 'Away' to 'Home'
-- **Condition:** Time is after 4 PM
-- **Actions:**
-  - Activate welcome home scene (lights)
-  - Set speaker volume to 35% on entry, kitchen, and living room speakers
-  - Play welcome home playlist from Spotify
-
-**With person-specific music:**
-
-Create automation that plays different music based on who arrives:
-- **Trigger:** Person arrives home
-- **Condition:** Music not currently playing
-- **Actions (conditional logic):**
-  - If John home alone: Play John's favorites playlist
-  - If Jane home alone: Play Jane's favorites playlist
-  - If both home: Play shared favorites playlist
-
-### SmartThings
-
-Create routine:
-1. **IF** Home mode changes to "Home"
-2. **AND** Time is after 4:00 PM
-3. **THEN** Turn on welcome scene (lights)
-4. **THEN** Play music on speakers
-5. **THEN** Set volume to 35%
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** First person arrives home
-3. **Conditions:** Time is after 4:00 PM
-4. **Do:** 
-   - Turn on welcome scene
-   - Play music on HomePod
-   - Set volume to 35%
-
-### Alexa
-
-Create routine:
-1. **When:** You arrive home (location-based)
-2. **Add condition:** Time after 4:00 PM
-3. **Action:** Turn on lights (welcome scene)
-4. **Action:** Play music from Spotify on Echo devices
-5. **Action:** Alexa says "Welcome home"
-
-### Google Home
-
-Create automation:
-1. **Starter:** When you get home (location)
-2. **Condition:** Time is after 4:00 PM
-3. **Action:** Activate welcome scene
-4. **Action:** Play music on Google speakers
-5. **Action:** Adjust volume to 35%
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Home mode changes from 'Away' to 'Home'</li>
+      <li>Condition: Time is after 4 PM</li>
+      <li>Action: Activate welcome scene, Set volume 35%</li>
+      <li>Play welcome playlist from Spotify</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF Home mode changes to "Home"</li>
+      <li>AND Time is after 4:00 PM</li>
+      <li>THEN Turn on welcome scene</li>
+      <li>THEN Play music, Set volume 35%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: First person arrives home</li>
+      <li>Conditions: Time is after 4:00 PM</li>
+      <li>Do: Welcome scene, Play music on HomePod</li>
+      <li>Set volume to 35%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: You arrive home (location-based)</li>
+      <li>Condition: Time after 4:00 PM</li>
+      <li>Action: Turn on lights, Play Spotify music</li>
+      <li>Alexa says "Welcome home"</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: When you get home (location)</li>
+      <li>Condition: Time after 4:00 PM</li>
+      <li>Action: Activate welcome scene</li>
+      <li>Play music, Adjust volume to 35%</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

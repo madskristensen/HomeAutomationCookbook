@@ -11,122 +11,144 @@ Save energy by using outdoor air for heating or cooling instead of running HVAC.
 
 ## Use cases
 
-* **Free Heating** - Warm winter days - outside air warmer than your heating setpoint
-* **Free Cooling** - Cool summer nights - outside air cooler than your cooling setpoint
-* **Energy Savings** - Take advantage of nice weather instead of running HVAC
-* **Optimal Ventilation** - Know the best times to air out your home
-* **Weather Awareness** - Stay informed about ideal conditions
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Energy Savings</h4>
+    <ul>
+      <li><strong>Free Heating</strong> - Warm winter days when outside air warmer than heating setpoint</li>
+      <li><strong>Free Cooling</strong> - Cool summer nights when outside air cooler than cooling setpoint</li>
+      <li><strong>Energy Savings</strong> - Take advantage of nice weather instead of running HVAC</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Comfort & Awareness</h4>
+    <ul>
+      <li><strong>Optimal Ventilation</strong> - Know the best times to air out your home</li>
+      <li><strong>Weather Awareness</strong> - Stay informed about ideal conditions</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **Indoor Temperature Sensor** - Monitor current indoor temperature
-  - Can use smart thermostat's sensor
-  - Or standalone temperature sensors
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Outdoor Temperature Sensor** - Monitor outdoor conditions
-  - Weather station integration (Weather Underground, OpenWeatherMap)
-  - OR physical outdoor sensor
-  - Popular brands: Ambient Weather, Ecowitt, Aqara outdoor sensor
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Indoor Temperature Sensor</strong>
+      <div class="product-details">
+        Can use smart thermostat's sensor or standalone temperature sensors
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Outdoor Temperature Sensor</strong>
+      <div class="product-details">
+        Popular brands: Ambient Weather, Ecowitt, Aqara outdoor sensor<br>
+        Weather station integration (Weather Underground, OpenWeatherMap) OR physical outdoor sensor
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Home Platform</strong>
+      <div class="product-details">
+        For notifications and logic: Home Assistant, SmartThings, Hubitat, etc.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
   
-* **Smart Home Platform** - For notifications and logic
-  - Home Assistant, SmartThings, Hubitat, etc.
-
-### Optional enhancements
-
-* **Contact Sensors** - Track which windows are currently open/closed
-* **Weather Forecast Integration** - Predict upcoming conditions
-* **Dashboard Widget** - Visual indicator of optimal window status
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Contact Sensors</strong>
+      <div class="product-details">
+        Track which windows are currently open/closed
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Weather Forecast Integration</strong>
+      <div class="product-details">
+        Predict upcoming conditions for better planning
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### For heating season (winter)
+<div class="automation-example">IF outside temp > inside temp + 5°F (in heating season)
+THEN send notification "Open windows for free heating!"</div>
 
-**Triggers:**
-* Outside temperature rises above thermostat heating setpoint
-* Example: Outside is 72°F, thermostat set to 70°F
-
-**Conditions:**
-* Windows are currently closed
-* House is in heating mode
-* Time is during daylight hours (optional)
-
-**Actions:**
-* Send notification: "Outside is warmer than inside! Open windows to save energy."
-
-### For cooling season (summer)
-
-**Triggers:**
-* Outside temperature drops below thermostat cooling setpoint
-* Example: Outside is 68°F, thermostat set to 72°F
-
-**Conditions:**
-* Windows are currently closed
-* House is in cooling mode
-* Time is typically evening/night (optional)
-
-**Actions:**
-* Send notification: "Outside is cooler than inside! Open windows to save energy."
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>For Heating Season (Winter)</h4>
+    <strong>Trigger:</strong> Outside temp rises above thermostat heating setpoint<br>
+    <strong>Conditions:</strong> Windows currently closed • House in heating mode • Daytime hours (optional)<br>
+    <strong>Action:</strong> Send notification "Outside is warmer than inside! Open windows to save energy."
+  </div>
+  
+  <div class="setup-step">
+    <h4>For Cooling Season (Summer)</h4>
+    <strong>Trigger:</strong> Outside temp drops below thermostat cooling setpoint<br>
+    <strong>Conditions:</strong> Windows currently closed • House in cooling mode • Evening/night time (optional)<br>
+    <strong>Action:</strong> Send notification "Outside is cooler than inside! Open windows to save energy."
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-**Notify to open windows (winter - free heating):**
-
-Create automation with these elements:
-- **Trigger:** Outside temperature rises above thermostat heating setpoint
-- **Conditions:**
-  - All windows are closed
-  - Thermostat in heating mode
-  - Daytime (between sunrise and sunset)
-- **Action:** Send notification: "Outside is [temp]°F, inside is [temp]°F. Open windows for free heating!"
-
-**Notify to open windows (summer - free cooling):**
-
-Create automation with these elements:
-- **Trigger:** Outside temperature drops below thermostat cooling setpoint for 15 minutes
-- **Conditions:**
-  - All windows are closed
-  - Thermostat in cooling mode
-  - Evening/night (after sunset)
-- **Action:** Send notification with actionable button: "Open windows for free cooling" with "Done - Windows Opened" action
-
-**With temperature difference threshold:**
-
-Only notify when significant temperature difference (5°F or more):
-- Check absolute difference between outdoor and indoor temperature
-- Verify conditions are favorable (outside warmer in winter OR cooler in summer)
-- Send notification showing exact temperature difference
-
-### SmartThings
-
-Create routine:
-1. **IF** Outdoor temperature sensor is greater than thermostat setpoint
-2. **AND** All windows are closed
-3. **THEN** Send notification "Outside warmer - open windows for free heating"
-
-### Apple HomeKit
-
-HomeKit has limited temperature comparison logic. Workaround:
-1. Use Home Assistant or similar hub for logic
-2. Create notification through external service
-3. OR use manual checking via dashboard
-
-### Alexa
-
-Create routine with temperature comparison:
-1. **When:** Outdoor temperature changes
-2. **Add condition:** Outdoor temp > Indoor temp by 5° (heating season)
-3. **Action:** Send notification to phone
-
-### Google Home
-
-Limited native support for complex temperature comparisons. Use integration with:
-- IFTTT for notifications
-- Home Assistant for logic
-- Manual dashboard checking
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Outside temp rises above heating setpoint</li>
+      <li>Condition: Windows closed, heating mode, daytime</li>
+      <li>Action: Send notification with current temps</li>
+      <li>Option: Add temperature difference threshold (5°F min)</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF Outdoor temp sensor > thermostat setpoint</li>
+      <li>AND All windows are closed</li>
+      <li>THEN Send notification "Open windows for free heating"</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>Limited native temperature comparison</li>
+      <li>Use Home Assistant or similar hub for logic</li>
+      <li>Create notification through external service</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Outdoor temperature changes</li>
+      <li>Condition: Outdoor temp > Indoor temp by 5°</li>
+      <li>Action: Send notification to phone</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Limited native support for complex temp comparisons</li>
+      <li>Use IFTTT for notifications</li>
+      <li>Or Home Assistant for logic</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

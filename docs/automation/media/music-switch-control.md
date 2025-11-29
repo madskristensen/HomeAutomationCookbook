@@ -11,109 +11,154 @@ Using a voice assistant to request the same radio station every day can be annoy
 
 ## Use cases
 
-* **Morning Music** - One button press starts your day with favorite station
-* **Shower Soundtrack** - Instant music when you enter bathroom
-* **Workout Playlist** - Start gym music without fumbling with phone
-* **Dinner Time** - Stop music with single button press when meal is served
-* **Reading Mode** - Toggle relaxing background music on/off
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Daily Activities</h4>
+    <ul>
+      <li><strong>Morning Music</strong> - One button press starts your day with favorite station</li>
+      <li><strong>Shower Soundtrack</strong> - Instant music when you enter bathroom</li>
+      <li><strong>Dinner Time</strong> - Stop music with single button press when meal is served</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Focus & Relaxation</h4>
+    <ul>
+      <li><strong>Workout Playlist</strong> - Start gym music without fumbling with phone</li>
+      <li><strong>Reading Mode</strong> - Toggle relaxing background music on/off</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **Smart Switch, Button, or Remote** - Physical trigger
-  - Popular brands: Aqara, Flic, Hue Dimmer Switch, Inovelli, Zigbee buttons
-  - Options: Wall-mounted, portable, wireless
-  - Key features: Single or multi-button, battery or hardwired
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Smart Speaker/Music System** - Audio playback
-  - Brands: Sonos, Echo, Google Home, Apple HomePod
-  - Options: Single room or multi-room audio
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Switch, Button, or Remote</strong>
+      <div class="product-details">
+        Popular brands: Aqara, Flic, Hue Dimmer Switch, Inovelli, Zigbee buttons<br>
+        Wall-mounted, portable, or wireless • Single or multi-button options
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Speaker/Music System</strong>
+      <div class="product-details">
+        Brands: Sonos, Echo, Google Home, Apple HomePod<br>
+        Single room or multi-room audio
+      </div>
+    </div>
+  </div>
+</div>
 
-### Optional Enhancements
-
-* **Multi-Button Remote** - Different buttons for different playlists
-* **Smart Display** - Visual feedback showing what's playing
-* **Scene Controller** - Combined lighting and music control
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Multi-Button Remote</strong>
+      <div class="product-details">
+        Different buttons for different playlists or volume control
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Scene Controller</strong>
+      <div class="product-details">
+        Combined lighting and music control
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Button/switch pressed
-* OR remote button clicked
-* OR switch turned on/off
+<div class="automation-example">IF smart switch pressed
+THEN toggle music playback on speaker
+AND adjust volume to preset level</div>
 
-### Conditions (Optional)
-* None - instant response typically desired
-* Time-based: Different playlists for different times
-* Home mode: Only when someone is home
-
-### Actions
-* Play specific playlist/station on designated speaker(s)
-* OR toggle play/pause current music
-* OR stop all music
-* Optional: Set volume to preset level
-* Optional: Adjust lights for ambiance
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Button/switch pressed</li>
+      <li>OR remote button clicked</li>
+      <li>OR switch turned on/off</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions (optional)</h4>
+    <strong>Note:</strong> Instant response typically desired<br>
+    <strong>Time-based:</strong> Different playlists for different times<br>
+    <strong>Home mode:</strong> Only when someone is home
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Play specific playlist/station on designated speaker(s)</li>
+      <li>OR toggle play/pause current music</li>
+      <li>OR stop all music</li>
+      <li>Optional: Set volume to preset level</li>
+      <li>Optional: Adjust lights for ambiance</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-Specific Examples
 
-### Home Assistant
-
-**Single Button - Play Specific Playlist:**
-
-Create automation with these elements:
-- **Trigger:** Kitchen button pressed (state changes to 'on')
-- **Action:** Set speaker volume to 40%, then play specific Spotify playlist on kitchen speaker
-
-**Toggle Play/Pause:**
-
-Create automation with these elements:
-- **Trigger:** Living room button pressed
-- **Action:** Toggle play/pause on living room speaker (plays if paused, pauses if playing)
-
-**Multi-Button Control:**
-
-Create four separate automations for multi-button remote:
-- **Button 1:** Play music - trigger on button press, play specific playlist
-- **Button 2:** Pause music - trigger on button press, pause speaker
-- **Button 3:** Volume up - trigger on button press, increase speaker volume
-- **Button 4:** Volume down - trigger on button press, decrease speaker volume
-
-### SmartThings
-
-Create routine:
-1. **IF** Button pressed (or switch turned on)
-2. **THEN** Play music on speaker
-3. **THEN** Set volume to 40%
-
-For toggle functionality:
-1. **IF** Button pressed
-2. **THEN** IF speaker is playing → Pause
-3. **ELSE** → Play music
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** Button is pressed (or switch turns on)
-3. **Do:** 
-   - Play music on HomePod/AirPlay speaker
-   - Set volume to 40%
-
-*Note: HomeKit has limited music control - works best with Apple Music and HomePods*
-
-### Alexa
-
-Create routine:
-1. **When:** Smart Home button pressed
-2. **Action:** Play music from [service] on [Echo device]
-3. **Action:** Set volume to level 4
-
-### Google Home
-
-Create automation:
-1. **Starter:** Button pressed
-2. **Action:** Play music on speaker
-3. **Action:** Set volume to 40%
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Kitchen button pressed</li>
+      <li>Action: Set speaker volume to 40%</li>
+      <li>Play specific Spotify playlist on kitchen speaker</li>
+      <li>Option: Toggle play/pause for simple control</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF Button pressed (or switch on)</li>
+      <li>THEN Play music on speaker</li>
+      <li>THEN Set volume to 40%</li>
+      <li>Toggle: IF playing → Pause, ELSE → Play</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Button is pressed</li>
+      <li>Do: Play music on HomePod/AirPlay speaker</li>
+      <li>Set volume to 40%</li>
+      <li>Note: Best with Apple Music and HomePods</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Smart Home button pressed</li>
+      <li>Action: Play music from [service] on [Echo device]</li>
+      <li>Action: Set volume to level 4</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: Button pressed</li>
+      <li>Action: Play music on speaker</li>
+      <li>Action: Set volume to 40%</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

@@ -11,143 +11,153 @@ Volume presets for all speakers save time and create consistency. Define levels 
 
 ## Use cases
 
-* **Normal Day** - Always play music at pleasant levels when home
-* **Party Mode** - Quick adjustment for gatherings and celebrations
-* **One-Button Control** - Single action adjusts all rooms
-* **Consistent Experience** - Voice assistant and music always at predictable volume
-* **Time-Based** - Automatically adjust volume throughout the day
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Daily Convenience</h4>
+    <ul>
+      <li><strong>Normal Day</strong> - Always play music at pleasant levels when home</li>
+      <li><strong>One-Button Control</strong> - Single action adjusts all rooms</li>
+      <li><strong>Consistent Experience</strong> - Voice assistant and music always at predictable volume</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Special Occasions</h4>
+    <ul>
+      <li><strong>Party Mode</strong> - Quick adjustment for gatherings and celebrations</li>
+      <li><strong>Time-Based</strong> - Automatically adjust volume throughout the day</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
+<div class="product-section">
+  <h4>Essential Equipment</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Speakers/Music System</strong>
+      <div class="product-details">
+        Brands: Sonos, Amazon Echo, Google Home, Apple HomePod<br>
+        Individual or grouped speakers • Remote volume control via automation
+      </div>
+    </div>
+  </div>
+</div>
 
-* **Smart Speakers/Music System** - Throughout home
-  - Brands: Sonos, Amazon Echo, Google Home, Apple HomePod
-  - Options: Individual or grouped speakers
-  - Key features: Remote volume control via automation
-
-### Optional Enhancements
-
-* **Buttons or Switches** - Physical controls for volume presets
-* **Voice Commands** - "Set volume to party mode"
-* **Dashboard** - Visual volume preset selector
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Buttons or Switches</strong>
+      <div class="product-details">
+        Physical controls for volume presets
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Voice Commands</strong>
+      <div class="product-details">
+        "Set volume to party mode" for hands-free control
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Volume Level Examples
+<div class="automation-example">IF volume preset changes to "Low"
+THEN set all speakers to 20-30%
+ELSE IF preset is "Medium"
+THEN set all speakers to 40-50%
+ELSE IF preset is "Loud"
+THEN set all speakers to 70-80%</div>
 
-**Low (Quiet/Background):**
-- Voice assistants: 30%
-- Music speakers: 20-25%
-- Use for: Normal day, working, early morning
+<div class="info-box">
+  <strong>🔊 Volume Level Guide</strong>
+  <ul>
+    <li><strong>Low (Quiet/Background):</strong> Voice assistants 30%, Music 20-25% - Normal day, working, early morning</li>
+    <li><strong>Medium (Comfortable):</strong> Voice assistants 50%, Music 40-50% - Entertaining, cooking, cleaning</li>
+    <li><strong>Loud (Party):</strong> Voice assistants 60%, Music 70-80% - Parties, dancing, exercising</li>
+  </ul>
+</div>
 
-**Medium (Comfortable):**
-- Voice assistants: 50%
-- Music speakers: 40-50%
-- Use for: Entertaining, cooking, cleaning
-
-**Loud (Party):**
-- Voice assistants: 60%
-- Music speakers: 70-80%
-- Use for: Parties, dancing, exercising
-
-### Triggers
-* Home goes into Home mode (set to Low)
-* Button/switch pressed
-* Voice command: "Set volume to [low/medium/loud]"
-* Time-based (e.g., 10 PM → Low)
-
-### Conditions
-* None (immediate response typically desired)
-
-### Actions
-* Set volume of all speakers to preset levels
-* Can be per-room or whole-house
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Home goes into Home mode (set to Low)</li>
+      <li>Button/switch pressed</li>
+      <li>Voice command: "Set volume to [low/medium/loud]"</li>
+      <li>Time-based (e.g., 10 PM → Low)</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions</h4>
+    <strong>Note:</strong> Immediate response typically desired
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Set volume of all speakers to preset levels</li>
+      <li>Can be per-room or whole-house</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-Specific Examples
 
-### Home Assistant
-
-**Create Input Select for Volume Presets:**
-
-Create a dropdown helper in Home Assistant with three options: Low, Medium, Loud. Set initial value to Low. This will allow you to select and track the current volume preset.
-
-**Automation to Apply Preset:**
-
-Create automation with these elements:
-- **Trigger:** Input select (volume_preset) state changes
-- **Actions based on selected preset:**
-  - **Low:** Set voice assistants (Echos) to 30%, music speakers to 20%
-  - **Medium:** Set voice assistants to 50%, music speakers to 45%
-  - **Loud/Party:** Set voice assistants to 60%, music speakers to 80%, keep bedroom at 40%
-
-**Auto-Reset Volume at 4 AM:**
-
-Create automation with these elements:
-- **Trigger:** Time is 4:00 AM daily
-- **Action:** Set volume preset input select to "Low"
-
-**Button to Cycle Volume Presets:**
-
-Create automation with these elements:
-- **Trigger:** Volume button pressed
-- **Action:** Cycle to next option in volume preset dropdown (Low → Medium → Loud → Low)
-
-### SmartThings
-
-Create scenes for each volume preset:
-
-**Scene: Low Volume**
-- Living room Echo: 30%
-- Kitchen Echo: 30%
-- Living room speaker: 20%
-- Kitchen speaker: 20%
-
-**Scene: Medium Volume**
-- All Echos: 50%
-- All speakers: 45%
-
-**Scene: Party Volume**
-- Main area Echos: 60%
-- All speakers: 80%
-
-Create routine to activate scenes with button or voice.
-
-### Apple HomeKit
-
-Create scenes in Home app:
-
-**Low Volume Scene:**
-1. Set all HomePods to 30%
-2. Set AirPlay speakers to 20%
-
-**Medium Volume Scene:**
-1. Set all HomePods to 50%
-2. Set AirPlay speakers to 45%
-
-Activate via Siri: "Hey Siri, set low volume"
-
-### Alexa
-
-Create routines for each preset:
-
-**Routine: Low Volume**
-1. Set Living Room Echo volume to 3 (out of 10)
-2. Set Kitchen Echo volume to 3
-3. Set Bedroom Echo volume to 3
-
-Activate with: "Alexa, low volume"
-
-### Google Home
-
-Create routines:
-
-**Routine: Party Volume**
-1. Set Living Room speaker to 80%
-2. Set Kitchen speaker to 80%
-3. Set volume on all Home devices to 60%
-
-Activate with: "Hey Google, party volume"
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Create dropdown helper with Low/Medium/Loud options</li>
+      <li>Trigger: Input select state changes</li>
+      <li>Action: Set speaker volumes based on selection</li>
+      <li>Auto-reset to Low at 4 AM daily</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>Create scene for each volume preset</li>
+      <li>Low: All Echos 30%, speakers 20%</li>
+      <li>Medium: All Echos 50%, speakers 45%</li>
+      <li>Party: Echos 60%, speakers 80%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>Create scene: Low Volume (HomePods 30%)</li>
+      <li>Create scene: Medium Volume (HomePods 50%)</li>
+      <li>Activate: "Hey Siri, set low volume"</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>Create routine: Low Volume (all Echos to level 3)</li>
+      <li>Create routine: Party Volume (all Echos to level 7)</li>
+      <li>Activate: "Alexa, low volume"</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Create routine: Party Volume</li>
+      <li>Set all speakers to 80%, Home devices to 60%</li>
+      <li>Activate: "Hey Google, party volume"</li>
+    </ol>
+  </div>
+</div>
 
 ## Room-specific presets
 

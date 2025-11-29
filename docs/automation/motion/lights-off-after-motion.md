@@ -11,127 +11,147 @@ While modern LED lights use minimal power, automatically turning off lights when
 
 ## Use cases
 
-* **Bathroom** - Turn off lights 5 minutes after no motion detected
-* **Living areas** - Turn off lights 2 minutes after no motion at nighttime
-* **Closets** - Turn off immediately after 1 minute (quick access areas)
-* **Garage** - Turn off after 3-5 minutes of no activity
-* **Home office** - Longer delay (10 minutes) for stationary work
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Quick Access Spaces</h4>
+    <ul>
+      <li><strong>Bathroom</strong> - Turn off lights 5 minutes after no motion detected</li>
+      <li><strong>Closets</strong> - Turn off immediately after 1 minute (quick access areas)</li>
+      <li><strong>Garage</strong> - Turn off after 3-5 minutes of no activity</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Living & Work Spaces</h4>
+    <ul>
+      <li><strong>Living Areas</strong> - Turn off lights 2 minutes after no motion at nighttime</li>
+      <li><strong>Home Office</strong> - Longer delay (10 minutes) for stationary work</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-* **Motion sensor** - Same sensor used for turning lights on
-  - Should detect motion continuously, not just entry
-  - Battery life consideration: some sensors report too frequently
-* **Smart light switch or bulb** - Connected to your automation platform
+<div class="product-section">
+  <h4>Essential Equipment</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Motion Sensor</strong>
+      <div class="product-details">
+        Same sensor used for turning lights on<br>
+        Should detect motion continuously, not just entry<br>
+        Battery life consideration: some sensors report too frequently
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Light Switch or Bulb</strong>
+      <div class="product-details">
+        Connected to your automation platform
+      </div>
+    </div>
+  </div>
+</div>
 
-> **💡 Outdoor tip:** Use weather-rated sensors (IP65+) or protect from elements
+<div class="info-box">
+  <strong>💡 Outdoor Tip</strong>
+  <ul>
+    <li>Use weather-rated sensors (IP65+) or protect from elements</li>
+  </ul>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Motion no longer detected for X minutes
-  - Fast-access areas: 1-2 minutes
-  - Living spaces: 3-5 minutes
-  - Work areas: 5-10 minutes
+<div class="automation-example">IF no motion detected for 5 minutes
+THEN turn off lights</div>
 
-### Conditions (optional)
-* **Time-based:** Different delays for day vs. night
-* **Door status:** Don't turn off if bathroom door is closed (someone may be sitting still)
-* **Additional sensors:** Check other sensors in room for activity
+<div class="info-box">
+  <strong>⏱️ Timing Strategies by Room Type</strong>
+  <ul>
+    <li><strong>Quick Access (1-2 min):</strong> Closets, pantry, laundry room, hallways - Brief visits, quick in and out</li>
+    <li><strong>Living Spaces (3-5 min):</strong> Living room, dining room, kitchen, home gym - May have brief stationary moments, but generally active</li>
+    <li><strong>Work/Relaxation (5-10 min):</strong> Home office, reading nook, craft room, bathroom - People often sit still for extended periods</li>
+    <li><strong>Bathroom Special:</strong> Use door sensor override (don't turn off if door closed), OR extended delay (10-15 min), OR multiple sensors</li>
+  </ul>
+</div>
 
-### Actions
-* Turn off light switch/bulb
-* Can include gradual dimming before turning off (advanced)
-
-## Timing strategies by room type
-
-### Quick access spaces (1-2 minutes)
-- Closets
-- Pantry
-- Laundry room (if no appliances running)
-- Hallways
-
-**Reasoning:** Brief visits, quick in and out
-
-### Living spaces (3-5 minutes)
-- Living room
-- Dining room  
-- Kitchen
-- Home gym
-
-**Reasoning:** May have brief stationary moments, but generally active
-
-### Work/relaxation spaces (5-10 minutes)
-- Home office
-- Reading nook
-- Craft room
-- Bathroom (see special considerations)
-
-**Reasoning:** People often sit still for extended periods
-
-### Special considerations: bathrooms
-
-Bathrooms require extra logic to prevent lights turning off while occupied:
-
-**Option 1: Door sensor override**
-- If door is closed → Don't turn off lights
-- Even if no motion detected
-
-**Option 2: Extended delay**
-- Use 10-15 minute delay
-- Less likely to turn off while showering/bathing
-
-**Option 3: Multiple sensors**
-- Motion sensor for general bathroom
-- Separate sensor inside shower/toilet area
-- If either detects motion → Keep lights on
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Motion no longer detected for X minutes</li>
+      <li>Fast-access areas: 1-2 minutes</li>
+      <li>Living spaces: 3-5 minutes</li>
+      <li>Work areas: 5-10 minutes</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions</h4>
+    <strong>Time-based:</strong> Different delays for day vs. night<br>
+    <strong>Door status:</strong> Don't turn off if bathroom door is closed (someone may be sitting still)<br>
+    <strong>Additional sensors:</strong> Check other sensors in room for activity
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn off light switch/bulb</li>
+      <li>Can include gradual dimming before turning off (advanced)</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create an automation with these elements:
-- **Trigger:** Bathroom motion sensor shows no motion for 5 minutes
-- **Condition:** Bathroom door sensor shows door is open (not in use)
-- **Action:** Turn off bathroom light
-
-### Advanced: Gradual dimming
-
-Create a more sophisticated automation:
-- **Trigger:** Living room motion sensor shows no motion for 3 minutes
-- **Actions:**
-  1. Dim lights to 50% as a warning
-  2. Wait 30 seconds
-  3. Check if motion has resumed
-  4. If still no motion, turn off lights completely
-
-### SmartThings
-
-Create routine:
-1. **IF** "Bathroom Motion Sensor" no motion for 5 minutes
-2. **AND** "Bathroom Door Sensor" is open
-3. **THEN** Turn off "Bathroom Light"
-
-### Apple HomeKit
-
-1. Create automation: When motion stops
-2. Wait for: 5 minutes
-3. If: Bathroom door is open
-4. Do: Turn off bathroom light
-
-### Alexa
-
-Create routine:
-1. When: "Bathroom Motion Sensor" detects no motion for 5 minutes
-2. Add condition: "Bathroom Door Contact" is open
-3. Action: Turn off "Bathroom Light"
-
-### Google Home
-
-Create automation:
-1. Starter: "Bathroom Motion" no motion for 5 minutes
-2. Condition: "Door sensor" is open
-3. Action: Turn off "Bathroom Light"
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Bathroom motion sensor no motion for 5 minutes</li>
+      <li>Condition: Bathroom door sensor shows door is open (not in use)</li>
+      <li>Action: Turn off bathroom light</li>
+      <li>Advanced: Dim to 50% after 3 min, wait 30 sec, check motion, then off</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF: Motion sensor no motion for 5 minutes</li>
+      <li>AND: Door sensor is open</li>
+      <li>THEN: Turn off light</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Motion stops</li>
+      <li>Wait for: 5 minutes</li>
+      <li>If: Bathroom door is open</li>
+      <li>Do: Turn off bathroom light</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Motion sensor detects no motion for 5 minutes</li>
+      <li>Condition: Door contact is open</li>
+      <li>Action: Turn off light</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: Motion no motion for 5 minutes</li>
+      <li>Condition: Door sensor is open</li>
+      <li>Action: Turn off light</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced techniques
 

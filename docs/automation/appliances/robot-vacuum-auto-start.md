@@ -11,101 +11,148 @@ Robot vacuums are great, but even better when they clean while you're away. Auto
 
 ## Use cases
 
-* **Clean During Work Hours** - House cleaned while away at work
-* **No Disturbance** - No one home to be bothered by vacuum noise
-* **Daily Cleaning** - Automatic consistent cleaning schedule
-* **Pet Hair Management** - Keep up with pet shedding automatically
-* **Guest Ready** - House always clean when you return
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Automated Cleaning</h4>
+    <ul>
+      <li><strong>Clean During Work Hours</strong> - House cleaned while away at work</li>
+      <li><strong>No Disturbance</strong> - No one home to be bothered by vacuum noise</li>
+      <li><strong>Daily Cleaning</strong> - Automatic consistent cleaning schedule</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Convenience</h4>
+    <ul>
+      <li><strong>Pet Hair Management</strong> - Keep up with pet shedding automatically</li>
+      <li><strong>Guest Ready</strong> - House always clean when you return</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **WiFi-Enabled Robot Vacuum** - Any smart vacuum
-  - Popular brands: Roomba, Roborock, Eufy, Shark, Neato
-  - Key features: WiFi connectivity, app control, scheduling override
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Presence Detection** - Know when everyone leaves
-  - Phone app location services
-  - GPS-based (Home Assistant, SmartThings, Life360)
-  - OR door lock status + motion sensors
+  <div class="product-list">
+    <div class="product-item">
+      <strong>WiFi-Enabled Robot Vacuum</strong>
+      <div class="product-details">
+        Popular brands: Roomba, Roborock, Eufy, Shark, Neato<br>
+        WiFi connectivity • App control • Scheduling override
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Presence Detection</strong>
+      <div class="product-details">
+        Phone app location services, GPS-based (Home Assistant, SmartThings, Life360)<br>
+        OR door lock status + motion sensors
+      </div>
+    </div>
+  </div>
+</div>
 
-### Optional Enhancements
-
-* **Contact Sensors** on doors - Ensure all doors closed
-* **Smart Notifications** - Alert if vacuum gets stuck
-* **Dashboard Widget** - Vacuum status and manual control
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Contact Sensors</strong>
+      <div class="product-details">
+        On doors to ensure all closed before starting
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Notifications</strong>
+      <div class="product-details">
+        Alert if vacuum gets stuck or has errors
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Home goes into Away Mode
-* (Last person leaves house based on presence detection)
+<div class="automation-example">IF everyone leaves home
+AND time between 9:00 AM - 5:00 PM
+THEN start robot vacuum</div>
 
-### Conditions
-* **Time is between 9 AM and 6 PM** - Vacuum during daytime only
-* **House has been in Away Mode for 15 minutes** - Ensure everyone actually left
-* **Optional:** Day of week (e.g., only weekdays)
-
-### Actions
-* Start robot vacuum cleaning cycle
-* OR trigger vacuum's existing schedule
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Home goes into Away Mode</li>
+      <li>(Last person leaves house based on presence detection)</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions</h4>
+    <strong>Time is between 9 AM - 6 PM:</strong> Vacuum during daytime only<br>
+    <strong>House in Away Mode for 15 min:</strong> Ensure everyone actually left<br>
+    <strong>Optional:</strong> Day of week (e.g., only weekdays)
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Start robot vacuum cleaning cycle</li>
+      <li>OR trigger vacuum's existing schedule</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-Specific Examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** Home mode changes to 'Away' for 15 minutes (ensures everyone actually left)
-- **Conditions:** Time between 9am-6pm AND weekdays AND vacuum is docked
-- **Action:** Start robot vacuum cleaning cycle
-
-**Using person entity:**
-
-Create automation with these elements:
-- **Trigger:** All persons group changes to 'not_home' for 15 minutes
-- **Condition:** Time between 9am-6pm
-- **Action:** Start robot vacuum
-
-**Stop vacuum when someone returns:**
-
-Create automation with these elements:
-- **Trigger:** Home mode changes to 'Home' from 'Away'
-- **Condition:** Vacuum is currently cleaning
-- **Action:** Send vacuum to dock (return to base)
-
-### SmartThings
-
-Create routine:
-1. **IF** Home mode changes to "Away"
-2. **AND** Mode stays "Away" for 15 minutes
-3. **AND** Time between 9:00 AM - 6:00 PM
-4. **AND** Day is Monday through Friday
-5. **THEN** Start robot vacuum
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** Last person leaves home
-3. **Conditions:**
-   - Time between 9:00 AM - 6:00 PM
-   - Weekdays only
-4. **Do:** Start vacuum (if vacuum supports HomeKit)
-
-### Alexa
-
-Create routine:
-1. **When:** Location-based (last person leaves home)
-2. **Add condition:** Time between 9:00 AM - 6:00 PM
-3. **Add condition:** Weekdays
-4. **Action:** Smart Home control → Start vacuum
-
-### Google Home
-
-Create automation:
-1. **Starter:** When last person leaves home
-2. **Condition:** Time between 9 AM - 6 PM and weekdays
-3. **Action:** Start robot vacuum
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Home mode 'Away' for 15 min</li>
+      <li>Condition: Time 9am-6pm, weekdays, vacuum docked</li>
+      <li>Action: Start robot vacuum cleaning cycle</li>
+      <li>Stop when home: Send vacuum to dock</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF Home mode "Away" for 15 minutes</li>
+      <li>AND Time 9 AM - 6 PM, Mon-Fri</li>
+      <li>THEN Start robot vacuum</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Last person leaves home</li>
+      <li>Conditions: Time 9 AM - 6 PM, Weekdays</li>
+      <li>Do: Start vacuum (if HomeKit supported)</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Last person leaves (location)</li>
+      <li>Condition: Time 9 AM - 6 PM, Weekdays</li>
+      <li>Action: Start vacuum</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: Last person leaves home</li>
+      <li>Condition: Time 9 AM - 6 PM, weekdays</li>
+      <li>Action: Start robot vacuum</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

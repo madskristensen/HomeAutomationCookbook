@@ -11,156 +11,185 @@ Wake up to freshly brewed coffee automatically. Start your day right with coffee
 
 ## Use cases
 
-* **Morning Coffee Ready** - Coffee brewing when alarm goes off
-* **Automatic Weekday Brewing** - Consistent work morning routine
-* **Wake-Up Motivation** - Smell of coffee helps you get up
-* **When Shower Ends** - Time coffee to finish as you're ready
-* **Guest Accommodation** - Auto-brew when guests staying over
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Morning Convenience</h4>
+    <ul>
+      <li><strong>Morning Coffee Ready</strong> - Coffee brewing when alarm goes off</li>
+      <li><strong>Automatic Weekday Brewing</strong> - Consistent work morning routine</li>
+      <li><strong>When Shower Ends</strong> - Time coffee to finish as you're ready</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Lifestyle Benefits</h4>
+    <ul>
+      <li><strong>Wake-Up Motivation</strong> - Smell of coffee helps you get up</li>
+      <li><strong>Guest Accommodation</strong> - Auto-brew when guests staying over</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
-
-* **Smart Plug or Smart Outlet** - Control power to coffee maker
-  - Popular brands: TP-Link Kasa, Wyze, Wemo, Zigbee plugs
-  - Key features: Schedule capability, reliable automation
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Compatible Coffee Maker** - Must start automatically when power applied
-  - **Critical:** Won't work if button must be pressed after power on
-  - Simple/old coffee makers work best
-  - Some programmable models work
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Plug or Smart Outlet</strong>
+      <div class="product-details">
+        Popular brands: TP-Link Kasa, Wyze, Wemo, Zigbee plugs<br>
+        Schedule capability • Reliable automation
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Compatible Coffee Maker</strong>
+      <div class="product-details">
+        Must start automatically when power applied<br>
+        Simple/old coffee makers work best • Some programmable models work<br>
+        <strong>Critical:</strong> Won't work if button must be pressed after power on
+      </div>
+    </div>
+  </div>
+</div>
 
-### Optional Enhancements
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Motion Sensor</strong>
+      <div class="product-details">
+        Start coffee when you wake up/move around
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Grinder</strong>
+      <div class="product-details">
+        On separate smart plug for fresh-ground beans
+      </div>
+    </div>
+  </div>
+</div>
 
-* **Motion Sensor** - Start coffee when you wake up/move around
-* **Smart Lights** - Coordinate with morning routine
-* **Grinder** on separate smart plug for fresh-ground beans
-
-## Setup requirements
-
-### Test coffee maker compatibility
-
-**Before automating, verify your coffee maker will work:**
-
-1. Fill coffee maker with water and grounds
-2. Turn coffee maker switch to "on" position  
-3. Unplug it
-4. Plug it back in
-5. **Does it start brewing?** 
-   - ✅ **YES** = Compatible! Automation will work
-   - ❌ **NO** = Not compatible (requires button press)
-
-**Compatible Coffee Maker Types:**
-- Old/simple coffee makers with physical on/off switch
-- Some programmable models that remember settings
-- Basic drip coffee makers
-
-**Not Compatible:**
-- Coffee makers requiring button press after power on
-- Models with touchscreen that resets on power loss
-- Most pod-based machines (Keurig, Nespresso)
+<div class="info-box">
+  <strong>✅ Test Coffee Maker Compatibility</strong>
+  <ul>
+    <li>Fill coffee maker with water and grounds</li>
+    <li>Turn coffee maker switch to "on" position</li>
+    <li>Unplug it, then plug it back in</li>
+    <li>Does it start brewing? YES = Compatible! NO = Not compatible</li>
+    <li>Compatible: Old/simple coffee makers, some programmable models</li>
+    <li>Not Compatible: Requires button press, touchscreen, most pod machines</li>
+  </ul>
+</div>
 
 ## Basic automation setup
 
-### Night before preparation
+<div class="automation-example">IF time is 7:00 AM on weekdays
+AND coffee maker plug is OFF (loaded and ready)
+THEN turn on coffee maker plug
+AND send notification "Coffee brewing ☕"</div>
 
-**Every night:**
-1. Fill coffee maker with water and grounds
-2. Turn coffee maker switch to "on" position
-3. Press physical button on smart plug to turn it OFF
-4. (Turning plug off signals the automation coffee maker is ready)
+<div class="info-box">
+  <strong>🌙 Night Before Preparation</strong>
+  <ul>
+    <li>Fill coffee maker with water and grounds</li>
+    <li>Turn coffee maker switch to "on" position</li>
+    <li>Press physical button on smart plug to turn it OFF</li>
+    <li>(Turning plug off signals the automation coffee maker is ready)</li>
+  </ul>
+</div>
 
-### Morning automation
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>7:00 AM Monday-Friday</li>
+      <li>OR when shower turns on</li>
+      <li>OR when bedroom motion detected</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions</h4>
+    <strong>Smart plug is currently OFF:</strong> Confirms coffee maker is loaded and ready<br>
+    <strong>Purpose:</strong> Prevents turning on empty coffee maker
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn on smart plug</li>
+      <li>Coffee starts brewing!</li>
+      <li>Optional: Send notification "Coffee brewing"</li>
+    </ul>
+  </div>
+</div>
 
-**Triggers:**
-* 7:00 AM Monday-Friday
-* OR when shower turns on
-* OR when bedroom motion detected
-
-**Conditions:**
-* Smart plug is currently OFF
-  - This confirms coffee maker is loaded and ready
-  - Prevents turning on empty coffee maker
-
-**Actions:**
-* Turn on smart plug
-* Coffee starts brewing!
-* Optional: Send notification "Coffee brewing"
+<div class="info-box">
+  <strong>⚠️ Critical Safety: Auto-Shutoff Required</strong>
+  <ul>
+    <li>Always implement 30-minute auto-shutoff automation</li>
+    <li>Use smart plug rated for coffee maker wattage (800-1200W)</li>
+    <li>Clean coffee maker regularly to prevent fire hazard</li>
+    <li>Don't leave house during first few automated cycles</li>
+  </ul>
+</div>
 
 ## Platform-Specific Examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** Time is 7:00 AM
-- **Conditions:** Weekdays only (Mon-Fri) AND coffee maker plug is OFF (confirms loaded and ready)
-- **Action 1:** Turn on coffee maker smart plug
-- **Action 2:** Send notification "Good morning! Coffee is brewing ☕"
-
-**Triggered by shower:**
-
-Create automation with these elements:
-- **Trigger:** Bathroom shower light turns on
-- **Conditions:** Morning hours (6am-10am) AND weekdays AND coffee maker plug is OFF
-- **Action:** Turn on coffee maker plug
-
-**Triggered by motion:**
-
-Create automation with these elements:
-- **Trigger:** Bedroom motion sensor activates
-- **Conditions:** Morning hours (6am-9am) AND weekdays AND coffee maker plug is OFF
-- **Action:** Turn on coffee maker plug
-
-### Automatic safety shutoff
-
-**Critical for safety:**
-
-Create automation with these elements:
-- **Trigger:** Coffee maker plug has been ON for 30 minutes
-- **Action 1:** Turn off coffee maker plug
-- **Action 2:** Send notification "Coffee maker auto shut-off (30 min safety timer)"
-
-### SmartThings
-
-Create routine:
-1. **IF** Time is 7:00 AM
-2. **AND** Day is Monday through Friday
-3. **AND** Coffee maker plug is OFF (confirms loaded)
-4. **THEN** Turn on coffee maker plug
-
-Create safety routine:
-1. **IF** Coffee maker plug has been ON for 30 minutes
-2. **THEN** Turn off coffee maker plug
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** Time is 7:00 AM
-3. **Conditions:** Weekdays only
-4. **Do:** Turn on coffee maker smart plug
-
-(Note: Can't check if plug is off as condition in HomeKit)
-
-Create second automation for shutoff:
-1. **When:** Coffee maker plug turns on
-2. **Wait:** 30 minutes
-3. **Do:** Turn off coffee maker plug
-
-### Alexa
-
-Create routine:
-1. **When:** Schedule (7:00 AM weekdays)
-2. **Action:** Turn on coffee maker smart plug
-
-Safety routine:
-1. **When:** Coffee maker plug has been on for 30 minutes
-2. **Action:** Turn off coffee maker plug
-
-### Google Home
-
-Create automation:
-1. **Starter:** Time is 7:00 AM on weekdays
-2. **Action:** Turn on coffee maker plug
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Time is 7:00 AM</li>
+      <li>Condition: Weekdays, Plug is OFF (ready)</li>
+      <li>Action: Turn on coffee maker plug</li>
+      <li>Safety: Auto-shutoff after 30 minutes</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF Time is 7:00 AM</li>
+      <li>AND Day is Mon-Fri, Plug is OFF</li>
+      <li>THEN Turn on coffee maker plug</li>
+      <li>Safety routine: Turn off after 30 min</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Time is 7:00 AM</li>
+      <li>Conditions: Weekdays only</li>
+      <li>Do: Turn on coffee maker plug</li>
+      <li>Separate: Auto-shutoff after 30 min</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Schedule 7:00 AM weekdays</li>
+      <li>Action: Turn on coffee maker plug</li>
+      <li>Safety: Turn off after 30 minutes</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Starter: Time 7:00 AM on weekdays</li>
+      <li>Action: Turn on coffee maker plug</li>
+      <li>Note: Add separate safety shutoff</li>
+    </ol>
+  </div>
+</div>
 
 ## Advanced features
 

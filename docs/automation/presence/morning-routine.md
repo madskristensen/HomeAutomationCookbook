@@ -11,64 +11,140 @@ Start your day right with an automated morning routine that prepares your home f
 
 ## Use cases
 
-* **Weekday mornings** - Consistent wake-up routine
-* **Motion-triggered** - Lights when you get out of bed
-* **Time-based** - Scheduled wake-up time
-* **Voice-activated** - "Good morning" routine
-* **Button-triggered** - Bedside button press
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Trigger Methods</h4>
+    <ul>
+      <li><strong>Weekday Mornings</strong> - Consistent wake-up routine</li>
+      <li><strong>Motion-Triggered</strong> - Lights when you get out of bed</li>
+      <li><strong>Time-Based</strong> - Scheduled wake-up time</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Activation Options</h4>
+    <ul>
+      <li><strong>Voice-Activated</strong> - "Good morning" routine</li>
+      <li><strong>Button-Triggered</strong> - Bedside button press</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-* **Smart lights** - Throughout house
-* **Motion sensor** (optional) - Bedroom or bathroom
-* **Smart button** (optional) - Bedside trigger
-* **Smart thermostat** - Climate control
-* **Smart plugs** - Coffee maker, etc.
+<div class="product-section">
+  <h4>Essential Equipment</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Smart Lights</strong>
+      <div class="product-details">
+        Throughout house for automated morning routine
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Motion Sensor</strong>
+      <div class="product-details">
+        In bedroom or bathroom to detect wake-up
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Button</strong>
+      <div class="product-details">
+        Bedside trigger for one-press routine
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Thermostat</strong>
+      <div class="product-details">
+        Climate control for comfort
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Plugs</strong>
+      <div class="product-details">
+        For coffee maker and other appliances
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Time is between 6:00 AM and 9:00 AM
-* AND motion detected in bedroom
-* OR button pressed
-* OR voice command "Good morning"
+<div class="automation-example">IF time is 6:30 AM on weekdays
+THEN turn on bedroom lights to 30%
+AND start coffee maker
+AND read morning briefing</div>
 
-### Conditions
-* House is in Night Mode
-* Time is between 6:00 AM and 10:00 AM
-
-### Actions
-* Turn on main lights in house
-* Put house in Home Mode
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Time is between 6:00 AM and 9:00 AM</li>
+      <li>AND motion detected in bedroom</li>
+      <li>OR button pressed</li>
+      <li>OR voice command "Good morning"</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions</h4>
+    <ul>
+      <li>House is in Night Mode</li>
+      <li>Time is between 6:00 AM and 10:00 AM</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn on main lights in house</li>
+      <li>Put house in Home Mode</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** Bedroom motion sensor detects motion
-- **Conditions:**
-  - House mode is "Night"
-  - Time is between 6 AM and 10 AM
-- **Actions:**
-  - Set house mode to "Home"
-  - Turn on lights in kitchen, bathroom, and hallway at 100% brightness
-
-### SmartThings
-
-Create routine:
-1. **IF** Motion in bedroom
-2. **AND** Time between 6 AM - 10 AM  
-3. **AND** Mode is "Night"
-4. **THEN** Change mode to "Home"
-5. **AND** Turn on morning lights
-
-### Apple HomeKit
-
-Create automation:
-1. **When:** Motion detected in bedroom
-2. **Time:** Between 6 AM and 10 AM
-3. **Do:** Activate "Good Morning" scene
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Trigger: Bedroom motion sensor detects motion</li>
+      <li>Conditions: House mode is "Night" AND Time is between 6 AM and 10 AM</li>
+      <li>Actions: Set house mode to "Home"</li>
+      <li>Turn on lights in kitchen, bathroom, and hallway at 100% brightness</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>IF: Motion in bedroom</li>
+      <li>AND: Time between 6 AM - 10 AM AND Mode is "Night"</li>
+      <li>THEN: Change mode to "Home"</li>
+      <li>AND: Turn on morning lights</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Motion detected in bedroom</li>
+      <li>Time: Between 6 AM and 10 AM</li>
+      <li>Do: Activate "Good Morning" scene</li>
+    </ol>
+  </div>
+</div>
 
 ## Morning (Home) mode actions
 

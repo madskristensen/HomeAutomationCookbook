@@ -9,69 +9,117 @@ keywords: bathroom night light, nighttime motion lighting, low brightness automa
 
 This simple yet valuable automation provides gentle lighting for nighttime bathroom visits. It prevents harsh bright lights from disrupting your sleep cycle while providing enough illumination for safe navigation.
 
-## Why this automation matters
-
-**Sleep quality benefits:**
-- Bright lights suppress melatonin production
-- Low-light maintains sleep readiness
-- Easier to fall back asleep
-- Less disruptive to sleep patterns
-
-**Safety benefits:**
-- No stumbling in the dark
-- Safe navigation for all ages
-- Reduces fall risk for elderly
-- Kids can navigate independently
-
-**Family-friendly:**
-- Whole household benefits
-- Great for overnight guests
-- Works for everyone automatically
-- No explanation needed
+<div class="info-box">
+  <strong>🌙 Why This Automation Matters</strong>
+  <ul>
+    <li><strong>Sleep Quality:</strong> Bright lights suppress melatonin production. Low-light maintains sleep readiness and makes it easier to fall back asleep.</li>
+    <li><strong>Safety:</strong> No stumbling in the dark. Safe navigation for all ages, reduces fall risk for elderly. Kids can navigate independently.</li>
+    <li><strong>Family-Friendly:</strong> Whole household benefits. Great for overnight guests. Works for everyone automatically with no explanation needed.</li>
+  </ul>
+</div>
 
 ## Use cases
 
-* **Middle of night bathroom trips** - Common for everyone
-* **Nighttime hallway navigation** - Safe path to bathroom
-* **Kids walking to parents' bedroom** - Safe independent movement
-* **Getting water from kitchen** - Any nighttime navigation
-* **Early morning routine** - Before sunrise gentle lighting
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Nighttime Navigation</h4>
+    <ul>
+      <li><strong>Middle of Night Bathroom Trips</strong> - Common for everyone</li>
+      <li><strong>Nighttime Hallway Navigation</strong> - Safe path to bathroom</li>
+      <li><strong>Kids Walking to Parents' Bedroom</strong> - Safe independent movement</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Early Morning & Kitchen</h4>
+    <ul>
+      <li><strong>Getting Water from Kitchen</strong> - Any nighttime navigation</li>
+      <li><strong>Early Morning Routine</strong> - Before sunrise gentle lighting</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential equipment
-
-* **Motion sensor**
-  - Battery-powered: Easier installation
-  - Wired: No battery changes needed
-  - Placement: Bathroom entry or hallway
+<div class="product-section">
+  <h4>Essential Equipment</h4>
   
-* **Smart light switch or bulb**
-  - Must support dimming
-  - Check minimum brightness (some only go to 10%)
-  - Color temperature control helpful (warm white better at night)
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Motion Sensor</strong>
+      <div class="product-details">
+        Battery-powered (easier installation) or Wired (no battery changes needed)<br>
+        Placement: Bathroom entry or hallway
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Light Switch or Bulb</strong>
+      <div class="product-details">
+        Must support dimming • Check minimum brightness (some only go to 10%)<br>
+        Color temperature control helpful (warm white better at night)
+      </div>
+    </div>
+  </div>
+</div>
 
-### Optional enhancements
-
-* **Lux sensor** - Only activate if dark enough
-* **Multiple motion sensors** - For larger spaces
-* **Smart dimmer** - Better dimming control
-* **Color bulbs** - Can use red/amber for minimal sleep disruption
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Lux Sensor</strong>
+      <div class="product-details">
+        Only activate if dark enough
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Multiple Motion Sensors</strong>
+      <div class="product-details">
+        For larger spaces
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Color Bulbs</strong>
+      <div class="product-details">
+        Can use red/amber for minimal sleep disruption
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Basic automation setup
 
-### Triggers
-* Motion detected by sensor
+<div class="automation-example">IF motion detected in bathroom
+AND time between 10:00 PM - 6:00 AM
+THEN turn on light to 10% warm white</div>
 
-### Conditions (optional)
-* Home is in "Night Mode"
-* OR time is between 10 PM and 6 AM
-* AND room is dark (lux sensor below threshold - optional)
-
-### Actions
-* Turn on light switch/bulb at 10% brightness
-* Set color temperature to warm white (2700K) if supported
-* Optional: Set color to red or amber for minimal disruption
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Triggers</h4>
+    <ul>
+      <li>Motion detected by sensor</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Conditions</h4>
+    <ul>
+      <li>Home is in "Night Mode" OR time is between 10 PM and 6 AM</li>
+      <li>Room is dark (lux sensor below threshold - optional)</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn on light switch/bulb at 10% brightness</li>
+      <li>Set color temperature to warm white (2700K) if supported</li>
+      <li>Optional: Set color to red or amber for minimal disruption</li>
+    </ul>
+  </div>
+</div>
 
 ## Creating "Night Mode"
 

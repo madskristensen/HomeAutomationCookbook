@@ -11,145 +11,188 @@ Get alerted when dishes are clean and ready to be put away. This clever temperat
 
 ## Use cases
 
-* **Prompt Dish Removal** - Empty dishwasher right when cycle ends
-* **Kitchen Cleanup** - Know when you can run another load
-* **Prevent Dishes Sitting** - Don't let clean dishes sit too long
-* **Multi-Tasking** - Get alerted while doing other things
-* **Track Dish Status** - Dashboard showing clean/dirty
+<div class="use-case-grid">
+  <div class="use-case-card">
+    <h4>Efficiency</h4>
+    <ul>
+      <li><strong>Prompt Dish Removal</strong> - Empty dishwasher right when cycle ends</li>
+      <li><strong>Kitchen Cleanup</strong> - Know when you can run another load</li>
+      <li><strong>Track Dish Status</strong> - Dashboard showing clean/dirty</li>
+    </ul>
+  </div>
+  <div class="use-case-card">
+    <h4>Convenience</h4>
+    <ul>
+      <li><strong>Prevent Dishes Sitting</strong> - Don't let clean dishes sit too long</li>
+      <li><strong>Multi-Tasking</strong> - Get alerted while doing other things</li>
+    </ul>
+  </div>
+</div>
 
 ## Products needed
 
-### Essential
+<div class="product-section">
+  <h4>Essential Equipment - Option 1: Temperature Sensor (Clever!)</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Multi-Purpose Sensor or Temperature Sensor</strong>
+      <div class="product-details">
+        Popular brands: Aeotec, SmartThings, Zigbee multi-sensors<br>
+        Temperature detection • Contact/tilt sensor • Mount on side or top of dishwasher door<br>
+        <em>Detects heat from drying cycle - very clever and reliable!</em>
+      </div>
+    </div>
+  </div>
+</div>
 
-**Option 1: Temperature Sensor Method (Clever!)**
-* **Multi-Purpose Sensor** with temperature and contact
-  - Popular brands: Aeotec, SmartThings, Zigbee multi-sensors
-  - OR standalone temperature sensor with tilt sensor
-  - Mount on side or top of dishwasher door
-  - Key features: Temperature detection, contact/tilt sensor
+<div class="product-section">
+  <h4>Essential Equipment - Option 2: Power Monitoring (Traditional)</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Power Metering Smart Plug</strong>
+      <div class="product-details">
+        15A rated minimum • Plug dishwasher into smart plug<br>
+        Use same technique as washer automation
+      </div>
+    </div>
+  </div>
+</div>
 
-**Option 2: Power Monitoring (Traditional)**
-* **Power Metering Smart Plug** - 15A rated minimum
-  - Use same technique as washer automation
-  - Plug dishwasher into smart plug
-
-### Optional Enhancements
-
-* **Dashboard Tile** showing clean/dirty status
-* **Smart Light** for visual alert
-* **Voice Announcement** via smart speaker
+<div class="product-section">
+  <h4>Optional Enhancements</h4>
+  
+  <div class="product-list">
+    <div class="product-item">
+      <strong>Dashboard Tile</strong>
+      <div class="product-details">
+        Showing clean/dirty status
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Smart Light</strong>
+      <div class="product-details">
+        In kitchen for visual alert
+      </div>
+    </div>
+    
+    <div class="product-item">
+      <strong>Voice Announcement</strong>
+      <div class="product-details">
+        Via smart speaker when dishes are clean
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Automation setup - Temperature method
 
-This uses the heat from the drying cycle as the trigger - very clever and reliable!
+<div class="automation-example">IF temperature > 90°F
+AND door closed for 60 minutes
+AND dishwasher running
+THEN send notification "Dishwasher done!"
+AND set dishwasher_clean to true</div>
 
-### Sensor placement
+<div class="info-box">
+  <strong>💡 Sensor Placement & Temperature Patterns</strong>
+  <ul>
+    <li><strong>Mounting:</strong> On side or top of dishwasher door. Position to detect heat from drying cycle vent. May require experimentation to find best spot (usually near top of door or side vent).</li>
+    <li><strong>Contact Sensor:</strong> Register as "tilt sensor" or "garage door sensor" so it only triggers "open" when door is fully horizontal (open), not just cracked.</li>
+    <li><strong>Temperature Pattern:</strong> Normal: 68-75°F (room temp) • Drying cycle: 90-120°F • After cycle: Gradually cools over 30-60 minutes</li>
+  </ul>
+</div>
 
-**Where to Mount:**
-* On side or top of dishwasher door
-* Position to detect heat from drying cycle vent
-* May require experimentation to find best spot
-* Usually near top of door or side vent
-
-**If using contact sensor:**
-Register as "tilt sensor" or "garage door sensor" so it only triggers "open" when door is fully horizontal (open), not just cracked.
-
-### Temperature patterns
-
-Dishwashers heat up significantly during drying:
-- **Normal temperature:** 68-75°F (room temp)
-- **Drying cycle:** 90-120°F
-- **After cycle:** Gradually cools over 30-60 minutes
-
-### Automation logic
-
-**Triggers:**
-* Temperature rises above 90°F (32°C)
-
-**Conditions:**
-* Contact/tilt sensor has been closed for 60 minutes
-  - Ensures it's the drying cycle, not just running/wash cycle
-* Dishwasher in use (based on time of day or manual indicator)
-
-**Actions:**
-* Send notification: "Dishwasher is done!"
-* Turn on dashboard tile showing "clean"
-* Optional: Flash kitchen light
-
-### Auto-reset dashboard tile
-
-**Triggers:**
-* Contact/tilt sensor opens (door opened)
-
-**Actions:**
-* Turn off dashboard tile
-* Reset variable
-* Assumes dishwasher emptied when door opened
+<div class="setup-steps">
+  <div class="setup-step">
+    <h4>Automation: Detect Dishwasher Done</h4>
+    
+    <h4>Triggers</h4>
+    <ul>
+      <li>Temperature rises above 90°F (32°C)</li>
+    </ul>
+    
+    <h4>Conditions</h4>
+    <ul>
+      <li>Contact/tilt sensor has been closed for 60 minutes (ensures it's the drying cycle, not just running/wash cycle)</li>
+      <li>Dishwasher in use (based on time of day or manual indicator)</li>
+    </ul>
+    
+    <h4>Actions</h4>
+    <ul>
+      <li>Send notification: "Dishwasher is done!"</li>
+      <li>Turn on dashboard tile showing "clean"</li>
+      <li>Optional: Flash kitchen light</li>
+    </ul>
+  </div>
+  
+  <div class="setup-step">
+    <h4>Auto-Reset: Door Opens</h4>
+    
+    <h4>Triggers</h4>
+    <ul>
+      <li>Contact/tilt sensor opens (door opened)</li>
+    </ul>
+    
+    <h4>Actions</h4>
+    <ul>
+      <li>Turn off dashboard tile</li>
+      <li>Reset variable</li>
+      <li>Assumes dishwasher emptied when door opened</li>
+    </ul>
+  </div>
+</div>
 
 ## Platform-Specific Examples
 
-### Home Assistant
-
-**Create Helper Booleans:**
-
-Create two boolean helpers:
-1. "dishwasher_running" - tracks if dishwasher is currently running
-2. "dishwasher_clean" - tracks if dishwasher finished and dishes are clean
-
-**Automation - Detect dishwasher start:**
-
-Create automation with these elements:
-- **Trigger:** Dishwasher door closes
-- **Condition:** "dishwasher_running" is currently off (not already marked as running)
-- **Action:** Turn on "dishwasher_running" boolean
-
-**Automation - Detect dishwasher done (temperature):**
-
-Create automation with these elements:
-- **Trigger:** Temperature sensor rises above 90°F
-- **Conditions:** Door has been closed for at least 60 minutes AND "dishwasher_running" is on
-- **Action 1:** Send notification "Dishwasher is done - dishes are clean!"
-- **Action 2:** Turn off "dishwasher_running" boolean
-- **Action 3:** Turn on "dishwasher_clean" boolean
-
-**Reset when door opens:**
-
-Create automation with these elements:
-- **Trigger:** Dishwasher door opens
-- **Action:** Turn off both "dishwasher_running" and "dishwasher_clean" booleans
-
-### SmartThings
-
-Create routines:
-
-**Routine 1: Dishwasher Done**
-1. **IF** Dishwasher temperature sensor above 90°F
-2. **AND** Door contact closed for 60+ minutes
-3. **THEN** Send notification "Dishwasher is done"
-4. **THEN** Turn on virtual switch "Dishwasher Clean"
-
-**Routine 2: Reset on Door Open**
-1. **IF** Dishwasher door opens
-2. **THEN** Turn off virtual switch "Dishwasher Clean"
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** Temperature sensor above 90°F
-3. **Conditions:** Contact sensor closed for 60+ minutes
-4. **Do:** Send notification
-
-### Alexa
-
-Create routine:
-1. **When:** Temperature sensor value above 90°F
-2. **Add condition:** Contact sensor closed
-3. **Action:** Send notification to phone
-4. **Action:** Alexa announces "The dishwasher is done"
-
-### Google Home
-
-Limited native support for temperature triggers. Use Home Assistant or IFTTT for logic.
+<div class="platform-grid">
+  <div class="platform-card">
+    <h4>Home Assistant</h4>
+    <ol>
+      <li>Create two boolean helpers: "dishwasher_running" and "dishwasher_clean"</li>
+      <li>Start: Door closes → Turn on "dishwasher_running"</li>
+      <li>Done: Temp > 90°F AND door closed 60min AND running</li>
+      <li>Actions: Notify, Turn off running, Turn on clean</li>
+      <li>Reset: Door opens → Turn off both booleans</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>SmartThings</h4>
+    <ol>
+      <li>Routine 1: Temp > 90°F AND door closed 60+ min</li>
+      <li>Actions: Notify, Turn on virtual switch "Dishwasher Clean"</li>
+      <li>Routine 2: Door opens → Turn off virtual switch</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Apple HomeKit</h4>
+    <ol>
+      <li>When: Temperature sensor above 90°F</li>
+      <li>Conditions: Contact sensor closed for 60+ minutes</li>
+      <li>Do: Send notification</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Alexa</h4>
+    <ol>
+      <li>When: Temperature sensor value above 90°F</li>
+      <li>Condition: Contact sensor closed</li>
+      <li>Actions: Send notification, Alexa announces "dishwasher is done"</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <h4>Google Home</h4>
+    <ol>
+      <li>Limited native support for temperature triggers</li>
+      <li>Use Home Assistant or IFTTT for logic</li>
+    </ol>
+  </div>
+</div>
 
 ## Power monitoring method
 

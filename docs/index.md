@@ -3,11 +3,11 @@ layout: default
 title: The Automated Home 2024
 ---
 
-# THE AUTOMATED HOME 2024
+# The automated home
 
-> A practical guide to automating your smart home
+> A collection of recipes, best practices, and resources for smart home automation.
 
-**For beginners and advanced home automators alike, and for all smart home platforms.**
+For beginners and advanced home automators alike, and for all smart home platforms.
 
 Works with **Alexa, Siri, Google Assistant, SmartThings, Hubitat, HomeSeer, Home Assistant, Vera, Phillips Hue, Sonos**, and many others.
 
