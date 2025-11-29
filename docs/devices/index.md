@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Smart Devices
+title: Smart devices
 ---
 
-# Smart Devices Guide
+# Smart devices guide
 
 Your guide to choosing and setting up smart home devices.
 
-## Device Categories
+## Device categories
 
 ### 💡 Lighting
 
@@ -25,11 +25,9 @@ Smart lighting is the most popular entry point for home automation.
 - **Best Switch**: Lutron Caseta
 - **RGB Fun**: Govee LED Strips
 
-[Detailed Lighting Guide →](/devices/lighting/)
-
 ---
 
-### 🌡️ Climate Control
+### 🌡️ Climate control
 
 Manage heating, cooling, and air quality.
 
@@ -43,8 +41,6 @@ Manage heating, cooling, and air quality.
 - **Best Overall**: Ecobee SmartThermostat
 - **Best for Savings**: Nest Learning Thermostat
 - **Budget**: Honeywell T5
-
-[Climate Control Guide →](/devices/climate/)
 
 ---
 
@@ -63,8 +59,6 @@ Protect your home with smart security devices.
 - **Best Doorbell**: Ring Video Doorbell Pro 2
 - **Best Camera**: Eufy 2K Indoor Cam
 - **Best System**: Ring Alarm Pro
-
-[Security Devices Guide →](/devices/security/)
 
 ---
 
@@ -85,11 +79,9 @@ The eyes and ears of your smart home.
 - **Best Leak**: Aqara Water Leak Sensor
 - **Best Multi**: Aqara Temperature/Humidity Sensor
 
-[Sensors Guide →](/devices/sensors/)
-
 ---
 
-### 🔌 Smart Plugs & Outlets
+### 🔌 Smart plugs and outlets
 
 Make any device smart.
 
@@ -104,8 +96,6 @@ Make any device smart.
 - **Best Zigbee**: Ikea Tradfri Plug
 - **Best Monitoring**: Shelly Plug S
 - **Best In-Wall**: Leviton DW15S
-
-[Smart Plugs Guide →](/devices/plugs/)
 
 ---
 
@@ -125,13 +115,11 @@ Smart control for your media.
 - **Best Streaming**: Apple TV 4K
 - **Best IR**: Broadlink RM4 Pro
 
-[Entertainment Guide →](/devices/entertainment/)
-
 ---
 
-## Buying Guide
+## Buying guide
 
-### Connectivity Standards
+### Connectivity standards
 
 **WiFi** (2.4GHz)
 - ✅ Easy setup, no hub required
@@ -153,7 +141,7 @@ Smart control for your media.
 - ✅ No hub needed
 - ❌ Limited range
 
-### What to Check Before Buying
+### What to check before buying
 
 1. ✅ Platform compatibility
 2. ✅ Connectivity type
@@ -163,7 +151,7 @@ Smart control for your media.
 6. ✅ Cloud vs. local control
 7. ✅ Privacy policy
 
-### Budget Recommendations
+### Budget recommendations
 
 **Starter Pack ($200-300)**
 - Smart speaker/hub
@@ -184,8 +172,8 @@ Smart control for your media.
 - In-wall switches
 - Custom automation hardware
 
-## Next Steps
+## Next steps
 
-- [Choose Your Platform →](/platforms/)
-- [Create Automations →](/automation/)
-- [Setup Best Practices →](/best-practices/)
+- [Choose your platform →](/platforms/)
+- [Create automations →](/automation/)
+- [Setup best practices →](/best-practices/)

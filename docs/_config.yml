@@ -3,13 +3,12 @@
 
 # Site settings
 title: Home Automation Cookbook
-email: your-email@example.com
 description: >-
   A comprehensive guide for home automation enthusiasts.
   Learn about smart home devices, automation platforms, and best practices.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
-repository: madskristensen/HomeAutomationCookbook # Replace with your GitHub username/repo
+repository: madskristensen/HomeAutomationCookbook
 
 # Build settings
 markdown: kramdown

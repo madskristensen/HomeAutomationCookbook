@@ -3,11 +3,11 @@ layout: default
 title: Platforms
 ---
 
-# Home Automation Platforms
+# Home automation platforms
 
 Choosing the right platform is crucial for your smart home success. Here's a detailed comparison of popular options.
 
-## Platform Comparison
+## Platform comparison
 
 | Feature | Home Assistant | Apple HomeKit | SmartThings | Google Home | Alexa |
 |---------|---------------|---------------|-------------|-------------|-------|
@@ -18,7 +18,7 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 | **Customization** | Excellent | Limited | Good | Limited | Good |
 | **Device Support** | Excellent | Limited | Excellent | Good | Excellent |
 
-## Detailed Platform Guides
+## Detailed platform guides
 
 ### Home Assistant
 
@@ -43,8 +43,6 @@ Home Assistant is an open-source platform that runs on various hardware (Raspber
 2. Install Home Assistant OS
 3. Configure integrations
 4. Set up automations
-
-[Learn more about Home Assistant →](/platforms/home-assistant/)
 
 ---
 
@@ -73,8 +71,6 @@ HomeKit is Apple's smart home platform built into iOS, iPadOS, and macOS.
 3. Add HomeKit-compatible devices
 4. Use the Home app for control
 
-[Learn more about HomeKit →](/platforms/homekit/)
-
 ---
 
 ### Samsung SmartThings
@@ -101,8 +97,6 @@ SmartThings offers a cloud-based platform with optional hub.
 2. Optional: Purchase SmartThings hub
 3. Add compatible devices
 4. Create routines
-
-[Learn more about SmartThings →](/platforms/smartthings/)
 
 ---
 
@@ -131,11 +125,9 @@ Google Home leverages Google Assistant for voice control.
 3. Link compatible devices
 4. Set up routines
 
-[Learn more about Google Home →](/platforms/google-home/)
-
 ---
 
-## Making Your Choice
+## Making your choice
 
 Consider these factors:
 
@@ -145,15 +137,14 @@ Consider these factors:
 4. **Budget**: All platforms are free, but device costs vary
 5. **Device Selection**: Check compatibility first
 
-## Multi-Platform Approach
+## Multi-platform approach
 
 You don't have to choose just one! Many users run:
 - Home Assistant as the main hub
 - Plus HomeKit for iOS convenience
 - Plus Alexa/Google for voice control
 
-## Next Steps
+## Next steps
 
-- [Explore Compatible Devices →](/devices/)
-- [Read Platform-Specific Guides →](/platforms/home-assistant/)
-- [See Automation Examples →](/automation/)
+- [Explore compatible devices →](/devices/)
+- [See automation examples →](/automation/)
