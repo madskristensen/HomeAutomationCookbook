@@ -258,7 +258,7 @@ Combine with motion-stop automation for complete cycle:
 - **Condition:** House mode is "Night"
 - **Action:** Turn off bathroom light
 
-See [Turn off lights after motion stops](/automation/motion/lights-off-after-motion/) for complete details.
+See [Turn off lights after motion stops](/automation/lighting/lights-off-after-motion.html) for complete details.
 
 ## Extending to other rooms
 
@@ -335,11 +335,11 @@ This prevents sudden brightness changes that disrupt sleep.
 ---
 
 **Related automations:**
-- [Turn on lights when motion detected](/automation/motion/lights-on-motion/)
-- [Turn off lights after motion stops](/automation/motion/lights-off-after-motion/)
-- [Night mode setup](/automation/presence/night-mode/)
+- [Turn on lights when motion detected](/automation/lighting/lights-on-motion.html)
+- [Turn off lights after motion stops](/automation/lighting/lights-off-after-motion.html)
+- [Night mode setup](/automation/presence/)
 
 <div class="page-navigation">
-  <a href="/automation/motion/">← Back to Motion Automations</a>
+  <a href="/automation/lighting/">← Back to Lighting Automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

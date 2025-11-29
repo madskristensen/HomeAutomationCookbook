@@ -209,6 +209,6 @@ Robot vacuum automatically cleans your home when everyone leaves.
 - Use time-based conditions (only 9 AM - 6 PM)
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
-  <a href="/tips/">View Tips & Tricks →</a>
+  <a href="/automation/media/">← Previous: Media</a>
+  <a href="/automation/security/">Next: Security & Safety →</a>
 </div>

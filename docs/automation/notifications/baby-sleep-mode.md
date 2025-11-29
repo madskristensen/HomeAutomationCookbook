@@ -336,11 +336,11 @@ Track multiple children:
 ---
 
 **Related automations:**
-- [Lights off after motion](/automation/motion/lights-off-after-motion/)
-- [Bedtime routine](/automation/presence/bedtime-routine/)
-- [Teeth brushing reminder](/automation/misc/teeth-brushing-reminder/)
+- [Lights off after motion](/automation/lighting/lights-off-after-motion.html)
+- [Bedtime routine](/automation/presence/bedtime-routine.html)
+- [Teeth brushing reminder](/automation/notifications/teeth-brushing-reminder.html)
 
 <div class="page-navigation">
-  <a href="/automation/misc/">← Back to Misc Automations</a>
+  <a href="/automation/notifications/">← Back to Notifications & Reminders</a>
   <a href="/automation/">View All Automations →</a>
 </div>

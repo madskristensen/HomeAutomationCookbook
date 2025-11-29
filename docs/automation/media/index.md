@@ -296,6 +296,6 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 - Check for conflicting automations
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
+  <a href="/automation/climate/">← Previous: Climate</a>
   <a href="/automation/appliances/">Next: Appliances →</a>
 </div>

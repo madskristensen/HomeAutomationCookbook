@@ -379,9 +379,9 @@ Create separate automations per door:
 ---
 
 **Related automations:**
-- [Away mode automation](/automation/presence/away-mode/)
-- [Bedtime routine](/automation/presence/bedtime-routine/)
-- [Doorbell notification](/automation/misc/doorbell-notification.html)
+- [Away mode automation](/automation/presence/away-mode.html)
+- [Bedtime routine](/automation/presence/bedtime-routine.html)
+- [Doorbell notification](/automation/notifications/doorbell-notification.html)
 
 <div class="page-navigation">
   <a href="/automation/security/">← Back to Security Automations</a>

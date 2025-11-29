@@ -492,6 +492,6 @@ Create zones around your home:
 * Guest mode that disables aggressive automation
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
+  <a href="/automation/lighting/">← Previous: Lighting</a>
   <a href="/automation/climate/">Next: Climate →</a>
 </div>

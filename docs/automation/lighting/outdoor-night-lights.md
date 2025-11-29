@@ -354,11 +354,11 @@ Different areas, different schedules:
 ---
 
 **Related automations:**
-- [Away lights](/automation/security/away-lights/)
-- [Motion detection lights](/automation/motion/lights-on-motion/)
-- [Dashboards](/automation/misc/dashboards/)
+- [Away lights](/automation/security/away-lights.html)
+- [Motion detection lights](/automation/lighting/lights-on-motion.html)
+- [Dashboards](/automation/dashboards/)
 
 <div class="page-navigation">
-  <a href="/automation/misc/">← Back to Misc Automations</a>
+  <a href="/automation/lighting/">← Back to Lighting Automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

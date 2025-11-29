@@ -352,6 +352,6 @@ Location-based security:
 - [Fake Dog Deterrent →](/automation/security/fake-dog-deterrent.html)
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
+  <a href="/automation/appliances/">← Previous: Appliances</a>
   <a href="/automation/dashboards/">Next: Dashboards →</a>
 </div>

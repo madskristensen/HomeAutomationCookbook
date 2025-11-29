@@ -421,10 +421,10 @@ Prevent repeated alerts:
 
 **Related automations:**
 - [Water leak detection](/automation/security/water-leak-response.html)
-- [Away mode automation](/automation/presence/away-mode/)
-- [Bedtime routine](/automation/presence/bedtime-routine/)
+- [Away mode automation](/automation/presence/away-mode.html)
+- [Bedtime routine](/automation/presence/bedtime-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/misc/">← Back to Misc Automations</a>
+  <a href="/automation/notifications/">← Back to Notifications & Reminders</a>
   <a href="/automation/">View All Automations →</a>
 </div>

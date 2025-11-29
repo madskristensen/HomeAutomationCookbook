@@ -291,6 +291,6 @@ Start simple:
 - [Music Controls →](/automation/dashboards/music-controls.html)
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/misc/">Next: Misc Automations →</a>
+  <a href="/automation/security/">← Previous: Security & Safety</a>
+  <a href="/automation/notifications/">Next: Notifications & Reminders →</a>
 </div>

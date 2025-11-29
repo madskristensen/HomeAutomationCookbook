@@ -293,9 +293,9 @@ Send notification if any issues.
 ---
 
 **Related automations:**
-- [Morning routine](/automation/presence/morning-routine/)
-- [Set away mode](/automation/presence/away-mode/)
-- [Bathroom night light](/automation/motion/bathroom-night-light/)
+- [Morning routine](/automation/presence/morning-routine.html)
+- [Set away mode](/automation/presence/away-mode.html)
+- [Bathroom night light](/automation/lighting/bathroom-night-light.html)
 
 <div class="page-navigation">
   <a href="/automation/presence/">← Back to Presence Automations</a>

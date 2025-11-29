@@ -194,6 +194,6 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 - Monitor HVAC filter cleanliness
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
+  <a href="/automation/presence/">← Previous: Presence & Modes</a>
   <a href="/automation/media/">Next: Media →</a>
 </div>

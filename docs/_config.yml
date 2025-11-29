@@ -28,22 +28,21 @@ navigation:
   - title: Automations
     url: /automation/
     subitems:
-      - title: Motion detection
-        url: /automation/motion/
+      - title: Lighting
+        url: /automation/lighting/
         subitems:
           - title: Lights on motion
-            url: /automation/motion/lights-on-motion.html
+            url: /automation/lighting/lights-on-motion.html
           - title: Lights off after motion
-            url: /automation/motion/lights-off-after-motion.html
+            url: /automation/lighting/lights-off-after-motion.html
           - title: Bathroom night light
-            url: /automation/motion/bathroom-night-light.html
-      - title: Contact sensors
-        url: /automation/contact/
-        subitems:
+            url: /automation/lighting/bathroom-night-light.html
           - title: Toggle lights on door
-            url: /automation/contact/toggle-lights-door.html
+            url: /automation/lighting/toggle-lights-door.html
           - title: Disable on door close
-            url: /automation/contact/disable-on-door-close.html
+            url: /automation/lighting/disable-on-door-close.html
+          - title: Outdoor night lights
+            url: /automation/lighting/outdoor-night-lights.html
       - title: Presence & modes
         url: /automation/presence/
         subitems:
@@ -115,24 +114,22 @@ navigation:
         url: /automation/dashboards/
         subitems:
           - title: Garbage day reminder
-            url: /automation/dashboards/#garbage-day-reminder
+            url: /automation/dashboards/garbage-day-reminder.html
           - title: Status tiles
-            url: /automation/dashboards/#status-tiles-instead-of-notifications
+            url: /automation/dashboards/status-tiles.html
           - title: Music controls
-            url: /automation/dashboards/#music-controls
-      - title: Miscellaneous
-        url: /automation/misc/
+            url: /automation/dashboards/music-controls.html
+      - title: Notifications & reminders
+        url: /automation/notifications/
         subitems:
-          - title: Outdoor night lights
-            url: /automation/misc/outdoor-night-lights.html
           - title: Doorbell notification
-            url: /automation/misc/doorbell-notification.html
-          - title: Baby sleep mode
-            url: /automation/misc/baby-sleep-mode.html
-          - title: Teeth brushing reminder
-            url: /automation/misc/teeth-brushing-reminder.html
+            url: /automation/notifications/doorbell-notification.html
           - title: Low battery alerts
-            url: /automation/misc/low-battery-alerts.html
+            url: /automation/notifications/low-battery-alerts.html
+          - title: Baby sleep mode
+            url: /automation/notifications/baby-sleep-mode.html
+          - title: Teeth brushing reminder
+            url: /automation/notifications/teeth-brushing-reminder.html
   - title: Tips & tricks
     url: /tips/
   - title: Resources

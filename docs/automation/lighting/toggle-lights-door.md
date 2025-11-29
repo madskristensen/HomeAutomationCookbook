@@ -173,9 +173,9 @@ Adjust brightness based on time of day:
 ---
 
 **Related automations:**
-- [Disable automations when door closed](/automation/contact/disable-on-door-close/)
+- [Disable automations when door closed](/automation/lighting/disable-on-door-close.html)
 
 <div class="page-navigation">
-  <a href="/automation/contact/">← Back to Contact Sensor Automations</a>
+  <a href="/automation/lighting/">← Back to Lighting Automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

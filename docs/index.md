@@ -58,7 +58,7 @@ This cookbook is different. Every automation here follows proven principles:
 ## Popular automations
 
 <div class="featured-automations">
-  <a href="/automation/motion/lights-on-motion.html" class="featured-card">
+  <a href="/automation/lighting/lights-on-motion.html" class="featured-card">
     <h3>💡 Automatic room lighting</h3>
     <p>Walk into any room and lights turn on. Leave and they turn off. The most essential automation.</p>
     <span class="card-arrow">View guide →</span>
@@ -86,16 +86,10 @@ This cookbook is different. Every automation here follows proven principles:
 ## Browse all automations
 
 <div class="category-grid">
-  <a href="/automation/motion/" class="category-card">
-    <h3>Motion detection</h3>
-    <p>Automatic lighting and presence-based actions</p>
-    <span class="category-count">3 automations</span>
-  </a>
-  
-  <a href="/automation/contact/" class="category-card">
-    <h3>Contact sensors</h3>
-    <p>Door and window-triggered automations</p>
-    <span class="category-count">2 automations</span>
+  <a href="/automation/lighting/" class="category-card">
+    <h3>Lighting</h3>
+    <p>Motion, door, and time-based lighting control</p>
+    <span class="category-count">6 automations</span>
   </a>
   
   <a href="/automation/presence/" class="category-card">
@@ -107,7 +101,7 @@ This cookbook is different. Every automation here follows proven principles:
   <a href="/automation/climate/" class="category-card">
     <h3>Climate control</h3>
     <p>Temperature, humidity, and air quality</p>
-    <span class="category-count">6 automations</span>
+    <span class="category-count">7 automations</span>
   </a>
   
   <a href="/automation/media/" class="category-card">
@@ -120,6 +114,24 @@ This cookbook is different. Every automation here follows proven principles:
     <h3>Appliances</h3>
     <p>Washer, dryer, vacuum automations</p>
     <span class="category-count">5 automations</span>
+  </a>
+  
+  <a href="/automation/security/" class="category-card">
+    <h3>Security & safety</h3>
+    <p>Away lights, fire safety, leak detection</p>
+    <span class="category-count">5 automations</span>
+  </a>
+  
+  <a href="/automation/dashboards/" class="category-card">
+    <h3>Dashboards</h3>
+    <p>Status tiles and controls</p>
+    <span class="category-count">3 automations</span>
+  </a>
+  
+  <a href="/automation/notifications/" class="category-card">
+    <h3>Notifications & reminders</h3>
+    <p>Alerts, battery monitoring, family reminders</p>
+    <span class="category-count">4 automations</span>
   </a>
 </div>
 

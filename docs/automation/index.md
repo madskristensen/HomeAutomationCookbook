@@ -9,25 +9,15 @@ This is the main section with dozens of practical automation recipes for your sm
 
 ## Categories
 
-### 🚶 [Motion Detection](/automation/motion/)
+### 💡 [Lighting](/automation/lighting/)
 
-Motion sensors are powerful automation tools. Learn how to:
+Automatic lighting is the foundation of a smart home. Learn how to:
 - Turn on lights when motion is detected
 - Turn off lights after motion stops
-- Create nighttime low-light automations
+- Toggle lights on door open/close
+- Outdoor lights at sunset
 
-[Explore Motion Automations →](/automation/motion/)
-
----
-
-### 🚪 [Contact (door/window) sensors](/automation/contact/)
-
-Versatile sensors that enable many useful automations:
-- Toggle lights when doors open
-- Disable automations when doors close
-- Security and safety alerts
-
-[Explore Contact Sensor Automations →](/automation/contact/)
+[Explore Lighting Automations →](/automation/lighting/)
 
 ---
 
@@ -102,15 +92,15 @@ Visual control and status for your smart home:
 
 ---
 
-### 🎯 [Miscellaneous](/automation/misc/)
+### 🔔 [Notifications and reminders](/automation/notifications/)
 
-Additional helpful automations:
-- Outdoor night lights
+Stay informed with smart alerts and reminders:
 - Low battery alerts
 - Doorbell notifications
+- Family-friendly reminders
 - Baby sleep mode
 
-[Explore Misc Automations →](/automation/misc/)
+[Explore Notification Automations →](/automation/notifications/)
 
 ---
 
@@ -162,5 +152,5 @@ DO run morning routine
 
 ---
 
-[← Back to Home](/) | [Start with Motion Detection →](/automation/motion/)
+[← Back to Home](/) | [Start with Lighting →](/automation/lighting/)
 

@@ -354,11 +354,11 @@ Tie brushing to privileges:
 ---
 
 **Related automations:**
-- [Baby sleep mode](/automation/misc/baby-sleep-mode/)
-- [Morning routine](/automation/presence/morning-routine/)
-- [Bedtime routine](/automation/presence/bedtime-routine/)
+- [Baby sleep mode](/automation/notifications/baby-sleep-mode.html)
+- [Morning routine](/automation/presence/morning-routine.html)
+- [Bedtime routine](/automation/presence/bedtime-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/misc/">← Back to Misc Automations</a>
+  <a href="/automation/notifications/">← Back to Notifications & Reminders</a>
   <a href="/automation/">View All Automations →</a>
 </div>

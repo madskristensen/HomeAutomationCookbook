@@ -328,11 +328,11 @@ For hearing impaired household members:
 ---
 
 **Related automations:**
-- [Motion detection lights](/automation/motion/lights-on-motion/)
-- [Away mode](/automation/presence/away-mode/)
-- [Dashboards](/automation/misc/dashboards/)
+- [Motion detection lights](/automation/lighting/lights-on-motion.html)
+- [Away mode](/automation/presence/away-mode.html)
+- [Dashboards](/automation/dashboards/)
 
 <div class="page-navigation">
-  <a href="/automation/misc/">← Back to Misc Automations</a>
+  <a href="/automation/notifications/">← Back to Notifications & Reminders</a>
   <a href="/automation/">View All Automations →</a>
 </div>
