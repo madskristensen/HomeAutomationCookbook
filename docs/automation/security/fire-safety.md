@@ -136,7 +136,10 @@ AND send notifications</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Smoke detector state changes to "on" or "smoke"</li>
       <li>No conditions (always run)</li>
@@ -146,7 +149,10 @@ AND send notifications</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF: Smoke detector detects smoke</li>
       <li>THEN: Turn on all lights + Unlock all doors + Start irrigation</li>
@@ -156,7 +162,10 @@ AND send notifications</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine or HSM (Hubitat Safety Monitor)</li>
       <li>Trigger: Smoke sensor active</li>
@@ -166,7 +175,10 @@ AND send notifications</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Smoke detected by HomeKit smoke sensor</li>
       <li>Do: Turn on all lights + Unlock doors (if supported)</li>
@@ -176,7 +188,10 @@ AND send notifications</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Enable Guard feature in Alexa app</li>
       <li>Guard detects smoke alarm sounds</li>
@@ -186,7 +201,10 @@ AND send notifications</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>If using Nest Protect: Native integration with Google Home</li>
       <li>Trigger: Smoke alarm activates</li>

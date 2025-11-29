@@ -567,16 +567,25 @@ th {
 }
 
 .use-case-card {
-  padding: 1.5rem;
-  background: #f8f9fa;
-  border-radius: 8px;
+  padding: 1.75rem;
+  background: #fff;
+  border-radius: 12px;
   border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.use-case-card:hover {
+  border-color: #2c3e50;
+  box-shadow: 0 4px 16px rgba(44,62,80,0.08);
 }
 
 .use-case-card h4 {
-  margin: 0 0 0.75rem;
-  font-size: 1.1rem;
-  color: #000;
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  color: #2c3e50;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .use-case-card ul {
@@ -587,16 +596,27 @@ th {
 }
 
 .use-case-card li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   line-height: 1.6;
+  padding-left: 1.25rem;
+  position: relative;
 }
 
 .use-case-card li::before {
-  content: '';
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.use-case-card li:last-child {
+  margin-bottom: 0;
 }
 
 .use-case-card strong {
   font-weight: 600;
+  color: #1a1a1a;
 }
 
 .product-section {
@@ -713,9 +733,41 @@ th {
 }
 
 .platform-card {
-  padding: 1.25rem;
-  background: #f8f9fa;
-  border-radius: 8px;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.platform-card:hover {
+  border-color: #2c3e50;
+  box-shadow: 0 4px 16px rgba(44,62,80,0.08);
+}
+
+.platform-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.platform-card-header img {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.platform-card-header h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.05rem;
+  color: #000;
+  line-height: 28px;
 }
 
 .platform-card h4 {
@@ -1653,7 +1705,22 @@ th {
     border-color: #3a3a3a;
   }
 
+  .use-case-card:hover {
+    background: #2a2a2a;
+    border-color: #7a9ab8;
+    box-shadow: 0 4px 16px rgba(122,154,184,0.1);
+  }
+
   .use-case-card h4 {
+    color: #f0f0f0;
+    border-bottom-color: #3a3a3a;
+  }
+
+  .use-case-card li::before {
+    color: #7a9ab8;
+  }
+
+  .use-case-card strong {
     color: #f0f0f0;
   }
 
@@ -1700,9 +1767,24 @@ th {
 
   .platform-card {
     background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .platform-card:hover {
+    background: #2a2a2a;
+    border-color: #7a9ab8;
+    box-shadow: 0 4px 16px rgba(122,154,184,0.1);
   }
 
   .platform-card h4 {
+    color: #f0f0f0;
+  }
+
+  .platform-card-header {
+    border-bottom-color: #3a3a3a;
+  }
+
+  .platform-card-header h4 {
     color: #f0f0f0;
   }
 

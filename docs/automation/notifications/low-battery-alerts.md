@@ -123,7 +123,10 @@ AND add to low battery list on dashboard</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create sensor group for all battery entities</li>
       <li>Trigger: Any battery drops below 20%</li>
@@ -134,7 +137,10 @@ AND add to low battery list on dashboard</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Use SmartApps or automations</li>
       <li>IF Device battery is less than 20%</li>
@@ -144,7 +150,10 @@ AND add to low battery list on dashboard</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Device Watchdog app or Rule Machine</li>
       <li>Configure battery threshold (20%)</li>
@@ -154,7 +163,10 @@ AND add to low battery list on dashboard</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Limited native support</li>
       <li>Use Home+ app for advanced automations</li>
@@ -164,7 +176,10 @@ AND add to low battery list on dashboard</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Check device health in Alexa app</li>
       <li>Some devices show battery status</li>
@@ -174,7 +189,10 @@ AND add to low battery list on dashboard</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Battery status varies by device</li>
       <li>Check device settings in app</li>

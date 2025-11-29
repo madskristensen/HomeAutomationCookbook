@@ -117,7 +117,10 @@ AND read morning briefing</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Bedroom motion sensor detects motion</li>
       <li>Conditions: House mode is "Night" AND Time is between 6 AM and 10 AM</li>
@@ -127,7 +130,10 @@ AND read morning briefing</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF: Motion in bedroom</li>
       <li>AND: Time between 6 AM - 10 AM AND Mode is "Night"</li>
@@ -137,7 +143,10 @@ AND read morning briefing</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Mode Manager or Rule Machine</li>
       <li>Trigger: Bedroom motion sensor active</li>
@@ -147,7 +156,10 @@ AND read morning briefing</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Motion detected in bedroom</li>
       <li>Time: Between 6 AM and 10 AM</li>

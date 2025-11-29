@@ -114,7 +114,10 @@ AND close blinds</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: TV plug power > 50W for 5 sec</li>
       <li>Condition: Time after sunset, before sunrise</li>
@@ -124,7 +127,10 @@ AND close blinds</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF TV plug power > 50W for 5 seconds</li>
       <li>AND Time is after sunset</li>
@@ -134,7 +140,10 @@ AND close blinds</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine with power monitoring plug</li>
       <li>Trigger: TV plug power > 50W for 5 sec</li>
@@ -144,7 +153,10 @@ AND close blinds</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: TV power monitor > 50W</li>
       <li>Conditions: Time after sunset</li>
@@ -153,7 +165,10 @@ AND close blinds</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: TV plug power above 50W</li>
       <li>Condition: Time after 6:00 PM</li>
@@ -163,7 +178,10 @@ AND close blinds</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: TV plug power above 50 watts</li>
       <li>Condition: Time after 6:00 PM</li>

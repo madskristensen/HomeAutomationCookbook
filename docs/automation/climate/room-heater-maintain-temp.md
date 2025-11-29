@@ -119,7 +119,10 @@ THEN turn off space heater</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Bedroom temp below 68°F for 5 min</li>
       <li>Condition: Window closed AND time 6 PM - 8 AM</li>
@@ -130,7 +133,10 @@ THEN turn off space heater</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Bedroom temp sensor below 68°F</li>
       <li>AND Bedroom window is closed</li>
@@ -140,7 +146,10 @@ THEN turn off space heater</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Thermostat Controller or Rule Machine</li>
       <li>Trigger: Temp sensor below 68°F for 5 min</li>
@@ -151,7 +160,10 @@ THEN turn off space heater</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Bedroom temperature falls below 68°F</li>
       <li>Conditions: Window closed, Time 6 PM - 8 AM</li>
@@ -160,7 +172,10 @@ THEN turn off space heater</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Temperature sensor below 68°F</li>
       <li>Condition: Window closed, Time 6 PM - 8 AM</li>
@@ -169,7 +184,10 @@ THEN turn off space heater</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Temperature sensor below 68°F</li>
       <li>Condition: Window closed, Time 6 PM - 8 AM</li>

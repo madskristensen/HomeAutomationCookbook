@@ -146,7 +146,10 @@ AND set dryer_running to false</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create two boolean helpers: "dryer_running" and "dryer_needs_emptying"</li>
       <li>Start: Vibration changes AND door closed AND active 5min</li>
@@ -157,7 +160,10 @@ AND set dryer_running to false</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Use WebCoRE or SharpTools for complex logic</li>
       <li>Start: Vibration changes AND door closed AND active 5min → Virtual switch on</li>
@@ -167,7 +173,10 @@ AND set dryer_running to false</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Create virtual switch "Dryer Running"</li>
       <li>Use Rule Machine with vibration sensor</li>
@@ -177,7 +186,10 @@ AND set dryer_running to false</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Cannot directly handle complex vibration+contact logic</li>
       <li>Use Home Assistant or Hubitat as bridge</li>
@@ -186,7 +198,10 @@ AND set dryer_running to false</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa / Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa / Google Home</h4>
+    </div>
     <ol>
       <li>Limited support for complex vibration+contact logic</li>
       <li>Use Home Assistant or SmartThings for automation</li>

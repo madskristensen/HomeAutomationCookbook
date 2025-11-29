@@ -107,7 +107,10 @@ AND set thermostat to sleep mode</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Triggers: Time is 10:00 PM OR bedside button pressed</li>
       <li>Actions: Turn off main lights (living room, kitchen, office)</li>
@@ -117,7 +120,10 @@ AND set thermostat to sleep mode</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>WHEN: Time is 10:00 PM OR button pressed</li>
       <li>THEN: Change mode to "Night"</li>
@@ -127,7 +133,10 @@ AND set thermostat to sleep mode</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Mode Manager for time-based mode changes</li>
       <li>Trigger: Time is 10:00 PM OR button pressed</li>
@@ -137,7 +146,10 @@ AND set thermostat to sleep mode</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Create "Good Night" scene</li>
       <li>Turn off main lights, set nightlights to 10%, lock doors, set thermostat</li>
@@ -146,7 +158,10 @@ AND set thermostat to sleep mode</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>WHEN: You say "Good night"</li>
       <li>ALEXA WILL: Turn off lights (select rooms)</li>
@@ -156,7 +171,10 @@ AND set thermostat to sleep mode</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>WHEN: I say "Good night"</li>
       <li>ASSISTANT WILL: Adjust lights and plugs</li>

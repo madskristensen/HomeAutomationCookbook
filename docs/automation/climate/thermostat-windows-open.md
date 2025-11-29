@@ -109,7 +109,10 @@ AND send notification "Thermostat off - living room window open"</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Window or door opens for 1 minute</li>
       <li>Action: Set thermostat HVAC mode to "off"</li>
@@ -119,7 +122,10 @@ AND send notification "Thermostat off - living room window open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Living room window opens</li>
       <li>AND Window stays open for 1 minute</li>
@@ -128,7 +134,10 @@ AND send notification "Thermostat off - living room window open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine or Thermostat Scheduler</li>
       <li>Trigger: Contact sensor open for 1 minute</li>
@@ -138,7 +147,10 @@ AND send notification "Thermostat off - living room window open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Any window or door opens</li>
       <li>Conditions: Stays open for at least 1 minute</li>
@@ -147,7 +159,10 @@ AND send notification "Thermostat off - living room window open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Smart Home sensor opens</li>
       <li>Wait: 1 minute</li>
@@ -156,7 +171,10 @@ AND send notification "Thermostat off - living room window open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Window sensor opens</li>
       <li>Condition: Sensor open for at least 1 minute</li>

@@ -109,7 +109,10 @@ AND send notification "Climate control resumed"</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Any window or door closes</li>
       <li>Condition: ALL windows/doors closed AND thermostat is "off"</li>
@@ -119,7 +122,10 @@ AND send notification "Climate control resumed"</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Living room window closes</li>
       <li>AND ALL other windows/doors are closed</li>
@@ -129,7 +135,10 @@ AND send notification "Climate control resumed"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine with contact group</li>
       <li>Trigger: Any contact sensor closes</li>
@@ -139,7 +148,10 @@ AND send notification "Climate control resumed"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Any window or door closes</li>
       <li>Conditions: All windows/doors closed, Thermostat is off</li>
@@ -148,7 +160,10 @@ AND send notification "Climate control resumed"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Smart Home sensor closes</li>
       <li>Condition: All other windows/doors closed, Thermostat "Off"</li>
@@ -157,7 +172,10 @@ AND send notification "Climate control resumed"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Window sensor closes</li>
       <li>Condition: All windows and doors are closed</li>

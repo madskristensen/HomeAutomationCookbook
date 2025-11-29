@@ -143,12 +143,82 @@ See [Presence & Modes Automations](/automation/daily-routines/) for detailed Nig
 
 ## Platform-specific examples
 
-### Home Assistant
-
-Create automation with these elements:
-- **Trigger:** Motion sensor detects movement
-- **Condition:** House mode is "Night" OR time between 10 PM and 6 AM
-- **Action:** Turn on bathroom light at 10% brightness with warm white (2700K) color temperature
+<div class="platform-grid">
+  <div class="platform-card">
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
+    <ol>
+      <li>Trigger: Motion sensor detects movement</li>
+      <li>Condition: House mode is "Night" OR time between 10 PM and 6 AM</li>
+      <li>Action: Turn on bathroom light at 10% brightness</li>
+      <li>Set warm white (2700K) color temperature</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
+    <ol>
+      <li>IF: "Bathroom Motion Sensor" detects motion</li>
+      <li>AND: Location mode is "Night"</li>
+      <li>THEN: Set "Bathroom Light" to 10% brightness</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
+    <ol>
+      <li>Use Motion Lighting app or Rule Machine</li>
+      <li>Trigger: Motion sensor active</li>
+      <li>Condition: Mode is "Night" OR time 10 PM - 6 AM</li>
+      <li>Action: Turn on bathroom light at 10%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
+    <ol>
+      <li>Create automation in Home app</li>
+      <li>When: Bathroom motion sensor detects motion</li>
+      <li>Time: Between 10 PM and 6 AM</li>
+      <li>Do: Turn on bathroom light at 10%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo">
+      <h4>Alexa</h4>
+    </div>
+    <ol>
+      <li>When: "Bathroom Motion Sensor" detects motion</li>
+      <li>Add condition: Time between 10 PM and 6 AM</li>
+      <li>Alexa will: Turn on "Bathroom Light" to 10%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
+    <ol>
+      <li>Starter: "Bathroom Motion Sensor" detects motion</li>
+      <li>Condition: Between 10 PM and 6 AM</li>
+      <li>Action: Set "Bathroom Light" brightness to 10%</li>
+    </ol>
+  </div>
+</div>
 
 ### Advanced: Multiple brightness levels by time
 
@@ -158,43 +228,6 @@ Adjust brightness based on time of night:
 - **Late evening (9 PM - 11 PM):** 15% brightness, warm white
 
 Use conditional logic to check current time and set appropriate brightness level.
-
-### SmartThings
-
-Create routine:
-1. **IF** "Bathroom Motion Sensor" detects motion
-2. **AND** Location mode is "Night"
-3. **THEN** Set "Bathroom Light" to 10% brightness
-
-### Hubitat
-
-Use Motion Lighting app or Rule Machine:
-1. **Trigger:** Motion sensor active
-2. **Condition:** Mode is "Night" OR time between 10 PM and 6 AM
-3. **Action:** Turn on bathroom light at 10% brightness
-4. **Optional:** Set color temperature to warm white (2700K) if supported
-
-### Apple HomeKit
-
-1. Create automation in Home app
-2. **When:** Bathroom motion sensor detects motion
-3. **Time:** Between 10 PM and 6 AM
-4. **Do:** Turn on bathroom light at 10%
-5. **Optional:** Convert to Shortcut for color temperature control
-
-### Alexa
-
-Create routine:
-1. **When:** "Bathroom Motion Sensor" detects motion
-2. **Add condition:** Time between 10:00 PM and 6:00 AM
-3. **Alexa will:** Smart Home → Turn on "Bathroom Light" to 10%
-
-### Google Home
-
-Create automation:
-1. **Starter:** "Bathroom Motion Sensor" detects motion
-2. **Condition:** Between 10 PM and 6 AM
-3. **Action:** Set "Bathroom Light" brightness to 10%
 
 ## Pro tips
 

@@ -136,7 +136,10 @@ THEN turn on away lights scene</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create "Away Lights" scene with desired lights</li>
       <li>Automation 1: Trigger on mode change to "Away" + sun below horizon + before 11 PM → Activate scene</li>
@@ -146,7 +149,10 @@ THEN turn on away lights scene</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Create "Away Lights" scene in app</li>
       <li>Routine 1: IF Mode is Away AND Time is sunset to 11 PM → THEN Activate Away Lights scene</li>
@@ -155,7 +161,10 @@ THEN turn on away lights scene</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Create group "Away Lights" with selected devices</li>
       <li>Use Rule Machine for complex time + mode logic</li>
@@ -166,7 +175,10 @@ THEN turn on away lights scene</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Create "Away Lights" scene</li>
       <li>Automation: When last person leaves + sunset to 11 PM → Activate scene</li>
@@ -175,7 +187,10 @@ THEN turn on away lights scene</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Create "Away Lights" routine with device group</li>
       <li>Trigger: When mode changes to Away AND after sunset</li>
@@ -185,7 +200,10 @@ THEN turn on away lights scene</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Create device group for away lights</li>
       <li>Starter: When everyone leaves + after sunset</li>

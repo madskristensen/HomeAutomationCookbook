@@ -106,7 +106,10 @@ THEN turn on lights to 100%</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Motion sensor state changes to "on"</li>
       <li>Condition: Light level (lux) is below 100</li>
@@ -117,7 +120,10 @@ THEN turn on lights to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF: Motion is detected on sensor</li>
       <li>AND: Time is between 10 PM and 6 AM</li>
@@ -127,7 +133,10 @@ THEN turn on lights to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine or Simple Automation Rules</li>
       <li>Trigger: Motion sensor active</li>
@@ -138,7 +147,10 @@ THEN turn on lights to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Motion sensor detects motion</li>
       <li>Time: Between 10 PM and 6 AM</li>
@@ -148,7 +160,10 @@ THEN turn on lights to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Motion sensor detects motion</li>
       <li>Condition: Between 10 PM and 6 AM</li>
@@ -157,7 +172,10 @@ THEN turn on lights to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>When: Motion sensor detects motion</li>
       <li>Condition: Time between 10 PM - 6 AM</li>

@@ -112,7 +112,10 @@ AND adjust volume to preset level</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Kitchen button pressed</li>
       <li>Action: Set speaker volume to 40%</li>
@@ -122,7 +125,10 @@ AND adjust volume to preset level</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Button pressed (or switch on)</li>
       <li>THEN Play music on speaker</li>
@@ -132,7 +138,10 @@ AND adjust volume to preset level</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Button Controllers or Rule Machine</li>
       <li>Trigger: Button pressed</li>
@@ -142,7 +151,10 @@ AND adjust volume to preset level</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Button is pressed</li>
       <li>Do: Play music on HomePod/AirPlay speaker</li>
@@ -152,7 +164,10 @@ AND adjust volume to preset level</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Smart Home button pressed</li>
       <li>Action: Play music from [service] on [Echo device]</li>
@@ -161,7 +176,10 @@ AND adjust volume to preset level</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Button pressed</li>
       <li>Action: Play music on speaker</li>

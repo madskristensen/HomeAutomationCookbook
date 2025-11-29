@@ -132,7 +132,10 @@ THEN send notification "Garage door still open"</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Garage door open for 10 minutes (use for: minutes: 10)</li>
       <li>Condition: Optional motion check</li>
@@ -142,7 +145,10 @@ THEN send notification "Garage door still open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Garage door is open for 10 minutes</li>
       <li>THEN Send notification to all members</li>
@@ -151,7 +157,10 @@ THEN send notification "Garage door still open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine with delayed trigger</li>
       <li>Trigger: Garage door open for 10 minutes</li>
@@ -161,7 +170,10 @@ THEN send notification "Garage door still open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Create automation: Garage door is open</li>
       <li>Add time condition if needed</li>
@@ -171,7 +183,10 @@ THEN send notification "Garage door still open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Routine: When garage door is open (if supported)</li>
       <li>Wait: 10 minutes</li>
@@ -180,7 +195,10 @@ THEN send notification "Garage door still open"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Limited native support for duration triggers</li>
       <li>Use third-party integration (Home Assistant, IFTTT)</li>

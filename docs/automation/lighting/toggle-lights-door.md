@@ -100,7 +100,10 @@ THEN turn on closet light to 100%</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Closet door opens</li>
       <li>Condition: Light level below 50 lux</li>
@@ -109,7 +112,10 @@ THEN turn on closet light to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF "Closet Door Sensor" opens</li>
       <li>THEN Turn on "Closet Light" to 100%</li>
@@ -117,7 +123,10 @@ THEN turn on closet light to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Simple Automation Rules or Rule Machine</li>
       <li>Trigger: Contact sensor opens</li>
@@ -126,7 +135,10 @@ THEN turn on closet light to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Door sensor detects open</li>
       <li>Time: Anytime (or add condition)</li>
@@ -135,7 +147,10 @@ THEN turn on closet light to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: "Door Sensor" opens</li>
       <li>Add condition: Time between sunrise/sunset</li>
@@ -144,7 +159,10 @@ THEN turn on closet light to 100%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: "Door Sensor" opens</li>
       <li>Condition: Time of day (optional)</li>

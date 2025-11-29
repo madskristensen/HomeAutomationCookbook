@@ -104,7 +104,10 @@ THEN send notification "Open windows for free heating!"</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Outside temp rises above heating setpoint</li>
       <li>Condition: Windows closed, heating mode, daytime</li>
@@ -114,7 +117,10 @@ THEN send notification "Open windows for free heating!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Outdoor temp sensor > thermostat setpoint</li>
       <li>AND All windows are closed</li>
@@ -123,7 +129,10 @@ THEN send notification "Open windows for free heating!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine with temperature comparison</li>
       <li>Trigger: Outdoor temp rises above indoor temp + 5°F</li>
@@ -133,7 +142,10 @@ THEN send notification "Open windows for free heating!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Limited native temperature comparison</li>
       <li>Use Home Assistant or similar hub for logic</li>
@@ -142,7 +154,10 @@ THEN send notification "Open windows for free heating!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Outdoor temperature changes</li>
       <li>Condition: Outdoor temp > Indoor temp by 5°</li>
@@ -151,7 +166,10 @@ THEN send notification "Open windows for free heating!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Limited native support for complex temp comparisons</li>
       <li>Use IFTTT for notifications</li>

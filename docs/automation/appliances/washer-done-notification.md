@@ -139,7 +139,10 @@ AND set washer_running to false</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create boolean helper "washer_running"</li>
       <li>Start: Power > 50W → Turn on helper</li>
@@ -149,7 +152,10 @@ AND set washer_running to false</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Create virtual switch "Washer Running"</li>
       <li>Routine 1: Power > 50W → Switch on</li>
@@ -159,7 +165,10 @@ AND set washer_running to false</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Create virtual switch "Washer Running"</li>
       <li>Use Rule Machine with power monitoring plug</li>
@@ -169,7 +178,10 @@ AND set washer_running to false</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Limited power monitoring support</li>
       <li>Use Home Assistant or Hubitat for logic</li>
@@ -179,7 +191,10 @@ AND set washer_running to false</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Start: Power > 50W → Virtual switch on</li>
       <li>Done: Power < 10W AND switch on</li>
@@ -188,7 +203,10 @@ AND set washer_running to false</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Limited native support</li>
       <li>Use Home Assistant for power monitoring</li>

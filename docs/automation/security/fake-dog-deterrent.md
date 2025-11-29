@@ -131,7 +131,10 @@ AND send notification</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Add dog barking MP3 to media folder</li>
       <li>Trigger: Motion sensor state changes to "on"</li>
@@ -141,7 +144,10 @@ AND send notification</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Use Alexa or Sonos for audio playback</li>
       <li>IF: Motion detected AND Mode is Away</li>
@@ -151,7 +157,10 @@ AND send notification</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Chromecast Integration or Sonos integration</li>
       <li>Rule Machine: Motion triggers audio playback</li>
@@ -161,7 +170,10 @@ AND send notification</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Limited native audio support</li>
       <li>Use HomePod with Shortcuts automation</li>
@@ -171,7 +183,10 @@ AND send notification</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Enable "Guard Dog" skill or similar</li>
       <li>Create routine: Motion sensor → Play dog sounds</li>
@@ -181,7 +196,10 @@ AND send notification</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Create routine triggered by motion</li>
       <li>Action: Play dog barking sound on speaker</li>

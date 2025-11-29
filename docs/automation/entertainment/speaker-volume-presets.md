@@ -112,7 +112,10 @@ THEN set all speakers to 70-80%</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create dropdown helper with Low/Medium/Loud options</li>
       <li>Trigger: Input select state changes</li>
@@ -122,7 +125,10 @@ THEN set all speakers to 70-80%</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Create scene for each volume preset</li>
       <li>Low: All Echos 30%, speakers 20%</li>
@@ -132,7 +138,10 @@ THEN set all speakers to 70-80%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Groups and Scenes or Rule Machine</li>
       <li>Create scenes: Low, Medium, Loud</li>
@@ -142,7 +151,10 @@ THEN set all speakers to 70-80%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Create scene: Low Volume (HomePods 30%)</li>
       <li>Create scene: Medium Volume (HomePods 50%)</li>
@@ -151,7 +163,10 @@ THEN set all speakers to 70-80%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Create routine: Low Volume (all Echos to level 3)</li>
       <li>Create routine: Party Volume (all Echos to level 7)</li>
@@ -160,7 +175,10 @@ THEN set all speakers to 70-80%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Create routine: Party Volume</li>
       <li>Set all speakers to 80%, Home devices to 60%</li>
