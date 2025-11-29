@@ -199,7 +199,7 @@ AND set dryer_running to false</div>
   
   <div class="platform-card">
     <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa / Google Home logo">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa / Google Home</h4>
     </div>
     <ol>
