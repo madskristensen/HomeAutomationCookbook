@@ -19,12 +19,6 @@ Smart lighting is the most popular entry point for home automation.
 - **Smart Dimmers** (Lutron Caseta, Leviton)
 - **Light Strips** (Philips Hue, Govee)
 
-**Recommendations:**
-- **Starter**: Philips Hue White Starter Kit
-- **Budget**: Wyze Bulbs
-- **Best Switch**: Lutron Caseta
-- **RGB Fun**: Govee LED Strips
-
 ---
 
 ### 🌡️ Climate control
@@ -37,11 +31,6 @@ Manage heating, cooling, and air quality.
 - **Air Purifiers** (Dyson, Levoit)
 - **Humidifiers/Dehumidifiers**
 
-**Recommendations:**
-- **Best Overall**: Ecobee SmartThermostat
-- **Best for Savings**: Nest Learning Thermostat
-- **Budget**: Honeywell T5
-
 ---
 
 ### 🔒 Security
@@ -53,12 +42,6 @@ Protect your home with smart security devices.
 - **Video Doorbells** (Ring, Nest, Aqara)
 - **Security Cameras** (Arlo, Eufy, Reolink)
 - **Alarm Systems** (Simplisafe, Ring Alarm)
-
-**Recommendations:**
-- **Best Lock**: Schlage Encode
-- **Best Doorbell**: Ring Video Doorbell Pro 2
-- **Best Camera**: Eufy 2K Indoor Cam
-- **Best System**: Ring Alarm Pro
 
 ---
 
@@ -73,12 +56,6 @@ The eyes and ears of your smart home.
 - **Temperature/Humidity** (Aqara, SensorPush)
 - **Presence Detection** (Room Assistant, ESPresense)
 
-**Recommendations:**
-- **Best Motion**: Philips Hue Motion Sensor
-- **Best Contact**: Aqara Door/Window Sensor
-- **Best Leak**: Aqara Water Leak Sensor
-- **Best Multi**: Aqara Temperature/Humidity Sensor
-
 ---
 
 ### 🔌 Smart plugs and outlets
@@ -91,12 +68,6 @@ Make any device smart.
 - **In-Wall Outlets** (Leviton, Enbrighten)
 - **Power Monitoring** (Shelly, TP-Link)
 
-**Recommendations:**
-- **Best WiFi**: TP-Link Kasa Smart Plug Mini
-- **Best Zigbee**: Ikea Tradfri Plug
-- **Best Monitoring**: Shelly Plug S
-- **Best In-Wall**: Leviton DW15S
-
 ---
 
 ### 📺 Entertainment
@@ -108,12 +79,6 @@ Smart control for your media.
 - **Smart Displays** (Echo Show, Nest Hub)
 - **Streaming Devices** (Apple TV, Fire TV, Chromecast)
 - **IR Blasters** (Broadlink, Bond Bridge)
-
-**Recommendations:**
-- **Best Speaker**: HomePod mini
-- **Best Display**: Echo Show 8
-- **Best Streaming**: Apple TV 4K
-- **Best IR**: Broadlink RM4 Pro
 
 ---
 

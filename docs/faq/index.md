@@ -9,14 +9,17 @@ Quick answers to common smart home questions.
 
 ## Getting started
 
-### Do I need a hub?
+<details>
+<summary>Do I need a hub?</summary>
 
 It depends on your platform:
-- **Yes**: Home Assistant, SmartThings (for Zigbee/Z-Wave)
+- **Yes**: Home Assistant, Hubitat, SmartThings (for Zigbee/Z-Wave)
 - **No**: Google Home, Alexa (WiFi only)
 - **Maybe**: HomeKit (Apple device acts as hub)
+</details>
 
-### What's the difference between WiFi, Zigbee, and Z-Wave?
+<details>
+<summary>What's the difference between WiFi, Zigbee, and Z-Wave?</summary>
 
 **WiFi (2.4GHz/5GHz)**
 - ✅ No hub needed, fast, easy setup
@@ -31,8 +34,10 @@ It depends on your platform:
 - ❌ Requires hub, more expensive
 
 **Recommendation**: Zigbee for most users (good balance)
+</details>
 
-### How much does it cost to start?
+<details>
+<summary>How much does it cost to start?</summary>
 
 **Minimal** ($100-200)
 - Budget smart speaker: $50
@@ -45,18 +50,23 @@ It depends on your platform:
 - Smart plugs (3): $50
 - Motion sensor: $20-30
 - Smart outlet: $30
+</details>
 
-### Which platform should I choose?
+<details>
+<summary>Which platform should I choose?</summary>
 
 **For beginners**: Google Home or Alexa
 **For Apple users**: HomeKit
-**For privacy**: Home Assistant or HomeKit
+**For privacy**: Home Assistant, Hubitat, or HomeKit
 **For customization**: Home Assistant
+**For local control**: Home Assistant or Hubitat
 **For Samsung users**: SmartThings
+</details>
 
 ## Devices
 
-### Can I mix brands?
+<details>
+<summary>Can I mix brands?</summary>
 
 Yes! Most platforms support multiple brands. Check compatibility first.
 
@@ -65,8 +75,10 @@ Yes! Most platforms support multiple brands. Check compatibility first.
 - Verify platform support
 - Read reviews for integration quality
 - Consider Matter devices (universal standard)
+</details>
 
-### Do smart bulbs work with normal switches?
+<details>
+<summary>Do smart bulbs work with normal switches?</summary>
 
 **Smart Bulbs**: Switch must stay ON (control via app/voice)
 - Pro: Cheap, easy to install
@@ -77,8 +89,10 @@ Yes! Most platforms support multiple brands. Check compatibility first.
 - Con: Requires wiring, more expensive
 
 **Recommendation**: Smart switches for fixed lights, smart bulbs for lamps
+</details>
 
-### How long do batteries last?
+<details>
+<summary>How long do batteries last?</summary>
 
 Typical battery life:
 - **Door/window sensors**: 1-2 years
@@ -87,8 +101,10 @@ Typical battery life:
 - **Temperature sensors**: 1-2 years
 
 Use quality alkaline or lithium batteries for best results.
+</details>
 
-### Are smart devices secure?
+<details>
+<summary>Are smart devices secure?</summary>
 
 **It depends**:
 - ✅ Reputable brands with updates
@@ -99,10 +115,12 @@ Use quality alkaline or lithium batteries for best results.
 - ❌ Outdated firmware
 
 See [Security Best Practices →](/best-practices/#security)
+</details>
 
 ## Automation
 
-### What can I automate?
+<details>
+<summary>What can I automate?</summary>
 
 Common automations:
 - **Lighting**: Motion-based, schedule, presence
@@ -112,8 +130,10 @@ Common automations:
 - **Convenience**: Good morning, good night routines
 
 [Browse Automation Recipes →](/automation/)
+</details>
 
-### Why isn't my automation working?
+<details>
+<summary>Why isn't my automation working?</summary>
 
 **Troubleshooting checklist**:
 1. ✅ Automation enabled?
@@ -122,8 +142,10 @@ Common automations:
 4. ✅ Triggers configured correctly?
 5. ✅ Check logs for errors
 6. ✅ Test manually
+</details>
 
-### How do I make automations reliable?
+<details>
+<summary>How do I make automations reliable?</summary>
 
 **Best practices**:
 - Use multiple trigger conditions
@@ -132,18 +154,23 @@ Common automations:
 - Test edge cases
 - Keep it simple
 - Monitor performance
+</details>
 
-### Can automations run without internet?
+<details>
+<summary>Can automations run without internet?</summary>
 
 **It depends**:
 - **Home Assistant**: Yes (fully local)
+- **Hubitat**: Yes (fully local)
 - **HomeKit**: Yes (local hub)
 - **SmartThings**: Partial (some local, some cloud)
 - **Google Home/Alexa**: No (requires cloud)
+</details>
 
 ## Network and technical
 
-### How many devices can I have?
+<details>
+<summary>How many devices can I have?</summary>
 
 **Typical limits**:
 - **WiFi**: 50-100 devices per router (varies)
@@ -151,8 +178,10 @@ Common automations:
 - **Z-Wave**: 232 devices (protocol limit)
 
 **Router capacity matters most** - upgrade if congested
+</details>
 
-### Do I need a special router?
+<details>
+<summary>Do I need a special router?</summary>
 
 Not necessarily, but helpful:
 - ✅ Dual-band (2.4GHz + 5GHz)
@@ -161,8 +190,10 @@ Not necessarily, but helpful:
 - ✅ Good 2.4GHz range
 
 Consider mesh WiFi for larger homes (250+ sqm)
+</details>
 
-### What is VLAN and do I need it?
+<details>
+<summary>What is VLAN and do I need it?</summary>
 
 **VLAN** = Separate network segments
 
@@ -179,8 +210,10 @@ Consider mesh WiFi for larger homes (250+ sqm)
 - Enterprise equipment
 
 **Beginners**: Guest network is enough
+</details>
 
-### My WiFi is slow. Is it my smart devices?
+<details>
+<summary>My WiFi is slow. Is it my smart devices?</summary>
 
 Possibly. Smart devices can congest 2.4GHz.
 
@@ -190,10 +223,12 @@ Possibly. Smart devices can congest 2.4GHz.
 3. Upgrade router
 4. Reduce device polling
 5. Use wired connections where possible
+</details>
 
 ## Platform-specific
 
-### Can I switch platforms later?
+<details>
+<summary>Can I switch platforms later?</summary>
 
 **Mostly yes**, but:
 - ✅ WiFi devices: Usually compatible
@@ -205,8 +240,10 @@ Possibly. Smart devices can congest 2.4GHz.
 - Avoid cloud-only devices
 - Document setup
 - Consider Matter devices
+</details>
 
-### What is Matter?
+<details>
+<summary>What is Matter?</summary>
 
 **Matter** = New universal smart home standard
 
@@ -219,8 +256,10 @@ Possibly. Smart devices can congest 2.4GHz.
 **Status**: Growing device support (2024+)
 
 **Recommendation**: Good choice for new purchases
+</details>
 
-### Do I need a subscription?
+<details>
+<summary>Do I need a subscription?</summary>
 
 **Usually no**, but some features require it:
 
@@ -239,10 +278,12 @@ Examples:
 - Nest Aware (video history)
 - Ring Protect (video storage)
 - SmartThings Storage (extra space)
+</details>
 
 ## Troubleshooting
 
-### My device won't connect
+<details>
+<summary>My device won't connect</summary>
 
 **Steps**:
 1. Restart device (unplug 30 seconds)
@@ -251,8 +292,10 @@ Examples:
 4. Verify 2.4GHz network available
 5. Reset device and re-pair
 6. Update firmware
+</details>
 
-### Devices keep disconnecting
+<details>
+<summary>Devices keep disconnecting</summary>
 
 **Common causes**:
 - Weak WiFi signal
@@ -267,8 +310,10 @@ Examples:
 - Switch to Zigbee
 - Update firmware
 - Check power supply quality
+</details>
 
-### Automation is slow
+<details>
+<summary>Automation is slow</summary>
 
 **Causes**:
 - Cloud processing
@@ -282,8 +327,10 @@ Examples:
 - Optimize automations
 - Check device placement
 - Upgrade hub
+</details>
 
-### How do I factory reset a device?
+<details>
+<summary>How do I factory reset a device?</summary>
 
 **Varies by device**, but common methods:
 - Press reset button 5-10 seconds
@@ -292,10 +339,12 @@ Examples:
 - Check manual for specific steps
 
 **Note**: Reset removes all pairing and configuration
+</details>
 
 ## Privacy and data
 
-### What data do smart devices collect?
+<details>
+<summary>What data do smart devices collect?</summary>
 
 **Typical data**:
 - Device usage patterns
@@ -305,8 +354,10 @@ Examples:
 - Location (phone app)
 
 **Varies by brand** - read privacy policies
+</details>
 
-### How can I protect my privacy?
+<details>
+<summary>How can I protect my privacy?</summary>
 
 **Best practices**:
 1. Use local control platforms
@@ -318,21 +369,25 @@ Examples:
 7. Regular security audits
 
 [Privacy guide →](/best-practices/#privacy-protection)
+</details>
 
-### Can companies access my data?
+<details>
+<summary>Can companies access my data?</summary>
 
 **It depends**:
 - **Cloud devices**: Yes (read terms)
 - **Local devices**: Usually no
 - **Encryption**: Reduces access
 
-**Most private**: Home Assistant (fully local)
+**Most private**: Home Assistant or Hubitat (fully local)
 **Moderate**: HomeKit (encrypted)
 **Less private**: Google, Amazon, cloud-based
+</details>
 
 ## Cost and value
 
-### Is it worth the investment?
+<details>
+<summary>Is it worth the investment?</summary>
 
 **Benefits**:
 - Convenience and comfort
@@ -346,8 +401,10 @@ Examples:
 - Technical comfort
 - Budget constraints
 - Long-term value
+</details>
 
-### How much can I save on energy?
+<details>
+<summary>How much can I save on energy?</summary>
 
 **Potential savings**:
 - **Smart thermostat**: 10-23% on heating/cooling
@@ -355,8 +412,10 @@ Examples:
 - **Smart plugs**: 5-10% by eliminating standby power
 
 **ROI timeline**: Typically 2-5 years
+</details>
 
-### Which devices save the most money?
+<details>
+<summary>Which devices save the most money?</summary>
 
 **Best ROI**:
 1. Smart thermostat
@@ -370,6 +429,7 @@ Examples:
 - Smart locks
 - Cameras
 - Entertainment devices
+</details>
 
 ---
 
