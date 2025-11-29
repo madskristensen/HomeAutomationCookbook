@@ -366,6 +366,28 @@ th {
 /* Card Components
    ========================================================================== */
 
+/* Base card styles - shared by all interactive cards */
+.card,
+.automation-card,
+.planning-card,
+.device-starter-card,
+.featured-card,
+.category-card,
+.platform-option,
+.principle-card,
+.community-link {
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect for interactive cards (links only) */
+.featured-card:hover,
+.category-card:hover,
+.community-link:hover {
+  border-color: #2c3e50;
+}
+
+/* Grid layouts for card collections */
 .automation-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -373,19 +395,17 @@ th {
   margin: 3rem 0;
 }
 
+/* Automation card specific styles */
 .automation-card {
   background: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .automation-card:hover {
-  border-color: #2c3e50;
   box-shadow: 0 4px 20px rgba(44,62,80,0.08);
 }
 
@@ -550,6 +570,7 @@ th {
   padding: 1.5rem;
   background: #f8f9fa;
   border-radius: 8px;
+  border: 1px solid #e0e0e0;
 }
 
 .use-case-card h4 {
@@ -713,39 +734,6 @@ th {
   margin-bottom: 0.5rem;
 }
 
-blockquote {
-  margin: 2rem 0;
-  padding-left: 1.5rem;
-  border-left: 3px solid #e0e0e0;
-  font-size: 1.05em;
-  color: #666;
-}
-
-hr {
-  margin: 4rem 0;
-  border: none;
-  border-top: 1px solid #e0e0e0;
-}
-
-/* Tables */
-table {
-  width: 100%;
-  margin: 2rem 0;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-th {
-  background: #fafafa;
-  font-weight: 600;
-  color: #000;
-}
-
 
 
 /* Footer
@@ -799,15 +787,7 @@ th {
 .planning-card {
   padding: 2rem;
   background: #f8f9fa;
-  border-radius: 12px;
   border: 1px solid #e0e0e0;
-  transition: all 0.2s ease;
-}
-
-.planning-card:hover {
-  background: #fff;
-  border-color: #2c3e50;
-  box-shadow: 0 4px 16px rgba(44,62,80,0.08);
 }
 
 .planning-icon {
@@ -866,14 +846,7 @@ th {
   padding: 1.5rem;
   background: #fff;
   border: 2px solid #e0e0e0;
-  border-radius: 12px;
   text-align: center;
-  transition: all 0.2s ease;
-}
-
-.device-starter-card:hover {
-  border-color: #2c3e50;
-  box-shadow: 0 4px 20px rgba(44,62,80,0.08);
 }
 
 .device-icon {
@@ -909,13 +882,6 @@ th {
   background: #f8f9fa;
   border-radius: 8px;
   border: 1px solid #e0e0e0;
-  transition: all 0.2s ease;
-}
-
-.requirement-item:hover {
-  background: #fff;
-  border-color: #2c3e50;
-  box-shadow: 0 4px 12px rgba(44,62,80,0.08);
 }
 
 .requirement-icon {
@@ -992,16 +958,8 @@ th {
 .platform-option {
   padding: 2rem;
   background: #f8f9fa;
-  border-radius: 12px;
   border: 1px solid #e0e0e0;
   text-align: center;
-  transition: all 0.2s ease;
-}
-
-.platform-option:hover {
-  background: #fff;
-  border-color: #2c3e50;
-  box-shadow: 0 4px 16px rgba(44,62,80,0.08);
 }
 
 .platform-option h4 {
@@ -1130,7 +1088,6 @@ th {
 .principle-card {
   padding: 2rem;
   background: #f8f9fa;
-  border-radius: 12px;
   border: 1px solid #e0e0e0;
 }
 
@@ -1159,15 +1116,11 @@ th {
   padding: 2rem;
   background: #fff;
   border: 2px solid #e0e0e0;
-  border-radius: 12px;
   text-decoration: none;
-  transition: all 0.2s ease;
 }
 
 .featured-card:hover {
-  border-color: #2c3e50;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(44,62,80,0.12);
+  box-shadow: 0 4px 20px rgba(44,62,80,0.08);
 }
 
 .featured-card h3 {
@@ -1205,14 +1158,11 @@ th {
   padding: 1.5rem;
   background: #fafafa;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
   text-decoration: none;
-  transition: all 0.2s ease;
 }
 
 .category-card:hover {
   background: #fff;
-  border-color: #2c3e50;
   box-shadow: 0 4px 16px rgba(44,62,80,0.08);
 }
 
@@ -1288,16 +1238,12 @@ th {
   padding: 2rem 1.5rem;
   background: #f8f9fa;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
   text-decoration: none;
-  transition: all 0.2s ease;
 }
 
 .community-link:hover {
   background: #fff;
-  border-color: #2c3e50;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44,62,80,0.1);
+  box-shadow: 0 4px 12px rgba(44,62,80,0.08);
 }
 
 .community-link strong {
@@ -1704,6 +1650,7 @@ th {
 
   .use-case-card {
     background: #242424;
+    border-color: #3a3a3a;
   }
 
   .use-case-card h4 {
@@ -1783,16 +1730,20 @@ th {
     color: #7a9ab8;
   }
 
-  /* Homepage */
-  .planning-card {
+  /* Homepage cards */
+  .planning-card,
+  .principle-card,
+  .platform-option,
+  .category-card,
+  .community-link {
     background: #242424;
     border-color: #3a3a3a;
   }
 
-  .planning-card:hover {
+  .category-card:hover,
+  .community-link:hover {
     background: #2a2a2a;
     border-color: #7a9ab8;
-    box-shadow: 0 4px 16px rgba(122,154,184,0.1);
   }
 
   .planning-card h3 {
@@ -1815,14 +1766,15 @@ th {
     color: #f0f0f0;
   }
 
-  .device-starter-card {
+  .device-starter-card,
+  .featured-card {
     background: #242424;
     border-color: #3a3a3a;
   }
 
-  .device-starter-card:hover {
+  .featured-card:hover {
     border-color: #7a9ab8;
-    box-shadow: 0 8px 24px rgba(122,154,184,0.15);
+    box-shadow: 0 4px 20px rgba(122,154,184,0.08);
   }
 
   .device-starter-card h4 {
@@ -1836,12 +1788,6 @@ th {
   .requirement-item {
     background: #242424;
     border-color: #3a3a3a;
-  }
-
-  .requirement-item:hover {
-    background: #2a2a2a;
-    border-color: #7a9ab8;
-    box-shadow: 0 4px 12px rgba(122,154,184,0.15);
   }
 
   .requirement-content strong {
@@ -1860,26 +1806,15 @@ th {
     color: #a0a0a0;
   }
 
-  .platform-selection .platform-option {
-    background: #242424;
-    border-color: #3a3a3a;
-  }
-
-  .platform-selection .platform-option:hover {
-    background: #2a2a2a;
-    border-color: #7a9ab8;
-    box-shadow: 0 4px 16px rgba(122,154,184,0.1);
-  }
-
-  .platform-selection .platform-option h4 {
+  .platform-option h4 {
     color: #f0f0f0;
   }
 
-  .platform-selection .platform-option p {
+  .platform-option p {
     color: #a0a0a0;
   }
 
-  .platform-selection .platform-option p strong {
+  .platform-option p strong {
     color: #f0f0f0;
   }
 
@@ -1923,27 +1858,12 @@ th {
     border-color: #7a9ab8;
   }
 
-  .principle-card {
-    background: #242424;
-    border-color: #3a3a3a;
-  }
-
   .principle-card h3 {
     color: #f0f0f0;
   }
 
   .principle-card p {
     color: #a0a0a0;
-  }
-
-  .featured-card {
-    background: #242424;
-    border-color: #3a3a3a;
-  }
-
-  .featured-card:hover {
-    border-color: #7a9ab8;
-    box-shadow: 0 8px 24px rgba(122,154,184,0.15);
   }
 
   .featured-card h3 {
@@ -1960,17 +1880,6 @@ th {
 
   .featured-card:hover .card-arrow {
     color: #9bb8d4;
-  }
-
-  .category-card {
-    background: #242424;
-    border-color: #3a3a3a;
-  }
-
-  .category-card:hover {
-    background: #2a2a2a;
-    border-color: #7a9ab8;
-    box-shadow: 0 4px 16px rgba(122,154,184,0.1);
   }
 
   .category-card h3 {
@@ -1996,17 +1905,6 @@ th {
 
   .getting-started-box p {
     color: #c0c0c0;
-  }
-
-  .community-link {
-    background: #242424;
-    border-color: #3a3a3a;
-  }
-
-  .community-link:hover {
-    background: #2a2a2a;
-    border-color: #7a9ab8;
-    box-shadow: 0 4px 12px rgba(122,154,184,0.15);
   }
 
   .community-link strong {
