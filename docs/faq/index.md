@@ -3,11 +3,11 @@ layout: default
 title: FAQ
 ---
 
-# Frequently Asked Questions
+# Frequently asked questions
 
 Quick answers to common smart home questions.
 
-## Getting Started
+## Getting started
 
 ### Do I need a hub?
 
@@ -141,7 +141,7 @@ Common automations:
 - **SmartThings**: Partial (some local, some cloud)
 - **Google Home/Alexa**: No (requires cloud)
 
-## Network & Technical
+## Network and technical
 
 ### How many devices can I have?
 
@@ -191,7 +191,7 @@ Possibly. Smart devices can congest 2.4GHz.
 4. Reduce device polling
 5. Use wired connections where possible
 
-## Platform-Specific
+## Platform-specific
 
 ### Can I switch platforms later?
 
@@ -293,7 +293,7 @@ Examples:
 
 **Note**: Reset removes all pairing and configuration
 
-## Privacy & Data
+## Privacy and data
 
 ### What data do smart devices collect?
 
@@ -317,7 +317,7 @@ Examples:
 6. Avoid unnecessary features
 7. Regular security audits
 
-[Privacy Guide →](/best-practices/#privacy-protection)
+[Privacy guide →](/best-practices/#privacy-protection)
 
 ### Can companies access my data?
 
@@ -330,7 +330,7 @@ Examples:
 **Moderate**: HomeKit (encrypted)
 **Less private**: Google, Amazon, cloud-based
 
-## Cost & Value
+## Cost and value
 
 ### Is it worth the investment?
 
@@ -373,9 +373,9 @@ Examples:
 
 ---
 
-## Still Have Questions?
+## Still have questions?
 
 - Browse detailed guides in each section
 - Join community forums
 - Check platform-specific documentation
-- [Contact us](https://github.com/yourusername/HomeAutomationCookbook/issues)
+- [Contact us](https://github.com/madskristensen/HomeAutomationCookbook/issues)

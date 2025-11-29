@@ -188,7 +188,7 @@ Many platforms allow custom modes:
 
 **Use case:** Verification method, not primary
 
-### Bluetooth Presence
+### Bluetooth presence
 
 **How it works:** Detect Bluetooth beacons
 
@@ -341,7 +341,7 @@ action:
 
 ---
 
-## Best Practices
+## Best practices
 
 ### Start conservative
 

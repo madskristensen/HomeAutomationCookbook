@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Best Practices
+title: Best practices
 ---
 
-# Smart Home Best Practices
+# Smart home best practices
 
 Essential tips for a secure, reliable, and efficient smart home.
 
 ## 🔐 Security
 
-### Network Security
+### Network security
 
 **Separate IoT Network**
 - Create dedicated WiFi for smart devices
@@ -30,7 +30,7 @@ Essential tips for a secure, reliable, and efficient smart home.
 - Disable remote management
 - Change default admin credentials
 
-### Device Security
+### Device security
 
 **Purchase Considerations**
 - ✅ Choose brands with security track record
@@ -46,7 +46,7 @@ Essential tips for a secure, reliable, and efficient smart home.
 - Disable unused features
 - Monitor for suspicious activity
 
-### Privacy Protection
+### Privacy protection
 
 **Data Minimization**
 - Only share necessary data
@@ -66,7 +66,7 @@ Essential tips for a secure, reliable, and efficient smart home.
 
 ## 🔧 Reliability
 
-### Network Optimization
+### Network optimization
 
 **WiFi Coverage**
 - Use mesh WiFi for larger homes
@@ -80,7 +80,7 @@ Essential tips for a secure, reliable, and efficient smart home.
 - Monitor network congestion
 - Consider wired backhaul for mesh
 
-### Redundancy Planning
+### Redundancy planning
 
 **Critical Path Redundancy**
 - Manual override for locks
@@ -94,7 +94,7 @@ Essential tips for a secure, reliable, and efficient smart home.
 - Consider backup hub for critical functions
 - Test recovery procedures
 
-### Maintenance Schedule
+### Maintenance schedule
 
 **Weekly**
 - Check critical device status
@@ -115,9 +115,9 @@ Essential tips for a secure, reliable, and efficient smart home.
 
 ---
 
-## 💰 Cost Management
+## 💰 Cost management
 
-### Budget Planning
+### Budget planning
 
 **Priority Order**
 1. **Foundation**: Hub/platform, network
@@ -132,7 +132,7 @@ Essential tips for a secure, reliable, and efficient smart home.
 - ❌ Choosing cheapest without research
 - ❌ Platform lock-in without consideration
 
-### Long-Term Savings
+### Long-term savings
 
 **Energy Monitoring**
 - Track consumption with smart plugs
@@ -148,9 +148,9 @@ Essential tips for a secure, reliable, and efficient smart home.
 
 ---
 
-## 🏗️ Planning & Design
+## 🏗️ Planning and design
 
-### Starting Out
+### Starting out
 
 **Phase 1: Learn (Month 1)**
 - Research platforms
@@ -176,7 +176,7 @@ Essential tips for a secure, reliable, and efficient smart home.
 - Share knowledge
 - Stay updated
 
-### Room-by-Room Approach
+### Room-by-room approach
 
 **Start**: 
 1. Choose one room
@@ -210,7 +210,7 @@ Essential tips for a secure, reliable, and efficient smart home.
 
 ## 🎯 Optimization
 
-### Automation Refinement
+### Automation refinement
 
 **Start Simple**
 ```
@@ -232,7 +232,7 @@ Best: "Turn on light when motion AND dark AND home"
 4. Gather feedback
 5. Refine gradually
 
-### Performance Monitoring
+### Performance monitoring
 
 **Key Metrics**
 - Automation response time
@@ -249,9 +249,9 @@ Best: "Turn on light when motion AND dark AND home"
 
 ---
 
-## 👥 Family & Guests
+## 👥 Family and guests
 
-### User Experience
+### User experience
 
 **Keep It Simple**
 - Lights should work without app
@@ -265,7 +265,7 @@ Best: "Turn on light when motion AND dark AND home"
 - Demonstrate app basics
 - Create quick reference guide
 
-### Guest Mode
+### Guest mode
 
 **Temporary Access**
 - Time-limited lock codes
@@ -278,7 +278,7 @@ Best: "Turn on light when motion AND dark AND home"
 
 ## 🆘 Troubleshooting
 
-### Common Issues
+### Common issues
 
 **Device Not Responding**
 1. Check power/batteries
@@ -301,7 +301,7 @@ Best: "Turn on light when motion AND dark AND home"
 4. Optimize automations
 5. Upgrade hub/router
 
-### Recovery Planning
+### Recovery planning
 
 **Backup Strategy**
 - Export configurations monthly
@@ -319,9 +319,9 @@ Best: "Turn on light when motion AND dark AND home"
 
 ---
 
-## 📚 Continuous Learning
+## 📚 Continuous learning
 
-### Stay Updated
+### Stay updated
 
 **Resources**
 - Platform documentation
@@ -337,7 +337,7 @@ Best: "Turn on light when motion AND dark AND home"
 - Network security
 - Troubleshooting methodology
 
-### Contributing Back
+### Contributing back
 
 **Ways to Help**
 - Share automations
@@ -346,8 +346,8 @@ Best: "Turn on light when motion AND dark AND home"
 - Help newcomers
 - Review devices
 
-## Next Steps
+## Next steps
 
-- [Advanced Automations →](/automation/advanced/)
-- [Platform Guides →](/platforms/)
+- [View automations →](/automation/)
+- [Platform guides →](/platforms/)
 - [Troubleshooting FAQ →](/faq/)

@@ -303,7 +303,7 @@ This prevents sudden brightness changes that disrupt sleep.
 
 ## Troubleshooting
 
-### Lights Still Too Bright
+### Lights still too bright
 
 **Try:**
 - Reduce to 5% or lower
@@ -311,7 +311,7 @@ This prevents sudden brightness changes that disrupt sleep.
 - Add dimming film to bulb (diffuses light)
 - Use nightlight instead for minimal illumination
 
-### Lights Too Dim for Safety
+### Lights too dim for safety
 
 **Try:**
 - Increase to 15-20%
@@ -319,7 +319,7 @@ This prevents sudden brightness changes that disrupt sleep.
 - Add additional lighting in critical areas
 - Motion-sensitive nightlights as backup
 
-### Delay Before Lights Come On
+### Delay before lights come on
 
 **Causes:**
 - Cloud processing

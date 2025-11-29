@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Getting Started
+title: Getting started
 ---
 
-# Getting Started with Home Automation
+# Getting started with home automation
 
 Welcome! This guide will help you plan and set up your first smart home devices.
 
-## Planning Your Smart Home
+## Planning your smart home
 
 Before purchasing devices, consider:
 
@@ -28,9 +28,9 @@ Before purchasing devices, consider:
    - Intermediate: Platform-based systems
    - Advanced: Custom integrations
 
-## Choosing Your Ecosystem
+## Choosing your ecosystem
 
-### Popular Platforms
+### Popular platforms
 
 #### Home Assistant
 - **Best for**: Advanced users, customization
@@ -52,7 +52,7 @@ Before purchasing devices, consider:
 - **Pros**: Strong voice control, affordable devices
 - **Cons**: Privacy concerns
 
-## Essential First Devices
+## Essential first devices
 
 Start with these categories:
 
@@ -61,19 +61,19 @@ Start with these categories:
 3. **Smart Plug** - Make any device smart
 4. **Motion Sensor** - Enable automation
 
-## Network Requirements
+## Network requirements
 
 - **Reliable WiFi** - 2.4GHz for most devices
 - **Router placement** - Central location
 - **Consider mesh WiFi** - For larger homes
 - **Separate IoT network** - For security (advanced)
 
-## Next Steps
+## Next steps
 
-- [Explore Platforms](/platforms/) in detail
-- [Browse Device Recommendations](/devices/)
-- [Create Your First Automation](/automation/)
+- [Explore platforms](/platforms/) in detail
+- [Browse device recommendations](/devices/)
+- [Create your first automation](/automation/)
 
 ---
 
-[Continue to Platforms →](/platforms/)
+[Continue to platforms →](/platforms/)
