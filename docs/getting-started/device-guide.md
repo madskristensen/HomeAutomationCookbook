@@ -9,9 +9,9 @@ Choosing the right smart home devices can feel overwhelming with hundreds of opt
 
 <div class="category-intro">
   <h2>Before you start</h2>
-  <p><strong>Start with sensors</strong> Sensors are the foundation of any smart home. They detect what's happening and trigger automations. Without sensors, you're just controlling devices manually through an app.</p>
-  <p><strong>Buy compatible devices</strong> Check that devices work with your chosen platform before purchasing. Most manufacturers list compatibility on their packaging.</p>
-  <p><strong>Prefer local control</strong> Devices that work locally continue functioning when your internet goes down. Cloud-only devices become useless without connectivity.</p>
+  <p><strong>Start with sensors:</strong> Sensors are the foundation of any smart home. They detect what's happening and trigger automations. Without sensors, you're just controlling devices manually through an app.</p>
+  <p><strong>Buy compatible devices:</strong> Check that devices work with your chosen platform before purchasing. Most manufacturers list compatibility on their packaging.</p>
+  <p><strong>Prefer local control:</strong> Devices that work locally continue functioning when your internet goes down. Cloud-only devices become useless without connectivity.</p>
 </div>
 
 ## Device categories
