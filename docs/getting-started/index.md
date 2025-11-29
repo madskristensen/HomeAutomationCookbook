@@ -37,6 +37,11 @@ Before purchasing devices, consider:
 - **Pros**: Open source, highly flexible, extensive device support
 - **Cons**: Steeper learning curve
 
+#### Hubitat
+- **Best for**: Users wanting local control without complex setup
+- **Pros**: 100% local processing, built-in Z-Wave and Zigbee radios
+- **Cons**: Hardware purchase required
+
 #### Apple HomeKit
 - **Best for**: Apple ecosystem users
 - **Pros**: Privacy-focused, seamless iOS integration
