@@ -16,7 +16,6 @@
   --color-text-secondary: #666;
   --color-text-tertiary: #555;
   --color-text-muted: #999;
-  --color-text-faint: #888;
 
   /* Link colors */
   --color-link: #2c3e50;
@@ -78,7 +77,6 @@
     --color-text-secondary: #a0a0a0;
     --color-text-tertiary: #a0a0a0;
     --color-text-muted: #888;
-    --color-text-faint: #888;
 
     /* Link colors */
     --color-link: #7a9ab8;
