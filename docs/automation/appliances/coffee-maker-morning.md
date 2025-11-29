@@ -143,7 +143,10 @@ AND send notification "Coffee brewing ☕"</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Time is 7:00 AM</li>
       <li>Condition: Weekdays, Plug is OFF (ready)</li>
@@ -153,7 +156,10 @@ AND send notification "Coffee brewing ☕"</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Time is 7:00 AM</li>
       <li>AND Day is Mon-Fri, Plug is OFF</li>
@@ -163,7 +169,10 @@ AND send notification "Coffee brewing ☕"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Simple Automation Rules or Rule Machine</li>
       <li>Trigger: Time is 7:00 AM, Weekdays</li>
@@ -173,7 +182,10 @@ AND send notification "Coffee brewing ☕"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Time is 7:00 AM</li>
       <li>Conditions: Weekdays only</li>
@@ -183,7 +195,10 @@ AND send notification "Coffee brewing ☕"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Schedule 7:00 AM weekdays</li>
       <li>Action: Turn on coffee maker plug</li>
@@ -192,7 +207,10 @@ AND send notification "Coffee brewing ☕"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Time 7:00 AM on weekdays</li>
       <li>Action: Turn on coffee maker plug</li>

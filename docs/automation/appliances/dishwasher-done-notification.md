@@ -148,7 +148,10 @@ AND set dishwasher_clean to true</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create two boolean helpers: "dishwasher_running" and "dishwasher_clean"</li>
       <li>Start: Door closes → Turn on "dishwasher_running"</li>
@@ -159,7 +162,10 @@ AND set dishwasher_clean to true</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Routine 1: Temp > 90°F AND door closed 60+ min</li>
       <li>Actions: Notify, Turn on virtual switch "Dishwasher Clean"</li>
@@ -168,7 +174,10 @@ AND set dishwasher_clean to true</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine with temperature sensor</li>
       <li>Start: Door closes → Set "running" variable</li>
@@ -178,7 +187,10 @@ AND set dishwasher_clean to true</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Temperature sensor above 90°F</li>
       <li>Conditions: Contact sensor closed for 60+ minutes</li>
@@ -187,7 +199,10 @@ AND set dishwasher_clean to true</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Temperature sensor value above 90°F</li>
       <li>Condition: Contact sensor closed</li>
@@ -196,7 +211,10 @@ AND set dishwasher_clean to true</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Limited native support for temperature triggers</li>
       <li>Use Home Assistant or IFTTT for logic</li>

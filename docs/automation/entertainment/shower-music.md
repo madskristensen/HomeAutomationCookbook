@@ -110,7 +110,10 @@ AND set volume to 35%</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Shower lights turn on</li>
       <li>Condition: Home mode, Time 6-10 AM, Weekdays</li>
@@ -120,7 +123,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Shower lights turn on</li>
       <li>AND Home mode "Home", Time 6-10 AM</li>
@@ -130,7 +136,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine with speaker integration</li>
       <li>Trigger: Shower light turns on</li>
@@ -140,7 +149,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Shower light turns on</li>
       <li>Conditions: Time 6-10 AM, Weekdays only</li>
@@ -150,7 +162,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Shower light turns on</li>
       <li>Condition: Time 6-10 AM, Days Mon-Fri</li>
@@ -160,7 +175,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Shower light turns on</li>
       <li>Condition: Time 6-10 AM, weekdays</li>

@@ -125,7 +125,10 @@ AND set volume to 40%</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Use media_player cards for now playing</li>
       <li>Create scripts for favorite playlists</li>
@@ -145,7 +148,10 @@ AND set volume to 40%</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Limited native music control</li>
       <li>Use SmartThings-Sonos integration</li>
@@ -155,7 +161,10 @@ AND set volume to 40%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Sonos or Chromecast integration</li>
       <li>Create virtual switches for presets</li>

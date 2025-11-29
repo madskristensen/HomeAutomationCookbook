@@ -148,7 +148,10 @@ Prevent frustration when motion-based lighting turns off while you're sitting st
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Bathroom motion sensor no motion for 5 minutes</li>
       <li>Condition: Bathroom door sensor is "open"</li>
@@ -158,7 +161,10 @@ Prevent frustration when motion-based lighting turns off while you're sitting st
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings (with SharpTools)</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings (with SharpTools) logo">
+      <h4>SmartThings (with SharpTools)</h4>
+    </div>
     <ol>
       <li>Create rule in SharpTools</li>
       <li>Trigger: Motion inactive for 5 minutes</li>
@@ -168,7 +174,10 @@ Prevent frustration when motion-based lighting turns off while you're sitting st
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat (Rule Machine)</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat (Rule Machine) logo">
+      <h4>Hubitat (Rule Machine)</h4>
+    </div>
     <ol>
       <li>Create new rule</li>
       <li>Trigger: Motion inactive (canceled) for 5 minutes</li>

@@ -140,7 +140,10 @@ AND adjust thermostat to eco</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: All persons leave home for 10 minutes</li>
       <li>Conditions: No motion detected for 9 minutes + TV is off</li>
@@ -150,7 +153,10 @@ AND adjust thermostat to eco</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Routine 1: IF All members away for 10 minutes AND No motion detected for 9 minutes AND TVs are off → THEN Change mode to "Away"</li>
       <li>Routine 2 for Actions: IF Mode changes to "Away" → THEN Turn off all lights + Lock doors + Set thermostat to Away + Arm security</li>
@@ -158,7 +164,10 @@ AND adjust thermostat to eco</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Mode Manager for presence-based mode switching</li>
       <li>Trigger: All presence sensors show "not present" for 10 minutes</li>
@@ -169,7 +178,10 @@ AND adjust thermostat to eco</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Last person leaves</li>
       <li>Conditions: After 10 minutes + No motion detected</li>
@@ -178,7 +190,10 @@ AND adjust thermostat to eco</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Last person leaves (via Alexa app location)</li>
       <li>Wait: 10 minutes</li>
@@ -187,7 +202,10 @@ AND adjust thermostat to eco</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Last person leaves home</li>
       <li>Delay: 10 minutes</li>

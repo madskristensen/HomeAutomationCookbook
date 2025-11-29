@@ -121,7 +121,10 @@ THEN turn on outdoor lights</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Use sun.sun entity for sunset/sunrise</li>
       <li>Trigger: sun.sun goes below horizon (offset: -01:00:00 for hour before)</li>
@@ -131,7 +134,10 @@ THEN turn on outdoor lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Create routine with sunset trigger</li>
       <li>IF: Time is at sunset (or offset)</li>
@@ -141,7 +147,10 @@ THEN turn on outdoor lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Simple Automation Rules or Rule Machine</li>
       <li>Trigger: Sunset with optional offset</li>
@@ -151,7 +160,10 @@ THEN turn on outdoor lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Create automation with sunset trigger</li>
       <li>When: Sunset (with offset if desired)</li>
@@ -161,7 +173,10 @@ THEN turn on outdoor lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Create routine with schedule trigger</li>
       <li>At: Sunset</li>
@@ -171,7 +186,10 @@ THEN turn on outdoor lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Create scheduled routine</li>
       <li>Starter: Sunset</li>

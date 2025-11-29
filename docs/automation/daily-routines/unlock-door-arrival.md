@@ -136,7 +136,10 @@ AND turn on entry lights</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Any person arrives home (state changes to 'home') for 20 seconds</li>
       <li>Condition: Person was previously 'not_home' + Optional: Driveway motion sensor detected movement</li>
@@ -146,7 +149,10 @@ AND turn on entry lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Routine 1: IF Member arrives home (location) AND After 20 seconds → THEN Unlock front door</li>
       <li>Routine 2: IF Front door unlocks → THEN Change mode to "Home" + Turn on entry lights + Run welcome scene</li>
@@ -154,7 +160,10 @@ AND turn on entry lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Combined Presence or Life360 integration</li>
       <li>Trigger: Presence sensor arrives for 20 seconds</li>
@@ -165,7 +174,10 @@ AND turn on entry lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: I arrive home</li>
       <li>Time: Anytime • People: Anyone arrives</li>
@@ -185,7 +197,10 @@ AND turn on entry lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: You arrive home (location-based) + Wait 20 seconds</li>
       <li>Actions: Unlock front door (requires voice PIN) + Turn on lights + Start music</li>
@@ -194,7 +209,10 @@ AND turn on entry lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: When I arrive home + Delay: 20 seconds</li>
       <li>Actions: Unlock front door + Turn on lights + Change mode</li>

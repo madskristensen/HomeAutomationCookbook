@@ -95,7 +95,10 @@ THEN turn on "Garbage Out" virtual switch
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create input_boolean helper "garbage_out"</li>
       <li>Time trigger: Wednesday at 6:00 PM</li>
@@ -105,7 +108,10 @@ THEN turn on "Garbage Out" virtual switch
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Create virtual switch "Garbage Out"</li>
       <li>Create routine: Time is Wednesday 6 PM</li>
@@ -115,7 +121,10 @@ THEN turn on "Garbage Out" virtual switch
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Create virtual switch "Garbage Out"</li>
       <li>Use Simple Automation Rules for time trigger</li>

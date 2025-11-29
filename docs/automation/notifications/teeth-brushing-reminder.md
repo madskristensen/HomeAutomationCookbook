@@ -125,7 +125,10 @@ THEN announce "It's time to brush your teeth, kids!"</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create input_boolean: "teeth_brushed_evening"</li>
       <li>Automation 1: Power > 2W between 6 PM-10 PM → Turn on helper</li>
@@ -135,7 +138,10 @@ THEN announce "It's time to brush your teeth, kids!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Create virtual switch "Teeth Brushed"</li>
       <li>Routine 1: Power > 2W between 6-10 PM → Switch on</li>
@@ -145,7 +151,10 @@ THEN announce "It's time to brush your teeth, kids!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Create virtual switch for tracking</li>
       <li>Rule Machine: Power trigger with time window</li>
@@ -155,7 +164,10 @@ THEN announce "It's time to brush your teeth, kids!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Create virtual switch via Homebridge or HomePod</li>
       <li>Automation: Power rises → Switch on</li>
@@ -165,7 +177,10 @@ THEN announce "It's time to brush your teeth, kids!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Create virtual switch via SmartThings</li>
       <li>Routine 1: Power > 2W → Switch on</li>
@@ -175,7 +190,10 @@ THEN announce "It's time to brush your teeth, kids!"</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Limited native power monitoring</li>
       <li>Use Home Assistant or Hubitat for logic</li>

@@ -114,7 +114,10 @@ AND disable nursery automations</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create input_boolean helper: "baby_sleeping"</li>
       <li>Automation 1: Power > 5W → Turn on helper</li>
@@ -124,7 +127,10 @@ AND disable nursery automations</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Create virtual switch "Baby Sleeping"</li>
       <li>Routine 1: Power > 5W → Switch on</li>
@@ -134,7 +140,10 @@ AND disable nursery automations</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Create virtual switch "Baby Sleeping"</li>
       <li>Rule Machine: Power monitoring triggers switch</li>
@@ -143,7 +152,10 @@ AND disable nursery automations</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Create dummy switch or use HomeKit-compatible virtual switch</li>
       <li>Automation: Power rises → Switch on</li>
@@ -152,7 +164,10 @@ AND disable nursery automations</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Create virtual switch via SmartThings or similar</li>
       <li>Routine: Power rises → Switch on</li>
@@ -161,7 +176,10 @@ AND disable nursery automations</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Limited power monitoring support natively</li>
       <li>Use Home Assistant or Hubitat for logic</li>

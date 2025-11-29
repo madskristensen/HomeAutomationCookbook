@@ -106,7 +106,10 @@ THEN send notification to phone
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Add contact sensor to system</li>
       <li>Trigger: binary_sensor.doorbell_sensor changes to "on" (or "off")</li>
@@ -116,7 +119,10 @@ THEN send notification to phone
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Pair contact sensor with hub</li>
       <li>Create routine: IF Contact opens → Send push notification</li>
@@ -125,7 +131,10 @@ THEN send notification to phone
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Add contact sensor to system</li>
       <li>Create Rule Machine or Notification rule</li>
@@ -135,7 +144,10 @@ THEN send notification to phone
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>Add HomeKit-compatible contact sensor</li>
       <li>Create automation: When sensor opens → Send notification</li>
@@ -144,7 +156,10 @@ THEN send notification to phone
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>Pair compatible contact sensor</li>
       <li>Create routine: When sensor detects → Send notification</li>
@@ -153,7 +168,10 @@ THEN send notification to phone
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Pair sensor through compatible integration</li>
       <li>Create routine with sensor trigger</li>

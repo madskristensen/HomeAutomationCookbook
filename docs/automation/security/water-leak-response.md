@@ -125,7 +125,10 @@ AND (if equipped) shut off main water valve</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Any water sensor state changes to "on" or "wet"</li>
       <li>No conditions - always run</li>
@@ -136,7 +139,10 @@ AND (if equipped) shut off main water valve</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Any water sensor detects water</li>
       <li>THEN Send notification to all members</li>
@@ -146,7 +152,10 @@ AND (if equipped) shut off main water valve</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Rule Machine or Hubitat Safety Monitor</li>
       <li>Trigger: Any water sensor wet</li>
@@ -156,7 +165,10 @@ AND (if equipped) shut off main water valve</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Water sensor detects leak</li>
       <li>Do: Send notification, turn on lights</li>
@@ -165,7 +177,10 @@ AND (if equipped) shut off main water valve</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Water sensor detects water</li>
       <li>Action: Send notification, announce on Echo</li>
@@ -174,7 +189,10 @@ AND (if equipped) shut off main water valve</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Water sensor detects leak</li>
       <li>Action: Send notification, turn on lights</li>

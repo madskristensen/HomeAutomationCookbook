@@ -108,7 +108,10 @@ THEN start robot vacuum</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Home mode 'Away' for 15 min</li>
       <li>Condition: Time 9am-6pm, weekdays, vacuum docked</li>
@@ -118,7 +121,10 @@ THEN start robot vacuum</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Home mode "Away" for 15 minutes</li>
       <li>AND Time 9 AM - 6 PM, Mon-Fri</li>
@@ -127,7 +133,10 @@ THEN start robot vacuum</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Mode Manager with vacuum integration</li>
       <li>Trigger: Mode changes to "Away" for 15 min</li>
@@ -137,7 +146,10 @@ THEN start robot vacuum</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Last person leaves home</li>
       <li>Conditions: Time 9 AM - 6 PM, Weekdays</li>
@@ -146,7 +158,10 @@ THEN start robot vacuum</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Last person leaves (location)</li>
       <li>Condition: Time 9 AM - 6 PM, Weekdays</li>
@@ -155,7 +170,10 @@ THEN start robot vacuum</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Last person leaves home</li>
       <li>Condition: Time 9 AM - 6 PM, weekdays</li>

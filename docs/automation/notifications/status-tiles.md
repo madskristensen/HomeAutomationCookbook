@@ -128,7 +128,10 @@ THEN set "Washer Done" switch OFF
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Create input_boolean for each status</li>
       <li>Use automations to toggle based on events</li>
@@ -138,7 +141,10 @@ THEN set "Washer Done" switch OFF
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>Create virtual switches for each status</li>
       <li>Use routines to toggle on events</li>
@@ -147,7 +153,10 @@ THEN set "Washer Done" switch OFF
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Create virtual switches</li>
       <li>Use Rule Machine for complex logic</li>

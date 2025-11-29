@@ -106,7 +106,10 @@ THEN turn off lights</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Bathroom motion sensor no motion for 5 minutes</li>
       <li>Condition: Bathroom door sensor shows door is open (not in use)</li>
@@ -116,7 +119,10 @@ THEN turn off lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF: Motion sensor no motion for 5 minutes</li>
       <li>AND: Door sensor is open</li>
@@ -125,7 +131,10 @@ THEN turn off lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Motion Lighting app or Rule Machine</li>
       <li>Trigger: Motion inactive for 5 minutes</li>
@@ -135,7 +144,10 @@ THEN turn off lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: Motion stops</li>
       <li>Wait for: 5 minutes</li>
@@ -145,7 +157,10 @@ THEN turn off lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: Motion sensor detects no motion for 5 minutes</li>
       <li>Condition: Door contact is open</li>
@@ -154,7 +169,10 @@ THEN turn off lights</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: Motion no motion for 5 minutes</li>
       <li>Condition: Door sensor is open</li>

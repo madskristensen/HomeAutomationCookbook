@@ -112,7 +112,10 @@ AND set volume to 35%</div>
 
 <div class="platform-grid">
   <div class="platform-card">
-    <h4>Home Assistant</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
+      <h4>Home Assistant</h4>
+    </div>
     <ol>
       <li>Trigger: Home mode changes from 'Away' to 'Home'</li>
       <li>Condition: Time is after 4 PM</li>
@@ -122,7 +125,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>SmartThings</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
+    </div>
     <ol>
       <li>IF Home mode changes to "Home"</li>
       <li>AND Time is after 4:00 PM</li>
@@ -132,7 +138,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Hubitat</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
+    </div>
     <ol>
       <li>Use Mode Manager for presence detection</li>
       <li>Trigger: Mode changes to "Home"</li>
@@ -142,7 +151,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Apple HomeKit</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
+      <h4>Apple HomeKit</h4>
+    </div>
     <ol>
       <li>When: First person arrives home</li>
       <li>Conditions: Time is after 4:00 PM</li>
@@ -152,7 +164,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Alexa</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
+      <h4>Alexa</h4>
+    </div>
     <ol>
       <li>When: You arrive home (location-based)</li>
       <li>Condition: Time after 4:00 PM</li>
@@ -162,7 +177,10 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
-    <h4>Google Home</h4>
+    <div class="platform-card-header">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo">
+      <h4>Google Home</h4>
+    </div>
     <ol>
       <li>Starter: When you get home (location)</li>
       <li>Condition: Time after 4:00 PM</li>
