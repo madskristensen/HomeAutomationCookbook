@@ -86,4 +86,4 @@ Start with these categories:
 
 ---
 
-[Continue to platforms →](/getting-started/choose-the-right-platform.html)
+[Continue to choose the right platform →](/getting-started/choose-the-right-platform.html)
