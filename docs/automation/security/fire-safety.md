@@ -140,12 +140,25 @@ AND send notifications</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Smoke detector state changes to "on" or "smoke"</li>
-      <li>No conditions (always run)</li>
-      <li>Actions: Turn on all lights group to 100% + Unlock all door locks + Start irrigation zone + Send critical notifications (notify with critical: true)</li>
-      <li>Optional: TTS announcement "Fire alarm activated, evacuate immediately"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Smoke detector state changes to "on" or "smoke"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">None (always run)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">All lights 100% + Unlock doors + Start irrigation + Critical notifications</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Optional:</strong> TTS announcement "Fire alarm activated, evacuate immediately"
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -153,12 +166,21 @@ AND send notifications</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF: Smoke detector detects smoke</li>
-      <li>THEN: Turn on all lights + Unlock all doors + Start irrigation</li>
-      <li>THEN: Send push notification to all members</li>
-      <li>Use SHM (SmartThings Home Monitor) for enhanced integration</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Smoke detector detects smoke</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Turn on all lights + Unlock doors + Start irrigation</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Use SHM (SmartThings Home Monitor) for enhanced integration
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -166,12 +188,21 @@ AND send notifications</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine or HSM (Hubitat Safety Monitor)</li>
-      <li>Trigger: Smoke sensor active</li>
-      <li>Actions: All lights on + Doors unlocked + Irrigation on + Push notifications</li>
-      <li>HSM can handle comprehensive emergency response</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Smoke sensor active</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">All lights on + Doors unlocked + Irrigation on + Push notifications</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine or HSM (Hubitat Safety Monitor)
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -179,12 +210,21 @@ AND send notifications</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Smoke detected by HomeKit smoke sensor</li>
-      <li>Do: Turn on all lights + Unlock doors (if supported)</li>
-      <li>Note: Limited irrigation control in HomeKit</li>
-      <li>Notifications sent automatically by Home app</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Smoke detected by HomeKit smoke sensor</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn on all lights + Unlock doors</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Limited irrigation control, notifications automatic
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -192,12 +232,20 @@ AND send notifications</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Enable Guard feature in Alexa app</li>
-      <li>Guard detects smoke alarm sounds</li>
-      <li>Create routine: When Guard detects emergency → Turn on all lights</li>
-      <li>Smart Alerts sends notifications automatically</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Enable Guard feature in Alexa app</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Guard detects emergency</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on all lights, Smart Alerts sends notifications</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -205,12 +253,21 @@ AND send notifications</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>If using Nest Protect: Native integration with Google Home</li>
-      <li>Trigger: Smoke alarm activates</li>
-      <li>Actions: Turn on lights, send notifications</li>
-      <li>Nest integrates with Works with Google devices</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Smoke alarm activates (Nest Protect native)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on lights, send notifications</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Nest integrates with Works with Google devices
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -270,113 +327,126 @@ Create lit paths to exits:
 2. Exterior lights on to illuminate exits
 3. Smart bulbs flash in exit direction (if supported)
 
-### Smoke detector by room
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Smoke detector by room</h3>
+    <p>Different response based on fire location:</p>
+    <ul>
+      <li><strong>Kitchen:</strong> Add 30-second delay (may be cooking), verify first</li>
+      <li><strong>Bedroom:</strong> Immediate full response, no delay</li>
+      <li><strong>Garage:</strong> Specific response, alert with location</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Irrigation for fire containment</h3>
+    <p>Strategic irrigation activation:</p>
+    <ul>
+      <li>Activate zones closest to house</li>
+      <li>Wet perimeter to slow fire spread</li>
+      <li>Run 10-15 minutes, auto shutoff after 30</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Multi-alarm verification</h3>
+    <p>Reduce false positives:</p>
+    <ul>
+      <li><strong>Single detector:</strong> Send alert, wait 30 seconds</li>
+      <li><strong>Two+ detectors:</strong> Full emergency response</li>
+      <li><strong>Continued alarm:</strong> Full response after delay</li>
+    </ul>
+  </div>
+</div>
 
-Different response based on fire location:
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Post-event automation</h3>
+    <p>After emergency is handled:</p>
+    <ul>
+      <li>When smoke clears, wait 15 minutes</li>
+      <li>Send "All clear" notification</li>
+      <li>Return lights to previous state</li>
+      <li>Relock doors (after verification)</li>
+    </ul>
+  </div>
+</div>
 
-**Kitchen Fire:**
-- May be cooking related
-- Add 30-second delay
-- Send alert to check kitchen
-- Activate if alarm continues
+## Common issues and solutions
 
-**Bedroom Fire:**
-- Immediate full response
-- All lights on
-- Doors unlocked
-- No delay
-
-**Garage Fire:**
-- Specific response
-- Close door to house (if safe)
-- Alert sent with garage location
-
-### Irrigation zones for fire containment
-
-Strategic irrigation activation:
-
-**Near-House Zones:**
-- Activate zones closest to house
-- Wet perimeter to slow fire spread
-- Focus on roof-adjacent areas
-
-**Timing:**
-- Run for 10-15 minutes
-- Or until manually stopped
-- Automatic shutoff after 30 minutes
-
-### Multi-alarm verification
-
-Reduce false positives:
-
-**Logic:**
-- Single detector: Send alert, wait 30 seconds
-- Two or more detectors: Full emergency response
-- Continued alarm after delay: Full response
-
-### Post-event automation
-
-After emergency is handled:
-
-**Reset Automation:**
-- When smoke clears (detector returns to normal)
-- Wait 15 minutes
-- Send "All clear" notification
-- Return lights to previous state
-- Relock doors (after verification)
-
-## Troubleshooting
-
-### Issue: False alarms from cooking
-
-**Causes:**
-- Kitchen smoke detector too sensitive
-- Steam or cooking smoke triggers
-
-**Solutions:**
-✅ Add delay for kitchen detector only
-✅ Send verification alert before full response
-✅ Use "photoelectric" type detector (less sensitive to cooking smoke)
-✅ Relocate kitchen detector away from stove
-
-### Issue: Doors don't unlock
-
-**Causes:**
-- Lock battery low
-- Z-Wave/Zigbee connectivity issue
-- Lock not in automation
-
-**Solutions:**
-✅ Check lock battery regularly
-✅ Verify lock responds to commands
-✅ Test automation monthly
-✅ Add lock to automation actions
-
-### Issue: Notifications don't arrive
-
-**Causes:**
-- Phone in Do Not Disturb mode
-- App notification permissions
-- Critical alerts not enabled
-
-**Solutions:**
-✅ Use "critical" or "priority" notification flags
-✅ Enable emergency bypass in notification settings
-✅ Test notifications during setup
-✅ Use multiple notification methods (push, SMS, call)
-
-### Issue: Automation doesn't trigger
-
-**Causes:**
-- Smoke detector not integrated
-- Wrong trigger configured
-- Detector offline
-
-**Solutions:**
-✅ Verify smoke detector appears in smart home
-✅ Check detector status and connectivity
-✅ Test with manual trigger (test button)
-✅ Review automation logs for errors
+<div class="troubleshooting-grid">
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>False alarms from cooking</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Kitchen smoke detector too sensitive to steam or cooking smoke.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Add delay for kitchen detector only</li>
+        <li>Send verification alert before full response</li>
+        <li>Use "photoelectric" type detector</li>
+        <li>Relocate kitchen detector away from stove</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Doors don't unlock</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Lock battery low or connectivity issue.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Check lock battery regularly</li>
+        <li>Verify lock responds to commands</li>
+        <li>Test automation monthly</li>
+        <li>Add lock to automation actions</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Notifications don't arrive</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Phone in Do Not Disturb or critical alerts not enabled.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Use "critical" notification flags</li>
+        <li>Enable emergency bypass in settings</li>
+        <li>Test notifications during setup</li>
+        <li>Use multiple notification methods</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Automation doesn't trigger</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Smoke detector not integrated or wrong trigger configured.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Verify smoke detector appears in smart home</li>
+        <li>Check detector status and connectivity</li>
+        <li>Test with manual trigger (test button)</li>
+        <li>Review automation logs for errors</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ## Safety considerations
 

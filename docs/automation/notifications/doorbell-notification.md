@@ -110,12 +110,21 @@ THEN send notification to phone
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Add contact sensor to system</li>
-      <li>Trigger: binary_sensor.doorbell_sensor changes to "on" (or "off")</li>
-      <li>Action: notify.mobile_app with "Doorbell: Someone at the door"</li>
-      <li>Optional: Add media_player.play_media for chime sound</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">binary_sensor.doorbell_sensor changes to "on"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">notify.mobile_app with "Someone at the door"</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Optional:</strong> Add media_player.play_media for chime sound
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -123,11 +132,21 @@ THEN send notification to phone
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Pair contact sensor with hub</li>
-      <li>Create routine: IF Contact opens → Send push notification</li>
-      <li>Optional: Add smart speaker chime action</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Contact opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Send push notification</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Optional:</strong> Add smart speaker chime action
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -135,12 +154,21 @@ THEN send notification to phone
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Add contact sensor to system</li>
-      <li>Create Rule Machine or Notification rule</li>
-      <li>Trigger: Contact sensor opens/closes</li>
-      <li>Action: Send push notification via Hubitat app</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Contact sensor opens/closes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send push notification via Hubitat app</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine or Notification rule
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -148,11 +176,21 @@ THEN send notification to phone
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Add HomeKit-compatible contact sensor</li>
-      <li>Create automation: When sensor opens → Send notification</li>
-      <li>May need Home app or third-party app for notifications</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Sensor opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Send notification</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> May need Home app or third-party for notifications
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -160,11 +198,16 @@ THEN send notification to phone
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Pair compatible contact sensor</li>
-      <li>Create routine: When sensor detects → Send notification</li>
-      <li>Can also announce on Echo devices</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Sensor detects</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send notification, announce on Echo devices</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -172,11 +215,16 @@ THEN send notification to phone
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Pair sensor through compatible integration</li>
-      <li>Create routine with sensor trigger</li>
-      <li>Action: Send notification or announce</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Sensor trigger via compatible integration</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send notification or announce</span>
+      </div>
+    </div>
   </div>
 </div>
 

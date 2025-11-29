@@ -152,94 +152,153 @@ Prevent frustration when motion-based lighting turns off while you're sitting st
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Bathroom motion sensor no motion for 5 minutes</li>
-      <li>Condition: Bathroom door sensor is "open"</li>
-      <li>Action: Turn off bathroom light</li>
-      <li>Note: Adjust based on your sensor's open/closed values</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Bathroom motion sensor no motion for 5 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Bathroom door sensor is "open"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn off bathroom light</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Adjust based on your sensor's open/closed values
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
     <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings (with SharpTools) logo">
-      <h4>SmartThings (with SharpTools)</h4>
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
+      <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Create rule in SharpTools</li>
-      <li>Trigger: Motion inactive for 5 minutes</li>
-      <li>Condition: Door sensor is "open"</li>
-      <li>Action: Turn off light</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Motion inactive for 5 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Door sensor is "open"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn off light</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use SharpTools for advanced conditions
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
     <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat (Rule Machine) logo">
-      <h4>Hubitat (Rule Machine)</h4>
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
+      <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Create new rule</li>
-      <li>Trigger: Motion inactive (canceled) for 5 minutes</li>
-      <li>Required Expression: Door contact is open</li>
-      <li>Actions to Run: Off: Light</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Motion inactive (canceled) for 5 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Expression</span>
+        <span class="step-content">Door contact is open</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn off light</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine for complex logic
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-## Advanced implementations
+## Advanced features
 
-### Manual disable mode with button
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Manual disable mode</h3>
+    <p>Add a physical button to manually disable all automations in a room:</p>
+    <ul>
+      <li><strong>Trigger:</strong> Disable button pressed</li>
+      <li><strong>Action:</strong> Toggle automation disabled mode</li>
+      <li><strong>Condition:</strong> Add to all automations: mode is OFF</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Visual indicator</h3>
+    <p>Use LED strip or smart bulb to show automation status:</p>
+    <ul>
+      <li><strong>When disabled:</strong> Set status light to red</li>
+      <li><strong>When enabled:</strong> Set status light to green</li>
+      <li><strong>Trigger:</strong> Automation mode changes</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Time-based auto-resume</h3>
+    <p>Automatically re-enable automations after a set period:</p>
+    <ul>
+      <li><strong>Trigger:</strong> Disabled mode has been ON for 2 hours</li>
+      <li><strong>Action:</strong> Turn off disabled mode (re-enable)</li>
+      <li>Prevents accidentally leaving automations disabled</li>
+    </ul>
+  </div>
+</div>
 
-Add a physical button to manually disable all automations in a room:
-- **Trigger:** Disable button pressed
-- **Action:** Toggle automation disabled mode
+## Common issues and solutions
 
-Then add condition to all automations:
-- **Condition:** Automation disabled mode is OFF
-
-This allows manual override when needed.
-
-### Visual indicator
-
-Use LED strip or smart bulb to show automation status:
-- **When disabled:** Set status light to red
-- **When enabled:** Set status light to green
-- **Trigger:** Automation disabled mode changes
-
-Provides visual feedback of automation state.
-
-### Time-based auto-resume
-
-Automatically re-enable automations after a set period:
-- **Trigger:** Automation disabled mode has been ON for 2 hours
-- **Action:** Turn off disabled mode (re-enable automations)
-
-Prevents accidentally leaving automations disabled permanently.
-
-## Troubleshooting
-
-### Lights still turn off when door closed
-
-**Check:**
-- Door sensor state in app (is "closed" showing as 'on' or 'off'?)
-- Condition logic matches your sensor's behavior
-- Automation is actually using the condition
-
-**Fix:** Reverse the door state condition if needed. If your sensor shows 'on' when closed, use 'on' in the condition instead of 'off'.
-
-### Door sensor not reliable
-
-**Causes:**
-- Sensor too far from magnet
-- Battery low
-- Door doesn't close fully
-
-**Solutions:**
-- Reposition for better alignment
-- Replace battery
-- Adjust door latch/strike plate
-- Use tilt sensor instead of contact sensor
+<div class="troubleshooting-grid">
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Lights still turn off when door closed</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Condition logic may not match your sensor's behavior.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Check door sensor state in app (is "closed" showing as 'on' or 'off'?)</li>
+        <li>Verify condition logic matches your sensor's behavior</li>
+        <li>Confirm automation is actually using the condition</li>
+        <li>Reverse the door state condition if needed</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Door sensor not reliable</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Sensor too far from magnet, battery low, or door doesn't close fully.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Reposition for better alignment</li>
+        <li>Replace battery</li>
+        <li>Adjust door latch/strike plate</li>
+        <li>Use tilt sensor instead of contact sensor</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ---
 

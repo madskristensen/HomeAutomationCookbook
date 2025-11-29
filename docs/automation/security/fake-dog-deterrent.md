@@ -135,12 +135,25 @@ AND send notification</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Add dog barking MP3 to media folder</li>
-      <li>Trigger: Motion sensor state changes to "on"</li>
-      <li>Condition: Mode is "Away" or time after 10 PM</li>
-      <li>Action: media_player.play_media with dog barking file + notify.mobile_app</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Motion sensor state changes to "on"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Mode is "Away" or time after 10 PM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">media_player.play_media with dog barking + notify</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Add dog barking MP3 to media folder
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -148,12 +161,21 @@ AND send notification</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Use Alexa or Sonos for audio playback</li>
-      <li>IF: Motion detected AND Mode is Away</li>
-      <li>THEN: Play audio on speaker + Send notification</li>
-      <li>May require virtual switch to trigger Alexa routine</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Motion detected AND Mode is Away</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Play audio on speaker + Send notification</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Use Alexa or Sonos for audio playback
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -161,12 +183,25 @@ AND send notification</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Chromecast Integration or Sonos integration</li>
-      <li>Rule Machine: Motion triggers audio playback</li>
-      <li>Conditions: Mode = Away or time-based</li>
-      <li>Action: Speak or play audio file</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Motion triggers audio playback</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Mode = Away or time-based</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Speak or play audio file</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Chromecast or Sonos integration
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -174,12 +209,21 @@ AND send notification</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Limited native audio support</li>
-      <li>Use HomePod with Shortcuts automation</li>
-      <li>When: Motion detected + No one home</li>
-      <li>Shortcut: Play specific audio from library</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Motion detected + No one home</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Shortcut</span>
+        <span class="step-content">Play specific audio from library</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Use HomePod with Shortcuts automation
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -187,12 +231,20 @@ AND send notification</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Enable "Guard Dog" skill or similar</li>
-      <li>Create routine: Motion sensor → Play dog sounds</li>
-      <li>Or: Ask Alexa to play "dog barking sounds"</li>
-      <li>Combine with Guard mode for Away detection</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Setup</span>
+        <span class="step-content">Enable "Guard Dog" skill or similar</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Motion sensor triggers</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Play dog sounds via routine</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -200,64 +252,57 @@ AND send notification</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Create routine triggered by motion</li>
-      <li>Action: Play dog barking sound on speaker</li>
-      <li>Add condition for Away mode if available</li>
-      <li>Or use Assistant command for audio playback</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Motion detected (routine triggered)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Play dog barking sound on speaker</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Add Away mode condition if available
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 ## Advanced features
 
-### Progressive response
-
-Escalate the response based on continued motion:
-
-**Level 1 (Initial Motion):**
-- Single bark sequence (5-10 seconds)
-- Notification sent
-
-**Level 2 (Motion continues after 30 seconds):**
-- Aggressive barking (20-30 seconds)
-- Growling sounds included
-- Lights turn on
-
-**Level 3 (Motion after 2 minutes):**
-- Continuous barking
-- All exterior lights on
-- Alarm siren (if available)
-- Emergency notification
-
-### Multiple speaker response
-
-Make it sound like the dog is moving through the house:
-
-**Setup:**
-1. First trigger: Speaker near front plays bark
-2. 10 seconds later: Speaker in living room plays bark
-3. 10 seconds later: Speaker near back door plays
-
-**Effect:** Creates impression of large dog running through house toward intruder.
-
-### Zone-based response
-
-Different response for different areas:
-
-**Front Yard/Porch:**
-- Immediate bark
-- Exterior lights on
-- Camera starts recording
-
-**Backyard:**
-- Bark after 10-second delay
-- Check for expected activity first
-- Lower volume (neighbors)
-
-**Interior Entry:**
-- Loud, aggressive barking
-- All lights on
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Progressive response</h3>
+    <p>Escalate based on continued motion:</p>
+    <ul>
+      <li><strong>Level 1:</strong> Single bark (5-10 sec), notification sent</li>
+      <li><strong>Level 2:</strong> Aggressive barking (20-30 sec), lights on</li>
+      <li><strong>Level 3:</strong> Continuous barking, all lights, alarm</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Multiple speaker response</h3>
+    <p>Make it sound like the dog is moving through the house:</p>
+    <ul>
+      <li>First trigger: Front speaker plays bark</li>
+      <li>10 sec later: Living room speaker</li>
+      <li>10 sec later: Back door speaker</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Zone-based response</h3>
+    <p>Different response for different areas:</p>
+    <ul>
+      <li><strong>Front yard:</strong> Immediate bark, lights, camera</li>
+      <li><strong>Backyard:</strong> 10-sec delay, lower volume</li>
+      <li><strong>Interior:</strong> Loud aggressive barking, all lights</li>
+    </ul>
+  </div>
+</div>
 - Full alarm response
 
 ### Time-based variations

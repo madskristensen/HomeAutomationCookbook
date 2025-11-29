@@ -113,12 +113,21 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Window or door opens for 1 minute</li>
-      <li>Action: Set thermostat HVAC mode to "off"</li>
-      <li>Send notification showing which window/door opened</li>
-      <li>Tip: Save previous state to helper variable for restoration</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Window or door opens for 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat HVAC mode to "off"</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Tip:</strong> Save previous state to helper variable for restoration
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -126,11 +135,16 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Living room window opens</li>
-      <li>AND Window stays open for 1 minute</li>
-      <li>THEN Set thermostat mode to "Off"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Living room window opens AND stays open for 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Set thermostat mode to "Off"</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -138,12 +152,21 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine or Thermostat Scheduler</li>
-      <li>Trigger: Contact sensor open for 1 minute</li>
-      <li>Action: Set thermostat mode to "off"</li>
-      <li>Tip: Use variable to save previous mode for restoration</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Contact sensor open for 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat mode to "off"</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine or Thermostat Scheduler
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -151,11 +174,20 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Any window or door opens</li>
-      <li>Conditions: Stays open for at least 1 minute</li>
-      <li>Do: Turn off thermostat</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Any window or door opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Stays open for at least 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn off thermostat</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -163,11 +195,20 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Smart Home sensor opens</li>
-      <li>Wait: 1 minute</li>
-      <li>Action: Set thermostat to Off mode</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Smart Home sensor opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Wait</span>
+        <span class="step-content">1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat to Off mode</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -175,107 +216,118 @@ AND send notification "Thermostat off - living room window open"</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Window sensor opens</li>
-      <li>Condition: Sensor open for at least 1 minute</li>
-      <li>Action: Set thermostat to Off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Window sensor opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Sensor open for at least 1 minute</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set thermostat to Off</span>
+      </div>
+    </div>
   </div>
 </div>
 
 ## Advanced features
 
-### Different delays per window
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Different delays per window</h3>
+    <p>Set different delays based on window location:</p>
+    <ul>
+      <li><strong>Front door:</strong> 1 minute delay (high-traffic)</li>
+      <li><strong>Remote bedroom:</strong> 5 minutes delay (less impact)</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Visual feedback dashboard</h3>
+    <p>Display which windows/doors are open and thermostat status:</p>
+    <ul>
+      <li>Show count of open windows</li>
+      <li>List specific windows currently open</li>
+      <li>Thermostat current status (Off due to windows)</li>
+      <li>Time since thermostat turned off</li>
+      <li>Outdoor vs indoor temperature comparison</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Seasonal variations</h3>
+    <p>Adjust behavior based on season:</p>
+    <ul>
+      <li><strong>Winter:</strong> Shorter delay (1 min), aggressive shutdown</li>
+      <li><strong>Summer:</strong> Medium delay (2 min), standard shutdown</li>
+      <li><strong>Spring/Fall:</strong> Longer delay (5 min), encourage natural ventilation</li>
+    </ul>
+  </div>
+</div>
 
-Set different time delays based on window location and impact:
-- **Front door:** 1 minute delay (high-traffic area, brief openings expected)
-- **Remote bedroom window:** 5 minutes delay (room far from thermostat, less impact)
+## Common issues and solutions
 
-Create separate automations for different delay requirements.
-
-### Visual feedback dashboard
-
-Display which windows/doors are open and thermostat status:
-
-- Show count of open windows
-- List specific windows currently open
-- Thermostat current status (Off due to windows)
-- Time since thermostat turned off
-- Outdoor vs indoor temperature comparison
-
-### Seasonal variations
-
-Adjust behavior based on season:
-
-**Winter (Heating Season):**
-- Shorter delay (1 minute) - heat loss is expensive
-- More aggressive shutdown
-- Notify about heat loss
-
-**Summer (Cooling Season):**
-- Medium delay (2 minutes) - less critical
-- Standard shutdown
-
-**Spring/Fall (Mild Weather):**
-- Longer delay (5 minutes) - encourage natural ventilation
-- Only shut off if outside temp unfavorable
-
-## Troubleshooting
-
-### Issue: Thermostat shuts off too frequently
-
-**Causes:**
-- Delay too short - door opened briefly triggers shutdown
-- Too many sensors included - any window triggers shutdown
-- Family members frequently opening doors
-- Pets triggering door sensors
-
-**Solutions:**
-- ✅ Increase delay to 2-3 minutes before shutting off thermostat
-- ✅ Differentiate between frequently-used doors (longer delay) and windows (shorter delay)
-- ✅ Exclude mudroom/garage doors that open briefly
-- ✅ Add condition: Only shut off if multiple windows open OR open for extended time
-- ✅ Add manual override: Button to temporarily disable automation
-
-### Issue: Temperature becomes uncomfortable
-
-**Causes:**
-- Thermostat off too long - forgot window was open
-- Extreme outdoor temperatures
-- Multiple windows open simultaneously
-- HVAC takes long time to catch up after restarting
-
-**Check:**
-- ✅ Create companion automation to turn thermostat back on (see related automation)
-- ✅ Set maximum "off" duration: Resume after 30-60 minutes even if window still open
-- ✅ Monitor indoor temperature: Resume if temp drops/rises too much
-- ✅ Send reminder notification after 15 minutes: "Windows still open, thermostat off"
-
-**Fix:**
-- Add temperature safety limits:
-  - Winter: Resume heating if indoor temp drops below 65°F
-  - Summer: Resume cooling if indoor temp rises above 78°F
-- Create escalating notifications:
-  - 15 min: Informational notification
-  - 30 min: Reminder to close windows
-  - 60 min: Urgent notification
-- Add dashboard widget showing thermostat status and open windows
-
-### Issue: Automation doesn't trigger
-
-**Causes:**
-- Contact sensors not reporting open state
-- Automation disabled or has errors
-- Thermostat doesn't support remote off command
-- Network connectivity issues
-
-**Solutions:**
-- ✅ Test contact sensors individually - open window and check status in app
-- ✅ Verify automation is enabled and has no error indicators
-- ✅ Check thermostat API compatibility - some thermostats can't be turned off remotely
-- ✅ Review automation logs to see if triggers are firing
-- ✅ Test thermostat control manually - try turning off via app first
-- ✅ Check WiFi signal strength for both sensors and thermostat
+<div class="troubleshooting-grid">
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Thermostat shuts off too frequently</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Delay too short or too many sensors triggering shutdown.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Increase delay to 2-3 minutes before shutting off thermostat</li>
+        <li>Differentiate between doors (longer delay) and windows (shorter delay)</li>
+        <li>Exclude mudroom/garage doors that open briefly</li>
+        <li>Add condition: Only shut off if multiple windows open</li>
+        <li>Add manual override button to temporarily disable automation</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Temperature becomes uncomfortable</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Thermostat off too long - forgot window was open.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Create companion automation to turn thermostat back on</li>
+        <li>Set maximum "off" duration: Resume after 30-60 minutes</li>
+        <li>Monitor indoor temperature: Resume if temp changes too much</li>
+        <li>Send reminder notification after 15 minutes</li>
+        <li>Add temperature safety limits (e.g., resume if below 65°F in winter)</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Automation doesn't trigger</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Contact sensors not reporting open state or automation has errors.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Test contact sensors individually - check status in app</li>
+        <li>Verify automation is enabled with no error indicators</li>
+        <li>Check thermostat API compatibility for remote off</li>
+        <li>Review automation logs to see if triggers are firing</li>
+        <li>Check WiFi signal strength for sensors and thermostat</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ---
 
