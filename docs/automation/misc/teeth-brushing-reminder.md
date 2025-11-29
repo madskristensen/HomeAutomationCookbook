@@ -63,7 +63,7 @@ Instead of chasing the kids before bedtime to make sure they brush their teeth, 
 
 <div class="info-box">
   <strong>💡 How It Works</strong>
-  <p>The electric toothbrush is plugged into the smart plug. Whenever the child is done brushing and puts the toothbrush back in its charger, the smart plug will sense that power is being drawn to charge it. That way we can know if the toothbrush has been used.</p>
+  <p>The electric toothbrush charger is plugged into the smart plug. When the child brushes their teeth and returns the toothbrush to its charging base, the power consumption increases as the charger begins recharging the depleted battery. The smart plug detects this power spike (typically from near-zero to 2-5 watts), which tells your automation that the toothbrush was just used.</p>
 </div>
 
 ## Basic automation setup

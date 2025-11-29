@@ -87,7 +87,7 @@ A variation of this is to listen for the sound of a window breaking at night or 
 
 <div class="info-box">
   <strong>🔊 Smoke Detection Without Smart Detectors</strong>
-  <p>If you don't have a smart smoke detector, there are alternatives you can install:</p>
+  <p>If you don't have a smart smoke detector, there are alternatives you can use to make your existing detector smart:</p>
   <ul>
     <li><strong>Wired relays:</strong> Attach to existing smoke detector wiring, acts like an open/closed sensor when alarm sounds</li>
     <li><strong>Sound listeners:</strong> Devices that pick up the specific sound pattern of smoke detectors and send signals to your smart home</li>

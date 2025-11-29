@@ -153,7 +153,15 @@ THEN turn on "Garbage Out" virtual switch
 
 ### Advanced: Calendar integration
 
-You can take this to a new level if you integrate with the garbage company's service calendar. That way you don't falsely get a reminder on holidays when no garbage is being picked up. Also, if there's a change in schedule due to weather your smart home adapts accordingly. It doesn't happen often enough that I've done this, but for areas where service changes are more normal it could be helpful.
+You can take this to a new level if you integrate with the garbage company's service calendar. That way you don't falsely get a reminder on holidays when no garbage is being picked up. Also, if there's a change in schedule due to weather your smart home adapts accordingly.
+
+**Implementation options:**
+- **ICS calendar import:** Many garbage companies provide ICS calendar feeds you can subscribe to
+- **Custom integration:** Some regions have community-built integrations (check Home Assistant Community Store)
+- **Manual calendar:** Create a Google/Apple calendar with your garbage schedule and check it as a condition
+- **API integration:** Some waste management companies offer APIs for service schedules
+
+This doesn't happen often enough that I've done this myself, but for areas where service changes are more normal it could be helpful.
 
 ---
 
