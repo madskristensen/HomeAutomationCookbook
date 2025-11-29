@@ -9,7 +9,7 @@ Quick answers to common smart home questions.
 
 ## Getting started
 
-<details>
+<details markdown="1">
 <summary>Do I need a hub?</summary>
 
 It depends on your platform:
@@ -18,7 +18,7 @@ It depends on your platform:
 - **Maybe**: HomeKit (Apple device acts as hub)
 </details>
 
-<details>
+<details markdown="1">
 <summary>What's the difference between WiFi, Zigbee, and Z-Wave?</summary>
 
 **WiFi (2.4GHz/5GHz)**
@@ -36,7 +36,7 @@ It depends on your platform:
 **Recommendation**: Zigbee for most users (good balance)
 </details>
 
-<details>
+<details markdown="1">
 <summary>How much does it cost to start?</summary>
 
 **Minimal** ($100-200)
@@ -52,7 +52,7 @@ It depends on your platform:
 - Smart outlet: $30
 </details>
 
-<details>
+<details markdown="1">
 <summary>Which platform should I choose?</summary>
 
 **For beginners**: Google Home or Alexa
@@ -65,7 +65,7 @@ It depends on your platform:
 
 ## Devices
 
-<details>
+<details markdown="1">
 <summary>Can I mix brands?</summary>
 
 Yes! Most platforms support multiple brands. Check compatibility first.
@@ -77,7 +77,7 @@ Yes! Most platforms support multiple brands. Check compatibility first.
 - Consider Matter devices (universal standard)
 </details>
 
-<details>
+<details markdown="1">
 <summary>Do smart bulbs work with normal switches?</summary>
 
 **Smart Bulbs**: Switch must stay ON (control via app/voice)
@@ -91,7 +91,7 @@ Yes! Most platforms support multiple brands. Check compatibility first.
 **Recommendation**: Smart switches for fixed lights, smart bulbs for lamps
 </details>
 
-<details>
+<details markdown="1">
 <summary>How long do batteries last?</summary>
 
 Typical battery life:
@@ -103,7 +103,7 @@ Typical battery life:
 Use quality alkaline or lithium batteries for best results.
 </details>
 
-<details>
+<details markdown="1">
 <summary>Are smart devices secure?</summary>
 
 **It depends**:
@@ -119,7 +119,7 @@ See [Security Best Practices →](/best-practices/#security)
 
 ## Automation
 
-<details>
+<details markdown="1">
 <summary>What can I automate?</summary>
 
 Common automations:
@@ -132,7 +132,7 @@ Common automations:
 [Browse Automation Recipes →](/automation/)
 </details>
 
-<details>
+<details markdown="1">
 <summary>Why isn't my automation working?</summary>
 
 **Troubleshooting checklist**:
@@ -144,7 +144,7 @@ Common automations:
 6. ✅ Test manually
 </details>
 
-<details>
+<details markdown="1">
 <summary>How do I make automations reliable?</summary>
 
 **Best practices**:
@@ -156,7 +156,7 @@ Common automations:
 - Monitor performance
 </details>
 
-<details>
+<details markdown="1">
 <summary>Can automations run without internet?</summary>
 
 **It depends**:
@@ -169,7 +169,7 @@ Common automations:
 
 ## Network and technical
 
-<details>
+<details markdown="1">
 <summary>How many devices can I have?</summary>
 
 **Typical limits**:
@@ -180,7 +180,7 @@ Common automations:
 **Router capacity matters most** - upgrade if congested
 </details>
 
-<details>
+<details markdown="1">
 <summary>Do I need a special router?</summary>
 
 Not necessarily, but helpful:
@@ -192,7 +192,7 @@ Not necessarily, but helpful:
 Consider mesh WiFi for larger homes (250+ sqm)
 </details>
 
-<details>
+<details markdown="1">
 <summary>What is VLAN and do I need it?</summary>
 
 **VLAN** = Separate network segments
@@ -212,7 +212,7 @@ Consider mesh WiFi for larger homes (250+ sqm)
 **Beginners**: Guest network is enough
 </details>
 
-<details>
+<details markdown="1">
 <summary>My WiFi is slow. Is it my smart devices?</summary>
 
 Possibly. Smart devices can congest 2.4GHz.
@@ -227,7 +227,7 @@ Possibly. Smart devices can congest 2.4GHz.
 
 ## Platform-specific
 
-<details>
+<details markdown="1">
 <summary>Can I switch platforms later?</summary>
 
 **Mostly yes**, but:
@@ -242,7 +242,7 @@ Possibly. Smart devices can congest 2.4GHz.
 - Consider Matter devices
 </details>
 
-<details>
+<details markdown="1">
 <summary>What is Matter?</summary>
 
 **Matter** = New universal smart home standard
@@ -258,7 +258,7 @@ Possibly. Smart devices can congest 2.4GHz.
 **Recommendation**: Good choice for new purchases
 </details>
 
-<details>
+<details markdown="1">
 <summary>Do I need a subscription?</summary>
 
 **Usually no**, but some features require it:
@@ -282,7 +282,7 @@ Examples:
 
 ## Troubleshooting
 
-<details>
+<details markdown="1">
 <summary>My device won't connect</summary>
 
 **Steps**:
@@ -294,7 +294,7 @@ Examples:
 6. Update firmware
 </details>
 
-<details>
+<details markdown="1">
 <summary>Devices keep disconnecting</summary>
 
 **Common causes**:
@@ -312,7 +312,7 @@ Examples:
 - Check power supply quality
 </details>
 
-<details>
+<details markdown="1">
 <summary>Automation is slow</summary>
 
 **Causes**:
@@ -329,7 +329,7 @@ Examples:
 - Upgrade hub
 </details>
 
-<details>
+<details markdown="1">
 <summary>How do I factory reset a device?</summary>
 
 **Varies by device**, but common methods:
@@ -343,7 +343,7 @@ Examples:
 
 ## Privacy and data
 
-<details>
+<details markdown="1">
 <summary>What data do smart devices collect?</summary>
 
 **Typical data**:
@@ -356,7 +356,7 @@ Examples:
 **Varies by brand** - read privacy policies
 </details>
 
-<details>
+<details markdown="1">
 <summary>How can I protect my privacy?</summary>
 
 **Best practices**:
@@ -371,7 +371,7 @@ Examples:
 [Privacy guide →](/best-practices/#privacy-protection)
 </details>
 
-<details>
+<details markdown="1">
 <summary>Can companies access my data?</summary>
 
 **It depends**:
@@ -386,7 +386,7 @@ Examples:
 
 ## Cost and value
 
-<details>
+<details markdown="1">
 <summary>Is it worth the investment?</summary>
 
 **Benefits**:
@@ -403,7 +403,7 @@ Examples:
 - Long-term value
 </details>
 
-<details>
+<details markdown="1">
 <summary>How much can I save on energy?</summary>
 
 **Potential savings**:
@@ -414,7 +414,7 @@ Examples:
 **ROI timeline**: Typically 2-5 years
 </details>
 
-<details>
+<details markdown="1">
 <summary>Which devices save the most money?</summary>
 
 **Best ROI**:
