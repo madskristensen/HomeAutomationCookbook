@@ -111,12 +111,16 @@ AND set thermostat to sleep mode</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Triggers: Time is 10:00 PM OR bedside button pressed</li>
-      <li>Actions: Turn off main lights (living room, kitchen, office)</li>
-      <li>Turn on nightlights (bedroom and bathroom) at 10% brightness</li>
-      <li>Set house mode to "Night"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Time is 10:00 PM OR bedside button pressed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Turn off main lights, nightlights to 10%, set mode to "Night"</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -124,12 +128,16 @@ AND set thermostat to sleep mode</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>WHEN: Time is 10:00 PM OR button pressed</li>
-      <li>THEN: Change mode to "Night"</li>
-      <li>Turn off main lights</li>
-      <li>Keep nightlights on</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">WHEN</span>
+        <span class="step-content">Time is 10:00 PM OR button pressed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Change mode to "Night", turn off main lights</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -137,12 +145,21 @@ AND set thermostat to sleep mode</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Mode Manager for time-based mode changes</li>
-      <li>Trigger: Time is 10:00 PM OR button pressed</li>
-      <li>Action: Change mode to "Night"</li>
-      <li>Use Rule Machine: Mode changes to "Night" → Turn off main lights + Set nightlights to 10%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Time is 10:00 PM OR button pressed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Change mode to "Night" → Turn off main lights</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Mode Manager + Rule Machine for mode-based actions
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -150,11 +167,16 @@ AND set thermostat to sleep mode</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Create "Good Night" scene</li>
-      <li>Turn off main lights, set nightlights to 10%, lock doors, set thermostat</li>
-      <li>Trigger via: Voice "Hey Siri, good night", button automation, or time automation</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Scene</span>
+        <span class="step-content">"Good Night" - turn off main lights, nightlights to 10%</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Voice "Hey Siri, good night" or button/time automation</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -162,12 +184,16 @@ AND set thermostat to sleep mode</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>WHEN: You say "Good night"</li>
-      <li>ALEXA WILL: Turn off lights (select rooms)</li>
-      <li>Lock doors, set thermostat</li>
-      <li>Optional: Play white noise</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">You say "Good night"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Turn off lights, lock doors, set thermostat</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -175,12 +201,16 @@ AND set thermostat to sleep mode</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>WHEN: I say "Good night"</li>
-      <li>ASSISTANT WILL: Adjust lights and plugs</li>
-      <li>Lock doors, set thermostat</li>
-      <li>Optional: Play sleep sounds</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">I say "Good night"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Adjust lights, lock doors, set thermostat</span>
+      </div>
+    </div>
   </div>
 </div>
 
