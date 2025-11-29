@@ -22,8 +22,12 @@ kramdown:
 navigation:
   - title: Home
     url: /
+  - title: Getting started
+    url: /getting-started/
   - title: Philosophy
     url: /philosophy/
+  - title: Platforms
+    url: /platforms/
   - title: Automations
     url: /automation/
     subitems:
@@ -130,6 +134,8 @@ navigation:
     url: /tips/
   - title: Resources
     url: /resources/
+  - title: FAQ
+    url: /faq/
 
 # Plugins
 plugins:
