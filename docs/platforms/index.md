@@ -11,7 +11,6 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 
 | Feature | Home Assistant | Hubitat | Apple HomeKit | SmartThings | Google Home | Alexa |
 |---------|---------------|---------|---------------|-------------|-------------|-------|
-| **Cost** | Free | $150+ | Free | Free | Free | Free |
 | **Hardware** | Optional | Required | Apple Device | Optional | Optional | Optional |
 | **Difficulty** | Advanced | Intermediate | Easy | Easy | Easy | Easy |
 | **Privacy** | Excellent | Excellent | Excellent | Fair | Poor | Fair |
