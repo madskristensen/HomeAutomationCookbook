@@ -168,6 +168,16 @@ AND set dishwasher_clean to true</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Rule Machine with temperature sensor</li>
+      <li>Start: Door closes → Set "running" variable</li>
+      <li>Done: Temp > 90°F AND door closed 60min → Notify</li>
+      <li>Reset: Door opens → Clear variables</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Temperature sensor above 90°F</li>

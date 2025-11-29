@@ -125,6 +125,16 @@ THEN turn off lights</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Motion Lighting app or Rule Machine</li>
+      <li>Trigger: Motion inactive for 5 minutes</li>
+      <li>Condition: Door contact is open</li>
+      <li>Action: Turn off light</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Motion stops</li>

@@ -123,6 +123,16 @@ THEN send notification "Open windows for free heating!"</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Rule Machine with temperature comparison</li>
+      <li>Trigger: Outdoor temp rises above indoor temp + 5°F</li>
+      <li>Condition: Windows closed, heating season</li>
+      <li>Action: Send notification "Open windows for free heating"</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>Limited native temperature comparison</li>

@@ -110,6 +110,20 @@ Samsung SmartThings community.
 
 ---
 
+### [r/hubitat](https://reddit.com/r/hubitat)
+
+Hubitat Elevation community.
+
+**Topics:**
+- Hubitat automations and Rule Machine
+- Device drivers and compatibility
+- Local processing and privacy
+- Custom apps and integrations
+
+**Best For:** Hubitat users and local-first enthusiasts
+
+---
+
 ### [r/alexa](https://reddit.com/r/alexa)
 
 Amazon Alexa and Echo devices.
@@ -184,6 +198,11 @@ Amazon Alexa and Echo devices.
 - Custom development
 - News and updates
 
+**[Hubitat Discord](https://discord.gg/hubitat)**
+- Real-time community support
+- Custom drivers and apps
+- Local automation discussions
+
 ---
 
 ## Getting involved
@@ -230,6 +249,7 @@ Amazon Alexa and Echo devices.
 **Twitter/X accounts:**
 * @homeassistant
 * @SmartThings
+* @hubaborhood (Hubitat community)
 * @amazon (Alexa updates)
 * @Google (Google Home updates)
 * @Apple (HomeKit updates)

@@ -137,6 +137,16 @@ AND read morning briefing</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Mode Manager or Rule Machine</li>
+      <li>Trigger: Bedroom motion sensor active</li>
+      <li>Condition: Mode is "Night" AND Time 6 AM - 10 AM</li>
+      <li>Action: Change mode to "Day" + Turn on morning lights</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Motion detected in bedroom</li>

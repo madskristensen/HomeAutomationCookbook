@@ -117,6 +117,15 @@ THEN turn on closet light to 100%</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Simple Automation Rules or Rule Machine</li>
+      <li>Trigger: Contact sensor opens</li>
+      <li>Action: Turn on closet light to 100%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Door sensor detects open</li>

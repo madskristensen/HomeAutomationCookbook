@@ -158,6 +158,17 @@ AND adjust thermostat to eco</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Mode Manager for presence-based mode switching</li>
+      <li>Trigger: All presence sensors show "not present" for 10 minutes</li>
+      <li>Conditions: No motion for 9 minutes + Media devices off</li>
+      <li>Action: Change mode to "Away"</li>
+      <li>Use Rule Machine for Away mode actions: lights off, doors locked, thermostat eco</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Last person leaves</li>

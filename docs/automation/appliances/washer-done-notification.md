@@ -159,6 +159,16 @@ AND set washer_running to false</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Create virtual switch "Washer Running"</li>
+      <li>Use Rule Machine with power monitoring plug</li>
+      <li>Start: Power > 50W → Switch on</li>
+      <li>Done: Power < 10W for 3 min AND switch on → Notify, Switch off</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>Limited power monitoring support</li>

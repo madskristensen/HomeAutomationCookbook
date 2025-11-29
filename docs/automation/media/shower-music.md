@@ -130,6 +130,16 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Rule Machine with speaker integration</li>
+      <li>Trigger: Shower light turns on</li>
+      <li>Condition: Mode is "Home", Time 6-10 AM, Weekdays</li>
+      <li>Action: Set speaker volume to 35%, Play playlist</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Shower light turns on</li>

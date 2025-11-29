@@ -154,6 +154,17 @@ AND turn on entry lights</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Combined Presence or Life360 integration</li>
+      <li>Trigger: Presence sensor arrives for 20 seconds</li>
+      <li>Condition: Previous state was "not present"</li>
+      <li>Action: Unlock front door + Change mode to "Home"</li>
+      <li>Use Rule Machine for welcome actions: lights, music, thermostat</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: I arrive home</li>
