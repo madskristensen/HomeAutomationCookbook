@@ -60,11 +60,26 @@ When creating or updating automation pages, maintain this consistent structure.
 - Systematic approach: homepage → categories → details
 - Most automation pages already follow style guide - verify before assuming work needed
 
-# Local development
-- This is a GitHub Pages Jekyll site - do NOT try to run Jekyll locally (complex Ruby dependencies)
-- To preview changes: Use Playwright browser to view the live GitHub Pages site after pushing
-- The site is deployed at: https://homeautomationcookbook.com or the GitHub Pages URL
-- For CSS/HTML validation: Review the raw files directly, commit changes, and verify on live site
+# Local development - running Jekyll locally
+To run the Jekyll site locally for preview and testing:
+
+```bash
+# From the repository root directory:
+cd /home/runner/work/HomeAutomationCookbook/HomeAutomationCookbook
+
+# Install gems to local vendor directory (avoids permission issues)
+bundle config set --local path 'vendor/bundle'
+bundle install
+
+# Run Jekyll server (source is in docs/ subdirectory)
+bundle exec jekyll serve --source docs --port 4000 --host 0.0.0.0
+
+# Site will be available at http://localhost:4000/
+```
+
+- Use Playwright browser to navigate to `http://localhost:4000/` and take screenshots
+- The `vendor/` directory will be created - it's already in `.gitignore`
+- If you see "Could not find gem" errors, make sure to run from repo root, not from `docs/`
 
 # Platform logos
 - Located in: `docs/assets/img/logos/`
