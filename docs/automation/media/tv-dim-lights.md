@@ -134,6 +134,16 @@ AND close blinds</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Rule Machine with power monitoring plug</li>
+      <li>Trigger: TV plug power > 50W for 5 sec</li>
+      <li>Condition: Time after sunset</li>
+      <li>Action: Set living room lights to 10%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: TV power monitor > 50W</li>

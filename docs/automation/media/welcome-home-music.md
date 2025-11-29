@@ -132,6 +132,16 @@ AND set volume to 35%</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Mode Manager for presence detection</li>
+      <li>Trigger: Mode changes to "Home"</li>
+      <li>Condition: Time is after 4 PM</li>
+      <li>Action: Set volume 35%, Play welcome playlist</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: First person arrives home</li>

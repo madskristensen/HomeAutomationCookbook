@@ -143,6 +143,16 @@ AND send notification "Poor air quality detected"</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Rule Machine with air quality device</li>
+      <li>Trigger: AQI sensor drops below 35</li>
+      <li>Action: Turn on air purifier at high</li>
+      <li>Send notification with current reading</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Air quality sensor detects poor air quality</li>

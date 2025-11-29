@@ -167,6 +167,16 @@ AND set dryer_running to false</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Create virtual switch "Dryer Running"</li>
+      <li>Use Rule Machine with vibration sensor</li>
+      <li>Start: Vibration active 5min AND door closed → Switch on</li>
+      <li>Done: Vibration inactive 5min AND switch on → Notify, Switch off</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>Cannot directly handle complex vibration+contact logic</li>

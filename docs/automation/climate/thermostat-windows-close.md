@@ -129,6 +129,16 @@ AND send notification "Climate control resumed"</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Rule Machine with contact group</li>
+      <li>Trigger: Any contact sensor closes</li>
+      <li>Condition: All contacts in group closed AND thermostat is "off"</li>
+      <li>Action: Restore thermostat to previous saved mode</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Any window or door closes</li>

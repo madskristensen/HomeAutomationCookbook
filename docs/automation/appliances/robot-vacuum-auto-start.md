@@ -127,6 +127,16 @@ THEN start robot vacuum</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Mode Manager with vacuum integration</li>
+      <li>Trigger: Mode changes to "Away" for 15 min</li>
+      <li>Condition: Time 9am-6pm, weekdays</li>
+      <li>Action: Start vacuum cleaning cycle</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Last person leaves home</li>

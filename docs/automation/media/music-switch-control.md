@@ -132,6 +132,16 @@ AND adjust volume to preset level</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Button Controllers or Rule Machine</li>
+      <li>Trigger: Button pressed</li>
+      <li>Action: Set speaker volume to 40%</li>
+      <li>Play favorite playlist on speaker</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Button is pressed</li>

@@ -132,6 +132,16 @@ THEN set all speakers to 70-80%</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Groups and Scenes or Rule Machine</li>
+      <li>Create scenes: Low, Medium, Loud</li>
+      <li>Trigger via button, time, or mode change</li>
+      <li>Set all speaker volumes in each scene</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>Create scene: Low Volume (HomePods 30%)</li>

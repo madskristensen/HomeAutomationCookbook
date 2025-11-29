@@ -127,6 +127,16 @@ AND set thermostat to sleep mode</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Mode Manager for time-based mode changes</li>
+      <li>Trigger: Time is 10:00 PM OR button pressed</li>
+      <li>Action: Change mode to "Night"</li>
+      <li>Use Rule Machine: Mode changes to "Night" → Turn off main lights + Set nightlights to 10%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>Create "Good Night" scene</li>

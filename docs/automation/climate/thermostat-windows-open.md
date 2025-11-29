@@ -128,6 +128,16 @@ AND send notification "Thermostat off - living room window open"</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Rule Machine or Thermostat Scheduler</li>
+      <li>Trigger: Contact sensor open for 1 minute</li>
+      <li>Action: Set thermostat mode to "off"</li>
+      <li>Tip: Use variable to save previous mode for restoration</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Any window or door opens</li>

@@ -127,6 +127,17 @@ THEN turn on lights to 100%</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Rule Machine or Simple Automation Rules</li>
+      <li>Trigger: Motion sensor active</li>
+      <li>Condition: Mode is "Night" or time between 10 PM - 6 AM</li>
+      <li>Action: Set light to 10%</li>
+      <li>Create separate rule for daytime at 100%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Motion sensor detects motion</li>

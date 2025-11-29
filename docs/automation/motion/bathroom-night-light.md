@@ -166,6 +166,14 @@ Create routine:
 2. **AND** Location mode is "Night"
 3. **THEN** Set "Bathroom Light" to 10% brightness
 
+### Hubitat
+
+Use Motion Lighting app or Rule Machine:
+1. **Trigger:** Motion sensor active
+2. **Condition:** Mode is "Night" OR time between 10 PM and 6 AM
+3. **Action:** Turn on bathroom light at 10% brightness
+4. **Optional:** Set color temperature to warm white (2700K) if supported
+
 ### Apple HomeKit
 
 1. Create automation in Home app

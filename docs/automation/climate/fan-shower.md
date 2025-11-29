@@ -126,6 +126,17 @@ THEN turn on bathroom fan</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Simple Automation Rules or Rule Machine</li>
+      <li>Trigger: Shower light turns on</li>
+      <li>Condition: Time 5 AM - 11 PM</li>
+      <li>Action: Turn on bathroom fan</li>
+      <li>Humidity option: Trigger when humidity > 75%</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Shower light turns on</li>

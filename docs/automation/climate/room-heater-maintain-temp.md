@@ -140,6 +140,17 @@ THEN turn off space heater</div>
   </div>
   
   <div class="platform-card">
+    <h4>Hubitat</h4>
+    <ol>
+      <li>Use Thermostat Controller or Rule Machine</li>
+      <li>Trigger: Temp sensor below 68°F for 5 min</li>
+      <li>Condition: Window closed AND time 6 PM - 8 AM</li>
+      <li>Action: Turn on heater plug</li>
+      <li>Create second rule: Temp above 70°F → Turn off</li>
+    </ol>
+  </div>
+  
+  <div class="platform-card">
     <h4>Apple HomeKit</h4>
     <ol>
       <li>When: Bedroom temperature falls below 68°F</li>
