@@ -136,12 +136,25 @@ THEN send notification "Garage door still open"</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Garage door open for 10 minutes (use for: minutes: 10)</li>
-      <li>Condition: Optional motion check</li>
-      <li>Action: notify.mobile_app with actionable notification</li>
-      <li>Include action to close door directly from notification</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Garage door open for 10 minutes (use for: minutes: 10)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Optional motion check</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">notify.mobile_app with actionable notification</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Tip:</strong> Include action to close door directly from notification
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -149,11 +162,21 @@ THEN send notification "Garage door still open"</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Garage door is open for 10 minutes</li>
-      <li>THEN Send notification to all members</li>
-      <li>Use Smart Home Monitor for additional alerts</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Garage door is open for 10 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Send notification to all members</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Use Smart Home Monitor for additional alerts
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -161,12 +184,23 @@ THEN send notification "Garage door still open"</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine with delayed trigger</li>
-      <li>Trigger: Garage door open for 10 minutes</li>
-      <li>Action: Send push notification</li>
-      <li>Optional: Use HSM for security integration</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Garage door open for 10 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send push notification</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine with delayed trigger
+          <br>
+          <strong>Optional:</strong> Use HSM for security integration
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -174,12 +208,25 @@ THEN send notification "Garage door still open"</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Create automation: Garage door is open</li>
-      <li>Add time condition if needed</li>
-      <li>Action: Send notification</li>
-      <li>Note: May need Home+ app for duration triggers</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Garage door is open</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Add time condition if needed</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send notification</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> May need Home+ app for duration triggers
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -187,11 +234,20 @@ THEN send notification "Garage door still open"</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Routine: When garage door is open (if supported)</li>
-      <li>Wait: 10 minutes</li>
-      <li>Action: Send notification, announce on Echo</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Garage door is open (if supported)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Wait</span>
+        <span class="step-content">10 minutes</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send notification, announce on Echo</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -199,158 +255,181 @@ THEN send notification "Garage door still open"</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Limited native support for duration triggers</li>
-      <li>Use third-party integration (Home Assistant, IFTTT)</li>
-      <li>Can announce status on speakers</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Limitation</span>
+        <span class="step-content">Limited native support for duration triggers</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Workaround</span>
+        <span class="step-content">Use Home Assistant or IFTTT integration</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Can announce status on speakers
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 ## Auto-close options
 
-### Time-based auto-close
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Time-based auto-close</h3>
+    <p>Automatically close after set time:</p>
+    <ul>
+      <li><strong>Trigger:</strong> Door open for 15 minutes</li>
+      <li><strong>Condition:</strong> No motion in garage for 5 minutes</li>
+      <li><strong>Actions:</strong> Send warning, wait 2 min, close door, confirm</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Departure auto-close</h3>
+    <p>Close when leaving home:</p>
+    <ul>
+      <li><strong>Trigger:</strong> Last person leaves home (geofence)</li>
+      <li><strong>Condition:</strong> Garage door is open</li>
+      <li><strong>Actions:</strong> Wait 2 min, close door, send notification</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Bedtime auto-close</h3>
+    <p>Part of night routine:</p>
+    <ul>
+      <li><strong>Trigger:</strong> Night mode OR time is 10:30 PM</li>
+      <li><strong>Condition:</strong> Garage door is open</li>
+      <li><strong>Actions:</strong> Send notification, close door</li>
+    </ul>
+  </div>
+</div>
 
-Automatically close after set time:
-
-**Setup:**
-- **Trigger:** Garage door open for 15 minutes
-- **Condition:** No motion in garage for 5 minutes
-- **Actions:**
-  1. Send warning notification: "Closing garage door in 2 minutes"
-  2. Wait 2 minutes
-  3. Check if door still open (someone may have closed manually)
-  4. Close garage door
-  5. Send confirmation: "Garage door closed automatically"
-
-### Departure auto-close
-
-Close when leaving home:
-
-- **Trigger:** Last person leaves home (geofence exit)
-- **Condition:** Garage door is open
-- **Actions:**
-  1. Wait 2 minutes (allows time to return if forgot something)
-  2. Close garage door
-  3. Send notification: "Garage door closed - you left home"
-
-### Bedtime auto-close
-
-Part of night routine:
-
-- **Trigger:** Home mode changes to "Night" OR time is 10:30 PM
-- **Condition:** Garage door is open
-- **Actions:**
-  1. Send notification: "Closing garage door for the night"
-  2. Close garage door
-
-<div class="info-box">
-  <strong>⚠️ Safety warning for auto-close</strong>
+<div class="warning-card">
+  <h3>Safety warning for auto-close</h3>
   <ul>
     <li>Ensure garage door has proper safety sensors (photo-eye)</li>
     <li>Never auto-close if people or vehicles might be moving through</li>
     <li>Always send warning notification before closing</li>
     <li>Consider adding a motion sensor for extra safety</li>
-    <li>Test that safety reversal works properly</li>
   </ul>
 </div>
 
 ## Advanced features
 
-### Escalating notifications
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Escalating notifications</h3>
+    <p>Progressive alerts if door stays open:</p>
+    <ul>
+      <li><strong>10 minutes:</strong> Standard notification</li>
+      <li><strong>30 minutes:</strong> Reminder with close option</li>
+      <li><strong>1 hour:</strong> High priority alert</li>
+      <li><strong>2 hours:</strong> Alert other family members</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Weather-aware closing</h3>
+    <p>Close before bad weather:</p>
+    <ul>
+      <li><strong>Trigger:</strong> Rain starting within 30 minutes</li>
+      <li><strong>Condition:</strong> Garage door is open</li>
+      <li><strong>Action:</strong> Send notification to consider closing</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Dashboard status tile</h3>
+    <p>Always know garage status:</p>
+    <ul>
+      <li>Color coding: green (closed), red (open)</li>
+      <li>Show time since opened if currently open</li>
+      <li>Quick action button to close</li>
+    </ul>
+  </div>
+</div>
 
-Progressive alerts if door stays open:
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Voice announcements</h3>
+    <p>Audio reminders throughout home:</p>
+    <ul>
+      <li><strong>Trigger:</strong> Door open for 10 minutes</li>
+      <li><strong>Action:</strong> Announce on all speakers</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Quiet hours exception</h3>
+    <p>Different behavior at night:</p>
+    <ul>
+      <li><strong>Daytime:</strong> Notification only after 10 min</li>
+      <li><strong>Nighttime:</strong> Immediate + auto-close after 5 min</li>
+      <li><strong>Away mode:</strong> Immediate + auto-close after 2 min</li>
+    </ul>
+  </div>
+</div>
 
-1. **10 minutes:** Standard notification
-2. **30 minutes:** Reminder notification with close option
-3. **1 hour:** High priority alert
-4. **2 hours:** Alert other family members
+## Common issues and solutions
 
-### Weather-aware closing
-
-Close before bad weather:
-
-- **Trigger:** Weather service reports rain starting within 30 minutes
-- **Condition:** Garage door is open
-- **Action:** Send notification: "Rain coming - consider closing garage door"
-
-### Dashboard status tile
-
-Always know garage status:
-
-- Create sensor card showing current state
-- Color coding: green (closed), red (open)
-- Show time since opened if currently open
-- Quick action button to close
-
-### Voice announcements
-
-Audio reminders throughout home:
-
-- **Trigger:** Garage door open for 10 minutes
-- **Action:** Announce on all speakers: "Just a reminder, the garage door is still open"
-
-### Quiet hours exception
-
-Different behavior at night:
-
-- **Daytime (6 AM - 10 PM):** Notification only after 10 minutes
-- **Nighttime (10 PM - 6 AM):** Immediate notification + auto-close after 5 minutes
-- **Away mode:** Immediate notification + auto-close after 2 minutes
-
-## Troubleshooting
-
-### Issue: Sensor shows wrong state
-
-**Causes:**
-- Tilt sensor mounted incorrectly
-- Contact sensor misaligned
-- Sensor battery dead
-- Wireless interference
-
-**Solutions:**
-✅ Verify sensor mounting - tilt sensors need proper angle
-✅ Check magnet/sensor gap for contact sensors (< 1 inch)
-✅ Replace battery
-✅ Test sensor manually by opening/closing door
-✅ Move sensor if wireless signal is weak
-
-### Issue: Notifications not arriving
-
-**Causes:**
-- Phone notification permissions
-- Automation disabled
-- Network connectivity
-- Do Not Disturb mode blocking
-
-**Solutions:**
-✅ Check notification permissions for smart home app
-✅ Verify automation is enabled and error-free
-✅ Test with manual trigger
-✅ Add app to Do Not Disturb exceptions
-✅ Check hub connectivity
-
-### Issue: Auto-close not working
-
-**Causes:**
-- Smart controller offline
-- Safety sensors blocked
-- Opener not responding
-- Automation condition not met
-
-**Solutions:**
-✅ Test manual close via app
-✅ Check safety sensor alignment (usually at floor level)
-✅ Verify controller is online and connected
-✅ Check automation logs for condition failures
-✅ Ensure opener is in "smart" mode if applicable
-
-### Issue: Too many notifications
-
-**Causes:**
-- Delay too short
-- Door briefly opened multiple times
-- No cooldown between notifications
+<div class="troubleshooting-grid">
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Sensor shows wrong state</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Tilt sensor mounted incorrectly or contact sensor misaligned.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Verify sensor mounting - tilt sensors need proper angle</li>
+        <li>Check magnet/sensor gap for contact sensors (< 1 inch)</li>
+        <li>Replace battery</li>
+        <li>Test sensor manually by opening/closing door</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Notifications not arriving</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Phone notification permissions or automation disabled.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Check notification permissions for smart home app</li>
+        <li>Verify automation is enabled and error-free</li>
+        <li>Test with manual trigger</li>
+        <li>Add app to Do Not Disturb exceptions</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Auto-close not working</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Smart controller offline or safety sensors blocked.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Test manual close via app</li>
+        <li>Check safety sensor alignment (floor level)</li>
+        <li>Verify controller is online and connected</li>
+        <li>Check automation logs for condition failures</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 **Solutions:**
 ✅ Increase delay time (10-15 minutes)

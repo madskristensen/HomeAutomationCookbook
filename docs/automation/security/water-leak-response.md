@@ -129,13 +129,20 @@ AND (if equipped) shut off main water valve</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Any water sensor state changes to "on" or "wet"</li>
-      <li>No conditions - always run</li>
-      <li>Actions: Send persistent notification with sensor name</li>
-      <li>Turn on lights in sensor area</li>
-      <li>Call service to close water shutoff valve (if equipped)</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Any water sensor state changes to "on" or "wet"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">None - always run</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Send persistent notification, turn on lights, close valve</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -143,12 +150,21 @@ AND (if equipped) shut off main water valve</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF Any water sensor detects water</li>
-      <li>THEN Send notification to all members</li>
-      <li>Turn on lights in that room</li>
-      <li>Close smart water valve (if compatible)</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Any water sensor detects water</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Send notification to all members + turn on lights</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Close smart water valve if compatible
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -156,12 +172,21 @@ AND (if equipped) shut off main water valve</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Rule Machine or Hubitat Safety Monitor</li>
-      <li>Trigger: Any water sensor wet</li>
-      <li>Actions: Push notification, turn on lights</li>
-      <li>Close water valve if equipped</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Any water sensor wet</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Actions</span>
+        <span class="step-content">Push notification, turn on lights, close valve</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Rule Machine or Hubitat Safety Monitor
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -169,11 +194,21 @@ AND (if equipped) shut off main water valve</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Water sensor detects leak</li>
-      <li>Do: Send notification, turn on lights</li>
-      <li>Note: Water shutoff requires HomeKit-compatible valve</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Water sensor detects leak</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Send notification, turn on lights</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Water shutoff requires HomeKit-compatible valve
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -181,11 +216,16 @@ AND (if equipped) shut off main water valve</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: Water sensor detects water</li>
-      <li>Action: Send notification, announce on Echo</li>
-      <li>Turn on lights, close valve if compatible</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Water sensor detects water</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Notification, announce on Echo, turn on lights</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -193,11 +233,16 @@ AND (if equipped) shut off main water valve</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: Water sensor detects leak</li>
-      <li>Action: Send notification, turn on lights</li>
-      <li>Announce "Water leak detected" on speakers</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Water sensor detects leak</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Send notification, turn on lights, announce</span>
+      </div>
+    </div>
   </div>
 </div>
 
