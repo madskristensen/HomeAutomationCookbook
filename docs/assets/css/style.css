@@ -1369,7 +1369,7 @@ th {
   }
 
   .breadcrumb span {
-    color: #666;
+    color: #888;
   }
 
   /* Cards */
@@ -1403,7 +1403,7 @@ th {
   }
 
   .automation-card .card-meta {
-    color: #666;
+    color: #888;
   }
 
   .automation-card .card-link {
@@ -1520,7 +1520,7 @@ th {
   /* Footer */
   .site-footer {
     border-top-color: #3a3a3a;
-    color: #666;
+    color: #888;
   }
 
   .footer-links a {
@@ -1631,7 +1631,7 @@ th {
   }
 
   .category-count {
-    color: #666;
+    color: #888;
   }
 
   .getting-started-box {
