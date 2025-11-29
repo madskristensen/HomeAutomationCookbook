@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Miscellaneous Automations - Additional Smart Home Ideas
-description: Additional helpful smart home automations that don't fit other categories. Outdoor lights, doorbell notifications, dashboards, and creative ideas.
-keywords: misc automations, outdoor lights, doorbell notification, smart home ideas, dashboard automation, creative automation, home automation ideas
+description: Additional helpful smart home automations that don't fit other categories. Outdoor lights, doorbell notifications, and creative ideas.
+keywords: misc automations, outdoor lights, doorbell notification, smart home ideas, creative automation, home automation ideas
 ---
 
 # Miscellaneous automations
 
-Here's a collection of helpful automations that don't fit neatly into other categories. From outdoor lighting to dashboard controls, these ideas can add convenience and functionality to your smart home.
+Here's a collection of helpful automations that don't fit neatly into other categories. From outdoor lighting to family-friendly automations, these ideas can add convenience and functionality to your smart home.
 
 <div class="category-intro" markdown="1">
 
@@ -20,8 +20,6 @@ Here's a collection of helpful automations that don't fit neatly into other cate
 **Creative Uses** — Think outside the box with your devices
 
 **Family Friendly** — Helpful for households with kids
-
-**Dashboard Power** — Leverage visual controls and status
 
 **Low Effort, High Value** — Simple automations with big impact
 
@@ -45,13 +43,13 @@ Automatically turn on outdoor lights when it gets dark for safety, aesthetics, a
 
 <div class="automation-card" markdown="1">
 
-### Dashboard controls and status tiles
+### Baby sleep mode
 
-Use dashboard tiles for status, reminders, and controls instead of phone notifications.
+Disable automations in baby's room when they're sleeping using power monitoring on white noise machine.
 
-<span class="card-meta">**Best for:** Household visibility, recurring reminders</span>
+<span class="card-meta">**Best for:** New parents, nap time quiet</span>
 
-<p><a href="/automation/misc/dashboards.html" class="card-link">View Automation →</a></p>
+<p><a href="/automation/misc/baby-sleep-mode.html" class="card-link">View Automation →</a></p>
 
 </div>
 
@@ -66,7 +64,6 @@ Use dashboard tiles for status, reminders, and controls instead of phone notific
 **Common Unautomated Tasks:**
 - Outdoor lights on at dusk
 - Know when doorbell rings
-- Remember garbage day
 - Kids chores and routines
 - Baby/nap time considerations
 
@@ -83,14 +80,6 @@ Use dashboard tiles for status, reminders, and controls instead of phone notific
 - Drawer access
 - Medicine cabinet
 - Pet door usage
-
-### 3. Dashboard thinking
-
-**Shift from Notifications to Tiles:**
-- Notifications get dismissed and forgotten
-- Dashboard tiles persist until addressed
-- Visual status at a glance
-- Family-wide visibility
 
 ---
 
@@ -116,7 +105,6 @@ Use dashboard tiles for status, reminders, and controls instead of phone notific
 - Garage door left open
 
 **Family Reminders:**
-- Garbage day reminder
 - Take medication reminders
 - Time to leave alerts
 
@@ -131,19 +119,6 @@ Use dashboard tiles for status, reminders, and controls instead of phone notific
 - [Remind kids to brush teeth](/automation/misc/teeth-brushing-reminder.html)
 - Homework time mode
 - Screen time limits
-
-### 📊 Dashboard Controls
-
-**Status & Visibility:**
-- [Dashboard status tiles and controls](/automation/misc/dashboards.html)
-- Appliance status
-- Door/window status
-- Music controls
-
-**Reminders:**
-- Garbage day tiles
-- Tasks to complete
-- Deliveries to bring in
 
 ---
 
@@ -176,7 +151,6 @@ Many misc automations are time-driven:
 
 **Examples:**
 - Outdoor lights at sunset
-- Garbage reminder Wednesday 6 PM
 - Teeth reminder 8-10 PM window
 
 ### Virtual switches for state
@@ -190,7 +164,6 @@ Track state across automations:
 
 **Examples:**
 - "Baby Sleeping" switch
-- "Garbage Out" switch
 - "Dishwasher Clean" switch
 
 ---
@@ -320,9 +293,8 @@ Know when packages arrive:
 - [Doorbell Notification →](/automation/misc/doorbell-notification.html)
 - [Baby Sleep Mode →](/automation/misc/baby-sleep-mode.html)
 - [Teeth Brushing Reminder →](/automation/misc/teeth-brushing-reminder.html)
-- [Dashboards →](/automation/misc/dashboards.html)
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/security/">Previous: Security →</a>
+  <a href="/automation/dashboards/">Previous: Dashboards →</a>
 </div>

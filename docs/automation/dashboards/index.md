@@ -5,11 +5,29 @@ description: Create effective smart home dashboards for status, reminders, and c
 keywords: smart home dashboard, status tiles, dashboard controls, SharpTools, garbage reminder, music controls, home dashboard, tablet dashboard
 ---
 
-# Dashboards
+# Dashboard automations
 
 We have four dashboards in our home - each customized to their location and purpose. Three of them are wall-mounted tablets, and one is built for our phones. What they all have in common is that they allow us to see the status of the home and provide controls for what's important.
 
 For information on how to wall mount tablets and create dashboards, there are many options. I'll defer to the many tutorials online, so you can find the one that works best for your home. I'll be using SharpTools in this book because it's the product I use, but also because it works with the most smart home systems including SmartThings, Hubitat and Home Assistant.
+
+<div class="category-intro" markdown="1">
+
+## Why dashboards?
+
+**Persistent Visibility** — Status tiles remind you until tasks are done
+
+**Whole Household** — Everyone sees the same information
+
+**Quick Controls** — One tap to play music or run scenes
+
+**No Voice Needed** — Guests can control without learning commands
+
+**Customizable** — Different dashboards for different locations
+
+**Glanceable** — See home status at a glance
+
+</div>
 
 <div class="info-box">
   <strong>🖥️ Our Kitchen Dashboard</strong>
@@ -442,6 +460,6 @@ Create a special dashboard for parties and gatherings:
 - [Away mode](/automation/presence/away-mode/)
 
 <div class="page-navigation">
-  <a href="/automation/misc/">← Back to Misc Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/">← Back to All Automations</a>
+  <a href="/automation/misc/">Next: Misc Automations →</a>
 </div>

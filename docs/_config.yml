@@ -105,6 +105,15 @@ navigation:
             url: /automation/security/fire-safety.html
           - title: Fake dog deterrent
             url: /automation/security/fake-dog-deterrent.html
+      - title: Dashboards
+        url: /automation/dashboards/
+        subitems:
+          - title: Garbage day reminder
+            url: /automation/dashboards/#garbage-day-reminder
+          - title: Status tiles
+            url: /automation/dashboards/#status-tiles-instead-of-notifications
+          - title: Music controls
+            url: /automation/dashboards/#music-controls
       - title: Miscellaneous
         url: /automation/misc/
         subitems:
@@ -116,8 +125,6 @@ navigation:
             url: /automation/misc/baby-sleep-mode.html
           - title: Teeth brushing reminder
             url: /automation/misc/teeth-brushing-reminder.html
-          - title: Dashboards
-            url: /automation/misc/dashboards.html
   - title: Tips & tricks
     url: /tips/
   - title: Resources
