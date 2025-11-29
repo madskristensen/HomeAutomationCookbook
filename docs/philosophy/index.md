@@ -33,7 +33,7 @@ I created an automation that turned on the lights when the linen closet door ope
 
 In real life, we often push the door ajar rather than fully closing it. When the door wasn't completely closed, the lights stayed on, making the automation seem broken.
 
-### The Fix
+### The fix
 
 I moved the door sensor from the corner of the door to a location where "almost closed" was recognized by the automation as "closed."
 
