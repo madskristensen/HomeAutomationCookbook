@@ -29,10 +29,12 @@
   
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      <p class="footer-copyright">&copy; {{ site.time | date: '%Y' }} <a href="https://x.com/mkristensen">Mads Kristensen</a>. All rights reserved.</p>
       <div class="footer-links">
         <a href="https://github.com/{{ site.repository }}">View on GitHub</a>
-        <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+        <a href="https://github.com/{{ site.repository }}/discussions">Discussions</a>
+        <a href="https://github.com/{{ site.repository }}/issues/new?template=suggest-automation.md">Suggest automation</a>
+        <a href="https://github.com/{{ site.repository }}/issues/new?template=report-issue.md">Report issue</a>
       </div>
     </div>
   </footer>
