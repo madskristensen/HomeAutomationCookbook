@@ -25,10 +25,10 @@ navigation:
   - title: Getting started
     url: /getting-started/
     subitems:
-      - title: Platforms
-        url: /getting-started/platforms/
-      - title: Devices
-        url: /getting-started/devices/
+      - title: Choose the right platform
+        url: /getting-started/choose-the-right-platform.html
+      - title: Device guide
+        url: /getting-started/device-guide.html
   - title: Philosophy
     url: /philosophy/
   - title: Automations
