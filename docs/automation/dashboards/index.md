@@ -455,9 +455,9 @@ Create a special dashboard for parties and gatherings:
 ---
 
 **Related automations:**
-- [Washer done notification](/automation/appliances/washer-done-notification/)
-- [Music controls](/automation/media/music-switch-control/)
-- [Away mode](/automation/presence/away-mode/)
+- [Washer done notification](/automation/appliances/washer-done-notification.html)
+- [Music controls](/automation/media/music-switch-control.html)
+- [Away mode](/automation/presence/away-mode.html)
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
