@@ -74,7 +74,7 @@ Yes! Most platforms support multiple brands. Check compatibility first.
 - Choose a standard (WiFi, Zigbee, Z-Wave)
 - Verify platform support
 - Read reviews for integration quality
-- Consider Matter devices (universal standard)
+- Watch Matter devices for future compatibility, though the standard is still maturing
 </details>
 
 <details markdown="1">
@@ -113,8 +113,6 @@ Use quality alkaline or lithium batteries for best results.
 - ❌ Cheap unknown brands
 - ❌ Cloud-only devices
 - ❌ Outdated firmware
-
-See [Security Best Practices →](/best-practices/#security)
 </details>
 
 ## Automation
@@ -239,7 +237,7 @@ Possibly. Smart devices can congest 2.4GHz.
 - Choose open standards
 - Avoid cloud-only devices
 - Document setup
-- Consider Matter devices
+- Watch Matter for future compatibility once the standard matures
 </details>
 
 <details markdown="1">
@@ -253,9 +251,9 @@ Possibly. Smart devices can congest 2.4GHz.
 - Better security
 - Future-proof
 
-**Status**: Growing device support (2024+)
+**Status**: Growing device support (2024+), but both the standard and devices are still maturing
 
-**Recommendation**: Good choice for new purchases
+**Recommendation**: Not yet recommended for most users. While Matter shows promise and progress is being made, wait for the ecosystem to mature before fully committing to Matter devices.
 </details>
 
 <details markdown="1">
@@ -367,8 +365,6 @@ Examples:
 5. Read privacy policies
 6. Avoid unnecessary features
 7. Regular security audits
-
-[Privacy guide →](/best-practices/#privacy-protection)
 </details>
 
 <details markdown="1">

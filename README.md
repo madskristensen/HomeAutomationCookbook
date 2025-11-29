@@ -70,7 +70,6 @@ We welcome contributions! Here's how you can help:
   - `platforms/` - Platform comparisons
   - `devices/` - Device reviews and recommendations
   - `automation/` - Automation recipes
-  - `best-practices/` - Security and optimization guides
 
 ### Writing Guidelines
 

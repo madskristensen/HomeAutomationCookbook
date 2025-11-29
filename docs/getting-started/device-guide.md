@@ -98,9 +98,19 @@ Smart control for your media.
 - ✅ Reliable, less interference
 - ❌ Requires hub, more expensive
 
-**Thread/Matter**
-- ✅ New standard, future-proof
+**Thread**
+- ✅ Low power, mesh network, IPv6 native
+- ✅ No single point of failure
+- ❌ Requires Thread border router
 - ❌ Limited devices currently
+
+**Matter**
+- ✅ Universal standard, works across platforms
+- ✅ Local control, better security
+- ❌ Standard and devices still maturing
+- ❌ Not recommended yet for most users
+
+> **Note on Matter and Thread**: Thread is a networking protocol, while Matter is an application layer that can run over Thread, WiFi, or Ethernet. Matter shows promise for interoperability, but both the standard and devices are still evolving. Progress is being made, but we recommend waiting for the ecosystem to mature before fully committing to Matter devices.
 
 **Bluetooth**
 - ✅ No hub needed
@@ -141,4 +151,3 @@ Smart control for your media.
 
 - [Choose your platform →](/getting-started/choose-the-right-platform.html)
 - [Create automations →](/automation/)
-- [Setup best practices →](/best-practices/)
