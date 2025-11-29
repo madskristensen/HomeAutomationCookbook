@@ -789,6 +789,159 @@ th {
 /* Homepage Components
    ========================================================================== */
 
+.planning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+}
+
+.planning-card {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.planning-card:hover {
+  background: #fff;
+  border-color: #2c3e50;
+  box-shadow: 0 4px 16px rgba(44,62,80,0.08);
+}
+
+.planning-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.planning-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.planning-card > p {
+  margin: 0 0 1rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.planning-card ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.planning-card li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.planning-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.planning-card li strong {
+  color: #000;
+  font-weight: 600;
+}
+
+.device-starter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+
+.device-starter-card {
+  padding: 1.5rem;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.device-starter-card:hover {
+  border-color: #2c3e50;
+  box-shadow: 0 4px 20px rgba(44,62,80,0.08);
+}
+
+.device-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.device-starter-card h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.device-starter-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.network-requirements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.requirement-item:hover {
+  background: #fff;
+  border-color: #2c3e50;
+  box-shadow: 0 4px 12px rgba(44,62,80,0.08);
+}
+
+.requirement-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.requirement-content {
+  flex: 1;
+}
+
+.requirement-content strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.requirement-content p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
 .platform-logos {
   display: flex;
   flex-wrap: wrap;
@@ -1251,6 +1404,26 @@ th {
     grid-template-columns: 1fr;
   }
   
+  /* Getting started page mobile */
+  .planning-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .device-starter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .network-requirements {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .platform-selection {
+    grid-template-columns: 1fr;
+  }
+  
   /* Navigation mobile */
   .nav-container {
     align-items: center;
@@ -1611,6 +1784,74 @@ th {
   }
 
   /* Homepage */
+  .planning-card {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .planning-card:hover {
+    background: #2a2a2a;
+    border-color: #7a9ab8;
+    box-shadow: 0 4px 16px rgba(122,154,184,0.1);
+  }
+
+  .planning-card h3 {
+    color: #f0f0f0;
+  }
+
+  .planning-card > p {
+    color: #a0a0a0;
+  }
+
+  .planning-card li {
+    color: #a0a0a0;
+  }
+
+  .planning-card li::before {
+    color: #7a9ab8;
+  }
+
+  .planning-card li strong {
+    color: #f0f0f0;
+  }
+
+  .device-starter-card {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .device-starter-card:hover {
+    border-color: #7a9ab8;
+    box-shadow: 0 8px 24px rgba(122,154,184,0.15);
+  }
+
+  .device-starter-card h4 {
+    color: #f0f0f0;
+  }
+
+  .device-starter-card p {
+    color: #a0a0a0;
+  }
+
+  .requirement-item {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .requirement-item:hover {
+    background: #2a2a2a;
+    border-color: #7a9ab8;
+    box-shadow: 0 4px 12px rgba(122,154,184,0.15);
+  }
+
+  .requirement-content strong {
+    color: #f0f0f0;
+  }
+
+  .requirement-content p {
+    color: #a0a0a0;
+  }
+
   .platform-compatibility {
     background: #242424;
   }

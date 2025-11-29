@@ -59,10 +59,10 @@ Hubitat Elevation is a local-first home automation hub that runs entirely on you
 - Active community and marketplace
 
 **Cons:**
-- Hardware purchase required
-- Less polished interface than cloud platforms
-- Steeper learning curve than consumer platforms
+- Requires intermediate to advanced technical knowledge
+- Less polished interface than consumer platforms
 - Smaller integration library than Home Assistant
+- Requires dedicated hardware purchase
 
 **Getting Started:**
 1. Purchase Hubitat Elevation hub
@@ -103,7 +103,7 @@ HomeKit is Apple's smart home platform built into iOS, iPadOS, and macOS.
 
 **Best for**: Beginners wanting extensive device support
 
-SmartThings offers a cloud-based platform with optional hub.
+SmartThings offers a flexible platform with both local and cloud capabilities and optional hub.
 
 **Pros:**
 - Easy to set up
@@ -111,12 +111,12 @@ SmartThings offers a cloud-based platform with optional hub.
 - No hub required for many devices
 - Good mobile app
 - SmartThings Find integration
+- Supports local execution for many automations
 
 **Cons:**
-- Cloud-dependent
 - Some features require subscription
-- Occasional cloud outages
-- Privacy concerns
+- Some cloud dependency for advanced features
+- Privacy concerns with cloud features
 
 **Getting Started:**
 1. Download SmartThings app

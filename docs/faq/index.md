@@ -161,7 +161,7 @@ Common automations:
 - **Home Assistant**: Yes (fully local)
 - **Hubitat**: Yes (fully local)
 - **HomeKit**: Yes (local hub)
-- **SmartThings**: Partial (some local, some cloud)
+- **SmartThings**: Mostly yes (supports local execution for many automations)
 - **Google Home/Alexa**: No (requires cloud)
 </details>
 
