@@ -172,5 +172,5 @@ You don't have to choose just one! Many users run:
 
 ## Next steps
 
-- [Explore compatible devices →](/devices/)
+- [Explore compatible devices →](/getting-started/devices/)
 - [See automation examples →](/automation/)

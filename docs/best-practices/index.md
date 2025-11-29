@@ -349,5 +349,5 @@ Best: "Turn on light when motion AND dark AND home"
 ## Next steps
 
 - [View automations →](/automation/)
-- [Platform guides →](/platforms/)
+- [Platform guides →](/getting-started/platforms/)
 - [Troubleshooting FAQ →](/faq/)
