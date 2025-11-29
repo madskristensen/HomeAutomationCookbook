@@ -13,11 +13,15 @@ Contact sensors are among the most versatile and reliable smart home devices. Th
 
 ## Why Contact Sensors?
 
-- ✨ **Instant Response** - Detect open/close immediately with no delay
-- 🔋 **Long Battery Life** - 1-2 years on a single battery
-- 💯 **Highly Reliable** - Simple magnetic detection, minimal false positives
-- 🎯 **Versatile** - Works on doors, windows, cabinets, garage doors, mailboxes
-- 💰 **Affordable** - Among the most cost-effective smart home sensors
+**Instant Response** — Detect open/close immediately with no delay
+
+**Long Battery Life** — 1-2 years on a single battery
+
+**Highly Reliable** — Simple magnetic detection, minimal false positives
+
+**Versatile** — Works on doors, windows, cabinets, garage doors, mailboxes
+
+**Affordable** — Among the most cost-effective smart home sensors
 
 </div>
 

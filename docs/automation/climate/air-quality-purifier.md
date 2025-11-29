@@ -240,4 +240,7 @@ If you don't have an air purifier:
 - [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
 - [Away mode automation](/automation/presence/away-mode/)
 
-[← Back to climate automations](/automation/climate/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/climate/">← Back to Climate Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

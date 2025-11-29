@@ -144,11 +144,11 @@ Adjust behavior based on season:
 - Pets triggering door sensors
 
 **Solutions:**
-✅ Increase delay to 2-3 minutes before shutting off thermostat
-✅ Differentiate between frequently-used doors (longer delay) and windows (shorter delay)
-✅ Exclude mudroom/garage doors that open briefly
-✅ Add condition: Only shut off if multiple windows open OR open for extended time
-✅ Add manual override: Button to temporarily disable automation
+- ✅ Increase delay to 2-3 minutes before shutting off thermostat
+- ✅ Differentiate between frequently-used doors (longer delay) and windows (shorter delay)
+- ✅ Exclude mudroom/garage doors that open briefly
+- ✅ Add condition: Only shut off if multiple windows open OR open for extended time
+- ✅ Add manual override: Button to temporarily disable automation
 
 ### Issue: Temperature becomes uncomfortable
 
@@ -183,12 +183,12 @@ Adjust behavior based on season:
 - Network connectivity issues
 
 **Solutions:**
-✅ Test contact sensors individually - open window and check status in app
-✅ Verify automation is enabled and has no error indicators
-✅ Check thermostat API compatibility - some thermostats can't be turned off remotely
-✅ Review automation logs to see if triggers are firing
-✅ Test thermostat control manually - try turning off via app first
-✅ Check WiFi signal strength for both sensors and thermostat
+- ✅ Test contact sensors individually - open window and check status in app
+- ✅ Verify automation is enabled and has no error indicators
+- ✅ Check thermostat API compatibility - some thermostats can't be turned off remotely
+- ✅ Review automation logs to see if triggers are firing
+- ✅ Test thermostat control manually - try turning off via app first
+- ✅ Check WiFi signal strength for both sensors and thermostat
 
 ---
 
@@ -197,4 +197,7 @@ Adjust behavior based on season:
 - [Smart window open/close notifications](/automation/climate/window-notifications/)
 - [Away mode automation](/automation/presence/away-mode/)
 
-[← Back to climate automations](/automation/climate/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/climate/">← Back to Climate Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

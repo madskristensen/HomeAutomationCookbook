@@ -13,12 +13,17 @@ Motion detection is one of the most powerful tools in a home automator's arsenal
 
 ## Why Motion Detection?
 
-- ✨ **Hands-Free Lighting** - Lights turn on automatically as you enter any room
-- 🔋 **Energy Savings** - Lights turn off when rooms are unoccupied
-- 🌙 **Safety at Night** - Never stumble in the dark again
-- 🎯 **True Automation** - Works without any input from you
-- 💡 **Versatile** - Beyond lights: music, notifications, security alerts
-- 🏃 **Fast Response** - Modern sensors detect motion in milliseconds
+**Hands-Free Lighting** — Lights turn on automatically as you enter any room
+
+**Energy Savings** — Lights turn off when rooms are unoccupied
+
+**Safety at Night** — Never stumble in the dark again
+
+**True Automation** — Works without any input from you
+
+**Versatile** — Beyond lights: music, notifications, security alerts
+
+**Fast Response** — Modern sensors detect motion in milliseconds
 
 </div>
 

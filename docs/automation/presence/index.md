@@ -13,12 +13,17 @@ Presence detection and home modes unlock powerful automations based on location 
 
 ## Why Presence Detection?
 
-- 🏠 **Automatic Home/Away** - House knows when everyone leaves or arrives
-- ⚡ **Energy Savings** - Reduce heating/cooling when away by 10-15%
-- 🔐 **Enhanced Security** - Arm systems automatically when you leave
-- 🚪 **Seamless Entry** - Unlock doors, turn on lights as you arrive
-- 🌅 **Daily Routines** - Morning and bedtime automations happen automatically
-- 🎯 **Location Context** - Automations adapt based on who's home
+**Automatic Home/Away** — House knows when everyone leaves or arrives
+
+**Energy Savings** — Reduce heating/cooling when away by 10-15%
+
+**Enhanced Security** — Arm systems automatically when you leave
+
+**Seamless Entry** — Unlock doors, turn on lights as you arrive
+
+**Daily Routines** — Morning and bedtime automations happen automatically
+
+**Location Context** — Automations adapt based on who's home
 
 </div>
 
@@ -388,73 +393,6 @@ action:
 4. Enable actions gradually
 5. Monitor for another week
 6. Fine-tune based on real usage
-
----
-
-## Platform-Specific Setup
-
-### Home Assistant
-
-**Person Integration:**
-```yaml
-person:
-  - name: Family Member
-    id: family_member
-    device_trackers:
-      - device_tracker.phone_gps
-      - device_tracker.phone_wifi
-```
-
-**Input Select for Modes:**
-```yaml
-input_select:
-  house_mode:
-    name: House Mode
-    options:
-      - Home
-      - Away
-      - Night
-    initial: Home
-```
-
-### SmartThings
-
-**Location Services:**
-- Settings → Location → Members
-- Add family members
-- Enable location sharing
-
-**Modes:**
-- Built-in: Home, Away, Night
-- Custom modes available
-- Automation-friendly
-
-### Apple HomeKit
-
-**People & Locations:**
-- Home app → Home Settings → People
-- Invite family members
-- Uses iPhone location
-
-**Automation Triggers:**
-- First person arrives
-- Last person leaves
-- Specific person arrives/leaves
-
-### Life360
-
-**Multi-Platform Integration:**
-- Integrates with Home Assistant
-- SmartThings support
-- Dedicated location tracking
-- Family circle management
-
-**Benefits:**
-- Better location accuracy
-- More reliable
-- Battery efficient
-- Works with multiple platforms
-
 
 ---
 

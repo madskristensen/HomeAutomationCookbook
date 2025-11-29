@@ -128,4 +128,7 @@ See also:
 - [Bedtime Routine](/automation/presence/bedtime-routine/) - Evening counterpart
 - [Set Away Mode](/automation/presence/away-mode/) - Leaving home
 
-[← Back to Presence & Modes](/automation/presence/) | [View All Automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/presence/">← Back to Presence Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

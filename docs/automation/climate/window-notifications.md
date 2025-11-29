@@ -229,4 +229,7 @@ Add multiple conditions:
 - [Resume thermostat when all windows close](/automation/climate/thermostat-windows-close/)
 - [Activate air purifier when air quality drops](/automation/climate/air-quality-purifier/)
 
-[← Back to climate automations](/automation/climate/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/climate/">← Back to Climate Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

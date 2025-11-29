@@ -264,4 +264,7 @@ Different presets for different activities:
 - [Welcome home music automation](/automation/media/welcome-home-music/)
 - [Control music with physical switch](/automation/media/music-switch-control/)
 
-[← Back to media automations](/automation/media/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/media/">← Back to Media Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

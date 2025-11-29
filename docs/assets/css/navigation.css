@@ -1,7 +1,7 @@
 /* Navigation Styles */
 .main-navigation {
-  background: #2c3e50;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -10,7 +10,7 @@
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,16 +19,17 @@
 }
 
 .site-title {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 600;
   text-decoration: none;
-  padding: 1rem 0;
+  padding: 1.25rem 0;
   display: inline-block;
+  letter-spacing: -0.01em;
 }
 
 .site-title:hover {
-  color: #3498db;
+  color: #0066cc;
 }
 
 /* Hide the checkbox visually but keep it functional */
@@ -47,9 +48,9 @@
 
 .nav-toggle span {
   display: block;
-  width: 25px;
-  height: 3px;
-  background: #fff;
+  width: 24px;
+  height: 2px;
+  background: #000;
   margin: 5px 0;
   transition: 0.3s;
 }
@@ -59,7 +60,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
 .nav-item {
@@ -67,16 +68,16 @@
 }
 
 .nav-link {
-  color: #fff;
+  color: #666;
   text-decoration: none;
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1rem;
   display: block;
-  transition: background 0.3s, color 0.3s;
+  transition: color 0.2s;
+  font-size: 0.95rem;
 }
 
 .nav-link:hover {
-  background: #34495e;
-  color: #3498db;
+  color: #0066cc;
 }
 
 .dropdown-arrow {
@@ -89,13 +90,14 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: #34495e;
+  background: #fff;
   min-width: 220px;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
 }
 
 .nav-item.has-dropdown:hover .dropdown-menu,
@@ -109,16 +111,17 @@
 }
 
 .dropdown-item a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   padding: 0.75rem 1.25rem;
   display: block;
-  transition: background 0.3s;
+  transition: background 0.2s, color 0.2s;
+  font-size: 0.95rem;
 }
 
 .dropdown-item a:hover {
-  background: #2c3e50;
-  color: #3498db;
+  background: #f5f5f5;
+  color: #0066cc;
 }
 
 /* Flyout arrow indicator */
@@ -134,13 +137,14 @@
   position: absolute;
   top: 0;
   left: 100%;
-  background: #2c3e50;
+  background: #fff;
   min-width: 240px;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
   z-index: 1001;
 }
 
@@ -154,17 +158,17 @@
 }
 
 .flyout-item a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   padding: 0.65rem 1.25rem;
   display: block;
-  transition: background 0.3s;
-  font-size: 0.95em;
+  transition: background 0.2s, color 0.2s;
+  font-size: 0.9rem;
 }
 
 .flyout-item a:hover {
-  background: #34495e;
-  color: #3498db;
+  background: #f5f5f5;
+  color: #0066cc;
 }
 
 /* Mobile responsive */
@@ -193,9 +197,10 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: #2c3e50;
+    background: #fff;
     padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e0e0e0;
     order: 2;
     width: 100%;
   }
@@ -213,7 +218,8 @@
     position: static;
     display: none;
     box-shadow: none;
-    background: #2c3e50;
+    background: #fafafa;
+    border: none;
   }
   
   /* Show dropdown on focus-within (tap/click/keyboard) */
@@ -223,10 +229,12 @@
   
   .nav-link {
     padding: 0.75rem 1.25rem;
+    color: #333;
   }
   
   .dropdown-item a {
     padding-left: 2.5rem;
+    color: #666;
   }
   
   /* Mobile flyout menu (nested inline) */
@@ -234,7 +242,8 @@
     position: static;
     display: none;
     box-shadow: none;
-    background: #1a252f;
+    background: #f0f0f0;
+    border: none;
   }
   
   /* Show flyout on focus-within (tap/click/keyboard) */
@@ -245,6 +254,7 @@
   .flyout-item a {
     padding-left: 3.75rem;
     font-size: 0.9em;
+    color: #666;
   }
   
   .flyout-arrow {
@@ -256,19 +266,19 @@
 .breadcrumb {
   padding: 1rem 0;
   margin-bottom: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .breadcrumb a {
-  color: #3498db;
+  color: #0066cc;
   text-decoration: none;
 }
 
 .breadcrumb a:hover {
-  text-decoration: underline;
+  color: #004499;
 }
 
 .breadcrumb span {
-  color: #7f8c8d;
+  color: #999;
   margin: 0 0.5rem;
 }

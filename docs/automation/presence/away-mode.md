@@ -397,4 +397,7 @@ Create automation that detects quick return (door opens within 1 hour of away mo
 - [Morning routine](/automation/presence/morning-routine/)
 - [Bedtime routine](/automation/presence/bedtime-routine/)
 
-[← Back to presence & modes](/automation/presence/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/presence/">← Back to Presence Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

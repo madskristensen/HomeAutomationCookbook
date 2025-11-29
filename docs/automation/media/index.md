@@ -11,12 +11,17 @@ Music and entertainment control automations make your smart home feel more alive
 
 ## Why Media Automation?
 
-- 🎵 **Soundtrack Your Life** - Music starts automatically for different activities
-- 🎬 **Perfect Ambiance** - Lights dim automatically when watching movies
-- 🚿 **Morning Motivation** - Shower music plays without touching your phone
-- 🏠 **Welcome Home** - Arrive to music and perfect lighting
-- 🔘 **Physical Control** - Buttons and switches are faster than voice commands
-- 🔊 **Consistent Volume** - No more blasting speakers or quiet audio
+**Soundtrack Your Life** — Music starts automatically for different activities
+
+**Perfect Ambiance** — Lights dim automatically when watching movies
+
+**Morning Motivation** — Shower music plays without touching your phone
+
+**Welcome Home** — Arrive to music and perfect lighting
+
+**Physical Control** — Buttons and switches are faster than voice commands
+
+**Consistent Volume** — No more blasting speakers or quiet audio
 
 </div>
 

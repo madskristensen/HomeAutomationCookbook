@@ -138,4 +138,7 @@ Create automation with these elements:
 **Related automations:**
 - [Disable automations when door closed](/automation/contact/disable-on-door-close/)
 
-[← Back to contact sensor automations](/automation/contact/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/contact/">← Back to Contact Sensor Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

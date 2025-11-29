@@ -243,4 +243,7 @@ Add conditions to automation:
 - [Dryer done notification](/automation/appliances/dryer-done-notification/)
 - [Morning routine automation](/automation/presence/morning-routine/)
 
-[← Back to appliance automations](/automation/appliances/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/appliances/">← Back to Appliance Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

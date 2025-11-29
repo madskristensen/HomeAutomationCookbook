@@ -283,4 +283,7 @@ This prevents sudden brightness changes that disrupt sleep.
 - [Turn off lights after motion stops](/automation/motion/lights-off-after-motion/)
 - [Night mode setup](/automation/presence/night-mode/)
 
-[← Back to motion detection automations](/automation/motion/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/motion/">← Back to Motion Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

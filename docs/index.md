@@ -36,9 +36,6 @@ Dozens of practical automations organized by category:
 - **[Climate](/automation/climate/)** - Temperature, humidity, and air quality control
 - **[Media](/automation/media/)** - Music and entertainment automations
 - **[Appliances](/automation/appliances/)** - Washer, dryer, dishwasher, and robot vacuum automations
-- **[Security & Safety](/automation/security/)** - Protect your home and family
-- **[Miscellaneous](/automation/misc/)** - Additional helpful automations
-- **[Dashboards](/automation/dashboards/)** - Visual control interfaces
 
 ### 📚 Resources
 

@@ -286,4 +286,7 @@ Modify trigger with:
 - [Turn on bathroom fan when starting shower](/automation/climate/fan-shower/)
 - [Bedtime routine automation](/automation/presence/bedtime-routine/)
 
-[← Back to climate automations](/automation/climate/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/climate/">← Back to Climate Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

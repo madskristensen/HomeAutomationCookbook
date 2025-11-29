@@ -229,4 +229,7 @@ This ensures music plays even if one detection method fails.
 - [Control music with physical switch](/automation/media/music-switch-control/)
 - [Morning routine automation](/automation/presence/morning-routine/)
 
-[← Back to media automations](/automation/media/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/media/">← Back to Media Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

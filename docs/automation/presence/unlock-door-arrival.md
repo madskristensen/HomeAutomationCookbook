@@ -396,4 +396,7 @@ Create automation that monitors lock battery level and sends notification when i
 - [Morning routine](/automation/presence/morning-routine/)
 - [Home mode activation](/automation/presence/)
 
-[← Back to presence & modes](/automation/presence/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/presence/">← Back to Presence Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

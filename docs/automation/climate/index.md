@@ -11,12 +11,17 @@ Controlling your indoor climate for optimal comfort and energy savings is at the
 
 ## Why Climate Automation?
 
-- 💰 **Energy Savings** - Save 10-30% on heating and cooling costs
-- 🌡️ **Perfect Comfort** - Maintain ideal temperature in every room
-- 🪟 **Smart HVAC Control** - Don't heat/cool the outdoors when windows open
-- 💨 **Air Quality** - Automatically improve indoor air quality
-- 🤖 **Set and Forget** - Climate adjusts without your input
-- 🌍 **Eco-Friendly** - Reduce energy waste and carbon footprint
+**Energy Savings** — Save 10-30% on heating and cooling costs
+
+**Perfect Comfort** — Maintain ideal temperature in every room
+
+**Smart HVAC Control** — Don't heat/cool the outdoors when windows open
+
+**Air Quality** — Automatically improve indoor air quality
+
+**Set and Forget** — Climate adjusts without your input
+
+**Eco-Friendly** — Reduce energy waste and carbon footprint
 
 </div>
 

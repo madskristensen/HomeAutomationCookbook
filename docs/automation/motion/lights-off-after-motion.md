@@ -271,4 +271,7 @@ While LED bulbs use minimal power, automatic shutoff still provides benefits:
 - [Turn on lights when motion detected](/automation/motion/lights-on-motion/)
 - [Bathroom night light automation](/automation/motion/bathroom-night-light/)
 
-[← Back to motion detection automations](/automation/motion/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/motion/">← Back to Motion Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

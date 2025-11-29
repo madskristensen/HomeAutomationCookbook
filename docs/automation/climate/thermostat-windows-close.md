@@ -207,4 +207,7 @@ Add time condition: Only resume between 6 AM and 11 PM (not during sleep hours w
 - [Smart window open/close notifications](/automation/climate/window-notifications/)
 - [Morning routine automation](/automation/presence/morning-routine/)
 
-[← Back to climate automations](/automation/climate/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/climate/">← Back to Climate Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

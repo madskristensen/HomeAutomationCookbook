@@ -200,4 +200,7 @@ For larger rooms, use multiple motion sensors to track which area someone is in 
 - [Turn off lights after motion stops](/automation/motion/lights-off-after-motion/)
 - [Nighttime bathroom lighting](/automation/motion/bathroom-night-light/)
 
-[← Back to motion detection automations](/automation/motion/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/motion/">← Back to Motion Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

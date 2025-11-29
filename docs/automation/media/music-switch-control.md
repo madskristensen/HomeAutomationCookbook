@@ -240,4 +240,7 @@ Clear any current playback before starting new music:
 - [Welcome home music automation](/automation/media/welcome-home-music/)
 - [Speaker volume presets](/automation/media/speaker-volume-presets/)
 
-[← Back to media automations](/automation/media/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/media/">← Back to Media Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

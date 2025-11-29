@@ -228,4 +228,7 @@ Add diagnostics to automation:
 - [Morning routine automation](/automation/presence/morning-routine/)
 - [Washer done notification](/automation/appliances/washer-done-notification/)
 
-[← Back to appliance automations](/automation/appliances/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/appliances/">← Back to Appliance Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

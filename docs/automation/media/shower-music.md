@@ -231,4 +231,7 @@ Sequence of actions:
 - [Morning routine automation](/automation/presence/morning-routine/)
 - [Speaker volume presets](/automation/media/speaker-volume-presets/)
 
-[← Back to media automations](/automation/media/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/media/">← Back to Media Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

@@ -166,4 +166,7 @@ Prevents accidentally leaving automations disabled permanently.
 - [Toggle lights on door open](/automation/contact/toggle-lights-door/)
 - [Turn off lights after motion stops](/automation/motion/lights-off-after-motion/)
 
-[← Back to contact sensor automations](/automation/contact/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/contact/">← Back to Contact Sensor Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

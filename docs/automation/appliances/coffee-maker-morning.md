@@ -297,4 +297,7 @@ Create emergency shutoff automation:
 - [Play music when shower starts](/automation/media/shower-music/)
 - [Turn on bathroom fan when starting shower](/automation/climate/fan-shower/)
 
-[← Back to appliance automations](/automation/appliances/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/appliances/">← Back to Appliance Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

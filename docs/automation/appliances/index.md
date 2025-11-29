@@ -11,12 +11,17 @@ The latest generation of appliances have WiFi connectivity and phone apps. But y
 
 ## Why Appliance Automation?
 
-- 🔔 **Never Forget** - Get notified when washer, dryer, or dishwasher finishes
-- 🤖 **Hands-Free Operation** - Robot vacuum runs automatically when you leave
-- ☕ **Perfect Timing** - Coffee ready exactly when you wake up
-- ⚡ **Energy Monitoring** - Track power usage of any appliance
-- 🧠 **Smart Scheduling** - Run appliances during off-peak electricity hours
-- 💡 **Any Appliance** - Even "dumb" appliances become smart with power monitoring
+**Never Forget** — Get notified when washer, dryer, or dishwasher finishes
+
+**Hands-Free Operation** — Robot vacuum runs automatically when you leave
+
+**Perfect Timing** — Coffee ready exactly when you wake up
+
+**Energy Monitoring** — Track power usage of any appliance
+
+**Smart Scheduling** — Run appliances during off-peak electricity hours
+
+**Any Appliance** — Even "dumb" appliances become smart with power monitoring
 
 </div>
 

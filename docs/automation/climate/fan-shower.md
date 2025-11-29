@@ -192,4 +192,7 @@ Since your smart home now knows when you're showering:
 - [Morning routine automation](/automation/presence/morning-routine/)
 - [Maintain room temperature with smart heater](/automation/climate/room-heater-maintain-temp/)
 
-[← Back to climate automations](/automation/climate/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/climate/">← Back to Climate Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

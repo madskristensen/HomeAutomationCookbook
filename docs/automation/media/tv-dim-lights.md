@@ -234,4 +234,7 @@ Add condition: No motion detected in last 5 minutes before dimming lights
 - [Bedtime routine automation](/automation/presence/bedtime-routine/)
 - [Speaker volume presets](/automation/media/speaker-volume-presets/)
 
-[← Back to media automations](/automation/media/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/media/">← Back to Media Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>

@@ -225,4 +225,7 @@ Send notification if any issues.
 - [Set away mode](/automation/presence/away-mode/)
 - [Bathroom night light](/automation/motion/bathroom-night-light/)
 
-[← Back to presence & modes](/automation/presence/) | [View all automations →](/automation/)
+<div class="page-navigation">
+  <a href="/automation/presence/">← Back to Presence Automations</a>
+  <a href="/automation/">View All Automations →</a>
+</div>
