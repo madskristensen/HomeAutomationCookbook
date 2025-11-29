@@ -149,12 +149,25 @@ See [Presence & Modes Automations](/automation/daily-routines/) for detailed Nig
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Motion sensor detects movement</li>
-      <li>Condition: House mode is "Night" OR time between 10 PM and 6 AM</li>
-      <li>Action: Turn on bathroom light at 10% brightness</li>
-      <li>Set warm white (2700K) color temperature</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Motion sensor detects movement</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">House mode is "Night" OR time between 10 PM and 6 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on bathroom light at 10% brightness</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Tip:</strong> Set warm white (2700K) color temperature for minimal sleep disruption
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -162,11 +175,20 @@ See [Presence & Modes Automations](/automation/daily-routines/) for detailed Nig
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF: "Bathroom Motion Sensor" detects motion</li>
-      <li>AND: Location mode is "Night"</li>
-      <li>THEN: Set "Bathroom Light" to 10% brightness</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">"Bathroom Motion Sensor" detects motion</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">AND</span>
+        <span class="step-content">Location mode is "Night"</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Set "Bathroom Light" to 10% brightness</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -174,12 +196,25 @@ See [Presence & Modes Automations](/automation/daily-routines/) for detailed Nig
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Motion Lighting app or Rule Machine</li>
-      <li>Trigger: Motion sensor active</li>
-      <li>Condition: Mode is "Night" OR time 10 PM - 6 AM</li>
-      <li>Action: Turn on bathroom light at 10%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Motion sensor active</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Mode is "Night" OR time 10 PM - 6 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on bathroom light at 10%</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Motion Lighting app or Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -187,12 +222,20 @@ See [Presence & Modes Automations](/automation/daily-routines/) for detailed Nig
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Create automation in Home app</li>
-      <li>When: Bathroom motion sensor detects motion</li>
-      <li>Time: Between 10 PM and 6 AM</li>
-      <li>Do: Turn on bathroom light at 10%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Bathroom motion sensor detects motion</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Time</span>
+        <span class="step-content">Between 10 PM and 6 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn on bathroom light at 10%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -200,11 +243,20 @@ See [Presence & Modes Automations](/automation/daily-routines/) for detailed Nig
       <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: "Bathroom Motion Sensor" detects motion</li>
-      <li>Add condition: Time between 10 PM and 6 AM</li>
-      <li>Alexa will: Turn on "Bathroom Light" to 10%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">"Bathroom Motion Sensor" detects motion</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time between 10 PM and 6 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on "Bathroom Light" to 10%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -212,158 +264,182 @@ See [Presence & Modes Automations](/automation/daily-routines/) for detailed Nig
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">"Bathroom Motion Sensor" detects motion</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Between 10 PM and 6 AM</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Set "Bathroom Light" brightness to 10%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Advanced features
+
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Multiple brightness levels</h3>
+    <p>Adjust brightness based on time of night:</p>
+    <div class="brightness-schedule">
+      <div class="brightness-item">
+        <span class="time-badge">9 PM - 11 PM</span>
+        <span class="brightness-level">15%</span>
+        <span class="brightness-desc">Still awake, moderate light</span>
+      </div>
+      <div class="brightness-item">
+        <span class="time-badge">11 PM - 5 AM</span>
+        <span class="brightness-level">5%</span>
+        <span class="brightness-desc">Deep night, very warm (2200K)</span>
+      </div>
+      <div class="brightness-item">
+        <span class="time-badge">5 AM - 7 AM</span>
+        <span class="brightness-level">20%</span>
+        <span class="brightness-desc">Early morning, warm (2700K)</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Strategic sensor placement</h3>
+    <p>The motion sensor doesn't have to be in the room you want to light up:</p>
+    <ul>
+      <li><strong>Separate toilet room:</strong> Sensor in main bathroom triggers both lights</li>
+      <li><strong>Bedroom sensor</strong> triggers bathroom lights</li>
+      <li><strong>Hallway sensor</strong> triggers multiple room lights</li>
+      <li><strong>Stairway sensor</strong> triggers upstairs bathroom</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Color temperature guidelines</h3>
+    <p>Choose appropriate color for minimal sleep disruption:</p>
+    <ul>
+      <li><strong>Warm White (2200-2700K):</strong> Minimal melatonin suppression</li>
+      <li><strong>Ultra Warm/Red (1800K):</strong> Even less sleep disruption</li>
+      <li><strong>Avoid Cool White (4000K+):</strong> Suppresses melatonin, disrupts sleep</li>
+    </ul>
+  </div>
+</div>
+
+<div class="placement-grid">
+  <div class="placement-card">
+    <h3>Brightness by location</h3>
+    <ul>
+      <li><strong>Very Low (5-8%):</strong> Bedroom, baby's room</li>
+      <li><strong>Low (10-15%):</strong> Bathroom, toilet room</li>
+      <li><strong>Medium-Low (15-25%):</strong> Hallway, kitchen, stairs</li>
+    </ul>
+  </div>
+  
+  <div class="placement-card">
+    <h3>Extending to other rooms</h3>
+    <ul>
+      <li><strong>Hallways:</strong> 15%, warm white (2200K)</li>
+      <li><strong>Kitchen:</strong> 20%, warm (2700K)</li>
+      <li><strong>Stairs:</strong> 25%, safety priority</li>
+      <li><strong>Kids' rooms:</strong> 8%, very low</li>
+    </ul>
+  </div>
+</div>
+
+<div class="best-practice-card">
+  <h3>Auto turn-off integration</h3>
+  <ol>
+    <li>Trigger: Motion sensor shows no motion for 5 minutes</li>
+    <li>Condition: House mode is "Night"</li>
+    <li>Action: Turn off bathroom light</li>
+  </ol>
+</div>
+
+See [Turn off lights after motion stops](/automation/lighting/lights-off-after-motion/) for complete details.
+
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Per-person brightness</h3>
+    <p>Use presence detection to adjust brightness by person:</p>
+    <ul>
+      <li><strong>Parent 1 home:</strong> 5% brightness (very dim preference)</li>
+      <li><strong>Parent 2 home:</strong> 15% brightness (slightly brighter preference)</li>
+      <li><strong>Guests/others:</strong> 10% brightness (default)</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Gradual brightening</h3>
+    <p>Lights start very dim and gradually increase:</p>
     <ol>
-      <li>Starter: "Bathroom Motion Sensor" detects motion</li>
-      <li>Condition: Between 10 PM and 6 AM</li>
-      <li>Action: Set "Bathroom Light" brightness to 10%</li>
+      <li>Start at 5% brightness</li>
+      <li>Wait 3 seconds</li>
+      <li>Check if motion still detected</li>
+      <li>If yes, increase to 10% with 2-second transition</li>
     </ol>
   </div>
 </div>
 
-### Advanced: Multiple brightness levels by time
+## Common issues and solutions
 
-Adjust brightness based on time of night:
-- **Deep night (11 PM - 5 AM):** 5% brightness, very warm (2200K)
-- **Early morning (5 AM - 7 AM):** 20% brightness, warm (2700K)
-- **Late evening (9 PM - 11 PM):** 15% brightness, warm white
-
-Use conditional logic to check current time and set appropriate brightness level.
-
-## Pro tips
-
-### Strategic sensor placement
-
-The motion sensor doesn't have to be in the room you want to light up!
-
-**Example: Separate toilet room**
-
-In my bathroom with a separate toilet room:
-- Motion sensor is in main bathroom
-- Lights triggered: Both main bathroom AND toilet room
-- **Benefit:** Lights come on BEFORE entering toilet room
-- Path is lit up in advance
-
-**Other strategic placements:**
-- Bedroom sensor → Bathroom lights
-- Hallway sensor → Multiple room lights
-- Stairway sensor → Upstairs bathroom
-
-### Brightness levels by location
-
-Different rooms may need different nighttime brightness:
-
-**Very Low (5-8%):**
-- Bedroom
-- Baby's room
-- Reading area
-
-**Low (10-15%):**
-- Bathroom
-- Toilet room
-- Bedroom hallway
-
-**Medium-Low (15-25%):**
-- Main hallway
-- Kitchen
-- Stairs (safety priority)
-
-### Color temperature guidelines
-
-**Warm White (2200-2700K):**
-- Minimal melatonin suppression
-- Comfortable orange/amber glow
-- Best for sleep maintenance
-
-**Ultra Warm/Red (1800K or Red):**
-- Even less sleep disruption
-- Takes time to adjust (seems very dim)
-- Best for frequent night wakers
-
-**Avoid:**
-- Cool white (4000K+) - suppresses melatonin
-- Blue tones - very disruptive to sleep
-- Bright white - defeats the purpose
-
-## Auto turn-off integration
-
-Combine with motion-stop automation for complete cycle:
-- **Trigger:** Motion sensor shows no motion for 5 minutes
-- **Condition:** House mode is "Night"
-- **Action:** Turn off bathroom light
-
-See [Turn off lights after motion stops](/automation/lighting/lights-off-after-motion/) for complete details.
-
-## Extending to other rooms
-
-Apply the same pattern throughout your home:
-
-### Hallways
-- 15% brightness
-- Warm white (2200K)
-
-### Kitchen
-- 20% brightness
-- Warm (2700K)
-
-### Stairs (safety priority)
-- 25% brightness (brighter for safety)
-- Warm (2700K)
-
-### Kids' rooms
-- 8% brightness (very low)
-- Warm white (2200K)
-
-## Advanced: Personal preferences
-
-### Per-person brightness
-
-Use presence detection to adjust brightness by person:
-- **Parent 1 home:** 5% brightness (very dim preference)
-- **Parent 2 home:** 15% brightness (slightly brighter preference)
-- **Guests/others:** 10% brightness (default)
-
-Use conditional logic to check which person is home and set their preferred brightness.
-
-### Gradual brightening
-
-Lights start very dim and gradually increase:
-1. Start at 5% brightness
-2. Wait 3 seconds
-3. Check if motion still detected
-4. If yes, increase to 10% with 2-second transition
-
-This prevents sudden brightness changes that disrupt sleep.
-
-## Troubleshooting
-
-### Lights still too bright
-
-**Try:**
-- Reduce to 5% or lower
-- Use red/amber color if supported
-- Add dimming film to bulb (diffuses light)
-- Use nightlight instead for minimal illumination
-
-### Lights too dim for safety
-
-**Try:**
-- Increase to 15-20%
-- Use warmer but brighter setting
-- Add additional lighting in critical areas
-- Motion-sensitive nightlights as backup
-
-### Delay before lights come on
-
-**Causes:**
-- Cloud processing
-- Sensor placement
-- Weak wireless signal
-
-**Solutions:**
-- Ensure local automation processing
-- Move sensor closer to entry point
-- Add Zigbee/Z-Wave repeaters
-- Optimize automation logic
+<div class="troubleshooting-grid">
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Lights still too bright</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Even at lowest setting, lights are too bright for comfortable sleep.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Reduce to 5% or lower if bulb supports it</li>
+        <li>Use red/amber color if supported</li>
+        <li>Add dimming film to bulb (diffuses light)</li>
+        <li>Use dedicated nightlight instead</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Lights too dim for safety</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Lighting is not sufficient for safe navigation.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Increase to 15-20%</li>
+        <li>Use warmer but brighter setting</li>
+        <li>Add additional lighting in critical areas</li>
+        <li>Motion-sensitive nightlights as backup</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Delay before lights come on</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Noticeable delay between motion detection and lights turning on.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Ensure local automation processing</li>
+        <li>Move sensor closer to entry point</li>
+        <li>Add Zigbee/Z-Wave repeaters</li>
+        <li>Optimize automation logic</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ---
 
