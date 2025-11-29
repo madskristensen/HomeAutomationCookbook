@@ -104,11 +104,20 @@ THEN turn on closet light to 100%</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Trigger: Closet door opens</li>
-      <li>Condition: Light level below 50 lux</li>
-      <li>Action: Turn on light at 100%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Closet door opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Light level below 50 lux</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on light at 100%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -116,10 +125,16 @@ THEN turn on closet light to 100%</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>IF "Closet Door Sensor" opens</li>
-      <li>THEN Turn on "Closet Light" to 100%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">"Closet Door Sensor" opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Turn on "Closet Light" to 100%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -127,11 +142,21 @@ THEN turn on closet light to 100%</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Simple Automation Rules or Rule Machine</li>
-      <li>Trigger: Contact sensor opens</li>
-      <li>Action: Turn on closet light to 100%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Contact sensor opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on closet light to 100%</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Simple Automation Rules or Rule Machine
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -139,11 +164,20 @@ THEN turn on closet light to 100%</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>When: Door sensor detects open</li>
-      <li>Time: Anytime (or add condition)</li>
-      <li>Do: Turn on Closet Light</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Door sensor detects open</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Time</span>
+        <span class="step-content">Anytime (or add condition)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn on Closet Light</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -151,11 +185,20 @@ THEN turn on closet light to 100%</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>When: "Door Sensor" opens</li>
-      <li>Add condition: Time between sunrise/sunset</li>
-      <li>Action: Turn on light to 100%</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">"Door Sensor" opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time between sunrise/sunset</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on light to 100%</span>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -163,30 +206,45 @@ THEN turn on closet light to 100%</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Starter: "Door Sensor" opens</li>
-      <li>Condition: Time of day (optional)</li>
-      <li>Action: Turn on "Closet Light"</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">"Door Sensor" opens</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Condition</span>
+        <span class="step-content">Time of day (optional)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on "Closet Light"</span>
+      </div>
+    </div>
   </div>
 </div>
 
 ## Advanced features
 
-### Day vs. night brightness
-
-Adjust brightness based on time of day:
-- **Nighttime (10 PM - 6 AM):** 30% brightness with warm white (2200K)
-- **Daytime:** 100% brightness
-
-### Auto turn-off when door closes
-
-**Simple auto-off:** Turn off light 2 minutes after door closes
-
-**Why the 2-minute delay?**
-- Prevents lights turning off while door swings closed
-- Avoids rapid on/off cycles during multiple trips
-- Still energy efficient
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Day vs. night brightness</h3>
+    <p>Adjust brightness based on time of day:</p>
+    <ul>
+      <li><strong>Nighttime (10 PM - 6 AM):</strong> 30% brightness, warm white (2200K)</li>
+      <li><strong>Daytime:</strong> 100% brightness</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Auto turn-off when door closes</h3>
+    <p>Turn off light 2 minutes after door closes:</p>
+    <ul>
+      <li>Prevents lights turning off while door swings closed</li>
+      <li>Avoids rapid on/off cycles during multiple trips</li>
+      <li>Still energy efficient</li>
+    </ul>
+  </div>
+</div>
 
 ---
 

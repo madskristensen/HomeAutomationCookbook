@@ -125,12 +125,21 @@ THEN turn on outdoor lights</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <ol>
-      <li>Use sun.sun entity for sunset/sunrise</li>
-      <li>Trigger: sun.sun goes below horizon (offset: -01:00:00 for hour before)</li>
-      <li>Action: Turn on outdoor light group</li>
-      <li>Second automation: sun rises → Turn off outdoor lights</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">sun.sun goes below horizon (offset: -01:00:00 for hour before)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on outdoor light group</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Create second automation: sun rises → Turn off outdoor lights
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -138,12 +147,21 @@ THEN turn on outdoor lights</div>
       <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
       <h4>SmartThings</h4>
     </div>
-    <ol>
-      <li>Create routine with sunset trigger</li>
-      <li>IF: Time is at sunset (or offset)</li>
-      <li>THEN: Turn on outdoor lights</li>
-      <li>Second routine for sunrise turn-off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">IF</span>
+        <span class="step-content">Time is at sunset (or offset)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">THEN</span>
+        <span class="step-content">Turn on outdoor lights</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Create second routine for sunrise turn-off
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -151,12 +169,23 @@ THEN turn on outdoor lights</div>
       <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
       <h4>Hubitat</h4>
     </div>
-    <ol>
-      <li>Use Simple Automation Rules or Rule Machine</li>
-      <li>Trigger: Sunset with optional offset</li>
-      <li>Action: Turn on outdoor light group</li>
-      <li>Create paired rule for sunrise</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">Trigger</span>
+        <span class="step-content">Sunset with optional offset</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on outdoor light group</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Setup:</strong> Use Simple Automation Rules or Rule Machine
+          <br>
+          <strong>Note:</strong> Create paired rule for sunrise
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -164,12 +193,21 @@ THEN turn on outdoor lights</div>
       <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
       <h4>Apple HomeKit</h4>
     </div>
-    <ol>
-      <li>Create automation with sunset trigger</li>
-      <li>When: Sunset (with offset if desired)</li>
-      <li>Do: Turn on outdoor lights scene</li>
-      <li>Repeat for sunrise turn-off</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Sunset (with offset if desired)</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Do</span>
+        <span class="step-content">Turn on outdoor lights scene</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Repeat for sunrise turn-off
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -177,12 +215,21 @@ THEN turn on outdoor lights</div>
       <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
       <h4>Alexa</h4>
     </div>
-    <ol>
-      <li>Create routine with schedule trigger</li>
-      <li>At: Sunset</li>
-      <li>Action: Turn on outdoor light group</li>
-      <li>Separate routine for sunrise</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Sunset</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on outdoor light group</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Separate routine for sunrise
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="platform-card">
@@ -190,184 +237,203 @@ THEN turn on outdoor lights</div>
       <img src="/assets/img/logos/google.png" alt="Google Home logo">
       <h4>Google Home</h4>
     </div>
-    <ol>
-      <li>Create scheduled routine</li>
-      <li>Starter: Sunset</li>
-      <li>Action: Turn on outdoor lights</li>
-      <li>Create companion sunrise routine</li>
-    </ol>
+    <div class="platform-steps">
+      <div class="platform-step">
+        <span class="step-label">When</span>
+        <span class="step-content">Sunset</span>
+      </div>
+      <div class="platform-step">
+        <span class="step-label">Action</span>
+        <span class="step-content">Turn on outdoor lights</span>
+      </div>
+      <div class="platform-step-variant">
+        <div class="step-variant">
+          <strong>Note:</strong> Create companion sunrise routine
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 ## Advanced features
 
-### Lux-based control
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Lux-based control</h3>
+    <p>More accurate than time-based control:</p>
+    <ul>
+      <li>Install lux sensor outdoors (shaded from direct light)</li>
+      <li>Trigger when lux drops below 150-250 (dusk)</li>
+      <li>Turn off when lux rises above 300-500 (dawn)</li>
+      <li>Accounts for cloudy days and seasonal variations</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Time-limited operation</h3>
+    <p>Keep lights on for specific hours only:</p>
+    <ul>
+      <li><strong>Dusk to specific time:</strong> On at sunset, off at 11 PM</li>
+      <li><strong>Specific window:</strong> On at sunset, off at midnight, on at 6 AM, off at sunrise</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Holiday light scheduling</h3>
+    <p>Special handling for seasonal decorations:</p>
+    <ul>
+      <li>Add date-based conditions (Nov 15 - Jan 5)</li>
+      <li>Create "Holiday Lights" virtual switch</li>
+      <li>Toggle switch to enable/disable season</li>
+    </ul>
+  </div>
+</div>
 
-More accurate than time-based control:
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Motion-enhanced lighting</h3>
+    <p>Combine scheduled and motion lighting:</p>
+    <ul>
+      <li><strong>Dim baseline:</strong> Scheduled at 30%</li>
+      <li><strong>Motion detected:</strong> Increase to 100% for 5 minutes</li>
+      <li><strong>Entry path:</strong> Driveway sensor triggers path lights</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Multiple zones</h3>
+    <p>Different areas, different schedules:</p>
+    <ul>
+      <li><strong>Front yard:</strong> Full brightness, off at 11 PM</li>
+      <li><strong>Backyard:</strong> Lower brightness, off at 10 PM</li>
+      <li><strong>Pathway:</strong> Dim level, all night</li>
+    </ul>
+  </div>
+</div>
 
-**Setup:**
-1. Install lux/illumination sensor outdoors (shaded from direct light)
-2. Trigger when lux drops below threshold (150-250 typical for "dusk")
-3. Turn off when lux rises above threshold (300-500 typical for "dawn")
+## Common issues and solutions
 
-**Benefits:**
-- Accounts for cloudy days (earlier dusk)
-- Seasonal variations handled automatically
-- More natural transition
-- Works with actual light conditions
-
-### Time-limited operation
-
-Keep lights on for specific hours only:
-
-**Pattern 1: Dusk to Specific Time**
-- Turn on at sunset
-- Turn off at 11 PM
-- Saves energy overnight
-
-**Pattern 2: Specific Window**
-- Turn on at sunset
-- Turn off at midnight
-- Turn on at 6 AM
-- Turn off at sunrise
-
-### Holiday light scheduling
-
-Special handling for seasonal decorations:
-
-**Date-Based Conditions:**
-- Only activate November 15 through January 5
-- Different schedule for Halloween decorations
-- Special patterns for holidays
-
-**Easy Enable/Disable:**
-- Create "Holiday Lights" virtual switch
-- Add as condition to automation
-- Toggle switch to enable/disable season
-
-### Motion-enhanced lighting
-
-Combine scheduled and motion lighting:
-
-**Dim Baseline + Bright on Motion:**
-- Scheduled: Outdoor lights at 30%
-- Motion: Increase to 100% for 5 minutes
-- Return to 30% when motion clears
-
-**Entry Path Lighting:**
-- Driveway sensor detects car
-- Path lights illuminate at 100%
-- Returns to normal after 10 minutes
-
-### Multiple zones
-
-Different areas, different schedules:
-
-**Front Yard:**
-- On at sunset
-- Full brightness
-- Off at 11 PM
-
-**Backyard:**
-- On at sunset
-- Lower brightness
-- Off at 10 PM
-
-**Pathway:**
-- On at sunset
-- Dim level only
-- All night
-
-## Troubleshooting
-
-### Issue: Lights turn on at wrong time
-
-**Causes:**
-- Incorrect time zone in platform
-- Sunset offset not set correctly
-- Daylight saving time issues
-
-**Solutions:**
-✅ Verify time zone settings
-✅ Check sunset time is calculated correctly
-✅ Test with manual trigger first
-✅ Use lux sensor for more accuracy
-
-### Issue: Lux sensor triggers inconsistently
-
-**Causes:**
-- Sensor placement in direct sunlight
-- Shadows from trees/buildings
-- Sensor behind glass or window
-
-**Solutions:**
-✅ Place in north-facing location (northern hemisphere)
-✅ Avoid direct sunlight on sensor
-✅ Position in open area representing general light level
-✅ Adjust threshold values based on testing
-
-### Issue: Lights don't turn off in morning
-
-**Causes:**
-- Sunrise automation not created
-- Conflicting automation turning them on
-- Manual override stuck on
-
-**Solutions:**
-✅ Create explicit sunrise off automation
-✅ Check for conflicting rules
-✅ Add failsafe: Turn off if on past 8 AM
-✅ Verify no manual override active
-
-### Issue: Holiday lights on outside of season
-
-**Causes:**
-- Date condition not set
-- Virtual switch left on
-- Automation not updated
-
-**Solutions:**
-✅ Add date range condition
-✅ Use virtual switch for easy enable/disable
-✅ Create calendar reminder to update
-✅ Use separate automation for holiday lights
+<div class="troubleshooting-grid">
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Lights turn on at wrong time</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Incorrect time zone, sunset offset, or daylight saving issues.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Verify time zone settings</li>
+        <li>Check sunset time is calculated correctly</li>
+        <li>Test with manual trigger first</li>
+        <li>Use lux sensor for more accuracy</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Lux sensor triggers inconsistently</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Sensor placement in direct sunlight or shadows from trees/buildings.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Place in north-facing location (northern hemisphere)</li>
+        <li>Avoid direct sunlight on sensor</li>
+        <li>Position in open area representing general light level</li>
+        <li>Adjust threshold values based on testing</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Lights don't turn off in morning</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Sunrise automation not created or conflicting rules.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Create explicit sunrise off automation</li>
+        <li>Check for conflicting rules</li>
+        <li>Add failsafe: Turn off if on past 8 AM</li>
+        <li>Verify no manual override active</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Holiday lights on outside of season</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Date condition not set or virtual switch left on.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Add date range condition</li>
+        <li>Use virtual switch for easy enable/disable</li>
+        <li>Create calendar reminder to update</li>
+        <li>Use separate automation for holiday lights</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ## Best practices
 
-### Light selection
+<div class="placement-grid">
+  <div class="placement-card">
+    <h3>Light selection</h3>
+    <ul>
+      <li><strong>LED:</strong> Energy efficient</li>
+      <li><strong>Warm white (2700-3000K):</strong> For ambiance</li>
+      <li><strong>IP44+ rated:</strong> Weatherproof</li>
+      <li><strong>Dimmable:</strong> Flexibility for different scenarios</li>
+    </ul>
+  </div>
+  
+  <div class="placement-card">
+    <h3>Placement</h3>
+    <ul>
+      <li>Entry points illuminated</li>
+      <li>Pathways visible</li>
+      <li>Not aimed at neighbor windows</li>
+      <li>Avoid light pollution upward</li>
+    </ul>
+  </div>
+</div>
 
-**Good Outdoor Choices:**
-- LED for energy efficiency
-- Warm white (2700-3000K) for ambiance
-- Weatherproof rated (IP44 or higher)
-- Dimmable for flexibility
-
-**Placement:**
-- Entry points illuminated
-- Pathways visible
-- Not aimed at neighbor windows
-- Avoid light pollution upward
-
-### Energy efficiency
-
-**Optimize Runtime:**
-- Don't run all night if not needed
-- Use lower brightness after midnight
-- Motion-activated for less-used areas
-- LED lights consume minimal power
-
-**Smart Scheduling:**
-- Off during late night hours
-- Dimmed after household bedtime
-- Full brightness only when needed
-
-### Neighbor considerations
-
-**Be Courteous:**
-- Direct light downward
-- Avoid shining into neighbor windows
-- Consider dimming after 10 PM
-- Use warm colors (less intrusive)
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Energy efficiency</h3>
+    <p>Optimize runtime for savings:</p>
+    <ul>
+      <li>Don't run all night if not needed</li>
+      <li>Use lower brightness after midnight</li>
+      <li>Motion-activated for less-used areas</li>
+      <li>LED lights consume minimal power</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Neighbor considerations</h3>
+    <p>Be courteous with outdoor lighting:</p>
+    <ul>
+      <li>Direct light downward</li>
+      <li>Avoid shining into neighbor windows</li>
+      <li>Consider dimming after 10 PM</li>
+      <li>Use warm colors (less intrusive)</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
