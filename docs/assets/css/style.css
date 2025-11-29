@@ -758,12 +758,16 @@ th {
   height: 28px;
   width: 28px;
   object-fit: contain;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
 
 .platform-card-header h4 {
   margin: 0;
+  padding: 0;
   font-size: 1.05rem;
   color: #000;
+  line-height: 28px;
 }
 
 .platform-card h4 {
