@@ -145,6 +145,21 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-minifier
+
+# Minification settings
+# Note: Minification only runs when JEKYLL_ENV=production
+# Usage: $env:JEKYLL_ENV="production"; bundle exec jekyll build --source docs
+jekyll-minifier:
+  compress_css: true
+  compress_javascript: true
+  compress_json: true
+  compress_html: true
+  remove_comments: true
+  remove_intertag_spaces: true
+  remove_quotes: false
+  simple_doctype: false
+  preserve_line_breaks: false
 
 # Exclude from processing
 exclude:
