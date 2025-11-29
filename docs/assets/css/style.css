@@ -1269,3 +1269,430 @@ th {
   }
 }
 
+/* Dark Mode
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #f0f0f0;
+  }
+
+  a {
+    color: #7a9ab8;
+  }
+
+  a:hover {
+    color: #9bb8d4;
+  }
+
+  blockquote {
+    border-left-color: #3a3a3a;
+    color: #a0a0a0;
+  }
+
+  hr {
+    border-top-color: #3a3a3a;
+  }
+
+  code {
+    background: #2a2a2a;
+    color: #f0a0c0;
+  }
+
+  /* Navigation */
+  .main-navigation {
+    background: #1a1a1a;
+    border-bottom-color: #3a3a3a;
+  }
+
+  .site-title {
+    color: #f0f0f0;
+  }
+
+  .site-title:hover {
+    color: #7a9ab8;
+  }
+
+  .nav-toggle span {
+    background: #e0e0e0;
+  }
+
+  .nav-link {
+    color: #a0a0a0;
+  }
+
+  .nav-link:hover {
+    color: #7a9ab8;
+  }
+
+  .dropdown-menu {
+    background: #242424;
+    border-color: #3a3a3a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+
+  .dropdown-item a {
+    color: #c0c0c0;
+  }
+
+  .dropdown-item a:hover {
+    background: #2a2a2a;
+    color: #7a9ab8;
+  }
+
+  .flyout-menu {
+    background: #242424;
+    border-color: #3a3a3a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+
+  .flyout-item a {
+    color: #c0c0c0;
+  }
+
+  .flyout-item a:hover {
+    background: #2a2a2a;
+    color: #7a9ab8;
+  }
+
+  .breadcrumb a {
+    color: #7a9ab8;
+  }
+
+  .breadcrumb a:hover {
+    color: #9bb8d4;
+  }
+
+  .breadcrumb span {
+    color: #666;
+  }
+
+  /* Cards */
+  .automation-card {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .automation-card:hover {
+    border-color: #7a9ab8;
+    box-shadow: 0 4px 20px rgba(122,154,184,0.1);
+  }
+
+  .automation-card h3,
+  .automation-card h4 {
+    color: #f0f0f0;
+  }
+
+  .automation-card h3 a,
+  .automation-card h4 a {
+    color: #f0f0f0;
+  }
+
+  .automation-card h3 a:hover,
+  .automation-card h4 a:hover {
+    color: #7a9ab8;
+  }
+
+  .automation-card p {
+    color: #a0a0a0;
+  }
+
+  .automation-card .card-meta {
+    color: #666;
+  }
+
+  .automation-card .card-link {
+    color: #7a9ab8;
+  }
+
+  .automation-card .card-link:hover {
+    color: #9bb8d4;
+  }
+
+  .category-intro {
+    background: #242424;
+  }
+
+  .category-intro h2 {
+    color: #f0f0f0;
+  }
+
+  .category-intro p strong {
+    color: #f0f0f0;
+  }
+
+  .section-heading {
+    color: #f0f0f0;
+    border-bottom-color: #3a3a3a;
+  }
+
+  .page-navigation {
+    border-top-color: #3a3a3a;
+  }
+
+  .page-navigation a {
+    color: #7a9ab8;
+  }
+
+  .page-navigation a:hover {
+    color: #9bb8d4;
+  }
+
+  /* Automation components */
+  .automation-step {
+    background: #242424;
+    border-left-color: #7a9ab8;
+    color: #f0f0f0;
+  }
+
+  .use-case-card {
+    background: #242424;
+  }
+
+  .use-case-card h4 {
+    color: #f0f0f0;
+  }
+
+  .product-section {
+    background: #242424;
+  }
+
+  .product-section h4 {
+    color: #f0f0f0;
+  }
+
+  .product-item strong {
+    color: #f0f0f0;
+  }
+
+  .product-details {
+    color: #a0a0a0;
+  }
+
+  .info-box {
+    background: #3d3520;
+    border-left-color: #b8860b;
+  }
+
+  .info-box strong {
+    color: #f0f0f0;
+  }
+
+  .info-box li::before {
+    color: #f0f0f0;
+  }
+
+  .setup-step {
+    background: #242424;
+  }
+
+  .setup-step h4 {
+    color: #f0f0f0;
+  }
+
+  .setup-step strong {
+    color: #f0f0f0;
+  }
+
+  .platform-card {
+    background: #242424;
+  }
+
+  .platform-card h4 {
+    color: #f0f0f0;
+  }
+
+  /* Tables */
+  th, td {
+    border-bottom-color: #3a3a3a;
+  }
+
+  th {
+    background: #242424;
+    color: #f0f0f0;
+  }
+
+  /* Footer */
+  .site-footer {
+    border-top-color: #3a3a3a;
+    color: #666;
+  }
+
+  .footer-links a {
+    color: #a0a0a0;
+  }
+
+  .footer-links a:hover {
+    color: #7a9ab8;
+  }
+
+  /* Homepage */
+  .hero {
+    background: linear-gradient(135deg, #242424 0%, #1a1a1a 100%);
+  }
+
+  .hero h1 {
+    color: #f0f0f0;
+  }
+
+  .hero-subtitle {
+    color: #a0a0a0;
+  }
+
+  .benefit strong {
+    color: #f0f0f0;
+  }
+
+  .benefit-text {
+    color: #a0a0a0;
+  }
+
+  .cta-primary {
+    background: #7a9ab8;
+    color: #1a1a1a;
+  }
+
+  .cta-primary:hover {
+    background: #9bb8d4;
+    color: #1a1a1a;
+  }
+
+  .cta-secondary {
+    color: #7a9ab8;
+    border-color: #4a4a4a;
+  }
+
+  .cta-secondary:hover {
+    background: #2a2a2a;
+    border-color: #7a9ab8;
+  }
+
+  .principle-card {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .principle-card h3 {
+    color: #f0f0f0;
+  }
+
+  .principle-card p {
+    color: #a0a0a0;
+  }
+
+  .featured-card {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .featured-card:hover {
+    border-color: #7a9ab8;
+    box-shadow: 0 8px 24px rgba(122,154,184,0.15);
+  }
+
+  .featured-card h3 {
+    color: #f0f0f0;
+  }
+
+  .featured-card p {
+    color: #a0a0a0;
+  }
+
+  .card-arrow {
+    color: #7a9ab8;
+  }
+
+  .featured-card:hover .card-arrow {
+    color: #9bb8d4;
+  }
+
+  .category-card {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .category-card:hover {
+    background: #2a2a2a;
+    border-color: #7a9ab8;
+    box-shadow: 0 4px 16px rgba(122,154,184,0.1);
+  }
+
+  .category-card h3 {
+    color: #f0f0f0;
+  }
+
+  .category-card p {
+    color: #a0a0a0;
+  }
+
+  .category-count {
+    color: #666;
+  }
+
+  .getting-started-box {
+    background: linear-gradient(135deg, #1e2a35 0%, #1a252f 100%);
+    border-color: #3a5a7a;
+  }
+
+  .getting-started-box h2 {
+    color: #f0f0f0;
+  }
+
+  .getting-started-box p {
+    color: #c0c0c0;
+  }
+
+  .community-link {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .community-link:hover {
+    background: #2a2a2a;
+    border-color: #7a9ab8;
+    box-shadow: 0 4px 12px rgba(122,154,184,0.15);
+  }
+
+  .community-link strong {
+    color: #f0f0f0;
+  }
+
+  .community-link span {
+    color: #a0a0a0;
+  }
+
+  /* Mobile nav dark mode adjustments */
+  @media (max-width: 768px) {
+    .nav-menu {
+      background: #1a1a1a;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      border-bottom-color: #3a3a3a;
+    }
+
+    .dropdown-menu {
+      background: #242424;
+    }
+
+    .nav-link {
+      color: #c0c0c0;
+    }
+
+    .dropdown-item a {
+      color: #a0a0a0;
+    }
+
+    .flyout-menu {
+      background: #2a2a2a;
+    }
+
+    .flyout-item a {
+      color: #a0a0a0;
+    }
+  }
+}
+
