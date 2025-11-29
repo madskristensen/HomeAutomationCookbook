@@ -90,12 +90,23 @@ Protect your home and family:
 
 ---
 
+### 🖥️ [Dashboards](/automation/dashboards/)
+
+Visual control and status for your smart home:
+- Garbage day reminders
+- Status tiles instead of notifications
+- Music controls
+
+[Explore Dashboard Automations →](/automation/dashboards/)
+
+---
+
 ### 🎯 [Miscellaneous](/automation/misc/)
 
 Additional helpful automations:
 - Outdoor night lights
 - Doorbell notifications
-- Dashboard controls
+- Baby sleep mode
 - And more!
 
 [Explore Misc Automations →](/automation/misc/)

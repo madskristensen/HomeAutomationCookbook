@@ -96,6 +96,35 @@ navigation:
             url: /automation/appliances/coffee-maker-morning.html
           - title: Robot vacuum auto start
             url: /automation/appliances/robot-vacuum-auto-start.html
+      - title: Security & safety
+        url: /automation/security/
+        subitems:
+          - title: Away lights
+            url: /automation/security/away-lights.html
+          - title: Fire safety response
+            url: /automation/security/fire-safety.html
+          - title: Fake dog deterrent
+            url: /automation/security/fake-dog-deterrent.html
+      - title: Dashboards
+        url: /automation/dashboards/
+        subitems:
+          - title: Garbage day reminder
+            url: /automation/dashboards/#garbage-day-reminder
+          - title: Status tiles
+            url: /automation/dashboards/#status-tiles-instead-of-notifications
+          - title: Music controls
+            url: /automation/dashboards/#music-controls
+      - title: Miscellaneous
+        url: /automation/misc/
+        subitems:
+          - title: Outdoor night lights
+            url: /automation/misc/outdoor-night-lights.html
+          - title: Doorbell notification
+            url: /automation/misc/doorbell-notification.html
+          - title: Baby sleep mode
+            url: /automation/misc/baby-sleep-mode.html
+          - title: Teeth brushing reminder
+            url: /automation/misc/teeth-brushing-reminder.html
   - title: Tips & tricks
     url: /tips/
   - title: Resources
