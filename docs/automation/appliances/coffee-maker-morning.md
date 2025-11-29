@@ -332,8 +332,8 @@ Create emergency shutoff automation:
 ---
 
 **Related automations:**
-- [Morning routine automation](/automation/presence/morning-routine/)
-- [Play music when shower starts](/automation/media/shower-music/)
+- [Morning routine automation](/automation/daily-routines/morning-routine/)
+- [Play music when shower starts](/automation/entertainment/shower-music/)
 - [Turn on bathroom fan when starting shower](/automation/climate/fan-shower/)
 
 <div class="page-navigation">

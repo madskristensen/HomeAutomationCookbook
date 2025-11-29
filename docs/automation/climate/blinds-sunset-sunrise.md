@@ -392,8 +392,8 @@ For battery-powered blinds:
 
 **Related automations:**
 - [Away lights automation](/automation/security/away-lights/)
-- [Morning routine](/automation/presence/morning-routine/)
-- [Bedtime routine](/automation/presence/bedtime-routine/)
+- [Morning routine](/automation/daily-routines/morning-routine/)
+- [Bedtime routine](/automation/daily-routines/bedtime-routine/)
 
 <div class="page-navigation">
   <a href="/automation/climate/">← Back to Climate Automations</a>

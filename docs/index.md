@@ -58,26 +58,26 @@ This cookbook is different. Every automation here follows proven principles:
 ## Popular automations
 
 <div class="featured-automations">
-  <a href="/automation/motion/lights-on-motion.html" class="featured-card">
-    <h3>💡 Automatic room lighting</h3>
+  <a href="/automation/lighting/lights-on-motion.html" class="featured-card">
+    <h3>Automatic room lighting</h3>
     <p>Walk into any room and lights turn on. Leave and they turn off. The most essential automation.</p>
     <span class="card-arrow">View guide →</span>
   </a>
   
   <a href="/automation/climate/thermostat-windows-open.html" class="featured-card">
-    <h3>🌡️ Smart thermostat control</h3>
+    <h3>Smart thermostat control</h3>
     <p>Stop heating or cooling the outdoors. Save 10-30% on energy bills automatically.</p>
     <span class="card-arrow">View guide →</span>
   </a>
   
-  <a href="/automation/presence/away-mode.html" class="featured-card">
-    <h3>🏠 Automatic away mode</h3>
+  <a href="/automation/daily-routines/away-mode.html" class="featured-card">
+    <h3>Automatic away mode</h3>
     <p>When the last person leaves, your home secures itself and saves energy. No app needed.</p>
     <span class="card-arrow">View guide →</span>
   </a>
   
   <a href="/automation/appliances/washer-done-notification.html" class="featured-card">
-    <h3>🔔 Appliance alerts</h3>
+    <h3>Appliance alerts</h3>
     <p>Get notified when the washer, dryer, or dishwasher finishes. Never forget wet clothes again.</p>
     <span class="card-arrow">View guide →</span>
   </a>
@@ -86,32 +86,26 @@ This cookbook is different. Every automation here follows proven principles:
 ## Browse all automations
 
 <div class="category-grid">
-  <a href="/automation/motion/" class="category-card">
-    <h3>Motion detection</h3>
-    <p>Automatic lighting and presence-based actions</p>
-    <span class="category-count">3 automations</span>
+  <a href="/automation/lighting/" class="category-card">
+    <h3>Lighting</h3>
+    <p>Motion-triggered, door-activated, and scheduled lighting</p>
+    <span class="category-count">6 automations</span>
   </a>
   
-  <a href="/automation/contact/" class="category-card">
-    <h3>Contact sensors</h3>
-    <p>Door and window-triggered automations</p>
-    <span class="category-count">2 automations</span>
-  </a>
-  
-  <a href="/automation/presence/" class="category-card">
-    <h3>Presence & modes</h3>
-    <p>Location-aware and routine automations</p>
+  <a href="/automation/daily-routines/" class="category-card">
+    <h3>Daily routines</h3>
+    <p>Morning, bedtime, away, and arrival automations</p>
     <span class="category-count">4 automations</span>
   </a>
   
   <a href="/automation/climate/" class="category-card">
-    <h3>Climate control</h3>
+    <h3>Climate and comfort</h3>
     <p>Temperature, humidity, and air quality</p>
-    <span class="category-count">6 automations</span>
+    <span class="category-count">7 automations</span>
   </a>
   
-  <a href="/automation/media/" class="category-card">
-    <h3>Media & entertainment</h3>
+  <a href="/automation/entertainment/" class="category-card">
+    <h3>Entertainment</h3>
     <p>Music and TV automations</p>
     <span class="category-count">5 automations</span>
   </a>
@@ -120,6 +114,18 @@ This cookbook is different. Every automation here follows proven principles:
     <h3>Appliances</h3>
     <p>Washer, dryer, vacuum automations</p>
     <span class="category-count">5 automations</span>
+  </a>
+  
+  <a href="/automation/security/" class="category-card">
+    <h3>Safety and security</h3>
+    <p>Fire, water leak, and intrusion response</p>
+    <span class="category-count">5 automations</span>
+  </a>
+  
+  <a href="/automation/notifications/" class="category-card">
+    <h3>Notifications</h3>
+    <p>Alerts, reminders, and dashboard tiles</p>
+    <span class="category-count">7 automations</span>
   </a>
 </div>
 

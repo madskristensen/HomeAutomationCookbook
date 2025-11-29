@@ -264,7 +264,7 @@ Adjust behavior based on season:
 **Related automations:**
 - [Resume thermostat when all windows close](/automation/climate/thermostat-windows-close/)
 - [Smart window open/close notifications](/automation/climate/window-notifications/)
-- [Away mode automation](/automation/presence/away-mode/)
+- [Away mode automation](/automation/daily-routines/away-mode/)
 
 <div class="page-navigation">
   <a href="/automation/climate/">← Back to Climate Automations</a>

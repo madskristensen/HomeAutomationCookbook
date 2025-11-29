@@ -9,45 +9,37 @@ This is the main section with dozens of practical automation recipes for your sm
 
 ## Categories
 
-### 🚶 [Motion Detection](/automation/motion/)
+All automations are organized by what they accomplish, making it easy to find solutions for your specific needs.
 
-Motion sensors are powerful automation tools. Learn how to:
+### [Lighting](/automation/lighting/)
+
+Automatic lighting that responds to your presence and needs:
 - Turn on lights when motion is detected
-- Turn off lights after motion stops
-- Create nighttime low-light automations
-
-[Explore Motion Automations →](/automation/motion/)
-
----
-
-### 🚪 [Contact (door/window) sensors](/automation/contact/)
-
-Versatile sensors that enable many useful automations:
 - Toggle lights when doors open
-- Disable automations when doors close
-- Security and safety alerts
+- Nighttime low-brightness lighting
+- Outdoor lights at sunset
 
-[Explore Contact Sensor Automations →](/automation/contact/)
-
----
-
-### 📍 [Presence and modes](/automation/presence/)
-
-Location-based and mode-driven automations:
-- Set Away Mode when everybody leaves
-- Unlock door when you arrive home
-- Morning and bedtime routines
-- Guest and vacation modes
-
-[Explore Presence Automations →](/automation/presence/)
+[Explore Lighting Automations →](/automation/lighting/)
 
 ---
 
-### 🌡️ [Climate](/automation/climate/)
+### [Daily routines](/automation/daily-routines/)
+
+Automate your daily rhythm for effortless living:
+- Away mode when everyone leaves
+- Morning wake-up routines
+- Bedtime wind-down automation
+- Unlock door on arrival
+
+[Explore Daily Routine Automations →](/automation/daily-routines/)
+
+---
+
+### [Climate and comfort](/automation/climate/)
 
 Control temperature, humidity, and air quality:
 - Turn on fan when shower starts
-- Control thermostat with window sensors
+- Pause thermostat when windows open
 - Automatic blinds at sunset and sunrise
 - Air quality monitoring and control
 
@@ -55,19 +47,19 @@ Control temperature, humidity, and air quality:
 
 ---
 
-### 🎵 [Media](/automation/media/)
+### [Entertainment](/automation/entertainment/)
 
-Music and entertainment control:
+Music and media control for your lifestyle:
+- Dim lights when TV turns on
 - Play music when you start shower
 - Control music with physical switches
 - Speaker volume presets
-- Dim lights when TV turns on
 
-[Explore Media Automations →](/automation/media/)
+[Explore Entertainment Automations →](/automation/entertainment/)
 
 ---
 
-### 🧺 [Appliances](/automation/appliances/)
+### [Appliances](/automation/appliances/)
 
 Smart appliance notifications and control:
 - Washer and dryer completion alerts
@@ -79,38 +71,27 @@ Smart appliance notifications and control:
 
 ---
 
-### 🔒 [Security and Safety](/automation/security/)
+### [Safety and security](/automation/security/)
 
 Protect your home and family:
-- Away lighting patterns
+- Away lighting patterns to deter intruders
 - Fire emergency response
 - Water leak detection and response
 - Garage door monitoring
 
-[Explore Security Automations →](/automation/security/)
+[Explore Safety Automations →](/automation/security/)
 
 ---
 
-### 🖥️ [Dashboards](/automation/dashboards/)
+### [Notifications and alerts](/automation/notifications/)
 
-Visual control and status for your smart home:
-- Garbage day reminders
-- Status tiles instead of notifications
-- Music controls
-
-[Explore Dashboard Automations →](/automation/dashboards/)
-
----
-
-### 🎯 [Miscellaneous](/automation/misc/)
-
-Additional helpful automations:
-- Outdoor night lights
-- Low battery alerts
+Stay informed without notification fatigue:
+- Low battery alerts for all devices
+- Dashboard status tiles
 - Doorbell notifications
-- Baby sleep mode
+- Family reminders (teeth brushing, garbage day)
 
-[Explore Misc Automations →](/automation/misc/)
+[Explore Notification Automations →](/automation/notifications/)
 
 ---
 
@@ -162,5 +143,5 @@ DO run morning routine
 
 ---
 
-[← Back to Home](/) | [Start with Motion Detection →](/automation/motion/)
+[← Back to Home](/) | [Start with Lighting →](/automation/lighting/)
 

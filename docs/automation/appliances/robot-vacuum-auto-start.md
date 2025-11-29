@@ -281,8 +281,8 @@ Add diagnostics to automation:
 ---
 
 **Related automations:**
-- [Away mode automation](/automation/presence/away-mode/)
-- [Morning routine automation](/automation/presence/morning-routine/)
+- [Away mode automation](/automation/daily-routines/away-mode/)
+- [Morning routine automation](/automation/daily-routines/morning-routine/)
 - [Washer done notification](/automation/appliances/washer-done-notification/)
 
 <div class="page-navigation">

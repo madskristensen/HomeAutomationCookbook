@@ -351,9 +351,9 @@ Combine away lights with motion-triggered outdoor lighting:
 ---
 
 **Related automations:**
-- [Away mode automation](/automation/presence/away-mode/)
+- [Away mode automation](/automation/daily-routines/away-mode/)
 - [Fire safety response](/automation/security/fire-safety/)
-- [Outdoor night lights](/automation/misc/outdoor-night-lights/)
+- [Outdoor night lights](/automation/lighting/outdoor-night-lights/)
 
 <div class="page-navigation">
   <a href="/automation/security/">← Back to Security Automations</a>

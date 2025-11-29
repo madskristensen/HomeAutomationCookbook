@@ -328,7 +328,7 @@ Modify trigger with:
 **Related automations:**
 - [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
 - [Turn on bathroom fan when starting shower](/automation/climate/fan-shower/)
-- [Bedtime routine automation](/automation/presence/bedtime-routine/)
+- [Bedtime routine automation](/automation/daily-routines/bedtime-routine/)
 
 <div class="page-navigation">
   <a href="/automation/climate/">← Back to Climate Automations</a>

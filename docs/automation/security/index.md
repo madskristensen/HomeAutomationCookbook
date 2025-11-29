@@ -353,5 +353,5 @@ Location-based security:
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/dashboards/">Next: Dashboards →</a>
+  <a href="/automation/notifications/">Next: Notifications →</a>
 </div>
