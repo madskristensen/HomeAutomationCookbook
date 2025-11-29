@@ -789,6 +789,85 @@ th {
 /* Homepage Components
    ========================================================================== */
 
+.platform-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.platform-logo {
+  height: 32px;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.platform-logo:hover {
+  opacity: 1;
+}
+
+.platform-logo-large {
+  height: 48px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.platform-compatibility {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.platform-compatibility p {
+  margin: 0 0 0.75rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.platform-selection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.platform-option {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.platform-option:hover {
+  background: #fff;
+  border-color: #2c3e50;
+  box-shadow: 0 4px 16px rgba(44,62,80,0.08);
+}
+
+.platform-option h4 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.platform-option p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.platform-option p strong {
+  color: #000;
+}
+
 .hero {
   text-align: center;
   padding: 4rem 0 3rem;
@@ -1532,6 +1611,37 @@ th {
   }
 
   /* Homepage */
+  .platform-compatibility {
+    background: #242424;
+  }
+
+  .platform-compatibility p {
+    color: #a0a0a0;
+  }
+
+  .platform-selection .platform-option {
+    background: #242424;
+    border-color: #3a3a3a;
+  }
+
+  .platform-selection .platform-option:hover {
+    background: #2a2a2a;
+    border-color: #7a9ab8;
+    box-shadow: 0 4px 16px rgba(122,154,184,0.1);
+  }
+
+  .platform-selection .platform-option h4 {
+    color: #f0f0f0;
+  }
+
+  .platform-selection .platform-option p {
+    color: #a0a0a0;
+  }
+
+  .platform-selection .platform-option p strong {
+    color: #f0f0f0;
+  }
+
   .hero {
     background: linear-gradient(135deg, #242424 0%, #1a1a1a 100%);
   }

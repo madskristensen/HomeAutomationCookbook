@@ -7,6 +7,18 @@ title: Automation Recipes
 
 This is the main section with dozens of practical automation recipes for your smart home. These automations have been tested and refined over years to be as accurate and easy to set up as possible.
 
+<div class="platform-compatibility">
+  <p><strong>Platform agnostic:</strong> All recipes work with</p>
+  <div class="platform-logos">
+    <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant" title="Home Assistant" class="platform-logo">
+    <img src="/assets/img/logos/hubitat.png" alt="Hubitat" title="Hubitat" class="platform-logo">
+    <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit" title="Apple HomeKit" class="platform-logo">
+    <img src="/assets/img/logos/smartthings.png" alt="SmartThings" title="SmartThings" class="platform-logo">
+    <img src="/assets/img/logos/google.png" alt="Google Home" title="Google Home" class="platform-logo">
+    <img src="/assets/img/logos/alexa.png" alt="Alexa" title="Alexa" class="platform-logo">
+  </div>
+</div>
+
 ## Categories
 
 All automations are organized by what they accomplish, making it easy to find solutions for your specific needs.

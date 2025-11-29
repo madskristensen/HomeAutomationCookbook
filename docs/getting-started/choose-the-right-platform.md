@@ -9,7 +9,7 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 
 ## Platform comparison
 
-| Feature | Home Assistant | Hubitat | Apple HomeKit | SmartThings | Google Home | Alexa |
+| Feature | ![Home Assistant](/assets/img/logos/homeassistant.png "Home Assistant") | ![Hubitat](/assets/img/logos/hubitat.png "Hubitat") | ![Apple HomeKit](/assets/img/logos/homekit.png "Apple HomeKit") | ![SmartThings](/assets/img/logos/smartthings.png "SmartThings") | ![Google Home](/assets/img/logos/google.png "Google Home") | ![Alexa](/assets/img/logos/alexa.png "Alexa") |
 |---------|---------------|---------|---------------|-------------|-------------|-------|
 | **Hardware** | Optional | Required | Apple Device | Optional | Optional | Optional |
 | **Difficulty** | Advanced | Intermediate | Easy | Easy | Easy | Easy |

@@ -47,7 +47,15 @@ This cookbook is different. Every automation here follows proven principles:
   </div>
   <div class="principle-card">
     <h3>Platform agnostic</h3>
-    <p>Works with <strong>Home Assistant, SmartThings, Alexa, Google Home, Apple HomeKit</strong>, and virtually any platform.</p>
+    <p>Works with all major platforms:</p>
+    <div class="platform-logos">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant" title="Home Assistant" class="platform-logo">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat" title="Hubitat" class="platform-logo">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit" title="Apple HomeKit" class="platform-logo">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings" title="SmartThings" class="platform-logo">
+      <img src="/assets/img/logos/google.png" alt="Google Home" title="Google Home" class="platform-logo">
+      <img src="/assets/img/logos/alexa.png" alt="Alexa" title="Alexa" class="platform-logo">
+    </div>
   </div>
   <div class="principle-card">
     <h3>Battle-tested</h3>

@@ -30,37 +30,55 @@ Before purchasing devices, consider:
 
 ## Choosing your ecosystem
 
-### Popular platforms
+<div class="platform-selection">
+  <div class="platform-option">
+    <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant" title="Home Assistant" class="platform-logo-large">
+    <h4>Home Assistant</h4>
+    <p><strong>Best for:</strong> Advanced users, customization</p>
+    <p><strong>Pros:</strong> Open source, highly flexible, extensive device support</p>
+    <p><strong>Cons:</strong> Steeper learning curve</p>
+  </div>
 
-#### Home Assistant
-- **Best for**: Advanced users, customization
-- **Pros**: Open source, highly flexible, extensive device support
-- **Cons**: Steeper learning curve
+  <div class="platform-option">
+    <img src="/assets/img/logos/hubitat.png" alt="Hubitat" title="Hubitat" class="platform-logo-large">
+    <h4>Hubitat</h4>
+    <p><strong>Best for:</strong> Users wanting local control without complex setup</p>
+    <p><strong>Pros:</strong> 100% local processing, built-in Z-Wave and Zigbee radios</p>
+    <p><strong>Cons:</strong> Hardware purchase required</p>
+  </div>
 
-#### Hubitat
-- **Best for**: Users wanting local control without complex setup
-- **Pros**: 100% local processing, built-in Z-Wave and Zigbee radios
-- **Cons**: Hardware purchase required
+  <div class="platform-option">
+    <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit" title="Apple HomeKit" class="platform-logo-large">
+    <h4>Apple HomeKit</h4>
+    <p><strong>Best for:</strong> Apple ecosystem users</p>
+    <p><strong>Pros:</strong> Privacy-focused, seamless iOS integration</p>
+    <p><strong>Cons:</strong> Limited device compatibility</p>
+  </div>
 
-#### Apple HomeKit
-- **Best for**: Apple ecosystem users
-- **Pros**: Privacy-focused, seamless iOS integration
-- **Cons**: Limited device compatibility
+  <div class="platform-option">
+    <img src="/assets/img/logos/smartthings.png" alt="SmartThings" title="SmartThings" class="platform-logo-large">
+    <h4>SmartThings</h4>
+    <p><strong>Best for:</strong> Beginners, Samsung users</p>
+    <p><strong>Pros:</strong> Easy setup, wide device support</p>
+    <p><strong>Cons:</strong> Cloud-dependent</p>
+  </div>
 
-#### SmartThings
-- **Best for**: Beginners, Samsung users
-- **Pros**: Easy setup, wide device support
-- **Cons**: Cloud-dependent
+  <div class="platform-option">
+    <img src="/assets/img/logos/google.png" alt="Google Home" title="Google Home" class="platform-logo-large">
+    <h4>Google Home</h4>
+    <p><strong>Best for:</strong> Google ecosystem users</p>
+    <p><strong>Pros:</strong> Strong voice control, affordable devices</p>
+    <p><strong>Cons:</strong> Privacy concerns</p>
+  </div>
 
-#### Google Home
-- **Best for**: Google ecosystem users
-- **Pros**: Strong voice control, affordable devices
-- **Cons**: Privacy concerns
-
-#### Amazon Alexa
-- **Best for**: Voice control enthusiasts, Amazon ecosystem users
-- **Pros**: Huge skill library, excellent voice recognition, affordable devices
-- **Cons**: Cloud-dependent, privacy concerns
+  <div class="platform-option">
+    <img src="/assets/img/logos/alexa.png" alt="Alexa" title="Alexa" class="platform-logo-large">
+    <h4>Amazon Alexa</h4>
+    <p><strong>Best for:</strong> Voice control enthusiasts, Amazon ecosystem users</p>
+    <p><strong>Pros:</strong> Huge skill library, excellent voice recognition, affordable devices</p>
+    <p><strong>Cons:</strong> Cloud-dependent, privacy concerns</p>
+  </div>
+</div>
 
 ## Essential first devices
 
