@@ -25,6 +25,8 @@ navigation:
   - title: Getting started
     url: /getting-started/
     subitems:
+      - title: Philosophy
+        url: /philosophy/index.html
       - title: Choose the right platform
         url: /getting-started/choose-the-right-platform.html
       - title: Device guide
@@ -33,8 +35,6 @@ navigation:
         url: /getting-started/tips.html
       - title: Resources
         url: /getting-started/resources.html
-  - title: Philosophy
-    url: /philosophy/index.html
   - title: Automations
     url: /automation/index.html
     subitems:

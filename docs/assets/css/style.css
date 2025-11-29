@@ -533,9 +533,7 @@ th {
   height: 100%;
 }
 
-.automation-card:hover {
-  box-shadow: var(--shadow-lg);
-}
+
 
 .automation-card h3,
 .automation-card h4 {
@@ -702,10 +700,7 @@ th {
   transition: all 0.2s ease;
 }
 
-.use-case-card:hover {
-  border-color: var(--color-link);
-  box-shadow: var(--shadow-md);
-}
+
 
 .use-case-card h4 {
   margin: 0 0 1rem;
@@ -868,10 +863,7 @@ th {
   transition: all 0.2s ease;
 }
 
-.platform-card:hover {
-  border-color: var(--color-link);
-  box-shadow: var(--shadow-md);
-}
+
 
 .platform-card-header {
   display: flex;
