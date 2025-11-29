@@ -55,6 +55,30 @@ Automated response when smoke detector sounds - lights on, doors unlocked, irrig
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Water leak detection and response
+
+Detect leaks early and respond automatically with alerts, water shutoff, and damage prevention.
+
+<span class="card-meta">**Best for:** Preventing water damage, protecting your home</span>
+
+<p><a href="/automation/security/water-leak-response.html" class="card-link">View Automation →</a></p>
+
+</div>
+
+<div class="automation-card" markdown="1">
+
+### Garage door left open notification
+
+Get alerted when your garage door is left open too long with optional auto-close.
+
+<span class="card-meta">**Best for:** Security, weather protection, peace of mind</span>
+
+<p><a href="/automation/security/garage-door-notification.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---
@@ -323,6 +347,8 @@ Location-based security:
 **Get Started:**
 - [Away Lights Automation →](/automation/security/away-lights.html)
 - [Fire Safety Response →](/automation/security/fire-safety.html)
+- [Water Leak Response →](/automation/security/water-leak-response.html)
+- [Garage Door Notification →](/automation/security/garage-door-notification.html)
 - [Fake Dog Deterrent →](/automation/security/fake-dog-deterrent.html)
 
 <div class="page-navigation">

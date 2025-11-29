@@ -70,6 +70,8 @@ navigation:
             url: /automation/climate/fan-shower.html
           - title: Room heater temp control
             url: /automation/climate/room-heater-maintain-temp.html
+          - title: Blinds at sunset/sunrise
+            url: /automation/climate/blinds-sunset-sunrise.html
       - title: Media
         url: /automation/media/
         subitems:
@@ -105,6 +107,10 @@ navigation:
             url: /automation/security/fire-safety.html
           - title: Fake dog deterrent
             url: /automation/security/fake-dog-deterrent.html
+          - title: Water leak response
+            url: /automation/security/water-leak-response.html
+          - title: Garage door notification
+            url: /automation/security/garage-door-notification.html
       - title: Dashboards
         url: /automation/dashboards/
         subitems:
@@ -125,6 +131,8 @@ navigation:
             url: /automation/misc/baby-sleep-mode.html
           - title: Teeth brushing reminder
             url: /automation/misc/teeth-brushing-reminder.html
+          - title: Low battery alerts
+            url: /automation/misc/low-battery-alerts.html
   - title: Tips & tricks
     url: /tips/
   - title: Resources

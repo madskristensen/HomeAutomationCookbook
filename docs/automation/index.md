@@ -48,7 +48,7 @@ Location-based and mode-driven automations:
 Control temperature, humidity, and air quality:
 - Turn on fan when shower starts
 - Control thermostat with window sensors
-- Maintain temperature with room heaters
+- Automatic blinds at sunset and sunrise
 - Air quality monitoring and control
 
 [Explore Climate Automations →](/automation/climate/)
@@ -84,7 +84,8 @@ Smart appliance notifications and control:
 Protect your home and family:
 - Away lighting patterns
 - Fire emergency response
-- Door and window monitoring
+- Water leak detection and response
+- Garage door monitoring
 
 [Explore Security Automations →](/automation/security/)
 
@@ -105,9 +106,9 @@ Visual control and status for your smart home:
 
 Additional helpful automations:
 - Outdoor night lights
+- Low battery alerts
 - Doorbell notifications
 - Baby sleep mode
-- And more!
 
 [Explore Misc Automations →](/automation/misc/)
 

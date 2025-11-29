@@ -53,6 +53,18 @@ Automatically turn on the bathroom fan when you start a shower to prevent humidi
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Automatic blinds at sunset and sunrise
+
+Open blinds at sunrise for natural light and close at sunset for privacy and energy efficiency.
+
+<span class="card-meta">**Best for:** Energy savings, privacy, natural daily rhythm</span>
+
+<p><a href="/automation/climate/blinds-sunset-sunrise.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---
