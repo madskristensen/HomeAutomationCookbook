@@ -148,8 +148,7 @@ plugins:
   - jekyll-minifier
 
 # Minification settings
-# Note: Minification only runs when JEKYLL_ENV=production
-# Usage: $env:JEKYLL_ENV="production"; bundle exec jekyll build --source docs
+# Automatically minifies HTML, CSS, and JavaScript during build
 jekyll-minifier:
   compress_css: true
   compress_javascript: true
