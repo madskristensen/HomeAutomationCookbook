@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Tips and Tricks
+title: Tips and tricks
 ---
 
-# Tips and Tricks
+# Tips and tricks
 
 Not all home automation requires complex technology. Sometimes the simplest solutions are the most effective.
 

@@ -25,8 +25,8 @@ description: Transform your house into a truly smart home with tested automation
     </div>
   </div>
   <div class="hero-cta">
-    <a href="/automation/" class="cta-primary">Browse Automations</a>
-    <a href="/philosophy/" class="cta-secondary">Learn the Principles</a>
+    <a href="/automation/" class="cta-primary">Browse automations</a>
+    <a href="/philosophy/" class="cta-secondary">Learn the principles</a>
   </div>
 </div>
 
@@ -126,7 +126,7 @@ This cookbook is different. Every automation here follows proven principles:
 <div class="getting-started-box">
   <h2>New to home automation?</h2>
   <p>Start with our philosophy guide to understand what makes automations truly helpful (versus just technically impressive).</p>
-  <a href="/philosophy/" class="cta-primary">Read the Philosophy →</a>
+  <a href="/philosophy/" class="cta-primary">Read the philosophy →</a>
 </div>
 
 <div class="community-section">
@@ -142,7 +142,7 @@ This cookbook is different. Every automation here follows proven principles:
       <span>Recommended communities</span>
     </a>
     <a href="/tips/" class="community-link">
-      <strong>Tips & Tricks</strong>
+      <strong>Tips and tricks</strong>
       <span>Expert advice</span>
     </a>
   </div>
