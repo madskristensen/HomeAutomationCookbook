@@ -80,10 +80,10 @@ Start with these categories:
 
 ## Next steps
 
-- [Explore platforms](/getting-started/platforms/) in detail
-- [Browse device recommendations](/getting-started/devices/)
+- [Explore platforms](/getting-started/choose-the-right-platform.html) in detail
+- [Browse device recommendations](/getting-started/device-guide.html)
 - [Create your first automation](/automation/)
 
 ---
 
-[Continue to platforms →](/getting-started/platforms/)
+[Continue to choose the right platform →](/getting-started/choose-the-right-platform.html)
