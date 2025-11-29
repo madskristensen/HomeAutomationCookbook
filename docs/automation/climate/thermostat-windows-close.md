@@ -259,7 +259,7 @@ Add time condition: Only resume between 6 AM and 11 PM (not during sleep hours w
 **Related automations:**
 - [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
 - [Smart window open/close notifications](/automation/climate/window-notifications/)
-- [Morning routine automation](/automation/presence/morning-routine/)
+- [Morning routine automation](/automation/daily-routines/morning-routine/)
 
 <div class="page-navigation">
   <a href="/automation/climate/">← Back to Climate Automations</a>

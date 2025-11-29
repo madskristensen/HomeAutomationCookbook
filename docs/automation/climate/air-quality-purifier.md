@@ -303,7 +303,7 @@ If you don't have an air purifier:
 **Related automations:**
 - [Smart window open/close notifications](/automation/climate/window-notifications/)
 - [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
-- [Away mode automation](/automation/presence/away-mode/)
+- [Away mode automation](/automation/daily-routines/away-mode/)
 
 <div class="page-navigation">
   <a href="/automation/climate/">← Back to Climate Automations</a>

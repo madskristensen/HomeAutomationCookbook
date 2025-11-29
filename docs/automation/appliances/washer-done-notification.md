@@ -304,7 +304,7 @@ Create automation with these elements:
 **Related automations:**
 - [Dryer done notification](/automation/appliances/dryer-done-notification/)
 - [Dishwasher done notification](/automation/appliances/dishwasher-done-notification/)
-- [Away mode automation](/automation/presence/away-mode/)
+- [Away mode automation](/automation/daily-routines/away-mode/)
 
 <div class="page-navigation">
   <a href="/automation/appliances/">← Back to Appliance Automations</a>

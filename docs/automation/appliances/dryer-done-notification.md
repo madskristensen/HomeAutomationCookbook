@@ -297,7 +297,7 @@ If your dryer uses a standard 120V outlet (rare), you can use the same power mon
 **Related automations:**
 - [Washer done notification](/automation/appliances/washer-done-notification/)
 - [Dishwasher done notification](/automation/appliances/dishwasher-done-notification/)
-- [Away mode automation](/automation/presence/away-mode/)
+- [Away mode automation](/automation/daily-routines/away-mode/)
 
 <div class="page-navigation">
   <a href="/automation/appliances/">← Back to Appliance Automations</a>

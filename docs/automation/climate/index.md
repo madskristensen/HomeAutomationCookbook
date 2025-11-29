@@ -195,5 +195,5 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/media/">Next: Media →</a>
+  <a href="/automation/entertainment/">Next: Entertainment →</a>
 </div>

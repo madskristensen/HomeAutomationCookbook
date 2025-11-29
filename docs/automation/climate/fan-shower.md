@@ -243,8 +243,8 @@ Since your smart home now knows when you're showering:
 ---
 
 **Related automations:**
-- [Play music when shower starts](/automation/media/shower-music/)
-- [Morning routine automation](/automation/presence/morning-routine/)
+- [Play music when shower starts](/automation/entertainment/shower-music/)
+- [Morning routine automation](/automation/daily-routines/morning-routine/)
 - [Maintain room temperature with smart heater](/automation/climate/room-heater-maintain-temp/)
 
 <div class="page-navigation">

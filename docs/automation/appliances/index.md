@@ -210,5 +210,5 @@ Robot vacuum automatically cleans your home when everyone leaves.
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
-  <a href="/tips/">View Tips & Tricks →</a>
+  <a href="/automation/security/">Next: Safety & Security →</a>
 </div>

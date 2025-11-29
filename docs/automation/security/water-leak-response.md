@@ -360,8 +360,8 @@ Some insurance companies offer discounts for:
 
 **Related automations:**
 - [Fire safety emergency response](/automation/security/fire-safety/)
-- [Away mode automation](/automation/presence/away-mode/)
-- [Low battery alerts](/automation/misc/low-battery-alerts.html)
+- [Away mode automation](/automation/daily-routines/away-mode/)
+- [Low battery alerts](/automation/notifications/low-battery-alerts.html)
 
 <div class="page-navigation">
   <a href="/automation/security/">← Back to Security Automations</a>

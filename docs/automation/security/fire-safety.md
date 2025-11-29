@@ -399,7 +399,7 @@ After emergency is handled:
 **Related automations:**
 - [Away lights](/automation/security/away-lights/)
 - [Fake dog deterrent](/automation/security/fake-dog-deterrent/)
-- [Away mode](/automation/presence/away-mode/)
+- [Away mode](/automation/daily-routines/away-mode/)
 
 <div class="page-navigation">
   <a href="/automation/security/">← Back to Security Automations</a>

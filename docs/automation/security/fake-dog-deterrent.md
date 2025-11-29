@@ -388,7 +388,7 @@ Make it more realistic:
 **Related automations:**
 - [Away lights](/automation/security/away-lights/)
 - [Fire safety response](/automation/security/fire-safety/)
-- [Away mode](/automation/presence/away-mode/)
+- [Away mode](/automation/daily-routines/away-mode/)
 
 <div class="page-navigation">
   <a href="/automation/security/">← Back to Security Automations</a>
