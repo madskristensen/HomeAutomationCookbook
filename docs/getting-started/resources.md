@@ -7,311 +7,336 @@ title: Resources
 
 Learn more about home automation through these excellent online resources, communities, and channels.
 
----
-
-## YouTube channels
-
-Great YouTube channels that review smart home products, show how to make automations, and much more.
-
-### [Automate Your Life](https://www.youtube.com/@AutomateYourLife)
-
-Comprehensive reviews and tutorials for all major smart home platforms. Great for:
-- Product reviews and comparisons
-- Platform guides (Alexa, Google Home, HomeKit, Home Assistant)
-- Automation ideas and tutorials
-- Smart home news and updates
-
-**Best For:** Beginners and intermediate users looking for practical advice
-
----
-
-### [Smart Home Solver](https://www.youtube.com/@SmartHomeSolver)
-
-In-depth technical content and problem-solving. Great for:
-- Advanced Home Assistant tutorials
-- Complex automation setups
-- Integration guides
-- Troubleshooting common issues
-
-**Best For:** Advanced users and Home Assistant enthusiasts
-
----
-
-### [Paul Hibbert](https://www.youtube.com/@paulhibbert)
-
-Honest reviews with a British sense of humor. Great for:
-- Detailed product reviews
-- Real-world testing
-- Pros and cons analysis
-- Budget-friendly options
-
-**Best For:** Those researching products before purchasing
-
----
-
-## Reddit communities
-
-On [Reddit.com](https://reddit.com) you'll find lots of smart home related content, Q&As, troubleshooting help, and more. It's a great place to explore and participate.
-
-### [r/homeautomation](https://reddit.com/r/homeautomation)
-
-The main home automation community.
-
-**Topics:**
-- General home automation discussion
-- Platform comparisons
-- Project showcases
-- Troubleshooting help
-
-**Subscribers:** 500k+
-**Activity:** Very active, daily posts
-
----
-
-### [r/smarthome](https://reddit.com/r/smarthome)
-
-Smart home devices and beginner-friendly discussion.
-
-**Topics:**
-- Product recommendations
-- Simple automation ideas
-- Setup help
-- News and announcements
-
-**Best For:** Beginners just starting out
-
----
-
-### [r/homeassistant](https://reddit.com/r/homeassistant)
-
-Dedicated to Home Assistant platform.
-
-**Topics:**
-- Home Assistant setup and configuration
-- Custom integrations
-- YAML configuration help
-- Dashboard designs
-
-**Best For:** Home Assistant users at all levels
-
----
-
-### [r/smartthings](https://reddit.com/r/smartthings)
-
-Samsung SmartThings community.
-
-**Topics:**
-- SmartThings automations
-- Device compatibility
-- App and platform updates
-- Custom SmartApps
-
-**Best For:** SmartThings users
-
----
-
-### [r/hubitat](https://reddit.com/r/hubitat)
-
-Hubitat Elevation community.
-
-**Topics:**
-- Hubitat automations and Rule Machine
-- Device drivers and compatibility
-- Local processing and privacy
-- Custom apps and integrations
-
-**Best For:** Hubitat users and local-first enthusiasts
-
----
-
-### [r/alexa](https://reddit.com/r/alexa)
-
-Amazon Alexa and Echo devices.
-
-**Topics:**
-- Alexa routines
-- Skill recommendations
-- Device troubleshooting
-- Voice command tips
-
-**Best For:** Alexa ecosystem users
-
----
-
-## Additional resources
-
-### Forums
-
-**[Home Assistant Community](https://community.home-assistant.io/)**
-- Official Home Assistant forum
-- Excellent documentation and guides
-- Active developer community
-
-**[Hubitat Community](https://community.hubitat.com/)**
-- Hubitat Elevation users
-- Custom apps and drivers
-- Support and troubleshooting
-
-**[SmartThings Community](https://community.smartthings.com/)**
-- Official SmartThings forum
-- Device handlers and SmartApps
-- Platform updates
-
-### Blogs and websites
-
-**[Home Assistant Blog](https://www.home-assistant.io/blog/)**
-- Official updates and releases
-- Feature announcements
-- Community highlights
-
-**[The Ambient](https://www.the-ambient.com/)**
-- Smart home news
-- Product reviews
-- How-to guides
-
-**[CNET Smart Home](https://www.cnet.com/home/smart-home/)**
-- Product reviews
-- Buying guides
-- News and trends
-
-### Podcasts
-
-**[Home Gadget Geeks](https://twit.tv/shows/home-gadget-geeks)**
-- Smart home discussions
-- Product reviews
-- Expert interviews
-
-**[Automate Your Life Podcast](https://www.automateordie.com/)**
-- Weekly smart home news
-- Community Q&A
-- Product discussions
-
-### Discord servers
-
-**[Home Assistant Discord](https://discord.gg/home-assistant)**
-- Real-time chat support
-- Active community
-- Quick troubleshooting help
-
-**[SmartThings Discord](https://discord.gg/smartthings)**
-- Community support
-- Custom development
-- News and updates
-
-**[Hubitat Discord](https://discord.gg/hubitat)**
-- Real-time community support
-- Custom drivers and apps
-- Local automation discussions
-
----
-
-## Getting involved
-
-### Contribute to open source
-
-**Home Assistant:**
-- [GitHub Repository](https://github.com/home-assistant)
-- Submit bug reports
-- Contribute code
-- Create custom integrations
-
-**ESPHome:**
-- DIY device firmware
-- Create custom sensors
-- Share configurations
-
-### Share your knowledge
-
-**Create content:**
-- Write blog posts
-- Make YouTube videos
-- Share automation blueprints
-- Help others in forums
-
-**Document your setup:**
-- Share your configurations
-- Post to Reddit/forums
-- Create GitHub repositories
-- Write guides and tutorials
-
----
-
-## Stay updated
-
-### Follow smart home news
-
-**Major tech sites:**
-- The Verge
-- Ars Technica
-- CNET
-- Engadget
-
-**Twitter/X accounts:**
-* @homeassistant
-* @SmartThings
-* @hubaborhood (Hubitat community)
-* @amazon (Alexa updates)
-* @Google (Google Home updates)
-* @Apple (HomeKit updates)
-
-### Newsletters
-
-**[Home Assistant Newsletter](https://www.home-assistant.io/newsletter/)**
-- Monthly updates
-- New integrations
-- Community projects
-
-**[The Ambient Newsletter](https://www.the-ambient.com/newsletter)**
-- Weekly smart home news
-- Product launches
-- Reviews and guides
-
----
-
-## Product research
-
-### Before you buy
-
-**Check these resources:**
-1. **YouTube Reviews** - Watch multiple reviewers
-2. **Reddit Discussions** - Search for product name
-3. **Amazon Reviews** - Read the 3-star reviews
-4. **Compatibility Lists** - Check your platform's compatibility
-5. **Return Policy** - Know before you buy
-
-### Recommended retailers
-
-**Online:**
-- Amazon (easy returns)
-- Best Buy (in-store pickup)
-- Home Depot / Lowe's (construction-related)
-- B&H Photo (wide selection)
-
-**Direct from manufacturer:**
-- Often better support
-- Latest firmware
-- Warranty service
-
----
-
-## Contributing to this site
-
-This guide is open source and welcomes contributions!
-
-**How to contribute:**
-1. Visit our [GitHub Repository](https://github.com/madskristensen/HomeAutomationCookbook)
-2. Submit issues for corrections
-3. Create pull requests for additions
-4. Share your automation recipes
-5. Improve documentation
-
-**What we need:**
-- More automation examples
-- Platform-specific guides
-- Product reviews
-- Troubleshooting tips
-- Your real-world experiences
+<div class="resources-grid">
+
+<div class="resource-category">
+  <div class="resource-category-header">
+    <h2>📺 YouTube channels</h2>
+  </div>
+  <div class="resource-items">
+    <div class="resource-item">
+      <h3><a href="https://www.youtube.com/@AutomateYourLife" target="_blank">Automate Your Life</a></h3>
+      <p class="resource-description">Comprehensive reviews and tutorials for all major smart home platforms.</p>
+      <div class="resource-meta">
+        <span class="resource-tag">Best for: Beginners</span>
+      </div>
+      <ul class="resource-highlights">
+        <li>Product reviews and comparisons</li>
+        <li>Platform guides (Alexa, Google Home, HomeKit, Home Assistant)</li>
+        <li>Automation ideas and tutorials</li>
+        <li>Smart home news and updates</li>
+      </ul>
+    </div>
+    
+    <div class="resource-item">
+      <h3><a href="https://www.youtube.com/@SmartHomeSolver" target="_blank">Smart Home Solver</a></h3>
+      <p class="resource-description">In-depth technical content and problem-solving for advanced users.</p>
+      <div class="resource-meta">
+        <span class="resource-tag">Best for: Advanced users</span>
+        <span class="resource-tag">Home Assistant</span>
+      </div>
+      <ul class="resource-highlights">
+        <li>Advanced Home Assistant tutorials</li>
+        <li>Complex automation setups</li>
+        <li>Integration guides</li>
+        <li>Troubleshooting common issues</li>
+      </ul>
+    </div>
+    
+    <div class="resource-item">
+      <h3><a href="https://www.youtube.com/@paulhibbert" target="_blank">Paul Hibbert</a></h3>
+      <p class="resource-description">Honest reviews with a British sense of humor and real-world testing.</p>
+      <div class="resource-meta">
+        <span class="resource-tag">Best for: Product research</span>
+      </div>
+      <ul class="resource-highlights">
+        <li>Detailed product reviews</li>
+        <li>Real-world testing</li>
+        <li>Pros and cons analysis</li>
+        <li>Budget-friendly options</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="resource-category">
+  <div class="resource-category-header">
+    <h2>💬 Reddit communities</h2>
+  </div>
+  <div class="resource-items">
+    <div class="resource-item">
+      <h3><a href="https://reddit.com/r/homeautomation" target="_blank">r/homeautomation</a></h3>
+      <p class="resource-description">The main home automation community with 500k+ subscribers.</p>
+      <div class="resource-meta">
+        <span class="resource-tag">Very active</span>
+        <span class="resource-tag">All platforms</span>
+      </div>
+      <ul class="resource-highlights">
+        <li>General home automation discussion</li>
+        <li>Platform comparisons</li>
+        <li>Project showcases</li>
+        <li>Troubleshooting help</li>
+      </ul>
+    </div>
+    
+    <div class="resource-item">
+      <h3><a href="https://reddit.com/r/smarthome" target="_blank">r/smarthome</a></h3>
+      <p class="resource-description">Beginner-friendly smart home discussion and recommendations.</p>
+      <div class="resource-meta">
+        <span class="resource-tag">Best for: Beginners</span>
+      </div>
+      <ul class="resource-highlights">
+        <li>Product recommendations</li>
+        <li>Simple automation ideas</li>
+        <li>Setup help</li>
+        <li>News and announcements</li>
+      </ul>
+    </div>
+    
+    <div class="resource-item">
+      <h3><a href="https://reddit.com/r/homeassistant" target="_blank">r/homeassistant</a></h3>
+      <p class="resource-description">Dedicated community for Home Assistant platform users at all levels.</p>
+      <div class="resource-meta">
+        <span class="resource-tag">Home Assistant</span>
+      </div>
+      <ul class="resource-highlights">
+        <li>Setup and configuration help</li>
+        <li>Custom integrations</li>
+        <li>YAML configuration</li>
+        <li>Dashboard designs</li>
+      </ul>
+    </div>
+    
+    <div class="resource-item">
+      <div class="resource-subitems">
+        <div class="resource-subitem">
+          <strong><a href="https://reddit.com/r/smartthings" target="_blank">r/smartthings</a></strong>
+          <p>Samsung SmartThings community for automations and device compatibility</p>
+        </div>
+        <div class="resource-subitem">
+          <strong><a href="https://reddit.com/r/hubitat" target="_blank">r/hubitat</a></strong>
+          <p>Hubitat Elevation users focused on local processing and privacy</p>
+        </div>
+        <div class="resource-subitem">
+          <strong><a href="https://reddit.com/r/alexa" target="_blank">r/alexa</a></strong>
+          <p>Amazon Alexa routines, skills, and Echo device discussions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="resource-category">
+  <div class="resource-category-header">
+    <h2>🌐 Forums and communities</h2>
+  </div>
+  <div class="resource-items">
+    <div class="resource-item">
+      <h3><a href="https://community.home-assistant.io/" target="_blank">Home Assistant Community</a></h3>
+      <p class="resource-description">Official Home Assistant forum with excellent documentation and active developer community.</p>
+    </div>
+    
+    <div class="resource-item">
+      <h3><a href="https://community.hubitat.com/" target="_blank">Hubitat Community</a></h3>
+      <p class="resource-description">Hubitat Elevation users sharing custom apps, drivers, and support.</p>
+    </div>
+    
+    <div class="resource-item">
+      <h3><a href="https://community.smartthings.com/" target="_blank">SmartThings Community</a></h3>
+      <p class="resource-description">Official SmartThings forum for device handlers, SmartApps, and platform updates.</p>
+    </div>
+  </div>
+</div>
+
+<div class="resource-category">
+  <div class="resource-category-header">
+    <h2>💬 Discord servers</h2>
+  </div>
+  <div class="resource-items">
+    <div class="resource-item">
+      <div class="resource-subitems">
+        <div class="resource-subitem">
+          <strong><a href="https://discord.gg/home-assistant" target="_blank">Home Assistant Discord</a></strong>
+          <p>Real-time chat support with active community and quick troubleshooting</p>
+        </div>
+        <div class="resource-subitem">
+          <strong><a href="https://discord.gg/smartthings" target="_blank">SmartThings Discord</a></strong>
+          <p>Community support, custom development, and platform updates</p>
+        </div>
+        <div class="resource-subitem">
+          <strong><a href="https://discord.gg/hubitat" target="_blank">Hubitat Discord</a></strong>
+          <p>Real-time help with custom drivers, apps, and local automation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="resource-category">
+  <div class="resource-category-header">
+    <h2>📰 Blogs and news</h2>
+  </div>
+  <div class="resource-items">
+    <div class="resource-item">
+      <h3><a href="https://www.home-assistant.io/blog/" target="_blank">Home Assistant Blog</a></h3>
+      <p class="resource-description">Official updates, feature announcements, and community highlights.</p>
+    </div>
+    
+    <div class="resource-item">
+      <h3><a href="https://www.the-ambient.com/" target="_blank">The Ambient</a></h3>
+      <p class="resource-description">Smart home news, product reviews, and how-to guides.</p>
+    </div>
+    
+    <div class="resource-item">
+      <h3><a href="https://www.cnet.com/home/smart-home/" target="_blank">CNET Smart Home</a></h3>
+      <p class="resource-description">Product reviews, buying guides, and smart home trends.</p>
+    </div>
+  </div>
+</div>
+
+<div class="resource-category">
+  <div class="resource-category-header">
+    <h2>🎙️ Podcasts</h2>
+  </div>
+  <div class="resource-items">
+    <div class="resource-item">
+      <h3><a href="https://twit.tv/shows/home-gadget-geeks" target="_blank">Home Gadget Geeks</a></h3>
+      <p class="resource-description">Smart home discussions, product reviews, and expert interviews.</p>
+    </div>
+    
+    <div class="resource-item">
+      <h3><a href="https://www.automateordie.com/" target="_blank">Automate Your Life Podcast</a></h3>
+      <p class="resource-description">Weekly smart home news, community Q&A, and product discussions.</p>
+    </div>
+  </div>
+</div>
+
+<div class="resource-category">
+  <div class="resource-category-header">
+    <h2>🛒 Before you buy</h2>
+  </div>
+  <div class="resource-items">
+    <div class="resource-item">
+      <h3>Research checklist</h3>
+      <div class="resource-links">
+        <div class="resource-link-item">
+          <a>Watch multiple YouTube reviews</a>
+        </div>
+        <div class="resource-link-item">
+          <a>Search Reddit for product discussions</a>
+        </div>
+        <div class="resource-link-item">
+          <a>Read Amazon 3-star reviews (most honest)</a>
+        </div>
+        <div class="resource-link-item">
+          <a>Check your platform's compatibility list</a>
+        </div>
+        <div class="resource-link-item">
+          <a>Understand return policy before purchase</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="resource-item">
+      <h3>Recommended retailers</h3>
+      <div class="resource-subitems">
+        <div class="resource-subitem">
+          <strong>Amazon</strong>
+          <p>Easy returns and wide selection</p>
+        </div>
+        <div class="resource-subitem">
+          <strong>Best Buy</strong>
+          <p>In-store pickup and returns</p>
+        </div>
+        <div class="resource-subitem">
+          <strong>Home Depot / Lowe's</strong>
+          <p>Construction-related smart home products</p>
+        </div>
+        <div class="resource-subitem">
+          <strong>Direct from manufacturer</strong>
+          <p>Better support and latest firmware</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="resource-category">
+  <div class="resource-category-header">
+    <h2>🤝 Get involved</h2>
+  </div>
+  <div class="resource-items">
+    <div class="resource-item">
+      <h3>Contribute to open source</h3>
+      <p class="resource-description"><a href="https://github.com/home-assistant" target="_blank">Home Assistant on GitHub</a> - Submit bug reports, contribute code, or create custom integrations.</p>
+    </div>
+    
+    <div class="resource-item">
+      <h3>Share your knowledge</h3>
+      <ul class="resource-highlights">
+        <li>Write blog posts about your setup</li>
+        <li>Make YouTube videos</li>
+        <li>Share automation blueprints</li>
+        <li>Help others in forums and Reddit</li>
+        <li>Document your configurations</li>
+      </ul>
+    </div>
+    
+    <div class="resource-item">
+      <h3>Contribute to this site</h3>
+      <p class="resource-description">This guide is open source! Visit our <a href="https://github.com/madskristensen/HomeAutomationCookbook" target="_blank">GitHub repository</a> to submit issues, create pull requests, share automation recipes, or improve documentation.</p>
+    </div>
+  </div>
+</div>
+
+<div class="resource-category">
+  <div class="resource-category-header">
+    <h2>📧 Stay updated</h2>
+  </div>
+  <div class="resource-items">
+    <div class="resource-item">
+      <h3>Newsletters</h3>
+      <div class="resource-subitems">
+        <div class="resource-subitem">
+          <strong><a href="https://www.home-assistant.io/newsletter/" target="_blank">Home Assistant Newsletter</a></strong>
+          <p>Monthly updates, new integrations, and community projects</p>
+        </div>
+        <div class="resource-subitem">
+          <strong><a href="https://www.the-ambient.com/newsletter" target="_blank">The Ambient Newsletter</a></strong>
+          <p>Weekly smart home news, product launches, and guides</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="resource-item">
+      <h3>Follow on social media</h3>
+      <div class="resource-links">
+        <div class="resource-link-item">
+          <a href="https://twitter.com/homeassistant" target="_blank">@homeassistant</a>
+        </div>
+        <div class="resource-link-item">
+          <a href="https://twitter.com/SmartThings" target="_blank">@SmartThings</a>
+        </div>
+        <div class="resource-link-item">
+          <a href="https://twitter.com/hubaborhood" target="_blank">@hubaborhood (Hubitat community)</a>
+        </div>
+        <div class="resource-link-item">
+          <a href="https://twitter.com/amazon" target="_blank">@amazon (Alexa updates)</a>
+        </div>
+        <div class="resource-link-item">
+          <a href="https://twitter.com/Google" target="_blank">@Google (Google Home updates)</a>
+        </div>
+        <div class="resource-link-item">
+          <a href="https://twitter.com/Apple" target="_blank">@Apple (HomeKit updates)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
 
 ---
 
 [← Back to Getting started](/getting-started/) | [← Back to Home](/)
+

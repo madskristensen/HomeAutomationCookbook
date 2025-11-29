@@ -9,7 +9,7 @@
 - Config: `docs/_config.yml` contains navigation structure
 - Layout: `docs/_layouts/default.html` is the main template
 - Homepage: `docs/index.md`
-- Documentation pages: `docs/philosophy/index.md`, `docs/getting-started/tips.md`, `docs/getting-started/resources.md`
+- Documentation pages: `docs/getting-started/philosophy.md`, `docs/getting-started/tips.md`, `docs/getting-started/resources.md`
 - Automation categories: 6 directories under `docs/automation/` (motion, contact, presence, climate, media, appliances)
 - Each category has: `index.md` (overview) and individual automation pages
 

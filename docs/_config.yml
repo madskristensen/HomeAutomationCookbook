@@ -26,7 +26,7 @@ navigation:
     url: /getting-started/
     subitems:
       - title: Philosophy
-        url: /philosophy/index.html
+        url: /getting-started/philosophy.html
       - title: Choose the right platform
         url: /getting-started/choose-the-right-platform.html
       - title: Device guide

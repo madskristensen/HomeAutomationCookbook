@@ -814,6 +814,19 @@ th {
 
 .setup-steps {
   margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tip-card .setup-steps {
+  padding: 1.5rem 2rem;
+  margin: 0;
+}
+
+.setup-steps h3 {
+  margin: 0 0 1.5rem;
+  font-size: 1.2rem;
+  color: var(--color-text-heading);
 }
 
 .setup-step {
@@ -823,14 +836,19 @@ th {
   border-radius: 8px;
 }
 
+.setup-step:last-child {
+  margin-bottom: 0;
+}
+
 .setup-step h4 {
   margin: 0 0 0.75rem;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   color: var(--color-text-heading);
 }
 
 .setup-step p {
-  margin-bottom: 1rem;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .setup-step strong {
@@ -839,7 +857,7 @@ th {
 }
 
 .setup-step ul {
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0 0;
   padding-left: 1.25rem;
   list-style: none;
 }
@@ -951,6 +969,839 @@ th {
 
 /* Homepage Components
    ========================================================================== */
+
+/* Tips and tricks page styles */
+.tips-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.tip-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.tip-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.tip-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--color-bg-muted);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.tip-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.tip-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--color-text-heading);
+}
+
+.tip-intro {
+  padding: 1.5rem 2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border);
+  margin: 0;
+}
+
+.tip-section {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tip-section:last-child {
+  border-bottom: none;
+}
+
+.tip-section h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: var(--color-text-heading);
+}
+
+.tip-section p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.tip-section ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.5rem;
+}
+
+.tip-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Subscription examples */
+.subscription-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.subscription-item {
+  padding: 1rem;
+  background: var(--color-bg-muted);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.subscription-item strong {
+  color: var(--color-text-heading);
+  font-size: 1rem;
+}
+
+.subscription-item span {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Benefits section */
+.tip-benefits {
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-subtle);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.benefit-item:last-child {
+  margin-bottom: 0;
+}
+
+.benefit-icon {
+  color: #16a34a;
+  font-weight: bold;
+  font-size: 1.2em;
+  flex-shrink: 0;
+}
+
+/* Requirements section */
+.tip-requirements {
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tip-requirements h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: var(--color-text-heading);
+}
+
+.tip-requirements ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+/* Implementation flow */
+.tip-implementation {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.implementation-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.flow-step {
+  display: grid;
+  grid-template-columns: 2fr auto 3fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.flow-trigger {
+  padding: 1rem;
+  background: var(--color-bg-muted);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+.flow-arrow {
+  font-size: 1.5rem;
+  color: var(--color-link);
+  font-weight: bold;
+}
+
+.flow-action {
+  padding: 1rem;
+  background: var(--color-bg-subtle);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+/* Example scenario */
+.example-scenario {
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.example-scenario h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: var(--color-text-heading);
+}
+
+.scenario-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.scenario-step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg-elevated);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--color-link);
+  color: var(--color-bg-elevated);
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+/* Comparison section */
+.comparison-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-column {
+  padding: 1.5rem 2rem;
+}
+
+.comparison-column:first-child {
+  border-right: 1px solid var(--color-border);
+}
+
+.comparison-column h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.comparison-bad h3 {
+  color: #dc2626;
+}
+
+.comparison-good h3 {
+  color: #16a34a;
+}
+
+.comparison-column ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.comparison-column li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Status examples */
+.status-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.status-category {
+  padding: 1.25rem;
+  background: var(--color-bg-muted);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.status-category strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-heading);
+  font-size: 1.05rem;
+}
+
+.status-category ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.status-category li {
+  margin-bottom: 0.5rem;
+}
+
+/* Implementation tips grid */
+.implementation-tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tip-subsection {
+  padding: 1.25rem;
+  background: var(--color-bg-muted);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.tip-subsection h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text-heading);
+}
+
+.tip-subsection p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Pattern sections */
+.pattern-example {
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pattern-example h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: var(--color-text-heading);
+}
+
+.pattern-benefit {
+  padding: 1rem;
+  background: var(--color-bg-elevated);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.pattern-benefit strong {
+  color: var(--color-text-heading);
+}
+
+.pattern-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pattern-reason {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--color-bg-elevated);
+  border-radius: 6px;
+}
+
+.reason-icon {
+  color: #16a34a;
+  font-weight: bold;
+  font-size: 1.2em;
+  flex-shrink: 0;
+}
+
+.pattern-ideas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pattern-idea {
+  padding: 1.25rem;
+  background: var(--color-bg-muted);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.pattern-idea strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-heading);
+  font-size: 1.05rem;
+}
+
+.pattern-idea p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Philosophy page styles */
+.philosophy-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.philosophy-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.philosophy-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.philosophy-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--color-bg-muted);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.philosophy-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.philosophy-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--color-text-heading);
+}
+
+.philosophy-intro {
+  padding: 1.5rem 2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border);
+  margin: 0;
+}
+
+.philosophy-section {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.philosophy-section:last-child {
+  border-bottom: none;
+}
+
+.philosophy-section h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: var(--color-text-heading);
+}
+
+.philosophy-section p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+
+.philosophy-section p:last-child {
+  margin-bottom: 0;
+}
+
+.philosophy-example {
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.philosophy-example h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: var(--color-text-heading);
+  font-style: italic;
+}
+
+.philosophy-example p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+
+.philosophy-example p:last-child {
+  margin-bottom: 0;
+}
+
+.philosophy-fix {
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.philosophy-fix h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.philosophy-fix p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+
+.philosophy-fix p:last-child {
+  margin-bottom: 0;
+}
+
+.philosophy-takeaway {
+  padding: 1.5rem 2rem;
+  background: var(--color-info-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.philosophy-takeaway strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-heading);
+  font-size: 1rem;
+}
+
+.philosophy-takeaway p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Pyramid visualization */
+.pyramid-container {
+  padding: 2rem;
+  background: var(--color-bg-subtle);
+}
+
+.pyramid-level {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--color-border);
+}
+
+.pyramid-level:last-child {
+  margin-bottom: 0;
+}
+
+.pyramid-level-1 {
+  background: #dcfce7;
+  border-color: #16a34a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pyramid-level-1 {
+    background: #1a3d26;
+    border-color: #16a34a;
+  }
+}
+
+.pyramid-level-2 {
+  background: #dbeafe;
+  border-color: #2563eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pyramid-level-2 {
+    background: #1e3a5f;
+    border-color: #3b82f6;
+  }
+}
+
+.pyramid-level-3 {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pyramid-level-3 {
+    background: #3d3520;
+    border-color: #f59e0b;
+  }
+}
+
+.pyramid-level h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+  color: var(--color-text-heading);
+}
+
+.pyramid-level p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+
+.pyramid-level ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.5rem;
+}
+
+.pyramid-level li {
+  margin-bottom: 0.5rem;
+}
+
+.pyramid-requirement {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg-elevated);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+/* Checklist section */
+.philosophy-checklist {
+  padding: 2rem;
+  background: var(--color-bg-muted);
+}
+
+.philosophy-checklist h3 {
+  margin: 0 0 1.5rem;
+  font-size: 1.2rem;
+  color: var(--color-text-heading);
+}
+
+.checklist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--color-bg-elevated);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.checklist-icon {
+  color: #16a34a;
+  font-weight: bold;
+  font-size: 1.3em;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.checklist-item strong {
+  color: var(--color-text-heading);
+  font-weight: 600;
+}
+
+/* Resources page styles */
+.resources-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.resource-category {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.resource-category-header {
+  padding: 1.5rem 2rem;
+  background: var(--color-bg-muted);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.resource-category-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-text-heading);
+}
+
+.resource-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.resource-item {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.2s ease;
+}
+
+.resource-item:last-child {
+  border-bottom: none;
+}
+
+.resource-item:hover {
+  background: var(--color-bg-subtle);
+}
+
+.resource-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.resource-item h3 a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.resource-item h3 a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+.resource-description {
+  margin: 0.75rem 0 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.resource-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.resource-tag {
+  padding: 0.25rem 0.75rem;
+  background: var(--color-bg-muted);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--color-text-tertiary);
+  font-weight: 500;
+}
+
+.resource-highlights {
+  margin: 0.75rem 0 0;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.resource-highlights li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.resource-subitems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.resource-subitem {
+  padding: 1rem;
+  background: var(--color-bg-muted);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.resource-subitem strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-heading);
+  font-size: 1rem;
+}
+
+.resource-subitem a {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resource-subitem a:hover {
+  text-decoration: underline;
+}
+
+.resource-subitem p {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.resource-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.resource-link-item::before {
+  content: '→';
+  color: var(--color-link);
+  font-weight: bold;
+}
+
+.resource-link-item a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.resource-link-item a:hover {
+  text-decoration: underline;
+}
 
 /* Platform comparison page styles */
 .platform-comparison-grid {
@@ -1701,6 +2552,144 @@ th {
 
   .platform-quickstart {
     padding: 1.25rem 1.5rem;
+  }
+
+  /* Tips and tricks mobile */
+  .tip-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .tip-icon {
+    font-size: 2rem;
+  }
+
+  .tip-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .tip-intro {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .tip-section {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .subscription-examples {
+    grid-template-columns: 1fr;
+  }
+
+  .tip-benefits {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .tip-requirements {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .tip-implementation {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .flow-step {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .flow-arrow {
+    text-align: center;
+    transform: rotate(90deg);
+  }
+
+  .example-scenario {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .comparison-section {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-column:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .comparison-column {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .status-examples {
+    grid-template-columns: 1fr;
+  }
+
+  .implementation-tips {
+    grid-template-columns: 1fr;
+  }
+
+  .pattern-example {
+    padding: 1.25rem 1.5rem;
+  }
+
+  /* Philosophy page mobile */
+  .philosophy-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .philosophy-icon {
+    font-size: 2rem;
+  }
+
+  .philosophy-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .philosophy-intro {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .philosophy-section {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .philosophy-example {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .philosophy-fix {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .philosophy-takeaway {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .pyramid-container {
+    padding: 1.5rem;
+  }
+
+  .pyramid-level {
+    padding: 1.25rem;
+  }
+
+  .philosophy-checklist {
+    padding: 1.5rem;
+  }
+
+  /* Resources page mobile */
+  .resource-category-header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .resource-item {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .resource-subitems {
+    grid-template-columns: 1fr;
   }
   
   .device-starter-grid {
