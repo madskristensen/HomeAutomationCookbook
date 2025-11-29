@@ -250,84 +250,84 @@ AND send notification "Thermostat off - living room window open"</div>
     <p>Display which windows/doors are open and thermostat status:</p>
     <ul>
       <li>Show count of open windows</li>
-- List specific windows currently open
-- Thermostat current status (Off due to windows)
-- Time since thermostat turned off
-- Outdoor vs indoor temperature comparison
+      <li>List specific windows currently open</li>
+      <li>Thermostat current status (Off due to windows)</li>
+      <li>Time since thermostat turned off</li>
+      <li>Outdoor vs indoor temperature comparison</li>
+    </ul>
+  </div>
+  
+  <div class="feature-card">
+    <h3>Seasonal variations</h3>
+    <p>Adjust behavior based on season:</p>
+    <ul>
+      <li><strong>Winter:</strong> Shorter delay (1 min), aggressive shutdown</li>
+      <li><strong>Summer:</strong> Medium delay (2 min), standard shutdown</li>
+      <li><strong>Spring/Fall:</strong> Longer delay (5 min), encourage natural ventilation</li>
+    </ul>
+  </div>
+</div>
 
-### Seasonal variations
+## Common issues and solutions
 
-Adjust behavior based on season:
-
-**Winter (Heating Season):**
-- Shorter delay (1 minute) - heat loss is expensive
-- More aggressive shutdown
-- Notify about heat loss
-
-**Summer (Cooling Season):**
-- Medium delay (2 minutes) - less critical
-- Standard shutdown
-
-**Spring/Fall (Mild Weather):**
-- Longer delay (5 minutes) - encourage natural ventilation
-- Only shut off if outside temp unfavorable
-
-## Troubleshooting
-
-### Issue: Thermostat shuts off too frequently
-
-**Causes:**
-- Delay too short - door opened briefly triggers shutdown
-- Too many sensors included - any window triggers shutdown
-- Family members frequently opening doors
-- Pets triggering door sensors
-
-**Solutions:**
-- ✅ Increase delay to 2-3 minutes before shutting off thermostat
-- ✅ Differentiate between frequently-used doors (longer delay) and windows (shorter delay)
-- ✅ Exclude mudroom/garage doors that open briefly
-- ✅ Add condition: Only shut off if multiple windows open OR open for extended time
-- ✅ Add manual override: Button to temporarily disable automation
-
-### Issue: Temperature becomes uncomfortable
-
-**Causes:**
-- Thermostat off too long - forgot window was open
-- Extreme outdoor temperatures
-- Multiple windows open simultaneously
-- HVAC takes long time to catch up after restarting
-
-**Check:**
-- ✅ Create companion automation to turn thermostat back on (see related automation)
-- ✅ Set maximum "off" duration: Resume after 30-60 minutes even if window still open
-- ✅ Monitor indoor temperature: Resume if temp drops/rises too much
-- ✅ Send reminder notification after 15 minutes: "Windows still open, thermostat off"
-
-**Fix:**
-- Add temperature safety limits:
-  - Winter: Resume heating if indoor temp drops below 65°F
-  - Summer: Resume cooling if indoor temp rises above 78°F
-- Create escalating notifications:
-  - 15 min: Informational notification
-  - 30 min: Reminder to close windows
-  - 60 min: Urgent notification
-- Add dashboard widget showing thermostat status and open windows
-
-### Issue: Automation doesn't trigger
-
-**Causes:**
-- Contact sensors not reporting open state
-- Automation disabled or has errors
-- Thermostat doesn't support remote off command
-- Network connectivity issues
-
-**Solutions:**
-- ✅ Test contact sensors individually - open window and check status in app
-- ✅ Verify automation is enabled and has no error indicators
-- ✅ Check thermostat API compatibility - some thermostats can't be turned off remotely
-- ✅ Review automation logs to see if triggers are firing
-- ✅ Test thermostat control manually - try turning off via app first
-- ✅ Check WiFi signal strength for both sensors and thermostat
+<div class="troubleshooting-grid">
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Thermostat shuts off too frequently</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Delay too short or too many sensors triggering shutdown.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Increase delay to 2-3 minutes before shutting off thermostat</li>
+        <li>Differentiate between doors (longer delay) and windows (shorter delay)</li>
+        <li>Exclude mudroom/garage doors that open briefly</li>
+        <li>Add condition: Only shut off if multiple windows open</li>
+        <li>Add manual override button to temporarily disable automation</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Temperature becomes uncomfortable</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Thermostat off too long - forgot window was open.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Create companion automation to turn thermostat back on</li>
+        <li>Set maximum "off" duration: Resume after 30-60 minutes</li>
+        <li>Monitor indoor temperature: Resume if temp changes too much</li>
+        <li>Send reminder notification after 15 minutes</li>
+        <li>Add temperature safety limits (e.g., resume if below 65°F in winter)</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Automation doesn't trigger</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Contact sensors not reporting open state or automation has errors.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Test contact sensors individually - check status in app</li>
+        <li>Verify automation is enabled with no error indicators</li>
+        <li>Check thermostat API compatibility for remote off</li>
+        <li>Review automation logs to see if triggers are firing</li>
+        <li>Check WiFi signal strength for sensors and thermostat</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ---
 

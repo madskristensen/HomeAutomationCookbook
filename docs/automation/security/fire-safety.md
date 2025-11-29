@@ -428,13 +428,25 @@ Create lit paths to exits:
       </ul>
     </div>
   </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Automation doesn't trigger</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Smoke detector not integrated or wrong trigger configured.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Verify smoke detector appears in smart home</li>
+        <li>Check detector status and connectivity</li>
+        <li>Test with manual trigger (test button)</li>
+        <li>Review automation logs for errors</li>
+      </ul>
+    </div>
+  </div>
 </div>
-
-**Solutions:**
-✅ Verify smoke detector appears in smart home
-✅ Check detector status and connectivity
-✅ Test with manual trigger (test button)
-✅ Review automation logs for errors
 
 ## Safety considerations
 

@@ -275,53 +275,64 @@ THEN turn on bathroom fan</div>
 
 ## Common issues and solutions
 
-### Issue: Fan doesn't turn on
-
-**Causes:**
-- Smart fan switch not responding
-- Trigger not detecting shower start
-- Automation disabled or has errors
-- Fan physical switch is off
-
-**Solutions:**
-✅ Test fan switch manually through app - verify it controls fan
-✅ Check automation triggers - simulate shower start and watch logs
-✅ Verify automation is enabled in your platform
-✅ Ensure physical fan switch (if separate) is in "on" position
-✅ Check fan switch load rating matches fan motor requirements
-
-### Issue: Fan turns on at wrong times
-
-**Causes:**
-- Multiple triggers firing unexpectedly
-- Humidity sensor triggered by other sources (hot bath, steam from cooking)
-- Time conditions not set properly
-- Contact sensor detecting wrong door/window
-
-**Check:**
-- ✅ Review automation logs to see what triggered activation
-- ✅ Add time-based conditions to limit activation hours
-- ✅ Increase humidity threshold if too sensitive (try 80% instead of 75%)
-- ✅ Verify contact sensor is only on shower door, not bathroom door
-
-**Fix:**
-- Add delay: Only trigger if condition persists for 2-3 minutes
-- Use multiple conditions: Light ON + Humidity rising + Door closed
-- Set proper time restrictions: Only during typical shower hours
-
-### Issue: Fan doesn't turn off
-
-**Causes:**
-- Auto-off automation not created or not working
-- Humidity not dropping (ventilation issue)
-- Physical switch turned on manually (bypassing automation)
-
-**Solutions:**
-✅ Create separate automation for fan shutoff (see Advanced Features)
-✅ Increase shutoff delay if humidity drops slowly (15-20 minutes)
-✅ Check actual bathroom ventilation - fan may need cleaning or is undersized
-✅ Add manual override: Physical button press overrides automation
-✅ Set maximum run time: Turn off after 30 minutes regardless
+<div class="troubleshooting-grid">
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Fan doesn't turn on</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Smart fan switch not responding or automation disabled.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Test fan switch manually through app</li>
+        <li>Check automation triggers - simulate shower start</li>
+        <li>Verify automation is enabled in your platform</li>
+        <li>Ensure physical fan switch is in "on" position</li>
+        <li>Check fan switch load rating matches fan motor</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Fan turns on at wrong times</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Multiple triggers firing or humidity sensor triggered by other sources.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Review automation logs to see what triggered</li>
+        <li>Add time-based conditions to limit hours</li>
+        <li>Increase humidity threshold (try 80% instead of 75%)</li>
+        <li>Add delay: Only trigger if condition persists for 2-3 min</li>
+        <li>Use multiple conditions: Light ON + Humidity rising</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Fan doesn't turn off</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Auto-off automation not created or humidity not dropping.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Create separate automation for fan shutoff</li>
+        <li>Increase shutoff delay if humidity drops slowly</li>
+        <li>Check bathroom ventilation - fan may need cleaning</li>
+        <li>Add manual override button</li>
+        <li>Set maximum run time: Off after 30 minutes regardless</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 ---
 

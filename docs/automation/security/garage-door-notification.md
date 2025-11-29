@@ -429,13 +429,25 @@ THEN send notification "Garage door still open"</div>
       </ul>
     </div>
   </div>
+  
+  <div class="issue-card">
+    <div class="issue-header">
+      <h3>Too many notifications</h3>
+    </div>
+    <div class="issue-problem">
+      <strong>Problem:</strong> Delay too short or no cooldown between notifications.
+    </div>
+    <div class="issue-solutions">
+      <strong>Solutions:</strong>
+      <ul>
+        <li>Increase delay time (10-15 minutes)</li>
+        <li>Add condition: only if door was closed within last hour</li>
+        <li>Add notification cooldown (1 per hour max)</li>
+        <li>Use escalating notifications instead of repeated same message</li>
+      </ul>
+    </div>
+  </div>
 </div>
-
-**Solutions:**
-✅ Increase delay time (10-15 minutes)
-✅ Add condition: only if door was closed within last hour
-✅ Add notification cooldown (1 per hour max)
-✅ Use escalating notifications instead of repeated same message
 
 ## Best practices
 
