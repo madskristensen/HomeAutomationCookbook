@@ -37,7 +37,7 @@ Get notified when the washing machine cycle completes so you can transfer clothe
 
 <span class="card-meta">**Best for:** Preventing mildew, laundry efficiency</span>
 
-<p><a href="/automation/appliances/washer-done-notification/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/appliances/washer-done-notification.html" class="card-link">View Automation →</a></p>
 
 </div>
 
@@ -49,7 +49,7 @@ Robot vacuum automatically cleans your home when everyone leaves.
 
 <span class="card-meta">**Best for:** Automated cleaning, hands-free maintenance</span>
 
-<p><a href="/automation/appliances/robot-vacuum-auto-start/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/appliances/robot-vacuum-auto-start.html" class="card-link">View Automation →</a></p>
 
 </div>
 

@@ -37,7 +37,7 @@ Pause heating or cooling when windows open to save energy and avoid conditioning
 
 <span class="card-meta">**Best for:** Energy savings, fresh air, nice weather</span>
 
-<p><a href="/automation/climate/thermostat-windows-open/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/climate/thermostat-windows-open.html" class="card-link">View Automation →</a></p>
 
 </div>
 
@@ -49,7 +49,7 @@ Automatically turn on the bathroom fan when you start a shower to prevent humidi
 
 <span class="card-meta">**Best for:** Bathrooms, preventing mold, air quality</span>
 
-<p><a href="/automation/climate/fan-shower/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/climate/fan-shower.html" class="card-link">View Automation →</a></p>
 
 </div>
 

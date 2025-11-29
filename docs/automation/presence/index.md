@@ -33,25 +33,25 @@ Presence detection and home modes unlock powerful automations based on location 
 
 <div class="automation-card" markdown="1">
 
-#### [Set Away Mode When Everyone Leaves](/automation/presence/away-mode/)
+#### [Set Away Mode When Everyone Leaves](/automation/presence/away-mode.html)
 
 Automatically activate Away Mode when the last person leaves. Includes energy savings, security activation, and verification strategies.
 
 **Best for:** Energy savings, security, automated home management
 
-<p><a href="/automation/presence/away-mode/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/presence/away-mode.html" class="card-link">View Automation →</a></p>
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-#### [Morning Routine Automation](/automation/presence/morning-routine/)
+#### [Morning Routine Automation](/automation/presence/morning-routine.html)
 
 Wake up to an automated morning routine. Lights, coffee, weather, and climate all prepared automatically.
 
 **Best for:** Consistent wake-up experience, morning efficiency
 
-<p><a href="/automation/presence/morning-routine/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/presence/morning-routine.html" class="card-link">View Automation →</a></p>
 
 </div>
 

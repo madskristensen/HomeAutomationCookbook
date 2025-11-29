@@ -37,7 +37,7 @@ Automatically turn lights on when doors open, off when they close. Perfect for c
 
 <span class="card-meta">**Best for:** Closets, pantries, cabinets, garage</span>
 
-<p><a href="/automation/contact/toggle-lights-door/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/contact/toggle-lights-door.html" class="card-link">View Automation →</a></p>
 
 </div>
 
@@ -49,7 +49,7 @@ Prevent motion sensors from turning lights back on after you've left. Essential 
 
 <span class="card-meta">**Best for:** Bathrooms, offices, bedrooms</span>
 
-<p><a href="/automation/contact/disable-on-door-close/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/contact/disable-on-door-close.html" class="card-link">View Automation →</a></p>
 
 </div>
 

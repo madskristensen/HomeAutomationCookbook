@@ -33,25 +33,25 @@ Motion detection is one of the most powerful tools in a home automator's arsenal
 
 <div class="automation-card" markdown="1">
 
-#### [Turn On Lights When Motion is Detected](/automation/motion/lights-on-motion/)
+#### [Turn On Lights When Motion is Detected](/automation/motion/lights-on-motion.html)
 
 The most common and useful automation. Automatically turn on lights when entering a room.
 
 **Best for:** Bathrooms, hallways, closets, entryways, outdoor areas
 
-<p><a href="/automation/motion/lights-on-motion/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/motion/lights-on-motion.html" class="card-link">View Automation →</a></p>
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-#### [Turn Off Lights After Motion Stops](/automation/motion/lights-off-after-motion/)
+#### [Turn Off Lights After Motion Stops](/automation/motion/lights-off-after-motion.html)
 
 Complete the cycle by turning lights off when a room is no longer occupied.
 
 **Best for:** All rooms with motion sensors, energy savings
 
-<p><a href="/automation/motion/lights-off-after-motion/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/motion/lights-off-after-motion.html" class="card-link">View Automation →</a></p>
 
 </div>
 
@@ -368,9 +368,9 @@ Adjust automations based on detected activity.
 ---
 
 **Get Started:**
-- [Turn On Lights When Motion Detected →](/automation/motion/lights-on-motion/)
-- [Turn Off Lights After Motion Stops →](/automation/motion/lights-off-after-motion/)
-- [Bathroom Night Light →](/automation/motion/bathroom-night-light/)
+- [Turn On Lights When Motion Detected →](/automation/motion/lights-on-motion.html)
+- [Turn Off Lights After Motion Stops →](/automation/motion/lights-off-after-motion.html)
+- [Bathroom Night Light →](/automation/motion/bathroom-night-light.html)
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>

@@ -37,7 +37,7 @@ Automatically dim lights for optimal movie watching experience.
 
 <span class="card-meta">**Best for:** Movie nights, TV viewing, ambiance</span>
 
-<p><a href="/automation/media/tv-dim-lights/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/media/tv-dim-lights.html" class="card-link">View Automation →</a></p>
 
 </div>
 
@@ -49,7 +49,7 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 
 <span class="card-meta">**Best for:** Quick access, avoiding voice commands</span>
 
-<p><a href="/automation/media/music-switch-control/" class="card-link">View Automation →</a></p>
+<p><a href="/automation/media/music-switch-control.html" class="card-link">View Automation →</a></p>
 
 </div>
 
