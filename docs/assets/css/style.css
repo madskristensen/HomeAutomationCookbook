@@ -2672,302 +2672,6 @@ a.community-link:hover,
   font-size: 0.9rem;
 }
 
-/* Responsive Design
-   ========================================================================== */
-
-@media (max-width: 868px) {
-  body {
-    font-size: 16px;
-  }
-  
-  .container {
-    padding: 2rem 1.5rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin-top: 3rem;
-  }
-  
-  h3 {
-    font-size: 1.25rem;
-  }
-  
-  /* Hero mobile */
-  .hero {
-    padding: 3rem 1.5rem 2rem;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .hero-benefits {
-    gap: 1.25rem;
-  }
-  
-  .benefit {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  
-  .benefit strong {
-    display: block;
-  }
-  
-  .benefit-text {
-    display: block;
-  }
-  
-  .hero-cta {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .cta-primary, .cta-secondary {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .principles-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .featured-automations {
-    grid-template-columns: 1fr;
-  }
-  
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .getting-started-box {
-    padding: 2rem 1.5rem;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    border-radius: 0;
-  }
-  
-  .community-links {
-    grid-template-columns: 1fr;
-  }
-  
-  /* Getting started page mobile */
-  .planning-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  /* Platform comparison mobile */
-  .platform-detail-header {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .platform-detail-header img {
-    block-size: 40px;
-    inline-size: 40px;
-  }
-
-  .platform-detail-header h3 {
-    font-size: 1.3rem;
-  }
-
-  :is(.platform-description, .highlight-section, .platform-quickstart,
-      .resource-category-header, .resource-item) {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .platform-highlights {
-    grid-template-columns: 1fr;
-  }
-
-  .highlight-section:first-child {
-    border-inline-end: none;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  /* Shared padding adjustments for card headers and sections */
-  :is(.tip-header, .philosophy-header) {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .tip-icon,
-  .philosophy-icon {
-    font-size: 2rem;
-  }
-
-  :is(.tip-header, .philosophy-header) h2 {
-    font-size: 1.4rem;
-  }
-
-  /* Consolidated padding for all card sections */
-  :is(.tip-intro, .philosophy-intro, .tip-section, .philosophy-section,
-      .philosophy-example, .philosophy-fix, .philosophy-takeaway,
-      .tip-benefits, .tip-requirements, .tip-implementation,
-      .example-scenario, .pattern-example, .comparison-column) {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .subscription-examples,
-  .status-examples,
-  .implementation-tips,
-  .resource-subitems {
-    grid-template-columns: 1fr;
-  }
-
-  .comparison-section {
-    grid-template-columns: 1fr;
-  }
-
-  .comparison-column:first-child {
-    border-inline-end: none;
-    border-bottom: 1px solid var(--color-border);
-  }
-  
-  .flow-step {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  .flow-arrow {
-    text-align: center;
-    transform: rotate(90deg);
-  }
-
-  :is(.pyramid-container, .philosophy-checklist) {
-    padding: 1.5rem;
-  }
-
-  .pyramid-level {
-    padding: 1.25rem;
-  }
-  
-  .device-starter-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .network-requirements,
-  .platform-selection {
-    grid-template-columns: 1fr;
-  }
-  
-  .network-requirements {
-    gap: 1rem;
-  }
-  
-  /* Navigation mobile */
-  .nav-container {
-    align-items: center;
-  }
-
-  .site-title {
-    order: 1;
-    flex: 1;
-  }
-  
-  .nav-toggle {
-    display: block;
-    order: 3;
-  }
-  
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--color-bg-page);
-    padding: 1rem 0;
-    box-shadow: var(--shadow-dropdown);
-    border-bottom: 1px solid var(--color-border);
-    order: 2;
-    width: 100%;
-    max-height: calc(100vh - 70px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .nav-container:has(.nav-toggle-checkbox:checked) .nav-menu {
-    display: flex;
-  }
-  
-  .nav-item {
-    width: 100%;
-  }
-  
-  .dropdown-menu {
-    position: static;
-    display: none;
-    box-shadow: none;
-    background: var(--color-bg-subtle);
-    border: none;
-  }
-  
-  .nav-item.has-dropdown:focus-within .dropdown-menu {
-    display: block;
-  }
-  
-  .nav-link {
-    padding: 0.75rem 1.25rem;
-    color: var(--color-text);
-  }
-  
-  .dropdown-item a {
-    padding-left: 2.5rem;
-    color: var(--color-text-secondary);
-  }
-  
-  .flyout-menu {
-    position: static;
-    display: none;
-    box-shadow: none;
-    background: var(--color-bg-inset);
-    border: none;
-  }
-  
-  .dropdown-item.has-flyout:focus-within .flyout-menu {
-    display: block;
-  }
-  
-  .flyout-item a {
-    padding-left: 3.75rem;
-    font-size: 0.9em;
-    color: var(--color-text-secondary);
-  }
-  
-  .flyout-arrow {
-    float: right;
-  }
-  
-  /* Cards mobile */
-  .automation-cards {
-    grid-template-columns: 1fr;
-  }
-  
-  .page-navigation {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-}
-
 /* Favorites Feature
    ========================================================================== */
 
@@ -3113,27 +2817,12 @@ a.community-link:hover,
   padding: 0;
   margin-right: 1rem;
   background: transparent;
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
+  border: none;
   cursor: pointer;
   transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
   color: var(--color-text-secondary);
   flex-shrink: 0;
-}
-
-.share-btn:hover {
-  border-color: var(--color-link);
-  background-color: var(--color-bg-muted);
-  color: var(--color-link);
-}
-
-.share-btn:focus {
-  outline: 2px solid var(--color-link);
-  outline-offset: 2px;
-}
-
-.share-btn:active {
-  transform: scale(0.95);
+  visibility: hidden;
 }
 
 .share-icon {
@@ -3149,19 +2838,307 @@ a.community-link:hover,
   height: 20px;
 }
 
-/* Mobile adjustments for share button */
-@media (max-width: 868px) {
-  .share-btn {
-    width: 32px;
-    height: 32px;
-    margin-right: 0.75rem;
-    order: 2;
-  }
-  
-  .share-icon svg {
-    width: 18px;
-    height: 18px;
-  }
+/* Responsive Design
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 2rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Hero mobile */
+    .hero {
+        padding: 3rem 1.5rem 2rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+    }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-benefits {
+        gap: 1.25rem;
+    }
+
+    .benefit {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+        .benefit strong {
+            display: block;
+        }
+
+    .benefit-text {
+        display: block;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-primary, .cta-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-automations {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .getting-started-box {
+        padding: 2rem 1.5rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        border-radius: 0;
+    }
+
+    .community-links {
+        grid-template-columns: 1fr;
+    }
+
+    /* Getting started page mobile */
+    .planning-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Platform comparison mobile */
+    .platform-detail-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+        .platform-detail-header img {
+            block-size: 40px;
+            inline-size: 40px;
+        }
+
+        .platform-detail-header h3 {
+            font-size: 1.3rem;
+        }
+
+    :is(.platform-description, .highlight-section, .platform-quickstart, .resource-category-header, .resource-item) {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .platform-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-section:first-child {
+        border-inline-end: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Shared padding adjustments for card headers and sections */
+    :is(.tip-header, .philosophy-header) {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .tip-icon,
+    .philosophy-icon {
+        font-size: 2rem;
+    }
+
+    :is(.tip-header, .philosophy-header) h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Consolidated padding for all card sections */
+    :is(.tip-intro, .philosophy-intro, .tip-section, .philosophy-section, .philosophy-example, .philosophy-fix, .philosophy-takeaway, .tip-benefits, .tip-requirements, .tip-implementation, .example-scenario, .pattern-example, .comparison-column) {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .subscription-examples,
+    .status-examples,
+    .implementation-tips,
+    .resource-subitems {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-section {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-column:first-child {
+        border-inline-end: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .flow-step {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .flow-arrow {
+        text-align: center;
+        transform: rotate(90deg);
+    }
+
+    :is(.pyramid-container, .philosophy-checklist) {
+        padding: 1.5rem;
+    }
+
+    .pyramid-level {
+        padding: 1.25rem;
+    }
+
+    .device-starter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .network-requirements,
+    .platform-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .network-requirements {
+        gap: 1rem;
+    }
+
+    /* Navigation mobile */
+    .nav-container {
+        align-items: center;
+    }
+
+    .site-title {
+        order: 1;
+        flex: 1;
+    }
+
+    .nav-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-bg-page);
+        padding: 1rem 0;
+        box-shadow: var(--shadow-dropdown);
+        border-bottom: 1px solid var(--color-border);
+        order: 2;
+        width: 100%;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-container:has(.nav-toggle-checkbox:checked) .nav-menu {
+        display: flex;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background: var(--color-bg-subtle);
+        border: none;
+    }
+
+    .nav-item.has-dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1.25rem;
+        color: var(--color-text);
+    }
+
+    .dropdown-item a {
+        padding-left: 2.5rem;
+        color: var(--color-text-secondary);
+    }
+
+    .flyout-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background: var(--color-bg-inset);
+        border: none;
+    }
+
+    .dropdown-item.has-flyout:focus-within .flyout-menu {
+        display: block;
+    }
+
+    .flyout-item a {
+        padding-left: 3.75rem;
+        font-size: 0.9em;
+        color: var(--color-text-secondary);
+    }
+
+    .flyout-arrow {
+        float: right;
+    }
+
+    /* Cards mobile */
+    .automation-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .page-navigation {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .share-btn {
+        width: 32px;
+        height: 32px;
+        margin-right: 0.75rem;
+        order: 2;
+        visibility: visible;
+    }
+
+    .share-icon svg {
+        width: 18px;
+        height: 18px;
+    }
 }
-
-
