@@ -2795,14 +2795,46 @@ a.community-link:hover,
   .highlight-section:first-child {
     border-inline-end: none;
     border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Shared padding adjustments for card headers and sections */
   :is(.tip-header, .philosophy-header) {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .tip-icon,
+  .philosophy-icon {
+    font-size: 2rem;
+  }
+
   :is(.tip-header, .philosophy-header) h2 {
+    font-size: 1.4rem;
+  }
+
   /* Consolidated padding for all card sections */
   :is(.tip-intro, .philosophy-intro, .tip-section, .philosophy-section,
       .philosophy-example, .philosophy-fix, .philosophy-takeaway,
       .tip-benefits, .tip-requirements, .tip-implementation,
       .example-scenario, .pattern-example, .comparison-column) {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .subscription-examples,
+  .status-examples,
+  .implementation-tips,
+  .resource-subitems {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-section {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-column:first-child {
     border-inline-end: none;
+    border-bottom: 1px solid var(--color-border);
   }
   
   .flow-step {
