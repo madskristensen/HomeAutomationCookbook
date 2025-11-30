@@ -7,7 +7,7 @@ description: >-
   A comprehensive guide for home automation enthusiasts.
   Learn about smart home devices, automation platforms, and best practices.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://homeautomationcookbook.com" # the base hostname & protocol for your site
+url: "https://www.homeautomationcookbook.com" # the base hostname & protocol for your site
 repository: madskristensen/HomeAutomationCookbook
 
 # Analytics - uncomment and add your Google Analytics 4 ID to enable tracking
@@ -19,7 +19,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/img/icon-512x512.png
+      image: https://www.homeautomationcookbook.com/assets/img/icon-512x512.png
 
 twitter:
   card: summary_large_image
