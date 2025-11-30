@@ -10,6 +10,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://homeautomationcookbook.com" # the base hostname & protocol for your site
 repository: madskristensen/HomeAutomationCookbook
 
+# Analytics - uncomment and add your Google Analytics 4 ID to enable tracking
+# google_analytics: G-XXXXXXXXXX
+
 # Open Graph / Social Sharing
 og_image: /assets/img/icon-512x512.png
 twitter:
