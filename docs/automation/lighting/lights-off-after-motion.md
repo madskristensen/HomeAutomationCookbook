@@ -7,7 +7,7 @@ keywords: motion sensor lights off, automatic light shutoff, occupancy detection
 
 # Turn off lights after motion stops
 
-While modern LED lights use minimal power, automatically turning off lights when a room is unoccupied creates a satisfying smart home experience and ensures energy isn't wasted. This automation completes the motion detection lighting cycle.
+Rooms should know when they are empty. A light that lingers after you leave wastes little energy - LEDs sip power - but a light that turns itself off completes something essential: the sense that your home is paying attention, that it understands comings and goings without being told.
 
 ## Use cases
 

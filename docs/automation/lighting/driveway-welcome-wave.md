@@ -7,7 +7,7 @@ keywords: driveway lights, arrival lighting, welcome home lights, ripple effect 
 
 # Driveway welcome wave
 
-Create a stunning visual welcome when you arrive home by having lights ripple from the street toward your front door. This choreographed lighting sequence creates an impressive pathway effect that guides you home while adding security and curb appeal.
+Coming home after dark can feel like arriving at a stranger's house - until the lights begin to stir. First the streetside lamp, then the driveway fixtures, then the path lights, and finally the porch, each waking in sequence like a wave rolling toward shore. It is theater, yes, but it is also wayfinding and security, wrapped in a flourish that says: this house knows you are coming.
 
 ## Use cases
 

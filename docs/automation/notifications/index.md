@@ -7,23 +7,23 @@ keywords: smart home notifications, dashboard alerts, status tiles, low battery 
 
 # Notifications and alerts
 
-Smart notifications keep you informed without overwhelming you. From dashboard tiles that persist until addressed to proactive battery alerts that prevent automation failures, these automations ensure you never miss important information.
+The best notification is the one that arrives at exactly the right moment - not so early that it becomes noise, not so late that the information has lost its usefulness. A well-designed alert system respects your attention, surfaces what matters, and lets everything else fade into the background until you are ready for it.
 
 <div class="category-intro" markdown="1">
 
 ## Why smart notifications?
 
-**Persistent Visibility** - Dashboard tiles remind you until tasks are done
+**Persistent visibility** - Dashboard tiles remind you until tasks are done
 
-**Proactive Alerts** - Know about issues before they cause problems
+**Proactive alerts** - Know about issues before they cause problems
 
-**Whole Household** - Everyone sees the same information on dashboards
+**Whole household** - Everyone sees the same information on dashboards
 
-**Reduced Notification Fatigue** - Smart filtering shows only what matters
+**Reduced notification fatigue** - Smart filtering shows only what matters
 
-**Actionable Information** - Notifications that help you take action
+**Actionable information** - Notifications that help you take action
 
-**Family Coordination** - Reminders that work for everyone
+**Family coordination** - Reminders that work for everyone
 
 </div>
 
@@ -35,7 +35,7 @@ Smart notifications keep you informed without overwhelming you. From dashboard t
 
 ### Low battery alerts
 
-Get notified before device batteries die to maintain reliable automation.
+Before a sensor falls silent and an automation fails, a quiet warning arrives - giving you time to find fresh batteries before anyone notices.
 
 <span class="card-meta">**Best for:** Preventive maintenance, avoiding automation failures</span>
 
@@ -47,7 +47,7 @@ Get notified before device batteries die to maintain reliable automation.
 
 ### Status tiles instead of notifications
 
-Persistent dashboard tiles that stay visible until addressed - better than fleeting phone notifications.
+A glowing tile on the wall outlasts any phone notification. It waits, patient and visible, until someone addresses what it represents.
 
 <span class="card-meta">**Best for:** Appliance status, door/window alerts</span>
 
@@ -59,7 +59,7 @@ Persistent dashboard tiles that stay visible until addressed - better than fleet
 
 ### Garbage day reminder
 
-A weekly reminder tile that lights up when it's time to take out the trash.
+A tile lights up the evening before, a small visual nudge that the bins need to reach the curb before morning.
 
 <span class="card-meta">**Best for:** Weekly tasks, recycling day</span>
 
@@ -71,7 +71,7 @@ A weekly reminder tile that lights up when it's time to take out the trash.
 
 ### Doorbell notification
 
-Get notified when someone rings your doorbell, even if it's not a smart doorbell.
+Even an old doorbell can learn new tricks - sending word through the house when someone presses the button by the door.
 
 <span class="card-meta">**Best for:** Older doorbells, whole-house awareness</span>
 
@@ -83,7 +83,7 @@ Get notified when someone rings your doorbell, even if it's not a smart doorbell
 
 ### Baby sleep mode
 
-Automatically disable automations when baby is sleeping using power monitoring.
+When the nursery goes quiet and the sound machine hums, the house knows to tread lightly - muting notifications, stilling automations that might disturb.
 
 <span class="card-meta">**Best for:** New parents, quiet nap time</span>
 
@@ -95,7 +95,7 @@ Automatically disable automations when baby is sleeping using power monitoring.
 
 ### Teeth brushing reminder
 
-Help kids build healthy habits with automated reminders.
+A gentle reminder for small ones building new habits - a light, a sound, or a cheerful announcement that it is time to brush.
 
 <span class="card-meta">**Best for:** Family routines, building habits</span>
 
@@ -107,7 +107,7 @@ Help kids build healthy habits with automated reminders.
 
 ### Package delivery detection
 
-Get notified when packages are delivered to your door without needing a smart doorbell.
+A box arrives at the door and word travels inside - no smart doorbell required, just a sensor watching the porch.
 
 <span class="card-meta">**Best for:** Prevent package theft, working from home</span>
 
@@ -119,7 +119,7 @@ Get notified when packages are delivered to your door without needing a smart do
 
 ### Pet feeding reminder
 
-Never forget to feed your pets with automated feeding reminders and tracking.
+The cat circles the kitchen, but who fed her last? A simple tracker ensures no one forgets - and no one accidentally feeds her twice.
 
 <span class="card-meta">**Best for:** Pet care, household coordination</span>
 
@@ -131,7 +131,7 @@ Never forget to feed your pets with automated feeding reminders and tracking.
 
 ### Maintenance reminder dashboard
 
-Wall-mounted tablet showing days remaining for filters, pool chemicals, and one-tap add to shopping list.
+A wall-mounted display counts down the days - filters to change, chemicals to add, tasks that slip the mind until they become urgent.
 
 <span class="card-meta">**Best for:** Home maintenance, recurring tasks</span>
 
@@ -145,7 +145,7 @@ Wall-mounted tablet showing days remaining for filters, pool chemicals, and one-
 
 ## Dashboard basics
 
-Wall-mounted tablets provide persistent visibility for your smart home status.
+Where should this persistent information live? A wall-mounted tablet in a high-traffic area - the kitchen, the hallway - becomes a shared command center. Everyone who passes sees the same glowing tiles, the same reminders, the same status at a glance.
 
 ### Choosing a tablet
 

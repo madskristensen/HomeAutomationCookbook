@@ -7,7 +7,7 @@ keywords: door sensor automation, contact sensor lights, automatic closet lights
 
 # Toggle lights on/off when door opens
 
-Automatically turning on lights when doors open is a versatile automation that solves lighting problems in many areas of your home. From closets that never have enough light to garage entries that leave you fumbling in the dark, this automation makes life easier.
+Some spaces have a natural trigger built right into them: the door. A pantry cannot be reached without opening it first, a closet cannot be entered without the door swinging wide. For these tucked-away corners of the home, a contact sensor offers something motion sensors cannot - absolute certainty that someone has arrived.
 
 ## Use cases
 

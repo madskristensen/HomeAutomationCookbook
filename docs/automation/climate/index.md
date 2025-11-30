@@ -6,27 +6,27 @@ description: Control temperature, humidity, and air quality automatically. Smart
 
 # Climate automations
 
-Controlling your indoor climate for optimal comfort and energy savings is at the core of a smart home. These automations will elevate both your wellbeing and wallet.
+A well-tempered home is one where comfort arrives without thought - where the thermostat rests when windows open, blinds tilt with the sun, and the bathroom fan hums to life before the mirror fogs. These automations tend the invisible work of keeping the air around you just right, while quietly trimming your energy bill in the process.
 
 <div class="category-intro" markdown="1">
 
 ## Why climate automation?
 
-**Energy Savings** — Save 10-30% on heating and cooling costs
+**Energy savings** - Save 10-30% on heating and cooling costs
 
-**Perfect Comfort** — Maintain ideal temperature in every room
+**Perfect comfort** - Maintain ideal temperature in every room
 
-**Smart HVAC Control** — Don't heat/cool the outdoors when windows open
+**Smart HVAC control** - Don't heat or cool the outdoors when windows open
 
-**Air Quality** — Automatically improve indoor air quality
+**Air quality** - Automatically improve indoor air quality
 
-**Set and Forget** — Climate adjusts without your input
+**Set and forget** - Climate adjusts without your input
 
-**Eco-Friendly** — Reduce energy waste and carbon footprint
+**Eco-friendly** - Reduce energy waste and carbon footprint
 
 </div>
 
-## 🌟 Essential Automations
+## Essential automations
 
 <div class="automation-cards">
 
@@ -34,7 +34,7 @@ Controlling your indoor climate for optimal comfort and energy savings is at the
 
 ### Stop thermostat when windows open
 
-Pause heating or cooling when windows open to save energy and avoid conditioning the outdoors.
+Fresh air should not come at the cost of wasted energy. When a window opens, the furnace learns to rest - warmth stays where it belongs.
 
 <span class="card-meta">**Best for:** Energy savings, fresh air, nice weather</span>
 
@@ -46,7 +46,7 @@ Pause heating or cooling when windows open to save energy and avoid conditioning
 
 ### Turn on fan when shower starts
 
-Automatically turn on the bathroom fan when you start a shower to prevent humidity buildup and mirror fog.
+Steam rises, the mirror fogs, and somewhere a fan quietly awakens. Humidity is drawn away before it settles into walls and grout.
 
 <span class="card-meta">**Best for:** Bathrooms, preventing mold, air quality</span>
 
@@ -58,7 +58,7 @@ Automatically turn on the bathroom fan when you start a shower to prevent humidi
 
 ### Automatic blinds at sunset and sunrise
 
-Open blinds at sunrise for natural light and close at sunset for privacy and energy efficiency.
+Blinds that know the rhythm of the day - opening to welcome morning light, closing as dusk arrives for privacy and warmth.
 
 <span class="card-meta">**Best for:** Energy savings, privacy, natural daily rhythm</span>
 
@@ -70,7 +70,7 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 
 ### Pause HVAC when window opens
 
-Automatically pause heating or cooling when a window or patio door opens with a visual blinking light reminder.
+A visual reminder joins the energy savings: a light blinks gently while the thermostat waits for the window to close.
 
 <span class="card-meta">**Best for:** Energy savings, fresh air breaks, visual reminders</span>
 

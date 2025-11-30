@@ -7,7 +7,7 @@ keywords: speaker volume automation, audio presets, volume control scenes, smart
 
 # Speaker volume presets
 
-Volume presets for all speakers save time and create consistency. Define levels for low, medium, and loud to easily adjust for any occasion with one command.
+There is nothing quite so jarring as a speaker blasting at full volume when you expected a gentle background. Volume presets bring order to the chaos - a known starting point for every room, resetting each day, so that music always begins at a level that fits the moment.
 
 ## Use cases
 

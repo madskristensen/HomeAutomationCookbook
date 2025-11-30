@@ -6,27 +6,27 @@ description: Get notified when appliances finish their cycles. Washer, dryer, di
 
 # Appliance automations
 
-The latest generation of appliances have WiFi connectivity and phone apps. But you may want deeper integration with your smart home, or you may have "dumb" appliances that need creative solutions. Here are ways to automate any appliance.
+Appliances hum and spin and heat in the background of daily life, asking only for attention when their work is done. Yet how often do we forget them - the washer finishing its cycle while we are upstairs, the dryer beeping to an empty room? With a little creativity, even the simplest machine can announce itself, and even a "dumb" appliance can learn a few new tricks.
 
 <div class="category-intro" markdown="1">
 
 ## Why appliance automation?
 
-**Never Forget** — Get notified when washer, dryer, or dishwasher finishes
+**Never forget** - Get notified when washer, dryer, or dishwasher finishes
 
-**Hands-Free Operation** — Robot vacuum runs automatically when you leave
+**Hands-free operation** - Robot vacuum runs automatically when you leave
 
-**Perfect Timing** — Coffee ready exactly when you wake up
+**Perfect timing** - Coffee ready exactly when you wake up
 
-**Energy Monitoring** — Track power usage of any appliance
+**Energy monitoring** - Track power usage of any appliance
 
-**Smart Scheduling** — Run appliances during off-peak electricity hours
+**Smart scheduling** - Run appliances during off-peak electricity hours
 
-**Any Appliance** — Even "dumb" appliances become smart with power monitoring
+**Any appliance** - Even "dumb" appliances become smart with power monitoring
 
 </div>
 
-## 🌟 Essential Automations
+## Essential automations
 
 <div class="automation-cards">
 
@@ -34,7 +34,7 @@ The latest generation of appliances have WiFi connectivity and phone apps. But y
 
 ### Washer done notification
 
-Get notified when the washing machine cycle completes so you can transfer clothes to dryer promptly.
+A gentle ping arrives just as the drum falls silent, saving your clothes from the musty fate of sitting damp and forgotten.
 
 <span class="card-meta">**Best for:** Preventing mildew, laundry efficiency</span>
 
@@ -46,7 +46,7 @@ Get notified when the washing machine cycle completes so you can transfer clothe
 
 ### Auto-start robot vacuum when away
 
-Robot vacuum automatically cleans your home when everyone leaves.
+The vacuum emerges when the house empties, roaming freely through rooms that would otherwise be underfoot. It finishes before anyone returns.
 
 <span class="card-meta">**Best for:** Automated cleaning, hands-free maintenance</span>
 
@@ -58,7 +58,7 @@ Robot vacuum automatically cleans your home when everyone leaves.
 
 ### Fridge or freezer door left open alert
 
-Get notified when your refrigerator or freezer door is left open too long to prevent food spoilage.
+A door left ajar invites spoiled food and wasted energy. A reminder arrives before the frost melts or the milk warms.
 
 <span class="card-meta">**Best for:** Food safety, energy savings, kids</span>
 
@@ -70,7 +70,7 @@ Get notified when your refrigerator or freezer door is left open too long to pre
 
 ### Robot vacuum only when empty
 
-Start your vacuum only when the house is truly empty and finish before anyone returns.
+The vacuum waits patiently, confirming the house is truly empty before it begins - and times its work to finish before anyone returns home.
 
 <span class="card-meta">**Best for:** Smart scheduling, no disruption</span>
 

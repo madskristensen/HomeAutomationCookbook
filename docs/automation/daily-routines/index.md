@@ -7,23 +7,23 @@ keywords: daily routine automation, morning routine, bedtime automation, away mo
 
 # Daily routines
 
-Daily routine automations make your smart home adapt to the rhythm of your life. From gentle morning wake-ups to secure away modes, these automations handle the repetitive tasks so you don't have to think about them.
+Every household has its rhythms - the shuffle of morning, the settling quiet of night, the particular silence that follows the last person out the door. Routine automations honor these patterns. They do not ask you to think about thermostats or locks or lights. Instead, they watch the small signals of daily life and respond in kind, letting you move through your day unburdened by the house itself.
 
 <div class="category-intro" markdown="1">
 
 ## Why automate daily routines?
 
-**Consistent Experience** - Same great start to every morning
+**Consistent experience** - Same gentle start to every morning
 
-**Energy Savings** - Automatic away mode reduces heating/cooling costs by 10-15%
+**Energy savings** - Automatic away mode reduces heating/cooling costs by 10-15%
 
-**Enhanced Security** - Home arms itself when everyone leaves
+**Enhanced security** - Home arms itself when everyone leaves
 
-**Seamless Transitions** - Arrive home to perfect lighting and temperature
+**Seamless transitions** - Arrive home to perfect lighting and temperature
 
-**Reduced Mental Load** - No more "did I remember to..." anxiety
+**Reduced mental load** - No more "did I remember to..." anxiety
 
-**Family Coordination** - Routines work for everyone, not just the tech-savvy
+**Family coordination** - Routines work for everyone, not just the tech-savvy
 
 </div>
 
@@ -35,7 +35,7 @@ Daily routine automations make your smart home adapt to the rhythm of your life.
 
 ### Away mode when everyone leaves
 
-Automatically activate Away Mode when the last person leaves. Includes energy savings, security activation, and verification strategies.
+The moment the last footstep fades down the walk, the house settles into a quiet watchfulness - lights dimming, thermostat retreating, locks turning.
 
 <span class="card-meta">**Best for:** Energy savings, security, peace of mind</span>
 
@@ -47,7 +47,7 @@ Automatically activate Away Mode when the last person leaves. Includes energy sa
 
 ### Morning routine
 
-Wake up to an automated morning routine with lights, coffee, weather updates, and climate control.
+The day begins gently: lights rising with the hour, coffee warming, the house preparing itself before you fully open your eyes.
 
 <span class="card-meta">**Best for:** Consistent mornings, gentle wake-ups</span>
 
@@ -59,7 +59,7 @@ Wake up to an automated morning routine with lights, coffee, weather updates, an
 
 ### Bedtime routine
 
-Wind down with automated lighting, temperature adjustment, and security checks.
+As evening deepens, the house winds down in sympathy - lights softening, temperature dropping, doors confirming their locks.
 
 <span class="card-meta">**Best for:** Better sleep, end-of-day consistency</span>
 
@@ -71,7 +71,7 @@ Wind down with automated lighting, temperature adjustment, and security checks.
 
 ### Unlock door on arrival
 
-Automatically unlock your door as you arrive home for truly hands-free entry.
+Arms full, keys buried, you approach the door and find it already waiting - unlocked, welcoming, as if it recognized the sound of your car.
 
 <span class="card-meta">**Best for:** Hands-full arrivals, convenience</span>
 
@@ -83,7 +83,7 @@ Automatically unlock your door as you arrive home for truly hands-free entry.
 
 ### Family bedtime wind-down
 
-Gradually dim lights, cool the house, and quiet notifications 30 minutes before bedtime with easy cancel option.
+Thirty minutes before sleep, the house begins its slow exhale - lights dimming by degrees, notifications quieting, the air cooling for rest.
 
 <span class="card-meta">**Best for:** Better sleep, family coordination</span>
 

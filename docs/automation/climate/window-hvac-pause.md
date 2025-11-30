@@ -7,7 +7,7 @@ keywords: window open HVAC, pause air conditioning, smart thermostat window, ene
 
 # Pause HVAC when window opens
 
-Stop wasting energy heating or cooling the outdoors. This automation automatically pauses your HVAC system when a window or patio door opens and provides a visual reminder with a blinking light so you know to close it.
+A window opens, and somewhere in the basement, the furnace takes note. It pauses, saving its warmth for when the glass is sealed again. A light blinks gently in the room - a patient reminder that the outside world is streaming in, and perhaps it is time to close up.
 
 ## Use cases
 

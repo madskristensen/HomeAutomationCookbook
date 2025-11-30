@@ -7,11 +7,7 @@ keywords: fire safety automation, smoke detector, emergency response, smart home
 
 # Get safely out of the house in case of fire
 
-If a fire breaks out in the middle of the night, your smoke detector will sound the alarm. However, getting everybody out of the house might be problematic - especially if you have little kids. There are some things we can do to make the situation a little smarter.
-
-We want to make sure all lights come on so we can easily find our way out of the otherwise dark house at night. Also, make sure to unlock all doors. And if you have an irrigation or sprinkler system in the yard or garden, turn it on to prevent any fire from spreading outside.
-
-A variation of this is to listen for the sound of a window breaking at night or when you're not home.
+When smoke fills a house at 3 a.m., every second matters. In darkness, disoriented and alarmed, a family needs light to find their way, doors that open without fumbling, and a path clear to safety. This automation transforms the moment a smoke detector sounds into a coordinated response - lights blazing on, locks releasing, notifications flying to phones - giving everyone the best chance to get out safely.
 
 ## Use cases
 

@@ -7,7 +7,7 @@ keywords: room heater automation, zone heating automation, space heater control,
 
 # Maintain temperature using a room heater
 
-In colder rooms, add supplemental heating to maintain comfortable temperature automatically. Perfect for rooms that stay consistently cold or need different temperatures than the rest of the house.
+Some rooms stay stubbornly cold - a basement office, a corner bedroom, a nursery that the central heating never quite reaches. A small heater and a temperature sensor work together here, bringing warmth to the one place that needs it most, while the rest of the house carries on at its usual setting.
 
 ## Use cases
 

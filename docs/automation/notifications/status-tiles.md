@@ -7,7 +7,7 @@ keywords: dashboard tiles, status tiles, smart home dashboard, appliance status,
 
 # Status tiles instead of notifications
 
-It's easy to ignore or forget notifications sent to your phone. Also, they don't keep reminding you once you've seen or dismissed them. Status tiles on a dashboard located in a place you often see solves that problem.
+Phone notifications vanish with a swipe, easily forgotten or dismissed in a busy moment. A dashboard tile, mounted where everyone passes, waits patiently until someone addresses it. The washer is done - the tile glows until the clothes are moved. The garage door is open - the reminder persists until it is closed.
 
 ## Use cases
 

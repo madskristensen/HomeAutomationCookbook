@@ -3,6 +3,46 @@
 - Don't use em-dashes when writing sentences; use hyphens surrounded by spaces instead.
 - Don't use emojis in the text.
 
+## Prose tone and voice
+The site aims for a warm, evocative, and quietly vivid tone - like a thoughtful cookbook narrator. Apply these guidelines to narrative sections only (NOT to technical steps, code, tables, or measurements):
+
+**What to write in this style:**
+- Homepage introduction and philosophy sections
+- Category introduction pages (e.g., /automation/lighting/, /automation/climate/)
+- Opening 2-4 paragraphs of individual recipe pages (the "why this matters" preface sections)
+- Sidebar notes and "Reality check" boxes
+
+**What to leave untouched:**
+- Step-by-step instructions
+- Device lists and shopping tables
+- YAML/code examples
+- Trigger / Condition / Action blocks
+- Troubleshooting tables
+- Measurements, prices, lux values, timeouts
+
+**Style guidelines:**
+- Use gentle metaphors only when they feel inevitable and precise (e.g., "lights already waiting for you", "a patient witness", "embers rather than daylight")
+- Prefer sensory, lived-in imagery over cleverness
+- Keep sentences varied in length for natural rhythm
+- Never break the calm, authoritative voice
+- Preserve every factual claim; only enhance the surrounding narrative texture
+- No jokes, puns, exaggeration, or slang
+- The tone should feel understated, calm, and gently poetic
+
+**Example transformation:**
+
+Before:
+> Motion sensors are the foundation of most lighting automations because they are reliable and inexpensive.
+
+After:
+> A motion sensor is a patient witness. It notices the almost imperceptible shift of a door, the soft pad of bare feet on hardwood at 3 a.m., the hurried shuffle of someone who forgot their phone on the counter. For the price of a coffee, it turns those fleeting moments into light that arrives exactly when it's needed and leaves before it's noticed.
+
+Before:
+> At night the bathroom light should be dim and warm so it doesn't shock you awake.
+
+After:
+> In the small hours, the bathroom light should behave more like embers than daylight: just enough red-amber glow to guide your feet, never enough to remind your brain that the day has started without permission.
+
 # Site structure
 - This is a Jekyll static site for homeautomationcookbook.com
 - Main CSS: `docs/assets/css/style.css` (consolidated stylesheet, ~1200 lines)

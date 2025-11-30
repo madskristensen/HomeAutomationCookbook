@@ -7,7 +7,7 @@ keywords: low battery alert, smart home battery, device battery notification, ba
 
 # Low battery alerts
 
-Smart home devices with dead batteries can't do their jobs. Motion sensors stop detecting, door sensors go offline, and automations fail silently. Proactive battery monitoring ensures your smart home stays reliable.
+A dead battery is a silent failure. The motion sensor stops noticing you, the door sensor falls quiet, and automations that once worked perfectly now fail without warning. Proactive battery monitoring catches the decline before it becomes a gap - a small notification that saves you from wondering why the lights did not turn on.
 
 ## Use cases
 

@@ -7,7 +7,7 @@ keywords: fridge door alert, freezer door notification, refrigerator door left o
 
 # Fridge or freezer door left open alert
 
-An open refrigerator or freezer door leads to food spoilage, wasted energy, and potential damage to the appliance. This automation sends you an alert when a door has been open too long, giving you time to close it before problems occur.
+A refrigerator door left ajar is a slow disaster in progress - cold air spilling out, the compressor straining, food quietly warming toward the danger zone. A contact sensor watches the seal, and if the door lingers open too long, a notification arrives before the ice cream softens or the milk sours.
 
 ## Use cases
 

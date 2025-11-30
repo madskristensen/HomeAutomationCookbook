@@ -7,7 +7,7 @@ keywords: garage door notification, garage door left open, smart garage, garage 
 
 # Garage door left open notification
 
-An open garage door is a security risk and can let in weather, pests, or unwanted visitors. This automation notifies you when the garage door has been open too long and optionally closes it automatically.
+The garage door is one of those things you forget almost immediately after pressing the button. Did it close? Is it still yawning open to the street, an invitation to weather, pests, and passersby? A simple sensor watches so you do not have to wonder - and a gentle notification arrives before the evening settles in.
 
 ## Use cases
 

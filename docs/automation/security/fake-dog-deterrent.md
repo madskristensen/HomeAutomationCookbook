@@ -7,7 +7,7 @@ keywords: fake dog, dog barking security, intruder deterrent, motion detection a
 
 # Fake dog to scare intruders away
 
-This is the automation where you play dog barking noises when motion is detected outside or an intruder enters the house. It's a simple but surprisingly effective deterrent that can make potential intruders think twice before proceeding.
+There is something primal about the sound of a dog barking - a warning that suggests teeth and territory. Even when no dog lives within, a speaker can conjure one at the first hint of motion outside, giving potential intruders pause before they ever reach the door. It is theater, but effective theater.
 
 ## Use cases
 

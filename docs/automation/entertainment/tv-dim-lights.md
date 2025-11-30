@@ -7,7 +7,7 @@ keywords: TV lighting automation, dim lights TV, theater mode automation, movie 
 
 # Dim lights when TV turns on
 
-Enhance movie watching by automatically dimming lights when the TV turns on. Create the perfect viewing atmosphere without fumbling for light switches.
+When the screen comes to life, the room should respond in kind. Lamps lower to a soft glow, overhead lights retreat, and suddenly the image before you feels richer, more immersive - a theater in miniature, assembled without you lifting a finger.
 
 ## Use cases
 
