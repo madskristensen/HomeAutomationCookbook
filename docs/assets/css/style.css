@@ -3101,4 +3101,67 @@ a.community-link:hover,
   }
 }
 
+/* Share Button
+   ========================================================================== */
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin-right: 1rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.share-btn:hover {
+  border-color: var(--color-link);
+  background-color: var(--color-bg-muted);
+  color: var(--color-link);
+}
+
+.share-btn:focus {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+.share-btn:active {
+  transform: scale(0.95);
+}
+
+.share-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.share-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile adjustments for share button */
+@media (max-width: 868px) {
+  .share-btn {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.75rem;
+    order: 2;
+  }
+  
+  .share-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 
