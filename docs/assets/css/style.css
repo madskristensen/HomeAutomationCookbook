@@ -526,8 +526,37 @@ th {
 /* Card Components
    ========================================================================== */
 
-/* Base card styles - shared by all interactive cards */
-.card,
+/* Shared utility classes for consistent styling */
+.card-base {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.card-base:hover:is(a, .card-hover) {
+  border-color: var(--color-link);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-padding-lg { padding: 2rem; }
+.card-padding-md { padding: 1.75rem; }
+.card-padding-sm { padding: 1.5rem; }
+
+/* Shared grid layouts - use custom properties for flexibility */
+.grid-cards {
+  display: grid;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.grid-280 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.grid-260 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.grid-250 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.grid-240 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid-200 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+/* Apply base styles to card components */
 .automation-card,
 .planning-card,
 .device-starter-card,
@@ -535,19 +564,33 @@ th {
 .category-card,
 .platform-option,
 .principle-card,
-.community-link {
+.community-link,
+.use-case-card,
+.platform-card,
+.feature-card,
+.placement-card,
+.best-practice-card,
+.tip-card,
+.philosophy-card,
+.platform-detail-card,
+.resource-category {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   transition: all 0.2s ease;
 }
 
-/* Hover effect for interactive cards (links only) */
-.featured-card:hover,
-.category-card:hover,
-.community-link:hover {
+/* Hover effects for interactive cards */
+a.featured-card:hover,
+a.category-card:hover,
+a.community-link:hover,
+.tip-card:hover,
+.philosophy-card:hover,
+.platform-detail-card:hover {
   border-color: var(--color-link);
+  box-shadow: var(--shadow-lg);
 }
 
-/* Grid layouts for card collections */
 .automation-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -557,34 +600,31 @@ th {
 
 /* Automation card specific styles */
 .automation-card {
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border);
   padding: 2rem;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-
-
-.automation-card h3,
-.automation-card h4 {
-  margin-top: 0;
-  margin-bottom: 1rem;
+/* Shared card heading styles */
+.automation-card :is(h3, h4),
+.use-case-card h4,
+.feature-card h3,
+.placement-card h3,
+.best-practice-card h3 {
+  margin-block: 0 1rem;
   color: var(--color-text-heading);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.3;
 }
 
-.automation-card h3 a,
-.automation-card h4 a {
-  color: var(--color-text-heading);
+.automation-card :is(h3, h4) a {
+  color: inherit;
   text-decoration: none;
 }
 
-.automation-card h3 a:hover,
-.automation-card h4 a:hover {
+.automation-card :is(h3, h4) a:hover {
   color: var(--color-link);
 }
 
@@ -596,18 +636,17 @@ th {
 }
 
 .automation-card p:last-child {
-  margin-top: auto;
-  margin-bottom: 0;
+  margin-block: auto 0;
 }
 
-.automation-card .card-meta {
+.card-meta {
   font-size: 0.875rem;
   color: var(--color-text-muted);
   margin-bottom: 1.5rem;
   display: block;
 }
 
-.automation-card .card-link {
+.card-link {
   display: inline-block;
   color: var(--color-link);
   text-decoration: none;
@@ -616,7 +655,7 @@ th {
   transition: color 0.2s;
 }
 
-.automation-card .card-link:hover {
+.card-link:hover {
   color: var(--color-link-hover);
 }
 
@@ -739,52 +778,64 @@ th {
 
 .use-case-card {
   padding: 1.75rem;
-  background: var(--color-bg-elevated);
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
-  transition: all 0.2s ease;
 }
 
-
-
-.use-case-card h4 {
-  margin: 0 0 1rem;
+/* Shared heading with bottom border */
+.use-case-card h4,
+.feature-card h3,
+.placement-card h3,
+.best-practice-card h3 {
   font-size: 1.15rem;
   color: var(--color-link);
-  font-weight: 600;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--color-border);
 }
 
-.use-case-card ul {
+/* Shared bullet list styles */
+.use-case-card ul,
+.feature-card ul,
+.placement-card ul,
+.best-practice-card ul,
+.info-box ul,
+.issue-solutions ul,
+.highlight-section ul,
+.tip-section ul,
+.philosophy-section ul {
   margin: 0;
-  padding-left: 0;
+  padding-inline-start: 0;
   list-style: none;
   font-size: 0.95rem;
 }
 
-.use-case-card li {
+.use-case-card li,
+.feature-card li,
+.placement-card li,
+.info-box li,
+.issue-solutions li,
+.benefit-item,
+.checklist-item {
   margin-bottom: 0.75rem;
   line-height: 1.6;
-  padding-left: 1.25rem;
+  padding-inline-start: 1.25rem;
   position: relative;
 }
 
-.use-case-card li::before {
-  content: '\2022';
+/* Shared bullet point styling */
+.use-case-card li::before,
+.feature-card li::before,
+.placement-card li::before,
+.info-box li::before {
+  content: '•';
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   color: var(--color-link);
   font-weight: bold;
 }
 
-.use-case-card li:last-child {
+.use-case-card li:last-child,
+.feature-card li:last-child,
+.placement-card li:last-child {
   margin-bottom: 0;
-}
-
-.use-case-card strong {
-  font-weight: 600;
-  color: var(--color-text);
 }
 
 .product-section {
@@ -920,15 +971,11 @@ th {
 
 .platform-card {
   padding: 1.5rem;
-  background: var(--color-bg-elevated);
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
-  transition: all 0.2s ease;
 }
 
-
-
-.platform-card-header {
+/* Shared card header with logo and title */
+.platform-card-header,
+.platform-detail-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -937,29 +984,34 @@ th {
   border-bottom: 2px solid var(--color-border);
 }
 
-.platform-card-header img {
-  height: 28px;
-  width: 28px;
+.platform-card-header img,
+.platform-detail-header img {
+  block-size: 28px;
+  inline-size: 28px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.platform-card-header h4 {
-  margin: 0;
+.platform-detail-header img {
+  block-size: 48px;
+  inline-size: 48px;
+}
+
+.platform-card-header h4,
+.platform-card h4 {
+  margin: 0 0 1rem;
   font-size: 1.05rem;
   color: var(--color-text-heading);
   line-height: 1.2;
 }
 
-.platform-card h4 {
-  margin: 0 0 1rem;
-  font-size: 1.05rem;
-  color: var(--color-text-heading);
+.platform-card-header h4 {
+  margin-bottom: 0;
 }
 
 .platform-card ol {
   margin: 0;
-  padding-left: 1.25rem;
+  padding-inline-start: 1.25rem;
   font-size: 0.95rem;
 }
 
@@ -1043,19 +1095,6 @@ th {
 
 .feature-card {
   padding: 1.75rem;
-  background: var(--color-bg-elevated);
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
-  transition: all 0.2s ease;
-}
-
-.feature-card h3 {
-  margin: 0 0 1rem;
-  font-size: 1.15rem;
-  color: var(--color-link);
-  font-weight: 600;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--color-border);
 }
 
 .feature-card p {
@@ -1063,31 +1102,6 @@ th {
   line-height: 1.6;
   color: var(--color-text-secondary);
   font-size: 0.95rem;
-}
-
-.feature-card ul {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.feature-card li {
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
-  padding-left: 1.25rem;
-  position: relative;
-}
-
-.feature-card li::before {
-  content: '\2022';
-  position: absolute;
-  left: 0;
-  color: var(--color-link);
-  font-weight: bold;
-}
-
-.feature-card li:last-child {
-  margin-bottom: 0;
 }
 
 /* Brightness schedule display */
@@ -1218,79 +1232,36 @@ th {
 
 .placement-card {
   padding: 1.5rem;
-  background: var(--color-bg-elevated);
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
 }
 
 .placement-card h3 {
-  margin: 0 0 1rem;
   font-size: 1.1rem;
-  color: var(--color-link);
-  font-weight: 600;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--color-border);
-}
-
-.placement-card ul {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
 }
 
 .placement-card li {
-  margin-bottom: 0.75rem;
-  padding-left: 1.25rem;
-  position: relative;
-  line-height: 1.6;
   font-size: 0.95rem;
-}
-
-.placement-card li::before {
-  content: '\2022';
-  position: absolute;
-  left: 0;
-  color: var(--color-link);
-  font-weight: bold;
-}
-
-.placement-card li:last-child {
-  margin-bottom: 0;
-}
-
-.placement-card strong {
-  font-weight: 600;
-  color: var(--color-text-heading);
 }
 
 /* Best practice card with numbered steps */
 .best-practice-card {
   padding: 1.75rem;
-  background: var(--color-bg-elevated);
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
   margin: 2rem 0;
 }
 
 .best-practice-card h3 {
-  margin: 0 0 1.25rem;
-  font-size: 1.15rem;
-  color: var(--color-link);
-  font-weight: 600;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--color-border);
+  margin-bottom: 1.25rem;
 }
 
 .best-practice-card ol {
   margin: 0;
-  padding-left: 0;
+  padding-inline-start: 0;
   list-style: none;
   counter-reset: practice-counter;
 }
 
 .best-practice-card li {
   margin-bottom: 0.875rem;
-  padding-left: 2.5rem;
+  padding-inline-start: 2.5rem;
   position: relative;
   line-height: 1.6;
   font-size: 0.95rem;
@@ -1300,10 +1271,10 @@ th {
 .best-practice-card li::before {
   content: counter(practice-counter);
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 1.75rem;
-  height: 1.75rem;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inline-size: 1.75rem;
+  block-size: 1.75rem;
   background: var(--color-link);
   color: var(--color-bg-elevated);
   border-radius: 50%;
@@ -1430,10 +1401,11 @@ th {
 /* Homepage Components
    ========================================================================== */
 
-/* Page-specific card grids (tips, philosophy, resources, platform comparison) */
+/* Shared vertical card grids for detail pages */
 .tips-grid,
 .philosophy-grid,
-.resources-grid {
+.resources-grid,
+.platform-comparison-grid {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -1441,30 +1413,18 @@ th {
 }
 
 .platform-comparison-grid {
-  display: flex;
-  flex-direction: column;
   gap: 2.5rem;
-  margin: 3rem 0;
 }
 
-/* Shared card styles for tips, philosophy, platform detail, and resource cards */
+/* Shared card container styles */
 .tip-card,
 .philosophy-card,
 .platform-detail-card,
 .resource-category {
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
   overflow: hidden;
 }
 
-.tip-card:hover,
-.philosophy-card:hover,
-.platform-detail-card:hover {
-  box-shadow: var(--shadow-lg);
-}
-
-/* Shared header styles for card headers */
+/* Shared card headers with consistent styling */
 .tip-header,
 .philosophy-header,
 .platform-detail-header,
@@ -1495,9 +1455,7 @@ th {
 }
 
 /* Shared heading styles within card headers */
-.tip-header h2,
-.philosophy-header h2,
-.resource-category-header h2 {
+:is(.tip-header, .philosophy-header, .resource-category-header) h2 {
   margin: 0;
   color: var(--color-text-heading);
 }
@@ -1541,10 +1499,8 @@ th {
   border-bottom: none;
 }
 
-.tip-section h3,
-.philosophy-section h3,
-.setup-steps h3,
-.philosophy-checklist h3 {
+/* Shared section heading styles */
+:is(.tip-section, .philosophy-section, .setup-steps, .philosophy-checklist) h3 {
   margin: 0 0 1rem;
   font-size: 1.2rem;
   color: var(--color-text-heading);
@@ -1554,25 +1510,22 @@ th {
   margin-bottom: 1.5rem;
 }
 
-.tip-section p,
-.philosophy-section p {
+/* Shared paragraph styles within sections */
+:is(.tip-section, .philosophy-section) p {
   margin: 0 0 1rem;
   line-height: 1.7;
 }
 
-.tip-section p:last-child,
-.philosophy-section p:last-child {
+:is(.tip-section, .philosophy-section) p:last-child {
   margin-bottom: 0;
 }
 
-.tip-section ul,
-.philosophy-section ul {
+:is(.tip-section, .philosophy-section) ul {
   margin: 0.5rem 0 0;
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 
-.tip-section li,
-.philosophy-section li {
+:is(.tip-section, .philosophy-section) li {
   margin-bottom: 0.5rem;
 }
 
@@ -1623,7 +1576,7 @@ th {
 
 .status-category ul {
   margin: 0;
-  padding-left: 1.25rem;
+  padding-inline-start: 1.25rem;
   font-size: 0.9rem;
 }
 
@@ -1631,7 +1584,7 @@ th {
   margin-bottom: 0.5rem;
 }
 
-/* Benefits section and checklist items - shared styles */
+/* Benefits section and checklist items */
 .tip-benefits,
 .philosophy-checklist {
   padding: 2rem;
@@ -1646,22 +1599,15 @@ th {
   background: var(--color-bg-muted);
 }
 
-.benefit-item,
-.checklist-item {
+.benefit-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 0.75rem;
   line-height: 1.6;
 }
 
-.checklist-item {
-  align-items: flex-start;
-  padding: 1rem;
-  background: var(--color-bg-elevated);
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  margin-bottom: 0;
+.benefit-item:not(:last-child) {
+  margin-bottom: 0.75rem;
 }
 
 .checklist-items {
@@ -1670,10 +1616,18 @@ th {
   gap: 1rem;
 }
 
-.benefit-item:last-child {
-  margin-bottom: 0;
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--color-bg-elevated);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  line-height: 1.6;
 }
 
+/* Shared icon styles for benefits/checklist */
 .benefit-icon,
 .checklist-icon,
 .reason-icon {
@@ -1686,11 +1640,6 @@ th {
 .checklist-icon {
   font-size: 1.3em;
   line-height: 1;
-}
-
-.checklist-item strong {
-  color: var(--color-text-heading);
-  font-weight: 600;
 }
 
 /* Requirements and implementation sections */
@@ -1706,7 +1655,7 @@ th {
 
 .tip-requirements ul {
   margin: 0;
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 
 .implementation-flow {
@@ -1745,7 +1694,7 @@ th {
   color: var(--color-text);
 }
 
-/* Example scenario and pattern example - shared styles */
+/* Example scenario and pattern sections */
 .example-scenario,
 .pattern-example {
   padding: 1.5rem 2rem;
@@ -1780,8 +1729,8 @@ th {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  inline-size: 32px;
+  block-size: 32px;
   background: var(--color-link);
   color: var(--color-bg-elevated);
   border-radius: 50%;
@@ -1803,7 +1752,7 @@ th {
 }
 
 .comparison-column:first-child {
-  border-right: 1px solid var(--color-border);
+  border-inline-end: 1px solid var(--color-border);
 }
 
 .comparison-column h3 {
@@ -1822,7 +1771,7 @@ th {
 
 .comparison-column ul {
   margin: 0;
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 
 .comparison-column li {
@@ -1830,11 +1779,7 @@ th {
   line-height: 1.6;
 }
 
-/* Status examples */
-
-/* Removed - consolidated above with subscription-examples */
-
-/* Implementation tips grid and pattern ideas - shared grid styles */
+/* Implementation tips and pattern ideas */
 .implementation-tips,
 .pattern-ideas {
   display: flex;
@@ -1857,8 +1802,7 @@ th {
   border: 1px solid var(--color-border);
 }
 
-.tip-subsection h4,
-.pattern-idea strong {
+:is(.tip-subsection, .pattern-idea) :is(h4, strong) {
   margin: 0 0 0.5rem;
   font-size: 1rem;
   color: var(--color-text-heading);
@@ -1869,24 +1813,13 @@ th {
   font-size: 1.05rem;
 }
 
-.tip-subsection p,
-.pattern-idea p {
+:is(.tip-subsection, .pattern-idea) p {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
-/* Pattern sections */
-
-.pattern-benefit strong {
-  color: var(--color-text-heading);
-}
-
-/* Removed redundant pattern styles - consolidated above */
-
 /* Philosophy page styles */
-
-/* Removed - consolidated above with tip card styles */
 
 .philosophy-example,
 .philosophy-fix,
@@ -1921,14 +1854,12 @@ th {
   font-weight: 600;
 }
 
-.philosophy-example p,
-.philosophy-fix p {
+:is(.philosophy-example, .philosophy-fix) p {
   margin: 0 0 1rem;
   line-height: 1.7;
 }
 
-.philosophy-example p:last-child,
-.philosophy-fix p:last-child {
+:is(.philosophy-example, .philosophy-fix) p:last-child {
   margin-bottom: 0;
 }
 
@@ -2281,7 +2212,6 @@ th {
 .planning-card {
   padding: 2rem;
   background: var(--color-bg-muted);
-  border: 1px solid var(--color-border);
 }
 
 .planning-icon {
@@ -2302,15 +2232,16 @@ th {
   font-size: 0.95rem;
 }
 
-.planning-card ul {
+/* Shared list styles for planning/device cards */
+:is(.planning-card, .requirement-content) ul {
   margin: 0;
-  padding-left: 0;
+  padding-inline-start: 0;
   list-style: none;
 }
 
 .planning-card li {
   margin-bottom: 0.5rem;
-  padding-left: 1.25rem;
+  padding-inline-start: 1.25rem;
   position: relative;
   font-size: 0.9rem;
   color: var(--color-text-tertiary);
@@ -2319,14 +2250,9 @@ th {
 .planning-card li::before {
   content: '•';
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   color: var(--color-link);
   font-weight: bold;
-}
-
-.planning-card li strong {
-  color: var(--color-text-heading);
-  font-weight: 600;
 }
 
 .device-starter-grid {
@@ -2582,7 +2508,6 @@ th {
 .principle-card {
   padding: 2rem;
   background: var(--color-bg-muted);
-  border: 1px solid var(--color-border);
 }
 
 .principle-card h3 {
@@ -2608,13 +2533,7 @@ th {
 .featured-card {
   display: block;
   padding: 2rem;
-  background: var(--color-bg-elevated);
-  border: 2px solid var(--color-border);
   text-decoration: none;
-}
-
-.featured-card:hover {
-  box-shadow: var(--shadow-lg);
 }
 
 .featured-card h3 {
@@ -2651,7 +2570,6 @@ th {
   display: block;
   padding: 1.5rem;
   background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
   text-decoration: none;
 }
 
@@ -2731,7 +2649,6 @@ th {
   display: block;
   padding: 2rem 1.5rem;
   background: var(--color-bg-muted);
-  border: 1px solid var(--color-border);
   text-decoration: none;
 }
 
@@ -2858,17 +2775,16 @@ th {
   }
 
   .platform-detail-header img {
-    width: 40px;
-    height: 40px;
+    block-size: 40px;
+    inline-size: 40px;
   }
 
   .platform-detail-header h3 {
     font-size: 1.3rem;
   }
 
-  .platform-description,
-  .highlight-section,
-  .platform-quickstart {
+  :is(.platform-description, .highlight-section, .platform-quickstart,
+      .resource-category-header, .resource-item) {
     padding: 1.25rem 1.5rem;
   }
 
@@ -2877,50 +2793,18 @@ th {
   }
 
   .highlight-section:first-child {
-    border-right: none;
+    border-inline-end: none;
     border-bottom: 1px solid var(--color-border);
+  :is(.tip-header, .philosophy-header) {
+  :is(.tip-header, .philosophy-header) h2 {
+  /* Consolidated padding for all card sections */
+  :is(.tip-intro, .philosophy-intro, .tip-section, .philosophy-section,
+      .philosophy-example, .philosophy-fix, .philosophy-takeaway,
+      .tip-benefits, .tip-requirements, .tip-implementation,
+      .example-scenario, .pattern-example, .comparison-column) {
+    border-inline-end: none;
   }
-
-  /* Shared padding adjustments for card headers and sections */
-  .tip-header,
-  .philosophy-header {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .tip-icon,
-  .philosophy-icon {
-    font-size: 2rem;
-  }
-
-  .tip-header h2,
-  .philosophy-header h2 {
-    font-size: 1.4rem;
-  }
-
-  .tip-intro,
-  .philosophy-intro,
-  .tip-section,
-  .philosophy-section,
-  .philosophy-example,
-  .philosophy-fix,
-  .philosophy-takeaway,
-  .tip-benefits,
-  .tip-requirements,
-  .tip-implementation,
-  .example-scenario,
-  .pattern-example {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .subscription-examples,
-  .status-examples,
-  .implementation-tips,
-  .resource-subitems {
-    grid-template-columns: 1fr;
-  }
-
+  
   .flow-step {
     grid-template-columns: 1fr;
     gap: 0.75rem;
@@ -2931,32 +2815,12 @@ th {
     transform: rotate(90deg);
   }
 
-  .comparison-section {
-    grid-template-columns: 1fr;
-  }
-
-  .comparison-column:first-child {
-    border-right: none;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .comparison-column {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .pyramid-container,
-  .philosophy-checklist {
+  :is(.pyramid-container, .philosophy-checklist) {
     padding: 1.5rem;
   }
 
   .pyramid-level {
     padding: 1.25rem;
-  }
-
-  /* Resources page mobile */
-  .resource-category-header,
-  .resource-item {
-    padding: 1.25rem 1.5rem;
   }
   
   .device-starter-grid {
@@ -2964,13 +2828,13 @@ th {
     gap: 1rem;
   }
   
-  .network-requirements {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
+  .network-requirements,
   .platform-selection {
     grid-template-columns: 1fr;
+  }
+  
+  .network-requirements {
+    gap: 1rem;
   }
   
   /* Navigation mobile */
