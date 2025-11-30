@@ -83,161 +83,139 @@ Automatically unlock your door as you arrive home for truly hands-free entry.
 
 ---
 
-## Understanding home modes
+## Home modes
 
-Most smart home platforms support modes that define the overall state of your home:
+<div class="use-case-grid">
 
-### Home mode
-**When:** Someone is home and awake
-**Actions:**
-- Normal lighting automation
-- Comfortable temperature
-- Motion sensors active
-- Entertainment available
+<div class="use-case-card">
+<h4>Home mode</h4>
+<ul>
+<li>Normal lighting automation</li>
+<li>Comfortable temperature</li>
+<li>Motion sensors active</li>
+<li>Entertainment available</li>
+</ul>
+</div>
 
-### Away mode
-**When:** No one is home
-**Actions:**
-- Lights off (or security pattern)
-- Eco temperature settings
-- Security system armed
-- Cameras active
+<div class="use-case-card">
+<h4>Away mode</h4>
+<ul>
+<li>Lights off (or security pattern)</li>
+<li>Eco temperature settings</li>
+<li>Security system armed</li>
+<li>Cameras active</li>
+</ul>
+</div>
 
-### Night mode
-**When:** Sleeping hours
-**Actions:**
-- Low-brightness lighting only
-- Lower temperature
-- Minimal notifications
-- Motion sensors dimmed
+<div class="use-case-card">
+<h4>Night mode</h4>
+<ul>
+<li>Low-brightness lighting only</li>
+<li>Lower temperature</li>
+<li>Minimal notifications</li>
+<li>Motion sensors dimmed</li>
+</ul>
+</div>
 
-### Custom modes
-Many platforms allow custom modes:
-- **Guest Mode** - Modified automation for visitors
-- **Vacation Mode** - Extended away with enhanced security
-- **Party Mode** - Special lighting and music
-- **Work from Home** - Office-optimized settings
+<div class="use-case-card">
+<h4>Custom modes</h4>
+<ul>
+<li><strong>Guest:</strong> Modified automation for visitors</li>
+<li><strong>Vacation:</strong> Extended away with enhanced security</li>
+<li><strong>Party:</strong> Special lighting and music</li>
+<li><strong>Work from Home:</strong> Office-optimized settings</li>
+</ul>
+</div>
 
----
-
-## Presence detection methods
-
-### GPS/Location services
-
-**How it works:** Phone reports location to platform
-
-**Pros:**
-- Works everywhere
-- No additional hardware
-- Integrates with most platforms
-
-**Cons:**
-- Battery drain
-- GPS can drift near home boundary
-- Requires app background access
-
-**Best for:** Primary home/away detection
-
-### WiFi presence
-
-**How it works:** Detect phone connected to home WiFi
-
-**Pros:**
-- No battery drain
-- Very accurate when home
-- Privacy-friendly
-
-**Cons:**
-- Only works at home
-- Doesn't detect approaching
-
-**Best for:** Verification method, backup to GPS
-
-### Combined approach (recommended)
-
-Use multiple methods for accuracy:
-
-1. **GPS** - Primary detection (home/away)
-2. **Motion sensors** - Verify no one home before away mode
-3. **WiFi** - Confirm presence at home
-4. **Door sensors** - Physical entry/exit verification
+</div>
 
 ---
 
 ## Best practices
 
-### Start conservative
+<div class="placement-grid">
 
-**Initial setup:**
-- Longer delays (15 minutes before away mode)
-- Multiple verification methods
-- Manual override always available
-- Conservative geofence radius (100+ meters)
+<div class="placement-card">
+<h3>Start conservative</h3>
+<ul>
+<li>Longer delays (15 min before away mode)</li>
+<li>Multiple verification methods</li>
+<li>Manual override always available</li>
+<li>Conservative geofence radius (100+ meters)</li>
+</ul>
+</div>
 
-**Then refine:**
-- Gradually reduce delays
-- Remove unnecessary verifications
-- Expand automation actions
+<div class="placement-card">
+<h3>Notification strategy</h3>
+<ul>
+<li><strong>Always notify:</strong> Away mode activation</li>
+<li><strong>Always notify:</strong> Door auto-unlock</li>
+<li><strong>Always notify:</strong> Security state changes</li>
+<li><strong>Optional:</strong> Someone arrived home</li>
+</ul>
+</div>
 
-### Notification strategy
+<div class="placement-card">
+<h3>Fail-safe design</h3>
+<ul>
+<li>When uncertain, don't activate away mode</li>
+<li>When uncertain, don't unlock doors</li>
+<li>Better safe than automated</li>
+<li>Physical controls always work</li>
+</ul>
+</div>
 
-**Always notify for:**
-- Away mode activation
-- Door auto-unlock
-- Security state changes
-
-**Optional notifications:**
-- Someone arrived home
-- Mode changes
-
-### Fail-safe design
-
-**When uncertain:**
-- Don't activate away mode
-- Don't unlock doors
-- Don't change security state
-- Better safe than automated
-
-**Manual override:**
-- Physical controls always work
-- App manual mode toggle
-- Voice command override
+</div>
 
 ---
 
-## Common challenges
+## Troubleshooting
 
-### False away mode activation
+<div class="troubleshooting-grid">
 
-**Solutions:**
-- Add motion sensor verification
-- Increase geofence radius
-- Add 10-15 minute delay
-- Check for TV/device activity
+<div class="issue-card">
+<div class="issue-header">
+<h3>False away mode activation</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Add motion sensor verification</li>
+<li>Increase geofence radius</li>
+<li>Add 10-15 minute delay</li>
+<li>Check for TV/device activity</li>
+</ul>
+</div>
+</div>
 
-### Delayed presence detection
+<div class="issue-card">
+<div class="issue-header">
+<h3>Delayed presence detection</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Disable battery optimization for app</li>
+<li>Enable "Always" location permission</li>
+<li>Use local processing</li>
+<li>Add WiFi presence backup</li>
+</ul>
+</div>
+</div>
 
-**Solutions:**
-- Disable battery optimization for app
-- Enable "Always" location permission
-- Use local processing
-- Add WiFi presence backup
+<div class="issue-card">
+<div class="issue-header">
+<h3>Kids without phones</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Time-based overrides (school hours)</li>
+<li>Extended motion detection periods</li>
+<li>Manual "Kids Home" toggle</li>
+<li>Door sensor verification</li>
+</ul>
+</div>
+</div>
 
-### Kids without phones
-
-**Solutions:**
-- Time-based overrides (school hours)
-- Extended motion detection periods
-- Manual "Kids Home" toggle
-- Door sensor verification
-
----
-
-**Get Started:**
-- [Away Mode →](/automation/daily-routines/away-mode.html)
-- [Morning Routine →](/automation/daily-routines/morning-routine.html)
-- [Bedtime Routine →](/automation/daily-routines/bedtime-routine.html)
-- [Unlock Door on Arrival →](/automation/daily-routines/unlock-door-arrival.html)
+</div>
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
