@@ -7,23 +7,23 @@ keywords: entertainment automation, smart music, TV automation, media control, s
 
 # Entertainment automations
 
-Music and entertainment control automations make your smart home feel more alive and responsive. From automatic shower music to movie mode lighting, these automations enhance your daily routines.
+Music and light share a natural kinship. A film begins and the room dims. Shower water runs and a favorite playlist fills the steam. The best entertainment automations feel less like technology and more like a house that understands the mood you are reaching for - and meets you there without being asked.
 
 <div class="category-intro" markdown="1">
 
 ## Why entertainment automation?
 
-**Soundtrack Your Life** — Music starts automatically for different activities
+**Soundtrack your life** - Music starts automatically for different activities
 
-**Perfect Ambiance** — Lights dim automatically when watching movies
+**Perfect ambiance** - Lights dim automatically when watching movies
 
-**Morning Motivation** — Shower music plays without touching your phone
+**Morning motivation** - Shower music plays without touching your phone
 
-**Welcome Home** — Arrive to music and perfect lighting
+**Welcome home** - Arrive to music and perfect lighting
 
-**Physical Control** — Buttons and switches are faster than voice commands
+**Physical control** - Buttons and switches are faster than voice commands
 
-**Consistent Volume** — No more blasting speakers or quiet audio
+**Consistent volume** - No more blasting speakers or inaudible audio
 
 </div>
 
@@ -35,7 +35,7 @@ Music and entertainment control automations make your smart home feel more alive
 
 ### Dim lights when TV turns on
 
-Automatically dim lights for optimal movie watching experience.
+The screen flickers to life and the room responds - lamps lowering to a soft glow, the better to see what unfolds.
 
 <span class="card-meta">**Best for:** Movie nights, TV viewing, ambiance</span>
 
@@ -47,7 +47,7 @@ Automatically dim lights for optimal movie watching experience.
 
 ### Physical switch music control
 
-Use smart buttons or switches to instantly play/pause your favorite stations.
+A button on the wall summons your favorite station. No voice command needed, no phone to find - just a tap and the music begins.
 
 <span class="card-meta">**Best for:** Quick access, avoiding voice commands</span>
 
@@ -59,7 +59,7 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 
 ### Shower music
 
-Automatically play music when you start your morning shower.
+The bathroom door closes, steam begins to rise, and somewhere a speaker stirs to life with the soundtrack of your morning.
 
 <span class="card-meta">**Best for:** Morning motivation, hands-free audio</span>
 
@@ -71,7 +71,7 @@ Automatically play music when you start your morning shower.
 
 ### Speaker volume presets
 
-Maintain consistent volume levels across all your speakers.
+Volumes reset each day to sensible levels - no more wincing when the first note blares from a speaker left too loud the night before.
 
 <span class="card-meta">**Best for:** Predictable audio, preventing blasting</span>
 
@@ -83,7 +83,7 @@ Maintain consistent volume levels across all your speakers.
 
 ### One-tap pool party mode
 
-Instantly activate pool party mode with colorful lights, music, and pool cover with a single tap or voice command.
+A single tap transforms the backyard - lights shifting to color, music spilling across the patio, the pool cover sliding open.
 
 <span class="card-meta">**Best for:** Backyard entertaining, instant ambiance</span>
 

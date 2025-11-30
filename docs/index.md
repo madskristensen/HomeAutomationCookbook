@@ -6,22 +6,22 @@ description: Transform your house into a truly smart home with tested automation
 
 <div class="hero">
   <h1>Make your home work for you</h1>
-  <p class="hero-subtitle">Practical smart home automations that save time, energy, and make everyday life effortless.</p>
+  <p class="hero-subtitle">A quiet kind of magic: automations that anticipate your needs, save energy, and fade into the rhythm of daily life.</p>
   <div class="hero-benefits">
     <div class="benefit">
       <span class="benefit-icon" role="img" aria-label="Light bulb">💡</span>
-      <strong>Lights that just work</strong>
-      <span class="benefit-text">— Walk into any room and lights turn on automatically</span>
+      <strong>Lights already waiting</strong>
+      <span class="benefit-text">— Step into any room and find it gently lit, as if the house knew you were coming</span>
     </div>
     <div class="benefit">
       <span class="benefit-icon" role="img" aria-label="Thermometer">🌡️</span>
-      <strong>Perfect temperature</strong>
-      <span class="benefit-text">— Never waste energy heating the outdoors</span>
+      <strong>Warmth where it belongs</strong>
+      <span class="benefit-text">— Comfort that stays indoors, never escaping through an open window</span>
     </div>
     <div class="benefit">
       <span class="benefit-icon" role="img" aria-label="House">🏠</span>
-      <strong>True automation</strong>
-      <span class="benefit-text">— Your home adapts to you, not the other way around</span>
+      <strong>A home that listens</strong>
+      <span class="benefit-text">— It learns your rhythms rather than asking you to learn its buttons</span>
     </div>
   </div>
   <div class="hero-cta">
@@ -32,18 +32,18 @@ description: Transform your house into a truly smart home with tested automation
 
 ## Why this site exists
 
-**Most smart homes aren't actually smart.** They're full of gadgets that need constant attention, confuse guests, and frustrate family members.
+**Most smart homes are not smart at all.** They are collections of gadgets demanding attention, confusing overnight guests, and quietly frustrating the people who live there.
 
-This cookbook is different. Every automation here follows proven principles:
+This cookbook offers something different. Every automation here has been shaped by a simple truth: technology should recede into the background, noticed only in its absence. The recipes that follow are built on tested principles:
 
 <div class="principles-grid">
   <div class="principle-card">
     <h3>Works for everyone</h3>
-    <p>Your kids, guests, and spouse shouldn't need training. Physical switches still work. Automations feel natural.</p>
+    <p>Children, grandparents, weekend guests - no one should need a tutorial. Physical switches still work. Automations feel inevitable rather than clever.</p>
   </div>
   <div class="principle-card">
     <h3>Actually saves time</h3>
-    <p>Each automation eliminates a real daily task. No more checking if doors are locked or wondering if the dryer finished.</p>
+    <p>Each automation removes a small worry from your day. No more wondering if the door is locked or if the laundry has been sitting too long.</p>
   </div>
   <div class="principle-card">
     <h3>Platform agnostic</h3>
@@ -59,7 +59,7 @@ This cookbook is different. Every automation here follows proven principles:
   </div>
   <div class="principle-card">
     <h3>Battle-tested</h3>
-    <p>These aren't theoretical ideas. Every recipe has been refined through real-world use and family feedback.</p>
+    <p>These are not theoretical ideas. Every recipe has been refined through the honest feedback of family members and the quiet demands of daily life.</p>
   </div>
 </div>
 
@@ -68,25 +68,25 @@ This cookbook is different. Every automation here follows proven principles:
 <div class="featured-automations">
   <a href="/automation/lighting/lights-on-motion.html" class="featured-card">
     <h3>Automatic room lighting</h3>
-    <p>Walk into any room and lights turn on. Leave and they turn off. The most essential automation.</p>
+    <p>Lights that greet you as you enter and slip away unnoticed when you leave. The foundation of a home that feels alive.</p>
     <span class="card-arrow">View guide →</span>
   </a>
   
   <a href="/automation/climate/thermostat-windows-open.html" class="featured-card">
     <h3>Smart thermostat control</h3>
-    <p>Stop heating or cooling the outdoors. Save 10-30% on energy bills automatically.</p>
+    <p>When a window opens, the furnace knows to rest. Warmth stays where it belongs and your energy bill reflects the wisdom.</p>
     <span class="card-arrow">View guide →</span>
   </a>
   
   <a href="/automation/daily-routines/away-mode.html" class="featured-card">
     <h3>Automatic away mode</h3>
-    <p>When the last person leaves, your home secures itself and saves energy. No app needed.</p>
+    <p>The moment the last footstep fades, your home quietly secures itself and settles into an energy-saving slumber.</p>
     <span class="card-arrow">View guide →</span>
   </a>
   
   <a href="/automation/appliances/washer-done-notification.html" class="featured-card">
     <h3>Appliance alerts</h3>
-    <p>Get notified when the washer, dryer, or dishwasher finishes. Never forget wet clothes again.</p>
+    <p>A gentle reminder arrives just when the washing machine falls silent, saving clothes from the musty fate of being forgotten.</p>
     <span class="card-arrow">View guide →</span>
   </a>
 </div>
@@ -96,56 +96,56 @@ This cookbook is different. Every automation here follows proven principles:
 <div class="category-grid">
   <a href="/automation/lighting/index.html" class="category-card">
     <h3>Lighting</h3>
-    <p>Motion-triggered, door-activated, and scheduled lighting</p>
+    <p>Light that follows you through doorways, dims for midnight wanderings, and welcomes you home</p>
     <span class="category-count">8 automations</span>
   </a>
   
   <a href="/automation/daily-routines/index.html" class="category-card">
     <h3>Daily routines</h3>
-    <p>Morning, bedtime, away, and arrival automations</p>
+    <p>Morning, bedtime, departure, and arrival - the quiet choreography of an ordinary day</p>
     <span class="category-count">5 automations</span>
   </a>
   
   <a href="/automation/climate/index.html" class="category-card">
     <h3>Climate and comfort</h3>
-    <p>Temperature, humidity, and air quality</p>
+    <p>Temperature and humidity that adjust without asking, saving energy while keeping you comfortable</p>
     <span class="category-count">8 automations</span>
   </a>
   
   <a href="/automation/entertainment/index.html" class="category-card">
     <h3>Entertainment</h3>
-    <p>Music and TV automations</p>
+    <p>Music that begins with a door opening, lights that dim when the film starts</p>
     <span class="category-count">6 automations</span>
   </a>
   
   <a href="/automation/appliances/index.html" class="category-card">
     <h3>Appliances</h3>
-    <p>Washer, dryer, vacuum automations</p>
+    <p>Gentle nudges when the laundry is done, a vacuum that works while you are away</p>
     <span class="category-count">7 automations</span>
   </a>
   
   <a href="/automation/security/index.html" class="category-card">
     <h3>Safety and security</h3>
-    <p>Fire, water leak, and intrusion response</p>
+    <p>Protection that watches quietly - fire, water, intrusion - and responds before you notice</p>
     <span class="category-count">7 automations</span>
   </a>
   
   <a href="/automation/notifications/index.html" class="category-card">
     <h3>Notifications</h3>
-    <p>Alerts, reminders, and dashboard tiles</p>
+    <p>Information that finds you at the right moment, never more than you need</p>
     <span class="category-count">10 automations</span>
   </a>
 </div>
 
 <div class="getting-started-box">
   <h2>New to home automation?</h2>
-  <p>Start with our philosophy guide to understand what makes automations truly helpful (versus just technically impressive).</p>
+  <p>Before you wire a single sensor, take a moment to understand what separates a truly helpful automation from one that merely impresses. The philosophy behind these recipes matters more than any particular device.</p>
   <a href="/getting-started/philosophy.html" class="cta-primary">Read the philosophy →</a>
 </div>
 
 <div class="community-section">
   <h2>Join the community</h2>
-  <p>Questions? Ideas? Share your own automation recipes or get help troubleshooting.</p>
+  <p>Ideas sharpen when shared. Bring your questions, your refinements, your own recipes born from trial and error.</p>
   <div class="community-links">
     <a href="https://github.com/madskristensen/HomeAutomationCookbook/discussions" class="community-link">
       <strong>Discussions</strong>
