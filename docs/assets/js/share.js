@@ -56,15 +56,20 @@
       });
     });
 
-    // Insert the button in the navigation
+    // Insert the button in the navigation, before the nav menu
     var navContainer = document.querySelector('.nav-container');
     if (navContainer) {
-      // Insert after the site title, before nav menu
-      var siteTitle = navContainer.querySelector('.site-title');
-      if (siteTitle && siteTitle.nextSibling) {
-        navContainer.insertBefore(button, siteTitle.nextSibling);
+      var navMenu = navContainer.querySelector('.nav-menu');
+      if (navMenu) {
+        navContainer.insertBefore(button, navMenu);
       } else {
-        navContainer.appendChild(button);
+        // Fallback: insert after site title
+        var siteTitle = navContainer.querySelector('.site-title');
+        if (siteTitle && siteTitle.nextElementSibling) {
+          navContainer.insertBefore(button, siteTitle.nextElementSibling);
+        } else {
+          navContainer.appendChild(button);
+        }
       }
     }
   }
