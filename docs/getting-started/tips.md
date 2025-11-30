@@ -324,6 +324,4 @@ Not all home automation requires complex technology. Sometimes the simplest solu
 
 </div>
 
----
-
 [← Back to Home](/) | [View Resources →](/getting-started/resources.html)

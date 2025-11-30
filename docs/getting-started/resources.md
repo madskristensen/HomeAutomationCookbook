@@ -337,7 +337,5 @@ Learn more about home automation through these excellent online resources, commu
 
 </div>
 
----
-
 [← Back to Getting started](/getting-started/) | [← Back to Home](/)
 

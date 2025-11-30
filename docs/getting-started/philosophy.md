@@ -203,7 +203,5 @@ The finest smart home is the one you forget is smart at all. It works for everyo
 
 </div>
 
----
-
 [Ready to build automations? →](/automation/)
 
