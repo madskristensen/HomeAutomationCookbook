@@ -97,43 +97,43 @@ This cookbook is different. Every automation here follows proven principles:
   <a href="/automation/lighting/index.html" class="category-card">
     <h3>Lighting</h3>
     <p>Motion-triggered, door-activated, and scheduled lighting</p>
-    <span class="category-count">7 automations</span>
+    <span class="category-count">8 automations</span>
   </a>
   
   <a href="/automation/daily-routines/index.html" class="category-card">
     <h3>Daily routines</h3>
     <p>Morning, bedtime, away, and arrival automations</p>
-    <span class="category-count">4 automations</span>
+    <span class="category-count">5 automations</span>
   </a>
   
   <a href="/automation/climate/index.html" class="category-card">
     <h3>Climate and comfort</h3>
     <p>Temperature, humidity, and air quality</p>
-    <span class="category-count">7 automations</span>
+    <span class="category-count">8 automations</span>
   </a>
   
   <a href="/automation/entertainment/index.html" class="category-card">
     <h3>Entertainment</h3>
     <p>Music and TV automations</p>
-    <span class="category-count">5 automations</span>
+    <span class="category-count">6 automations</span>
   </a>
   
   <a href="/automation/appliances/index.html" class="category-card">
     <h3>Appliances</h3>
     <p>Washer, dryer, vacuum automations</p>
-    <span class="category-count">6 automations</span>
+    <span class="category-count">7 automations</span>
   </a>
   
   <a href="/automation/security/index.html" class="category-card">
     <h3>Safety and security</h3>
     <p>Fire, water leak, and intrusion response</p>
-    <span class="category-count">6 automations</span>
+    <span class="category-count">7 automations</span>
   </a>
   
   <a href="/automation/notifications/index.html" class="category-card">
     <h3>Notifications</h3>
     <p>Alerts, reminders, and dashboard tiles</p>
-    <span class="category-count">9 automations</span>
+    <span class="category-count">10 automations</span>
   </a>
 </div>
 

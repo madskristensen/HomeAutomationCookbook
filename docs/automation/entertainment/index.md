@@ -79,6 +79,18 @@ Maintain consistent volume levels across all your speakers.
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### One-tap pool party mode
+
+Instantly activate pool party mode with colorful lights, music, and pool cover with a single tap or voice command.
+
+<span class="card-meta">**Best for:** Backyard entertaining, instant ambiance</span>
+
+<p><a href="/automation/entertainment/pool-party-mode.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---

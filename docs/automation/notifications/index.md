@@ -127,6 +127,18 @@ Never forget to feed your pets with automated feeding reminders and tracking.
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Maintenance reminder dashboard
+
+Wall-mounted tablet showing days remaining for filters, pool chemicals, and one-tap add to shopping list.
+
+<span class="card-meta">**Best for:** Home maintenance, recurring tasks</span>
+
+<p><a href="/automation/notifications/maintenance-reminder-dashboard.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---

@@ -91,6 +91,18 @@ Get notified when your stove or oven is left on too long to prevent fire hazards
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Auto-close garage when forgotten
+
+Automatically close the garage if left open when nobody's home and get a photo confirmation.
+
+<span class="card-meta">**Best for:** Security, peace of mind, forgetfulness</span>
+
+<p><a href="/automation/security/garage-auto-close.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---

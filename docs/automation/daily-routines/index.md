@@ -79,6 +79,18 @@ Automatically unlock your door as you arrive home for truly hands-free entry.
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Family bedtime wind-down
+
+Gradually dim lights, cool the house, and quiet notifications 30 minutes before bedtime with easy cancel option.
+
+<span class="card-meta">**Best for:** Better sleep, family coordination</span>
+
+<p><a href="/automation/daily-routines/bedtime-wind-down.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---
