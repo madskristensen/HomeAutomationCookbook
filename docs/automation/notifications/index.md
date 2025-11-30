@@ -145,7 +145,7 @@ A wall-mounted display counts down the days - filters to change, chemicals to ad
 
 ## Dashboard basics
 
-A wall-mounted tablet becomes a window into your home's state - persistent, glanceable, available to everyone who passes by. Unlike phone notifications that vanish with a swipe, dashboard tiles wait patiently until someone addresses what they represent.
+Where should this persistent information live? A wall-mounted tablet in a high-traffic area - the kitchen, the hallway - becomes a shared command center. Everyone who passes sees the same glowing tiles, the same reminders, the same status at a glance.
 
 ### Choosing a tablet
 

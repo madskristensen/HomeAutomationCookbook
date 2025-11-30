@@ -123,7 +123,7 @@ A theatrical flourish for homecoming: lights rippling from the street to your fr
 
 ### Motion sensors
 
-A motion sensor is a patient witness. It notices the almost imperceptible shift of a door, the soft pad of bare feet on hardwood at 3 a.m., the hurried shuffle of someone who forgot their phone on the counter. For the price of a coffee, it turns those fleeting moments into light that arrives exactly when needed and leaves before it is noticed.
+The motion sensor is perhaps the most patient of all smart home devices. It watches doorways and hallways, never tiring, never distracted, ready to summon light the instant someone appears. For rooms you pass through quickly - bathrooms, closets, entryways - it is the ideal trigger.
 
 **How it works:** Detects movement using infrared (PIR), microwave, or mmWave technology
 
