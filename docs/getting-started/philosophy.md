@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Home Automation Philosophy
+title: Home automation philosophy
+description: Learn the core principles of home automation that work for everyone - reliability, natural behavior adaptation, and graceful failure modes.
 ---
 
 # Home automation philosophy
@@ -11,14 +12,14 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon">👥</span>
+    <span class="philosophy-icon" role="img" aria-label="Group of people">👥</span>
     <h2>Works for everybody</h2>
   </div>
   
   <p class="philosophy-intro">Home automation must work for all members of the household - kids, adults, elderly parents, and even guests. It should never require people to change their behavior to accommodate the technology. Instead, the automation should intelligently adapt to serve everyone's needs.</p>
   
   <div class="philosophy-example">
-    <h3>Example: Automatic lights done wrong</h3>
+    <h3>Example: automatic lights done wrong</h3>
     <p>When I first installed automatic lights in my bathrooms, they worked perfectly for me. However, my wife complained that they didn't work for her at all. The problem? The motion sensor delay. By the time she opened the door and walked in, the lights would just be turning on, which prevented her muscle memory from reaching for the light switch. But once she clicked the switch out of habit, the lights would turn off instead of on.</p>
   </div>
   
@@ -35,14 +36,14 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon">🎯</span>
+    <span class="philosophy-icon" role="img" aria-label="Target">🎯</span>
     <h2>Adapts to natural behavior</h2>
   </div>
   
   <p class="philosophy-intro">Home automation systems should improve people's lives by working in ways that follow natural human behavior. It's easy to build automations that work perfectly when people use them the "correct" way, but if that's not how people naturally behave, the automation needs adjustment.</p>
   
   <div class="philosophy-example">
-    <h3>Example: Linen closet lights</h3>
+    <h3>Example: linen closet lights</h3>
     <p>I created an automation that turned on the lights when the linen closet door opened and turned them off when it closed. Simple enough, right? It worked great... except for one problem.</p>
     <p>In real life, we often push the door ajar rather than fully closing it. When the door wasn't completely closed, the lights stayed on, making the automation seem broken.</p>
   </div>
@@ -60,7 +61,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon">💭</span>
+    <span class="philosophy-icon" role="img" aria-label="Thought bubble">💭</span>
     <h2>No further explanation needed</h2>
   </div>
   
@@ -84,7 +85,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon">🛡️</span>
+    <span class="philosophy-icon" role="img" aria-label="Shield">🛡️</span>
     <h2>Resiliency built in</h2>
   </div>
   
@@ -95,7 +96,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
   </div>
   
   <div class="philosophy-example">
-    <h3>Example: The snowstorm incident</h3>
+    <h3>Example: the snowstorm incident</h3>
     <p>After a major snowstorm knocked out our internet for several days, I learned this lesson the hard way. The smart home hub still worked, but it could only execute automations that didn't require an internet connection. I couldn't use the app to control anything either.</p>
     <p>Some automations kept running that shouldn't have - like lights turning on in bedrooms in the middle of the night, because the house couldn't put itself into night mode without internet. I had to unplug the hub entirely.</p>
   </div>
@@ -114,7 +115,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon">📐</span>
+    <span class="philosophy-icon" role="img" aria-label="Ruler">📐</span>
     <h2>The automation pyramid</h2>
   </div>
   
@@ -122,7 +123,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
   
   <div class="pyramid-container">
     <div class="pyramid-level pyramid-level-3">
-      <h3>Level 3: Extras (top)</h3>
+      <h3>Level 3: extras (top)</h3>
       <p>Non-essential automations and features that may require an internet connection. Keep this level as small as possible since these are most likely to break down first.</p>
       <p><strong>Examples:</strong></p>
       <ul>
@@ -135,7 +136,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
     </div>
     
     <div class="pyramid-level pyramid-level-2">
-      <h3>Level 2: Basic automations (middle)</h3>
+      <h3>Level 2: basic automations (middle)</h3>
       <p>Essential automations that should work even when internet is down. These should execute fully locally without dependencies on Level 3.</p>
       <p><strong>Examples:</strong></p>
       <ul>
@@ -149,7 +150,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
     </div>
     
     <div class="pyramid-level pyramid-level-1">
-      <h3>Level 1: Core functionality (base)</h3>
+      <h3>Level 1: core functionality (base)</h3>
       <p>The foundation that must <strong>always</strong> be operational. Only a power outage should disable this level.</p>
       <p><strong>Examples:</strong></p>
       <ul>
@@ -165,7 +166,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon">✅</span>
+    <span class="philosophy-icon" role="img" aria-label="Checkmark">✅</span>
     <h2>Putting philosophy into practice</h2>
   </div>
   
@@ -173,23 +174,23 @@ The best smart home is one that works seamlessly for everyone, requires no expla
     <h3>As you build your automations, ask yourself:</h3>
     <div class="checklist-items">
       <div class="checklist-item">
-        <span class="checklist-icon">✅</span>
+        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
         <span><strong>Does it work for everyone in my household?</strong></span>
       </div>
       <div class="checklist-item">
-        <span class="checklist-icon">✅</span>
+        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
         <span><strong>Does it adapt to how people naturally behave?</strong></span>
       </div>
       <div class="checklist-item">
-        <span class="checklist-icon">✅</span>
+        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
         <span><strong>Can people figure it out without my explanation?</strong></span>
       </div>
       <div class="checklist-item">
-        <span class="checklist-icon">✅</span>
+        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
         <span><strong>Will it still work if the internet goes down?</strong></span>
       </div>
       <div class="checklist-item">
-        <span class="checklist-icon">✅</span>
+        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
         <span><strong>Do physical controls still function as expected?</strong></span>
       </div>
     </div>

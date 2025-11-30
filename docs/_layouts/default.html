@@ -19,24 +19,25 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
   {% include navigation.html %}
   
-  <main class="main-content">
+  <main id="main-content" class="main-content" role="main">
     <div class="container">
       {{ content }}
     </div>
   </main>
   
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p class="footer-copyright">&copy; {{ site.time | date: '%Y' }} <a href="https://x.com/mkristensen">Mads Kristensen</a>. All rights reserved.</p>
-      <div class="footer-links">
+      <nav class="footer-links" aria-label="Footer navigation">
         <a href="https://github.com/{{ site.repository }}">View on GitHub</a>
         <a href="https://github.com/{{ site.repository }}/discussions">Discussions</a>
         <a href="https://github.com/{{ site.repository }}/issues/new?template=suggest-automation.md">Suggest automation</a>
         <a href="https://github.com/{{ site.repository }}/issues/new?template=report-issue.md">Report issue</a>
         <a href="{{ '/privacy-policy.html' | relative_url }}">Privacy policy</a>
-      </div>
+      </nav>
     </div>
   </footer>
 </body>

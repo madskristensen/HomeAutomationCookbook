@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Getting started
+title: Getting started with home automation
+description: Learn how to plan and set up your smart home. Choose the right platform, understand budgets, and discover essential first devices.
 ---
 
 # Getting started with home automation
@@ -13,7 +14,7 @@ Before diving into products and platforms, take time to consider these three key
 
 <div class="planning-grid">
   <div class="planning-card">
-    <div class="planning-icon">🎯</div>
+    <div class="planning-icon" role="img" aria-label="Target">🎯</div>
     <h3>Your goals</h3>
     <p>What do you want to automate?</p>
     <ul>
@@ -26,7 +27,7 @@ Before diving into products and platforms, take time to consider these three key
   </div>
 
   <div class="planning-card">
-    <div class="planning-icon">💰</div>
+    <div class="planning-icon" role="img" aria-label="Money bag">💰</div>
     <h3>Your budget</h3>
     <p>Start small and expand over time</p>
     <ul>
@@ -37,7 +38,7 @@ Before diving into products and platforms, take time to consider these three key
   </div>
 
   <div class="planning-card">
-    <div class="planning-icon">⚙️</div>
+    <div class="planning-icon" role="img" aria-label="Gear">⚙️</div>
     <h3>Technical comfort</h3>
     <p>Choose your approach</p>
     <ul>
@@ -54,7 +55,7 @@ Once you know what you want to automate and your budget, the next major decision
 
 <div class="platform-selection">
   <div class="platform-option">
-    <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant" title="Home Assistant" class="platform-logo-large">
+    <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo" title="Home Assistant" class="platform-logo-large">
     <h4>Home Assistant</h4>
     <p><strong>Best for:</strong> Advanced users, customization</p>
     <p><strong>Pros:</strong> Open source, highly flexible, extensive device support</p>
@@ -62,7 +63,7 @@ Once you know what you want to automate and your budget, the next major decision
   </div>
 
   <div class="platform-option">
-    <img src="/assets/img/logos/hubitat.png" alt="Hubitat" title="Hubitat" class="platform-logo-large">
+    <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo" title="Hubitat" class="platform-logo-large">
     <h4>Hubitat</h4>
     <p><strong>Best for:</strong> Users wanting local control without complex setup</p>
     <p><strong>Pros:</strong> 100% local processing, built-in Z-Wave and Zigbee radios</p>
@@ -70,7 +71,7 @@ Once you know what you want to automate and your budget, the next major decision
   </div>
 
   <div class="platform-option">
-    <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit" title="Apple HomeKit" class="platform-logo-large">
+    <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo" title="Apple HomeKit" class="platform-logo-large">
     <h4>Apple HomeKit</h4>
     <p><strong>Best for:</strong> Apple ecosystem users</p>
     <p><strong>Pros:</strong> Privacy-focused, seamless iOS integration</p>
@@ -78,7 +79,7 @@ Once you know what you want to automate and your budget, the next major decision
   </div>
 
   <div class="platform-option">
-    <img src="/assets/img/logos/smartthings.png" alt="SmartThings" title="SmartThings" class="platform-logo-large">
+    <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo" title="SmartThings" class="platform-logo-large">
     <h4>SmartThings</h4>
     <p><strong>Best for:</strong> Beginners, Samsung users</p>
     <p><strong>Pros:</strong> Easy setup, wide device support, supports local execution</p>
@@ -86,7 +87,7 @@ Once you know what you want to automate and your budget, the next major decision
   </div>
 
   <div class="platform-option">
-    <img src="/assets/img/logos/google.png" alt="Google Home" title="Google Home" class="platform-logo-large">
+    <img src="/assets/img/logos/google.png" alt="Google Home logo" title="Google Home" class="platform-logo-large">
     <h4>Google Home</h4>
     <p><strong>Best for:</strong> Google ecosystem users</p>
     <p><strong>Pros:</strong> Strong voice control, affordable devices</p>
@@ -94,7 +95,7 @@ Once you know what you want to automate and your budget, the next major decision
   </div>
 
   <div class="platform-option">
-    <img src="/assets/img/logos/alexa.png" alt="Alexa" title="Alexa" class="platform-logo-large">
+    <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo" title="Amazon Alexa" class="platform-logo-large">
     <h4>Amazon Alexa</h4>
     <p><strong>Best for:</strong> Voice control enthusiasts, Amazon ecosystem users</p>
     <p><strong>Pros:</strong> Huge skill library, excellent voice recognition, affordable devices</p>
@@ -108,25 +109,25 @@ Now that you've chosen your platform, it's time to start building your smart hom
 
 <div class="device-starter-grid">
   <div class="device-starter-card">
-    <div class="device-icon">🎙️</div>
+    <div class="device-icon" role="img" aria-label="Microphone">🎙️</div>
     <h4>Smart speaker/hub</h4>
     <p>Central control point</p>
   </div>
   
   <div class="device-starter-card">
-    <div class="device-icon">💡</div>
+    <div class="device-icon" role="img" aria-label="Light bulb">💡</div>
     <h4>Smart bulbs</h4>
     <p>Easy win for beginners</p>
   </div>
   
   <div class="device-starter-card">
-    <div class="device-icon">🔌</div>
+    <div class="device-icon" role="img" aria-label="Power plug">🔌</div>
     <h4>Smart plug</h4>
     <p>Make any device smart</p>
   </div>
   
   <div class="device-starter-card">
-    <div class="device-icon">👁️</div>
+    <div class="device-icon" role="img" aria-label="Eye">👁️</div>
     <h4>Motion sensor</h4>
     <p>Enable automation</p>
   </div>
@@ -138,7 +139,7 @@ A reliable network is the backbone of any smart home. Most smart devices connect
 
 <div class="network-requirements">
   <div class="requirement-item">
-    <span class="requirement-icon">📶</span>
+    <span class="requirement-icon" role="img" aria-label="WiFi signal">📶</span>
     <div class="requirement-content">
       <strong>Reliable WiFi</strong>
       <p>2.4GHz for most devices</p>
@@ -146,7 +147,7 @@ A reliable network is the backbone of any smart home. Most smart devices connect
   </div>
   
   <div class="requirement-item">
-    <span class="requirement-icon">📍</span>
+    <span class="requirement-icon" role="img" aria-label="Location pin">📍</span>
     <div class="requirement-content">
       <strong>Router placement</strong>
       <p>Central location</p>
@@ -154,7 +155,7 @@ A reliable network is the backbone of any smart home. Most smart devices connect
   </div>
   
   <div class="requirement-item">
-    <span class="requirement-icon">🌐</span>
+    <span class="requirement-icon" role="img" aria-label="Globe">🌐</span>
     <div class="requirement-content">
       <strong>Consider mesh WiFi</strong>
       <p>For larger homes</p>
@@ -162,7 +163,7 @@ A reliable network is the backbone of any smart home. Most smart devices connect
   </div>
   
   <div class="requirement-item">
-    <span class="requirement-icon">🔒</span>
+    <span class="requirement-icon" role="img" aria-label="Lock">🔒</span>
     <div class="requirement-content">
       <strong>Separate IoT network</strong>
       <p>For security (advanced)</p>

@@ -7,8 +7,22 @@ description: >-
   A comprehensive guide for home automation enthusiasts.
   Learn about smart home devices, automation platforms, and best practices.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://homeautomationcookbook.com" # the base hostname & protocol for your site
 repository: madskristensen/HomeAutomationCookbook
+
+# Open Graph / Social Sharing
+og_image: /assets/img/icon-512x512.png
+twitter:
+  card: summary_large_image
+social:
+  name: Home Automation Cookbook
+  links:
+    - https://github.com/madskristensen/HomeAutomationCookbook
+
+# Author information (for schema.org)
+author:
+  name: Mads Kristensen
+  twitter: mkristensen
 
 # Build settings
 markdown: kramdown

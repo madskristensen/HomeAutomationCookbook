@@ -1,6 +1,7 @@
 ---
 layout: default
-title: FAQ
+title: FAQ - Frequently asked questions
+description: Get answers to common smart home and home automation questions about platforms, devices, automation, security, privacy, and costs.
 ---
 
 # Frequently asked questions
