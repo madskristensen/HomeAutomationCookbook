@@ -53,6 +53,8 @@ navigation:
             url: /automation/lighting/disable-on-door-close.html
           - title: Outdoor night lights
             url: /automation/lighting/outdoor-night-lights.html
+          - title: Wake-up lights
+            url: /automation/lighting/wake-up-lights.html
       - title: Daily routines
         url: /automation/daily-routines/index.html
         subitems:
@@ -107,6 +109,8 @@ navigation:
             url: /automation/appliances/coffee-maker-morning.html
           - title: Robot vacuum auto start
             url: /automation/appliances/robot-vacuum-auto-start.html
+          - title: Fridge door alert
+            url: /automation/appliances/fridge-door-alert.html
       - title: Safety and security
         url: /automation/security/index.html
         subitems:
@@ -120,6 +124,8 @@ navigation:
             url: /automation/security/water-leak-response.html
           - title: Garage door notification
             url: /automation/security/garage-door-notification.html
+          - title: Stove left on alert
+            url: /automation/security/stove-left-on-alert.html
       - title: Notifications and alerts
         url: /automation/notifications/index.html
         subitems:
@@ -137,6 +143,10 @@ navigation:
             url: /automation/notifications/teeth-brushing-reminder.html
           - title: Music controls
             url: /automation/notifications/music-controls.html
+          - title: Package delivery alert
+            url: /automation/notifications/package-delivery-alert.html
+          - title: Pet feeding reminder
+            url: /automation/notifications/pet-feeding-reminder.html
   - title: FAQ
     url: /faq/index.html
 

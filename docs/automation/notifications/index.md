@@ -103,6 +103,30 @@ Help kids build healthy habits with automated reminders.
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Package delivery detection
+
+Get notified when packages are delivered to your door without needing a smart doorbell.
+
+<span class="card-meta">**Best for:** Prevent package theft, working from home</span>
+
+<p><a href="/automation/notifications/package-delivery-alert.html" class="card-link">View Automation →</a></p>
+
+</div>
+
+<div class="automation-card" markdown="1">
+
+### Pet feeding reminder
+
+Never forget to feed your pets with automated feeding reminders and tracking.
+
+<span class="card-meta">**Best for:** Pet care, household coordination</span>
+
+<p><a href="/automation/notifications/pet-feeding-reminder.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---
@@ -260,6 +284,8 @@ For important notifications, use multiple channels:
 - [Garbage Day Reminder →](/automation/notifications/garbage-day-reminder.html)
 - [Doorbell Notification →](/automation/notifications/doorbell-notification.html)
 - [Baby Sleep Mode →](/automation/notifications/baby-sleep-mode.html)
+- [Package Delivery Detection →](/automation/notifications/package-delivery-alert.html)
+- [Pet Feeding Reminder →](/automation/notifications/pet-feeding-reminder.html)
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
