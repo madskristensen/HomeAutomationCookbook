@@ -7,7 +7,7 @@ keywords: washer done alert, laundry notification, power monitoring washer, wash
 
 # Notify me when the washer is done
 
-Don't forget wet clothes in the washer. Get notified when the cycle completes so you can transfer to the dryer promptly and avoid mildew.
+Wet laundry, left too long in the drum, develops that unmistakable musty smell - the quiet punishment for forgetting. A power monitor watches the washing machine, and when the drum falls still, a gentle reminder finds you wherever you are. The clothes make it to the dryer in time. The mildew never comes.
 
 ## Use cases
 

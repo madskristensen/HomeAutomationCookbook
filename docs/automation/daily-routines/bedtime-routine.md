@@ -7,7 +7,7 @@ keywords: bedtime routine automation, night mode automation, smart home bedtime,
 
 # Turn on all lights when going to bed
 
-This automation is a real time-saver that can be customized for more than just bedtime. One command prepares your entire home for sleep.
+As the day winds down, the house should wind down with it. A single command - spoken, tapped, or triggered by a button at the bedside - sends the home into its nightly rest. Lights extinguish room by room, locks confirm their hold, the thermostat settles into its sleeping temperature. You can close your eyes knowing that everything has been tended to.
 
 ## Use cases
 

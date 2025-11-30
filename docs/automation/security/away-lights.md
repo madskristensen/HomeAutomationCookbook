@@ -7,7 +7,7 @@ keywords: away lights, security lighting, home occupied simulation, break-in pre
 
 # Turn on away lights
 
-Turning on a few strategic lights in the house can make it look like you are home and deter potential thieves from breaking in or stealing packages from the porch. If your smart electric fireplace is also on, you can make it look even more convincing.
+An empty house, to the wrong kind of observer, announces opportunity. But a house with lights shifting from room to room - a lamp on in the living room, later replaced by a glow from upstairs - tells a different story. The house looks lived in, and that simple appearance is often enough to send trouble looking elsewhere.
 
 ## Use cases
 

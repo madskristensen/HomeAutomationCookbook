@@ -7,7 +7,7 @@ keywords: bedtime automation, sleep routine, wind-down mode, evening routine, sm
 
 # Family bedtime wind-down
 
-Create a gentle transition to sleep with an automation that gradually dims lights, cools the house, and quiets notifications starting 30 minutes before bedtime. Includes an easy cancel option for nights when you want to stay up later.
+Sleep comes easier when the body has been gently prepared for it. Thirty minutes before bedtime, the house begins a slow exhale - lights dimming by degrees, the air cooling, notifications falling silent. It is a signal to everyone that the day is ending, that rest is near, that the time for screens and activity is drawing to a close.
 
 ## Use cases
 

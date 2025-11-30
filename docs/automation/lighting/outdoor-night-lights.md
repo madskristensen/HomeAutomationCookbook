@@ -7,7 +7,7 @@ keywords: outdoor lights automation, sunset lights, dusk lighting, exterior ligh
 
 # Turn on outdoor night lights
 
-Having lights on around the outside of your house is great for several reasons. It lights up the way when you walk outside, it lights up the driveway, it deters trespassing, and it looks great.
+As twilight settles and the sky deepens, a well-lit home begins to glow. Driveway lights welcome you back from the day's errands, pathway lamps guide visitors safely to the door, and the warm spill of illumination tells passersby that this house is cared for. These lights serve beauty, safety, and deterrence all at once - and they ask nothing of you but to exist.
 
 ## Use cases
 

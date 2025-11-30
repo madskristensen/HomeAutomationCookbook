@@ -7,7 +7,7 @@ keywords: wake up lights, sunrise alarm, gradual lighting, morning light automat
 
 # Gradual wake-up lighting
 
-Waking up to a blaring alarm in a dark room can leave you feeling groggy and disoriented. Gradual wake-up lighting simulates a natural sunrise, slowly brightening your bedroom over 15-30 minutes to help you wake more naturally and start your day feeling refreshed.
+There is a gentler way to greet the morning than the sudden assault of an alarm. Imagine instead a slow brightening - light climbing by imperceptible degrees, mimicking the sunrise your ancestors woke to for millennia. By the time the bedroom is fully lit, you have already begun to stir, eased from sleep rather than startled out of it.
 
 ## Use cases
 

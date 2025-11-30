@@ -7,7 +7,7 @@ keywords: morning routine automation, wake up automation, smart home morning, au
 
 # Turn on all lights when you get up in the morning
 
-Start your day right with an automated morning routine that prepares your home for the day ahead. From gradual lighting to starting the coffee maker, this automation creates a consistent, pleasant wake-up experience.
+The day begins before you are fully awake - lights rising gently, the coffee maker stirring to life, the thermostat nudging the house toward waking temperature. By the time your feet touch the floor, the home has already begun preparing itself, greeting you with warmth and light rather than darkness and cold.
 
 ## Use cases
 

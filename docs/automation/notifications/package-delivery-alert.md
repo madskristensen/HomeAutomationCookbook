@@ -7,7 +7,7 @@ keywords: package delivery notification, delivery alert, porch package detection
 
 # Package delivery detection
 
-Know when packages arrive at your door even without a smart doorbell. This automation uses motion sensors and optional cameras to detect deliveries and send you instant notifications, helping prevent package theft and letting you retrieve deliveries promptly.
+A box appears on the porch, and you want to know - not hours later when you happen to check, but now, while it is still safe from prying hands and afternoon rain. A motion sensor near the door, perhaps paired with a camera snapshot, sends word the moment something arrives. No smart doorbell required, just awareness delivered to your phone.
 
 ## Use cases
 

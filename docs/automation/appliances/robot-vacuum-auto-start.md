@@ -7,7 +7,7 @@ keywords: robot vacuum automation, auto start vacuum, vacuum when away, automati
 
 # Start the robot vacuum when everybody leaves
 
-Robot vacuums are great, but even better when they clean while you're away. Automate daily cleaning to happen when no one is home to disturb or be disturbed.
+The vacuum emerges when the house empties, free to roam without startling anyone or weaving between feet. By the time you return, the floors are swept, the dust collected, and the little machine has retreated to its dock as if nothing happened at all.
 
 ## Use cases
 

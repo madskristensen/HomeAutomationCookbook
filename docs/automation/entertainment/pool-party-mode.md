@@ -7,7 +7,7 @@ keywords: pool party automation, backyard party mode, outdoor entertainment, poo
 
 # One-tap pool party mode
 
-Transform your backyard into party mode instantly with a single tap or voice command. This automation coordinates music, colorful lights, pool cover, and temporarily adjusts safety settings for the perfect pool party atmosphere.
+The guests have arrived, the sun is setting, and the backyard waits. A single tap transforms the scene - lights shifting to color, music spilling across the patio, the pool cover gliding open. In one moment, the ordinary becomes festive, with no frantic scrambling to set it all in motion.
 
 ## Use cases
 
