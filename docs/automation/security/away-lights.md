@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Away Lights Automation - Make Your Home Look Occupied
 description: Deter break-ins and package theft by making your home look occupied with strategic away lighting automation. Complete setup guide.
 keywords: away lights, security lighting, home occupied simulation, break-in prevention, package theft prevention, smart home security

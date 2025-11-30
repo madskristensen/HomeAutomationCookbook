@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Status Tiles Instead of Notifications - Dashboard Automation
 description: Use dashboard status tiles for persistent reminders instead of phone notifications. See appliance status, door states, and delivery alerts at a glance.
 keywords: dashboard tiles, status tiles, smart home dashboard, appliance status, persistent notifications, visual alerts

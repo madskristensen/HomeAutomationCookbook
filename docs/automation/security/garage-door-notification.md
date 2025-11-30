@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Garage Door Left Open Notification - Smart Home Safety
 description: Get alerted when your garage door is left open too long. Automatic notifications and optional auto-close for security and weather protection.
 keywords: garage door notification, garage door left open, smart garage, garage door sensor, garage door automation, auto close garage, garage security

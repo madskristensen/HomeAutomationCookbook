@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Stop Thermostat When Windows Open - Energy Saving Automation
 description: Save energy by automatically stopping your thermostat when windows or doors are opened. Complete guide with sensor integration and delay strategies.
 keywords: thermostat window sensor, stop HVAC windows open, energy saving automation, smart thermostat control, window sensor thermostat, automatic climate control, prevent heating outside

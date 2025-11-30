@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Auto-Close Garage When Left Open - Smart Home Security
 description: Automatically close your garage door when left open and nobody's home. Get a photo notification for peace of mind with this smart garage automation.
 keywords: auto close garage, garage door automation, smart garage, garage security, garage left open, automatic garage close, garage notification photo

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Dishwasher Done Notification - Temperature Method
 description: Get notified when dishwasher finishes using temperature detection from drying cycle. Alternative method to power monitoring.
 keywords: dishwasher done alert, temperature sensor dishwasher, completion notification, dishwasher automation, drying cycle detection, appliance monitoring

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Set Away Mode When Everyone Leaves - Presence Automation
 description: Automatically activate Away Mode when everyone leaves home. Complete guide with presence detection, motion verification, and security integration.
 keywords: away mode automation, presence detection, leave home automation, GPS automation, location based automation, smart home away mode

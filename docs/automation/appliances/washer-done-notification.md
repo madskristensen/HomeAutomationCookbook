@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Washer Done Notification - Power Monitoring Method
 description: Get notified when the washing machine finishes. Use power monitoring to detect cycle completion automatically.
 keywords: washer done alert, laundry notification, power monitoring washer, washing machine automation, laundry done alert, appliance monitoring, smart laundry

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Speaker Volume Presets - Smart Audio Management
 description: Set and recall speaker volume presets for different occasions. Low, medium, and loud settings for every room.
 keywords: speaker volume automation, audio presets, volume control scenes, smart speaker volume, volume management, consistent volume, audio scenes

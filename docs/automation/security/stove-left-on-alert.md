@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Stove or Oven Left On Alert - Smart Home Safety
 description: Get notified when your stove or oven is left on too long. Prevent fire hazards and improve safety with cooking appliance monitoring.
 keywords: stove left on alert, oven notification, cooking safety, smart stove monitoring, kitchen fire prevention, appliance safety automation

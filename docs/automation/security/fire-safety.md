@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Fire Safety Emergency Response - Smart Home Automation
 description: Automated fire emergency response when smoke detector sounds. Lights on, doors unlocked, irrigation started, notifications sent.
 keywords: fire safety automation, smoke detector, emergency response, smart home safety, fire evacuation, home emergency, smoke alarm automation

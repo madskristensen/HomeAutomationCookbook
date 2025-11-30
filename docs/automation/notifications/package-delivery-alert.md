@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Package Delivery Detection - Smart Home Notification
 description: Get notified when packages are delivered to your door without needing a smart doorbell. Use motion sensors and cameras for reliable delivery alerts.
 keywords: package delivery notification, delivery alert, porch package detection, smart home delivery, motion sensor package, front door delivery notification

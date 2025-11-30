@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Dim Lights When TV Turns On - Theater Mode Automation
 description: Automatically dim lights when TV turns on for better viewing experience. Complete guide with power monitoring and smart TV integration.
 keywords: TV lighting automation, dim lights TV, theater mode automation, movie lighting, automatic TV lights, smart TV automation, cinema mode

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Turn On Bathroom Fan When Starting Shower - Climate Automation
 description: Automatically turn on your bathroom fan when starting a shower. Guide covers multiple trigger methods including lights, humidity sensors, and door contacts.
 keywords: bathroom fan automation, shower fan control, humidity sensor automation, automatic fan, bathroom ventilation, smart fan switch, prevent mirror fog, mold prevention

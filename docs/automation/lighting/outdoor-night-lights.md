@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Outdoor Night Lights Automation - Smart Exterior Lighting
 description: Automatically turn on outdoor lights at dusk for safety, aesthetics, and convenience. Complete setup guide with sunset/lux sensor options.
 keywords: outdoor lights automation, sunset lights, dusk lighting, exterior lighting, holiday lights, smart outdoor lights, curb appeal

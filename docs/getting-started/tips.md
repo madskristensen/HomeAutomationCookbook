@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tips and tricks
+description: Practical tips and tricks for smarter home automation. Learn from real-world examples and best practices.
 ---
 
 # Tips and tricks
@@ -11,7 +12,7 @@ Not all home automation requires complex technology. Sometimes the simplest solu
 
 <div class="tip-card">
   <div class="tip-header">
-    <span class="tip-icon">📦</span>
+    <span class="tip-icon" role="img" aria-label="Package">📦</span>
     <h2>Amazon subscriptions for automation</h2>
   </div>
   
@@ -74,7 +75,7 @@ Not all home automation requires complex technology. Sometimes the simplest solu
 
 <div class="tip-card">
   <div class="tip-header">
-    <span class="tip-icon">💡</span>
+    <span class="tip-icon" role="img" aria-label="Light bulb">💡</span>
     <h2>Manually disable automation in a room</h2>
   </div>
   
@@ -116,7 +117,7 @@ Not all home automation requires complex technology. Sometimes the simplest solu
 
 <div class="tip-card">
   <div class="tip-header">
-    <span class="tip-icon">👆</span>
+    <span class="tip-icon" role="img" aria-label="Pointing up">👆</span>
     <h2>Turn off all lights from one switch</h2>
   </div>
   
@@ -183,7 +184,7 @@ Not all home automation requires complex technology. Sometimes the simplest solu
 
 <div class="tip-card">
   <div class="tip-header">
-    <span class="tip-icon">📱</span>
+    <span class="tip-icon" role="img" aria-label="Mobile phone">📱</span>
     <h2>Dashboard status tiles</h2>
   </div>
   
@@ -266,7 +267,7 @@ Not all home automation requires complex technology. Sometimes the simplest solu
 
 <div class="tip-card">
   <div class="tip-header">
-    <span class="tip-icon">🔄</span>
+    <span class="tip-icon" role="img" aria-label="Refresh">��</span>
     <h2>Create patterns throughout your home</h2>
   </div>
   

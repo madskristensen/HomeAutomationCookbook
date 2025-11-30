@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Resources
+description: Curated list of the best home automation resources, communities, YouTube channels, and podcasts for learning smart home technology.
 ---
 
 # Resources

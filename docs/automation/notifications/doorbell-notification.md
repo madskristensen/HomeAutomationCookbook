@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Traditional Doorbell Notification - Smart Alert for Dumb Doorbells
 description: Get phone notifications when your traditional doorbell rings. No smart doorbell needed - just a contact sensor and existing doorbell.
 keywords: doorbell notification, traditional doorbell, dumb doorbell alert, doorbell sensor, smart doorbell alternative, contact sensor doorbell

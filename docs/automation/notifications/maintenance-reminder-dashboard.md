@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Maintenance Reminder Dashboard - Smart Home Notifications
 description: Wall-mounted tablet showing days remaining for filters, pool chemicals, and other maintenance tasks. One-tap add to shopping list.
 keywords: maintenance reminder, smart home dashboard, filter replacement, pool maintenance, household tasks, shopping list automation, home maintenance tracker

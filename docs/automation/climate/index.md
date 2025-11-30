@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Climate Automations
+title: Climate automations
+description: Control temperature, humidity, and air quality automatically. Smart thermostat, window sensors, fans, and blinds automation.
 ---
 
 # Climate automations

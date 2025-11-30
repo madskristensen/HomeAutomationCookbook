@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Automatic Blinds at Sunset and Sunrise - Climate Automation
 description: Automatically open blinds at sunrise and close them at sunset for energy savings, privacy, and comfort. Complete guide for smart blind automation.
 keywords: smart blinds automation, automatic shades, sunset blinds, sunrise blinds, motorized blinds, privacy automation, energy saving blinds, smart window coverings

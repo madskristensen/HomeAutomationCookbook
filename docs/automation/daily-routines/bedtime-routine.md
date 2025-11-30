@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Bedtime Routine Automation - Smart Home Night Mode
 description: Automate your bedtime routine with lights off, doors locked, and thermostat adjusted. Complete guide for nighttime smart home automation.
 keywords: bedtime routine automation, night mode automation, smart home bedtime, automatic bedtime routine, good night automation
