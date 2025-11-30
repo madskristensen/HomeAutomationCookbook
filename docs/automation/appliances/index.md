@@ -69,156 +69,163 @@ Get notified when your refrigerator or freezer door is left open too long to pre
 
 ---
 
-## Quick start guide
-
-### 1. Power monitoring smart plugs
-
-**Best for Appliance Detection:**
-- TP-Link Kasa EP25 (16A, energy monitoring)
-- Aqara Smart Plug (Zigbee, compact)
-- Sonoff S31 (Tasmota-flashable, local control)
-- Shelly Plug S (WiFi, accurate power monitoring)
-
-**Note:** Most dryers use 240V special outlets and can't use standard smart plugs. Use vibration sensors instead.
-
-### 2. Alternative detection methods
-
-**Vibration Sensors:**
-- Aqara Vibration Sensor
-- SmartThings Multi-Sensor
-- Attach to appliance body
-- Detects running/stopped states
-
-**Contact Sensors:**
-- On appliance doors
-- Track open/close cycles
-- Verify state changes
-
-### 3. Learn power patterns
-
-**Before Automating:**
-1. Plug appliance into power monitoring plug
-2. Run complete cycle
-3. Note power consumption:
-   - **Idle:** < 5W
-   - **Running:** 100-500W (varies)
-   - **Done:** < 5W for 3+ minutes
-4. Set automation thresholds based on observed patterns
-
----
-
 ## Common use cases
 
-### 🔔 Completion Notifications
-- Washer/dryer cycle finished
-- Dishwasher clean and ready
-- Coffee maker brewing complete
-- Bread machine finished baking
+<div class="use-case-grid">
 
-### 🤖 Scheduled Operations
-- Robot vacuum runs when away
-- Dishwasher starts during off-peak hours
-- Coffee maker on timer for morning
-- Slow cooker timed start
+<div class="use-case-card">
+<h4>Completion notifications</h4>
+<ul>
+<li>Washer/dryer cycle finished</li>
+<li>Dishwasher clean and ready</li>
+<li>Coffee maker brewing complete</li>
+<li>Bread machine finished baking</li>
+</ul>
+</div>
 
-### ⚡ Energy Monitoring
-- Track appliance power usage
-- Detect always-on power drains
-- Identify malfunctioning appliances
-- Monitor monthly consumption
+<div class="use-case-card">
+<h4>Scheduled operations</h4>
+<ul>
+<li>Robot vacuum runs when away</li>
+<li>Dishwasher starts during off-peak hours</li>
+<li>Coffee maker on timer for morning</li>
+<li>Slow cooker timed start</li>
+</ul>
+</div>
 
-### 🔐 Safety Automations
-- Auto-shutoff for heaters after X hours
-- Notifications if oven left on
-- Alerts for abnormal power draw
-- Disable appliances when away
+<div class="use-case-card">
+<h4>Energy monitoring</h4>
+<ul>
+<li>Track appliance power usage</li>
+<li>Detect always-on power drains</li>
+<li>Identify malfunctioning appliances</li>
+<li>Monitor monthly consumption</li>
+</ul>
+</div>
+
+<div class="use-case-card">
+<h4>Safety automations</h4>
+<ul>
+<li>Auto-shutoff for heaters after X hours</li>
+<li>Notifications if oven left on</li>
+<li>Alerts for abnormal power draw</li>
+<li>Disable appliances when away</li>
+</ul>
+</div>
+
+</div>
 
 ---
 
 ## Best practices
 
-### ✅ Power Monitoring Tips
+<div class="placement-grid">
 
-**Calibration:**
-- Watch full cycle to learn patterns
-- Note different cycle types (heavy, delicate, etc.)
-- Set conservative thresholds
-- Test multiple times before trusting
+<div class="placement-card">
+<h3>Power monitoring tips</h3>
+<ul>
+<li>Watch full cycle to learn patterns</li>
+<li>Use 3-5 minute delays to avoid false triggers</li>
+<li>Set conservative thresholds</li>
+<li>Test multiple times before trusting</li>
+</ul>
+</div>
 
-**Reliable Detection:**
-- Use 3-5 minute delays to avoid false triggers
-- Account for different cycle types
-- Some cycles use less power
-- Combine with other sensors (vibration, door)
+<div class="placement-card">
+<h3>Smart plug selection</h3>
+<ul>
+<li>Check maximum amperage rating</li>
+<li>Verify power monitoring accuracy</li>
+<li>Consider local vs. cloud processing</li>
+<li>Ensure it won't block other outlets</li>
+</ul>
+</div>
 
-### 🔋 Smart Plug Selection
+<div class="placement-card">
+<h3>Notification strategy</h3>
+<ul>
+<li><strong>First:</strong> Informational ("Washer done!")</li>
+<li><strong>30 min:</strong> Reminder ("Don't forget wet clothes")</li>
+<li><strong>2 hours:</strong> Urgent ("Mildew risk!")</li>
+<li>Mute audible between 10 PM - 7 AM</li>
+</ul>
+</div>
 
-**Consider:**
-- Maximum amperage rating (check appliance requirements)
-- Power monitoring accuracy
-- Local vs. cloud processing
-- Size (won't block other outlets)
-- Integration with your platform
+<div class="placement-card">
+<h3>Safety considerations</h3>
+<ul>
+<li><strong>Never:</strong> Gas appliances, high heat unsupervised</li>
+<li><strong>Safe:</strong> Coffee makers, robot vacuums</li>
+<li><strong>Safe:</strong> Dishwashers, washing machines</li>
+<li><strong>Safe:</strong> Electric kettles (with auto shut-off)</li>
+</ul>
+</div>
 
-### 🔔 Notification Strategy
-
-**Progressive Reminders:**
-1. **First:** Informational ("Washer done!")
-2. **Second (30 min):** Reminder ("Don't forget wet clothes")
-3. **Third (2 hours):** Urgent ("Clothes still in washer - mildew risk!")
-
-**Multi-Channel:**
-- Push notification to phone
-- Dashboard tile
-- Smart speaker announcement
-- Flash lights
-
-**Quiet Hours:**
-- Mute audible between 10 PM - 7 AM
-- Visual notifications only at night
-- Resume normal in morning
-
-### ⚠️ Safety Considerations
-
-**Never Automate:**
-- ❌ Gas appliances
-- ❌ High heat without supervision
-- ❌ Anything fire-hazardous
-
-**Safe to Automate:**
-- ✅ Coffee makers (with auto shut-off)
-- ✅ Robot vacuums
-- ✅ Dishwashers (already automated)
-- ✅ Washing machines
-- ✅ Electric kettles (with auto shut-off)
+</div>
 
 ---
 
 ## Troubleshooting
 
-**Power Monitoring Not Detecting Cycle End?**
-- Lower the power threshold (try 15W instead of 10W)
-- Increase delay time (try 5 minutes instead of 3)
-- Check if appliance has standby power draw
-- Verify smart plug power monitoring accuracy
+<div class="troubleshooting-grid">
 
-**False "Done" Notifications?**
-- Increase delay before triggering (5+ minutes)
-- Raise power threshold slightly
-- Check for power fluctuations in your home
-- Use additional verification (vibration sensor)
+<div class="issue-card">
+<div class="issue-header">
+<h3>Power monitoring not detecting cycle end</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Lower the power threshold (try 15W instead of 10W)</li>
+<li>Increase delay time (try 5 minutes instead of 3)</li>
+<li>Check if appliance has standby power draw</li>
+<li>Verify smart plug power monitoring accuracy</li>
+</ul>
+</div>
+</div>
 
-**Vibration Sensor Triggers Too Often?**
-- Adjust sensitivity in sensor settings
-- Add "for: 2 minutes" delay to automation
-- Relocate sensor to less vibration-prone spot
-- Combine with door sensor for verification
+<div class="issue-card">
+<div class="issue-header">
+<h3>False "done" notifications</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Increase delay before triggering (5+ minutes)</li>
+<li>Raise power threshold slightly</li>
+<li>Check for power fluctuations in your home</li>
+<li>Use additional verification (vibration sensor)</li>
+</ul>
+</div>
+</div>
 
-**Robot Vacuum Starts at Wrong Time?**
-- Verify presence detection is accurate
-- Add 15-minute delay after away mode
-- Check for motion sensors that could indicate presence
-- Use time-based conditions (only 9 AM - 6 PM)
+<div class="issue-card">
+<div class="issue-header">
+<h3>Vibration sensor triggers too often</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Adjust sensitivity in sensor settings</li>
+<li>Add "for: 2 minutes" delay to automation</li>
+<li>Relocate sensor to less vibration-prone spot</li>
+<li>Combine with door sensor for verification</li>
+</ul>
+</div>
+</div>
+
+<div class="issue-card">
+<div class="issue-header">
+<h3>Robot vacuum starts at wrong time</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Verify presence detection is accurate</li>
+<li>Add 15-minute delay after away mode</li>
+<li>Check for motion sensors that could indicate presence</li>
+<li>Use time-based conditions (only 9 AM - 6 PM)</li>
+</ul>
+</div>
+</div>
+
+</div>
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>

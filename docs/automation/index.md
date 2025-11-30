@@ -21,137 +21,112 @@ This is the main section with dozens of practical automation recipes for your sm
 
 ## Categories
 
-All automations are organized by what they accomplish, making it easy to find solutions for your specific needs.
+<div class="category-grid">
 
-### [Lighting](/automation/lighting/)
+<a href="/automation/lighting/" class="category-card">
+<h3>Lighting</h3>
+<p>Automatic lighting that responds to your presence and needs</p>
+<span class="category-count">7 automations</span>
+</a>
 
-Automatic lighting that responds to your presence and needs:
-- Turn on lights when motion is detected
-- Toggle lights when doors open
-- Nighttime low-brightness lighting
-- Outdoor lights at sunset
+<a href="/automation/daily-routines/" class="category-card">
+<h3>Daily routines</h3>
+<p>Automate your daily rhythm for effortless living</p>
+<span class="category-count">4 automations</span>
+</a>
 
-[Explore Lighting Automations →](/automation/lighting/)
+<a href="/automation/climate/" class="category-card">
+<h3>Climate and comfort</h3>
+<p>Control temperature, humidity, and air quality</p>
+<span class="category-count">7 automations</span>
+</a>
 
----
+<a href="/automation/entertainment/" class="category-card">
+<h3>Entertainment</h3>
+<p>Music and media control for your lifestyle</p>
+<span class="category-count">5 automations</span>
+</a>
 
-### [Daily routines](/automation/daily-routines/)
+<a href="/automation/appliances/" class="category-card">
+<h3>Appliances</h3>
+<p>Smart appliance notifications and control</p>
+<span class="category-count">6 automations</span>
+</a>
 
-Automate your daily rhythm for effortless living:
-- Away mode when everyone leaves
-- Morning wake-up routines
-- Bedtime wind-down automation
-- Unlock door on arrival
+<a href="/automation/security/" class="category-card">
+<h3>Safety and security</h3>
+<p>Protect your home and family</p>
+<span class="category-count">6 automations</span>
+</a>
 
-[Explore Daily Routine Automations →](/automation/daily-routines/)
+<a href="/automation/notifications/" class="category-card">
+<h3>Notifications and alerts</h3>
+<p>Stay informed without notification fatigue</p>
+<span class="category-count">9 automations</span>
+</a>
 
----
-
-### [Climate and comfort](/automation/climate/)
-
-Control temperature, humidity, and air quality:
-- Turn on fan when shower starts
-- Pause thermostat when windows open
-- Automatic blinds at sunset and sunrise
-- Air quality monitoring and control
-
-[Explore Climate Automations →](/automation/climate/)
-
----
-
-### [Entertainment](/automation/entertainment/)
-
-Music and media control for your lifestyle:
-- Dim lights when TV turns on
-- Play music when you start shower
-- Control music with physical switches
-- Speaker volume presets
-
-[Explore Entertainment Automations →](/automation/entertainment/)
+</div>
 
 ---
 
-### [Appliances](/automation/appliances/)
+## Getting started
 
-Smart appliance notifications and control:
-- Washer and dryer completion alerts
-- Dishwasher done notifications
-- Robot vacuum scheduling
-- Coffee maker automation
+<div class="placement-grid">
 
-[Explore Appliance Automations →](/automation/appliances/)
+<div class="placement-card">
+<h3>1. Start simple</h3>
+<ul>
+<li>Begin with a single trigger and action</li>
+<li>Test thoroughly before adding complexity</li>
+<li>Monitor for a few days</li>
+</ul>
+</div>
+
+<div class="placement-card">
+<h3>2. Add conditions</h3>
+<ul>
+<li>Time of day conditions</li>
+<li>Presence detection</li>
+<li>Sensor state conditions</li>
+</ul>
+</div>
+
+<div class="placement-card">
+<h3>3. Document and iterate</h3>
+<ul>
+<li>Name automations clearly</li>
+<li>Add descriptions for future reference</li>
+<li>Gather feedback from household members</li>
+</ul>
+</div>
+
+</div>
 
 ---
-
-### [Safety and security](/automation/security/)
-
-Protect your home and family:
-- Away lighting patterns to deter intruders
-- Fire emergency response
-- Water leak detection and response
-- Garage door monitoring
-
-[Explore Safety Automations →](/automation/security/)
-
----
-
-### [Notifications and alerts](/automation/notifications/)
-
-Stay informed without notification fatigue:
-- Low battery alerts for all devices
-- Dashboard status tiles
-- Doorbell notifications
-- Family reminders (teeth brushing, garbage day)
-
-[Explore Notification Automations →](/automation/notifications/)
-
----
-
-## Getting started with automations
-
-### 1. Start simple
-Begin with a single trigger and single action. Test thoroughly before adding complexity.
-
-### 2. Add conditions
-Enhance automations with time of day, presence detection, or sensor state conditions.
-
-### 3. Test thoroughly
-Run automations in "test mode" before enabling permanently. Monitor for a few days.
-
-### 4. Document
-Name automations clearly and add descriptions for future reference.
-
-### 5. Iterate
-Gather feedback from household members and refine based on real-world usage.
-
-## Automation patterns
-
-### If/Then/Else
-```
-IF motion detected
-THEN turn on light
-ELSE (after 5 min) turn off light
-```
-
-### Multiple conditions
-```
-IF (motion detected) AND (lux < 100) AND (time after sunset)
-THEN turn on light
-```
-
-### Time-based
-```
-EVERY weekday at 7:00 AM
-DO run morning routine
-```
 
 ## Best practices
 
-✅ **Keep It Simple** - Simple automations are reliable automations
-✅ **Include Delays** - Avoid rapid on/off toggling
-✅ **Plan Fallbacks** - What if a sensor fails?
-✅ **Test Edge Cases** - What happens at midnight? During power outage?
-✅ **Get Feedback** - Ask family members how automations work for them
+<div class="use-case-grid">
+
+<div class="use-case-card">
+<h4>Keep it simple</h4>
+<ul>
+<li>Simple automations are reliable automations</li>
+<li>Include delays to avoid rapid on/off toggling</li>
+<li>Plan fallbacks if a sensor fails</li>
+</ul>
+</div>
+
+<div class="use-case-card">
+<h4>Test thoroughly</h4>
+<ul>
+<li>What happens at midnight?</li>
+<li>What happens during power outage?</li>
+<li>Ask family members how automations work for them</li>
+</ul>
+</div>
+
+</div>
 
 ---
 

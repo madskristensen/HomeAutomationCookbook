@@ -168,124 +168,125 @@ Wall-mounted tablets provide persistent visibility for your smart home status.
 
 ## Notification types
 
-### Dashboard tiles
+<div class="use-case-grid">
 
-**Best for:**
-- Status that needs attention (washer done, door open)
-- Tasks that need completing (garbage day)
-- Persistent visibility for the household
+<div class="use-case-card">
+<h4>Dashboard tiles</h4>
+<ul>
+<li>Status that needs attention (washer done, door open)</li>
+<li>Tasks that need completing (garbage day)</li>
+<li>Everyone sees them</li>
+<li>Can't be dismissed accidentally</li>
+</ul>
+</div>
 
-**Advantages:**
-- Everyone sees them
-- Can't be dismissed accidentally
-- Visual at-a-glance status
+<div class="use-case-card">
+<h4>Phone notifications</h4>
+<ul>
+<li>Urgent alerts (security, fire, water leak)</li>
+<li>Time-sensitive information</li>
+<li>Personal reminders</li>
+<li>Only reaches one person</li>
+</ul>
+</div>
 
-### Phone notifications
+<div class="use-case-card">
+<h4>Voice announcements</h4>
+<ul>
+<li>Immediate attention needed</li>
+<li>Hands-busy situations</li>
+<li>Whole-house awareness</li>
+<li>Use quiet hours appropriately</li>
+</ul>
+</div>
 
-**Best for:**
-- Urgent alerts (security, fire, water leak)
-- Time-sensitive information
-- Personal reminders
-
-**Considerations:**
-- Can be missed or dismissed
-- Only reaches one person
-- May cause notification fatigue
-
-### Voice announcements
-
-**Best for:**
-- Immediate attention needed
-- Hands-busy situations
-- Whole-house awareness
-
-**Considerations:**
-- Can be disruptive
-- May wake sleeping family
-- Use quiet hours appropriately
-
-### Combined approach
-
-For important notifications, use multiple channels:
-
-1. **Dashboard tile** - Persistent visibility
-2. **Phone notification** - Immediate alert
-3. **Voice announcement** - During appropriate hours
-
----
-
-## Best practices
-
-### Notification strategy
-
-**Reduce fatigue:**
-- Consolidate similar alerts
-- Use escalating severity levels
-- Set appropriate quiet hours
-- Filter by mode (home/away/night)
-
-**Make them actionable:**
-- Include relevant information
-- Provide one-tap actions when possible
-- Clear what action is needed
-
-### Dashboard design
-
-**Keep it simple:**
-- Most important items largest
-- Group related items
-- Consistent layout
-- Use meaningful colors
-
-**Color conventions:**
-- Green: Good/off/complete
-- Red: Attention needed/warning
-- Yellow: Caution/transitional
-- Blue: Informational
-
-### Quiet hours
-
-**Night mode notifications:**
-- Visual only (no sounds)
-- Emergency-only alerts audible
-- Dashboard dims automatically
-- Resume normal in morning
+</div>
 
 ---
 
 ## Common use cases
 
-### Maintenance alerts
+<div class="use-case-grid">
 
-- Low battery warnings
-- Filter replacement reminders
-- Smoke detector test reminders
-- HVAC maintenance due
+<div class="use-case-card">
+<h4>Maintenance alerts</h4>
+<ul>
+<li>Low battery warnings</li>
+<li>Filter replacement reminders</li>
+<li>Smoke detector test reminders</li>
+<li>HVAC maintenance due</li>
+</ul>
+</div>
 
-### Family coordination
+<div class="use-case-card">
+<h4>Family coordination</h4>
+<ul>
+<li>Teeth brushing reminders</li>
+<li>School departure countdown</li>
+<li>Chore completion tracking</li>
+<li>Package delivery alerts</li>
+</ul>
+</div>
 
-- Teeth brushing reminders
-- School departure countdown
-- Chore completion tracking
-- Package delivery alerts
+<div class="use-case-card">
+<h4>Home status</h4>
+<ul>
+<li>Appliance completion (washer, dryer)</li>
+<li>Door/window open alerts</li>
+<li>Garage door status</li>
+<li>Security system state</li>
+</ul>
+</div>
 
-### Home status
-
-- Appliance completion (washer, dryer)
-- Door/window open alerts
-- Garage door status
-- Security system state
+</div>
 
 ---
 
-**Get Started:**
-- [Low Battery Alerts →](/automation/notifications/low-battery-alerts.html)
-- [Status Tiles →](/automation/notifications/status-tiles.html)
-- [Garbage Day Reminder →](/automation/notifications/garbage-day-reminder.html)
-- [Doorbell Notification →](/automation/notifications/doorbell-notification.html)
-- [Baby Sleep Mode →](/automation/notifications/baby-sleep-mode.html)
-- [Package Delivery Detection →](/automation/notifications/package-delivery-alert.html)
-- [Pet Feeding Reminder →](/automation/notifications/pet-feeding-reminder.html)
+## Best practices
+
+<div class="placement-grid">
+
+<div class="placement-card">
+<h3>Reduce fatigue</h3>
+<ul>
+<li>Consolidate similar alerts</li>
+<li>Use escalating severity levels</li>
+<li>Set appropriate quiet hours</li>
+<li>Filter by mode (home/away/night)</li>
+</ul>
+</div>
+
+<div class="placement-card">
+<h3>Dashboard design</h3>
+<ul>
+<li>Most important items largest</li>
+<li>Group related items together</li>
+<li>Use consistent layout</li>
+<li>Apply meaningful colors</li>
+</ul>
+</div>
+
+<div class="placement-card">
+<h3>Color conventions</h3>
+<ul>
+<li><strong>Green:</strong> Good/off/complete</li>
+<li><strong>Red:</strong> Attention needed/warning</li>
+<li><strong>Yellow:</strong> Caution/transitional</li>
+<li><strong>Blue:</strong> Informational</li>
+</ul>
+</div>
+
+<div class="placement-card">
+<h3>Quiet hours</h3>
+<ul>
+<li>Visual only (no sounds) at night</li>
+<li>Emergency-only alerts audible</li>
+<li>Dashboard dims automatically</li>
+<li>Resume normal in morning</li>
+</ul>
+</div>
+
+</div>
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>

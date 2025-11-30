@@ -69,129 +69,163 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 
 ---
 
-## Quick start guide
-
-### 1. Choose your smart thermostat
-
-**WiFi Thermostats (Most Popular):**
-- Ecobee SmartThermostat (room sensors, Alexa built-in)
-- Nest Learning Thermostat (auto-schedules, beautiful)
-- Honeywell T9 (budget-friendly, room sensors)
-- Wyze Thermostat (ultra-budget option)
-
-**Zigbee/Z-Wave:**
-- More reliable local control
-- No cloud dependency
-- Integrates with mesh network
-
-### 2. Essential sensors
-
-**Must-Have:**
-- 🌡️ Temperature sensors (per-room accuracy)
-- 💧 Humidity sensors (prevent mold, optimize comfort)
-- 🚪 Contact sensors (all windows and doors)
-
-**Nice-to-Have:**
-- 🌬️ Air quality sensor (AQI/PM2.5)
-- 🌤️ Outdoor weather station
-- ⚡ Smart plugs with power monitoring
-
-### 3. Start simple
-
-**Easy First Automations:**
-1. **Window opens** → Pause thermostat
-2. **All windows close** → Resume thermostat
-3. **Humidity > 70%** → Turn on bathroom fan
-
-**Then Add:**
-- Temperature-based room heaters
-- Air quality triggers
-- Away mode energy savings
-- Seasonal schedules
-
----
-
 ## Common use cases
 
-### 💰 Energy Savings
-- Stop HVAC when windows/doors open
-- Away mode temperature adjustments
-- Night setback schedules
-- Zone-based heating/cooling
+<div class="use-case-grid">
 
-### 🌬️ Air Quality Management
-- Auto-run purifiers when AQI drops
-- Bathroom fan humidity control
-- Kitchen exhaust during cooking
-- Whole-house ventilation
+<div class="use-case-card">
+<h4>Energy savings</h4>
+<ul>
+<li>Stop HVAC when windows/doors open</li>
+<li>Away mode temperature adjustments</li>
+<li>Night setback schedules</li>
+<li>Zone-based heating/cooling</li>
+</ul>
+</div>
 
-### 🌡️ Comfort Optimization
-- Per-room temperature control
-- Supplemental heating for cold rooms
-- Pre-heat/cool before arrival
-- Sleep mode temperature adjustment
+<div class="use-case-card">
+<h4>Air quality management</h4>
+<ul>
+<li>Auto-run purifiers when AQI drops</li>
+<li>Bathroom fan humidity control</li>
+<li>Kitchen exhaust during cooking</li>
+<li>Whole-house ventilation</li>
+</ul>
+</div>
 
-### 🏡 Smart Integration
-- Notifications for window state
-- Dashboard displays
-- Voice control integration
-- Vacation mode automation
+<div class="use-case-card">
+<h4>Comfort optimization</h4>
+<ul>
+<li>Per-room temperature control</li>
+<li>Supplemental heating for cold rooms</li>
+<li>Pre-heat/cool before arrival</li>
+<li>Sleep mode temperature adjustment</li>
+</ul>
+</div>
+
+<div class="use-case-card">
+<h4>Smart integration</h4>
+<ul>
+<li>Notifications for window state</li>
+<li>Dashboard displays</li>
+<li>Voice control integration</li>
+<li>Vacation mode automation</li>
+</ul>
+</div>
+
+</div>
 
 ---
 
 ## Best practices
 
-### ✅ Thermostat Control
-- Add 1-2 minute delays before disabling
-- Save previous state before changes
-- Use multiple verification methods
-- Provide manual override options
+<div class="placement-grid">
 
-### 🌡️ Temperature Sensors
-- Place away from windows and vents
-- Avoid direct sunlight
-- Chest height (4-5 feet) placement
-- In frequently occupied areas
+<div class="placement-card">
+<h3>Thermostat control</h3>
+<ul>
+<li>Add 1-2 minute delays before disabling</li>
+<li>Save previous state before changes</li>
+<li>Use multiple verification methods</li>
+<li>Provide manual override options</li>
+</ul>
+</div>
 
-### 💨 Humidity Management
-- Target 30-40% in winter
-- Target 40-50% in summer  
-- Never exceed 60% (mold risk)
-- Use bathroom fans consistently
+<div class="placement-card">
+<h3>Temperature sensors</h3>
+<ul>
+<li>Place away from windows and vents</li>
+<li>Avoid direct sunlight</li>
+<li>Chest height (4-5 feet) placement</li>
+<li>In frequently occupied areas</li>
+</ul>
+</div>
 
-### ⚡ Energy Optimization
-- Temperature setbacks save 1% per degree per 8 hours
-- Smart scheduling for occupied hours only
-- Zone control for unused rooms
-- Regular HVAC maintenance (clean filters monthly)
+<div class="placement-card">
+<h3>Humidity management</h3>
+<ul>
+<li>Target 30-40% in winter</li>
+<li>Target 40-50% in summer</li>
+<li>Never exceed 60% (mold risk)</li>
+<li>Use bathroom fans consistently</li>
+</ul>
+</div>
+
+<div class="placement-card">
+<h3>Energy optimization</h3>
+<ul>
+<li>Temperature setbacks save 1% per degree per 8 hours</li>
+<li>Smart scheduling for occupied hours only</li>
+<li>Zone control for unused rooms</li>
+<li>Regular HVAC maintenance (clean filters monthly)</li>
+</ul>
+</div>
+
+</div>
 
 ---
 
 ## Troubleshooting
 
-**Thermostat Not Pausing When Windows Open?**
-- Check contact sensor battery
-- Verify automation trigger conditions
-- Add delay to prevent false triggers
-- Test window sensor alignment
+<div class="troubleshooting-grid">
 
-**Room Too Cold Despite Heater Running?**
-- Check window/door seals
-- Verify heater wattage is sufficient
-- Ensure power monitoring detects heater
-- Consider insulation improvements
+<div class="issue-card">
+<div class="issue-header">
+<h3>Thermostat not pausing when windows open</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Check contact sensor battery</li>
+<li>Verify automation trigger conditions</li>
+<li>Add delay to prevent false triggers</li>
+<li>Test window sensor alignment</li>
+</ul>
+</div>
+</div>
 
-**Bathroom Fan Not Turning On?**
-- Test humidity sensor accuracy
-- Adjust humidity threshold (try 65-70%)
-- Check smart switch connectivity
-- Verify automation is enabled
+<div class="issue-card">
+<div class="issue-header">
+<h3>Room too cold despite heater running</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Check window/door seals</li>
+<li>Verify heater wattage is sufficient</li>
+<li>Ensure power monitoring detects heater</li>
+<li>Consider insulation improvements</li>
+</ul>
+</div>
+</div>
 
-**High Energy Bills Despite Automation?**
-- Review thermostat schedule
-- Check for air leaks around windows/doors
-- Verify away mode actually activates
-- Monitor HVAC filter cleanliness
+<div class="issue-card">
+<div class="issue-header">
+<h3>Bathroom fan not turning on</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Test humidity sensor accuracy</li>
+<li>Adjust humidity threshold (try 65-70%)</li>
+<li>Check smart switch connectivity</li>
+<li>Verify automation is enabled</li>
+</ul>
+</div>
+</div>
+
+<div class="issue-card">
+<div class="issue-header">
+<h3>High energy bills despite automation</h3>
+</div>
+<div class="issue-solutions">
+<ul>
+<li>Review thermostat schedule</li>
+<li>Check for air leaks around windows/doors</li>
+<li>Verify away mode actually activates</li>
+<li>Monitor HVAC filter cleanliness</li>
+</ul>
+</div>
+</div>
+
+</div>
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
