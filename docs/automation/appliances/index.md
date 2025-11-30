@@ -53,6 +53,18 @@ Robot vacuum automatically cleans your home when everyone leaves.
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Fridge or freezer door left open alert
+
+Get notified when your refrigerator or freezer door is left open too long to prevent food spoilage.
+
+<span class="card-meta">**Best for:** Food safety, energy savings, kids</span>
+
+<p><a href="/automation/appliances/fridge-door-alert.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---

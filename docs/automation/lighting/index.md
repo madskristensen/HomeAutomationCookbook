@@ -91,6 +91,18 @@ Turn on outdoor lights automatically at sunset for safety, curb appeal, and conv
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Gradual wake-up lights
+
+Simulate a natural sunrise to wake up gently with gradually brightening lights.
+
+<span class="card-meta">**Best for:** Better mornings, dark winter wake-ups</span>
+
+<p><a href="/automation/lighting/wake-up-lights.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---
@@ -221,6 +233,7 @@ Create different behaviors for day and night:
 - [Bathroom Night Light →](/automation/lighting/bathroom-night-light.html)
 - [Toggle Lights on Door Open →](/automation/lighting/toggle-lights-door.html)
 - [Outdoor Night Lights →](/automation/lighting/outdoor-night-lights.html)
+- [Gradual Wake-Up Lights →](/automation/lighting/wake-up-lights.html)
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>

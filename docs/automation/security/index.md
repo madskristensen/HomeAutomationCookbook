@@ -79,6 +79,18 @@ Get alerted when your garage door is left open too long with optional auto-close
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Stove or oven left on alert
+
+Get notified when your stove or oven is left on too long to prevent fire hazards.
+
+<span class="card-meta">**Best for:** Kitchen safety, peace of mind, elderly care</span>
+
+<p><a href="/automation/security/stove-left-on-alert.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---
@@ -350,6 +362,7 @@ Location-based security:
 - [Water Leak Response →](/automation/security/water-leak-response.html)
 - [Garage Door Notification →](/automation/security/garage-door-notification.html)
 - [Fake Dog Deterrent →](/automation/security/fake-dog-deterrent.html)
+- [Stove Left On Alert →](/automation/security/stove-left-on-alert.html)
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
