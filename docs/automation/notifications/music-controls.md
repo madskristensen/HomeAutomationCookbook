@@ -7,7 +7,11 @@ keywords: music dashboard, smart home music, dashboard controls, volume presets,
 
 # Music controls
 
-There is a quiet frustration in repeating yourself to a voice assistant, hoping it understands the station you want. A dashboard puts your favorites within reach - album art visible, volume adjustable with a tap, the current song displayed at a glance. The household can browse and control together, no shouting required.
+Controlling the music from a dashboard solves several problems. One is to see the album art, artist, and song name to know more information about the current song playing. This is a topic that comes up all the time, and being able to glance at the dashboard to see the information is super convenient.
+
+If you're like me, you have a few favorite stations or playlists that you play most of the time. Giving each of them a tile on the dashboard makes it easy to play any of them. The same goes with presets for volume like low, normal, and loud.
+
+All these controls eliminate the need to yell at Alexa/Google/Siri repeatedly, which is often a cause of frustration.
 
 ## Use cases
 

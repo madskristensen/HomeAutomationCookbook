@@ -7,7 +7,7 @@ keywords: garbage reminder, trash day, dashboard automation, virtual switch, wee
 
 # Garbage day reminder
 
-The bins need to reach the curb before the truck arrives, but somehow the evening slips away and you forget. A dashboard tile lights up the night before - red, insistent, patient - and stays lit until someone taps it to confirm the task is done. No more missed pickups.
+This is a great way to remember to take out the trash before garbage day. The tile on the dashboard lights up red, so you know you have a task to complete. Once you are done, simply click the tile to turn it back green. This indicates you have completed the task.
 
 ## Use cases
 

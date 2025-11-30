@@ -7,7 +7,7 @@ keywords: air quality automation, air purifier control, AQI sensor automation, P
 
 # Clean the air when air quality drops
 
-The air in a home is not static. Cooking sends particles drifting, pets shed invisible dander, wildfire smoke seeps through cracks. A sensor watches what the eye cannot see - and when quality drops below a healthy threshold, the purifier hums to life, drawing the room back toward clarity.
+Indoor air quality fluctuates throughout the day from cooking, outdoor pollution, pet dander, and more. Automate air purification when quality drops below healthy thresholds for better health and comfort.
 
 ## Use cases
 

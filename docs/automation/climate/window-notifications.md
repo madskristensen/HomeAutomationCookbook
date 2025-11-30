@@ -7,7 +7,7 @@ keywords: window notification automation, energy saving alerts, when to open win
 
 # Notify when to open or close windows
 
-Sometimes the best climate control costs nothing at all. A spring afternoon arrives, the outdoor air perfectly matched to what you want inside, and a quiet notification suggests: open the windows, let nature do the work. When the temperature shifts again, another nudge arrives. The furnace rests. The energy bill sighs with relief.
+Save energy by using outdoor air for heating or cooling instead of running HVAC. Get smart notifications when outdoor temperature is perfect for opening or closing windows.
 
 ## Use cases
 

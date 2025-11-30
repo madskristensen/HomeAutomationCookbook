@@ -7,7 +7,7 @@ keywords: baby sleep automation, nursery automation, quiet mode, sleep detection
 
 # Stop automations when baby sleeps
 
-The baby has finally drifted off, the house settling into that precious quiet - and then the motion sensor triggers the hallway light, or a notification chimes on a speaker. The house should know when to tread softly. A power monitor on the sound machine or baby monitor detects sleep, and the automations nearby fall silent until the nursery stirs again.
+Nothing is worse than putting the baby to sleep, just for the automated lights to come on and wake her up. There are ways we can detect if the baby is asleep and then disable any automation from disturbing her.
 
 ## Use cases
 

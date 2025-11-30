@@ -7,7 +7,7 @@ keywords: dryer done alert, vibration sensor dryer, laundry completion alert, dr
 
 # Notify me when the dryer is done
 
-Clothes left sitting in the dryer grow wrinkled and stubborn, demanding an ironing they would not otherwise need. A vibration sensor feels the tumbling stop, and within moments, you know - wherever you are in the house - that warm, soft laundry is waiting to be folded.
+Get alerted when the dryer finishes so you can remove clothes promptly and reduce wrinkles. This clever vibration sensor method works even with 240V dryers.
 
 ## Use cases
 

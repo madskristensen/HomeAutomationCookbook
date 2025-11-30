@@ -7,12 +7,12 @@ keywords: away mode automation, presence detection, leave home automation, GPS a
 
 # Set away mode when everyone leaves
 
-There is a particular quiet that settles over an empty house - the hum of the refrigerator, the tick of a clock, sunlight shifting across an untouched floor. This automation listens for that stillness and responds in kind: lights dimming, locks turning, the thermostat retreating to its patient eco-setting. Your home becomes its own watchful guardian.
+Automatically transition your home to Away Mode when the last person leaves. This foundational automation enables energy savings, security activation, and peace of mind that your home is properly secured.
 
 <div class="info-box">
-  <strong>Why this matters</strong>
+  <strong>⭐ Why This Matters</strong>
   <ul>
-    <li><strong>Energy savings:</strong> Turn off unnecessary lights, adjust thermostat to eco mode, stop running appliances</li>
+    <li><strong>Energy Savings:</strong> Turn off unnecessary lights, adjust thermostat to eco mode, stop running appliances</li>
     <li><strong>Security:</strong> Lock all doors automatically, arm security system, activate surveillance cameras</li>
     <li><strong>Convenience:</strong> No manual mode switching needed. Works automatically for everyone with consistent behavior.</li>
   </ul>

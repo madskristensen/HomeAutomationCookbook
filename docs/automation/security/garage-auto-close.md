@@ -7,7 +7,7 @@ keywords: auto close garage, garage door automation, smart garage, garage securi
 
 # Auto-close garage when forgotten
 
-You are halfway to work when the doubt creeps in: did I close the garage? With this automation, you need not turn around to check. If the door stands open after everyone has gone, the house takes care of it - lowering the door and sending a photo as proof, so you can carry on with your day in peace.
+Never worry about leaving your garage door open again. This automation automatically closes the garage when it's left open and nobody's home, then sends you a photo confirmation for peace of mind.
 
 ## Use cases
 

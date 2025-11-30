@@ -7,7 +7,7 @@ keywords: maintenance reminder, smart home dashboard, filter replacement, pool m
 
 # Maintenance reminder dashboard
 
-Some tasks slip the mind because they live outside daily routines - the HVAC filter that needs changing every ninety days, the pool chemicals that need checking, the smoke detector batteries due for their annual swap. A wall-mounted display counts down the days, and when the time comes, a tap adds the item to your shopping list before you forget again.
+Keep track of all household maintenance with a wall-mounted tablet that shows days remaining for filters, pool chemicals, and other recurring tasks. One tap adds items to your shopping list when it's time to restock.
 
 ## Use cases
 

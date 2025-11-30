@@ -7,7 +7,7 @@ keywords: stove left on alert, oven notification, cooking safety, smart stove mo
 
 # Stove or oven left on alert
 
-The burner left glowing after dinner, the oven forgotten once the casserole came out - small oversights that can become dangerous ones. A power monitor watches the kitchen, noting when the stove has been running longer than it should. A quiet alert arrives, interrupting your evening show or reaching you across town, before worry turns to hazard.
+Forgetting to turn off the stove or oven is a common kitchen hazard that can lead to fires, wasted energy, and anxiety when you're away from home. This automation alerts you when cooking appliances have been on for an extended period, giving you peace of mind and improving home safety.
 
 ## Use cases
 

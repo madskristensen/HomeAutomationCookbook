@@ -7,7 +7,7 @@ keywords: music button control, physical music switch, smart home music control,
 
 # Use switch to play/pause music
 
-Asking a voice assistant for the same station every morning grows tiresome. A button on the wall - silent, immediate - summons your favorite music with a single press. No phrase to remember, no waiting for comprehension. Just tap, and the room fills with sound.
+Using a voice assistant to request the same radio station every day can be annoying. Physical switches or buttons make music control instant and effortless - just press and play.
 
 ## Use cases
 

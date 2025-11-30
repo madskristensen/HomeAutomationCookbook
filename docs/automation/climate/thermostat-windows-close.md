@@ -7,7 +7,7 @@ keywords: thermostat resume automation, windows closed automation, HVAC restart,
 
 # Start thermostat when windows and doors are closed
 
-The fresh air has done its work, and now the last window clicks shut. The house notices. The thermostat stirs back to life, resuming its patient work of bringing the temperature back to where it belongs - all without a single word from you.
+Once all windows and doors are closed, it's time to resume climate control. This automation restores your HVAC system to continue heating or cooling your home.
 
 ## Use cases
 

@@ -7,7 +7,7 @@ keywords: toothbrush reminder, kids automation, teeth brushing, power monitoring
 
 # Remind kids to brush teeth if they forgot
 
-Bedtime arrives, and with it the familiar question: did they brush? Instead of becoming the nightly enforcer, let the house take over. A power monitor on the electric toothbrush knows if it has been used, and if the hour grows late with no brushing detected, a gentle reminder sounds - from the speaker, not from you.
+Instead of chasing the kids before bedtime to make sure they brush their teeth, let's make the smart home do it for us. That way we as parents don't have to be the bad guy since we're not the ones telling the kids to brush.
 
 ## Use cases
 

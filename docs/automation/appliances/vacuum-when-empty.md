@@ -7,7 +7,7 @@ keywords: robot vacuum automation, smart vacuum scheduling, presence-based clean
 
 # Robot vacuum only when house is empty
 
-True intelligence means more than just starting on schedule. The vacuum should wait until it is certain the house is empty, run its course, and finish before anyone returns. No whirring under your feet, no startled pets, no noise during naptime - just quietly cleaned floors, waiting for you.
+Make your robot vacuum truly smart by only running when the house is completely empty and ensuring it finishes before anyone returns. No more vacuums running underfoot or startling pets.
 
 ## Use cases
 
