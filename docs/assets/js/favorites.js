@@ -27,6 +27,7 @@
       var stored = localStorage.getItem(STORAGE_KEY);
       return stored ? JSON.parse(stored) : [];
     } catch (e) {
+      console.warn('Could not read favorites from localStorage:', e.message);
       return [];
     }
   }
@@ -38,7 +39,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
     } catch (e) {
-      // Silent fail
+      console.warn('Could not save favorites to localStorage:', e.message);
     }
   }
 
