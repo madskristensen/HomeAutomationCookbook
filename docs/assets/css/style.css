@@ -394,6 +394,8 @@ th {
   margin: 0;
   padding: 0;
   gap: 0.25rem;
+  position: relative;
+  top: 8px;
 }
 
 .nav-item {
@@ -2673,7 +2675,7 @@ a.community-link:hover,
 /* Responsive Design
    ========================================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   body {
     font-size: 16px;
   }
