@@ -65,6 +65,18 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Pause HVAC when window opens
+
+Automatically pause heating or cooling when a window or patio door opens with a visual blinking light reminder.
+
+<span class="card-meta">**Best for:** Energy savings, fresh air breaks, visual reminders</span>
+
+<p><a href="/automation/climate/window-hvac-pause.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---

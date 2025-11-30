@@ -103,6 +103,18 @@ Simulate a natural sunrise to wake up gently with gradually brightening lights.
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Driveway welcome wave
+
+Create a stunning ripple lighting effect from street to front door when you arrive home.
+
+<span class="card-meta">**Best for:** Impressive arrivals, curb appeal, security</span>
+
+<p><a href="/automation/lighting/driveway-welcome-wave.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---
@@ -234,6 +246,7 @@ Create different behaviors for day and night:
 - [Toggle Lights on Door Open →](/automation/lighting/toggle-lights-door.html)
 - [Outdoor Night Lights →](/automation/lighting/outdoor-night-lights.html)
 - [Gradual Wake-Up Lights →](/automation/lighting/wake-up-lights.html)
+- [Driveway Welcome Wave →](/automation/lighting/driveway-welcome-wave.html)
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>

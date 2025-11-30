@@ -55,6 +55,8 @@ navigation:
             url: /automation/lighting/outdoor-night-lights.html
           - title: Wake-up lights
             url: /automation/lighting/wake-up-lights.html
+          - title: Driveway welcome wave
+            url: /automation/lighting/driveway-welcome-wave.html
       - title: Daily routines
         url: /automation/daily-routines/index.html
         subitems:
@@ -66,6 +68,8 @@ navigation:
             url: /automation/daily-routines/morning-routine.html
           - title: Bedtime routine
             url: /automation/daily-routines/bedtime-routine.html
+          - title: Bedtime wind-down
+            url: /automation/daily-routines/bedtime-wind-down.html
       - title: Climate and comfort
         url: /automation/climate/index.html
         subitems:
@@ -83,6 +87,8 @@ navigation:
             url: /automation/climate/room-heater-maintain-temp.html
           - title: Blinds at sunset/sunrise
             url: /automation/climate/blinds-sunset-sunrise.html
+          - title: Window HVAC pause
+            url: /automation/climate/window-hvac-pause.html
       - title: Entertainment
         url: /automation/entertainment/index.html
         subitems:
@@ -96,6 +102,8 @@ navigation:
             url: /automation/entertainment/music-switch-control.html
           - title: Speaker volume presets
             url: /automation/entertainment/speaker-volume-presets.html
+          - title: Pool party mode
+            url: /automation/entertainment/pool-party-mode.html
       - title: Appliances
         url: /automation/appliances/index.html
         subitems:
@@ -111,6 +119,8 @@ navigation:
             url: /automation/appliances/robot-vacuum-auto-start.html
           - title: Fridge door alert
             url: /automation/appliances/fridge-door-alert.html
+          - title: Vacuum when empty
+            url: /automation/appliances/vacuum-when-empty.html
       - title: Safety and security
         url: /automation/security/index.html
         subitems:
@@ -126,6 +136,8 @@ navigation:
             url: /automation/security/garage-door-notification.html
           - title: Stove left on alert
             url: /automation/security/stove-left-on-alert.html
+          - title: Garage auto-close
+            url: /automation/security/garage-auto-close.html
       - title: Notifications and alerts
         url: /automation/notifications/index.html
         subitems:
@@ -147,6 +159,8 @@ navigation:
             url: /automation/notifications/package-delivery-alert.html
           - title: Pet feeding reminder
             url: /automation/notifications/pet-feeding-reminder.html
+          - title: Maintenance reminder dashboard
+            url: /automation/notifications/maintenance-reminder-dashboard.html
   - title: FAQ
     url: /faq/index.html
 

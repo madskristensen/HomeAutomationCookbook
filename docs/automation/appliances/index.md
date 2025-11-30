@@ -65,6 +65,18 @@ Get notified when your refrigerator or freezer door is left open too long to pre
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Robot vacuum only when empty
+
+Start your vacuum only when the house is truly empty and finish before anyone returns.
+
+<span class="card-meta">**Best for:** Smart scheduling, no disruption</span>
+
+<p><a href="/automation/appliances/vacuum-when-empty.html" class="card-link">View Automation →</a></p>
+
+</div>
+
 </div>
 
 ---
