@@ -7,7 +7,7 @@ keywords: coffee maker automation, automatic coffee morning, morning coffee rout
 
 # Start coffee maker in the morning
 
-There is something deeply civilized about waking to the smell of fresh coffee - not fumbling bleary-eyed to start the machine, but finding it already brewed, patiently waiting. A simple smart plug and a bit of timing turn morning chaos into morning ritual.
+Wake up to freshly brewed coffee automatically. Start your day right with coffee ready when you need it, without stumbling to the kitchen first.
 
 ## Use cases
 

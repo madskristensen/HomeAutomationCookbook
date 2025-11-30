@@ -7,7 +7,7 @@ keywords: dishwasher done alert, temperature sensor dishwasher, completion notif
 
 # Notify me when the dishwasher is done
 
-The dishwasher hums through its cycle while you are elsewhere in the house, and at some unknowable moment, it falls silent. A temperature sensor notices the heat of the drying phase and, when the warmth fades, sends word: the dishes are clean, dry, and ready to be put away.
+Get alerted when dishes are clean and ready to be put away. This clever temperature-based method detects the heat from the drying cycle.
 
 ## Use cases
 

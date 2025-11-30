@@ -7,14 +7,14 @@ keywords: bathroom night light, nighttime motion lighting, low brightness automa
 
 # Turn on bathroom light at low dim at night
 
-In the small hours, bathroom light should behave more like embers than daylight - just enough red-amber glow to guide your feet, never enough to remind your brain that the day has started without permission. This simple automation protects your sleep while keeping you safe from stumbling in the dark.
+This simple yet valuable automation provides gentle lighting for nighttime bathroom visits. It prevents harsh bright lights from disrupting your sleep cycle while providing enough illumination for safe navigation.
 
 <div class="info-box">
-  <strong>Why this automation matters</strong>
+  <strong>🌙 Why This Automation Matters</strong>
   <ul>
-    <li><strong>Sleep quality:</strong> Bright lights suppress melatonin production. Low-light maintains sleep readiness and makes it easier to fall back asleep.</li>
+    <li><strong>Sleep Quality:</strong> Bright lights suppress melatonin production. Low-light maintains sleep readiness and makes it easier to fall back asleep.</li>
     <li><strong>Safety:</strong> No stumbling in the dark. Safe navigation for all ages, reduces fall risk for elderly. Kids can navigate independently.</li>
-    <li><strong>Family-friendly:</strong> Whole household benefits. Great for overnight guests. Works for everyone automatically with no explanation needed.</li>
+    <li><strong>Family-Friendly:</strong> Whole household benefits. Great for overnight guests. Works for everyone automatically with no explanation needed.</li>
   </ul>
 </div>
 

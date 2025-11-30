@@ -7,7 +7,7 @@ keywords: welcome home music, arrival music automation, automatic music greeting
 
 # Play music when you come home
 
-A house that greets you with music feels different than one that waits in silence. The door opens, lights stir, and sound fills the rooms - not loud, just present, a gentle signal that you have crossed the threshold from the world outside into a space that knows you are home.
+Coming home to a house with lights on and music playing feels welcoming. It's the little touches that make a house feel like home.
 
 ## Use cases
 

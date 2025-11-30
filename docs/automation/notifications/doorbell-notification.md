@@ -7,7 +7,7 @@ keywords: doorbell notification, traditional doorbell, dumb doorbell alert, door
 
 # Notify when traditional doorbell rings
 
-Not every house needs a camera watching the porch. Sometimes you just want to know when someone rings the bell, especially if you are out in the backyard or upstairs where the chime cannot reach. A contact sensor on the old doorbell wiring sends word to your phone - no video, no subscription, just a quiet tap that says someone is at the door.
+If you don't want a smart doorbell, but still want a notification when someone rings the doorbell, then this is for you. It comes in handy when you are outside in the backyard and can't hear the chime. It requires a little bit of extra work to set up but works like a charm.
 
 ## Use cases
 

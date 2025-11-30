@@ -7,7 +7,7 @@ keywords: water leak sensor, leak detection, water damage prevention, smart wate
 
 # Water leak detection and response
 
-Water has a talent for finding its way into places it should not be - under the sink, behind the washing machine, around the water heater's aging seams. A small drip, unnoticed for hours, can become a disaster measured in thousands of dollars. Leak sensors keep quiet watch over these vulnerable spots, sounding the alarm at the first sign of trouble and, if equipped, shutting off the water before the damage spreads.
+Water damage is one of the most expensive home disasters. A single undetected leak can cause thousands of dollars in damage within hours. Smart water leak sensors combined with automated responses can detect leaks early and minimize damage.
 
 ## Use cases
 

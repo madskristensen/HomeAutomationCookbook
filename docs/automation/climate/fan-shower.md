@@ -7,7 +7,7 @@ keywords: bathroom fan automation, shower fan control, humidity sensor automatio
 
 # Turn on bathroom fan when starting shower
 
-In the quiet rush of a morning shower, who remembers the ceiling fan? Yet steam rises, mirrors fog, and moisture settles into walls and grout where it does not belong. This automation remembers for you - the fan awakens as the water runs, drawing humid air away before it can do any harm.
+Remembering to turn on the ceiling fan when taking a shower early in the morning isn't always easy. Automate it to prevent mirror fog, reduce humidity, and improve air quality without thinking about it.
 
 ## Use cases
 

@@ -7,7 +7,7 @@ keywords: thermostat window sensor, stop HVAC windows open, energy saving automa
 
 # Stop thermostat when windows and doors are opened
 
-Fresh air belongs to the season, not to the furnace. When a window opens, the house should know to pause its climate work - letting cool breezes or warm sunshine do what they will, without sending conditioned air streaming uselessly into the world outside.
+Let fresh air into your house without wasting energy heating or cooling the outdoors. This automation pauses your HVAC system when windows or doors are opened.
 
 ## Use cases
 

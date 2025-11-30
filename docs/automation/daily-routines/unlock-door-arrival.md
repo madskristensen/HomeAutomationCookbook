@@ -7,13 +7,13 @@ keywords: auto unlock door, smart lock automation, arrival home automation, auto
 
 # Unlock front door when you come home
 
-Arms full of groceries, a bag slipping from your shoulder, keys buried somewhere at the bottom of it all - and then you reach the door, and it is already unlocked. The house recognized your approach and opened for you, as if it had been waiting. Combined with lights and music that stir to life as you enter, the welcome feels complete.
+Arriving home with arms full of groceries and having the door automatically unlock is a luxury that becomes essential once you experience it. Combined with lights turning on and music starting, it creates a truly welcoming smart home experience.
 
 <div class="info-box">
-  <strong>Why this automation is valuable</strong>
+  <strong>🏡 Why This Automation Is Valuable</strong>
   <ul>
-    <li><strong>Convenience:</strong> No fumbling for keys with groceries. Hands-free entry. Works automatically for everyone with the app.</li>
-    <li><strong>Combined experience:</strong> Door unlocks, lights turn on, music starts playing, thermostat adjusts - perfect welcome home</li>
+    <li><strong>Convenience:</strong> No fumbling for keys with groceries. Hands-free entry. Works automatically for everyone with app.</li>
+    <li><strong>Combined Experience:</strong> Door unlocks, lights turn on, music starts playing, thermostat adjusts - perfect welcome home</li>
     <li><strong>Universal:</strong> Works for all household members - kids arriving from school, partners coming home from work, anyone with location enabled</li>
   </ul>
 </div>

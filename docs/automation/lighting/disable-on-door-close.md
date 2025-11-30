@@ -7,10 +7,10 @@ keywords: disable automation door closed, bathroom door sensor, automation overr
 
 # Disable automations when door is closed
 
-Motion sensors are remarkable, but they have a quiet blind spot: stillness. A person reading in bed, soaking in the tub, or sitting at a desk becomes invisible to them. The lights dim, then vanish, leaving you waving your arms in the dark. A door sensor solves this with elegant logic - if the door is closed, someone is inside, and the lights should stay on.
+Prevent frustration when motion-based lighting turns off while you're sitting still in the bathroom or bedroom. This automation uses a door sensor to intelligently override motion timeout behavior.
 
 <div class="info-box">
-  <strong>The problem: motion sensors cannot detect stationary people</strong>
+  <strong>⚠️ The Problem: Motion Sensors Can't Detect Stationary People</strong>
   <ul>
     <li>Sitting on toilet</li>
     <li>Taking a shower</li>
@@ -21,7 +21,7 @@ Motion sensors are remarkable, but they have a quiet blind spot: stillness. A pe
 </div>
 
 <div class="info-box">
-  <strong>The solution: door sensor override</strong>
+  <strong>✅ The Solution: Door Sensor Override</strong>
   <ul>
     <li><strong>Door closed</strong> = Someone is inside, keep lights on</li>
     <li><strong>Door open</strong> = Room is empty (after motion timeout), safe to turn off lights</li>

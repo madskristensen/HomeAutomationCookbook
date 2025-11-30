@@ -7,27 +7,27 @@ keywords: security automation, smart home security, away lights, fire safety, in
 
 # Security and safety automations
 
-Many people arrive at home automation through the door marked "security" - cameras first, perhaps, then locks and sensors. But the most reliable protection often comes not from expensive hardware, but from thoughtful automations that simulate presence, respond to emergencies, and watch the small things that might otherwise go unnoticed. A home that looks alive is a home that discourages trouble.
+A lot of people start their smart home because they want added security. That's typically done by adding camera systems both indoors and outdoors around the house. However, there are plenty of other automations we can add to help secure the house or make us feel safer.
 
 <div class="category-intro" markdown="1">
 
 ## Why security automation?
 
-**Deterrence** - Make your home look occupied when you are away
+**Deterrence** — Make your home look occupied when you're away
 
-**Emergency response** - Automated actions during fire or break-in
+**Emergency Response** — Automated actions during fire or break-in
 
-**Peace of mind** - Know your home is secure without constant checking
+**Peace of Mind** — Know your home is secure without constant checking
 
-**Family safety** - Protect loved ones with automated safety measures
+**Family Safety** — Protect loved ones with automated safety measures
 
-**Cost effective** - Many security automations use existing smart devices
+**Cost Effective** — Many security automations use existing smart devices
 
-**Always active** - Security automations work 24/7 without human intervention
+**Always Active** — Security automations work 24/7 without human intervention
 
 </div>
 
-## Essential automations
+## 🌟 Essential Automations
 
 <div class="automation-cards">
 
@@ -35,7 +35,7 @@ Many people arrive at home automation through the door marked "security" - camer
 
 ### Away lights to deter intruders
 
-An empty house need not look empty. Strategic lights flicker on and off, mimicking the patterns of an ordinary evening at home.
+Make your home look occupied when you're away with strategic lighting that simulates normal activity.
 
 <span class="card-meta">**Best for:** Deterring break-ins, package theft prevention</span>
 
@@ -47,7 +47,7 @@ An empty house need not look empty. Strategic lights flicker on and off, mimicki
 
 ### Fire safety emergency response
 
-When smoke fills the air, the house springs into action - lights blaze on to guide the way out, doors unlock, and help is summoned.
+Automated response when smoke detector sounds - lights on, doors unlocked, irrigation started.
 
 <span class="card-meta">**Best for:** Family safety, emergency evacuation</span>
 
@@ -59,7 +59,7 @@ When smoke fills the air, the house springs into action - lights blaze on to gui
 
 ### Water leak detection and response
 
-A small drip in the wrong place can become a disaster. Sensors watch the vulnerable spots - under sinks, beside water heaters - and sound the alarm before the damage spreads.
+Detect leaks early and respond automatically with alerts, water shutoff, and damage prevention.
 
 <span class="card-meta">**Best for:** Preventing water damage, protecting your home</span>
 
@@ -71,7 +71,7 @@ A small drip in the wrong place can become a disaster. Sensors watch the vulnera
 
 ### Garage door left open notification
 
-The garage door forgotten at dusk, an invitation to trouble. A gentle reminder arrives before the evening settles in.
+Get alerted when your garage door is left open too long with optional auto-close.
 
 <span class="card-meta">**Best for:** Security, weather protection, peace of mind</span>
 
@@ -83,7 +83,7 @@ The garage door forgotten at dusk, an invitation to trouble. A gentle reminder a
 
 ### Stove or oven left on alert
 
-The burner left on too long, the oven forgotten after dinner - small oversights with serious consequences. A quiet alert intervenes before worry becomes hazard.
+Get notified when your stove or oven is left on too long to prevent fire hazards.
 
 <span class="card-meta">**Best for:** Kitchen safety, peace of mind, elderly care</span>
 
@@ -95,7 +95,7 @@ The burner left on too long, the oven forgotten after dinner - small oversights 
 
 ### Auto-close garage when forgotten
 
-If the garage stands open after everyone has gone, the house takes matters into its own hands - closing the door and sending a photo as proof.
+Automatically close the garage if left open when nobody's home and get a photo confirmation.
 
 <span class="card-meta">**Best for:** Security, peace of mind, forgetfulness</span>
 

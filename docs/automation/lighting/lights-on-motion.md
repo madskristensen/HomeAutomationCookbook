@@ -7,7 +7,7 @@ keywords: motion sensor, automatic lights, smart home lighting, motion detection
 
 # Turn on lights when motion is detected
 
-A motion sensor is a patient witness. It notices the almost imperceptible shift of a door, the soft pad of bare feet on hardwood at 3 a.m., the hurried shuffle of someone who forgot their phone on the counter. For the price of a coffee, it turns those fleeting moments into light that arrives exactly when needed and leaves before it is noticed.
+Automatically turning on lights when motion is detected is one of the most popular and useful smart home automations. It solves the everyday problem of fumbling for light switches in the dark and creates a seamless, effortless lighting experience.
 
 ## Use cases
 
