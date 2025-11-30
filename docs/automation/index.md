@@ -26,43 +26,43 @@ This is the main section with dozens of practical automation recipes for your sm
 <a href="/automation/lighting/" class="category-card">
 <h3>Lighting</h3>
 <p>Automatic lighting that responds to your presence and needs</p>
-<span class="category-count">7 automations</span>
+<span class="category-count">8 automations</span>
 </a>
 
 <a href="/automation/daily-routines/" class="category-card">
 <h3>Daily routines</h3>
 <p>Automate your daily rhythm for effortless living</p>
-<span class="category-count">4 automations</span>
+<span class="category-count">5 automations</span>
 </a>
 
 <a href="/automation/climate/" class="category-card">
 <h3>Climate and comfort</h3>
 <p>Control temperature, humidity, and air quality</p>
-<span class="category-count">7 automations</span>
+<span class="category-count">8 automations</span>
 </a>
 
 <a href="/automation/entertainment/" class="category-card">
 <h3>Entertainment</h3>
 <p>Music and media control for your lifestyle</p>
-<span class="category-count">5 automations</span>
+<span class="category-count">6 automations</span>
 </a>
 
 <a href="/automation/appliances/" class="category-card">
 <h3>Appliances</h3>
 <p>Smart appliance notifications and control</p>
-<span class="category-count">6 automations</span>
+<span class="category-count">7 automations</span>
 </a>
 
 <a href="/automation/security/" class="category-card">
 <h3>Safety and security</h3>
 <p>Protect your home and family</p>
-<span class="category-count">6 automations</span>
+<span class="category-count">7 automations</span>
 </a>
 
 <a href="/automation/notifications/" class="category-card">
 <h3>Notifications and alerts</h3>
 <p>Stay informed without notification fatigue</p>
-<span class="category-count">9 automations</span>
+<span class="category-count">10 automations</span>
 </a>
 
 </div>
