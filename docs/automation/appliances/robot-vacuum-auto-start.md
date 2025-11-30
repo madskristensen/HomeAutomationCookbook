@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Start Robot Vacuum When Everyone Leaves
 description: Automatically start your robot vacuum when the house is empty. Clean while away without lifting a finger.
 keywords: robot vacuum automation, auto start vacuum, vacuum when away, automatic vacuum cleaning, smart vacuum, presence detection vacuum, away mode cleaning

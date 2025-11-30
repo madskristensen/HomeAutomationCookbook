@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Fridge or Freezer Door Left Open Alert - Smart Home Safety
 description: Get notified when your refrigerator or freezer door is left open too long. Prevent food spoilage and save energy with this simple automation.
 keywords: fridge door alert, freezer door notification, refrigerator door left open, food spoilage prevention, smart home appliance monitoring, door sensor fridge

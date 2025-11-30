@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Low Battery Alerts - Smart Home Maintenance Automation
 description: Never be surprised by dead smart home device batteries. Get proactive alerts when device batteries are low to maintain reliable automation.
 keywords: low battery alert, smart home battery, device battery notification, battery monitoring, smart device maintenance, battery replacement reminder

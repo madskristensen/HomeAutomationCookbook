@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Disable Automations When Door is Closed - Smart Override System
 description: Learn how to prevent motion sensor lights from turning off when bathroom or bedroom doors are closed. Complete guide with door sensor override logic.
 keywords: disable automation door closed, bathroom door sensor, automation override, door sensor logic, prevent lights turning off

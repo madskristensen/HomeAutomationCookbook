@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: One-Tap Pool Party Mode - Smart Home Entertainment Automation
 description: Instantly activate pool party mode with one tap or voice command. Colorful lights, music, pool cover opens, and safety features pause automatically.
 keywords: pool party automation, backyard party mode, outdoor entertainment, pool lights, party scene, smart pool, one tap party mode

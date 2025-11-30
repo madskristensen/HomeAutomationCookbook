@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Music Controls on Dashboard - Smart Home Automation
 description: Control music from your dashboard with favorite stations, volume presets, and now playing display. No more yelling at voice assistants.
 keywords: music dashboard, smart home music, dashboard controls, volume presets, music tiles, SharpTools music

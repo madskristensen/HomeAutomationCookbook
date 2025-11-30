@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Appliance Automations
+title: Appliance automations
+description: Get notified when appliances finish their cycles. Washer, dryer, dishwasher, coffee maker, and robot vacuum automations.
 ---
 
 # Appliance automations

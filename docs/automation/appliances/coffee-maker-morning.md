@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Automatic Coffee Maker in the Morning
 description: Wake up to freshly brewed coffee automatically. Smart plug method for starting coffee maker on schedule.
 keywords: coffee maker automation, automatic coffee morning, morning coffee routine, smart plug coffee, scheduled coffee, wake up coffee, automatic brewing

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Control Music with Physical Switch or Button
 description: Use physical switches or buttons to control music playback. Stop yelling at voice assistants with one-touch music control.
 keywords: music button control, physical music switch, smart home music control, button music automation, one touch music, switch control music, instant music playback

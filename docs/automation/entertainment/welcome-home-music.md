@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Play Music When Arriving Home - Welcome Automation
 description: Automatically start music when you arrive home. Create a welcoming atmosphere with automatic audio.
 keywords: welcome home music, arrival music automation, automatic music greeting, home mode music, presence detection music, greeting automation, arrival routine

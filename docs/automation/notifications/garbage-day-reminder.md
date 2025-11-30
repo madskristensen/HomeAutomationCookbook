@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Garbage Day Reminder - Dashboard Automation
 description: Create a dashboard tile that reminds you to take out the trash. The tile turns red until the task is complete.
 keywords: garbage reminder, trash day, dashboard automation, virtual switch, weekly reminder, smart home dashboard

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Dryer Done Notification - Vibration Sensor Method
 description: Get notified when dryer finishes using vibration detection. Clever method using multi-purpose sensor.
 keywords: dryer done alert, vibration sensor dryer, laundry completion alert, dryer automation, vibration detection, appliance monitoring, smart laundry

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Remind Kids to Brush Teeth - Automated Tooth Brushing Detection
 description: Smart home automation to remind kids to brush their teeth if they forget. Uses power monitoring to detect electric toothbrush usage.
 keywords: toothbrush reminder, kids automation, teeth brushing, power monitoring, parenting automation, bedtime routine, smart parenting

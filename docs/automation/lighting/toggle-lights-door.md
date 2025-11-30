@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Toggle Lights When Door Opens - Contact Sensor Automation
 description: Automatically turn on lights when doors open. Complete guide for door sensor lighting automation with examples for closets, rooms, and outdoor areas.
 keywords: door sensor automation, contact sensor lights, automatic closet lights, door activated lighting, smart door sensor

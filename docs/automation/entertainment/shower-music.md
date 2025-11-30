@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Play Music When Shower Starts - Bathroom Automation
 description: Automatically play your favorite music or podcasts when you start the shower. Complete guide for bathroom entertainment automation.
 keywords: shower music automation, bathroom speaker automation, automatic music, shower entertainment, smart bathroom music, bathroom audio control, morning music

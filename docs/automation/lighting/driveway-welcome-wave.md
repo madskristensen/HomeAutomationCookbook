@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Driveway Welcome Wave - Smart Arrival Lighting Automation
 description: Create a stunning ripple lighting effect from street to front door when you arrive home. Step-by-step guide for driveway welcome lighting automation.
 keywords: driveway lights, arrival lighting, welcome home lights, ripple effect lights, smart outdoor lighting, pathway lights automation, garage arrival lights

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Auto-Unlock Front Door When Arriving Home - Smart Lock Automation
 description: Automatically unlock your front door when you arrive home. Complete guide with presence detection, security considerations, and arrival routine integration.
 keywords: auto unlock door, smart lock automation, arrival home automation, automatic door unlock, presence detection unlock, smart door lock

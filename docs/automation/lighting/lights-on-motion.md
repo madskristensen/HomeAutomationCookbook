@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Turn On Lights When Motion is Detected - Smart Home Automation Guide
+layout: automation
+title: Turn on lights when motion is detected - smart home automation guide
 description: Learn how to automatically turn on lights when motion is detected. Step-by-step guide for motion sensor lighting automation with examples for all smart home platforms.
 keywords: motion sensor, automatic lights, smart home lighting, motion detection, home automation, smart lights
 ---
@@ -13,10 +13,10 @@ Automatically turning on lights when motion is detected is one of the most popul
 
 <div class="use-case-grid">
   <div class="use-case-card">
-    <h4>Indoor Automation</h4>
+    <h4>Indoor automation</h4>
     <ul>
-      <li><strong>Nighttime Navigation</strong> - Bathroom lights turn on at low brightness when you get up at night</li>
-      <li><strong>Home Office</strong> - Lights automatically turn on when you enter your workspace</li>
+      <li><strong>Nighttime navigation</strong> - Bathroom lights turn on at low brightness when you get up at night</li>
+      <li><strong>Home office</strong> - Lights automatically turn on when you enter your workspace</li>
       <li><strong>Hallways</strong> - Lights turn on as you move through the house</li>
       <li><strong>Closets</strong> - No more fumbling for switches in dark spaces</li>
     </ul>

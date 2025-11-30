@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Morning Routine Automation - Wake Up Smart Home
 description: Automate your morning routine with lights, coffee, music, and thermostat. Complete guide for morning automation with all major smart home platforms.
 keywords: morning routine automation, wake up automation, smart home morning, automatic morning routine, morning lights automation

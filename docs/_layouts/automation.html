@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{% include recipe-schema.html %}
+{{ content }}
+
+<div class="last-updated">
+  <p><small>Last updated: {{ page.last_modified_at | default: site.time | date: "%B %d, %Y" }}</small></p>
+</div>

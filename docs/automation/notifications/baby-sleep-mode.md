@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Stop Automations When Baby Sleeps - Quiet Mode Automation
 description: Disable automations in baby's room when they're sleeping. Detect sleep using white noise machine or monitor with power monitoring.
 keywords: baby sleep automation, nursery automation, quiet mode, sleep detection, power monitoring, white noise automation, baby monitor detection

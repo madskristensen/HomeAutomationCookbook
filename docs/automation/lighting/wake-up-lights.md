@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Gradual Wake-Up Lighting - Sunrise Simulation Alarm
 description: Wake up gently with gradually brightening lights that simulate sunrise. A natural alternative to jarring alarms that improves your morning routine.
 keywords: wake up lights, sunrise alarm, gradual lighting, morning light automation, sleep automation, circadian lighting, gentle wake up

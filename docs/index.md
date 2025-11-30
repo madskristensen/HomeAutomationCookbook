@@ -9,17 +9,17 @@ description: Transform your house into a truly smart home with tested automation
   <p class="hero-subtitle">Practical smart home automations that save time, energy, and make everyday life effortless.</p>
   <div class="hero-benefits">
     <div class="benefit">
-      <span class="benefit-icon">💡</span>
+      <span class="benefit-icon" role="img" aria-label="Light bulb">💡</span>
       <strong>Lights that just work</strong>
       <span class="benefit-text">— Walk into any room and lights turn on automatically</span>
     </div>
     <div class="benefit">
-      <span class="benefit-icon">🌡️</span>
+      <span class="benefit-icon" role="img" aria-label="Thermometer">🌡️</span>
       <strong>Perfect temperature</strong>
       <span class="benefit-text">— Never waste energy heating the outdoors</span>
     </div>
     <div class="benefit">
-      <span class="benefit-icon">🏠</span>
+      <span class="benefit-icon" role="img" aria-label="House">🏠</span>
       <strong>True automation</strong>
       <span class="benefit-text">— Your home adapts to you, not the other way around</span>
     </div>
@@ -49,12 +49,12 @@ This cookbook is different. Every automation here follows proven principles:
     <h3>Platform agnostic</h3>
     <p>Works with all major platforms:</p>
     <div class="platform-logos">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant" title="Home Assistant" class="platform-logo">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat" title="Hubitat" class="platform-logo">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit" title="Apple HomeKit" class="platform-logo">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings" title="SmartThings" class="platform-logo">
-      <img src="/assets/img/logos/google.png" alt="Google Home" title="Google Home" class="platform-logo">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa" title="Alexa" class="platform-logo">
+      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo" title="Home Assistant" class="platform-logo">
+      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo" title="Hubitat" class="platform-logo">
+      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo" title="Apple HomeKit" class="platform-logo">
+      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo" title="SmartThings" class="platform-logo">
+      <img src="/assets/img/logos/google.png" alt="Google Home logo" title="Google Home" class="platform-logo">
+      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo" title="Amazon Alexa" class="platform-logo">
     </div>
   </div>
   <div class="principle-card">
@@ -147,6 +147,10 @@ This cookbook is different. Every automation here follows proven principles:
   <h2>Join the community</h2>
   <p>Questions? Ideas? Share your own automation recipes or get help troubleshooting.</p>
   <div class="community-links">
+    <a href="https://github.com/madskristensen/HomeAutomationCookbook/discussions" class="community-link">
+      <strong>Discussions</strong>
+      <span>Ask questions and share ideas</span>
+    </a>
     <a href="https://github.com/madskristensen/HomeAutomationCookbook" class="community-link">
       <strong>GitHub</strong>
       <span>Contribute recipes</span>
@@ -155,10 +159,5 @@ This cookbook is different. Every automation here follows proven principles:
       <strong>Resources</strong>
       <span>Recommended communities</span>
     </a>
-    <a href="/getting-started/tips.html" class="community-link">
-      <strong>Tips and tricks</strong>
-      <span>Expert advice</span>
-    </a>
   </div>
 </div>
-

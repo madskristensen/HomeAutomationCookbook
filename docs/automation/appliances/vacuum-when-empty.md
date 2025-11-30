@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Robot Vacuum Only When Empty - Smart Cleaning Automation
 description: Start your robot vacuum only when the house is truly empty and finish before anyone returns. Smart presence-based cleaning automation.
 keywords: robot vacuum automation, smart vacuum scheduling, presence-based cleaning, roomba automation, robot vacuum when away, automatic vacuum, smart home cleaning

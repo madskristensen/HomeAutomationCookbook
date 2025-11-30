@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Bathroom Night Light Automation - Low Brightness Motion Lighting
 description: Create a gentle nighttime bathroom lighting automation that turns on lights at low brightness when motion is detected at night. Perfect for nighttime navigation.
 keywords: bathroom night light, nighttime motion lighting, low brightness automation, smart bathroom lighting, motion sensor dimming, night mode lighting

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Activate Air Purifier When Air Quality Drops - Health Automation
 description: Automatically run your air purifier when indoor air quality drops below healthy levels. Monitor AQI and PM2.5 for cleaner air.
 keywords: air quality automation, air purifier control, AQI sensor automation, PM2.5 automation, indoor air quality, automatic air purifier, health automation, allergy automation

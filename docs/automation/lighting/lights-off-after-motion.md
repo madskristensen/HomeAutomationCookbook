@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Turn Off Lights After Motion Stops - Smart Home Automation
 description: Automatically turn off lights when no motion is detected. Complete guide with timing strategies, conditions, and platform examples for motion-based light control.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically

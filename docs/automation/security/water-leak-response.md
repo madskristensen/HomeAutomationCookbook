@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Water Leak Detection and Response - Smart Home Safety
 description: Detect water leaks early and respond automatically with alerts, water shutoff, and damage prevention. Complete guide for water leak automation.
 keywords: water leak sensor, leak detection, water damage prevention, smart water shutoff, flood sensor, basement flooding, leak alert, water sensor automation

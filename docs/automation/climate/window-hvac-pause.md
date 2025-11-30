@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Pause HVAC When Window Opens - Smart Climate Automation
 description: Automatically pause heating or cooling when a window or door opens. Save energy and get a visual reminder with a blinking light.
 keywords: window open HVAC, pause air conditioning, smart thermostat window, energy saving automation, window sensor thermostat, climate automation, HVAC efficiency

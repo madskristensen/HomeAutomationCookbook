@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Choose the right platform
+description: Compare Home Assistant, Hubitat, HomeKit, SmartThings, Google Home, and Alexa. Find the best smart home platform for your needs.
 ---
 
 # Home automation platforms
@@ -9,7 +10,7 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 
 ## Platform comparison
 
-| Feature | ![Home Assistant](/assets/img/logos/homeassistant.png "Home Assistant") | ![Hubitat](/assets/img/logos/hubitat.png "Hubitat") | ![Apple HomeKit](/assets/img/logos/homekit.png "Apple HomeKit") | ![SmartThings](/assets/img/logos/smartthings.png "SmartThings") | ![Google Home](/assets/img/logos/google.png "Google Home") | ![Alexa](/assets/img/logos/alexa.png "Alexa") |
+| Feature | ![Home Assistant logo](/assets/img/logos/homeassistant.png "Home Assistant") | ![Hubitat logo](/assets/img/logos/hubitat.png "Hubitat") | ![Apple HomeKit logo](/assets/img/logos/homekit.png "Apple HomeKit") | ![SmartThings logo](/assets/img/logos/smartthings.png "SmartThings") | ![Google Home logo](/assets/img/logos/google.png "Google Home") | ![Amazon Alexa logo](/assets/img/logos/alexa.png "Amazon Alexa") |
 |---------|---------------|---------|---------------|-------------|-------------|-------|
 | **Hardware** | Optional | Required | Apple Device | Optional | Optional | Optional |
 | **Difficulty** | Advanced | Intermediate | Easy | Easy | Easy | Easy |
@@ -23,7 +24,7 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 
 <div class="platform-detail-card">
   <div class="platform-detail-header">
-    <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant">
+    <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
     <div>
       <h3>Home Assistant</h3>
       <p class="platform-tagline">Complete control for tech enthusiasts</p>
@@ -62,7 +63,7 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 
 <div class="platform-detail-card">
   <div class="platform-detail-header">
-    <img src="/assets/img/logos/hubitat.png" alt="Hubitat">
+    <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
     <div>
       <h3>Hubitat</h3>
       <p class="platform-tagline">Local control without the complexity</p>
@@ -102,7 +103,7 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 
 <div class="platform-detail-card">
   <div class="platform-detail-header">
-    <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit">
+    <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
     <div>
       <h3>Apple HomeKit</h3>
       <p class="platform-tagline">Seamless for the Apple ecosystem</p>
@@ -142,7 +143,7 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 
 <div class="platform-detail-card">
   <div class="platform-detail-header">
-    <img src="/assets/img/logos/smartthings.png" alt="SmartThings">
+    <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
     <div>
       <h3>Samsung SmartThings</h3>
       <p class="platform-tagline">Beginner-friendly with broad compatibility</p>
@@ -181,7 +182,7 @@ Choosing the right platform is crucial for your smart home success. Here's a det
 
 <div class="platform-detail-card">
   <div class="platform-detail-header">
-    <img src="/assets/img/logos/google.png" alt="Google Home">
+    <img src="/assets/img/logos/google.png" alt="Google Home logo">
     <div>
       <h3>Google Home</h3>
       <p class="platform-tagline">Superior voice control and integration</p>

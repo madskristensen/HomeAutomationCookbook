@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Family Bedtime Wind-Down Automation - Smart Home Sleep Routine
 description: Gradually dim lights, cool the house, and quiet notifications 30 minutes before bedtime. Easy cancel option for flexible sleep schedules.
 keywords: bedtime automation, sleep routine, wind-down mode, evening routine, smart home bedtime, lights dim automation, sleep preparation, family bedtime

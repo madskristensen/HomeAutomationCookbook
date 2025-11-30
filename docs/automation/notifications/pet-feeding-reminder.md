@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Pet Feeding Reminder - Smart Home Pet Care
 description: Never forget to feed your pets with automated feeding reminders. Time-based notifications and smart feeder integration for consistent pet care.
 keywords: pet feeding reminder, dog feeding notification, cat feeding alert, smart pet care, automatic feeding reminder, pet schedule automation

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Resume Thermostat When All Windows Close - Climate Control
 description: Automatically resume heating or cooling when all windows and doors are closed. Smart climate control that adapts to your behavior.
 keywords: thermostat resume automation, windows closed automation, HVAC restart, climate control automation, automatic thermostat, restore climate control, smart HVAC

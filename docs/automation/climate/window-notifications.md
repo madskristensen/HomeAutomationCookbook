@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Smart Window Open/Close Notifications for Energy Savings
 description: Get notified when outdoor temperature is ideal for opening or closing windows. Save energy by using free heating or cooling.
 keywords: window notification automation, energy saving alerts, when to open windows, temperature notification, smart thermostat notifications, free heating, free cooling, natural ventilation

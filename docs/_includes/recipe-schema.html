@@ -1,0 +1,29 @@
+{% if page.layout == 'automation' or page.schema_type == 'recipe' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "HowTo",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.description | default: page.excerpt | strip_html | truncate: 200 | escape }}",
+  "image": "{{ site.url }}/assets/img/icon-512x512.png",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name | default: 'Home Automation Cookbook' }}"
+  },
+  "datePublished": "{{ page.date | default: site.time | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: site.time | date_to_xmlschema }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Home Automation Cookbook",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/img/icon-512x512.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  }
+}
+</script>
+{% endif %}

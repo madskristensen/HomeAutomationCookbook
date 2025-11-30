@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Fake Dog Deterrent - Scare Intruders Away with Dog Sounds
 description: Use dog barking sounds to deter intruders when motion is detected. Smart home security automation for break-in prevention.
 keywords: fake dog, dog barking security, intruder deterrent, motion detection alarm, smart home security, break-in prevention, security automation

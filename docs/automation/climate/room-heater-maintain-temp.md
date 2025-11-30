@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: automation
 title: Maintain Room Temperature with Smart Heater - Zone Heating
 description: Use a smart plug and temperature sensor to maintain comfortable temperature in cold rooms. Complete guide with safety considerations.
 keywords: room heater automation, zone heating automation, space heater control, temperature sensor automation, smart plug heater, supplemental heating, cold room heating

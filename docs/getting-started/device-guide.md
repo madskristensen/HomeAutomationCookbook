@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Device guide
+description: Comprehensive guide to choosing smart home devices. Compare motion sensors, smart bulbs, switches, thermostats, and more.
 ---
 
 # Smart devices guide
