@@ -2968,4 +2968,153 @@ a.community-link:hover,
   }
 }
 
+/* Favorites Feature
+   ========================================================================== */
+
+/* Title wrapper for favorite button */
+.title-with-favorite {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.title-with-favorite h1 {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Favorite button */
+.favorite-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin-top: 0.25rem;
+  background: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+}
+
+.favorite-btn:hover {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.favorite-btn:focus {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+.favorite-btn:active {
+  transform: scale(0.95);
+}
+
+/* Heart icon */
+.favorite-heart {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+/* Outlined heart (not favorited) */
+.favorite-heart::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 50% 50% 0 0;
+  transform-origin: center;
+  clip-path: path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z');
+}
+
+/* Use SVG-like heart shape with CSS */
+.favorite-heart::before {
+  content: '♡';
+  font-size: 24px;
+  line-height: 1;
+  color: #e74c3c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  background: none;
+  border: none;
+  border-radius: 0;
+  clip-path: none;
+}
+
+/* Solid heart (favorited) */
+.favorite-btn.is-favorited .favorite-heart::before {
+  content: '♥';
+  color: #e74c3c;
+}
+
+.favorite-btn.is-favorited {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* Navigation favorite indicator */
+.nav-menu a.is-favorited::after,
+.dropdown-menu a.is-favorited::after,
+.flyout-menu a.is-favorited::after {
+  content: '♥';
+  color: #e74c3c;
+  margin-left: 0.5rem;
+  font-size: 0.85em;
+}
+
+/* Ensure heart doesn't interfere with dropdown arrows */
+.nav-link.is-favorited .dropdown-arrow,
+.dropdown-item a.is-favorited .flyout-arrow {
+  margin-left: 0.25rem;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .favorite-btn {
+    border-color: var(--color-border);
+  }
+  
+  .favorite-btn:hover {
+    border-color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.15);
+  }
+  
+  .favorite-btn.is-favorited {
+    border-color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.15);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 868px) {
+  .title-with-favorite {
+    gap: 0.5rem;
+  }
+  
+  .favorite-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .favorite-heart::before {
+    font-size: 20px;
+  }
+}
+
 
