@@ -266,12 +266,12 @@ Not all home automation requires complex technology. Sometimes the simplest solu
 </div>
 
 <div class="tip-card">
-  <div class="tip-header">
-    <span class="tip-icon" role="img" aria-label="Refresh">��</span>
-    <h2>Create patterns throughout your home</h2>
-  </div>
+<div class="tip-header">
+  <span class="tip-icon" role="img" aria-label="Repeat">🔁</span>
+  <h2>Create patterns throughout your home</h2>
+</div>
   
-  <p class="tip-intro">When you implement a feature in one room, consider making it a pattern throughout the house.</p>
+<p class="tip-intro">When you implement a feature in one room, consider making it a pattern throughout the house.</p>
   
   <div class="pattern-example">
     <h3>Example: Light switch double-tap</h3>
