@@ -1,6 +1,6 @@
 /**
  * Share functionality for Home Automation Cookbook
- * Uses the Web Share API to enable native sharing on supported devices
+ * Uses the Web Share API when available, falls back to copying URL to clipboard
  */
 (function() {
   'use strict';
@@ -13,9 +13,54 @@
   }
 
   /**
+   * Copy text to clipboard with fallback for older browsers
+   */
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    
+    // Fallback for older browsers
+    var textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    return new Promise(function(resolve, reject) {
+      try {
+        document.execCommand('copy');
+        resolve();
+      } catch (err) {
+        reject(err);
+      } finally {
+        textArea.remove();
+      }
+    });
+  }
+
+  /**
+   * Show a brief tooltip/feedback message
+   */
+  function showFeedback(button, message) {
+    var originalText = button.querySelector('.share-text');
+    if (originalText) {
+      var originalContent = originalText.textContent;
+      originalText.textContent = message;
+      setTimeout(function() {
+        originalText.textContent = originalContent;
+      }, 2000);
+    }
+  }
+
+  /**
    * Handle share button click
    */
-  function handleShareClick() {
+  function handleShareClick(event) {
+    var button = event.currentTarget;
     var title = document.title;
     var url = window.location.href;
     
@@ -23,16 +68,28 @@
     var metaDescription = document.querySelector('meta[name="description"]');
     var text = metaDescription ? metaDescription.getAttribute('content') : '';
 
-    navigator.share({
-      title: title,
-      text: text,
-      url: url
-    }).catch(function(err) {
-      // User cancelled or error occurred - silently ignore
-      if (err.name !== 'AbortError') {
-        console.warn('Share failed:', err.message);
-      }
-    });
+    if (isShareSupported()) {
+      navigator.share({
+        title: title,
+        text: text,
+        url: url
+      }).catch(function(err) {
+        // User cancelled or error occurred
+        if (err.name !== 'AbortError') {
+          // Fall back to copying URL
+          copyToClipboard(url).then(function() {
+            showFeedback(button, 'Link copied!');
+          });
+        }
+      });
+    } else {
+      // Fall back to copying URL to clipboard
+      copyToClipboard(url).then(function() {
+        showFeedback(button, 'Link copied!');
+      }).catch(function() {
+        showFeedback(button, 'Copy failed');
+      });
+    }
   }
 
   /**
@@ -64,16 +121,11 @@
    * Initialize share buttons in the article meta section
    */
   function initArticleShareButtons() {
-    if (!isShareSupported()) {
-      return;
-    }
-
-    // Find all article share buttons and enable them
+    // Find all article share buttons and add click handlers
     var articleShareBtns = document.querySelectorAll('.article-share-btn');
-    articleShareBtns.forEach(function(btn) {
-      btn.style.display = 'inline-flex';
-      btn.addEventListener('click', handleShareClick);
-    });
+    for (var i = 0; i < articleShareBtns.length; i++) {
+      articleShareBtns[i].addEventListener('click', handleShareClick);
+    }
   }
 
   /**
