@@ -36,7 +36,7 @@
   }
 
   /**
-   * Move article meta section to after the first h1
+   * Move article meta section to after the title wrapper or h1
    */
   function moveArticleMetaAfterH1() {
     var articleMeta = document.querySelector('.article-meta');
@@ -45,11 +45,19 @@
     var mainContent = document.querySelector('.main-content');
     if (!mainContent) return;
 
-    var h1 = mainContent.querySelector('h1');
-    if (!h1) return;
+    // First, check if there's a title-with-favorite wrapper (created by favorites.js)
+    var titleWrapper = mainContent.querySelector('.title-with-favorite');
+    if (titleWrapper) {
+      // Move article meta after the entire title wrapper
+      titleWrapper.parentNode.insertBefore(articleMeta, titleWrapper.nextSibling);
+      return;
+    }
 
-    // Move the article meta to right after the h1
-    h1.parentNode.insertBefore(articleMeta, h1.nextSibling);
+    // Fallback: move after h1 if no title wrapper exists
+    var h1 = mainContent.querySelector('h1');
+    if (h1) {
+      h1.parentNode.insertBefore(articleMeta, h1.nextSibling);
+    }
   }
 
   /**
@@ -72,8 +80,11 @@
    * Initialize share functionality
    */
   function init() {
-    moveArticleMetaAfterH1();
-    initArticleShareButtons();
+    // Use a small delay to ensure favorites.js has run first
+    setTimeout(function() {
+      moveArticleMetaAfterH1();
+      initArticleShareButtons();
+    }, 0);
   }
 
   // Run on DOMContentLoaded
