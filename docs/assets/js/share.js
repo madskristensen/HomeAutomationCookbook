@@ -32,8 +32,12 @@
     
     return new Promise(function(resolve, reject) {
       try {
-        document.execCommand('copy');
-        resolve();
+        var successful = document.execCommand('copy');
+        if (successful) {
+          resolve();
+        } else {
+          reject(new Error('Copy command failed'));
+        }
       } catch (err) {
         reject(err);
       } finally {
@@ -132,11 +136,34 @@
    * Initialize share functionality
    */
   function init() {
-    // Use a small delay to ensure favorites.js has run first
-    setTimeout(function() {
-      moveArticleMetaAfterH1();
-      initArticleShareButtons();
-    }, 0);
+    // Initialize share buttons first (always works immediately)
+    initArticleShareButtons();
+    
+    // Try to move article meta now
+    moveArticleMetaAfterH1();
+    
+    // If favorites.js hasn't run yet, the title-with-favorite wrapper won't exist.
+    // Use MutationObserver to watch for it being added and reposition if needed.
+    var articleMeta = document.querySelector('.article-meta');
+    if (articleMeta) {
+      var mainContent = document.querySelector('.main-content');
+      if (mainContent) {
+        var observer = new MutationObserver(function(mutations) {
+          var titleWrapper = mainContent.querySelector('.title-with-favorite');
+          if (titleWrapper) {
+            // Wrapper was added, reposition article meta
+            moveArticleMetaAfterH1();
+            observer.disconnect();
+          }
+        });
+        observer.observe(mainContent, { childList: true, subtree: true });
+        
+        // Disconnect after a short time to avoid memory leaks if wrapper never appears
+        setTimeout(function() {
+          observer.disconnect();
+        }, 1000);
+      }
+    }
   }
 
   // Run on DOMContentLoaded
