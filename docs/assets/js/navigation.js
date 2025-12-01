@@ -13,12 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Remove existing class
     flyout.classList.remove('flyout-left');
     
-    // Get position and dimensions
-    const rect = flyout.getBoundingClientRect();
+    // Get parent dropdown item position
+    const itemRect = item.getBoundingClientRect();
     const viewportWidth = window.innerWidth;
     
-    // Check if flyout would overflow viewport (with 20px buffer)
-    if (rect.right > viewportWidth - 20) {
+    // Calculate expected flyout width (min-width from CSS is 240px)
+    const flyoutWidth = 240;
+    
+    // Check if flyout would overflow viewport when opened to the right
+    // itemRect.right is where flyout would start, add flyout width + buffer
+    if (itemRect.right + flyoutWidth + 20 > viewportWidth) {
       flyout.classList.add('flyout-left');
     }
   }
