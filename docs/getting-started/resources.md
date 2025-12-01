@@ -151,30 +151,6 @@ Learn more about home automation through these excellent online resources, commu
 
 <div class="resource-category">
   <div class="resource-category-header">
-    <h2>💬 Discord servers</h2>
-  </div>
-  <div class="resource-items">
-    <div class="resource-item">
-      <div class="resource-subitems">
-        <div class="resource-subitem">
-          <strong><a href="https://discord.gg/home-assistant" target="_blank">Home Assistant Discord</a></strong>
-          <p>Real-time chat support with active community and quick troubleshooting</p>
-        </div>
-        <div class="resource-subitem">
-          <strong><a href="https://discord.gg/smartthings" target="_blank">SmartThings Discord</a></strong>
-          <p>Community support, custom development, and platform updates</p>
-        </div>
-        <div class="resource-subitem">
-          <strong><a href="https://discord.gg/hubitat" target="_blank">Hubitat Discord</a></strong>
-          <p>Real-time help with custom drivers, apps, and local automation</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="resource-category">
-  <div class="resource-category-header">
     <h2>📰 Blogs and news</h2>
   </div>
   <div class="resource-items">
