@@ -749,21 +749,21 @@ a.community-link:hover,
   margin-bottom: 2rem;
   font-size: 0.875rem;
   color: var(--color-text-muted);
-  width: 100%;
-  clear: both;
+  /*width: 100%;*/
+  /*clear: both;*/
 }
 
 .article-share-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.25rem 0.5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--color-text-muted);
-  font-size: 0.875rem;
-  transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: color 0.2s ease;
+    float: right;
 }
 
 .article-share-btn:hover {
@@ -788,11 +788,11 @@ a.community-link:hover,
 
 .article-share-btn .share-text {
   font-weight: 500;
+  float:right;
 }
 
 .last-updated-inline {
-  color: var(--color-text-muted);
-  float:right;
+  color: var(--color-text-muted);  
 }
 
 .last-updated p {
