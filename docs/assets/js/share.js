@@ -1,6 +1,6 @@
 /**
  * Share functionality for Home Automation Cookbook
- * Uses the Web Share API to enable native sharing on supported devices
+ * Uses the Web Share API when available, falls back to copying URL to clipboard
  */
 (function() {
   'use strict';
@@ -13,64 +13,122 @@
   }
 
   /**
-   * Create and insert the share button
+   * Copy text to clipboard with fallback for older browsers
    */
-  function createShareButton() {
-    // Only create button if Web Share API is supported
-    if (!isShareSupported()) {
-      return;
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
     }
+    
+    // Fallback for older browsers
+    var textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    return new Promise(function(resolve, reject) {
+      try {
+        var successful = document.execCommand('copy');
+        if (successful) {
+          resolve();
+        } else {
+          reject(new Error('Copy command failed'));
+        }
+      } catch (err) {
+        reject(err);
+      } finally {
+        textArea.remove();
+      }
+    });
+  }
 
-    // Create the share button
-    var button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'share-btn';
-    button.setAttribute('aria-label', 'Share this page');
-    button.setAttribute('title', 'Share this page');
+  /**
+   * Show a brief tooltip/feedback message
+   */
+  function showFeedback(button, message) {
+    var originalText = button.querySelector('.share-text');
+    if (originalText) {
+      var originalContent = originalText.textContent;
+      originalText.textContent = message;
+      setTimeout(function() {
+        originalText.textContent = originalContent;
+      }, 2000);
+    }
+  }
 
-    // Create share icon (standard share icon - box with arrow pointing up)
-    var icon = document.createElement('span');
-    icon.className = 'share-icon';
-    icon.setAttribute('aria-hidden', 'true');
-    icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>';
-    button.appendChild(icon);
+  /**
+   * Handle share button click
+   */
+  function handleShareClick(event) {
+    var button = event.currentTarget;
+    var title = document.title;
+    var url = window.location.href;
+    
+    // Try to get a description from the page
+    var metaDescription = document.querySelector('meta[name="description"]');
+    var text = metaDescription ? metaDescription.getAttribute('content') : '';
 
-    // Handle click
-    button.addEventListener('click', function() {
-      var title = document.title;
-      var url = window.location.href;
-      
-      // Try to get a description from the page
-      var metaDescription = document.querySelector('meta[name="description"]');
-      var text = metaDescription ? metaDescription.getAttribute('content') : '';
-
+    if (isShareSupported()) {
       navigator.share({
         title: title,
         text: text,
         url: url
       }).catch(function(err) {
-        // User cancelled or error occurred - silently ignore
+        // User cancelled or error occurred
         if (err.name !== 'AbortError') {
-          console.warn('Share failed:', err.message);
+          // Fall back to copying URL
+          copyToClipboard(url).then(function() {
+            showFeedback(button, 'Link copied!');
+          });
         }
       });
-    });
+    } else {
+      // Fall back to copying URL to clipboard
+      copyToClipboard(url).then(function() {
+        showFeedback(button, 'Link copied!');
+      }).catch(function() {
+        showFeedback(button, 'Copy failed');
+      });
+    }
+  }
 
-    // Insert the button in the navigation, before the nav menu
-    var navContainer = document.querySelector('.nav-container');
-    if (navContainer) {
-      var navMenu = navContainer.querySelector('.nav-menu');
-      if (navMenu) {
-        navContainer.insertBefore(button, navMenu);
-      } else {
-        // Fallback: insert after site title
-        var siteTitle = navContainer.querySelector('.site-title');
-        if (siteTitle && siteTitle.nextElementSibling) {
-          navContainer.insertBefore(button, siteTitle.nextElementSibling);
-        } else {
-          navContainer.appendChild(button);
-        }
-      }
+  /**
+   * Move article meta section to after the title wrapper or h1
+   */
+  function moveArticleMetaAfterH1() {
+    var articleMeta = document.querySelector('.article-meta');
+    if (!articleMeta) return;
+
+    var mainContent = document.querySelector('.main-content');
+    if (!mainContent) return;
+
+    // First, check if there's a title-with-favorite wrapper (created by favorites.js)
+    var titleWrapper = mainContent.querySelector('.title-with-favorite');
+    if (titleWrapper) {
+      // Move article meta after the entire title wrapper
+      titleWrapper.parentNode.insertBefore(articleMeta, titleWrapper.nextSibling);
+      return;
+    }
+
+    // Fallback: move after h1 if no title wrapper exists
+    var h1 = mainContent.querySelector('h1');
+    if (h1) {
+      h1.parentNode.insertBefore(articleMeta, h1.nextSibling);
+    }
+  }
+
+  /**
+   * Initialize share buttons in the article meta section
+   */
+  function initArticleShareButtons() {
+    // Find all article share buttons and add click handlers
+    var articleShareBtns = document.querySelectorAll('.article-share-btn');
+    for (var i = 0; i < articleShareBtns.length; i++) {
+      articleShareBtns[i].addEventListener('click', handleShareClick);
     }
   }
 
@@ -78,7 +136,34 @@
    * Initialize share functionality
    */
   function init() {
-    createShareButton();
+    // Initialize share buttons first (always works immediately)
+    initArticleShareButtons();
+    
+    // Try to move article meta now
+    moveArticleMetaAfterH1();
+    
+    // If favorites.js hasn't run yet, the title-with-favorite wrapper won't exist.
+    // Use MutationObserver to watch for it being added and reposition if needed.
+    var articleMeta = document.querySelector('.article-meta');
+    if (articleMeta) {
+      var mainContent = document.querySelector('.main-content');
+      if (mainContent) {
+        var observer = new MutationObserver(function(mutations) {
+          var titleWrapper = mainContent.querySelector('.title-with-favorite');
+          if (titleWrapper) {
+            // Wrapper was added, reposition article meta
+            moveArticleMetaAfterH1();
+            observer.disconnect();
+          }
+        });
+        observer.observe(mainContent, { childList: true, subtree: true });
+        
+        // Disconnect after a short time to avoid memory leaks if wrapper never appears
+        setTimeout(function() {
+          observer.disconnect();
+        }, 1000);
+      }
+    }
   }
 
   // Run on DOMContentLoaded

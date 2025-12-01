@@ -732,7 +732,64 @@ a.community-link:hover,
   color: var(--color-link-hover);
 }
 
-/* Last updated date */
+/* Article meta section (share button + last updated) */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  width: 100%;
+  clear: both;
+}
+
+.article-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.article-share-btn:hover {
+  color: var(--color-link);
+}
+
+.article-share-btn:focus {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+.article-share-btn .share-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-share-btn .share-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.article-share-btn .share-text {
+  font-weight: 500;
+}
+
+.article-meta-separator {
+  color: #ccc;
+}
+
+.last-updated-inline {
+  color: var(--color-text-muted);
+}
+
+/* Legacy last updated date (keep for backward compatibility) */
 .last-updated {
   margin-top: 3rem;
   padding-top: 1.5rem;
@@ -2805,39 +2862,6 @@ a.community-link:hover,
   }
 }
 
-/* Share Button
-   ========================================================================== */
-
-.share-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  margin-right: 1rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-  color: var(--color-text-secondary);
-  flex-shrink: 0;
-  visibility: hidden;
-}
-
-.share-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-}
-
-.share-icon svg {
-  width: 20px;
-  height: 20px;
-}
-
 /* Responsive Design
    ========================================================================== */
 
@@ -3127,18 +3151,5 @@ a.community-link:hover,
         flex-direction: column;
         gap: 1rem;
         text-align: center;
-    }
-
-    .share-btn {
-        width: 32px;
-        height: 32px;
-        margin-right: 0.75rem;
-        order: 2;
-        visibility: visible;
-    }
-
-    .share-icon svg {
-        width: 18px;
-        height: 18px;
     }
 }
