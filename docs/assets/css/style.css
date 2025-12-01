@@ -469,7 +469,7 @@ th {
   display: none;
   position: absolute;
   top: 0;
-  left: 100%;
+  right: auto;
   background: var(--color-bg-page);
   min-width: 240px;
   list-style: none;
@@ -481,7 +481,26 @@ th {
   z-index: 1001;
 }
 
-/* Flip flyout to left side when it would overflow */
+/* Default: flyout on the right */
+@media (min-width: 769px) {
+  .flyout-menu {
+    left: 100%;
+  }
+}
+
+/* On smaller screens or when dropdown is on right side, show flyout on left */
+@media (max-width: 768px) {
+  .flyout-menu {
+    left: auto;
+    right: 100%;
+  }
+  
+  .flyout-arrow {
+    transform: rotate(180deg);
+  }
+}
+
+/* Flip flyout to left side when it would overflow (for larger screens) */
 .flyout-menu.flyout-left {
   left: auto;
   right: 100%;
