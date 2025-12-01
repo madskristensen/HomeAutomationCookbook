@@ -5,23 +5,29 @@ description: Transform your house into a truly smart home with tested automation
 ---
 
 <div class="hero">
-  <h1>Make your home work for you</h1>
+  <h1>Make your smart home work for you</h1>
   <p class="hero-subtitle">Practical smart home automations that save time, energy, and make everyday life effortless.</p>
   <div class="hero-benefits">
     <div class="benefit">
       <span class="benefit-icon" role="img" aria-label="Light bulb">💡</span>
-      <strong>Lights that just work</strong>
-      <span class="benefit-text">— Walk into any room and lights turn on automatically</span>
+      <div>
+        <strong>Lights that just work</strong>
+        <span class="benefit-text">— Walk into any room and lights turn on automatically</span>
+      </div>
     </div>
     <div class="benefit">
       <span class="benefit-icon" role="img" aria-label="Thermometer">🌡️</span>
-      <strong>Perfect temperature</strong>
-      <span class="benefit-text">— Never waste energy heating the outdoors</span>
+      <div>
+        <strong>Perfect temperature</strong>
+        <span class="benefit-text">— Never waste energy heating the outdoors</span>
+      </div>
     </div>
     <div class="benefit">
       <span class="benefit-icon" role="img" aria-label="House">🏠</span>
-      <strong>True automation</strong>
-      <span class="benefit-text">— Your home adapts to you, not the other way around</span>
+      <div>
+        <strong>True automation</strong>
+        <span class="benefit-text">— Your home adapts to you, not the other way around</span>
+      </div>
     </div>
   </div>
   <div class="hero-cta">
