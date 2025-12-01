@@ -10,8 +10,7 @@ layout: default
     </span>
     <span class="share-text">Share</span>
   </button>
-  <span class="article-meta-separator">·</span>
-  <span class="last-updated-inline">Last updated: {{ page.last_modified_at | default: site.time | date: "%B %d, %Y" }}</span>
+  <span class="last-updated-inline" title="Last updated">{{ page.last_modified_at | default: site.time | date: "%B %d, %Y" }}</span>
 </div>
 
 {{ content }}

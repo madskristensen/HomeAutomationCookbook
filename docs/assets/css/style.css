@@ -481,9 +481,21 @@ th {
   z-index: 1001;
 }
 
+/* Flip flyout to left side when it would overflow */
+.flyout-menu.flyout-left {
+  left: auto;
+  right: 100%;
+}
+
 .dropdown-item.has-flyout:hover .flyout-menu,
 .dropdown-item.has-flyout:focus-within .flyout-menu {
   display: block;
+}
+
+/* Flip arrow direction when flyout is on the left */
+.dropdown-item.has-flyout:has(.flyout-menu.flyout-left) .flyout-arrow {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
 }
 
 .flyout-item {
@@ -734,9 +746,6 @@ a.community-link:hover,
 
 /* Article meta section (share button + last updated) */
 .article-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   margin-bottom: 2rem;
   font-size: 0.875rem;
   color: var(--color-text-muted);
@@ -781,20 +790,9 @@ a.community-link:hover,
   font-weight: 500;
 }
 
-.article-meta-separator {
-  color: #ccc;
-}
-
 .last-updated-inline {
   color: var(--color-text-muted);
-}
-
-/* Legacy last updated date (keep for backward compatibility) */
-.last-updated {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--color-border);
-  text-align: right;
+  float:right;
 }
 
 .last-updated p {
