@@ -2667,7 +2667,7 @@ a.community-link:hover,
 .category-count {
   display: inline-block;
   font-size: 0.8rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
