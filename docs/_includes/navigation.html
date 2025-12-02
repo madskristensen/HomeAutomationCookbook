@@ -4,8 +4,8 @@
     
     <ul class="nav-menu" role="menubar">
       {% for item in site.navigation %}
-        <li class="nav-item {% if item.subitems %}has-dropdown{% endif %}" role="none" tabindex="0">
-          <a href="{{ item.url | relative_url }}" class="nav-link" role="menuitem" {% if item.subitems %}aria-haspopup="true" aria-expanded="false"{% endif %}>
+        <li class="nav-item {% if item.subitems %}has-dropdown{% endif %}" role="none">
+          <a href="{{ item.url | relative_url }}" class="nav-link" role="menuitem" tabindex="0" {% if item.subitems %}aria-haspopup="true" aria-expanded="false"{% endif %}>
             {{ item.title }}
             {% if item.subitems %}<span class="dropdown-arrow" aria-hidden="true">▾</span>{% endif %}
           </a>
@@ -13,8 +13,8 @@
           {% if item.subitems %}
           <ul class="dropdown-menu" role="menu" aria-label="{{ item.title }} submenu">
             {% for subitem in item.subitems %}
-              <li class="dropdown-item {% if subitem.subitems %}has-flyout{% endif %}" role="none" tabindex="0">
-                <a href="{{ subitem.url | relative_url }}" role="menuitem" {% if subitem.subitems %}aria-haspopup="true" aria-expanded="false"{% endif %}>
+              <li class="dropdown-item {% if subitem.subitems %}has-flyout{% endif %}" role="none">
+                <a href="{{ subitem.url | relative_url }}" role="menuitem" tabindex="-1" {% if subitem.subitems %}aria-haspopup="true" aria-expanded="false"{% endif %}>
                   {{ subitem.title }}
                   {% if subitem.subitems %}<span class="flyout-arrow" aria-hidden="true">▸</span>{% endif %}
                 </a>
@@ -23,7 +23,7 @@
                 <ul class="flyout-menu" role="menu" aria-label="{{ subitem.title }} submenu">
                   {% for subsubitem in subitem.subitems %}
                     <li class="flyout-item" role="none">
-                      <a href="{{ subsubitem.url | relative_url }}" role="menuitem">{{ subsubitem.title }}</a>
+                      <a href="{{ subsubitem.url | relative_url }}" role="menuitem" tabindex="-1">{{ subsubitem.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>
