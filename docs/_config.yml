@@ -19,7 +19,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: https://www.homeautomationcookbook.com/assets/img/icon-512x512.png
+      image: https://www.homeautomationcookbook.com/assets/img/hero.jpg
 
 twitter:
   card: summary_large_image

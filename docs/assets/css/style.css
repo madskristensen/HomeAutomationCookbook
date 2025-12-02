@@ -559,36 +559,6 @@ th {
 /* Card Components
    ========================================================================== */
 
-/* Shared utility classes for consistent styling */
-.card-base {
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  transition: all 0.2s ease;
-}
-
-.card-base:hover:is(a, .card-hover) {
-  border-color: var(--color-link);
-  box-shadow: var(--shadow-lg);
-}
-
-.card-padding-lg { padding: 2rem; }
-.card-padding-md { padding: 1.75rem; }
-.card-padding-sm { padding: 1.5rem; }
-
-/* Shared grid layouts - use custom properties for flexibility */
-.grid-cards {
-  display: grid;
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.grid-280 { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-.grid-260 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.grid-250 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-.grid-240 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.grid-200 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-
 /* Apply base styles to card components */
 .automation-card,
 .planning-card,
@@ -2029,14 +1999,6 @@ a.community-link:hover,
     background: #3d3520;
   }
 }
-
-/* Checklist section */
-
-/* Removed - consolidated above with benefit-item styles */
-
-/* Resources page styles */
-
-/* Removed - consolidated above with other card styles */
 
 .resource-items {
   display: flex;
