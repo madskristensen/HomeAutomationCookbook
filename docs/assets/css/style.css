@@ -256,8 +256,8 @@ a:hover {
    ========================================================================== */
 
 ul, ol {
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0 0 0 1.5rem;
   line-height: 1.8;
 }
 
@@ -539,7 +539,7 @@ th {
 
 .breadcrumb {
   padding: 1rem 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   font-size: 0.875rem;
 }
 
@@ -647,7 +647,7 @@ a.community-link:hover,
 .card-meta {
   font-size: 0.875rem;
   color: var(--color-text-muted);
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
   display: block;
 }
 
@@ -667,19 +667,18 @@ a.community-link:hover,
 .category-intro {
   background: var(--color-bg-subtle);
   padding: 2rem;
-  margin-bottom: 3rem;
+  margin: 0 0 3rem;
   border-radius: 8px;
 }
 
 .category-intro h2 {
-  margin-top: 0;
+  margin: 0 0 2rem;
   color: var(--color-text-heading);
   font-size: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 .category-intro p {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.7;
   max-width: none;
   display: flex;
@@ -694,22 +693,21 @@ a.community-link:hover,
 
 .category-intro ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
   margin: 1.5rem 0;
 }
 
 .category-intro li {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.7;
-  padding-left: 0;
+  padding: 0;
 }
 
 .section-heading {
   color: var(--color-text-heading);
   border-bottom: 1px solid var(--color-border);
-  padding-bottom: 1rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  padding: 0 0 1rem;
+  margin: 3rem 0 2rem;
   font-weight: 600;
 }
 
@@ -717,8 +715,8 @@ a.community-link:hover,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4rem;
-  padding-top: 2rem;
+  margin: 4rem 0 0;
+  padding: 2rem 0 0;
   border-top: 1px solid var(--color-border);
   gap: 1rem;
 }
@@ -737,11 +735,9 @@ a.community-link:hover,
 
 /* Article meta section (share button + last updated) */
 .article-meta {
-  margin-bottom: 2rem;
+  margin: 0 0 2rem;
   font-size: 0.875rem;
   color: var(--color-text-muted);
-  /*width: 100%;*/
-  /*clear: both;*/
 }
 
 .article-share-btn {
@@ -904,18 +900,18 @@ a.community-link:hover,
 }
 
 .product-item {
-  margin-bottom: 1.25rem;
+  margin: 0 0 1.25rem;
 }
 
 .product-item strong {
   display: block;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem;
   color: var(--color-text-heading);
   font-size: 1.05rem;
 }
 
 .product-details {
-  padding-left: 1rem;
+  padding: 0 0 0 1rem;
   margin: 0.5rem 0 0;
   font-size: 0.95rem;
   color: var(--color-text-tertiary);
@@ -931,20 +927,20 @@ a.community-link:hover,
 
 .info-box strong {
   display: block;
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.75rem;
   color: var(--color-text-heading);
   font-size: 1.05rem;
 }
 
 .info-box ul {
   margin: 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 
 .info-box li {
-  margin-bottom: 0.5rem;
-  padding-left: 1.25rem;
+  margin: 0 0 0.5rem;
+  padding: 0 0 0 1.25rem;
   position: relative;
 }
 
@@ -958,7 +954,7 @@ a.community-link:hover,
 
 .setup-steps {
   margin: 2rem 0;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem 1.5rem;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -974,7 +970,7 @@ a.community-link:hover,
 }
 
 .setup-step {
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem;
   padding: 1.25rem 1.5rem;
   background: var(--color-bg-muted);
   border-radius: 8px;
@@ -1002,12 +998,12 @@ a.community-link:hover,
 
 .setup-step ul {
   margin: 0.5rem 0 0;
-  padding-left: 1.25rem;
+  padding: 0 0 0 1.25rem;
   list-style: none;
 }
 
 .setup-step li {
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem;
 }
 
 .platform-grid {
@@ -1027,8 +1023,8 @@ a.community-link:hover,
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.75rem;
+  margin: 0 0 1rem;
+  padding: 0 0 0.75rem;
   border-bottom: 2px solid var(--color-border);
 }
 
@@ -1064,7 +1060,7 @@ a.community-link:hover,
 }
 
 .platform-card li {
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem;
 }
 
 /* Platform step components for improved visual flow */
@@ -1236,20 +1232,20 @@ a.community-link:hover,
 
 .issue-solutions strong {
   display: block;
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.75rem;
   color: var(--color-text-heading);
   font-weight: 600;
 }
 
 .issue-solutions ul {
   margin: 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 
 .issue-solutions li {
-  margin-bottom: 0.65rem;
-  padding-left: 1.5rem;
+  margin: 0 0 0.65rem;
+  padding: 0 0 0 1.5rem;
   position: relative;
   line-height: 1.6;
   font-size: 0.95rem;
@@ -1362,8 +1358,8 @@ a.community-link:hover,
 }
 
 .warning-card li {
-  margin-bottom: 0.75rem;
-  padding-left: 1.75rem;
+  margin: 0 0 0.75rem;
+  padding: 0 0 0 1.75rem;
   position: relative;
   line-height: 1.6;
   font-size: 0.95rem;
@@ -1412,7 +1408,7 @@ a.community-link:hover,
    ========================================================================== */
 
 .site-footer {
-  margin-top: 4rem;
+  margin: 4rem 0 0;
   padding: 3rem 0 2rem;
   border-top: 1px solid var(--color-border);
   text-align: center;
@@ -2465,12 +2461,10 @@ a.community-link:hover,
 
 .hero h1 {
   font-size: 3.5rem;
-  margin: 0 0 1.5rem;
+  margin: 0 auto 1.5rem;
   color: var(--color-text-heading);
   line-height: 1.15;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
   font-weight: 700;
   letter-spacing: -0.03em;
 }
@@ -2517,7 +2511,7 @@ a.community-link:hover,
   font-weight: 600;
   white-space: nowrap;
   display: block;
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem;
 }
 
 .benefit-text {
@@ -2531,7 +2525,7 @@ a.community-link:hover,
   justify-content: center;
   gap: 1.25rem;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin: 3rem 0 0;
 }
 
 .cta-primary, .cta-secondary {
@@ -2737,7 +2731,7 @@ a.community-link:hover,
   display: block;
   color: var(--color-text-heading);
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem;
 }
 
 .community-link span {
@@ -2771,7 +2765,7 @@ a.community-link:hover,
   width: 44px;
   height: 44px;
   padding: 0;
-  margin-top: 0.25rem;
+  margin: 0.25rem 0 0;
   background: transparent;
   border: 2px solid var(--color-border);
   border-radius: 50%;
