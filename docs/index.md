@@ -9,21 +9,21 @@ description: Transform your house into a truly smart home with tested automation
   <p class="hero-subtitle">Practical smart home automations that save time, energy, and make everyday life effortless.</p>
   <div class="hero-benefits">
     <div class="benefit">
-      <span class="benefit-icon" role="img" aria-label="Light bulb">💡</span>
+      <span class="benefit-icon" aria-hidden="true">•</span>
       <div>
         <strong>Lights that just work</strong>
         <span class="benefit-text">— Walk into any room and lights turn on automatically</span>
       </div>
     </div>
     <div class="benefit">
-      <span class="benefit-icon" role="img" aria-label="Thermometer">🌡️</span>
+      <span class="benefit-icon" aria-hidden="true">•</span>
       <div>
         <strong>Perfect temperature</strong>
         <span class="benefit-text">— Never waste energy heating the outdoors</span>
       </div>
     </div>
     <div class="benefit">
-      <span class="benefit-icon" role="img" aria-label="House">🏠</span>
+      <span class="benefit-icon" aria-hidden="true">•</span>
       <div>
         <strong>True automation</strong>
         <span class="benefit-text">— Your home adapts to you, not the other way around</span>
@@ -34,6 +34,28 @@ description: Transform your house into a truly smart home with tested automation
     <a href="/automation/index.html" class="cta-primary">Browse automations</a>
     <a href="/getting-started/philosophy.html" class="cta-secondary">Learn the principles</a>
   </div>
+</div>
+
+## Start here
+
+<div class="category-grid">
+  <a href="/getting-started/index.html" class="category-card">
+    <h3>New to smart homes</h3>
+    <p>Learn the essentials, pick a platform, and choose your first devices</p>
+    <span class="category-count">Beginner path</span>
+  </a>
+
+  <a href="/getting-started/choose-the-right-platform.html" class="category-card">
+    <h3>Choosing a platform</h3>
+    <p>Compare Home Assistant, Hubitat, HomeKit, SmartThings, Google, and Alexa</p>
+    <span class="category-count">Platform guide</span>
+  </a>
+
+  <a href="/automation/lighting/lights-on-motion.html" class="category-card">
+    <h3>Build your first automation</h3>
+    <p>Start with motion lighting - quick to set up and instantly useful</p>
+    <span class="category-count">First recipe</span>
+  </a>
 </div>
 
 ## Why this site exists

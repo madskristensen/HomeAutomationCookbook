@@ -50,10 +50,10 @@
   --color-info-border: #ffc107;
 
   /* Getting started box colors */
-  --color-cta-box-bg-start: #f0f7ff;
-  --color-cta-box-bg-end: #e6f2ff;
-  --color-cta-box-border: #cce5ff;
-  --color-cta-box-text: #333;
+  --color-cta-box-bg-start: #f3f6f8;
+  --color-cta-box-bg-end: #e9eff4;
+  --color-cta-box-border: #d5dfe7;
+  --color-cta-box-text: #2b3742;
 
   /* Hero gradient */
   --color-hero-bg-start: #f8f9fa;
@@ -367,18 +367,13 @@ th {
   color: var(--color-link);
 }
 
-.nav-toggle-checkbox {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-  width: 0;
-  height: 0;
-}
-
 .nav-toggle {
   display: none;
   cursor: pointer;
   padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
 }
 
 .nav-toggle span {
@@ -388,6 +383,10 @@ th {
   background: var(--color-text-heading);
   margin: 5px 0;
   transition: 0.3s;
+}
+
+.nav-toggle:focus-visible {
+  border-color: var(--color-link);
 }
 
 .nav-menu {
@@ -2139,6 +2138,29 @@ a.community-link:hover,
 
 /* Removed - consolidated above with other card styles */
 
+.platform-table-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 88px;
+}
+
+.platform-table-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.platform-table-name {
+  display: block;
+  font-size: 0.78rem;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-text-secondary);
+  white-space: normal;
+}
+
 .platform-detail-header img {
   width: 48px;
   height: 48px;
@@ -3021,6 +3043,20 @@ a.community-link:hover,
         padding: 1.5rem;
     }
 
+      .platform-table-header {
+        min-width: 72px;
+        gap: 0.3rem;
+      }
+
+      .platform-table-logo {
+        width: 22px;
+        height: 22px;
+      }
+
+      .platform-table-name {
+        font-size: 0.7rem;
+      }
+
         .platform-detail-header img {
             block-size: 40px;
             inline-size: 40px;
@@ -3145,7 +3181,7 @@ a.community-link:hover,
         -webkit-overflow-scrolling: touch;
     }
 
-    .nav-container:has(.nav-toggle-checkbox:checked) .nav-menu {
+    .nav-container.nav-open .nav-menu {
         display: flex;
     }
 

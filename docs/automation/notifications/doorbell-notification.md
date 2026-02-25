@@ -57,7 +57,7 @@ If you don't want a smart doorbell, but still want a notification when someone r
 <div class="info-box">
   <strong>🔧 How It Works</strong>
   <p>The contact sensor is wired in parallel with your doorbell chime. When someone presses the doorbell button, the sensor detects the circuit change and triggers your automation. The existing doorbell continues to work normally.</p>
-  <p><strong>Video Tutorial:</strong> This one is best explained if you watch a video on how to do it. There are several available online. Here is one that I like: <a href="https://www.youtube.com/watch?v=2IsiWG-BOTs" target="_blank">https://www.youtube.com/watch?v=2IsiWG-BOTs</a></p>
+  <p><strong>Video Tutorial:</strong> This one is best explained if you watch a video on how to do it. There are several available online. Here is one that I like: <a href="https://www.youtube.com/watch?v=2IsiWG-BOTs" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=2IsiWG-BOTs</a></p>
 </div>
 
 ## Basic automation setup

@@ -2,7 +2,7 @@
   <div class="nav-container">
     <a href="{{ '/' | relative_url }}" class="site-title" aria-label="{{ site.title }} - Home">{{ site.title }}</a>
     
-    <ul class="nav-menu" role="menubar">
+    <ul class="nav-menu" id="main-nav-menu" role="menubar">
       {% for item in site.navigation %}
         <li class="nav-item {% if item.subitems %}has-dropdown{% endif %}" role="none">
           <a href="{{ item.url | relative_url }}" class="nav-link" role="menuitem" tabindex="0" {% if item.subitems %}aria-haspopup="true" aria-expanded="false"{% endif %}>
@@ -36,11 +36,10 @@
       {% endfor %}
     </ul>
     
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" aria-label="Toggle navigation menu">
-    <label for="nav-toggle" class="nav-toggle">
+    <button type="button" class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="main-nav-menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
-    </label>
+    </button>
   </div>
 </nav>

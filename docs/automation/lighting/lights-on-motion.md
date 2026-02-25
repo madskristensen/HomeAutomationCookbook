@@ -22,10 +22,10 @@ Automatically turning on lights when motion is detected is one of the most popul
     </ul>
   </div>
   <div class="use-case-card">
-    <h4>Outdoor Automation</h4>
+    <h4>Outdoor automation</h4>
     <ul>
-      <li><strong>Garden Shed</strong> - Motion sensor triggers light when you enter</li>
-      <li><strong>Porch Light</strong> - Automatically lights up for guests and delivery drivers</li>
+      <li><strong>Garden shed</strong> - Motion sensor triggers light when you enter</li>
+      <li><strong>Porch light</strong> - Automatically lights up for guests and delivery drivers</li>
     </ul>
   </div>
 </div>
@@ -33,7 +33,7 @@ Automatically turning on lights when motion is detected is one of the most popul
 ## Products needed
 
 <div class="product-section">
-  <h4>Essential Equipment</h4>
+  <h4>Essential equipment</h4>
   
   <div class="product-list">
     <div class="product-item">

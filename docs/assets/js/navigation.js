@@ -4,7 +4,39 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+  const navContainer = document.querySelector('.nav-container');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
   const flyoutItems = document.querySelectorAll('.dropdown-item.has-flyout');
+
+  if (navMenu) {
+    navMenu.id = 'main-nav-menu';
+  }
+
+  function closeMobileNav() {
+    if (!navContainer || !navToggle) return;
+    navContainer.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (navContainer && navToggle) {
+    navToggle.addEventListener('click', function() {
+      const isOpen = navContainer.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeMobileNav();
+      }
+    });
+
+    document.addEventListener('click', function(event) {
+      if (window.innerWidth <= 768 && !navContainer.contains(event.target)) {
+        closeMobileNav();
+      }
+    });
+  }
   
   function positionFlyout(item) {
     const flyout = item.querySelector('.flyout-menu');
@@ -44,6 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
+      if (window.innerWidth > 768) {
+        closeMobileNav();
+      }
+
       flyoutItems.forEach(item => {
         if (item.matches(':hover') || item.querySelector(':focus')) {
           positionFlyout(item);

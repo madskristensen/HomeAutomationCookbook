@@ -6,7 +6,7 @@ This repository contains the source for the Home Automation Cookbook website, bu
 
 ## 🌐 Live Site
 
-Visit the live site at: [Your Custom Domain] (Update CNAME file)
+Visit the live site at: https://www.homeautomationcookbook.com
 
 ## 📚 About
 
@@ -30,22 +30,22 @@ The Home Automation Cookbook is a community-driven documentation project that he
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/HomeAutomationCookbook.git
+   git clone https://github.com/madskristensen/HomeAutomationCookbook.git
    cd HomeAutomationCookbook
    ```
 
 2. Install dependencies:
    ```bash
-   cd docs
+   bundle config set --local path 'vendor/bundle'
    bundle install
    ```
 
 3. Run the local server:
    ```bash
-   bundle exec jekyll serve
+   bundle exec jekyll serve --source docs --port 4001 --host 0.0.0.0
    ```
 
-4. Open your browser to `http://localhost:4000`
+4. Open your browser to `http://localhost:4001`
 
 ### Quick Run Script
 
@@ -67,9 +67,15 @@ We welcome contributions! Here's how you can help:
 
 - `docs/` - Main documentation folder
   - `getting-started/` - Beginner guides
-  - `platforms/` - Platform comparisons
-  - `devices/` - Device reviews and recommendations
   - `automation/` - Automation recipes
+      - `lighting/`
+      - `daily-routines/`
+      - `climate/`
+      - `entertainment/`
+      - `appliances/`
+      - `security/`
+      - `notifications/`
+   - `faq/` - Frequently asked questions
 
 ### Writing Guidelines
 
@@ -113,4 +119,4 @@ Questions? Open an issue or start a discussion!
 
 ---
 
-Built with ❤️ by the home automation community
+Built by the home automation community
