@@ -3,7 +3,7 @@
  * Prevents flyout menus from extending beyond viewport on smaller screens
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+function initializeNavigation() {
   const navContainer = document.querySelector('.nav-container');
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -168,4 +168,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }, 250);
   });
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeNavigation);
+} else {
+  initializeNavigation();
+}
