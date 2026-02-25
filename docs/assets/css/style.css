@@ -232,6 +232,18 @@ blockquote {
   color: var(--color-text-secondary);
 }
 
+.last-reviewed {
+  display: inline-block;
+  margin: 1.25rem 0 2rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-bg-muted);
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
 hr {
   margin: 4rem 0;
   border: none;
@@ -2161,13 +2173,6 @@ a.community-link:hover,
   white-space: normal;
 }
 
-.platform-detail-header img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
 .platform-tagline {
   margin: 0;
   font-size: 0.95rem;
@@ -3197,7 +3202,8 @@ a.community-link:hover,
         border: none;
     }
 
-    .nav-item.has-dropdown:focus-within .dropdown-menu {
+    .nav-item.has-dropdown:focus-within .dropdown-menu,
+    .nav-item.has-dropdown.is-open .dropdown-menu {
         display: block;
     }
 
@@ -3219,7 +3225,8 @@ a.community-link:hover,
         border: none;
     }
 
-    .dropdown-item.has-flyout:focus-within .flyout-menu {
+    .dropdown-item.has-flyout:focus-within .flyout-menu,
+    .dropdown-item.has-flyout.is-open .flyout-menu {
         display: block;
     }
 

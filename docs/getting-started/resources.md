@@ -8,7 +8,7 @@ description: Curated list of the best home automation resources, communities, Yo
 
 Learn more about home automation through these excellent online resources, communities, and channels.
 
-> Last reviewed: February 2026
+<p class="last-reviewed">Last reviewed: February 2026</p>
 
 <div class="resources-grid">
 

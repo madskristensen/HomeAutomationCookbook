@@ -8,6 +8,8 @@ description: Dozens of tested smart home automation recipes that work with Home 
 
 This is the main section with dozens of practical automation recipes for your smart home. These automations have been tested and refined over years to be as accurate and easy to set up as possible.
 
+<p class="last-reviewed">Last reviewed: February 2026</p>
+
 <div class="platform-compatibility">
   <p><strong>Platform agnostic:</strong> All recipes work with</p>
   <div class="platform-logos">

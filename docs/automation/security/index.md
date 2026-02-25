@@ -9,6 +9,8 @@ keywords: security automation, smart home security, away lights, fire safety, in
 
 A lot of people start their smart home because they want added security. That's typically done by adding camera systems both indoors and outdoors around the house. However, there are plenty of other automations we can add to help secure the house or make us feel safer.
 
+<p class="last-reviewed">Last reviewed: February 2026</p>
+
 <div class="category-intro" markdown="1">
 
 ## Why security automation?

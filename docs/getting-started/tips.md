@@ -8,6 +8,8 @@ description: Practical tips and tricks for smarter home automation. Learn from r
 
 Not all home automation requires complex technology. Sometimes the simplest solutions are the most effective.
 
+<p class="last-reviewed">Last reviewed: February 2026</p>
+
 <div class="tips-grid">
 
 <div class="tip-card">

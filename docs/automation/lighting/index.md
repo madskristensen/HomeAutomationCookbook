@@ -9,6 +9,8 @@ keywords: smart lighting automation, motion sensor lights, automatic lighting, d
 
 Lighting is often the first area people automate in their smart home - and for good reason. Automatic lighting creates a magical experience where lights respond to your presence and needs without you ever touching a switch.
 
+<p class="last-reviewed">Last reviewed: February 2026</p>
+
 <div class="category-intro" markdown="1">
 
 ## Why automate lighting?

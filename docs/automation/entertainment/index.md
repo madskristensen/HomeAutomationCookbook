@@ -9,6 +9,8 @@ keywords: entertainment automation, smart music, TV automation, media control, s
 
 Music and entertainment control automations make your smart home feel more alive and responsive. From automatic shower music to movie mode lighting, these automations enhance your daily routines.
 
+<p class="last-reviewed">Last reviewed: February 2026</p>
+
 <div class="category-intro" markdown="1">
 
 ## Why entertainment automation?

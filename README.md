@@ -4,11 +4,11 @@
 
 This repository contains the source for the Home Automation Cookbook website, built with Jekyll and hosted on GitHub Pages.
 
-## 🌐 Live Site
+## Live site
 
 Visit the live site at: https://www.homeautomationcookbook.com
 
-## 📚 About
+## About
 
 The Home Automation Cookbook is a community-driven documentation project that helps people:
 
@@ -18,7 +18,7 @@ The Home Automation Cookbook is a community-driven documentation project that he
 - Secure their smart homes
 - Troubleshoot common issues
 
-## 🛠️ Development
+## Development
 
 ### Prerequisites
 
@@ -54,7 +54,23 @@ For convenience, you can use the provided batch file:
 run-site.cmd
 ```
 
-## 📝 Contributing
+### Troubleshooting local development
+
+- Port conflict (wrong site appears):
+   ```powershell
+   Get-NetTCPConnection -LocalPort 4001 | Select-Object LocalAddress, LocalPort, State, OwningProcess
+   ```
+- Use a different port for one run:
+   ```bash
+   bundle exec jekyll serve --source docs --port 4002 --host 0.0.0.0
+   ```
+- Generated folders are ignored by Git: `_site/` and `docs/_site/`
+- If those folders were tracked previously, untrack them once:
+   ```bash
+   git rm -r --cached _site docs/_site
+   ```
+
+## Contributing
 
 We welcome contributions! Here's how you can help:
 
@@ -85,7 +101,7 @@ We welcome contributions! Here's how you can help:
 - Follow the existing document structure
 - Test your changes locally before submitting
 
-## 🚀 Deployment
+## Deployment
 
 The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch via GitHub Actions.
 
@@ -103,17 +119,17 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
    - Type: `CNAME` → Points to `yourusername.github.io`
 3. Enable "Enforce HTTPS" in repository settings
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Community
+## Community
 
 - **Issues**: Report bugs or request features
 - **Discussions**: Share ideas and get help
 - **Pull Requests**: Contribute directly
 
-## 📧 Contact
+## Contact
 
 Questions? Open an issue or start a discussion!
 
