@@ -8,15 +8,15 @@ description: A job-first checklist for choosing family-friendly smart home gear 
 
 Choose gear by the job it has to do. Start with one reliable option, keep physical controls usable, and add complexity only when the room needs it.
 
-The owner has bought and used the products named below. Links go directly to Amazon product pages without affiliate tracking. If that changes, see the [disclosure](/disclosure.html) before following a product link.
+I've bought and used the products named below. Links go directly to Amazon product pages without affiliate tracking. If that changes, see the [disclosure](/disclosure.html) before following a product link.
 
 ## Occupancy and motion
 
 | Job | Good enough | Never think about it | Local or cloud | Guest-proof note |
 |---|---|---|---|---|
-| Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) - owner favorite for fast reactions. | Local with a compatible Zigbee hub | Put it where it sees the doorway before someone reaches the switch. |
+| Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) - my favorite for fast reactions. | Local with a compatible Zigbee hub | Put it where it sees the doorway before someone reaches the switch. |
 | Detect a person who is still | [mmWave presence sensor without integrated PIR](https://www.amazon.com/dp/B0GYJ3LQ5W) | [mmWave presence sensor with integrated PIR](https://www.amazon.com/dp/B095TZTGNB) | Prefer local | Use this for showers, reading, or other rooms where a PIR can time out while someone is still. |
-| Detect bathroom motion with humidity, temperature, and light | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | TODO(owner): preferred bathroom multisensor | Local with a compatible Z-Wave hub | Use it where the extra sensor readings are useful, not where the fastest motion response matters most. |
+| Detect bathroom motion with humidity, temperature, and light | [Lower-cost bathroom multisensor](https://www.amazon.com/dp/B0D47WR1S2) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | Verify compatibility for the lower-cost option; Zooz is local with a compatible Z-Wave hub. | Use it where the extra sensor readings are useful, not where the fastest motion response matters most. |
 
 A PIR sensor is often enough for halls and closets. Use an mmWave presence sensor where someone may be still.
 

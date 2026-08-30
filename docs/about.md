@@ -22,7 +22,7 @@ An automation is not finished because it worked once for the person who built it
 
 ## What is in the house
 
-TODO(owner): List the hubs, platforms, and devices currently used in the home. Do not imply that a platform or device was personally tested until this is confirmed.
+TODO: List the hubs, platforms, and devices currently used in the home. Do not imply that a platform or device was personally tested until this is confirmed.
 
 ## What this site is not
 

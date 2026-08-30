@@ -31,7 +31,7 @@ Use arrival to restore Home mode. Keep entry access deliberate unless the househ
 
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
-| Detect the first return home | TODO(owner): verified household presence source | TODO(owner): verified presence plus a physical arrival signal | Require a real Away-to-Home transition. |
+| Detect the first return home | TODO: verified household presence source | TODO: verified presence plus a physical arrival signal | Require a real Away-to-Home transition. |
 | Light the entry path | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Keep the physical paddle usable. |
 | Restore heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | The thermostat's safe limits remain authoritative. |
 
@@ -60,7 +60,7 @@ BUT do not unlock a door from phone location alone</div>
 3. Add entry lighting next because it is visible and easy to reverse.
 4. Restore climate only within the thermostat's independent safe limits.
 5. Run whole-house actions only for the first arrival. Later arrivals should not restart music, change temperatures, or disturb people already home.
-6. Keep door access manual unless a separate, owner-verified lock feature has its own safeguards and audit trail.
+6. Keep door access manual unless I have verified a separate lock feature with its own safeguards and audit trail.
 
 ## Safe first actions
 

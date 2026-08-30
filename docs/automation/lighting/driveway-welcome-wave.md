@@ -17,7 +17,7 @@ faqs:
 
 After dark, confirm that someone has reached the entry before turning on the porch or path light. Keep the lock, garage, alarm, and every manual light control separate.
 
-**Best for:** A home with a reliable Away state, an owner-used exterior or entry light control, and a physical signal that confirms someone reached the property.
+**Best for:** A home with a reliable Away state, an exterior or entry light control I have used, and a physical signal that confirms someone reached the property.
 
 **Not for:** A phone geofence by itself, an unverified driveway sensor, theatrical multi-zone effects that have not been installed, or any automatic unlocking or garage movement.
 
@@ -25,7 +25,7 @@ After dark, confirm that someone has reached the entry before turning on the por
 
 Arrival lighting should make the final steps to the door easier, not advertise every location wobble. Phone presence can suggest that someone is approaching, but a door contact, deliberate garage operation, keypad event, or other tested property signal is stronger evidence that the arrival is real.
 
-The old version of this page described a multi-zone driveway wave without verified hardware. This recipe uses owner-used lighting and contact hardware instead. Add more zones only after each physical light and trigger exists and works independently.
+The old version of this page described a multi-zone driveway wave without verified hardware. This recipe uses lighting and contact hardware I have used instead. Add more zones only after each physical light and trigger exists and works independently.
 
 ## What I used
 
@@ -34,7 +34,7 @@ The old version of this page described a multi-zone driveway wave without verifi
 | Control plug-in exterior lighting | [Lower-cost outdoor smart plug](https://www.amazon.com/dp/B07X52W1J8) | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | Use only with a suitable outdoor receptacle, enclosure, and lighting load. |
 | Switch a fixed entry light | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | The wall paddle remains the normal control. |
 | Confirm entry-door activity | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | A door event confirms activity; it does not prove identity or unlock anything. |
-| Suggest that someone is approaching | TODO(owner): verified household presence source | TODO(owner): verified presence plus a separate property signal | Use phone location only to open a short pending-arrival window. |
+| Suggest that someone is approaching | TODO: verified household presence source | TODO: verified presence plus a separate property signal | Use phone location only to open a short pending-arrival window. |
 
 See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
@@ -61,7 +61,7 @@ BUT never unlock a door or move a garage</div>
 ## Setup notes
 
 1. Complete the [safe arrival routine](/automation/daily-routines/unlock-door-arrival.html) and use its Home, Away, and pending-arrival states.
-2. Start with one owner-used porch or entry light, not a sequence of imagined zones.
+2. Start with one porch or entry light I have used, not a sequence of imagined zones.
 3. Choose a physical confirmation signal that occurs reliably during real arrivals.
 4. Log candidate arrivals and confirmation timing before controlling a light.
 5. Require both darkness and a real Away-to-arrival transition.

@@ -342,7 +342,7 @@ THEN send notification "Stove may be left on unattended"</div>
     <p>Know when guests use the kitchen:</p>
     <ul>
       <li>Trigger: Stove turns on while in vacation mode</li>
-      <li>Action: Alert homeowner</li>
+      <li>Action: Alert the household</li>
       <li>Useful for Airbnb hosts or house sitters</li>
     </ul>
   </div>

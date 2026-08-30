@@ -2,6 +2,7 @@
 - Use sentence case for titles and headings instead of Title Case.
 - Don't use em-dashes when writing sentences; use hyphens surrounded by spaces instead.
 - Don't use emojis in the text.
+- In public content, describe the author's experience with "I" and "my." Never call the author "the owner."
 
 # Site structure
 - This is a Jekyll static site for homeautomationcookbook.com
@@ -42,7 +43,7 @@ When creating or updating an automation detail page, use this structure:
 - FAQ
 - Related recipes
 
-Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, code blocks, logos, or capability claims unless the owner has personally verified them and they materially change the recipe.
+Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, code blocks, logos, or capability claims unless Mads has personally verified them and they materially change the recipe.
 
 # Navigation
 - Main nav in `docs/_includes/navigation.html`
@@ -87,7 +88,7 @@ bundle exec jekyll serve --source docs --port 4000 --host 0.0.0.0
 
 # Platform-specific content
 - Keep the core recipe platform-neutral.
-- Only add a platform-specific note when the owner has personally verified a limitation or workaround that materially changes the outcome.
+- Only add a platform-specific note when Mads has personally verified a limitation or workaround that materially changes the outcome.
 - Never create unverified platform code, UI steps, or capability claims.
 
 # Automation categories

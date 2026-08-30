@@ -10,7 +10,7 @@ faqs:
   - question: How should the routine handle different wake times?
     answer: Give each person or schedule its own trigger and room scope. Shared actions should wait until the household agrees the day has started.
   - question: Should the routine start a coffee maker automatically?
-    answer: Only if the appliance is designed to resume safely when power is applied and the owner has verified that exact use. Otherwise leave brewing manual.
+    answer: Only if the appliance is designed to resume safely when power is applied and I have verified that exact use. Otherwise leave brewing manual.
 ---
 
 # Start a quiet good-morning routine
@@ -31,7 +31,7 @@ An intentional trigger gives the first awake person control. Local motion lighti
 
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
-| Start the routine | A "Good morning" voice phrase or manual scene control | TODO(owner): preferred bedside button | The trigger should be intentional and easy to cancel. |
+| Start the routine | A "Good morning" voice phrase or manual scene control | TODO: preferred bedside button | The trigger should be intentional and easy to cancel. |
 | Light the morning path | [Lower-cost smart dimmer](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Verify hub compatibility. Keep every wall paddle working normally. |
 | Restore approved comfort | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Someone can always change the temperature at the thermostat. |
 
@@ -126,7 +126,7 @@ Give each person or schedule its own trigger and room scope. Shared actions shou
 
 ### Should the routine start a coffee maker automatically?
 
-Only if the appliance is designed to resume safely when power is applied and the owner has verified that exact use. Otherwise leave brewing manual.
+Only if the appliance is designed to resume safely when power is applied and I have verified that exact use. Otherwise leave brewing manual.
 
 ## Related recipes
 
