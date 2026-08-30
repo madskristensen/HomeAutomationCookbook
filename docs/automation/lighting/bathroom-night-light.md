@@ -1,13 +1,31 @@
 ---
 layout: automation
-title: Bathroom Night Light Automation - Low Brightness Motion Lighting
-description: Create a gentle nighttime bathroom lighting automation that turns on lights at low brightness when motion is detected at night. Perfect for nighttime navigation.
+title: Turn on a dim bathroom light at night (without waking everyone)
+description: A local-first bathroom night-light recipe that uses motion, low brightness, and a reliable wall-switch fallback.
 keywords: bathroom night light, nighttime motion lighting, low brightness automation, smart bathroom lighting, motion sensor dimming, night mode lighting
+last_modified_at: 2026-08-30
+faqs:
+  - question: What brightness should a bathroom night light use?
+    answer: Start at 10 percent, then test it in the dark. Raise it only enough for safe navigation.
+  - question: Why does a bathroom motion light turn off during a shower?
+    answer: A PIR sensor can miss someone who is still or hidden by steam and a shower curtain. Use a longer timeout or a presence sensor.
+  - question: Can HomeKit make a dim bathroom night light?
+    answer: HomeKit can turn a light on at a selected brightness during a time window, but more complex occupancy and light-level logic may need a bridge or another automation platform.
 ---
 
-# Turn on bathroom light at low dim at night
+# Turn on a dim bathroom light at night
 
-This simple yet valuable automation provides gentle lighting for nighttime bathroom visits. It prevents harsh bright lights from disrupting your sleep cycle while providing enough illumination for safe navigation.
+Walk in half asleep, get enough light to see, and do not wake the house. If it fails, the wall switch still works.
+
+**Best for:** Bathrooms with a dimmable light and a sensor placed near the entry.
+
+**Not for:** A bathroom where a short PIR timeout would turn lights off during a shower. Start with a longer timeout or use a sensor that can detect occupancy while someone is still.
+
+<p class="last-reviewed">Last reviewed: August 2026</p>
+
+## Why this exists
+
+Bright bathroom light at 2am is miserable. This recipe uses only enough light to navigate safely, then hands the shutoff to the paired motion-lighting recipe. It should work without explaining a special night mode to a guest.
 
 <div class="info-box">
   <strong>🌙 Why This Automation Matters</strong>
@@ -38,88 +56,26 @@ This simple yet valuable automation provides gentle lighting for nighttime bathr
   </div>
 </div>
 
-## Products needed
+## What I used
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Motion Sensor</strong>
-      <div class="product-details">
-        Battery-powered (easier installation) or Wired (no battery changes needed)<br>
-        Placement: Bathroom entry or hallway
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Light Switch or Bulb</strong>
-      <div class="product-details">
-        Must support dimming • Check minimum brightness (some only go to 10%)<br>
-        Color temperature control helpful (warm white better at night)
-      </div>
-    </div>
-  </div>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect bathroom motion, humidity, temperature, and light | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | TODO(owner): preferred bathroom multisensor | Use the extra readings where they solve a real bathroom problem. |
+| Dim a fixed light | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | TODO(owner): preferred premium dimmer | The physical paddle must remain usable. |
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Lux Sensor</strong>
-      <div class="product-details">
-        Only activate if dark enough
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Multiple Motion Sensors</strong>
-      <div class="product-details">
-        For larger spaces
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Color Bulbs</strong>
-      <div class="product-details">
-        Can use red/amber for minimal sleep disruption
-      </div>
-    </div>
-  </div>
-</div>
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-## Basic automation setup
+## Logic
 
-<div class="automation-example">IF motion detected in bathroom
-AND time between 10:00 PM - 6:00 AM
-THEN turn on light to 10% warm white</div>
+- **Trigger:** Bathroom or entry motion is detected.
+- **Conditions:** It is within your night window, and optionally the room is dark enough.
+- **Action:** Turn on the bathroom light at 10 percent. Set a warm color temperature only if the light supports it.
+- **Wait / timeout:** The paired [turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html) recipe owns the timeout. Start at 10 minutes for a shower bathroom.
+- **Stop condition:** New motion cancels the shutoff. A manual wall-switch change wins.
+- **Manual override:** The wall switch still wins.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Motion detected by sensor</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <ul>
-      <li>Home is in "Night Mode" OR time is between 10 PM and 6 AM</li>
-      <li>Room is dark (lux sensor below threshold - optional)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on light switch/bulb at 10% brightness</li>
-      <li>Set color temperature to warm white (2700K) if supported</li>
-      <li>Optional: Set color to red or amber for minimal disruption</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF bathroom motion is detected during the night window
+THEN turn on the light at 10%</div>
 
 ## Creating "Night Mode"
 
@@ -139,7 +95,7 @@ Night Mode is a home state that indicates sleeping hours. Set it up using:
 - AND time is after 9:00 PM
 - THEN set house to Night Mode
 
-See [Presence & Modes Automations](/automation/daily-routines/) for detailed Night Mode setup.
+See [daily routine automations](/automation/daily-routines/index.html) for related night-mode setup.
 
 ## Platform-specific examples
 
@@ -149,25 +105,27 @@ See [Presence & Modes Automations](/automation/daily-routines/) for detailed Nig
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Motion sensor detects movement</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">House mode is "Night" OR time between 10 PM and 6 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on bathroom light at 10% brightness</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Set warm white (2700K) color temperature for minimal sleep disruption
-        </div>
-      </div>
-    </div>
+    <p>Replace the entity IDs and night window. This is local when the devices and automation engine are local.</p>
+
+    <pre><code class="language-yaml">automation:
+  - alias: Dim bathroom light on night motion
+    mode: restart
+    triggers:
+      - trigger: state
+        entity_id: binary_sensor.bathroom_motion
+        to: "on"
+    conditions:
+      - condition: time
+        after: "22:00:00"
+        before: "06:00:00"
+    actions:
+      - action: light.turn_on
+        target:
+          entity_id: light.bathroom
+        data:
+          brightness_pct: 10</code></pre>
+
+    <p>Use <code>mode: restart</code> so another motion event refreshes the lighting intent without stacking runs.</p>
   </div>
   
   <div class="platform-card">
@@ -358,7 +316,7 @@ See [Presence & Modes Automations](/automation/daily-routines/) for detailed Nig
   </ol>
 </div>
 
-See [Turn off lights after motion stops](/automation/lighting/lights-off-after-motion/) for complete details.
+See [turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html) for complete details.
 
 <div class="feature-grid">
   <div class="feature-card">
@@ -441,14 +399,43 @@ See [Turn off lights after motion stops](/automation/lighting/lights-off-after-m
   </div>
 </div>
 
----
+## Failure modes
 
-**Related automations:**
-- [Turn on lights when motion detected](/automation/lighting/lights-on-motion/)
-- [Turn off lights after motion stops](/automation/lighting/lights-off-after-motion/)
-- [Night mode setup](/automation/daily-routines/night-mode/)
+- **The light is too bright:** Start at 10 percent, then test in a dark bathroom. Increase only enough for safe footing.
+- **It turns off during a shower:** A PIR can miss a still person through steam or a shower curtain. Use the paired off recipe with a 10-minute starting timeout, or add occupancy sensing.
+- **The sensor sees a hallway instead:** Aim and test the sensor so passing traffic does not light the bathroom unnecessarily.
+- **A guest uses the wall switch:** Treat it as the final answer. The next automation must not immediately undo that choice.
+- **The hub or internet is down:** The wall switch remains the fallback. Confirm that any relied-on Level 2 path is local.
+
+## Done when
+
+- [ ] Enter during the night window and the room has enough light to navigate before you reach the switch.
+- [ ] Enter outside the night window and the recipe does not turn on the dim night setting.
+- [ ] Shower or sit still for the chosen off timeout and confirm the light does not turn off.
+- [ ] Use the physical switch and verify the automation respects it.
+- [ ] Have someone who did not configure the automation use the room at night.
+
+## FAQ
+
+### What brightness should a bathroom night light use?
+
+Start at 10 percent, then test it in the dark. Raise it only enough for safe navigation.
+
+### Why does a bathroom motion light turn off during a shower?
+
+A PIR sensor can miss someone who is still or hidden by steam and a shower curtain. Use a longer timeout or a presence sensor.
+
+### Can HomeKit make a dim bathroom night light?
+
+HomeKit can turn a light on at a selected brightness during a time window, but more complex occupancy and light-level logic may need a bridge or another automation platform.
+
+## Related recipes
+
+- [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
+- [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
+- [Lighting automations](/automation/lighting/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/lighting/">← Back to Lighting Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/lighting/index.html">← Back to lighting automations</a>
+  <a href="/automation/index.html">View all automations →</a>
 </div>
