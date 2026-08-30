@@ -299,11 +299,11 @@ Create separate automations per door:
 ---
 
 ## Related recipes
-- [Away mode automation](/automation/daily-routines/away-mode/)
-- [Bedtime routine](/automation/daily-routines/bedtime-routine/)
+- [Away mode automation](/automation/daily-routines/away-mode.html)
+- [Bedtime routine](/automation/daily-routines/bedtime-routine.html)
 - [Doorbell notification](/automation/notifications/doorbell-notification.html)
 
 <div class="page-navigation">
-  <a href="/automation/security/">← Back to Security Automations</a>
+  <a href="/automation/security/index.html">Back to security automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

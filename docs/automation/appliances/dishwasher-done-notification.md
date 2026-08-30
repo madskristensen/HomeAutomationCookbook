@@ -217,11 +217,11 @@ Add conditions to automation:
 ---
 
 ## Related recipes
-- [Washer done notification](/automation/appliances/washer-done-notification/)
-- [Dryer done notification](/automation/appliances/dryer-done-notification/)
-- [Morning routine automation](/automation/daily-routines/morning-routine/)
+- [Washer done notification](/automation/appliances/washer-done-notification.html)
+- [Dryer done notification](/automation/appliances/dryer-done-notification.html)
+- [Morning routine automation](/automation/daily-routines/morning-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/appliances/">← Back to Appliance Automations</a>
+  <a href="/automation/appliances/index.html">Back to appliance automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

@@ -313,10 +313,10 @@ Prevent repeated alerts:
 
 ## Related recipes
 - [Water leak detection](/automation/security/water-leak-response.html)
-- [Away mode automation](/automation/daily-routines/away-mode/)
-- [Bedtime routine](/automation/daily-routines/bedtime-routine/)
+- [Away mode automation](/automation/daily-routines/away-mode.html)
+- [Bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/notifications/">← Back to Notifications</a>
+  <a href="/automation/notifications/index.html">Back to notifications</a>
   <a href="/automation/">View All Automations →</a>
 </div>

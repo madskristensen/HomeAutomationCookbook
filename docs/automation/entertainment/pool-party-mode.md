@@ -263,11 +263,11 @@ AND pause backyard motion notifications for 4 hours</div>
 ---
 
 ## Related recipes
-- [Welcome home music](/automation/entertainment/welcome-home-music/)
-- [TV dims lights](/automation/entertainment/tv-dim-lights/)
-- [Speaker volume presets](/automation/entertainment/speaker-volume-presets/)
+- [Welcome home music](/automation/entertainment/welcome-home-music.html)
+- [TV dims lights](/automation/entertainment/tv-dim-lights.html)
+- [Speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 <div class="page-navigation">
-  <a href="/automation/entertainment/">← Back to Entertainment</a>
+  <a href="/automation/entertainment/index.html">Back to entertainment</a>
   <a href="/automation/">View All Automations →</a>
 </div>

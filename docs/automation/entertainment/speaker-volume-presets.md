@@ -192,11 +192,11 @@ Different presets for different activities:
 ---
 
 ## Related recipes
-- [Play music when shower starts](/automation/entertainment/shower-music/)
-- [Welcome home music automation](/automation/entertainment/welcome-home-music/)
-- [Control music with physical switch](/automation/entertainment/music-switch-control/)
+- [Play music when shower starts](/automation/entertainment/shower-music.html)
+- [Welcome home music automation](/automation/entertainment/welcome-home-music.html)
+- [Control music with physical switch](/automation/entertainment/music-switch-control.html)
 
 <div class="page-navigation">
-  <a href="/automation/entertainment/">← Back to Entertainment</a>
+  <a href="/automation/entertainment/index.html">Back to entertainment</a>
   <a href="/automation/">View All Automations →</a>
 </div>

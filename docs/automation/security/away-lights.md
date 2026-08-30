@@ -279,11 +279,11 @@ THEN turn on away lights scene</div>
 ---
 
 ## Related recipes
-- [Away mode automation](/automation/daily-routines/away-mode/)
-- [Fire safety response](/automation/security/fire-safety/)
-- [Outdoor night lights](/automation/lighting/outdoor-night-lights/)
+- [Away mode automation](/automation/daily-routines/away-mode.html)
+- [Fire safety response](/automation/security/fire-safety.html)
+- [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
 
 <div class="page-navigation">
-  <a href="/automation/security/">← Back to Security Automations</a>
+  <a href="/automation/security/index.html">Back to security automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

@@ -315,6 +315,6 @@ AT 6:30 AM play gentle wake-up sound</div>
 - [Blinds at sunset/sunrise](/automation/climate/blinds-sunset-sunrise.html)
 
 <div class="page-navigation">
-  <a href="/automation/lighting/">← Back to Lighting Automations</a>
+  <a href="/automation/lighting/index.html">Back to lighting automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

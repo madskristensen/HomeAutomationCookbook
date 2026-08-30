@@ -229,11 +229,11 @@ Clear any current playback before starting new music:
 ---
 
 ## Related recipes
-- [Play music when shower starts](/automation/entertainment/shower-music/)
-- [Welcome home music automation](/automation/entertainment/welcome-home-music/)
-- [Speaker volume presets](/automation/entertainment/speaker-volume-presets/)
+- [Play music when shower starts](/automation/entertainment/shower-music.html)
+- [Welcome home music automation](/automation/entertainment/welcome-home-music.html)
+- [Speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 <div class="page-navigation">
-  <a href="/automation/entertainment/">← Back to Entertainment</a>
+  <a href="/automation/entertainment/index.html">Back to entertainment</a>
   <a href="/automation/">View All Automations →</a>
 </div>

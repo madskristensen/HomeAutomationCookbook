@@ -82,7 +82,7 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 <li>Stop HVAC when windows/doors open</li>
 <li>Away mode temperature adjustments</li>
 <li>Night setback schedules</li>
-<li>Zone-based heating/cooling</li>
+<li>Cold-room monitoring</li>
 </ul>
 </div>
 
@@ -100,7 +100,7 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 <h4>Comfort optimization</h4>
 <ul>
 <li>Per-room temperature control</li>
-<li>Supplemental heating for cold rooms</li>
+<li>Cold-room alerts before comfort becomes a problem</li>
 <li>Pre-heat/cool before arrival</li>
 <li>Sleep mode temperature adjustment</li>
 </ul>
@@ -188,14 +188,14 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 
 <div class="issue-card">
 <div class="issue-header">
-<h3>Room too cold despite heater running</h3>
+<h3>Room remains too cold</h3>
 </div>
 <div class="issue-solutions">
 <ul>
 <li>Check window/door seals</li>
-<li>Verify heater wattage is sufficient</li>
-<li>Ensure power monitoring detects heater</li>
-<li>Consider insulation improvements</li>
+<li>Check the central system and room vents</li>
+<li>Compare the sensor with a known thermometer</li>
+<li>Inspect drafts and insulation</li>
 </ul>
 </div>
 </div>

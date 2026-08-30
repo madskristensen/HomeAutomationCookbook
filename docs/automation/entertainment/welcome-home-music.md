@@ -218,11 +218,11 @@ This ensures music plays even if one detection method fails.
 ---
 
 ## Related recipes
-- [Play music when shower starts](/automation/entertainment/shower-music/)
-- [Control music with physical switch](/automation/entertainment/music-switch-control/)
-- [Morning routine automation](/automation/daily-routines/morning-routine/)
+- [Play music when shower starts](/automation/entertainment/shower-music.html)
+- [Control music with physical switch](/automation/entertainment/music-switch-control.html)
+- [Morning routine automation](/automation/daily-routines/morning-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/entertainment/">← Back to Entertainment</a>
+  <a href="/automation/entertainment/index.html">Back to entertainment</a>
   <a href="/automation/">View All Automations →</a>
 </div>

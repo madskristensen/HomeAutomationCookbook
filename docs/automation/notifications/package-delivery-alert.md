@@ -300,6 +300,6 @@ THEN send notification "Possible package delivery"</div>
 - [Motion detection lights](/automation/lighting/lights-on-motion.html)
 
 <div class="page-navigation">
-  <a href="/automation/notifications/">← Back to Notifications</a>
+  <a href="/automation/notifications/index.html">Back to notifications</a>
   <a href="/automation/">View All Automations →</a>
 </div>

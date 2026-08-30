@@ -117,7 +117,7 @@ I built this cookbook around the rules that have held up in my own family home. 
   <a href="/automation/lighting/index.html" class="category-card">
     <h3>Lighting</h3>
     <p>Motion-triggered, door-activated, and scheduled lighting</p>
-    <span class="category-count">8 automations</span>
+    <span class="category-count">6 automations</span>
   </a>
   
   <a href="/automation/daily-routines/index.html" class="category-card">

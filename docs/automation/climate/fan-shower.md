@@ -201,11 +201,11 @@ THEN turn on bathroom fan</div>
 ---
 
 ## Related recipes
-- [Play music when shower starts](/automation/entertainment/shower-music/)
-- [Morning routine automation](/automation/daily-routines/morning-routine/)
-- [Maintain room temperature with smart heater](/automation/climate/room-heater-maintain-temp/)
+- [Play music when shower starts](/automation/entertainment/shower-music.html)
+- [Morning routine automation](/automation/daily-routines/morning-routine.html)
+- [Monitor a cold room](/automation/climate/room-heater-maintain-temp.html)
 
 <div class="page-navigation">
-  <a href="/automation/climate/">← Back to Climate Automations</a>
+  <a href="/automation/climate/index.html">Back to climate automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

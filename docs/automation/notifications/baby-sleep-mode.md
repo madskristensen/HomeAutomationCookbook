@@ -115,7 +115,7 @@ Usually no. A very dim path light or manual-only behavior is safer for a caregiv
 
 ## Related recipes
 
-- [Guest mode](/automation/notifications/guest-mode.html)
+- [Guest mode](/automation/daily-routines/guest-mode.html)
 - [Dim bathroom lighting at night](/automation/lighting/bathroom-night-light.html)
 - [Notification automations](/automation/notifications/index.html)
 

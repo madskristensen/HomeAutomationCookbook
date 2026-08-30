@@ -233,6 +233,6 @@ Let guests participate:
 - [Music switch control](/automation/entertainment/music-switch-control.html)
 
 <div class="page-navigation">
-  <a href="/automation/notifications/">← Back to Notifications</a>
+  <a href="/automation/notifications/index.html">Back to notifications</a>
   <a href="/automation/">View All Automations →</a>
 </div>

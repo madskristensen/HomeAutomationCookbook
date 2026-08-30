@@ -255,5 +255,5 @@ Instantly activate pool party mode with colorful lights, music, and pool cover w
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/appliances/">Next: Appliances →</a>
+  <a href="/automation/appliances/index.html">Next: appliances</a>
 </div>

@@ -268,11 +268,11 @@ For hearing impaired household members:
 ---
 
 ## Related recipes
-- [Motion detection lights](/automation/lighting/lights-on-motion/)
-- [Away mode](/automation/daily-routines/away-mode/)
-- [Dashboards](/automation/notifications/dashboards/)
+- [Motion detection lights](/automation/lighting/lights-on-motion.html)
+- [Away mode](/automation/daily-routines/away-mode.html)
+- [Status tiles](/automation/notifications/status-tiles.html)
 
 <div class="page-navigation">
-  <a href="/automation/notifications/">← Back to Notifications</a>
+  <a href="/automation/notifications/index.html">Back to notifications</a>
   <a href="/automation/">View All Automations →</a>
 </div>

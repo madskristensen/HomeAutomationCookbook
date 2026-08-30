@@ -204,11 +204,11 @@ Add condition: No motion detected in last 5 minutes before dimming lights
 ---
 
 ## Related recipes
-- [Away mode automation](/automation/daily-routines/away-mode/)
-- [Bedtime routine automation](/automation/daily-routines/bedtime-routine/)
-- [Speaker volume presets](/automation/entertainment/speaker-volume-presets/)
+- [Away mode automation](/automation/daily-routines/away-mode.html)
+- [Bedtime routine automation](/automation/daily-routines/bedtime-routine.html)
+- [Speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 <div class="page-navigation">
-  <a href="/automation/entertainment/">← Back to Entertainment</a>
+  <a href="/automation/entertainment/index.html">Back to entertainment</a>
   <a href="/automation/">View All Automations →</a>
 </div>

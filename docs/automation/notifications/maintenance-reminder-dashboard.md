@@ -328,11 +328,11 @@ AND optionally reset counter when marked complete</div>
 ---
 
 ## Related recipes
-- [Status tiles](/automation/notifications/status-tiles/)
-- [Low battery alerts](/automation/notifications/low-battery-alerts/)
-- [Garbage day reminder](/automation/notifications/garbage-day-reminder/)
+- [Status tiles](/automation/notifications/status-tiles.html)
+- [Low battery alerts](/automation/notifications/low-battery-alerts.html)
+- [Garbage day reminder](/automation/notifications/garbage-day-reminder.html)
 
 <div class="page-navigation">
-  <a href="/automation/notifications/">← Back to Notifications</a>
+  <a href="/automation/notifications/index.html">Back to notifications</a>
   <a href="/automation/">View All Automations →</a>
 </div>

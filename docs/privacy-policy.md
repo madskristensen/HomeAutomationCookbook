@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Privacy Policy
+title: Privacy policy
 description: Privacy policy for Home Automation Cookbook. Learn how we handle your data and protect your privacy.
+last_modified_at: 2026-08-30
 ---
 
 # Privacy policy
 
-**Last updated:** {{ site.time | date: '%B %d, %Y' }}
+**Last updated:** August 30, 2026
 
 Home Automation Cookbook is committed to protecting your privacy. This policy explains how the site handles visitor data.
 
@@ -38,9 +39,9 @@ If you contribute to this project on GitHub:
 
 Our site contains links to external resources and products. We are not responsible for the privacy practices of these external sites. We encourage you to read their privacy policies.
 
-## External platforms mentioned
+## External services mentioned
 
-The automation recipes reference various smart home platforms (Home Assistant, SmartThings, Google Home, Apple HomeKit, Amazon Alexa, Hubitat). Each platform has its own privacy policy that applies when you use their services.
+Some guides discuss smart-home platforms and link to product pages, communities, GitHub, and other external services. Their privacy policies apply when you visit or use them.
 
 ## Contact
 
@@ -51,5 +52,5 @@ If you have questions about this privacy policy, please open an issue on our [Gi
 We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date.
 
 <div class="page-navigation">
-  <a href="/">← Back to Home</a>
+  <a href="/">Back to home</a>
 </div>

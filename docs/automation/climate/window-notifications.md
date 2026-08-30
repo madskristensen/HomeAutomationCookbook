@@ -197,11 +197,11 @@ Add multiple conditions:
 ---
 
 ## Related recipes
-- [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
+- [Stop thermostat when windows open](/automation/climate/thermostat-windows-open.html)
 - [Pause HVAC when windows stay open](/automation/climate/thermostat-windows-open.html)
-- [Activate air purifier when air quality drops](/automation/climate/air-quality-purifier/)
+- [Activate air purifier when air quality drops](/automation/climate/air-quality-purifier.html)
 
 <div class="page-navigation">
-  <a href="/automation/climate/">← Back to Climate Automations</a>
+  <a href="/automation/climate/index.html">Back to climate automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

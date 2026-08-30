@@ -295,6 +295,6 @@ AND announce on kitchen speaker</div>
 - [Washer done notification](/automation/appliances/washer-done-notification.html)
 
 <div class="page-navigation">
-  <a href="/automation/appliances/">← Back to Appliance Automations</a>
+  <a href="/automation/appliances/index.html">Back to appliance automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

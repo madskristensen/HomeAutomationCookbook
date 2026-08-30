@@ -230,5 +230,5 @@ Keep physical controls and useful lighting normal, prevent false Away mode, and 
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/climate/">Next: Climate & Comfort →</a>
+  <a href="/automation/climate/index.html">Next: climate and comfort</a>
 </div>

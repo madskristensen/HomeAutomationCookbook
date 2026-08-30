@@ -294,5 +294,5 @@ Choose a dashboard that works with your hub and remains understandable to the ho
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
-  <a href="/tips/">View Tips & Tricks →</a>
+  <a href="/getting-started/tips.html">View tips and tricks</a>
 </div>

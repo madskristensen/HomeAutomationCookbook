@@ -208,11 +208,11 @@ Sequence of actions:
 ---
 
 ## Related recipes
-- [Turn on bathroom fan when starting shower](/automation/climate/fan-shower/)
-- [Morning routine automation](/automation/daily-routines/morning-routine/)
-- [Speaker volume presets](/automation/entertainment/speaker-volume-presets/)
+- [Turn on bathroom fan when starting shower](/automation/climate/fan-shower.html)
+- [Morning routine automation](/automation/daily-routines/morning-routine.html)
+- [Speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 <div class="page-navigation">
-  <a href="/automation/entertainment/">← Back to Entertainment</a>
+  <a href="/automation/entertainment/index.html">Back to entertainment</a>
   <a href="/automation/">View All Automations →</a>
 </div>

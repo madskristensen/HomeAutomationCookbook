@@ -262,5 +262,5 @@ Create different behaviors for day and night:
 
 <div class="page-navigation">
   <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/daily-routines/">Next: Daily Routines →</a>
+  <a href="/automation/daily-routines/index.html">Next: daily routines</a>
 </div>

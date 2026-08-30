@@ -185,6 +185,6 @@ Some status tiles should reset automatically:
 - [Washer done notification](/automation/appliances/washer-done-notification.html)
 
 <div class="page-navigation">
-  <a href="/automation/notifications/">← Back to Notifications</a>
+  <a href="/automation/notifications/index.html">Back to notifications</a>
   <a href="/automation/">View All Automations →</a>
 </div>

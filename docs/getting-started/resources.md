@@ -173,23 +173,6 @@ Learn more about home automation through these excellent online resources, commu
 
 <div class="resource-category">
   <div class="resource-category-header">
-    <h2>Podcasts</h2>
-  </div>
-  <div class="resource-items">
-    <div class="resource-item">
-      <h3><a href="https://twit.tv/shows/home-gadget-geeks" target="_blank" rel="noopener noreferrer">Home Gadget Geeks</a></h3>
-      <p class="resource-description">Smart home discussions, product reviews, and expert interviews.</p>
-    </div>
-    
-    <div class="resource-item">
-      <h3><a href="https://www.automateordie.com/" target="_blank" rel="noopener noreferrer">Automate Your Life Podcast</a></h3>
-      <p class="resource-description">Weekly smart home news, community Q&A, and product discussions.</p>
-    </div>
-  </div>
-</div>
-
-<div class="resource-category">
-  <div class="resource-category-header">
     <h2>Before you buy</h2>
   </div>
   <div class="resource-items">
@@ -278,10 +261,6 @@ Learn more about home automation through these excellent online resources, commu
           <strong><a href="https://www.home-assistant.io/newsletter/" target="_blank" rel="noopener noreferrer">Home Assistant Newsletter</a></strong>
           <p>Monthly updates, new integrations, and community projects</p>
         </div>
-        <div class="resource-subitem">
-          <strong><a href="https://www.the-ambient.com/newsletter" target="_blank" rel="noopener noreferrer">The Ambient Newsletter</a></strong>
-          <p>Weekly smart home news, product launches, and guides</p>
-        </div>
       </div>
     </div>
     
@@ -293,9 +272,6 @@ Learn more about home automation through these excellent online resources, commu
         </div>
         <div class="resource-link-item">
           <a href="https://twitter.com/SmartThings" target="_blank" rel="noopener noreferrer">@SmartThings</a>
-        </div>
-        <div class="resource-link-item">
-          <a href="https://twitter.com/hubaborhood" target="_blank" rel="noopener noreferrer">@hubaborhood (Hubitat community)</a>
         </div>
         <div class="resource-link-item">
           <a href="https://twitter.com/amazon" target="_blank" rel="noopener noreferrer">@amazon (Alexa updates)</a>

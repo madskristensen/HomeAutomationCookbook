@@ -278,11 +278,11 @@ THEN send vacuum to dock immediately</div>
 ---
 
 ## Related recipes
-- [Robot vacuum auto start](/automation/appliances/robot-vacuum-auto-start/)
-- [Away mode](/automation/daily-routines/away-mode/)
-- [Morning routine](/automation/daily-routines/morning-routine/)
+- [Robot vacuum auto start](/automation/appliances/robot-vacuum-auto-start.html)
+- [Away mode](/automation/daily-routines/away-mode.html)
+- [Morning routine](/automation/daily-routines/morning-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/appliances/">← Back to Appliances</a>
+  <a href="/automation/appliances/index.html">Back to appliances</a>
   <a href="/automation/">View All Automations →</a>
 </div>

@@ -305,11 +305,11 @@ Make it more realistic:
 ---
 
 ## Related recipes
-- [Away lights](/automation/security/away-lights/)
-- [Fire safety response](/automation/security/fire-safety/)
-- [Away mode](/automation/daily-routines/away-mode/)
+- [Away lights](/automation/security/away-lights.html)
+- [Fire safety response](/automation/security/fire-safety.html)
+- [Away mode](/automation/daily-routines/away-mode.html)
 
 <div class="page-navigation">
-  <a href="/automation/security/">← Back to Security Automations</a>
+  <a href="/automation/security/index.html">Back to security automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>

@@ -291,11 +291,11 @@ Tie brushing to privileges:
 ---
 
 ## Related recipes
-- [Baby sleep mode](/automation/notifications/baby-sleep-mode/)
-- [Morning routine](/automation/daily-routines/morning-routine/)
-- [Bedtime routine](/automation/daily-routines/bedtime-routine/)
+- [Nursery quiet mode](/automation/notifications/baby-sleep-mode.html)
+- [Morning routine](/automation/daily-routines/morning-routine.html)
+- [Bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/notifications/">← Back to Notifications</a>
+  <a href="/automation/notifications/index.html">Back to notifications</a>
   <a href="/automation/">View All Automations →</a>
 </div>

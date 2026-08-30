@@ -152,6 +152,6 @@ Reset the reminder automatically after garbage is collected:
 - [Music controls](/automation/notifications/music-controls.html)
 
 <div class="page-navigation">
-  <a href="/automation/notifications/">← Back to Notifications</a>
+  <a href="/automation/notifications/index.html">Back to notifications</a>
   <a href="/automation/">View All Automations →</a>
 </div>

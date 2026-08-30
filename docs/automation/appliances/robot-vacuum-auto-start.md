@@ -221,11 +221,11 @@ Add diagnostics to automation:
 ---
 
 ## Related recipes
-- [Away mode automation](/automation/daily-routines/away-mode/)
-- [Morning routine automation](/automation/daily-routines/morning-routine/)
-- [Washer done notification](/automation/appliances/washer-done-notification/)
+- [Away mode automation](/automation/daily-routines/away-mode.html)
+- [Morning routine automation](/automation/daily-routines/morning-routine.html)
+- [Washer done notification](/automation/appliances/washer-done-notification.html)
 
 <div class="page-navigation">
-  <a href="/automation/appliances/">← Back to Appliance Automations</a>
+  <a href="/automation/appliances/index.html">Back to appliance automations</a>
   <a href="/automation/">View All Automations →</a>
 </div>
