@@ -87,7 +87,7 @@ navigation:
             url: /automation/daily-routines/away-mode.html
           - title: Prepare home on arrival
             url: /automation/daily-routines/unlock-door-arrival.html
-          - title: Morning routine
+          - title: Good morning routine
             url: /automation/daily-routines/morning-routine.html
           - title: Bedtime routine
             url: /automation/daily-routines/bedtime-routine.html

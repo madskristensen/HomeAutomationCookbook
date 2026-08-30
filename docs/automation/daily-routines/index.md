@@ -45,11 +45,11 @@ Automatically activate Away Mode when the last person leaves. Includes energy sa
 
 <div class="automation-card" markdown="1">
 
-### Morning routine
+### Quiet good-morning routine
 
-Wake up to an automated morning routine with lights, coffee, weather updates, and climate control.
+Use an intentional signal to leave Night mode, light one person's route, and leave sleeping household members undisturbed.
 
-<span class="card-meta">**Best for:** Consistent mornings, gentle wake-ups</span>
+<span class="card-meta">**Best for:** Different schedules, children, and guests</span>
 
 <p><a href="/automation/daily-routines/morning-routine.html" class="card-link">View Automation →</a></p>
 

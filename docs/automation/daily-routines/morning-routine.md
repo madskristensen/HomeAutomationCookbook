@@ -1,266 +1,140 @@
 ---
 layout: automation
-title: Morning Routine Automation - Wake Up Smart Home
-description: Automate your morning routine with lights, coffee, music, and thermostat. Complete guide for morning automation with all major smart home platforms.
-keywords: morning routine automation, wake up automation, smart home morning, automatic morning routine, morning lights automation
+title: Start a quiet good-morning routine
+description: A platform-neutral morning routine that starts from an intentional signal, lights only the needed path, and leaves sleeping household members undisturbed.
+keywords: good morning routine, morning lighting automation, quiet wake-up automation, smart home morning, family morning routine
+last_modified_at: 2026-08-30
+faqs:
+  - question: Why not trigger the whole routine from bedroom motion?
+    answer: One person may get up briefly or wake earlier than everyone else. Use an intentional button, phrase, or alarm dismissal as the main trigger and keep motion limited to local path lighting.
+  - question: How should the routine handle different wake times?
+    answer: Give each person or schedule its own trigger and room scope. Shared actions should wait until the household agrees the day has started.
+  - question: Should the routine start a coffee maker automatically?
+    answer: Only if the appliance is designed to resume safely when power is applied and the owner has verified that exact use. Otherwise leave brewing manual.
 ---
 
-# Turn on all lights when you get up in the morning
+# Start a quiet good-morning routine
 
-Start your day right with an automated morning routine that prepares your home for the day ahead. From gradual lighting to starting the coffee maker, this automation creates a consistent, pleasant wake-up experience.
+Use one intentional signal to leave Night mode, light the route someone needs, and prepare approved comfort settings without waking everyone else.
 
-## Use cases
+**Best for:** Households that want a repeatable morning start but have different schedules, children, guests, or occasional early wake-ups.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Trigger Methods</h4>
-    <ul>
-      <li><strong>Weekday Mornings</strong> - Consistent wake-up routine</li>
-      <li><strong>Motion-Triggered</strong> - Lights when you get out of bed</li>
-      <li><strong>Time-Based</strong> - Scheduled wake-up time</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Activation Options</h4>
-    <ul>
-      <li><strong>Voice-Activated</strong> - "Good morning" routine</li>
-      <li><strong>Button-Triggered</strong> - Bedside button press</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Turning on every light from the first bedroom motion, unlocking doors, disabling security, or powering an unattended appliance that was not designed for automation.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Lights</strong>
-      <div class="product-details">
-        Throughout house for automated morning routine
-      </div>
-    </div>
-  </div>
-</div>
+Morning is a transition, not a fixed time. A schedule cannot know whether the household is awake, someone is sick, school is delayed, or a guest is sleeping. Motion cannot tell a real wake-up from a quick bathroom trip.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Motion Sensor</strong>
-      <div class="product-details">
-        In bedroom or bathroom to detect wake-up
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Button</strong>
-      <div class="product-details">
-        Bedside trigger for one-press routine
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Thermostat</strong>
-      <div class="product-details">
-        Climate control for comfort
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Plugs</strong>
-      <div class="product-details">
-        For coffee maker and other appliances
-      </div>
-    </div>
-  </div>
-</div>
+An intentional trigger gives the first awake person control. Local motion lighting can still make the path safe without declaring that the whole home is ready for daytime behavior.
 
-## Basic automation setup
+## What I used
 
-<div class="automation-example">IF time is 6:30 AM on weekdays
-THEN turn on bedroom lights to 30%
-AND start coffee maker
-AND read morning briefing</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Start the routine | A "Good morning" voice phrase or manual scene control | TODO(owner): preferred bedside button | The trigger should be intentional and easy to cancel. |
+| Light the morning path | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | TODO(owner): preferred premium dimmer | Keep every wall paddle working normally. |
+| Restore approved comfort | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | TODO(owner): preferred premium thermostat | Someone can always change the temperature at the thermostat. |
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is between 6:00 AM and 9:00 AM</li>
-      <li>AND motion detected in bedroom</li>
-      <li>OR button pressed</li>
-      <li>OR voice command "Good morning"</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <ul>
-      <li>House is in Night Mode</li>
-      <li>Time is between 6:00 AM and 10:00 AM</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on main lights in house</li>
-      <li>Put house in Home Mode</li>
-    </ul>
-  </div>
-</div>
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-## Platform-specific examples
+## Logic
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Bedroom motion sensor detects motion</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">House mode is "Night" AND Time is 6 AM - 10 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set mode to "Home", turn on morning lights</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Motion in bedroom AND Time 6 AM - 10 AM AND Mode "Night"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Change mode to "Home" AND Turn on morning lights</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Bedroom motion sensor active</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Mode is "Night" AND Time 6 AM - 10 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Change mode to "Day" + Turn on morning lights</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Mode Manager or Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Motion detected in bedroom</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Time</span>
-        <span class="step-content">Between 6 AM and 10 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Activate "Good Morning" scene</span>
-      </div>
-    </div>
-  </div>
-</div>
+- **Trigger:** A person intentionally presses the morning button, uses the morning phrase, or dismisses a verified wake alarm.
+- **Conditions:** The home is in Night mode, not Away or Vacation, and the routine is enabled for that person or schedule.
+- **Action:** Change Night to Home, light only the needed route at a gentle level, and restore previously approved morning comfort settings.
+- **Wait / timeout:** Delay shared-room actions until someone enters that room or explicitly starts the shared routine.
+- **Stop condition:** The routine finishes after its one-time actions and cannot run again until the next Night-mode cycle.
+- **Manual override:** Any light, thermostat, blind, or media control remains independently usable.
 
-## Morning (Home) mode actions
+<div class="automation-example">IF a person intentionally starts Good morning
+AND the home is in Night mode
+THEN change Night mode to Home
+AND light that person's morning path gently
+AND restore approved comfort settings
 
-### Lighting
-* **Kitchen** - 100% brightness
-* **Bathroom** - 100% brightness
-* **Hallway** - 80% brightness
-* **Living room** - 60% (gentle)
-* **Bedroom** - Keep off or 20%
+IF a shared room is still unoccupied
+THEN leave its lights, blinds, and audio unchanged</div>
 
-### Climate
-* **Increase thermostat** - 70°F (21°C)
-* **Turn on bathroom fan** - If humid
-* **Open smart blinds** - Let in sunlight
+## Setup notes
 
-### Kitchen
-* **Start coffee maker** - Via smart plug
-* **Display weather** - On smart display
-* **Turn on news** - Smart speaker (optional)
+1. Choose an intentional trigger that works without opening an app.
+2. Define the smallest useful path, such as bedroom to bathroom to kitchen.
+3. Pick brightness levels by testing them in the dark, not by copying percentages.
+4. Keep bedroom lights, speakers, and blinds out of the shared routine unless every sleeper agrees.
+5. Restore Home mode only from Night mode. Do not override Away, Vacation, Guest, or a safety mode.
+6. Add thermostat changes only after the household approves the target and timing.
+7. Test the routine while another person pretends to remain asleep.
+8. Provide a one-action cancel that stops delayed actions without turning off lights someone already chose manually.
 
-### Security
-* **Disarm interior sensors**
-* **Disable night cameras** - Interior only
-* **Unlock certain doors** - If needed
+## Stage shared actions
 
-### Announcements
-* **Weather forecast**
-* **Calendar events for today**
-* **Commute time**
-* **Reminders**
+Run personal actions immediately and shared actions only when the room is actually needed:
 
-## Advanced morning routine
+| Stage | Example behavior |
+|---|---|
+| Personal start | Gentle path lighting and Night-to-Home transition |
+| Bathroom entry | Normal bathroom motion recipe takes over |
+| Kitchen entry | Kitchen task lighting becomes available |
+| Household awake | Optional blinds or quiet audio after explicit confirmation |
 
-### Gradual wake-up (30 minutes before alarm)
+This prevents an early riser from lighting bedrooms, opening privacy blinds, or starting audio throughout the home.
 
-Create automation that gradually increases bedroom light brightness:
-- Start at 1% brightness at wake time (e.g., 6:00 AM)
-- Gradually increase over 30 minutes
-- Use repeat loop: wait 1 minute, increase brightness by 3%, repeat 30 times
-- Final brightness reaches ~90% by end
+## Advanced features
 
-### Weekday vs. weekend
+### Use separate weekday and weekend triggers
 
-**Weekday routine:**
-- Earlier wake time
-- News briefing
-- Commute information
+Let schedules suggest which routine is available, but keep the final start intentional. A calendar can change the suggested scene without forcing it to run.
 
-**Weekend routine:**
-- Later wake time
-- Music instead of news
-- Relaxed lighting
+### Hand control back to room recipes
 
-## Related actions
+The morning routine can turn on initial path lighting, then stop. Existing occupancy or switch behavior should control each room afterward rather than a long routine fighting local choices.
 
-See also:
-- [Bedtime Routine](/automation/daily-routines/bedtime-routine/) - Evening counterpart
-- [Set Away Mode](/automation/daily-routines/away-mode/) - Leaving home
+### Add a useful briefing on request
+
+Weather, calendar, or travel information can be a separate spoken request. Do not broadcast personal information automatically when guests or sleeping family may hear it.
+
+## Failure modes
+
+- **A bathroom trip starts the day:** Remove broad motion as the main trigger and use an intentional action.
+- **The routine wakes other people:** Reduce its room scope and delay shared lights, blinds, and audio.
+- **It runs twice:** Lock the routine after the first successful start until Night mode is set again.
+- **Away mode changes to Home unexpectedly:** Require the current mode to be Night, not merely "not Home."
+- **The thermostat fights another recipe:** Do not restore comfort while a window pause, safety limit, or manual hold owns climate control.
+- **A delayed action overrides a manual choice:** Cancel pending actions when the affected device is changed manually.
+- **The hub is unavailable:** Wall switches and the thermostat still provide normal morning control.
+
+## Done when
+
+- [ ] A bathroom trip does not start the full routine.
+- [ ] The intentional trigger works without opening an app.
+- [ ] Only the needed path lights during a personal start.
+- [ ] Away, Vacation, Guest, and safety modes are never overwritten.
+- [ ] A second trigger does not duplicate announcements or device changes.
+- [ ] Manual light and thermostat changes are respected.
+- [ ] The cancel action prevents pending shared-room behavior.
+- [ ] The household can complete the morning normally when the hub is unavailable.
+
+## FAQ
+
+### Why not trigger the whole routine from bedroom motion?
+
+One person may get up briefly or wake earlier than everyone else. Use an intentional button, phrase, or alarm dismissal as the main trigger and keep motion limited to local path lighting.
+
+### How should the routine handle different wake times?
+
+Give each person or schedule its own trigger and room scope. Shared actions should wait until the household agrees the day has started.
+
+### Should the routine start a coffee maker automatically?
+
+Only if the appliance is designed to resume safely when power is applied and the owner has verified that exact use. Otherwise leave brewing manual.
+
+## Related recipes
+
+- [Run the bedtime routine](/automation/daily-routines/bedtime-routine.html)
+- [Bathroom night lighting](/automation/lighting/bathroom-night-light.html)
+- [Daily routines](/automation/daily-routines/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/daily-routines/">← Back to Daily Routines</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/daily-routines/index.html">Back to daily routines</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>
