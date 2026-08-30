@@ -1,312 +1,141 @@
 ---
 layout: automation
-title: Disable Automations When Door is Closed - Smart Override System
-description: Learn how to prevent motion sensor lights from turning off when bathroom or bedroom doors are closed. Complete guide with door sensor override logic.
-keywords: disable automation door closed, bathroom door sensor, automation override, door sensor logic, prevent lights turning off
+title: Turn a closet light off after the door closes
+description: A platform-neutral follow-up to door-triggered lighting that turns off only the light the automation turned on and cancels when the door reopens.
+keywords: closet light door close, pantry light automation, contact sensor light off, automatic closet lighting, door sensor lighting
+last_modified_at: 2026-08-30
+faqs:
+  - question: Should a closet light turn off the instant the door closes?
+    answer: Use a short delay so a bouncing contact or quick return does not cycle the light. Cancel the pending off action if the door opens again.
+  - question: Why track whether the automation turned the light on?
+    answer: Ownership prevents the close event from undoing a person's manual choice, such as leaving the light on while cleaning or changing a shelf.
+  - question: Can a closed door prove that a bathroom is occupied?
+    answer: No. Door position alone cannot reliably prove occupancy. Use motion with a longer delay or mmWave presence sensing for bathrooms and quiet workspaces.
 ---
 
-# Disable automations when door is closed
+# Turn a closet light off after the door closes
 
-Prevent frustration when motion-based lighting turns off while you're sitting still in the bathroom or bedroom. This automation uses a door sensor to intelligently override motion timeout behavior.
+Pair a reliable door-open light with a delayed door-close rule that turns off only the light that automation started.
 
-<div class="info-box">
-  <strong>⚠️ The Problem: Motion Sensors Can't Detect Stationary People</strong>
-  <ul>
-    <li>Sitting on toilet</li>
-    <li>Taking a shower</li>
-    <li>Lying in bed reading</li>
-    <li>Working at desk</li>
-    <li><strong>Result:</strong> Lights turn off unexpectedly, leaving you in the dark</li>
-  </ul>
-</div>
+**Best for:** A small closet, cupboard, or shallow pantry with one access door where nobody can remain safely inside after it closes.
 
-<div class="info-box">
-  <strong>✅ The Solution: Door Sensor Override</strong>
-  <ul>
-    <li><strong>Door closed</strong> = Someone is inside, keep lights on</li>
-    <li><strong>Door open</strong> = Room is empty (after motion timeout), safe to turn off lights</li>
-  </ul>
-</div>
+**Not for:** Walk-in closets, bathrooms, bedrooms, offices, multi-door rooms, or any space where a closed door does not prove the lit task has ended.
 
-## Use cases
+## Why this exists
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Private Spaces</h4>
-    <ul>
-      <li><strong>Bathroom</strong> - People sitting still on toilet or in shower</li>
-      <li><strong>Bedroom</strong> - Guest room during naps or sleep</li>
-      <li><strong>Reading Nook</strong> - Sitting still while reading</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Work & Entertainment</h4>
-    <ul>
-      <li><strong>Home Office</strong> - Working at computer without much movement</li>
-      <li><strong>Media Room</strong> - Watching movies in reclined position</li>
-    </ul>
-  </div>
-</div>
+Turning the light on when a door opens is easy. Turning it off safely needs ownership and cancellation. Without those, a close event can reverse a manual choice, a bouncing contact can cycle the light, or a person in a walk-in space can be left in the dark.
 
-## Products needed
+This recipe is deliberately narrow. Door position is a good task signal for a small cupboard, but it is not a general occupancy sensor.
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Contact Sensor</strong>
-      <div class="product-details">
-        Mounted on door and frame
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Existing Motion Sensor</strong>
-      <div class="product-details">
-        Already installed for lights
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Light</strong>
-      <div class="product-details">
-        Switch or bulb
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💻 Platform Requirements</strong>
-  <ul>
-    <li><strong>Full Support:</strong> Home Assistant, SmartThings (with SharpTools), Hubitat, HomeSeer - These platforms support variables or virtual switches needed for this automation</li>
-    <li><strong>Limited Support:</strong> Alexa, Google Home (use workarounds), Apple HomeKit (requires Homebridge for full functionality)</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect the door closing | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | TODO(owner): preferred premium contact sensor | Align the magnet so closed reports remain stable. |
+| Dim a fixed light | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | TODO(owner): preferred premium dimmer | Keep the physical paddle usable. |
+| Switch a fixed light on or off | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | TODO(owner): preferred premium on/off switch | Keep the physical paddle usable. |
 
-## Automation setup
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Scenario 1: Bathroom (Keep Lights On When Door Closed)</h4>
-    <p><strong>Original automation (problem):</strong> Trigger: No motion for 5 minutes → Action: Turn off bathroom light → <em>Issue: Turns off while someone is sitting still inside</em></p>
-    <p><strong>Improved automation (solution):</strong></p>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>No motion detected for 5 minutes</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <ul>
-      <li>Door is OPEN (not closed)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn off bathroom light</li>
-    </ul>
-    <p><strong>Logic:</strong> Only turn off lights if: (1) No motion detected for 5 minutes AND (2) Door is open (meaning no one is inside)</p>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Scenario 2: Guest Room (Delay After Entry)</h4>
-    <p>Prevent lights from turning on automatically when guests are resting:</p>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Guest room motion detected</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <ul>
-      <li>Door has been open for 5+ minutes</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on guest room light</li>
-    </ul>
-    <p><strong>Logic:</strong> If guest leaves room and returns within 5 minutes, lights don't turn on automatically. Helpful for naps, early bedtimes, and privacy.</p>
-  </div>
-</div>
+## Logic
 
-## Platform-specific examples
+- **Trigger:** The contact sensor changes from open to closed.
+- **Conditions:** The paired door-open recipe turned this light on, the sensor remains available, and no manual light change has canceled automation ownership.
+- **Action:** Start a short off delay, then turn off the light and clear the ownership marker.
+- **Wait / timeout:** Cancel the pending off action if the door opens again before the delay ends.
+- **Stop condition:** The light turns off, the door reopens, or a person changes the light manually.
+- **Manual override:** A wall-switch change clears automation ownership and wins immediately.
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Bathroom motion sensor no motion for 5 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Bathroom door sensor is "open"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn off bathroom light</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Adjust based on your sensor's open/closed values
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Motion inactive for 5 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Door sensor is "open"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn off light</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use SharpTools for advanced conditions
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Motion inactive (canceled) for 5 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Expression</span>
-        <span class="step-content">Door contact is open</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn off light</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine for complex logic
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="automation-example">IF the closet door closes
+AND the paired door-open recipe owns the light
+THEN wait a short delay
+
+IF the door is still closed
+AND automation still owns the light
+THEN turn the light off
+AND clear automation ownership
+
+IF the door reopens or the wall switch changes
+THEN cancel the pending off action</div>
+
+## Setup notes
+
+1. Complete and test the [door-open lighting recipe](/automation/lighting/toggle-lights-door.html) first.
+2. When that recipe turns on the light, set a marker saying it owns the current on state.
+3. Clear ownership whenever the wall switch or light changes outside the paired recipes.
+4. Trigger this recipe only on a real open-to-closed transition.
+5. Add a short delay and recheck both door state and ownership when it ends.
+6. Cancel the pending action immediately when the door reopens.
+7. Test contact bounce by closing the door gently, firmly, and incompletely.
+8. Do not copy this rule to a room where someone can remain behind the closed door.
+
+## Choose the off behavior by space
+
+| Space | Safer off signal |
+|---|---|
+| Small cupboard or shallow closet | Door closed after a short delay |
+| Pantry someone can step into | Door closed plus verified vacancy, or a longer occupancy timeout |
+| Walk-in closet | Motion or presence inactivity with a manual switch fallback |
+| Bathroom or quiet workspace | mmWave presence or a conservative motion timeout |
+| Room with multiple doors | Occupancy sensing, not one door's position |
+
+The more a space behaves like a room, the less useful the door is as an off signal.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Manual disable mode</h3>
-    <p>Add a physical button to manually disable all automations in a room:</p>
-    <ul>
-      <li><strong>Trigger:</strong> Disable button pressed</li>
-      <li><strong>Action:</strong> Toggle automation disabled mode</li>
-      <li><strong>Condition:</strong> Add to all automations: mode is OFF</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Visual indicator</h3>
-    <p>Use LED strip or smart bulb to show automation status:</p>
-    <ul>
-      <li><strong>When disabled:</strong> Set status light to red</li>
-      <li><strong>When enabled:</strong> Set status light to green</li>
-      <li><strong>Trigger:</strong> Automation mode changes</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Time-based auto-resume</h3>
-    <p>Automatically re-enable automations after a set period:</p>
-    <ul>
-      <li><strong>Trigger:</strong> Disabled mode has been ON for 2 hours</li>
-      <li><strong>Action:</strong> Turn off disabled mode (re-enable)</li>
-      <li>Prevents accidentally leaving automations disabled</li>
-    </ul>
-  </div>
-</div>
+### Add a door-left-open reminder
 
-## Common issues and solutions
+If the automation owns the light and the door remains open much longer than a normal visit, send one quiet reminder. Do not turn the light off while someone may still be using the space.
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Lights still turn off when door closed</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Condition logic may not match your sensor's behavior.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check door sensor state in app (is "closed" showing as 'on' or 'off'?)</li>
-        <li>Verify condition logic matches your sensor's behavior</li>
-        <li>Confirm automation is actually using the condition</li>
-        <li>Reverse the door state condition if needed</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Door sensor not reliable</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Sensor too far from magnet, battery low, or door doesn't close fully.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Reposition for better alignment</li>
-        <li>Replace battery</li>
-        <li>Adjust door latch/strike plate</li>
-        <li>Use tilt sensor instead of contact sensor</li>
-      </ul>
-    </div>
-  </div>
-</div>
+### Handle unavailable sensors explicitly
 
----
+An unavailable contact is unknown, not closed. Leave the light alone, clear any pending off timer, and show a maintenance warning.
 
-**Related automations:**
-- [Toggle lights on door open](/automation/lighting/toggle-lights-door/)
-- [Turn off lights after motion stops](/automation/lighting/lights-off-after-motion/)
+### Use a maximum ownership timeout
+
+Clear a stale ownership marker after a long, household-tested limit without forcing the light off. This prevents an old marker from affecting a later manual session.
+
+## Failure modes
+
+- **The light turns off after the door reopens:** Make the close timer cancelable and recheck the door after the delay.
+- **A manual choice is reversed:** Clear automation ownership on every external light or wall-switch change.
+- **The light cycles when the door closes:** Increase the delay and realign the contact sensor to prevent bounce.
+- **The light stays on after a normal close:** Confirm the paired open recipe set ownership and that the sensor reported a stable close.
+- **The sensor becomes unavailable:** Treat the state as unknown and leave manual control in charge.
+- **Someone can remain inside:** Remove this recipe and use motion or presence sensing with a conservative timeout.
+- **The hub or internet is down:** The physical wall switch remains the fallback. Verify local behavior before depending on it.
+
+## Done when
+
+- [ ] Ten open-and-close tests report every transition correctly.
+- [ ] Closing the door turns off a light started by the paired automation.
+- [ ] Reopening during the delay cancels the pending off action.
+- [ ] A manual wall-switch change is never reversed.
+- [ ] An unavailable sensor does not count as closed.
+- [ ] A stale ownership marker cannot affect a later manual session.
+- [ ] Someone who did not build the recipe can use the space normally.
+
+## FAQ
+
+### Should a closet light turn off the instant the door closes?
+
+Use a short delay so a bouncing contact or quick return does not cycle the light. Cancel the pending off action if the door opens again.
+
+### Why track whether the automation turned the light on?
+
+Ownership prevents the close event from undoing a person's manual choice, such as leaving the light on while cleaning or changing a shelf.
+
+### Can a closed door prove that a bathroom is occupied?
+
+No. Door position alone cannot reliably prove occupancy. Use motion with a longer delay or mmWave presence sensing for bathrooms and quiet workspaces.
+
+## Related recipes
+
+- [Turn lights on when a door opens](/automation/lighting/toggle-lights-door.html)
+- [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
+- [Lighting automations](/automation/lighting/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/lighting/">← Back to Lighting Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/lighting/index.html">Back to lighting automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

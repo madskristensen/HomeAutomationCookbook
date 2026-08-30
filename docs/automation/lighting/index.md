@@ -81,6 +81,18 @@ Automatically turn on lights when doors open - perfect for closets, pantries, an
 
 <div class="automation-card" markdown="1">
 
+### Turn a closet light off after closing
+
+Complete the door-lighting cycle without reversing a manual wall-switch choice or turning off while the door reopens.
+
+<span class="card-meta">**Best for:** Small single-door closets, cupboards, and shallow pantries</span>
+
+<p><a href="/automation/lighting/disable-on-door-close.html" class="card-link">View automation</a></p>
+
+</div>
+
+<div class="automation-card" markdown="1">
+
 ### Outdoor night lights
 
 Turn on outdoor lights automatically at sunset for safety, curb appeal, and convenience.

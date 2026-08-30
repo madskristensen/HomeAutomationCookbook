@@ -72,7 +72,7 @@ navigation:
             url: /automation/lighting/bathroom-night-light.html
           - title: Toggle lights on door
             url: /automation/lighting/toggle-lights-door.html
-          - title: Disable on door close
+          - title: Closet light off on close
             url: /automation/lighting/disable-on-door-close.html
           - title: Outdoor night lights
             url: /automation/lighting/outdoor-night-lights.html
