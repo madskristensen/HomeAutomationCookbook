@@ -9,8 +9,6 @@ faqs:
     answer: Start at 10 percent, then test it in the dark. Raise it only enough for safe navigation.
   - question: Why does a bathroom motion light turn off during a shower?
     answer: A PIR sensor can miss someone who is still or hidden by steam and a shower curtain. Use a longer timeout or a presence sensor.
-  - question: Can HomeKit make a dim bathroom night light?
-    answer: HomeKit can turn a light on at a selected brightness during a time window, but more complex occupancy and light-level logic may need a bridge or another automation platform.
 ---
 
 # Turn on a dim bathroom light at night
@@ -96,148 +94,6 @@ Night Mode is a home state that indicates sleeping hours. Set it up using:
 - THEN set house to Night Mode
 
 See [daily routine automations](/automation/daily-routines/index.html) for related night-mode setup.
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <p>Replace the entity IDs and night window. This is local when the devices and automation engine are local.</p>
-
-    <pre><code class="language-yaml">automation:
-  - alias: Dim bathroom light on night motion
-    mode: restart
-    triggers:
-      - trigger: state
-        entity_id: binary_sensor.bathroom_motion
-        to: "on"
-    conditions:
-      - condition: time
-        after: "22:00:00"
-        before: "06:00:00"
-    actions:
-      - action: light.turn_on
-        target:
-          entity_id: light.bathroom
-        data:
-          brightness_pct: 10</code></pre>
-
-    <p>Use <code>mode: restart</code> so another motion event refreshes the lighting intent without stacking runs.</p>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">"Bathroom Motion Sensor" detects motion</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">Location mode is "Night"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Set "Bathroom Light" to 10% brightness</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Motion sensor active</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Mode is "Night" OR time 10 PM - 6 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on bathroom light at 10%</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Motion Lighting app or Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Bathroom motion sensor detects motion</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Time</span>
-        <span class="step-content">Between 10 PM and 6 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Turn on bathroom light at 10%</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">"Bathroom Motion Sensor" detects motion</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time between 10 PM and 6 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on "Bathroom Light" to 10%</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">"Bathroom Motion Sensor" detects motion</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Between 10 PM and 6 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set "Bathroom Light" brightness to 10%</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 ## Advanced features
 
@@ -424,10 +280,6 @@ Start at 10 percent, then test it in the dark. Raise it only enough for safe nav
 ### Why does a bathroom motion light turn off during a shower?
 
 A PIR sensor can miss someone who is still or hidden by steam and a shower curtain. Use a longer timeout or a presence sensor.
-
-### Can HomeKit make a dim bathroom night light?
-
-HomeKit can turn a light on at a selected brightness during a time window, but more complex occupancy and light-level logic may need a bridge or another automation platform.
 
 ## Related recipes
 
