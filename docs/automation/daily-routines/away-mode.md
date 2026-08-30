@@ -1,507 +1,143 @@
 ---
 layout: automation
-title: Set Away Mode When Everyone Leaves - Presence Automation
-description: Automatically activate Away Mode when everyone leaves home. Complete guide with presence detection, motion verification, and security integration.
-keywords: away mode automation, presence detection, leave home automation, GPS automation, location based automation, smart home away mode
+title: Set away mode when everyone leaves (without locking someone inside)
+description: A conservative, platform-neutral away-mode recipe that verifies the home is empty before changing lights, climate, or security behavior.
+keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
+last_modified_at: 2026-08-30
+faqs:
+  - question: How long should away mode wait after everyone leaves?
+    answer: Start with 10 to 15 minutes. A delayed away mode is less disruptive than a false activation while a child, guest, or person without a phone is still home.
+  - question: Is phone location enough to know the house is empty?
+    answer: No. Phones can be left behind, run out of battery, or report the wrong location. Use a delay, recent motion or door activity, and a guest override.
+  - question: Should away mode automatically lock doors and arm an alarm?
+    answer: Add security actions only after the household has tested presence detection and the security system's own entry, exit, and emergency behavior.
 ---
 
 # Set away mode when everyone leaves
 
-Automatically transition your home to Away Mode when the last person leaves. This foundational automation enables energy savings, security activation, and peace of mind that your home is properly secured.
+When the house is confidently empty, it switches to Away, turns off what is safe to turn off, and tells the household what changed.
 
-<div class="info-box">
-  <strong>⭐ Why This Matters</strong>
-  <ul>
-    <li><strong>Energy Savings:</strong> Turn off unnecessary lights, adjust thermostat to eco mode, stop running appliances</li>
-    <li><strong>Security:</strong> Lock all doors automatically, arm security system, activate surveillance cameras</li>
-    <li><strong>Convenience:</strong> No manual mode switching needed. Works automatically for everyone with consistent behavior.</li>
-  </ul>
-</div>
+**Best for:** Households with reliable presence signals, a manual Home or Guest override, and people willing to test false-away scenarios.
 
-## Use cases
+**Not for:** A home where children, guests, caregivers, or anyone without a tracked device may remain inside without a dependable override.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Daily & Short Trips</h4>
-    <ul>
-      <li><strong>Daily Work Commute</strong> - Everyone leaves for work/school</li>
-      <li><strong>Running Errands</strong> - Quick trips away from home</li>
-      <li><strong>Evening Outings</strong> - Dinner, movies, events</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Extended Absences</h4>
-    <ul>
-      <li><strong>Weekend Trips</strong> - Family leaves for activities</li>
-      <li><strong>Vacations</strong> - Extended absence from home</li>
-    </ul>
-  </div>
-</div>
+## Why this exists
 
-## Products needed
+Away mode should be a shared state that other automations can use, not one giant routine with every possible action. The expensive failure is not forgetting to save a little energy. It is locking in a guest, arming an occupied house, or changing the temperature unsafely because a phone reported the wrong location.
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Home Platform App</strong>
-      <div class="product-details">
-        Installed on every adult's phone<br>
-        Options: Home Assistant Companion, SmartThings app, Life360, Apple Home (for HomeKit)<br>
-        <em>Requirements: GPS/location always on, background app refresh enabled, battery optimization exceptions</em>
-      </div>
-    </div>
-  </div>
-</div>
+Start with reversible actions and a notification. Add locks, alarms, or appliance control only after the empty-home decision has proved reliable.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Motion Sensors</strong>
-      <div class="product-details">
-        Verify no one home
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Locks</strong>
-      <div class="product-details">
-        Auto-lock doors
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Thermostat</strong>
-      <div class="product-details">
-        Energy savings
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Security Cameras</strong>
-      <div class="product-details">
-        Visual verification
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-## Basic automation setup
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Decide who is home | TODO(owner): verified household presence source | TODO(owner): verified presence plus a second empty-home signal | Every person and guest needs a safe path through the logic. |
+| Detect recent indoor activity | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) | [mmWave presence sensor with integrated PIR](https://www.amazon.com/dp/B095TZTGNB) | Use activity as a reason to delay Away, not as proof that the home is empty. |
+| Adjust heating and cooling | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | TODO(owner): preferred premium thermostat | Keep safe minimum and maximum temperatures at the thermostat. |
+| Control fixed lights | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | TODO(owner): preferred premium switch | Physical paddles must keep working. |
 
-<div class="automation-example">IF everyone leaves home
-THEN set house to Away mode
-AND turn off all lights
-AND adjust thermostat to eco</div>
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-<div class="info-box">
-  <strong>⚠️ Important: Verify Truly Empty (Multiple Conditions Recommended)</strong>
-  <ul>
-    <li>Both phones not present for 10 minutes</li>
-    <li>No motion detected in any room for 9 minutes</li>
-    <li>No TV is currently on</li>
-    <li>No music playing</li>
-    <li>Optional: No computers active</li>
-    <li><strong>Why?</strong> Phone GPS can drift. Someone without phone may be home (kids, guests, nanny). Prevents false away activation.</li>
-  </ul>
-</div>
+## Logic
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Last phone leaves home geofence</li>
-      <li>OR Person 1 leaves AND Person 2 leaves</li>
-      <li>OR All tracked devices leave home zone</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions (Important!)</h4>
-    <ul>
-      <li>Both phones not present for 10 minutes</li>
-      <li>No motion detected in any room for 9 minutes</li>
-      <li>No TV is currently on</li>
-      <li>No music playing</li>
-      <li>Optional: No computers active</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <strong>Immediate:</strong> Set house mode to "Away" • Send confirmation notification<br>
-    <strong>Triggered by Away Mode:</strong> Turn off all lights • Lock all doors • Adjust thermostat • Arm security system • Start robot vacuum (optional)
-  </div>
-</div>
+- **Trigger:** The last tracked household member leaves the home area.
+- **Conditions:** Everyone has remained away for 10 to 15 minutes, Guest or Staying Home mode is off, and no recent indoor activity suggests someone remains.
+- **Action:** Set the shared house state to Away, turn off nonessential lights, apply a safe thermostat setback, and notify the household.
+- **Wait / timeout:** Start with 15 minutes. Shorten it only after several weeks without a false activation.
+- **Stop condition:** Someone returns, indoor activity appears during the delay, or a person selects Home, Guest, or Staying Home.
+- **Manual override:** A visible Home or Guest control cancels Away immediately.
 
-## Platform-specific examples
+<div class="automation-example">IF every tracked person has been away for 15 minutes
+AND Guest or Staying Home mode is off
+AND recent indoor activity does not suggest someone is home
+THEN set the house to Away
+AND make only the reversible changes the household has approved
+AND send a summary notification</div>
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">All persons leave home for 10 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">No motion for 9 minutes + TV is off</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set mode "Away", Turn off lights, Lock doors, Set thermostat</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">All members away 10 min AND No motion 9 min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Change mode to "Away"</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Routine 2:</strong> Mode "Away" → Lights off, Lock doors, Set thermostat
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">All presence sensors "not present" 10 min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">No motion for 9 min + Media off</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Change mode to "Away"</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Mode Manager + Rule Machine for Away actions
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Last person leaves</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">After 10 minutes + No motion detected</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Lights off, Lock doors, Set thermostat, Arm security</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Last person leaves (via Alexa app location)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Wait</span>
-        <span class="step-content">10 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Mode "Away", Lights off, Lock doors, Adjust thermostat</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">Last person leaves home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Delay</span>
-        <span class="step-content">10 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Set home to Away, Turn off lights, Lock doors</span>
-      </div>
-    </div>
-  </div>
-</div>
+## Setup notes
 
-## Away mode actions checklist
+1. Create one shared state with at least Home, Away, and Guest values.
+2. Add every tracked household member, then test each person's arrival and departure independently.
+3. Create an obvious Guest or Staying Home control before enabling automatic Away.
+4. Start with only a notification that says Away would have activated.
+5. After a week of correct notifications, allow reversible actions such as turning off nonessential lights.
+6. Add thermostat changes only with safe heating and cooling limits.
+7. Treat locks, garage doors, alarms, cooking appliances, and space heaters as separate safety automations with their own tests.
 
-### Lighting
+## Safe first actions
 
-**Turn Off:**
-- All interior lights
-- Decorative lighting
-- Night lights
-- Under-cabinet lighting
+### Start here
 
-**Turn On (if dark):**
-- Away lighting pattern (see security section)
-- Exterior lights on timer
+- Set the shared house state to Away.
+- Turn off nonessential interior and decorative lights.
+- Apply a modest thermostat setback within safe limits.
+- Send a notification listing exactly what changed.
+- Enable other automations that already use Away as a condition.
 
-### Climate control
+### Add only after separate testing
 
-**Thermostat settings:**
-- **Heating season:** 60°F (15°C)
-- **Cooling season:** 78°F (26°C)
-- Switch to "Away" or "Eco" mode
-
-**Other climate:**
-- Turn off bathroom fans
-- Stop humidifiers/dehumidifiers
-- Close smart vents in unused rooms
-
-### Security
-
-**Lock everything:**
-- Front door
-- Back door
-- Side doors
-- Garage door (close if open)
-- Deadbolts
-
-**Arm security:**
-- Interior motion sensors
-- Door/window sensors
-- Cameras start recording
-- Enable push notifications
-
-### Appliances & devices
-
-**Turn off:**
-- Coffee maker
-- Space heaters
-- Fans
-- Entertainment systems
-- Smart plugs (non-essential)
-
-**Automation pause:**
-- Robot vacuum (or start if scheduled)
-- Watering systems (unless scheduled)
-- Turn off screens on dashboards
-
-### Notifications
-
-**Alert options:**
-- "Home is now in Away mode"
-- "All doors locked ✓"
-- "Thermostat set to eco mode"
-- "Security system armed"
+- Locking exterior doors.
+- Closing a garage door.
+- Arming an alarm with interior motion sensors.
+- Switching off an appliance that may be unsafe to interrupt remotely.
+- Starting a robot vacuum where pets, cords, or closed doors may create problems.
 
 ## Advanced features
 
-### Graduated timeouts
+### Use a pending-away stage
 
-Different delay times for different situations:
-- **Short trip (daytime, no calendar event):** 10 minute delay before activating away mode
-- **Likely longer trip (calendar shows event):** 3 minute delay
+Set a temporary Pending Away state as soon as the last tracked person leaves. During the delay, cancel it if motion, a door event, or a manual override suggests someone remains. Promote it to Away only when the delay finishes cleanly.
 
-Use conditional logic to check time of day and calendar status to determine appropriate timeout.
+### Distinguish a short trip from vacation
 
-### Approaching home detection
+Normal Away mode should make reversible daily changes. Vacation mode can use different climate limits, water monitoring, lighting patterns, and notification rules, but it should be selected explicitly rather than inferred from a long absence.
 
-Create "Approaching" zone 500m from home:
+### Keep away lighting separate
 
-**Benefits:**
-- Pre-heat/cool home
-- Turn on entry lights
-- Unlock door as you arrive
-- Disarm security
+Away mode can enable an [away-lighting recipe](/automation/security/away-lights.html), but it should not contain the entire lighting schedule. Separating the state from its consumers makes failures easier to understand.
 
-**Setup:** Create zone trigger when person enters approaching zone (500m radius).
+## Failure modes
 
-### False positive prevention
+- **Away activates while someone is home:** Increase the delay, fix the missing person's presence signal, and make Guest or Staying Home easier to find.
+- **Away never activates:** Identify which person or device remains falsely present. Do not silently ignore a stuck signal.
+- **A phone battery dies:** Treat missing data as uncertain, not automatically away.
+- **Someone returns during the delay:** Cancel Pending Away and leave the house in Home mode.
+- **Someone returns just after activation:** Switch to Home immediately and reverse only the actions that are safe to reverse.
+- **The thermostat changes too far:** Enforce safe temperature limits on the thermostat itself, independent of Away mode.
+- **The hub or internet is down:** Physical switches, locks, alarm controls, and thermostat controls must remain usable.
 
-**Scenario:** Phone GPS drifts, triggers away mode while you're home
+## Done when
 
-**Solution 1: Motion verification**
-Add condition: Must have no motion for extended time (15 minutes)
+- [ ] Every household member can leave and return without another person's state becoming incorrect.
+- [ ] A child, guest, or person without a tracked phone can prevent Away mode.
+- [ ] Simulated location drift does not activate Away while indoor activity continues.
+- [ ] Returning during the delay cancels Pending Away.
+- [ ] The notification accurately lists every action that ran.
+- [ ] Home or Guest mode can be restored without opening an app.
+- [ ] Internet loss does not prevent manual control of lights, locks, alarms, or climate.
 
-**Solution 2: Door activity check**
-Add condition: No door opened in last 15 minutes
+## FAQ
 
-**Solution 3: Manual override**
-- Physical button: "Staying Home"
-- Voice command: "Cancel away mode"
-- App toggle: Disable auto-away for X hours
+### How long should away mode wait after everyone leaves?
 
-### Phased away activation
+Start with 10 to 15 minutes. A delayed away mode is less disruptive than a false activation while a child, guest, or person without a phone is still home.
 
-Gradually transition to full away mode:
+### Is phone location enough to know the house is empty?
 
-**Phase 1: Pre-Away (5 minutes after leaving)**
-- Turn off non-essential lights
-- Reduce thermostat by 2°
+No. Phones can be left behind, run out of battery, or report the wrong location. Use a delay, recent motion or door activity, and a guest override.
 
-**Phase 2: Away (10 minutes after leaving)**
-- Turn off all lights
-- Set thermostat to eco
-- Lock doors
+### Should away mode automatically lock doors and arm an alarm?
 
-**Phase 3: Secure Away (20 minutes after leaving)**
-- Arm security system
-- Enable enhanced monitoring
-- Activate away lighting patterns
+Add security actions only after the household has tested presence detection and the security system's own entry, exit, and emergency behavior.
 
-## Handling edge cases
+## Related recipes
 
-### Kids without phones
-
-**Solution 1: Time-based override**
-Add condition: Don't activate during after-school hours (3-6 PM on weekdays)
-
-**Solution 2: Door lock check**
-- Kids can't lock deadbolt from inside
-- Check deadbolt status before activating away
-
-**Solution 3: Motion sensor required**
-- Must have no motion for longer period
-- 20+ minutes instead of 10
-
-### Guests visiting
-
-**Solution 1: Guest mode toggle**
-- Manual switch: "Guests over"
-- Disables auto-away
-- Re-enables automatically after 24 hours
-
-**Solution 2: Extended delays**
-- Increase motion-free time to 30 minutes
-- Require explicit departure signal
-
-### Dead phone battery
-
-**Solution 1: Fallback verification**
-- Must have multiple verification methods pass
-- Motion + door activity + time of day
-
-**Solution 2: Manual check-in**
-- Send notification: "Haven't heard from you, are you home?"
-- Await response before activating
-
-**Solution 3: Conservative approach**
-- Only activate if ALL signs point to empty
-- When in doubt, don't activate
-
-### Left phone at home
-
-**Automatic recovery:**
-Create automation that detects quick return (door opens within 1 hour of away mode activation) and switches back to Home mode.
-
-## Troubleshooting
-
-### Away mode activates while home
-
-**Check:**
-- GPS accuracy on phones
-- Motion sensor placement and function
-- Motion-free timeout setting
-- Other verification conditions
-
-**Fix:**
-- Increase geofence size
-- Add more verification conditions
-- Extend motion-free timeout
-- Add manual override button
-
-### Away mode doesn't activate
-
-**Check:**
-- Location services enabled on all phones
-- App has background permissions
-- Geofence configured correctly
-- Conditions are being met
-
-**Fix:**
-- Review location settings
-- Test geofence manually
-- Check automation logs
-- Verify all triggers/conditions
-
-### Delayed activation
-
-**Causes:**
-- Conservative timeout settings
-- Many verification conditions
-- Cloud processing delays
-
-**Solutions:**
-- Reduce timeout if safe
-- Remove unnecessary conditions
-- Use local processing
-
-## Security considerations
-
-**Don't rely solely on GPS:**
-- Add motion verification
-- Check door activity
-- Verify TV/music status
-
-**Fail-safe approach:**
-- When uncertain, don't activate
-- Better to not activate than false activate
-- Manual override always available
-
-**Notification strategy:**
-- Always notify when activating
-- Include what actions were taken
-- Allow quick undo via notification
-
----
-
-**Related automations:**
-- [Unlock door when arriving home](/automation/daily-routines/unlock-door-arrival/)
-- [Morning routine](/automation/daily-routines/morning-routine/)
-- [Bedtime routine](/automation/daily-routines/bedtime-routine/)
+- [Away lighting](/automation/security/away-lights.html)
+- [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
+- [Unlock the door when arriving home](/automation/daily-routines/unlock-door-arrival.html)
+- [Daily routine automations](/automation/daily-routines/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/daily-routines/">← Back to Daily Routines</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/daily-routines/index.html">Back to daily routine automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>
