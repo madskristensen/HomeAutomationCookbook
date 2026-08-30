@@ -15,7 +15,7 @@ I've bought and used the products named below. Links go directly to Amazon produ
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
 | Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) - my favorite for fast reactions. | Put it where it sees the doorway before someone reaches the switch. |
-| Detect a person who is still | [Besisglas Zigbee Human Presence Sensor](https://www.amazon.com/dp/B0GYJ3LQ5W) | TODO: verified combined PIR and mmWave sensor | Use this for showers, reading, or other rooms where a PIR can time out while someone is still. |
+| Detect a person who is still | [Besisglas Zigbee Human Presence Sensor](https://www.amazon.com/dp/B0GYJ3LQ5W) | [Aqara Presence Sensor FP300](https://www.amazon.com/dp/B0FG2MD3YP) | Use this for showers, reading, or other rooms where a PIR can time out while someone is still. |
 | Detect bathroom motion with humidity, temperature, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | Use it where the extra sensor readings are useful, not where the fastest motion response matters most. |
 
 A PIR sensor is often enough for halls and closets. Use an mmWave presence sensor where someone may be still.
