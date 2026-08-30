@@ -1,13 +1,31 @@
 ---
 layout: automation
-title: Turn on lights when motion is detected - smart home automation guide
-description: Learn how to automatically turn on lights when motion is detected. Step-by-step guide for motion sensor lighting automation with examples for all smart home platforms.
-keywords: motion sensor, automatic lights, smart home lighting, motion detection, home automation, smart lights
+title: Turn lights on when you walk in (and keep the wall switch)
+description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
+keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
+last_modified_at: 2026-08-30
+faqs:
+  - question: Why do motion lights turn on too slowly?
+    answer: Put the sensor where it sees someone before they reach the switch, and keep the automation local where the platform supports it.
+  - question: Should motion lights turn on during the day?
+    answer: Usually no. Add a light-level condition or restrict the recipe to the times when the room is normally dark.
+  - question: What happens when the internet is down?
+    answer: A local hub and compatible devices can keep the automation running, but the physical wall switch must work either way.
 ---
 
-# Turn on lights when motion is detected
+# Turn lights on when you walk in
 
-Automatically turning on lights when motion is detected is one of the most popular and useful smart home automations. It solves the everyday problem of fumbling for light switches in the dark and creates a seamless, effortless lighting experience.
+Walk in, lights on. If that fails at 2am, the wall switch still works.
+
+**Best for:** Hallways, closets, entryways, laundry rooms, and bathrooms with a sensor that sees the door.
+
+**Not for:** A room where people sit still for long periods, or a bathroom with a cheap PIR facing the shower. Use a longer timeout and better occupancy detection there.
+
+<p class="last-reviewed">Last reviewed: August 2026</p>
+
+## Why this exists
+
+Nobody should have to fumble for a switch with a basket of laundry or explain the light system to a guest. The first detection needs to happen before a hand reaches the wall control. Keep the switch useful so the room remains ordinary when the hub, sensor, or internet is not.
 
 ## Use cases
 
@@ -30,29 +48,17 @@ Automatically turning on lights when motion is detected is one of the most popul
   </div>
 </div>
 
-## Products needed
+## What I used
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Motion Sensor</strong>
-      <div class="product-details">
-        Popular brands: Philips Hue, Aqara, SmartThings, Wyze<br>
-        Indoor: Standard motion sensors • Outdoor: Weatherproof IP65+ rated sensors
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Light Switch or Bulb</strong>
-      <div class="product-details">
-        Switches: Lutron, GE, Inovelli, Leviton<br>
-        Bulbs: Philips Hue, LIFX, Wyze, Sengled
-      </div>
-    </div>
-  </div>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | Aeotec SmartThings Motion Sensor - owner favorite for fast reactions. TODO(owner): add the exact Amazon product link. | Mount it where it sees the approach to the doorway. |
+| Dim a fixed light | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | TODO(owner): preferred premium dimmer | Keep the physical paddle usable. |
+| Switch a fixed light on or off | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | TODO(owner): preferred premium on/off switch | Keep the physical paddle usable. |
+
+For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) instead. It is not the owner's first choice when the fastest motion response is the job.
+
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 <div class="info-box">
   <strong>💡 Outdoor Motion Sensing Tip</strong>
@@ -63,10 +69,17 @@ Automatically turning on lights when motion is detected is one of the most popul
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
-<div class="automation-example">IF motion detected
-THEN turn on lights to 100%</div>
+- **Trigger:** The entry sensor changes from clear to motion detected.
+- **Conditions:** The room is dark enough, or it is within the hours you want automatic light.
+- **Action:** Turn on the light. Use a dim level at night if the light supports it.
+- **Wait / timeout:** None for turn-on. The paired [turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html) recipe owns the timeout.
+- **Stop condition:** A manual wall-switch change should prevent the off recipe from undoing the person's choice.
+- **Manual override:** The wall switch still wins.
+
+<div class="automation-example">IF entry motion is detected AND the room is dark
+THEN turn on the light</div>
 
 <div class="info-box">
   <strong>🌞 Day vs. Night Dimming Enhancement</strong>
@@ -110,28 +123,27 @@ THEN turn on lights to 100%</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Motion sensor state changes to "on"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Light level (lux) is below 100</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on bathroom light</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Night (10 PM - 6 AM):</strong> Set brightness to 10%
-        </div>
-        <div class="step-variant">
-          <strong>Day (6 AM - 10 PM):</strong> Set brightness to 100%
-        </div>
-      </div>
-    </div>
+              <p>Replace the entity IDs and the brightness level. This runs locally when the integration and automation engine are local.</p>
+
+              <pre><code class="language-yaml">automation:
+          - alias: Turn on entry light on motion
+            mode: restart
+            triggers:
+              - trigger: state
+                entity_id: binary_sensor.entry_motion
+                to: "on"
+            conditions:
+              - condition: numeric_state
+                entity_id: sensor.entry_illuminance
+                below: 100
+            actions:
+              - action: light.turn_on
+                target:
+                  entity_id: light.entry
+                data:
+                  brightness_pct: 100</code></pre>
+
+              <p>Use <code>mode: restart</code> so a new motion event refreshes the intent without stacking runs. Do not use a cloud-only sensor for an essential path.</p>
   </div>
   
   <div class="platform-card">
@@ -416,13 +428,43 @@ THEN turn on lights to 100%</div>
   </ul>
 </div>
 
----
+## Failure modes
 
-**Related automations:**
-- [Turn off lights after motion stops](/automation/lighting/lights-off-after-motion/)
-- [Nighttime bathroom lighting](/automation/lighting/bathroom-night-light/)
+- **The light turns on after someone reaches the switch:** Move the sensor to see the entry path earlier and keep the path local.
+- **It turns on in daylight:** Add a light-level condition, then test it on a bright overcast day as well as at night.
+- **A guest stands still after the light turns on:** This recipe should be paired with a conservative off timeout. Use presence sensing where stillness is normal.
+- **The sensor is hidden or affected by steam:** Keep it clear of towels, furniture, vents, and the shower plume.
+- **The hub or internet is down:** The physical switch remains the fallback. Verify any Level 2 automation is local before depending on it.
+
+## Done when
+
+- [ ] Walk in from every usual entry path and the light is on before your hand reaches the switch.
+- [ ] During daytime, the light stays off when the room is already bright.
+- [ ] Turn the wall switch on or off and confirm the paired off recipe does not immediately reverse that choice.
+- [ ] Disconnect the internet, if your setup supports local control, and verify the automation still works.
+- [ ] Have someone who did not build it try the room without instructions.
+
+## FAQ
+
+### Why do motion lights turn on too slowly?
+
+Put the sensor where it sees someone before they reach the switch, and keep the automation local where the platform supports it.
+
+### Should motion lights turn on during the day?
+
+Usually no. Add a light-level condition or restrict the recipe to the times when the room is normally dark.
+
+### What happens when the internet is down?
+
+A local hub and compatible devices can keep the automation running, but the physical wall switch must work either way.
+
+## Related recipes
+
+- [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
+- [Bathroom night light](/automation/lighting/bathroom-night-light.html)
+- [Lighting automations](/automation/lighting/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/lighting/">← Back to Lighting Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/lighting/index.html">← Back to lighting automations</a>
+  <a href="/automation/index.html">View all automations →</a>
 </div>

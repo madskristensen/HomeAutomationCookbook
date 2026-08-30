@@ -1,13 +1,31 @@
 ---
 layout: automation
-title: Turn Off Lights After Motion Stops - Smart Home Automation
-description: Automatically turn off lights when no motion is detected. Complete guide with timing strategies, conditions, and platform examples for motion-based light control.
+title: Turn lights off after motion stops (without leaving people in the dark)
+description: A conservative motion-lighting off recipe that respects still occupants, manual wall-switch choices, and local-first control.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically
+last_modified_at: 2026-08-30
+faqs:
+  - question: How long should motion lights stay on?
+    answer: Start longer than you think, then reduce the timeout only after the household has used the room normally for several days.
+  - question: Why do bathroom motion lights turn off while someone is inside?
+    answer: A PIR sensor can miss someone who is still or behind a shower curtain. Use a longer timeout, another sensor, or presence detection.
+  - question: Can a wall switch override the automatic shutoff?
+    answer: It should. Treat a manual change as an explicit choice and avoid turning the light back off immediately.
 ---
 
-# Turn off lights after motion stops
+# Turn lights off after motion stops
 
-While modern LED lights use minimal power, automatically turning off lights when a room is unoccupied creates a satisfying smart home experience and ensures energy isn't wasted. This automation completes the motion detection lighting cycle.
+Leave the room, lights off. Stay still, and they should not leave you in the dark. The wall switch still wins when someone wants a different answer.
+
+**Best for:** Hallways, closets, laundry rooms, and other spaces with predictable short visits.
+
+**Not for:** A bathroom with a cheap PIR and a short timer, or a work space where people sit quietly. Start with a longer delay or use occupancy sensing.
+
+<p class="last-reviewed">Last reviewed: August 2026</p>
+
+## Why this exists
+
+The off half makes automatic lighting useful without making it hostile. It should wait long enough for real people, then turn the light off after the room is clear. It must not fight a guest who used the familiar wall switch.
 
 ## Use cases
 
@@ -29,29 +47,17 @@ While modern LED lights use minimal power, automatically turning off lights when
   </div>
 </div>
 
-## Products needed
+## What I used
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Motion Sensor</strong>
-      <div class="product-details">
-        Same sensor used for turning lights on<br>
-        Should detect motion continuously, not just entry<br>
-        Battery life consideration: some sensors report too frequently
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Light Switch or Bulb</strong>
-      <div class="product-details">
-        Connected to your automation platform
-      </div>
-    </div>
-  </div>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | Aeotec SmartThings Motion Sensor - owner favorite for fast reactions. TODO(owner): add the exact Amazon product link. | A PIR needs a conservative timer for people who sit still. |
+| Dim a fixed light | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | TODO(owner): preferred premium dimmer | Keep the physical paddle usable. |
+| Switch a fixed light on or off | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | TODO(owner): preferred premium on/off switch | Keep the physical paddle usable. |
+
+For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) instead. It is not the owner's first choice when the fastest motion response is the job.
+
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 <div class="info-box">
   <strong>💡 Outdoor Tip</strong>
@@ -60,10 +66,18 @@ While modern LED lights use minimal power, automatically turning off lights when
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
-<div class="automation-example">IF no motion detected for 5 minutes
-THEN turn off lights</div>
+- **Trigger:** The room sensor reports no motion for the chosen timeout.
+- **Conditions:** The light was turned on by this automation, no other room sensor is active, and no manual override is active.
+- **Action:** Turn the light off.
+- **Wait / timeout:** Start at 5 to 10 minutes for a bathroom or quiet room. Reduce only after normal household testing.
+- **Stop condition:** New motion, another active sensor, or a manual wall-switch change cancels the shutoff.
+- **Manual override:** The wall switch still wins.
+
+<div class="automation-example">IF the room has been clear for the timeout
+AND no manual override is active
+THEN turn off the light</div>
 
 <div class="info-box">
   <strong>⏱️ Timing Strategies by Room Type</strong>
@@ -110,25 +124,26 @@ THEN turn off lights</div>
       <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
       <h4>Home Assistant</h4>
     </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Bathroom motion sensor no motion for 5 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Bathroom door sensor shows door is open (not in use)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn off bathroom light</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Advanced:</strong> Dim to 50% after 3 min, wait 30 sec, check motion, then off
-        </div>
-      </div>
-    </div>
+              <p>Replace the entity IDs. This version waits five minutes, checks that the sensor is still clear, then turns the light off.</p>
+
+              <pre><code class="language-yaml">automation:
+          - alias: Turn off entry light after motion clears
+            mode: restart
+            triggers:
+              - trigger: state
+                entity_id: binary_sensor.entry_motion
+                to: "off"
+                for: "00:05:00"
+            conditions:
+              - condition: state
+                entity_id: binary_sensor.entry_motion
+                state: "off"
+            actions:
+              - action: light.turn_off
+                target:
+                  entity_id: light.entry</code></pre>
+
+              <p>For a bathroom, start at 10 minutes or add a second sensor. Add a helper that records a manual wall-switch override before using this in a shared room.</p>
   </div>
   
   <div class="platform-card">
@@ -387,13 +402,43 @@ THEN turn off lights</div>
   </div>
 </div>
 
----
+## Failure modes
 
-**Related automations:**
-- [Turn on lights when motion detected](/automation/lighting/lights-on-motion/)
-- [Bathroom night light automation](/automation/lighting/bathroom-night-light/)
+- **The light turns off while someone is still:** Increase the timeout before changing anything else. PIR sensors do not see a person reading, showering, or standing behind a towel.
+- **A guest uses the wall switch:** Treat that as an override. Do not let the next sensor event immediately undo it.
+- **The sensor sees motion outside the room:** Reposition it or narrow its view before shortening the timeout.
+- **The hub reboots or the internet is down:** The wall switch remains the fallback. A local automation may resume after the hub is ready, but do not rely on it for Level 1 control.
+- **The room is in use at night:** Use a longer timeout for quiet nighttime use, especially in bathrooms.
+
+## Done when
+
+- [ ] Leave the room and confirm the light turns off after the selected delay.
+- [ ] Sit or stand still in every normal part of the room for the same delay and confirm it does not turn off unexpectedly.
+- [ ] Toggle the wall switch manually and verify the automation does not fight the choice.
+- [ ] Test after a hub restart and, where local control is expected, with the internet disconnected.
+- [ ] Have a guest use the room without explaining the automation.
+
+## FAQ
+
+### How long should motion lights stay on?
+
+Start longer than you think, then reduce the timeout only after the household has used the room normally for several days.
+
+### Why do bathroom motion lights turn off while someone is inside?
+
+A PIR sensor can miss someone who is still or behind a shower curtain. Use a longer timeout, another sensor, or presence detection.
+
+### Can a wall switch override the automatic shutoff?
+
+It should. Treat a manual change as an explicit choice and avoid turning the light back off immediately.
+
+## Related recipes
+
+- [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
+- [Bathroom night light](/automation/lighting/bathroom-night-light.html)
+- [Lighting automations](/automation/lighting/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/lighting/">← Back to Lighting Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/lighting/index.html">← Back to lighting automations</a>
+  <a href="/automation/index.html">View all automations →</a>
 </div>

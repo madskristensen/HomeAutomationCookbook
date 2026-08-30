@@ -8,20 +8,13 @@ description: Privacy policy for Home Automation Cookbook. Learn how we handle yo
 
 **Last updated:** {{ site.time | date: '%B %d, %Y' }}
 
-Home Automation Cookbook is committed to protecting your privacy. This policy explains what information we collect and how we use it.
+Home Automation Cookbook is committed to protecting your privacy. This policy explains how the site handles visitor data.
 
 ## Information we collect
 
-### Website usage data
+### No analytics or tracking
 
-We may collect basic analytics data to understand how visitors use our site:
-
-- Pages visited
-- Time spent on pages
-- Referral sources
-- Device type and browser
-
-This data is collected anonymously and cannot be used to identify you personally.
+This site does not use analytics, tracking pixels, tag managers, or advertising cookies. It does not collect information about pages visited, time spent on pages, referral sources, devices, or browsers.
 
 ### No personal data collection
 
