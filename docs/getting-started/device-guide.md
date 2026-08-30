@@ -84,6 +84,12 @@ I have bought and used every product named below. Links go directly to Amazon pr
 |---|---|---|---|
 | Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Someone should be able to change the temperature at the thermostat. |
 
+### Power monitoring
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Detect whether a TV is on | Zooz ZEN15 Power Switch | No personally verified recommendation yet | Use the power reading as a signal only. Keep the TV's remote and normal power controls unchanged. |
+
 ### Leaks and safety
 
 | Job | Good enough | Never think about it | Guest-proof note |

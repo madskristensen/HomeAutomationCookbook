@@ -6,7 +6,7 @@ keywords: TV lighting automation, dim lights TV, theater mode automation, movie 
 last_modified_at: 2026-08-30
 faqs:
   - question: Should I use power monitoring or a smart TV signal as the trigger?
-    answer: Power monitoring works with almost any TV and plug, but can be fooled by a menu screen drawing similar power to actual playback. A smart TV or streaming device signal is more accurate if the platform supports it reliably.
+    answer: A compatible power-monitoring plug works with many TVs, but can be fooled by a menu screen drawing similar power to active playback. A smart TV or streaming device signal is more accurate if the platform supports it reliably.
   - question: Why does the TV menu sometimes dim the lights by mistake?
     answer: A power-based trigger cannot always tell a menu screen from active playback, since both can draw similar wattage. Raising the power threshold or adding a short delay before dimming reduces this.
   - question: Will the lights go back to their previous brightness after the TV turns off?
@@ -29,7 +29,7 @@ Dimming the lights by hand every time a movie starts is a small chore that is ea
 
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
-| Detect the TV turning on | No personally verified recommendation yet | No personally verified recommendation yet | A power-monitoring smart plug or a supported smart TV/streaming device integration can both work; neither has a specific personally verified recommendation here. |
+| Detect the TV turning on | Zooz ZEN15 Power Switch | No personally verified recommendation yet | I use the ZEN15's power readings to distinguish standby from the TV being on. Measure the TV's actual draw before setting thresholds. |
 | Dim the living room lights | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Requires a dimmable fixture and a switch rated for the load. |
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
@@ -88,7 +88,7 @@ Add a condition that skips dimming if recent motion has been detected in the roo
 
 ### Should I use power monitoring or a smart TV signal as the trigger?
 
-Power monitoring works with almost any TV and plug, but can be fooled by a menu screen drawing similar power to actual playback. A smart TV or streaming device signal is more accurate if the platform supports it reliably.
+A compatible power-monitoring plug works with many TVs, but can be fooled by a menu screen drawing similar power to active playback. A smart TV or streaming device signal is more accurate if the platform supports it reliably.
 
 ### Why does the TV menu sometimes dim the lights by mistake?
 
@@ -102,7 +102,7 @@ Yes, if the previous brightness is saved before dimming and restored once the TV
 
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
-- [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
+- [Set every speaker to the right volume with one command](/automation/entertainment/speaker-volume-presets.html)
 
 <div class="page-navigation">
   <a href="/automation/entertainment/index.html">Back to entertainment</a>
