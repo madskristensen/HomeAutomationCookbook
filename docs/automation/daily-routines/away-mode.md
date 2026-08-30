@@ -61,7 +61,7 @@ AND send a summary notification</div>
 3. Create an obvious Guest or Staying Home control before enabling automatic Away.
 4. Start with only a notification that says Away would have activated.
 5. After a week of correct notifications, allow reversible actions such as turning off nonessential lights.
-6. Add thermostat changes only with safe heating and cooling limits.
+6. Add thermostat changes only with safe heating and cooling limits. Use the [safe thermostat auto-away guide](/getting-started/safe-thermostat-away.html) to account for pets, pipes, unavailable sensors, and manual holds.
 7. Treat locks, garage doors, alarms, cooking appliances, and space heaters as separate safety automations with their own tests.
 
 ## Safe first actions
@@ -132,6 +132,7 @@ Add security actions only after the household has tested presence detection and 
 
 ## Related recipes
 
+- [Safe thermostat auto-away for pets and pipes](/getting-started/safe-thermostat-away.html)
 - [Away lighting](/automation/security/away-lights.html)
 - [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
 - [Unlock the door when arriving home](/automation/daily-routines/unlock-door-arrival.html)

@@ -24,6 +24,8 @@ Climate automation should reduce waste without making the house uncomfortable or
 
 **Manual fallback** - Keep every thermostat and switch usable at the wall
 
+[Set safe thermostat auto-away limits](/getting-started/safe-thermostat-away.html) before allowing Away or Vacation mode to change the temperature.
+
 </div>
 
 ## Essential automations

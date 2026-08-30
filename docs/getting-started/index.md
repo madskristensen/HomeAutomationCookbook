@@ -178,6 +178,7 @@ You now have a solid foundation for planning your smart home. The journey from h
 - [Explore platforms](/getting-started/choose-the-right-platform.html) in detail
 - [Browse device recommendations](/getting-started/device-guide.html)
 - [Compare PIR and mmWave presence sensors](/getting-started/pir-vs-mmwave-presence.html)
+- [Set safe thermostat auto-away limits](/getting-started/safe-thermostat-away.html)
 - [Create your first automation](/automation/)
 
 ---

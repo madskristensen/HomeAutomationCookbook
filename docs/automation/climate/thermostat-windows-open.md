@@ -126,6 +126,7 @@ Treat the manual thermostat change as the new instruction. Do not restore an old
 
 ## Related recipes
 
+- [Safe thermostat auto-away for pets and pipes](/getting-started/safe-thermostat-away.html)
 - [Window open and close notifications](/automation/climate/window-notifications.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Climate automations](/automation/climate/index.html)
