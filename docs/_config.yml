@@ -126,9 +126,9 @@ navigation:
       - title: Appliances
         url: /automation/appliances/index.html
         subitems:
-          - title: Washer done notification
+          - title: Washer finished alert
             url: /automation/appliances/washer-done-notification.html
-          - title: Dryer done notification
+          - title: Dryer finished alert
             url: /automation/appliances/dryer-done-notification.html
           - title: Dishwasher done alert
             url: /automation/appliances/dishwasher-done-notification.html

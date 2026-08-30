@@ -1,364 +1,141 @@
 ---
 layout: automation
-title: Dryer Done Notification - Vibration Sensor Method
-description: Get notified when dryer finishes using vibration detection. Clever method using multi-purpose sensor.
-keywords: dryer done alert, vibration sensor dryer, laundry completion alert, dryer automation, vibration detection, appliance monitoring, smart laundry
+title: Get notified when the dryer finishes
+description: A platform-neutral laundry recipe that detects sustained dryer vibration and sends one completion alert without controlling appliance power.
+keywords: dryer finished alert, dryer vibration sensor, laundry notification, dryer automation, dryer done notification
+last_modified_at: 2026-08-30
+faqs:
+  - question: Why use vibration instead of a smart plug for a dryer?
+    answer: Many electric dryers use a 240-volt high-current circuit that a normal smart plug cannot safely monitor. A battery vibration sensor is non-invasive when mounted away from hot and moving parts.
+  - question: How long should vibration be absent before the dryer counts as finished?
+    answer: Measure the dryer's longest normal pause and cooldown behavior, then use a delay comfortably longer than that observation.
+  - question: What if the washer makes the dryer sensor vibrate?
+    answer: Reposition the sensor, require sustained vibration before marking the dryer as running, and test washer-only cycles before trusting the alert.
 ---
 
-# Notify me when the dryer is done
+# Get notified when the dryer finishes
 
-Get alerted when the dryer finishes so you can remove clothes promptly and reduce wrinkles. This clever vibration sensor method works even with 240V dryers.
+Detect a real drying cycle, wait through normal pauses, and send one alert when sustained vibration stops.
 
-## Use cases
+**Best for:** A dryer with a safe exterior mounting point and a vibration pattern that can be distinguished from nearby appliances.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Efficiency</h4>
-    <ul>
-      <li><strong>Prompt Clothes Removal</strong> - Empty dryer right when cycle ends to reduce wrinkles</li>
-      <li><strong>Start Next Load</strong> - Know when dryer is available for next batch</li>
-      <li><strong>Laundry Flow</strong> - Keep laundry moving efficiently from washer to dryer to folding</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Convenience</h4>
-    <ul>
-      <li><strong>Save Time</strong> - No more checking if dryer is done</li>
-      <li><strong>Reduce Re-Drying</strong> - Clothes won't sit and get wrinkled</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A sensor mounted near heat, vents, belts, drums, controls, or other moving parts, or an ordinary smart plug connected to a 240-volt dryer circuit.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 1: Multi-Sensor (Recommended for 240V dryers)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Multi-Purpose Sensor</strong>
-      <div class="product-details">
-        Popular brands: SmartThings, Aeotec, Zigbee multi-sensors<br>
-        Vibration detection • Door contact sensor • Battery powered • Attach to dryer door
-      </div>
-    </div>
-  </div>
-</div>
+Dryers can pause, reverse, tumble intermittently, or run a cooldown phase. Nearby washers can shake the same floor. A useful completion alert must prove the dryer was running and wait longer than its normal quiet periods.
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 2: Power Monitoring (If standard 120V outlet)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Power Metering Smart Plug</strong>
-      <div class="product-details">
-        15A rated minimum • Only works if dryer uses standard outlet (rare)<br>
-        <em>Note: Most dryers use 240V hardwired connection</em>
-      </div>
-    </div>
-  </div>
-</div>
+Vibration sensing is imperfect, but it is non-invasive and does not put an unverified relay in the dryer's power path.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Light</strong>
-      <div class="product-details">
-        In laundry room for visual alert when done
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Dashboard Tile</strong>
-      <div class="product-details">
-        Showing dryer status and escalating reminders
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-## Automation setup - Multi-sensor method
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect dryer vibration | TODO(owner): verified battery vibration sensor | TODO(owner): preferred vibration sensor | Mount only on a cool, fixed exterior panel after testing surface temperature through a full cycle. |
+| Clear the waiting-laundry state | A manual dashboard or phone action | TODO(owner): verified dryer-door sensor | Do not assume one sensor can reliably detect both vibration and door position. |
 
-<div class="automation-example">IF vibration stops for 5 minutes
-AND door closed
-AND dryer was running
-THEN send notification "Dryer done - remove clothes!"
-AND set dryer_running to false</div>
+See [recommended gear](/gear.html) for the job-first checklist. The site does not yet have an owner-verified dryer vibration sensor, so no product link is presented as a recommendation.
 
-<div class="info-box">
-  <strong>💡 Multi-Sensor Requirements & Placement</strong>
-  <ul>
-    <li><strong>Platform:</strong> Home Assistant, SmartThings (with WebCoRE/SharpTools), or Hubitat with variables/virtual switches</li>
-    <li><strong>Sensor:</strong> Multi-sensor with both vibration and contact detection</li>
-    <li><strong>Mounting:</strong> On dryer door (top or side works best). Should sense vibration when drum spinning and detect door opening/closing. Secure firmly with adhesive or tape.</li>
-    <li><strong>Testing:</strong> Run a dryer cycle. Verify vibration detected throughout cycle, notification when cycle ends, and door opening resets system.</li>
-  </ul>
-</div>
+## Logic
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Step 1: Detect Dryer Running</h4>
-    
-    <h4>Triggers</h4>
-    <ul>
-      <li>Multi-purpose sensor vibration changes to Active or Inactive (any vibration change)</li>
-    </ul>
-    
-    <h4>Conditions</h4>
-    <ul>
-      <li>Contact sensor is closed (door closed)</li>
-      <li>Vibration has stayed active for 5 minutes (not just bump/slam)</li>
-    </ul>
-    
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on variable/virtual switch "dryer_running"</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Step 2: Detect Dryer Done</h4>
-    
-    <h4>Triggers</h4>
-    <ul>
-      <li>Vibration becomes Inactive (stops vibrating)</li>
-    </ul>
-    
-    <h4>Conditions</h4>
-    <ul>
-      <li>Contact sensor is closed (door still closed)</li>
-      <li>Variable "dryer_running" is true</li>
-      <li>Vibration inactive for 5 minutes (confirms actually done)</li>
-    </ul>
-    
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "Dryer is done!"</li>
-      <li>Set variable "dryer_running" to false</li>
-      <li>Flash laundry room light (optional)</li>
-    </ul>
-  </div>
-</div>
+- **Trigger:** Vibration remains active long enough to prove the dryer started.
+- **Conditions:** The sensor is available and the dryer was not already marked as running.
+- **Action:** Mark the dryer as running and clear any previous waiting-laundry state.
+- **Wait / timeout:** Wait until vibration remains inactive longer than the dryer's longest observed pause or cooldown gap.
+- **Stop condition:** Mark the cycle finished, send one notification, and set a waiting-laundry state.
+- **Manual override:** A person can clear the waiting state without changing power to the dryer.
 
-## Platform-specific examples
+<div class="automation-example">IF dryer vibration remains active for the calibrated start delay
+THEN mark the dryer as running
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Vibration changes AND door closed AND active 5min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Done</span>
-        <span class="step-content">Vibration inactive 5min AND door closed AND running</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Notify, Turn off running, Turn on needs_emptying</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Reset:</strong> Door opens → Turn off both booleans
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Vibration AND door closed AND active 5min → Switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Done</span>
-        <span class="step-content">Vibration inactive 5min AND door closed AND switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Notify, Switch off, Flash light</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use WebCoRE or SharpTools for complex logic
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Vibration active 5min AND door closed → Switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Done</span>
-        <span class="step-content">Vibration inactive 5min AND switch on → Notify</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Create virtual switch, use Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Cannot directly handle complex vibration+contact logic</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home Assistant or Hubitat as bridge</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa / Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited support for complex vibration+contact logic</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home Assistant or SmartThings for automation</span>
-      </div>
-    </div>
-  </div>
-</div>
+IF vibration remains inactive for the calibrated finish delay
+AND the dryer is marked as running
+AND the sensor is available
+THEN send one "Dryer finished" notification
+AND mark laundry as waiting
+AND clear the running marker</div>
+
+## Setup notes
+
+1. Find a fixed exterior panel that remains cool and does not block vents, labels, controls, or service access.
+2. Attach the sensor securely with removable mounting material suitable for the surface.
+3. Observe at least three full cycles, including cooldown and wrinkle-prevention behavior.
+4. Record the shortest sustained vibration that proves a start and the longest quiet period during a cycle.
+5. Run the washer by itself and confirm it does not mark the dryer as running.
+6. Create separate running and waiting-laundry states.
+7. Test with silent logging before enabling notifications.
+8. Add one completion notification, not repeated announcements.
+
+## Calibrate from evidence
+
+The sensor's location matters as much as its sensitivity:
+
+| Test | Expected result |
+|---|---|
+| Dryer off, washer running | Dryer remains idle |
+| Door closes firmly | A bump does not prove a cycle started |
+| Full dryer cycle | Sustained vibration marks running |
+| Normal pause or cooldown | Dryer remains marked running |
+| Cycle completed | One alert after the calibrated quiet delay |
+| Sensor unavailable | State becomes unknown, not finished |
+
+If the washer and dryer cannot be distinguished reliably, move the sensor or use professionally installed circuit-level energy monitoring.
 
 ## Advanced features
 
-### Escalating reminders
+### Add one restrained reminder
 
-Remind if clothes left in dryer:
+Set a waiting-laundry state after completion. Send one later reminder if it remains set, then let the household clear it manually or through a separately verified door sensor.
 
-Create two reminder automations:
-1. **30 min reminder:** If "dryer_needs_emptying" on for 30 minutes, send "REMINDER: Dryer clothes waiting for 30 minutes!"
-2. **2 hour urgent:** If still on after 2 hours, send high-priority "URGENT: Dryer clothes sitting for 2 hours - wrinkles!"
+### Respect wrinkle-prevention modes
 
-### Dashboard status
+Some dryers tumble again after the main cycle. Decide whether the household wants the alert at the main-cycle end or after all intermittent tumbling, then calibrate against that selected mode.
 
-Visual indicator:
+### Monitor sensor health
 
-Create template binary sensor with these states:
-- **Running:** Blue tumble dryer icon (when dryer_running is on)
-- **Done - needs attention:** Red alert icon (when dryer_needs_emptying is on)
-- **Empty:** Gray off icon (when both are off)
+Alert on a low battery or stale sensor before laundry day. Never interpret unavailable as no vibration.
 
-### Track cycle duration
+## Failure modes
 
-Measure how long dryer runs:
+- **Washer activity marks the dryer as running:** Reposition the sensor and require a longer sustained-start period.
+- **A door slam starts the cycle marker:** Increase the start delay so a single bump cannot qualify.
+- **Alert arrives during cooldown:** Lengthen the finish delay beyond the longest observed quiet period.
+- **No alert arrives:** Confirm the sensor stayed attached, remained available, and set the running marker.
+- **Duplicate alerts arrive:** Clear the running marker with the first completion event.
+- **The sensor falls or gets hot:** Stop using that mounting point and inspect the sensor and adhesive.
+- **Someone tries to add a normal smart plug:** Do not connect an ordinary inline plug to a high-voltage or high-current dryer circuit.
 
-Create automation that sends notification when dryer finishes, including the total cycle duration calculated from when "dryer_running" was turned on.
+## Done when
 
-## Troubleshooting
+- [ ] The mounting point stays cool and clear through a complete cycle.
+- [ ] Three representative cycles establish reliable start and finish delays.
+- [ ] Washer-only operation never marks the dryer as running.
+- [ ] A door slam never proves a cycle started.
+- [ ] Every test cycle creates exactly one completion notification.
+- [ ] An unavailable sensor does not count as finished.
+- [ ] The dryer still works normally without the automation.
 
-### Issue: False "Done" Notifications
+## FAQ
 
-**Causes:**
-- Dryer paused temporarily (door opened mid-cycle)
-- Vibration sensor too sensitive (detecting other vibrations)
-- Delay too short (drum spins intermittently)
-- Kids bumping dryer
+### Why use vibration instead of a smart plug for a dryer?
 
-**Solutions:**
-✅ Increase vibration inactive delay to 8-10 minutes
-✅ Require door closed condition throughout
-✅ Position sensor away from external vibration sources
-✅ Add condition: Dryer must have been running for minimum 15 minutes
-✅ Test sensor placement - may need adjustment
+Many electric dryers use a 240-volt high-current circuit that a normal smart plug cannot safely monitor. A battery vibration sensor is non-invasive when mounted away from hot and moving parts.
 
-Add condition to automation: Dryer must have been in "running" state for at least 15 minutes before done notification can trigger.
+### How long should vibration be absent before the dryer counts as finished?
 
-### Issue: No notification when dryer finishes
+Measure the dryer's longest normal pause and cooldown behavior, then use a delay comfortably longer than that observation.
 
-**Causes:**
-- Sensor not detecting vibration
-- Sensor battery dead
-- Door opened before cycle ended
-- Sensor fell off dryer
-- "Dryer running" never set to true
+### What if the washer makes the dryer sensor vibrate?
 
-**Check:**
-- ✅ Verify sensor battery level
-- ✅ Test vibration sensor manually (shake it, check state)
-- ✅ Check sensor is securely attached to dryer
-- ✅ Review automation logs - which condition failed?
-- ✅ Monitor sensor during actual dryer cycle
-- ✅ Verify dryer_running variable was set to true
+Reposition the sensor, require sustained vibration before marking the dryer as running, and test washer-only cycles before trusting the alert.
 
-**Fix:**
-- Reposition sensor if vibration not detected
-- Use stronger adhesive or mounting method
-- Replace battery if low
-- Add debug notifications at each automation step
+## Related recipes
 
-### Issue: Vibration detected when dryer not running
-
-**Causes:**
-- Washer vibration affecting dryer sensor
-- Other appliances causing vibration
-- Sensor too sensitive
-- Kids playing near laundry area
-
-**Solutions:**
-✅ Increase required vibration duration (10 minutes instead of 5)
-✅ Add time-based condition (only during typical dryer hours)
-✅ Position sensor to minimize external vibration
-✅ Combine with other triggers (e.g., laundry room door closed)
-✅ Add manual override to disable automation temporarily
-
-Add conditions to automation:
-- Only trigger during typical laundry hours (7am-10pm)
-- Require vibration sustained for 10 minutes instead of 5
-
-## Alternative: Power monitoring method
-
-If your dryer uses a standard 120V outlet (rare), you can use the same power monitoring method as the washer automation.
-
-**Setup:**
-- Plug dryer into 15A+ rated smart plug with power monitoring
-- Detect start: Power above 200W
-- Detect done: Power below 20W for 5 minutes
-
-*Note: Most dryers use 240V hardwired connections and cannot use smart plugs.*
-
----
-
-**Related automations:**
-- [Washer done notification](/automation/appliances/washer-done-notification/)
-- [Dishwasher done notification](/automation/appliances/dishwasher-done-notification/)
-- [Away mode automation](/automation/daily-routines/away-mode/)
+- [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
+- [Appliance automations](/automation/appliances/index.html)
+- [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 
 <div class="page-navigation">
-  <a href="/automation/appliances/">← Back to Appliance Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/appliances/index.html">Back to appliance automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

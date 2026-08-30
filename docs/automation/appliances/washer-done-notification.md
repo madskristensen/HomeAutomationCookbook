@@ -1,373 +1,140 @@
 ---
 layout: automation
-title: Washer Done Notification - Power Monitoring Method
-description: Get notified when the washing machine finishes. Use power monitoring to detect cycle completion automatically.
-keywords: washer done alert, laundry notification, power monitoring washer, washing machine automation, laundry done alert, appliance monitoring, smart laundry
+title: Get notified when the washer finishes
+description: A platform-neutral laundry recipe that learns the washer's power pattern and sends one reliable completion alert without controlling appliance power.
+keywords: washer finished alert, laundry notification, washer power monitoring, washing machine automation, washer done notification
+last_modified_at: 2026-08-30
+faqs:
+  - question: What wattage means that my washer is finished?
+    answer: There is no universal number. Observe several complete cycles, find the lowest normal running draw and the stable finished draw, then place the threshold between them.
+  - question: Why must the automation remember that the washer was running?
+    answer: The running marker prevents a completion alert every time an idle washer reports low power or reconnects after an outage.
+  - question: Should the automation turn off the smart plug?
+    answer: No. Use the device only for monitoring and keep its relay on. Do not remotely interrupt a washer cycle.
 ---
 
-# Notify me when the washer is done
+# Get notified when the washer finishes
 
-Don't forget wet clothes in the washer. Get notified when the cycle completes so you can transfer to the dryer promptly and avoid mildew.
+Learn the washer's own power pattern, remember when a real cycle starts, and send one alert after power stays at the finished level.
 
-## Use cases
+**Best for:** Washers whose electrical load can be observed safely and whose power pattern has a clear running and finished state.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Efficiency</h4>
-    <ul>
-      <li><strong>Transfer to Dryer Promptly</strong> - Be reminded when washer finishes</li>
-      <li><strong>Start Next Load</strong> - Know when machine is available</li>
-      <li><strong>Laundry Flow</strong> - Keep laundry moving efficiently</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Convenience</h4>
-    <ul>
-      <li><strong>Avoid Forgetting Clothes</strong> - No more wet clothes sitting for hours</li>
-      <li><strong>Multi-Tasking</strong> - Get alerted while doing other things</li>
-    </ul>
-  </div>
-</div>
+**Not for:** An unverified inline smart plug, a shared circuit with combined readings, or a washer whose low-power cycle pauses look the same as its finished state.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 1: Power Monitoring (Recommended)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Power Metering Smart Plug</strong>
-      <div class="product-details">
-        Popular brands: TP-Link Kasa, Shelly, Zigbee power monitoring plugs<br>
-        Real-time wattage measurement • 15A rating minimum • Plug washer into smart plug
-      </div>
-    </div>
-  </div>
-</div>
+Wet clothes are easy to forget when the laundry room is out of sight. A useful alert must distinguish a completed cycle from an idle machine, a fill pause, a delayed start, and a monitoring device that just reconnected.
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 2: Contact Sensor (Alternative)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Contact Sensor or Multi-Sensor</strong>
-      <div class="product-details">
-        Contact sensor on washer door OR Multi-sensor with vibration detection
-      </div>
-    </div>
-  </div>
-</div>
+The reliable pattern is stateful: prove that the washer was running before treating sustained low power as done.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Light</strong>
-      <div class="product-details">
-        In laundry room for visual alert when done
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Voice Announcement</strong>
-      <div class="product-details">
-        On smart speaker for audio notification
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-## Automation setup - Power monitoring
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Observe washer power | TODO(owner): verified monitoring device rated for the washer's nameplate load and startup current | TODO(owner): preferred circuit-level energy monitor | The site does not yet have an owner-verified inline power monitor for this load. Do not assume a general-purpose smart plug is suitable. |
+| Clear the waiting-laundry state | A manual dashboard or phone action | TODO(owner): verified washer-door sensor | A manual reset is better than an unreliable door sensor. |
 
-<div class="automation-example">IF washer power < 10W for 3 minutes
-AND washer was running
-THEN send notification \"Washer done - move to dryer!\"
-AND set washer_running to false</div>
+See [recommended gear](/gear.html) for the job-first checklist. Do not buy an inline monitor until its voltage, continuous-current, startup-current, grounding, and appliance-load ratings have been checked against the washer and its manual.
 
-<div class="info-box">
-  <strong>💡 Learn Power Consumption Pattern First</strong>
-  <ul>
-    <li>Plug washer into power monitoring plug</li>
-    <li>Run a full cycle and note the power levels:
-      <ul>
-        <li><strong>Idle:</strong> < 5 watts (or 0W)</li>
-        <li><strong>Running:</strong> 100-500 watts (varies by cycle phase)</li>
-        <li><strong>Done:</strong> < 5 watts</li>
-      </ul>
-    </li>
-    <li>Key insight: Washing machines cycle through different phases (fill, agitate, spin) with varying power use. Detect when power drops and STAYS low.</li>
-  </ul>
-</div>
+## Logic
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Step 1: Detect Washer Start</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Power consumption rises above 50 watts (washer starts)</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Set variable "washer_running" to true</li>
-      <li>OR turn on virtual switch</li>
-      <li>Optional: Start timer</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Step 2: Detect Washer Done</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Power consumption drops below 10 watts for 3 minutes</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Variable "washer_running" is true (confirms washer was actually running)</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "Washer is done!"</li>
-      <li>Set variable "washer_running" to false</li>
-      <li>Flash laundry room light (optional)</li>
-      <li>Update dashboard tile</li>
-    </ul>
-  </div>
-</div>
+- **Trigger:** Measured power stays above the washer's calibrated running threshold long enough to prove a cycle started.
+- **Conditions:** Monitoring data is current and the washer was not already marked as running.
+- **Action:** Mark the washer as running and clear any previous waiting-laundry state.
+- **Wait / timeout:** After a real start, wait until power remains below the calibrated finished threshold longer than the washer's longest normal low-power pause.
+- **Stop condition:** Mark the cycle finished, send one notification, and set a waiting-laundry state.
+- **Manual override:** A person can clear the waiting state without affecting the washer.
 
-## Platform-specific examples
+<div class="automation-example">IF washer power stays above the calibrated running threshold
+THEN mark the washer as running
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Power > 50W → Turn on "washer_running" helper</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Done</span>
-        <span class="step-content">Power < 10W for 3 min AND helper on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Notify, Turn off helper, Flash light</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Power > 50W → Virtual switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Done</span>
-        <span class="step-content">Power < 10W for 3 min AND switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Notify, Switch off, Flash light</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Power > 50W → Virtual switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Done</span>
-        <span class="step-content">Power < 10W for 3 min AND switch on → Notify</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine with power monitoring plug
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited power monitoring support</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home Assistant or Hubitat for logic</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Power > 50W → Virtual switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Done</span>
-        <span class="step-content">Power < 10W AND switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Notify phone, Alexa announces</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited native support</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home Assistant for power monitoring</span>
-      </div>
-    </div>
-  </div>
-</div>
+IF washer power stays below the calibrated finished threshold
+AND the washer is marked as running
+AND the low-power period is longer than any normal cycle pause
+THEN send one "Washer finished" notification
+AND mark laundry as waiting
+AND clear the running marker</div>
 
-## Automation setup - Door sensor (alternative)
+## Setup notes
 
-Less reliable but works if power monitoring not available:
+1. Check the washer manual and nameplate before connecting any inline monitoring device.
+2. Configure the monitoring device as observe-only. Keep its relay on and exclude it from broad "turn everything off" routines.
+3. Record power through at least three complete cycles, including the modes the household actually uses.
+4. Identify a running threshold that standby noise never reaches.
+5. Identify a finished threshold and a delay longer than every low-power pause seen during a cycle.
+6. Create separate running and waiting-laundry states.
+7. Test with silent logging before enabling notifications.
+8. Enable one completion alert, then add a quiet reminder only if it is useful.
 
-**Triggers:**
-* Washer door closes
+## Calibrate from evidence
 
-**Actions:**
-* Set variable "washer_may_be_running" to true
+Fixed internet thresholds are guesses. Build a small observation table for the actual washer:
 
-**Then create second automation:**
+| Observation | What to record |
+|---|---|
+| Idle before a cycle | Normal standby range |
+| Fill and soak pauses | Lowest draw and longest duration during a real cycle |
+| Agitate and spin | Typical active range |
+| Finished | Stable draw after the controls settle |
+| Monitor unavailable | How missing or stale data appears |
 
-**Triggers:**
-* No vibration detected for 5 minutes (if using multi-sensor)
-* OR door closed for 60 minutes (basic timer method)
-
-**Conditions:**
-* Variable "washer_may_be_running" is true
-* Washer door is still closed
-
-**Actions:**
-* Send notification: "Washer appears done"
-* Set variable to false
+Choose thresholds with room between observed states. If there is no reliable gap, use a different sensing method rather than shortening the delay until false alerts appear.
 
 ## Advanced features
 
-### Escalating reminders
+### Add one restrained reminder
 
-Don't let clothes sit too long:
+Set a waiting-laundry state when the first alert is sent. If it is still set after a household-chosen interval, send one quiet reminder. Clear it manually or with a separately verified door sensor.
 
-Create three automations for progressive alerts:
-1. **First notification (immediate):** When power drops below 10W for 3 minutes, send "Washer done" notification and set "washer_needs_emptying" flag
-2. **Reminder (30 min later):** If "washer_needs_emptying" still on after 30 minutes, send high-priority "REMINDER: Washer still needs emptying!"
-3. **Urgent (2 hours later):** If flag still on after 2 hours, send urgent "Clothes in washer for 2+ hours - mildew risk!"
+### Respect quiet hours
 
-### Dashboard integration
+Keep the completion event in history, but delay speaker announcements until daytime. A phone notification can remain silent overnight.
 
-Show status tile:
+### Show data health
 
-Create template binary sensor with these states:
-- **Running:** Blue washing machine icon (when washer_running is on)
-- **Done - needs attention:** Red alert icon (when washer_needs_emptying is on)
-- **Empty:** Gray off icon (when both are off)
+Display unavailable or stale monitoring as unknown, not idle. Missing measurements must never count as a finished cycle.
 
-### Reset when door opens
+## Failure modes
 
-Automatically reset when clothes removed:
+- **Alert arrives during a soak or fill pause:** Lower the finished threshold, lengthen the delay, or use a different signal.
+- **No alert arrives:** Confirm the running marker was set and that recent power reports continued through the end of the cycle.
+- **Alert arrives while the washer is idle:** Require a sustained running state before completion can trigger.
+- **Duplicate alerts arrive:** Clear the running marker atomically with the first completion alert.
+- **The monitoring device reconnects at zero watts:** Treat unavailable-to-zero transitions as startup recovery, not completion.
+- **Someone turns off the monitoring plug:** Restore power manually and remove the device from all remote shutoff routines.
+- **The monitor is not rated for the washer:** Remove it. Use a properly rated monitor or have an electrician install circuit-level monitoring.
 
-Create automation with these elements:
-- **Trigger:** Washer door sensor opens
-- **Condition:** "washer_needs_emptying" flag is on
-- **Action:** Turn off "washer_needs_emptying" flag
+## Done when
 
-## Troubleshooting
+- [ ] The monitor's ratings have been checked against the washer and its manual.
+- [ ] Three representative cycles establish the thresholds and longest normal pause.
+- [ ] An idle washer never creates a completion notification.
+- [ ] Every test cycle creates exactly one completion notification.
+- [ ] A simulated unavailable reading does not count as finished.
+- [ ] The alert remains useful during quiet hours.
+- [ ] The washer still works normally without the automation.
 
-### Issue: False "Done" Notifications During Cycle
+## FAQ
 
-**Causes:**
-- Power drops briefly between cycle phases
-- Threshold too high (triggering during low-power phases)
-- Delay too short
+### What wattage means that my washer is finished?
 
-**Solutions:**
-✅ Increase delay to 5 minutes instead of 3
-✅ Lower threshold (5W instead of 10W)
-✅ Monitor full wash cycle to understand power pattern
-✅ Use template trigger that requires sustained low power for 5 minutes
+There is no universal number. Observe several complete cycles, find the lowest normal running draw and the stable finished draw, then place the threshold between them.
 
-### Issue: No notification when done
+### Why must the automation remember that the washer was running?
 
-**Causes:**
-- Washer never detected as "starting"
-- Power threshold incorrect
-- Washer uses very little standby power
-- Smart plug lost connection
+The running marker prevents a completion alert every time an idle washer reports low power or reconnects after an outage.
 
-**Check:**
-- ✅ Verify washer_running variable was set to true
-- ✅ Check automation logs - which step is failing?
-- ✅ Monitor power consumption during actual cycle
-- ✅ Test smart plug connectivity
-- ✅ Verify sensor.washer_plug_power entity exists and updates
+### Should the automation turn off the smart plug?
 
-**Fix:**
-- Adjust start detection threshold based on actual usage
-- Add debugging notifications at each step
-- Verify smart plug can handle washer load (15A minimum)
+No. Use the device only for monitoring and keep its relay on. Do not remotely interrupt a washer cycle.
 
-### Issue: Notification even when washer not used
+## Related recipes
 
-**Causes:**
-- Washer running variable stuck "on"
-- Power monitoring detecting other devices
-- Plug measuring wrong outlet
-
-**Solutions:**
-✅ Add auto-reset: Turn off variable after 3 hours max
-✅ Verify only washer plugged into smart plug
-✅ Add manual reset button on dashboard
-✅ Check for power spikes from other sources
-✅ Add auto-reset automation: If "washer_running" stays on for 3 hours, automatically turn it off
-
----
-
-**Related automations:**
-- [Dryer done notification](/automation/appliances/dryer-done-notification/)
-- [Dishwasher done notification](/automation/appliances/dishwasher-done-notification/)
-- [Away mode automation](/automation/daily-routines/away-mode/)
+- [Get notified when the dryer finishes](/automation/appliances/dryer-done-notification.html)
+- [Appliance automations](/automation/appliances/index.html)
+- [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 
 <div class="page-navigation">
-  <a href="/automation/appliances/">← Back to Appliance Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/appliances/index.html">Back to appliance automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

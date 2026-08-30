@@ -12,33 +12,45 @@ The latest generation of appliances have WiFi connectivity and phone apps. But y
 
 ## Why appliance automation?
 
-**Never Forget** — Get notified when washer, dryer, or dishwasher finishes
+**Useful reminders** - Get notified when a washer, dryer, or dishwasher finishes
 
-**Hands-Free Operation** — Robot vacuum runs automatically when you leave
+**Observable behavior** - Know why an appliance state changed
 
-**Perfect Timing** — Coffee ready exactly when you wake up
+**Safer defaults** - Monitor appliances without remotely interrupting their power
 
-**Energy Monitoring** — Track power usage of any appliance
+**Manual fallback** - Keep every appliance usable without the automation
 
-**Smart Scheduling** — Run appliances during off-peak electricity hours
+**Measured thresholds** - Calibrate from the appliance instead of copying guesses
 
-**Any Appliance** — Even "dumb" appliances become smart with power monitoring
+**Quiet notifications** - Inform the household without repeated announcements
 
 </div>
 
-## 🌟 Essential Automations
+## Essential automations
 
 <div class="automation-cards">
 
 <div class="automation-card" markdown="1">
 
-### Washer done notification
+### Washer finished alert
 
-Get notified when the washing machine cycle completes so you can transfer clothes to dryer promptly.
+Learn the washer's actual power pattern and send one alert when a real cycle finishes.
 
 <span class="card-meta">**Best for:** Preventing mildew, laundry efficiency</span>
 
 <p><a href="/automation/appliances/washer-done-notification.html" class="card-link">View Automation →</a></p>
+
+</div>
+
+<div class="automation-card" markdown="1">
+
+### Dryer finished alert
+
+Use calibrated vibration timing to detect a completed dryer cycle without controlling appliance power.
+
+<span class="card-meta">**Best for:** Dryers with a safe exterior sensor location</span>
+
+<p><a href="/automation/appliances/dryer-done-notification.html" class="card-link">View automation</a></p>
 
 </div>
 
@@ -167,10 +179,10 @@ Start your vacuum only when the house is truly empty and finish before anyone re
 <div class="placement-card">
 <h3>Safety considerations</h3>
 <ul>
-<li><strong>Never:</strong> Gas appliances, high heat unsupervised</li>
-<li><strong>Safe:</strong> Coffee makers, robot vacuums</li>
-<li><strong>Safe:</strong> Dishwashers, washing machines</li>
-<li><strong>Safe:</strong> Electric kettles (with auto shut-off)</li>
+<li>Do not put an unverified relay in a high-current appliance circuit</li>
+<li>Check device ratings against the appliance nameplate and manual</li>
+<li>Use monitoring-only behavior for laundry completion alerts</li>
+<li>Keep the appliance usable when the smart-home system is unavailable</li>
 </ul>
 </div>
 
@@ -241,6 +253,6 @@ Start your vacuum only when the house is truly empty and finish before anyone re
 </div>
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/security/">Next: Safety & Security →</a>
+  <a href="/automation/index.html">Back to all automations</a>
+  <a href="/automation/security/index.html">Next: Safety and security</a>
 </div>
