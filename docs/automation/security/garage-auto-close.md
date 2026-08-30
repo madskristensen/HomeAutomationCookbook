@@ -1,281 +1,130 @@
 ---
 layout: automation
-title: Auto-Close Garage When Left Open - Smart Home Security
-description: Automatically close your garage door when left open and nobody's home. Get a photo notification for peace of mind with this smart garage automation.
-keywords: auto close garage, garage door automation, smart garage, garage security, garage left open, automatic garage close, garage notification photo
+title: Close a garage safely after an open-door alert
+description: Alert first, keep people in control, and allow unattended closing only through equipment designed for it with working entrapment protection and warnings.
+keywords: garage door left open, garage close alert, unattended garage closing, garage door safety, tilt sensor
+last_modified_at: 2026-08-30
+faqs:
+  - question: Is a motion sensor enough to prove the garage is empty?
+    answer: No. Motion can miss a still person, child, pet, or obstruction. It is not entrapment protection and must not authorize a close.
+  - question: Can an automation close any garage-door opener?
+    answer: No. Use unattended closing only when the opener and controller are designed, installed, and configured for it according to their instructions, including required warnings and entrapment protection.
+  - question: Does a closed tilt sensor prove the doorway is clear?
+    answer: No. It reports door position only. The opener's approved obstruction and entrapment protections must make the closing decision.
 ---
 
-# Auto-close garage when forgotten
+# Close a garage safely after an open-door alert
 
-Never worry about leaving your garage door open again. This automation automatically closes the garage when it's left open and nobody's home, then sends you a photo confirmation for peace of mind.
+The house reports a garage door left open, and closing remains manual unless the installed opener and controller explicitly support safe unattended operation.
 
-## Use cases
+**Best for:** Open-door reminders, clear status, and manufacturer-approved closing equipment with working photo-eyes, warnings, and normal wall controls.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Security scenarios</h4>
-    <ul>
-      <li><strong>Forgot to close</strong> - Auto-closes after you drive away</li>
-      <li><strong>Kids left it open</strong> - Closes automatically when family leaves</li>
-      <li><strong>Running late</strong> - Don't worry about going back to check</li>
-      <li><strong>Package protection</strong> - Keep deliveries safe from theft</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Peace of mind</h4>
-    <ul>
-      <li><strong>Photo confirmation</strong> - See that it actually closed</li>
-      <li><strong>Weather protection</strong> - Keep rain and snow out</li>
-      <li><strong>Energy savings</strong> - Don't heat or cool the outdoors</li>
-      <li><strong>Pest prevention</strong> - Keep animals out of garage</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Using phone location, motion, a camera, or a tilt sensor as proof that the doorway is clear.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart garage door controller</strong>
-      <div class="product-details">
-        Popular brands: Chamberlain myQ, Tailwind iQ3, Meross, Ratgdo<br>
-        Must support remote open/close and status reporting
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Presence detection</strong>
-      <div class="product-details">
-        Options: Phone location, shared house mode, and recent indoor activity<br>
-        Must accurately detect when all family members have left
-      </div>
-    </div>
-  </div>
-</div>
+An open garage door is easy to forget, but an unattended close moves a large door where people, pets, vehicles, and objects may be present. Presence and motion signals are useful for deciding who should receive an alert. They are not safety devices.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Garage camera</strong>
-      <div class="product-details">
-        Brands: Wyze, Blink, Ring, Arlo, Reolink<br>
-        Provides photo/video confirmation of garage status
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Motion sensor in garage</strong>
-      <div class="product-details">
-        Prevents closing if someone is still in the garage working
-      </div>
-    </div>
-  </div>
-</div>
+Start with an alert. Add unattended closing only through equipment designed for that operation, installed and maintained exactly as required.
 
-<div class="info-box">
-  <strong>💡 Safety first</strong>
-  <ul>
-    <li>Ensure your garage door has working safety sensors (photo-eyes)</li>
-    <li>Always send a warning notification before auto-closing</li>
-    <li>Add a motion sensor to detect if someone is in the garage</li>
-    <li>Consider a short delay to allow for cancellation</li>
-  </ul>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Know door position | [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF) | [Ecolink Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT) | I have used both. They report position, not a clear doorway. |
+| Close the door | Existing wall control and opener remote | No personally verified unattended-closing controller yet | Use only equipment approved for the opener and unattended operation. |
+| Detect an obstruction | The opener's required, tested entrapment protection | The opener's required, tested entrapment protection | Never replace or bypass it with hobby sensors. |
+
+See [recommended gear](/gear.html) for the tilt sensors I have used. No unattended-closing controller is recommended until I have verified one.
 
 ## Logic
 
-<div class="automation-example">IF garage door is open
-AND nobody is home (all phones away)
-AND garage door has been open for 5+ minutes
-AND no motion in garage for 2 minutes
-THEN send notification "Closing garage in 2 minutes"
-WAIT 2 minutes
-THEN close garage door
-THEN take camera snapshot
-THEN send notification with photo "Garage closed"</div>
+- **Trigger:** The door remains open longer than the household expects.
+- **Conditions:** The position sensor is recent and available.
+- **Action:** Send a persistent alert naming the door and its reported state.
+- **Wait / timeout:** Escalate once if the alert remains unacknowledged.
+- **Stop condition:** The position sensor reports closed after a person closes it, or a person explicitly dismisses the reminder.
+- **Manual override:** The normal wall control and remotes remain primary.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Home mode changes to "Away" (last person left)</li>
-      <li>OR garage door open for 5 minutes while nobody home</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <strong>Presence:</strong> All family members away from home<br>
-    <strong>Garage status:</strong> Garage door is currently open<br>
-    <strong>Motion:</strong> No motion detected in garage for 2+ minutes<br>
-    <strong>Safety:</strong> No obstruction detected by door sensors
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Send warning notification: "Garage still open. Closing in 2 minutes."</li>
-      <li>Wait 2 minutes (allows manual cancellation)</li>
-      <li>Close garage door</li>
-      <li>Wait 30 seconds for door to fully close</li>
-      <li>Take snapshot from garage camera</li>
-      <li>Send confirmation notification with photo</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the garage door remains open past the chosen delay
+THEN send a persistent open-door alert
+
+IF a person chooses Close
+AND the installed opener supports that operation
+THEN let the opener perform its required warning and safety checks
+
+DO NOT use motion, location, a camera, or a tilt sensor as entrapment protection</div>
+
+## Setup notes
+
+1. Test the opener, wall control, remote, photo-eyes, auto-reverse, audible warning, and visual warning according to manufacturer instructions.
+2. Mount and calibrate the tilt sensor so open, closed, unavailable, and low-battery states are distinct.
+3. Start with alerts only.
+4. Make the message identify the exact door and how long it has been open.
+5. Treat unavailable status as unknown, not closed.
+6. If the equipment supports a user-requested remote close, let its built-in warning and safety behavior run without bypasses.
+7. Enable unattended schedules only if the complete installed system explicitly supports them.
+
+## Before enabling unattended closing
+
+- Confirm the opener and added controller are compatible and approved for the exact installation.
+- Confirm all required entrapment-protection devices work.
+- Confirm the required audible and visual warnings occur before and during movement.
+- Confirm obstruction causes reversal as designed.
+- Confirm a failed or unavailable position sensor cannot report success.
+- Confirm everyone understands the warnings and normal controls.
+- Retest on the schedule required by the manufacturer and after any service.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Photo confirmation</h3>
-    <p>Visual verification that garage is actually closed:</p>
-    <ul>
-      <li>Take snapshot after door closes</li>
-      <li>Include timestamp on image</li>
-      <li>Show "before and after" comparison</li>
-      <li>Store images for security records</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Cancellation option</h3>
-    <p>Allow manual override:</p>
-    <ul>
-      <li>Actionable notification with "Cancel" button</li>
-      <li>2-minute delay before closing</li>
-      <li>Voice command to cancel: "Don't close garage"</li>
-      <li>Manual override if you're coming right back</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Context-aware behavior</h3>
-    <p>Smarter decision making:</p>
-    <ul>
-      <li><strong>Quick trips:</strong> Wait longer if you just left (might return)</li>
-      <li><strong>Work hours:</strong> Close immediately on weekday mornings</li>
-      <li><strong>Weather:</strong> Close immediately if rain is starting</li>
-      <li><strong>Time of day:</strong> Shorter delay at night for security</li>
-    </ul>
-  </div>
-</div>
+### Escalate based on context
 
-## Common issues and solutions
+Away or nighttime state can change who receives an alert or how quickly it escalates. It must not replace the opener's own safety requirements.
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Door closes when someone's in garage</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Presence detection missed someone still in the garage.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Add motion sensor in garage as safety condition</li>
-        <li>Require no motion for 5+ minutes before closing</li>
-        <li>Add longer delay before auto-close (5-10 minutes)</li>
-        <li>Use multiple presence detection methods</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>False "away" detection</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> System thinks everyone left when someone is still home.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Use multiple presence methods (GPS + WiFi + Bluetooth)</li>
-        <li>Increase geofence radius to reduce false departures</li>
-        <li>Add delay before declaring "away" (5-10 minutes)</li>
-        <li>Track all family members' phones</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Door won't close remotely</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Automation triggers but garage door doesn't close.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check safety sensors (photo-eyes) aren't blocked</li>
-        <li>Verify smart controller is online and connected</li>
-        <li>Test manual close from app first</li>
-        <li>Check for obstruction in door path</li>
-        <li>Verify garage door opener is powered on</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Photo notification not arriving</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Door closes but no photo confirmation received.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Verify camera is online and accessible</li>
-        <li>Check notification permissions on phone</li>
-        <li>Add delay between door close and snapshot (30 seconds)</li>
-        <li>Verify camera snapshot service is configured correctly</li>
-      </ul>
-    </div>
-  </div>
-</div>
+### Confirm the final position
 
-## Best practices
+After a supported close command, report success only when the position sensor reaches closed within the expected time. Otherwise report "close not confirmed" and require inspection.
 
-<div class="best-practice-card">
-  <h3>Setting up auto-close safely</h3>
-  <ol>
-    <li>Always verify garage door safety sensors work properly</li>
-    <li>Add motion sensor in garage as backup safety check</li>
-    <li>Include warning notification before closing</li>
-    <li>Add 2+ minute delay for cancellation opportunity</li>
-    <li>Send confirmation with photo after closing</li>
-    <li>Test automation thoroughly before relying on it</li>
-  </ol>
-</div>
+## Failure modes
 
-<div class="warning-card">
-  <h3>Safety warnings</h3>
-  <ul>
-    <li><strong>Never bypass safety sensors</strong> - They prevent injury and damage</li>
-    <li><strong>Add motion detection</strong> - Prevent closing on people or pets</li>
-    <li><strong>Include delays</strong> - Allow time to cancel if needed</li>
-    <li><strong>Test regularly</strong> - Ensure automation works when needed</li>
-    <li><strong>Inform family</strong> - Everyone should know about auto-close feature</li>
-  </ul>
-</div>
+- **Tilt sensor is unavailable:** Report unknown status and do not claim the door is closed.
+- **Door reverses:** Report that closing failed and require a person to inspect the path and opener.
+- **Photo-eyes are blocked or misaligned:** Repair them before any remote or unattended closing.
+- **Motion reports clear while someone is present:** Ignore it for safety authorization.
+- **Phone location says everyone left:** Use it only to route the alert, not to approve movement.
+- **Close command receives no final state:** Send "close not confirmed" rather than a success message.
 
----
+## Done when
+
+- [ ] Open, closed, unavailable, and low-battery states are distinguishable.
+- [ ] The alert names the exact door and remains visible until handled.
+- [ ] Normal wall controls and remotes still work.
+- [ ] Required photo-eyes, warnings, and reversal behavior pass manufacturer tests.
+- [ ] No motion, location, camera, or tilt sensor is used as entrapment protection.
+- [ ] A failed close never produces a success-shaped notification.
+- [ ] Unattended closing is disabled unless the complete installed system supports it.
+
+## FAQ
+
+### Is a motion sensor enough to prove the garage is empty?
+
+No. Motion can miss a still person, child, pet, or obstruction. It is not entrapment protection and must not authorize a close.
+
+### Can an automation close any garage-door opener?
+
+No. Use unattended closing only when the opener and controller are designed, installed, and configured for it according to their instructions, including required warnings and entrapment protection.
+
+### Does a closed tilt sensor prove the doorway is clear?
+
+No. It reports door position only. The opener's approved obstruction and entrapment protections must make the closing decision.
 
 ## Related recipes
-- [Garage door notification](/automation/security/garage-door-notification/)
-- [Away mode](/automation/daily-routines/away-mode/)
-- [Doorbell notification](/automation/notifications/doorbell-notification/)
+
+- [Garage door notification](/automation/security/garage-door-notification.html)
+- [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
+- [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
 
 <div class="page-navigation">
-  <a href="/automation/security/">← Back to Security Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/security/index.html">Back to safety and security automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

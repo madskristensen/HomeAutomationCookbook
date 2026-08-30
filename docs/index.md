@@ -1,32 +1,32 @@
 ---
 layout: default
-title: Home Automation Cookbook - Practical Smart Home Recipes
-description: Transform your house into a truly smart home with tested automation recipes that work for everyone. No technical jargon, just practical solutions.
+title: Home Automation Cookbook - practical recipes for a family home
+description: Build useful home automations with plain-English logic, manual controls, conservative failure behavior, and honest notes about what I have used.
 ---
 
 <div class="hero">
   <h1>Make your smart home work for you</h1>
-  <p class="hero-subtitle">Practical smart home automations that save time, energy, and make everyday life effortless.</p>
+  <p class="hero-subtitle">Practical home automations with plain-English logic, working wall controls, and safe behavior when a sensor gets it wrong.</p>
   <div class="hero-benefits">
     <div class="benefit">
       <span class="benefit-icon" aria-hidden="true">•</span>
       <div>
         <strong>Lights that just work</strong>
-        <span class="benefit-text">— Walk into any room and lights turn on automatically</span>
+        <span class="benefit-text"> - Start with a room where the wall switch still wins</span>
       </div>
     </div>
     <div class="benefit">
       <span class="benefit-icon" aria-hidden="true">•</span>
       <div>
-        <strong>Perfect temperature</strong>
-        <span class="benefit-text">— Never waste energy heating the outdoors</span>
+        <strong>Conservative climate control</strong>
+        <span class="benefit-text"> - Save energy without risking pets, pipes, or comfort</span>
       </div>
     </div>
     <div class="benefit">
       <span class="benefit-icon" aria-hidden="true">•</span>
       <div>
-        <strong>True automation</strong>
-        <span class="benefit-text">— Your home adapts to you, not the other way around</span>
+        <strong>Honest instructions</strong>
+        <span class="benefit-text"> - Platform details appear only when I can verify them</span>
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ description: Transform your house into a truly smart home with tested automation
 
 **Most smart homes aren't actually smart.** They're full of gadgets that need constant attention, confuse guests, and frustrate family members.
 
-This cookbook is different. Every automation here follows proven principles:
+I built this cookbook around the rules that have held up in my own family home. Finished recipes follow these principles, and older pages are being brought up to the same standard:
 
 <div class="principles-grid">
   <div class="principle-card">
@@ -74,20 +74,12 @@ This cookbook is different. Every automation here follows proven principles:
     <p>Each automation eliminates a real daily task. No more checking if doors are locked or wondering if the dryer finished.</p>
   </div>
   <div class="principle-card">
-    <h3>Platform agnostic</h3>
-    <p>Works with all major platforms:</p>
-    <div class="platform-logos">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo" title="Home Assistant" class="platform-logo">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo" title="Hubitat" class="platform-logo">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo" title="Apple HomeKit" class="platform-logo">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo" title="SmartThings" class="platform-logo">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo" title="Google Home" class="platform-logo">
-      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo" title="Amazon Alexa" class="platform-logo">
-    </div>
+    <h3>Platform-neutral logic</h3>
+    <p>The recipe explains triggers, conditions, actions, timeouts, and failure behavior without pretending every platform works the same way.</p>
   </div>
   <div class="principle-card">
-    <h3>Battle-tested</h3>
-    <p>These aren't theoretical ideas. Every recipe has been refined through real-world use and family feedback.</p>
+    <h3>Clear about experience</h3>
+    <p>I name the products and platforms I have used. I do not present research or an untested idea as firsthand experience.</p>
   </div>
 </div>
 

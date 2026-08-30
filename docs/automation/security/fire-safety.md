@@ -1,317 +1,133 @@
 ---
 layout: automation
-title: Fire Safety Emergency Response - Smart Home Automation
-description: Automated fire emergency response when smoke detector sounds. Lights on, doors unlocked, irrigation started, notifications sent.
-keywords: fire safety automation, smoke detector, emergency response, smart home safety, fire evacuation, home emergency, smoke alarm automation
+title: Support a fire evacuation without delaying the alarm
+description: A conservative fire-response recipe that treats listed smoke alarms as primary, turns on useful lighting immediately, and never infers that a fire is over.
+keywords: fire safety automation, smoke alarm notification, evacuation lighting, smart home fire alert, smoke alarm listener
+last_modified_at: 2026-08-30
+faqs:
+  - question: Should a smart-home rule wait for a second smoke alarm before responding?
+    answer: No. Never delay an alarm, evacuation, or emergency call while waiting for another sensor. Any automation is supplemental to the installed smoke and carbon-monoxide alarms.
+  - question: Should fire automation unlock every exterior door?
+    answer: No. Automatic unlocking can create security and fire-separation problems. Make sure everyone can operate the normal locks and exits without relying on the hub.
+  - question: Can the automation announce that the house is safe again?
+    answer: No. A clear sensor or stopped alarm is not an all-clear. Only emergency services or a qualified person at the scene should make that decision.
 ---
 
-# Get safely out of the house in case of fire
+# Support a fire evacuation without delaying the alarm
 
-If a fire breaks out in the middle of the night, your smoke detector will sound the alarm. However, getting everybody out of the house might be problematic - especially if you have little kids. There are some things we can do to make the situation a little smarter.
+When a listed smoke or carbon-monoxide alarm activates, optional lighting and notifications run immediately without changing the alarm, delaying evacuation, or declaring an all-clear.
 
-We want to make sure all lights come on so we can easily find our way out of the otherwise dark house at night. Also, make sure to unlock all doors. And if you have an irrigation or sprinkler system in the yard or garden, turn it on to prevent any fire from spreading outside.
+**Best for:** Adding supplemental path lighting and household notifications to a code-compliant alarm and evacuation plan.
 
-A variation of this is to listen for the sound of a window breaking at night or when you're not home.
+**Not for:** Replacing listed alarms, monitored systems, practiced escape routes, or instructions from emergency services.
 
-## Use cases
+## Why this exists
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Fire Emergency</h4>
-    <ul>
-      <li><strong>Smoke Detector Goes Off</strong> - Immediate emergency response</li>
-      <li><strong>Nighttime Evacuation</strong> - All lights turn on for safe exit</li>
-      <li><strong>Door Unlock</strong> - Quick escape without fumbling for locks</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Break-in Detection</h4>
-    <ul>
-      <li><strong>Window Breaks</strong> - Alert and response to glass break sound</li>
-      <li><strong>Nighttime Intrusion</strong> - Lights and notifications activate</li>
-    </ul>
-  </div>
-</div>
+A smart home can make an alarm easier to notice, especially at night. It must not become part of the life-safety decision. The installed alarms, clear exits, and the household evacuation plan still work when the hub, power, or internet is unavailable.
 
-## Products needed
+This recipe deliberately excludes automatic door unlocking, irrigation, alarm delays, and automatic all-clear messages.
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Smoke Detector or Detection Method</strong>
-      <div class="product-details">
-        Options:<br>
-        • Native smart detector: Nest Protect, First Alert Onelink<br>
-        • Listed alarm listener designed for the installed smoke alarms<br>
-        • Wired relay: Attached to existing smoke detector wiring
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Lights</strong>
-      <div class="product-details">
-        Whole-house smart lights for full illumination during emergency
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Door Lock</strong>
-      <div class="product-details">
-        Auto-unlock for quick escape
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Irrigation System</strong>
-      <div class="product-details">
-        Wet exterior to prevent fire spread (Rachio, RainMachine, etc.)
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Glass Break Sensor</strong>
-      <div class="product-details">
-        Ring Glass Break, Aqara, SmartThings sensors
-      </div>
-    </div>
-  </div>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect smoke and carbon monoxide | Listed alarms installed and maintained for the home | Professionally designed or monitored alarm system where appropriate | Follow local requirements and the alarm manufacturer's placement, interconnection, testing, and replacement instructions. |
+| Expose an alarm event to the hub | No personally verified recommendation yet | Manufacturer-supported integration or a listed listener approved for the installed alarm type | Failure of the integration must not affect the alarms. |
+| Light an exit path | Existing fixed lights with working wall controls | No personally verified recommendation yet | Lighting is supplemental. People must know the exits in darkness. |
+| Reach the household | Alarm sound and practiced evacuation plan | Supplemental phone alerts to responsible adults | A phone notification is not the primary warning. |
 
-<div class="info-box">
-  <strong>🔊 Smoke Detection Without Smart Detectors</strong>
-  <p>If you don't have a smart smoke detector, there are alternatives you can use to make your existing detector smart:</p>
-  <ul>
-    <li><strong>Wired relays:</strong> Attach to existing smoke detector wiring, acts like an open/closed sensor when alarm sounds</li>
-    <li><strong>Sound listeners:</strong> Devices that pick up the specific sound pattern of smoke detectors and send signals to your smart home</li>
-    <li><strong>Listed alarm listener:</strong> Use only a listener designed and approved for the installed alarm type</li>
-  </ul>
-</div>
+Do not add an unlisted relay, microphone, or modification to alarm wiring. Use only equipment and installation methods approved for the installed alarm system.
 
 ## Logic
 
-<div class="automation-example">IF smoke detector goes off
-THEN turn on all lights
-AND unlock all doors
-AND start outdoor irrigation
-AND send notifications</div>
+- **Trigger:** A supported alarm integration reports smoke or carbon monoxide.
+- **Conditions:** None. Do not add mode, time, occupancy, or multi-sensor confirmation conditions.
+- **Action:** Turn on fixed path and exterior lights that are safe to operate, then send a supplemental alert naming the reported alarm.
+- **Wait / timeout:** None before the first response.
+- **Stop condition:** A responsible person manually resets the supplemental response after emergency services or a qualified person says it is safe.
+- **Manual override:** Wall switches, normal locks, alarm controls, and exits remain usable without the hub.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Smoke detector goes off (state changes to "smoke detected")</li>
-      <li>OR Sound listener detects smoke alarm pattern</li>
-      <li>OR Wired relay sensor changes state</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <ul>
-      <li>None - this should always run when triggered</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on lights in the whole house (100% brightness)</li>
-      <li>Unlock all doors</li>
-      <li>Start the outdoor irrigation (if available)</li>
-      <li>Send critical notifications to all family members</li>
-      <li>Optional: Announce evacuation message on smart speakers</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF a supported smoke or carbon-monoxide alarm reports an alarm
+THEN turn on the tested evacuation-path lights
+AND send a supplemental alert naming the alarm
+
+DO NOT delay the response
+DO NOT unlock doors automatically
+DO NOT declare an all-clear automatically</div>
+
+## Setup notes
+
+1. Install, place, interconnect, test, and replace alarms according to local requirements and manufacturer instructions.
+2. Practice an evacuation plan with two ways out where possible and a meeting place outside.
+3. Confirm every person can operate the normal locks and exits without the smart home.
+4. Add only lights that cannot create a new hazard or obscure alarm indicators.
+5. Keep the first alert unconditional and name the alarm location exactly as a person understands it.
+6. Treat unavailable, stale, or disconnected integration data as a maintenance problem.
+7. Require a manual reset. A stopped alarm or clear reading is not proof that re-entry is safe.
+
+## Test without creating smoke
+
+Use the alarm manufacturer's test procedure. Do not use open flame, burning material, or an improvised aerosol test.
+
+During a planned household test:
+
+- Confirm the physical alarms remain loud and interconnected without the hub.
+- Confirm path lights turn on without changing the alarms.
+- Confirm alerts identify the correct reported location.
+- Disconnect the internet and repeat any behavior expected to remain local.
+- Verify that no rule unlocks doors, starts irrigation, delays a response, or sends an all-clear.
+- Practice leaving the home and meeting outside.
 
 ## Advanced features
 
-### Zone-based evacuation lighting
+### Report integration health
 
-Create lit paths to exits:
+Create a separate maintenance alert when an alarm integration or listener becomes unavailable. Do not represent missing data as "safe."
 
-**Implementation:**
-- Identify primary and secondary exit paths
-- Light those paths at maximum brightness
-- Include stairway and hallway lights
-- Exterior lights illuminate exit points
+### Keep intrusion response separate
 
-**Automation Logic:**
-1. Fire detected → All path lights to 100%
-2. Exterior lights on to illuminate exits
-3. Smart bulbs flash in exit direction (if supported)
+Glass-break and intrusion events have different risks and actions. Do not combine them with fire logic.
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Smoke detector by room</h3>
-    <p>Different response based on fire location:</p>
-    <ul>
-      <li><strong>Kitchen:</strong> Add 30-second delay (may be cooking), verify first</li>
-      <li><strong>Bedroom:</strong> Immediate full response, no delay</li>
-      <li><strong>Garage:</strong> Specific response, alert with location</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Irrigation for fire containment</h3>
-    <p>Strategic irrigation activation:</p>
-    <ul>
-      <li>Activate zones closest to house</li>
-      <li>Wet perimeter to slow fire spread</li>
-      <li>Run 10-15 minutes, auto shutoff after 30</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Multi-alarm verification</h3>
-    <p>Reduce false positives:</p>
-    <ul>
-      <li><strong>Single detector:</strong> Send alert, wait 30 seconds</li>
-      <li><strong>Two+ detectors:</strong> Full emergency response</li>
-      <li><strong>Continued alarm:</strong> Full response after delay</li>
-    </ul>
-  </div>
-</div>
+## Failure modes
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Post-event automation</h3>
-    <p>After emergency is handled:</p>
-    <ul>
-      <li>When smoke clears, wait 15 minutes</li>
-      <li>Send "All clear" notification</li>
-      <li>Return lights to previous state</li>
-      <li>Relock doors (after verification)</li>
-    </ul>
-  </div>
-</div>
+- **The hub misses the event:** The physical alarms and evacuation plan remain primary. Repair the integration before relying on supplemental actions.
+- **A light does not turn on:** Repair it, but do not let one failed light block the rest of the response.
+- **A phone is muted or offline:** The installed alarms still provide the primary warning.
+- **The wrong location appears:** Rename and retest the integration so the message does not send someone toward danger.
+- **The alarm stops:** Keep the supplemental incident open until a person with authority at the scene clears it.
+- **Power or internet fails:** Battery-backed alarms and practiced exits must still work.
 
-## Common issues and solutions
+## Done when
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>False alarms from cooking</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Kitchen smoke detector too sensitive to steam or cooking smoke.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Add delay for kitchen detector only</li>
-        <li>Send verification alert before full response</li>
-        <li>Use "photoelectric" type detector</li>
-        <li>Relocate kitchen detector away from stove</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Doors don't unlock</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Lock battery low or connectivity issue.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check lock battery regularly</li>
-        <li>Verify lock responds to commands</li>
-        <li>Test automation monthly</li>
-        <li>Add lock to automation actions</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Notifications don't arrive</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Phone in Do Not Disturb or critical alerts not enabled.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Use "critical" notification flags</li>
-        <li>Enable emergency bypass in settings</li>
-        <li>Test notifications during setup</li>
-        <li>Use multiple notification methods</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Automation doesn't trigger</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Smoke detector not integrated or wrong trigger configured.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Verify smoke detector appears in smart home</li>
-        <li>Check detector status and connectivity</li>
-        <li>Test with manual trigger (test button)</li>
-        <li>Review automation logs for errors</li>
-      </ul>
-    </div>
-  </div>
-</div>
+- [ ] The installed alarms meet local requirements and pass their manufacturer test.
+- [ ] Everyone can leave through normal exits without the hub or phone.
+- [ ] Supplemental lights and messages run immediately from the supported alarm event.
+- [ ] The first response has no time, mode, occupancy, or confirmation condition.
+- [ ] No automation unlocks doors, starts irrigation, or declares an all-clear.
+- [ ] Missing integration data creates a maintenance alert.
+- [ ] The household has practiced the evacuation plan and meeting place.
 
-## Safety considerations
+## FAQ
 
-### Test regularly
+### Should a smart-home rule wait for a second smoke alarm before responding?
 
-**Monthly:**
-- Test smoke detectors
-- Verify automation triggers
-- Check all lights respond
-- Test door unlocks
-- Verify notifications arrive
+No. Never delay an alarm, evacuation, or emergency call while waiting for another sensor. Any automation is supplemental to the installed smoke and carbon-monoxide alarms.
 
-**Annually:**
-- Replace batteries
-- Review evacuation plan
-- Update family on procedures
-- Test irrigation response
+### Should fire automation unlock every exterior door?
 
-### Manual overrides
+No. Automatic unlocking can create security and fire-separation problems. Make sure everyone can operate the normal locks and exits without relying on the hub.
 
-**Always Ensure:**
-- Physical escape routes available
-- Manual door locks work
-- Physical light switches function
-- Don't rely solely on automation
+### Can the automation announce that the house is safe again?
 
-### Fire safety basics
-
-**Remember:**
-- Automation assists, doesn't replace safety planning
-- Have multiple escape routes
-- Practice fire drills with family
-- Know when to evacuate vs. fight fire
-- Call 911 first
-
----
+No. A clear sensor or stopped alarm is not an all-clear. Only emergency services or a qualified person at the scene should make that decision.
 
 ## Related recipes
-- [Away lights](/automation/security/away-lights/)
-- [Fake dog deterrent](/automation/security/fake-dog-deterrent/)
-- [Away mode](/automation/daily-routines/away-mode/)
+
+- [Get an immediate alert when water is detected](/automation/security/water-leak-response.html)
+- [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
+- [Safety and security automations](/automation/security/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/security/">← Back to Security Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/security/index.html">Back to safety and security automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

@@ -1,273 +1,127 @@
 ---
 layout: automation
-title: Maintain Room Temperature with Smart Heater - Zone Heating
-description: Use a smart plug and temperature sensor to maintain comfortable temperature in cold rooms. Complete guide with safety considerations.
-keywords: room heater automation, zone heating automation, space heater control, temperature sensor automation, smart plug heater, supplemental heating, cold room heating
+title: Monitor a cold room without smart-plug heater control
+description: Monitor a cold room, alert when it falls outside a safe range, and use only heating controls approved for unattended thermostat operation.
+keywords: cold room alert, room temperature monitoring, space heater safety, thermostat alert, supplemental heating
+last_modified_at: 2026-08-30
+faqs:
+  - question: Can I control a portable space heater with a general smart plug?
+    answer: Do not assume that is safe. Follow the heater manufacturer's instructions. This recipe does not switch a portable heater through a general-purpose smart plug.
+  - question: What should happen when the temperature sensor stops reporting?
+    answer: Send a maintenance alert and stop making automatic heating decisions from that sensor. Missing data must not be treated as a comfortable room.
+  - question: Can this protect pipes or vulnerable people by itself?
+    answer: No. Use appropriate building heat, freeze protection, supervision, and professional advice. A hobby sensor and hub are supplemental.
 ---
 
-# Maintain temperature using a room heater
+# Monitor a cold room without smart-plug heater control
 
-In colder rooms, add supplemental heating to maintain comfortable temperature automatically. Perfect for rooms that stay consistently cold or need different temperatures than the rest of the house.
+The house reports a room that is too cold or too warm, while any automatic heat control remains inside equipment designed and approved for thermostat operation.
 
-## Use cases
+**Best for:** Finding cold rooms, watching nurseries or workspaces, and verifying that permanent heating is keeping up.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Bedrooms & Living</h4>
-    <ul>
-      <li><strong>Cold Bedroom</strong> - Room gets too cold during the night</li>
-      <li><strong>Kids' Room Warmer</strong> - Children want warmer bedroom than rest of house</li>
-      <li><strong>Guest Room</strong> - Maintain comfortable temperature only when occupied</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Workspaces</h4>
-    <ul>
-      <li><strong>Garage Office</strong> - Converted workspace needs extra heat</li>
-      <li><strong>Basement Room</strong> - Lower levels stay consistently cold</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Remotely switching a portable space heater, using a hobby sensor as freeze protection, or heating an unattended room with equipment not approved for that use.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Temperature Sensor</strong>
-      <div class="product-details">
-        Popular brands: Aqara, Sonoff, SmartThings, Zigbee sensors<br>
-        Accurate temperature • Fast updates • Good battery life
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Room Heater</strong>
-      <div class="product-details">
-        Electric space heater with simple on/off switch<br>
-        UL, ETL, or CE certified • Tip-over protection • Overheat protection
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Plug</strong>
-      <div class="product-details">
-        Popular brands: TP-Link Kasa, Wyze, Zigbee plugs<br>
-        Must handle 1500W heater • Power monitoring recommended
-      </div>
-    </div>
-  </div>
-</div>
+A temperature alert is useful. Turning a high-wattage portable heater on through a general-purpose smart plug adds failure points around an appliance that can start a fire if it is covered, tipped, damaged, or used contrary to its instructions.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Contact Sensor</strong>
-      <div class="product-details">
-        On window for safety (prevent running with window open)
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Presence Sensor</strong>
-      <div class="product-details">
-        Only heat when room is occupied
-      </div>
-    </div>
-  </div>
-</div>
+Start with monitoring. If a room needs automatic supplemental heat, use a fixed or purpose-built heating system with its own approved thermostat, limits, and professional installation where required.
+
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Measure room temperature | No personally verified recommendation yet | No personally verified recommendation yet | Compare the reading with a known thermometer before using it for alerts. |
+| Control central heating | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | I have used both. Keep safe limits and manual control at the thermostat. |
+| Add supplemental heat | Manually operated equipment used exactly as instructed | Fixed, purpose-built heating with an approved thermostat | Have wiring and equipment evaluated by a qualified professional where appropriate. |
+
+See [recommended gear](/gear.html) for the products I have used. This page does not recommend a smart plug for a portable heater.
 
 ## Logic
 
-<div class="automation-example">IF room temperature < 68°F
-THEN turn on space heater
-ELSE IF temperature > 70°F
-THEN turn off space heater</div>
+- **Trigger:** The room remains outside its chosen temperature range, or the sensor stops reporting.
+- **Conditions:** The reading is recent and the sensor has been compared with a known thermometer.
+- **Action:** Send an alert naming the room and show the current reading.
+- **Wait / timeout:** Require a sustained reading long enough to avoid alerts from a brief draft.
+- **Stop condition:** A person inspects the room and acknowledges the alert.
+- **Manual override:** Heating remains controllable at its normal thermostat or appliance controls.
 
-<div class="info-box">
-  <strong>⚠️ Critical Safety</strong>
-  <ul>
-    <li>Never operate heater with window open</li>
-    <li>Use only certified heaters (UL, ETL, CE)</li>
-    <li>Ensure 3 feet clearance on all sides</li>
-    <li>Implement maximum runtime shutoff (8 hours)</li>
-    <li>Always check window sensor in conditions</li>
-  </ul>
-</div>
+<div class="automation-example">IF the room stays below its alert threshold
+OR the temperature sensor becomes unavailable
+THEN alert a responsible person
+AND name the room and current sensor state
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Part 1: Turn On When Cold</h4>
-    <strong>Trigger:</strong> Room temperature drops below 68°F (20°C)<br>
-    <strong>Conditions:</strong> Window is closed (CRITICAL) • Time between 6 PM - 8 AM<br>
-    <strong>Action:</strong> Turn on smart plug with room heater
-  </div>
-  
-  <div class="setup-step">
-    <h4>Part 2: Turn Off When Warm</h4>
-    <strong>Trigger:</strong> Room temperature rises above 70°F (21°C)<br>
-    <strong>Conditions:</strong> None (always turn off when warm enough)<br>
-    <strong>Action:</strong> Turn off smart plug with room heater
-  </div>
-</div>
+DO NOT switch a portable heater through a general-purpose smart plug</div>
+
+## Setup notes
+
+1. Put the sensor away from direct sunlight, supply vents, exterior doors, and the heater itself.
+2. Compare it with a known thermometer over several hours.
+3. Choose alert thresholds for the people, pets, pipes, plants, and materials in that specific room.
+4. Add a stale-data alert based on the sensor's normal reporting interval.
+5. Test notifications with phones locked and muted as they normally are.
+6. Keep the room's normal heat source and manual controls independent of the hub.
+7. If permanent supplemental heat is needed, select equipment designed for that job and follow installation requirements.
+
+## If a portable heater is used manually
+
+- Follow the manufacturer's location, clearance, outlet, supervision, and operating instructions.
+- Plug it directly into an appropriate wall outlet unless the manufacturer explicitly says otherwise.
+- Keep it away from bedding, curtains, furniture, water, children, and pets.
+- Do not defeat tip-over, overheat, timer, or thermostat protection.
+- Turn it off when unattended if the instructions require that.
+- Stop using equipment or outlets that are damaged, loose, discolored, unusually warm, or unreliable.
 
 ## Advanced features
 
-### Presence-based heating
+### Compare nearby rooms
 
-Only run heater when room is occupied:
+Track the room against a nearby conditioned space. A growing difference can reveal a closed vent, draft, equipment problem, or poor sensor placement.
 
-Create automation with these elements:
-- **Trigger:** Bedroom temperature below 68°F
-- **Conditions:**
-  - Window is closed
-  - Room is occupied (motion sensor active OR presence sensor detects person)
-- **Action:** Turn on heater
+### Watch recovery time
 
-### Pre-warm before bedtime
-
-Start heating room before typical bedtime:
-
-Create automation with these elements:
-- **Trigger:** Time is 9:00 PM
-- **Conditions:**
-  - Bedroom temperature below 68°F
-  - Window is closed
-- **Action:** Turn on heater
-
-### Smart scheduling
-
-Different temperatures for different times:
-
-Create automation triggered by temperature change:
-- **Bedtime (10 PM - 7 AM):** Keep warm 68-70°F
-  - If temp below 68°F AND window closed: Turn on heater
-- **When warm enough (above 70°F):** Turn off heater
-
-Use conditional logic based on time of day and current temperature.
-
-### Power failure recovery
-
-Don't automatically restart heater after power outage:
-
-Create automation triggered when system starts/restarts:
-- **Action:** Turn off heater smart plug (ensures safe state after power restoration)
-
-## Safety considerations
-
-### ⚠️ Critical Safety Rules
-
-**1. Never operate heater with window open**
-- Risk of carbon monoxide (for fuel-based heaters)
-- Massive energy waste
-- Always check window sensor in automation conditions
-
-**2. Use certified heaters only**
-- Look for UL, ETL, or CE certification
-- Must have tip-over protection
-- Must have overheat protection
-- Avoid old or damaged heaters
-
-**3. Don't cover heater**
-- Ensure 3 feet clearance on all sides
-- Never place under desks or in closets
-- Keep away from curtains, bedding, furniture
-
-**4. Monitor for faults**
-- Send alert if heater runs more than 8 hours continuously
-- Track power consumption to detect issues
-- Stop automation if unusual behavior detected
-
-**5. Power monitoring recommended**
-- Track watts to detect issues (normal: 1500W, problem: significantly different)
-- Alert if power consumption abnormal
-- Automatic shutoff if power exceeds safe levels
-
-### Recommended safety automations
-
-**Window open safety:**
-Create emergency shutoff automation:
-- **Trigger:** Bedroom window opens
-- **Condition:** Heater is currently on
-- **Actions:**
-  - Turn off heater immediately
-  - Send safety alert notification: "SAFETY: Heater turned off - window opened"
-
-**Maximum Runtime:**
-Always implement maximum runtime shutoff (shown in examples above).
-
-**Away Mode:**
-Turn off all heaters when house is in Away mode.
+After the central system starts, note whether the room moves toward the expected range. Alert on a sustained failure to recover rather than repeatedly changing the setpoint.
 
 ## Failure modes
 
-### Issue: Room never reaches target temperature
+- **Sensor reads warmer than the occupied area:** Move it away from the heater, electronics, sunlight, or ceiling.
+- **Sensor reads colder near a window:** Decide whether that location represents the room or only the draft.
+- **Sensor stops reporting:** Send a maintenance alert and stop using it for decisions.
+- **Alerts repeat constantly:** Add acknowledgment and hysteresis without hiding a sustained unsafe condition.
+- **Central heat cannot maintain the room:** Inspect vents, doors, insulation, and the heating system rather than adding unverified plug control.
+- **The hub is down:** The normal thermostat and heating equipment continue operating independently.
 
-**Causes:**
-- Heater undersized for room
-- Room has poor insulation
-- Outdoor temperature extremely cold
-- Heater on smart plug that can't supply enough power
-- Temperature sensor placement incorrect
+## Done when
 
-**Solutions:**
-✅ Calculate room heating requirements (typically 10W per sq ft)
-✅ Check heater wattage matches or exceeds room needs
-✅ Verify smart plug rated for heater wattage (usually need 15A/1800W capacity)
-✅ Improve room insulation (door draft stopper, window sealing)
-✅ Lower target temperature expectations in extreme cold
-✅ Move temperature sensor away from heater, windows, doors
-✅ Consider larger heater or multiple heaters
+- [ ] The sensor has been compared with a known thermometer.
+- [ ] Placement represents the occupied part of the room.
+- [ ] Low, high, and unavailable states each create a clear alert.
+- [ ] A person must inspect and acknowledge the condition.
+- [ ] No general-purpose smart plug controls a portable heater.
+- [ ] Normal thermostat and appliance controls work without the hub.
+- [ ] Any automatic supplemental heat uses equipment approved for that operation.
 
-### Issue: Heater cycles on/off too frequently
+## FAQ
 
-**Causes:**
-- Temperature thresholds too close together (68°F off, 69°F on)
-- Temperature sensor too close to heater
-- Rapid temperature fluctuations in room
-- No delay in automation triggers
+### Can I control a portable space heater with a general smart plug?
 
-**Check:**
-- ✅ Increase temperature deadband (66°F on, 70°F off = 4° difference)
-- ✅ Move sensor away from heater - at least 6-10 feet
-- ✅ Add "for: 5 minutes" delay to both on and off triggers
-- ✅ Use slower-responding sensor position (avoid direct airflow)
+Do not assume that is safe. Follow the heater manufacturer's instructions. This recipe does not switch a portable heater through a general-purpose smart plug.
 
-**Fix:**
-Modify trigger with:
-- Lower threshold: Turn on at 66°F instead of 68°F
-- Add 5 minute delay: Temperature must stay below threshold for 5 minutes before turning on
+### What should happen when the temperature sensor stops reporting?
 
-### Issue: Smart plug turns off unexpectedly
+Send a maintenance alert and stop making automatic heating decisions from that sensor. Missing data must not be treated as a comfortable room.
 
-**Causes:**
-- Smart plug overheating
-- Heater drawing too much power
-- Smart plug not rated for heater
-- Network connectivity issues
-- Automation or safety feature triggering
+### Can this protect pipes or vulnerable people by itself?
 
-**Solutions:**
-✅ Verify smart plug specifications: Must support 15A / 1500-1800W
-✅ Check for overheating: Touch plug after running - should be warm not hot
-✅ Use in-wall smart outlet instead of plug (better heat dissipation)
-✅ Review automation logs: Check what turned off the plug
-✅ Check heater actual wattage (use kill-a-watt meter)
-✅ Don't daisy-chain plugs or use extension cords
-✅ Replace smart plug if overheating or failing
-
----
+No. Use appropriate building heat, freeze protection, supervision, and professional advice. A hobby sensor and hub are supplemental.
 
 ## Related recipes
-- [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
-- [Turn on bathroom fan when starting shower](/automation/climate/fan-shower/)
-- [Bedtime routine automation](/automation/daily-routines/bedtime-routine/)
+
+- [Pause HVAC when windows stay open](/automation/climate/thermostat-windows-open.html)
+- [Safe thermostat auto-away](/getting-started/safe-thermostat-away.html)
+- [Climate automations](/automation/climate/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/climate/">← Back to Climate Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/climate/index.html">Back to climate automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

@@ -1,330 +1,117 @@
 ---
 layout: automation
-title: Stove or Oven Left On Alert - Smart Home Safety
-description: Get notified when your stove or oven is left on too long. Prevent fire hazards and improve safety with cooking appliance monitoring.
-keywords: stove left on alert, oven notification, cooking safety, smart stove monitoring, kitchen fire prevention, appliance safety automation
+title: Get a stove reminder without pretending it is a safety system
+description: Use a deliberate cooking timer or approved appliance status signal for stove reminders without unsafe smart plugs, improvised heat sensors, or inferred shutoff.
+keywords: stove reminder, oven left on alert, cooking timer, appliance status notification, kitchen safety
+last_modified_at: 2026-08-30
+faqs:
+  - question: Can a normal smart plug monitor or shut off a stove or oven?
+    answer: No general-purpose plug is recommended here. Ranges and ovens may be hard-wired or use high-current circuits, and gas appliances have additional hazards. Use only equipment approved for the exact appliance and installation.
+  - question: Is no motion in the kitchen proof that cooking was abandoned?
+    answer: No. Someone may be in another room while food cooks, and a motion sensor can miss a person who is still. Motion can add context but must not decide that a burner is safe.
+  - question: Can a temperature sensor near a burner detect whether the stove is on?
+    answer: It is not a dependable safety signal. Placement, steam, sunlight, another burner, and residual heat can all produce misleading readings.
 ---
 
-# Stove or oven left on alert
+# Get a stove reminder without pretending it is a safety system
 
-Forgetting to turn off the stove or oven is a common kitchen hazard that can lead to fires, wasted energy, and anxiety when you're away from home. This automation alerts you when cooking appliances have been on for an extended period, giving you peace of mind and improving home safety.
+Starting to cook also starts a reminder, and only a person or an appliance-approved status signal clears it.
 
-## Use cases
+**Best for:** Households that want a persistent cooking reminder tied to a deliberate timer or a manufacturer-supported appliance status.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Safety and prevention</h4>
-    <ul>
-      <li><strong>Fire prevention</strong> - Catch forgotten burners before they become hazards</li>
-      <li><strong>Elderly care</strong> - Help aging parents stay safe while cooking</li>
-      <li><strong>Busy households</strong> - Catch distractions that lead to forgotten appliances</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Awareness</h4>
-    <ul>
-      <li><strong>Left home with stove on</strong> - Get alerted after leaving</li>
-      <li><strong>Long cooking times</strong> - Reminder for slow-cooked items</li>
-      <li><strong>Kids home alone</strong> - Know if appliances are being used</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Automatic shutoff through a general-purpose smart plug, improvised sensors near burners, or replacing smoke alarms and attentive cooking.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment (choose one method)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Method 1: Smart plug with power monitoring</strong>
-      <div class="product-details">
-        Brands: TP-Link Kasa, Emporia, Zooz, Shelly<br>
-        Works for: Electric stoves/ovens plugged into outlet<br>
-        Detects power draw indicating appliance is on
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Method 2: Stove guard sensor</strong>
-      <div class="product-details">
-        Brands: iGuardStove, FireAvert, Wallflower<br>
-        Purpose-built stove monitoring devices<br>
-        Some can actually shut off power automatically
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Method 3: Temperature sensor on stovetop</strong>
-      <div class="product-details">
-        Brands: Aqara, SmartThings Multipurpose<br>
-        Detects elevated temperature when burners are on<br>
-        Works for gas and electric stoves
-      </div>
-    </div>
-  </div>
-</div>
+The safe version of this idea is a reminder, not a claim that the smart home knows whether every burner is safe. Power, temperature, presence, and motion can all be ambiguous.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Motion sensor in kitchen</strong>
-      <div class="product-details">
-        Differentiate between cooking and forgotten stove
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart speaker</strong>
-      <div class="product-details">
-        Announce alerts audibly in the home
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart smoke detector</strong>
-      <div class="product-details">
-        Nest Protect, First Alert Onelink<br>
-        Complementary fire safety
-      </div>
-    </div>
-  </div>
-</div>
+Use a timer every time cooking starts. If the appliance exposes a supported status through its manufacturer, that status can improve the message, but it still does not replace checking the controls in person.
 
-<div class="warning-card">
-  <h3>Important safety notes</h3>
-  <ul>
-    <li><strong>Don't plug gas appliances into smart plugs</strong> - Cutting power won't stop gas flow</li>
-    <li><strong>Check plug rating</strong> - Ovens draw high current; ensure plug is rated for load</li>
-    <li><strong>Hard-wired appliances</strong> - Need electrician to install monitoring solutions</li>
-    <li><strong>This is a supplement</strong> - Not a replacement for smoke detectors and fire safety</li>
-  </ul>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Start a cooking reminder | A physical kitchen timer or deliberate phone timer | A visible household cooking mode started by the cook | Starting the timer must be part of starting the appliance. |
+| Read appliance status | No personally verified recommendation yet | Manufacturer-supported status for the exact appliance | Verify what each state means. Do not infer individual burner state from whole-appliance power. |
+| Shut off cooking equipment | A person uses the appliance controls | Purpose-built, approved safety equipment installed for the exact appliance | No general-purpose smart plug or improvised relay is recommended. |
 
 ## Logic
 
-<div class="automation-example">IF stove/oven power draw > 100W for 30 minutes
-AND no motion in kitchen for 15 minutes
-THEN send notification "Stove may be left on unattended"</div>
+- **Trigger:** A person deliberately starts Cooking mode or an approved appliance signal reports active cooking.
+- **Conditions:** Record which signal started the reminder. Do not require missing motion or Away mode.
+- **Action:** Start a visible timer and send a persistent reminder when the chosen interval expires.
+- **Wait / timeout:** Use the cook's intended interval, with an earlier check for unfamiliar cooking.
+- **Stop condition:** A person checks the appliance controls and clears the reminder.
+- **Manual override:** The appliance's normal controls and a physical timer remain available.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Automation 1: Long cooking alert</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Stove power consumption above 100W for 60 minutes</li>
-      <li>OR Temperature sensor above 100°F for 60 minutes</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Optional: No motion in kitchen for 15 minutes</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "Stove has been on for 1 hour"</li>
-      <li>Optional: Announce on kitchen speaker</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Automation 2: Left home with stove on</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Everyone leaves home (away mode activates)</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Stove power consumption above 100W</li>
-      <li>OR Stove temperature elevated</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Send high-priority notification: "WARNING: Stove is still on and nobody is home!"</li>
-      <li>Optional: Turn off smart plug if electric stove</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF a person starts Cooking mode
+THEN start the chosen kitchen timer
+
+IF the timer expires
+THEN send a persistent reminder to check every control
+
+CLEAR only after a person checks the appliance
+DO NOT infer safe from no motion, low power, or cooling temperature</div>
+
+## Setup notes
+
+1. Put a physical timer or one-tap Cooking control next to the normal cooking workflow.
+2. Make the reminder name the appliance and ask a person to inspect every control.
+3. Keep the reminder visible until acknowledged.
+4. Do not silence it automatically when the house enters Away or Bedtime.
+5. If using manufacturer-supported status, test preheat, normal cycling, residual heat, self-clean, disconnected, and unavailable states.
+6. Treat unavailable or ambiguous status as "check the appliance," not "off."
+7. Keep working smoke and carbon-monoxide alarms independent of this reminder.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Tiered alerts based on duration</h3>
-    <p>Escalating notifications for extended cooking:</p>
-    <ul>
-      <li><strong>60 minutes:</strong> "Stove has been on for 1 hour"</li>
-      <li><strong>90 minutes:</strong> "Stove still on - is everything OK?"</li>
-      <li><strong>120 minutes:</strong> High priority: "Stove on for 2 hours!"</li>
-      <li><strong>180 minutes:</strong> Critical: Alert all family members</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Motion-aware alerting</h3>
-    <p>Only alert when stove appears unattended:</p>
-    <ul>
-      <li>Track kitchen motion sensor activity</li>
-      <li>If motion detected, assume cooking is active</li>
-      <li>Alert only when no motion for 15+ minutes</li>
-      <li>Reduces false alarms during active cooking</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Auto-shutoff for electric appliances</h3>
-    <p>Automatically cut power in dangerous situations:</p>
-    <ul>
-      <li>Only for electric stoves plugged into smart plug</li>
-      <li>Trigger: Away mode + stove on for 10 minutes</li>
-      <li>Send confirmation notification</li>
-      <li><strong>Caution:</strong> May require re-igniting oven after restoration</li>
-    </ul>
-  </div>
-</div>
+### Add a leaving-home check
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Bedtime stove check</h3>
-    <p>Part of bedtime routine:</p>
-    <ul>
-      <li>Trigger: Bedtime mode activates OR time is 10 PM</li>
-      <li>Condition: Stove power above threshold</li>
-      <li>Action: "Stove is still on at bedtime!"</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Guest cooking notification</h3>
-    <p>Know when guests use the kitchen:</p>
-    <ul>
-      <li>Trigger: Stove turns on while in vacation mode</li>
-      <li>Action: Alert the household</li>
-      <li>Useful for Airbnb hosts or house sitters</li>
-    </ul>
-  </div>
-</div>
+When Away mode begins, remind the last person to check the stove if Cooking mode is still active. Do not remotely report that the stove is off unless the exact appliance provides a verified state.
 
-## Common issues and solutions
+### Escalate an unacknowledged reminder
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Alerts during normal cooking</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Getting alerts while actively cooking long recipes.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Increase time threshold (90 minutes instead of 60)</li>
-        <li>Add motion sensor condition - only alert if unattended</li>
-        <li>Add snooze option: "I'm cooking - remind me in 2 hours"</li>
-        <li>Create "slow cooking" mode that extends thresholds</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Power monitoring not accurate</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Smart plug reports inconsistent power readings.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check smart plug current rating vs. appliance draw</li>
-        <li>Calibrate threshold by testing when stove is on vs. off</li>
-        <li>Use average power over 5 minutes instead of instant</li>
-        <li>Try different smart plug with better power monitoring</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Gas stove monitoring challenges</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Can't use power monitoring for gas appliances.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Use temperature sensor near burners</li>
-        <li>Use dedicated stove guard device (iGuardStove)</li>
-        <li>Monitor gas flow if gas company offers smart meter</li>
-        <li>Motion sensor + time-based heuristics</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Hard-wired appliance</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Stove is hard-wired, can't use smart plug.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Use temperature sensor method</li>
-        <li>Install dedicated stove guard device</li>
-        <li>Consider CT clamp on circuit (requires electrician)</li>
-        <li>Use whole-home energy monitor (Sense, Emporia Vue)</li>
-      </ul>
-    </div>
-  </div>
-</div>
+Send one follow-up to another responsible adult if the first reminder remains unacknowledged. Avoid repeated messages that train people to ignore it.
 
-## Best practices
+## Failure modes
 
-### Setting appropriate thresholds
+- **Nobody starts Cooking mode:** Keep a physical timer at the appliance and make it part of the cooking habit.
+- **The timer is wrong for a long recipe:** Let the cook choose or extend the interval explicitly.
+- **Appliance status is unavailable:** Ask for an in-person check and repair the integration.
+- **Power appears low while a burner is hot:** Do not clear the reminder from power alone.
+- **Motion stops while cooking continues:** Do not treat missing motion as abandonment or safety.
+- **A reminder is acknowledged remotely:** Keep the wording focused on checking the physical controls, not merely tapping a notification.
 
-**Time thresholds:**
-- **Standard alert:** 60-90 minutes (catches forgotten appliances)
-- **Slow cooking:** 3-4 hours (for roasts, slow braises)
-- **Oven preheating:** Ignore first 15 minutes
+## Done when
 
-**Power thresholds:**
-- **Electric burner on:** Usually 500W-2000W per burner
-- **Electric oven on:** Usually 1500W-5000W
-- **Standby/clock only:** Under 10W
-- **Set threshold at:** 100W (catches any active heating element)
+- [ ] Starting a cooking session also starts a visible timer or Cooking mode.
+- [ ] The reminder names the appliance and remains visible until acknowledged.
+- [ ] Away and Bedtime do not silently clear an active cooking reminder.
+- [ ] Missing or ambiguous data asks for an in-person check.
+- [ ] No general-purpose smart plug, improvised heat sensor, or inferred automatic shutoff is used.
+- [ ] Smoke and carbon-monoxide alarms operate independently.
 
-### Combining with motion detection
+## FAQ
 
-**Reduce false alerts:**
-- Only alert if no kitchen motion for 15+ minutes
-- Reset timer if motion detected
-- Assume active cooking while motion present
+### Can a normal smart plug monitor or shut off a stove or oven?
 
-**Motion placement:**
-- Position to see cooking area
-- Avoid triggering from nearby rooms
-- Consider multiple sensors for large kitchens
+No general-purpose plug is recommended here. Ranges and ovens may be hard-wired or use high-current circuits, and gas appliances have additional hazards. Use only equipment approved for the exact appliance and installation.
 
-### Safety integration
+### Is no motion in the kitchen proof that cooking was abandoned?
 
-**Complement with:**
-- Smoke detectors (smart preferably)
-- Carbon monoxide detectors
-- Fire extinguisher in accessible location
-- Emergency auto-shutoff for electric appliances
+No. Someone may be in another room while food cooks, and a motion sensor can miss a person who is still. Motion can add context but must not decide that a burner is safe.
 
----
+### Can a temperature sensor near a burner detect whether the stove is on?
+
+It is not a dependable safety signal. Placement, steam, sunlight, another burner, and residual heat can all produce misleading readings.
 
 ## Related recipes
-- [Fire safety response](/automation/security/fire-safety.html)
-- [Away mode automation](/automation/daily-routines/away-mode.html)
-- [Bedtime routine](/automation/daily-routines/bedtime-routine.html)
+
+- [Support a fire evacuation](/automation/security/fire-safety.html)
+- [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
+- [Run a bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/security/">← Back to Security Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/security/index.html">Back to safety and security automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>
