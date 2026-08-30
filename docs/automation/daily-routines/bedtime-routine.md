@@ -32,7 +32,7 @@ Separate the recipe into two stages: a reversible wind-down and an intentional f
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
 | Start bedtime | A "Good night" phrase or manual scene control | TODO: preferred bedside button | The final trigger should be intentional and available without an app. |
-| Dim selected lights | [Lower-cost smart dimmer](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Wall paddles remain normal controls before, during, and after the routine. |
+| Dim selected lights | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Wall paddles remain normal controls before, during, and after the routine. |
 | Apply an approved sleep setting | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Respect manual holds, safety limits, and the open-window pause recipe. |
 | Report open doors or windows | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Report status first; do not treat a contact sensor as proof that a door is locked. |
 

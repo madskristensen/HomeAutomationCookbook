@@ -3,6 +3,7 @@
 - Don't use em-dashes when writing sentences; use hyphens surrounded by spaces instead.
 - Don't use emojis in the text.
 - In public content, describe the author's experience with "I" and "my." Never call the author "the owner."
+- Use each recommended product's name. Do not use price adjectives such as "lower-cost" or "cheaper" as the link text.
 
 # Site structure
 - This is a Jekyll static site for homeautomationcookbook.com

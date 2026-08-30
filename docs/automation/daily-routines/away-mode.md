@@ -32,7 +32,7 @@ Start with reversible actions and a notification. Add locks, alarms, or applianc
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
 | Decide who is home | TODO: verified household presence source | TODO: verified presence plus a second empty-home signal | Every person and guest needs a safe path through the logic. |
-| Detect recent indoor activity | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) | [mmWave presence sensor with integrated PIR](https://www.amazon.com/dp/B095TZTGNB) | Use activity as a reason to delay Away, not as proof that the home is empty. |
+| Detect recent indoor activity | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) | TODO: verified combined PIR and mmWave sensor | Use activity as a reason to delay Away, not as proof that the home is empty. |
 | Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Keep safe minimum and maximum temperatures at the thermostat. |
 | Control fixed lights | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Physical paddles must keep working. |
 

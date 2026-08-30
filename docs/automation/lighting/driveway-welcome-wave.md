@@ -31,7 +31,7 @@ The old version of this page described a multi-zone driveway wave without verifi
 
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
-| Control plug-in exterior lighting | [Lower-cost outdoor smart plug](https://www.amazon.com/dp/B07X52W1J8) | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | Use only with a suitable outdoor receptacle, enclosure, and lighting load. |
+| Control plug-in exterior lighting | [Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8) | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | Use only with a suitable outdoor receptacle, enclosure, and lighting load. |
 | Switch a fixed entry light | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | The wall paddle remains the normal control. |
 | Confirm entry-door activity | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | A door event confirms activity; it does not prove identity or unlock anything. |
 | Suggest that someone is approaching | TODO: verified household presence source | TODO: verified presence plus a separate property signal | Use phone location only to open a short pending-arrival window. |
