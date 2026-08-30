@@ -51,55 +51,35 @@ Before diving into products and platforms, take time to consider these three key
 
 ## Choosing your ecosystem
 
-Once you know what you want to automate and your budget, the next major decision is choosing your smart home platform. Each platform has its strengths - some prioritize privacy and local control, while others focus on ease of use and voice integration. Here are the most popular options:
+Once you know what you want to automate and your budget, the next major decision is choosing your smart home platform. Match the platform to the person who will build and maintain it:
 
 <div class="platform-selection">
   <div class="platform-option">
     <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo" title="Home Assistant" class="platform-logo-large">
     <h4>Home Assistant</h4>
-    <p><strong>Best for:</strong> Advanced users, customization</p>
-    <p><strong>Pros:</strong> Open source, highly flexible, extensive device support</p>
-    <p><strong>Cons:</strong> Steeper learning curve</p>
+    <p><strong>Best for:</strong> Technically confident users who want maximum flexibility</p>
+    <p><strong>Tradeoff:</strong> More of the system is yours to set up and maintain</p>
   </div>
 
   <div class="platform-option">
     <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo" title="Hubitat" class="platform-logo-large">
     <h4>Hubitat</h4>
-    <p><strong>Best for:</strong> Users wanting local control without complex setup</p>
-    <p><strong>Pros:</strong> 100% local processing, built-in Z-Wave and Zigbee radios</p>
-    <p><strong>Cons:</strong> Requires intermediate technical knowledge</p>
-  </div>
-
-  <div class="platform-option">
-    <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo" title="Apple HomeKit" class="platform-logo-large">
-    <h4>Apple HomeKit</h4>
-    <p><strong>Best for:</strong> Apple ecosystem users</p>
-    <p><strong>Pros:</strong> Privacy-focused, seamless iOS integration</p>
-    <p><strong>Cons:</strong> Limited device compatibility</p>
+    <p><strong>Best for:</strong> Semi-technical users who want friendly daily management and optional coding</p>
+    <p><strong>My choice:</strong> A managed hub with room to get into the details when needed</p>
   </div>
 
   <div class="platform-option">
     <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo" title="SmartThings" class="platform-logo-large">
     <h4>SmartThings</h4>
-    <p><strong>Best for:</strong> Beginners, Samsung users</p>
-    <p><strong>Pros:</strong> Easy setup, wide device support, supports local execution</p>
-    <p><strong>Cons:</strong> Some cloud dependency for advanced features</p>
-  </div>
-
-  <div class="platform-option">
-    <img src="/assets/img/logos/google.png" alt="Google Home logo" title="Google Home" class="platform-logo-large">
-    <h4>Google Home</h4>
-    <p><strong>Best for:</strong> Google ecosystem users</p>
-    <p><strong>Pros:</strong> Strong voice control, affordable devices</p>
-    <p><strong>Cons:</strong> Privacy concerns</p>
+    <p><strong>Best for:</strong> People who want broad support without being deeply technical</p>
+    <p><strong>Tradeoff:</strong> Less room to get into the details than Hubitat or Home Assistant</p>
   </div>
 
   <div class="platform-option">
     <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo" title="Amazon Alexa" class="platform-logo-large">
     <h4>Amazon Alexa</h4>
-    <p><strong>Best for:</strong> Voice control enthusiasts, Amazon ecosystem users</p>
-    <p><strong>Pros:</strong> Huge skill library, excellent voice recognition, affordable devices</p>
-    <p><strong>Cons:</strong> Cloud-dependent, privacy concerns</p>
+    <p><strong>Best for:</strong> Beginners who want voice control and simple routines</p>
+    <p><strong>Tradeoff:</strong> Better as an optional voice layer than the foundation for core automations</p>
   </div>
 </div>
 
@@ -176,6 +156,7 @@ A reliable network is the backbone of any smart home. Most smart devices connect
 You now have a solid foundation for planning your smart home. The journey from here depends on how deep you want to dive:
 
 - [Explore platforms](/getting-started/choose-the-right-platform.html) in detail
+- [Compare Hubitat and Home Assistant](/getting-started/hubitat-vs-home-assistant.html) for a family house
 - [Browse device recommendations](/getting-started/device-guide.html)
 - [Compare PIR and mmWave presence sensors](/getting-started/pir-vs-mmwave-presence.html)
 - [Set safe thermostat auto-away limits](/getting-started/safe-thermostat-away.html)

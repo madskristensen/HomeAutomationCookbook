@@ -22,7 +22,9 @@ An automation is not finished because it worked once for the person who built it
 
 ## What is in the house
 
-TODO: List the hubs, platforms, and devices currently used in the home. Do not imply that a platform or device was personally tested until this is confirmed.
+I started with Amazon Echo and Alexa, moved to SmartThings for broader device support, and now use Hubitat. Hubitat is my preferred balance: user-friendly and managed in daily use, with detailed rules and coding available when I need them.
+
+I have not personally run Home Assistant. When I discuss it, I identify that distinction rather than presenting its capabilities as a hands-on review.
 
 ## What this site is not
 

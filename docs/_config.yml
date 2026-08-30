@@ -52,6 +52,8 @@ navigation:
         url: /getting-started/philosophy.html
       - title: Choose the right platform
         url: /getting-started/choose-the-right-platform.html
+      - title: Hubitat vs Home Assistant
+        url: /getting-started/hubitat-vs-home-assistant.html
       - title: Device guide
         url: /getting-started/device-guide.html
       - title: PIR vs mmWave presence

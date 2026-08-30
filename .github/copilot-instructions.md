@@ -91,6 +91,8 @@ bundle exec jekyll serve --source docs --port 4000 --host 0.0.0.0
 - Keep the core recipe platform-neutral.
 - Only add a platform-specific note when Mads has personally verified a limitation or workaround that materially changes the outcome.
 - Never create unverified platform code, UI steps, or capability claims.
+- Mads has personally used Amazon Echo with Alexa, SmartThings, and Hubitat. Hubitat is his current and preferred platform because daily management is user-friendly while detailed rules and coding remain available.
+- Mads has not personally used Home Assistant. Clearly label Home Assistant guidance as a technical-fit comparison rather than firsthand experience.
 
 # Automation categories
 There are 8 automation categories (not 6):
