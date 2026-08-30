@@ -33,7 +33,7 @@ Separate the recipe into two stages: a reversible wind-down and an intentional f
 |---|---|---|---|
 | Start bedtime | A "Good night" phrase or manual scene control | TODO(owner): preferred bedside button | The final trigger should be intentional and available without an app. |
 | Dim selected lights | [Lower-cost smart dimmer](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Wall paddles remain normal controls before, during, and after the routine. |
-| Apply an approved sleep setting | [Sensi ST55 Wi-Fi Smart Thermostat](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Respect manual holds, safety limits, and the open-window pause recipe. |
+| Apply an approved sleep setting | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Respect manual holds, safety limits, and the open-window pause recipe. |
 | Report open doors or windows | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Report status first; do not treat a contact sensor as proof that a door is locked. |
 
 See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).

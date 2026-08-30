@@ -35,7 +35,7 @@ A smart switch is usually the safer choice for shared rooms because it keeps the
 
 | Job | Good enough | Never think about it | Local or cloud | Guest-proof note |
 |---|---|---|---|---|
-| Adjust heating and cooling | [Sensi ST55 Wi-Fi Smart Thermostat](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Sensi uses Wi-Fi services; Honeywell can be local with a compatible Z-Wave hub. | Someone should be able to change the temperature at the thermostat. |
+| Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | ecobee uses Wi-Fi services; Honeywell can be local with a compatible Z-Wave hub. | Someone should be able to change the temperature at the thermostat. |
 
 ## Leaks and safety
 

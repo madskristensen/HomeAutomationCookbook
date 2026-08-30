@@ -33,7 +33,7 @@ Start with reversible actions and a notification. Add locks, alarms, or applianc
 |---|---|---|---|
 | Decide who is home | TODO(owner): verified household presence source | TODO(owner): verified presence plus a second empty-home signal | Every person and guest needs a safe path through the logic. |
 | Detect recent indoor activity | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) | [mmWave presence sensor with integrated PIR](https://www.amazon.com/dp/B095TZTGNB) | Use activity as a reason to delay Away, not as proof that the home is empty. |
-| Adjust heating and cooling | [Sensi ST55 Wi-Fi Smart Thermostat](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Keep safe minimum and maximum temperatures at the thermostat. |
+| Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Keep safe minimum and maximum temperatures at the thermostat. |
 | Control fixed lights | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Physical paddles must keep working. |
 
 See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
