@@ -20,8 +20,6 @@ I have personally used Amazon Echo with Alexa, SmartThings, and Hubitat. I now p
 | Hubitat | You want a managed hub, local rules for supported devices, and room to write detailed logic or code. | The deeper tools still require careful setup and testing. | Current platform and my preference. |
 | Home Assistant | You are technically confident and want maximum flexibility over hardware, integrations, dashboards, and maintenance. | You own more architecture, update, backup, radio, and remote-access decisions. | Not personally used. Technical-fit comparison only. |
 
-For a closer look at the two flexible options, read [Hubitat vs Home Assistant for a family house](/getting-started/hubitat-vs-home-assistant.html).
-
 ## Amazon Alexa
 
 Alexa was my starting point. It is approachable for voice commands and simple routines.
@@ -71,6 +69,29 @@ Consider it when:
 
 Do not choose it only because it can do more. Choose it if you also want to own more.
 
+## Hubitat or Home Assistant?
+
+Both can support serious local automations. The practical difference is how much of the system you want to assemble and maintain yourself.
+
+Hubitat is the middle ground I prefer. It is a purpose-built appliance with approachable built-in tools, while Rule Machine, custom apps, and drivers provide a path into detailed logic and code. Home Assistant offers a higher customization ceiling, but hardware choices, integrations, updates, backups, radios, dashboards, and remote access can all become part of maintaining the system.
+
+If Hubitat provides the control you need, it is likely easier to live with day to day. If building and owning every layer is part of the appeal, Home Assistant may be the better technical fit. I have not personally operated Home Assistant, so verify its current requirements in the official documentation before deciding.
+
+## Daily life matters more than the feature ceiling
+
+Kids, guests, and other family members should still use normal switches and controls. They should not need to know which platform runs the house.
+
+Whichever platform you choose:
+
+- Keep physical controls working.
+- Put shared automations behind plain household modes such as Home, Away, Guest, and Night.
+- Use dashboards for visibility, not as the only way to operate a room.
+- Make backups before major changes.
+- Document automations that affect safety, access, or climate.
+- Prefer understandable rules over clever chains of dependencies.
+
+A system with a higher technical ceiling is not better if only one person can keep it running.
+
 ## Platforms not compared here
 
 This is not a ranking of every ecosystem. I have not personally used Apple Home or Google Home as the automation platform for my house, so I do not make detailed firsthand claims about them here. If one is on your shortlist, verify it against the same household test below.
@@ -88,6 +109,15 @@ Before moving the house:
 7. Let another household member use the room without instruction.
 8. Confirm the platform still feels maintainable after the novelty wears off.
 
+Before committing to a platform, answer these questions:
+
+1. Who will troubleshoot an automation when it fails at night?
+2. Do they want an appliance or another technical system to maintain?
+3. Which radios, devices, and integrations must work?
+4. How will the system be backed up and restored?
+5. What still works if the internet is unavailable?
+6. Can the family use lights, locks, and climate controls without opening an app?
+
 ## Matter and Thread
 
 Treat Matter and Thread as compatibility details, not a substitute for platform evaluation. Verify the exact device type, feature set, controller, border router, ecosystem sharing behavior, and update path. A logo alone does not prove the recipe will work as expected.
@@ -100,7 +130,6 @@ Your answer may differ. The right platform is the one your household can operate
 
 ## Next steps
 
-- [Compare Hubitat and Home Assistant](/getting-started/hubitat-vs-home-assistant.html)
 - [Choose devices by job](/getting-started/device-guide.html)
 - [See products I have used](/gear.html)
 - [Browse platform-neutral recipes](/automation/index.html)

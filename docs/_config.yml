@@ -49,14 +49,8 @@ navigation:
         url: /getting-started/philosophy.html
       - title: Choose the right platform
         url: /getting-started/choose-the-right-platform.html
-      - title: Hubitat vs Home Assistant
-        url: /getting-started/hubitat-vs-home-assistant.html
       - title: Device guide
         url: /getting-started/device-guide.html
-      - title: PIR vs mmWave presence
-        url: /getting-started/pir-vs-mmwave-presence.html
-      - title: Safe thermostat auto-away
-        url: /getting-started/safe-thermostat-away.html
       - title: Tips and tricks
         url: /getting-started/tips.html
       - title: Resources
@@ -101,6 +95,8 @@ navigation:
         subitems:
           - title: Pause HVAC for open windows
             url: /automation/climate/thermostat-windows-open.html
+          - title: Safe thermostat auto-away
+            url: /automation/climate/safe-thermostat-away.html
           - title: Window notifications
             url: /automation/climate/window-notifications.html
           - title: Air quality purifier

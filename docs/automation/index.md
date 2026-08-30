@@ -31,7 +31,7 @@ These recipes start with the household job and explain the logic without tying i
 <a href="/automation/climate/index.html" class="category-card">
 <h3>Climate and comfort</h3>
 <p>Control temperature, humidity, and air quality</p>
-<span class="category-count">6 automations</span>
+<span class="category-count">6 recipes + 1 guide</span>
 </a>
 
 <a href="/automation/entertainment/index.html" class="category-card">

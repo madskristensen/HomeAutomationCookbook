@@ -18,13 +18,23 @@ Climate automation should reduce waste and handle routine adjustments without hi
 - Use only equipment approved for the load and type of control.
 - Make automatic changes visible and easy to reverse.
 
-[Set safe thermostat auto-away limits](/getting-started/safe-thermostat-away.html) before allowing Away or Vacation mode to change the temperature.
+[Set safe thermostat auto-away limits](/automation/climate/safe-thermostat-away.html) before allowing Away or Vacation mode to change the temperature.
 
 </div>
 
 ## Choose a recipe
 
 <div class="automation-cards">
+
+<div class="automation-card" markdown="1">
+
+### Use safe thermostat auto-away limits
+
+Apply only a modest setback while protecting pets, plumbing, manual holds, and uncertain presence.
+
+[View guide](/automation/climate/safe-thermostat-away.html)
+
+</div>
 
 <div class="automation-card" markdown="1">
 
