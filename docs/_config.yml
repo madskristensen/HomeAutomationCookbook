@@ -43,7 +43,7 @@ navigation:
   - title: Home
     url: /
   - title: Getting started
-    url: /getting-started/
+    url: /getting-started/index.html
     subitems:
       - title: Philosophy
         url: /getting-started/philosophy.html
@@ -183,8 +183,12 @@ navigation:
             url: /automation/notifications/pet-feeding-reminder.html
           - title: Maintenance reminder dashboard
             url: /automation/notifications/maintenance-reminder-dashboard.html
+  - title: Recommended gear
+    url: /gear.html
   - title: FAQ
     url: /faq/index.html
+  - title: About
+    url: /about.html
 
 # Plugins
 plugins:

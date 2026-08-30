@@ -2,6 +2,7 @@
 layout: default
 title: About Home Automation Cookbook
 description: Practical, family-first smart home recipes that keep physical controls working and automations local when possible.
+last_modified_at: 2026-08-30
 ---
 
 # About Home Automation Cookbook
@@ -30,4 +31,4 @@ I have not personally run Home Assistant. When I discuss it, I identify that dis
 
 This is not a gadget review farm. It does not rank products by commission, invent test results, or require an app for ordinary household tasks.
 
-For the design rules behind every recipe, read the [home automation philosophy](/getting-started/philosophy.html).
+For the design rules behind every recipe, read the [home automation philosophy](/getting-started/philosophy.html). For named devices I have used, see [recommended gear](/gear.html).

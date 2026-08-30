@@ -34,6 +34,7 @@ description: Build useful home automations with plain-English logic, manual cont
     <a href="/automation/index.html" class="cta-primary">Browse automations</a>
     <a href="/getting-started/philosophy.html" class="cta-secondary">Learn the principles</a>
   </div>
+  <p>Written by Mads Kristensen from firsthand use of Alexa, SmartThings, Hubitat, and the devices named on this site.</p>
 </div>
 
 ## Start here
@@ -47,7 +48,7 @@ description: Build useful home automations with plain-English logic, manual cont
 
   <a href="/getting-started/choose-the-right-platform.html" class="category-card">
     <h3>Choosing a platform</h3>
-    <p>Compare Home Assistant, Hubitat, HomeKit, SmartThings, Google, and Alexa</p>
+    <p>Compare Alexa, SmartThings, Hubitat, and the technical fit of Home Assistant</p>
     <span class="category-count">Platform guide</span>
   </a>
 
@@ -55,6 +56,12 @@ description: Build useful home automations with plain-English logic, manual cont
     <h3>Build your first automation</h3>
     <p>Start with motion lighting - quick to set up and instantly useful</p>
     <span class="category-count">First recipe</span>
+  </a>
+
+  <a href="/gear.html" class="category-card">
+    <h3>Choosing devices</h3>
+    <p>See the products I have used, organized by the job they perform</p>
+    <span class="category-count">Recommended gear</span>
   </a>
 </div>
 
@@ -69,6 +76,7 @@ I built this cookbook around the rules that have held up in my own family home. 
     <h3>Works for everyone</h3>
     <p>Your kids, guests, and spouse shouldn't need training. Physical switches still work. Automations feel natural.</p>
   </div>
+
   <div class="principle-card">
     <h3>Actually saves time</h3>
     <p>Each automation eliminates a real daily task. No more checking if doors are locked or wondering if the dryer finished.</p>
@@ -83,31 +91,33 @@ I built this cookbook around the rules that have held up in my own family home. 
   </div>
 </div>
 
+<p>Read more about <a href="/about.html">how I test ideas and what is in my house</a>.</p>
+
 ## Popular automations
 
 <div class="featured-automations">
   <a href="/automation/lighting/lights-on-motion.html" class="featured-card">
     <h3>Automatic room lighting</h3>
-    <p>Walk into any room and lights turn on. Leave and they turn off. The most essential automation.</p>
-    <span class="card-arrow">View guide →</span>
+    <p>Walk into a room and the lights turn on. Leave and they turn off, while the wall switch still works.</p>
+    <span class="card-arrow">View guide</span>
   </a>
   
   <a href="/automation/climate/thermostat-windows-open.html" class="featured-card">
     <h3>Smart thermostat control</h3>
     <p>Pause heating or cooling when a window stays open, then resume safely after every monitored opening closes.</p>
-    <span class="card-arrow">View guide →</span>
+    <span class="card-arrow">View guide</span>
   </a>
   
   <a href="/automation/daily-routines/away-mode.html" class="featured-card">
     <h3>Automatic away mode</h3>
-    <p>When the last person leaves, your home secures itself and saves energy. No app needed.</p>
-    <span class="card-arrow">View guide →</span>
+    <p>After the home is confidently empty, make only the reversible changes the household approved.</p>
+    <span class="card-arrow">View guide</span>
   </a>
   
   <a href="/automation/appliances/washer-done-notification.html" class="featured-card">
     <h3>Appliance alerts</h3>
     <p>Get notified when the washer, dryer, or dishwasher finishes. Never forget wet clothes again.</p>
-    <span class="card-arrow">View guide →</span>
+    <span class="card-arrow">View guide</span>
   </a>
 </div>
 
@@ -117,7 +127,7 @@ I built this cookbook around the rules that have held up in my own family home. 
   <a href="/automation/lighting/index.html" class="category-card">
     <h3>Lighting</h3>
     <p>Motion-triggered, door-activated, and scheduled lighting</p>
-    <span class="category-count">6 automations</span>
+    <span class="category-count">8 automations</span>
   </a>
   
   <a href="/automation/daily-routines/index.html" class="category-card">
@@ -129,7 +139,7 @@ I built this cookbook around the rules that have held up in my own family home. 
   <a href="/automation/climate/index.html" class="category-card">
     <h3>Climate and comfort</h3>
     <p>Temperature, humidity, and air quality</p>
-    <span class="category-count">8 automations</span>
+    <span class="category-count">6 automations</span>
   </a>
   
   <a href="/automation/entertainment/index.html" class="category-card">
@@ -159,8 +169,8 @@ I built this cookbook around the rules that have held up in my own family home. 
 
 <div class="getting-started-box">
   <h2>New to home automation?</h2>
-  <p>Start with our philosophy guide to understand what makes automations truly helpful (versus just technically impressive).</p>
-  <a href="/getting-started/philosophy.html" class="cta-primary">Read the philosophy →</a>
+  <p>Start with the philosophy guide to understand what makes automations helpful rather than merely impressive.</p>
+  <a href="/getting-started/philosophy.html" class="cta-primary">Read the philosophy</a>
 </div>
 
 <div class="community-section">

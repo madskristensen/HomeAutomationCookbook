@@ -2,28 +2,28 @@
   <div class="nav-container">
     <a href="{{ '/' | relative_url }}" class="site-title" aria-label="{{ site.title }} - Home">{{ site.title }}</a>
     
-    <ul class="nav-menu" id="main-nav-menu" role="menubar">
+    <ul class="nav-menu" id="main-nav-menu">
       {% for item in site.navigation %}
-        <li class="nav-item {% if item.subitems %}has-dropdown{% endif %}" role="none">
-          <a href="{{ item.url | relative_url }}" class="nav-link" role="menuitem" tabindex="0" {% if item.subitems %}aria-haspopup="true" aria-expanded="false"{% endif %}>
+        <li class="nav-item {% if item.subitems %}has-dropdown{% endif %}">
+          <a href="{{ item.url | relative_url }}" class="nav-link" {% if item.subitems %}aria-haspopup="true" aria-expanded="false"{% endif %}>
             {{ item.title }}
             {% if item.subitems %}<span class="dropdown-arrow" aria-hidden="true">▾</span>{% endif %}
           </a>
           
           {% if item.subitems %}
-          <ul class="dropdown-menu" role="menu" aria-label="{{ item.title }} submenu">
+          <ul class="dropdown-menu" aria-label="{{ item.title }} submenu">
             {% for subitem in item.subitems %}
-              <li class="dropdown-item {% if subitem.subitems %}has-flyout{% endif %}" role="none">
-                <a href="{{ subitem.url | relative_url }}" role="menuitem" tabindex="-1" {% if subitem.subitems %}aria-haspopup="true" aria-expanded="false"{% endif %}>
+              <li class="dropdown-item {% if subitem.subitems %}has-flyout{% endif %}">
+                <a href="{{ subitem.url | relative_url }}" {% if subitem.subitems %}aria-haspopup="true" aria-expanded="false"{% endif %}>
                   {{ subitem.title }}
                   {% if subitem.subitems %}<span class="flyout-arrow" aria-hidden="true">▸</span>{% endif %}
                 </a>
                 
                 {% if subitem.subitems %}
-                <ul class="flyout-menu" role="menu" aria-label="{{ subitem.title }} submenu">
+                <ul class="flyout-menu" aria-label="{{ subitem.title }} submenu">
                   {% for subsubitem in subitem.subitems %}
-                    <li class="flyout-item" role="none">
-                      <a href="{{ subsubitem.url | relative_url }}" role="menuitem" tabindex="-1">{{ subsubitem.title }}</a>
+                    <li class="flyout-item">
+                      <a href="{{ subsubitem.url | relative_url }}">{{ subsubitem.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>
