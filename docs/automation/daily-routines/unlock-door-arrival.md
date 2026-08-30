@@ -1,489 +1,141 @@
 ---
 layout: automation
-title: Auto-Unlock Front Door When Arriving Home - Smart Lock Automation
-description: Automatically unlock your front door when you arrive home. Complete guide with presence detection, security considerations, and arrival routine integration.
-keywords: auto unlock door, smart lock automation, arrival home automation, automatic door unlock, presence detection unlock, smart door lock
+title: Prepare the house when someone arrives (without automatic unlocking)
+description: A platform-neutral arrival recipe that restores Home mode, lights a safe path, and resumes approved comfort settings without unlocking a door from phone location alone.
+keywords: arrival home automation, welcome home automation, presence detection, entry lighting, home mode automation
+last_modified_at: 2026-08-30
+faqs:
+  - question: Should arrival automation unlock the front door?
+    answer: Not from phone location alone. Keep a key, keypad, or deliberate lock action as the normal entry path unless a separately tested lock feature meets the household's security requirements.
+  - question: Why does arrival sometimes trigger while passing nearby?
+    answer: The home area may be too large or the phone location may drift. Require a real Away-to-Home transition and delay nonessential actions until arrival remains stable.
+  - question: What should happen for the second person arriving home?
+    answer: Usually very little. Reserve whole-house Home actions for the first arrival and use only entry lighting or a notification for later arrivals.
 ---
 
-# Unlock front door when you come home
+# Prepare the house when someone arrives
 
-Arriving home with arms full of groceries and having the door automatically unlock is a luxury that becomes essential once you experience it. Combined with lights turning on and music starting, it creates a truly welcoming smart home experience.
+When the first person returns, the house switches to Home, lights a safe path when needed, and restores the approved comfort settings. The door stays locked until someone deliberately unlocks it.
 
-<div class="info-box">
-  <strong>🏡 Why This Automation Is Valuable</strong>
-  <ul>
-    <li><strong>Convenience:</strong> No fumbling for keys with groceries. Hands-free entry. Works automatically for everyone with app.</li>
-    <li><strong>Combined Experience:</strong> Door unlocks, lights turn on, music starts playing, thermostat adjusts - perfect welcome home</li>
-    <li><strong>Universal:</strong> Works for all household members - kids arriving from school, partners coming home from work, anyone with location enabled</li>
-  </ul>
-</div>
+**Best for:** Households with a reliable Away state and simple arrival actions that are safe when phone location is briefly wrong.
 
-## Use cases
+**Not for:** Automatically unlocking a door, opening a garage, disarming an alarm, or starting an appliance based only on a geofence.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Daily Arrivals</h4>
-    <ul>
-      <li><strong>Grocery Shopping</strong> - Arms full, can't reach keys</li>
-      <li><strong>After Work</strong> - Seamless entry after commute</li>
-      <li><strong>Kids from School</strong> - Safe automatic entry</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Special Situations</h4>
-    <ul>
-      <li><strong>Package Delivery</strong> - Easy re-entry after retrieving packages</li>
-      <li><strong>Late Night</strong> - No searching for keys in the dark</li>
-    </ul>
-  </div>
-</div>
+## Why this exists
 
-## Products needed
+Arrival automation should remove small annoyances without creating a security shortcut. Phone location is useful for preparing lights and climate because those actions are easy to reverse. It is not strong proof that the right person is standing at the door.
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Home Platform App</strong>
-      <div class="product-details">
-        On every adult's phone<br>
-        Options: Home Assistant Companion, SmartThings, August App, HomeKit (Apple)<br>
-        <em>Requires location services enabled on all phones</em>
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Lock or Deadbolt</strong>
-      <div class="product-details">
-        Brands: August Smart Lock, Yale Assure Lock, Schlage Encode, Kwikset Halo, Zigbee/Z-Wave locks
-      </div>
-    </div>
-  </div>
-</div>
+Use arrival to restore Home mode. Keep entry access deliberate unless the household separately tests and accepts a lock's own arrival feature.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Driveway Motion Sensor</strong>
-      <div class="product-details">
-        Additional verification for security
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Doorbell</strong>
-      <div class="product-details">
-        Visual confirmation of arrival
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Geofence Zones</strong>
-      <div class="product-details">
-        Approaching/arriving triggers for staged actions
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-## Basic automation setup
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect the first return home | TODO(owner): verified household presence source | TODO(owner): verified presence plus a physical arrival signal | Require a real Away-to-Home transition. |
+| Light the entry path | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Keep the physical paddle usable. |
+| Restore heating and cooling | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | TODO(owner): preferred premium thermostat | The thermostat's safe limits remain authoritative. |
 
-<div class="automation-example">IF person arrives home
-AND within 50 feet of front door
-THEN unlock front door
-AND turn on entry lights</div>
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-<div class="info-box">
-  <strong>🔒 Security: Multiple Verification Points Required</strong>
-  <ul>
-    <li><strong>Never rely solely on GPS!</strong> Use multiple signals for safety.</li>
-    <li><strong>✅ Recommended Verification:</strong> Phone location (primary) + Motion in driveway (physical confirmation) + Time delay (20-30 seconds to confirm) + Away → Home state change (must have left first)</li>
-    <li><strong>❌ Don't Do:</strong> Unlock based only on GPS, no delay/verification, no motion confirmation</li>
-  </ul>
-</div>
+## Logic
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Any phone/person arrives home (enters geofence)</li>
-      <li>Person state changes to "home"</li>
-    </ul>
-    <p><em>Verification: Person has been "away" before arriving (prevent unlocking if already home)</em></p>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions (Recommended for Security)</h4>
-    <ul>
-      <li>Motion detected in driveway (optional but recommended)</li>
-      <li>Person was away for at least 5 minutes</li>
-      <li>Time delay: Present for 20 seconds before unlocking</li>
-    </ul>
-    <p><em>Optional: Only during typical arrival times, not during sleeping hours</em></p>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <strong>Immediate:</strong> Unlock front door<br>
-    <strong>Associated:</strong> Change house mode to "Home" • Turn on entry lights • Start music • Adjust thermostat • Stop robot vacuum • Disarm security
-  </div>
-</div>
+- **Trigger:** A tracked household member changes from Away to Home.
+- **Conditions:** The house was actually in Away mode, the arrival remains stable briefly, and this is the first person home.
+- **Action:** Set the house to Home, turn on entry or path lights if it is dark, restore the approved thermostat setting, and send a concise status notification.
+- **Wait / timeout:** Wait long enough to reject a momentary location jump before running nonessential actions.
+- **Stop condition:** The presence signal returns to Away before the confirmation delay ends.
+- **Manual override:** Physical switches, thermostat controls, keys, and keypads still work normally.
 
-## Platform-specific examples
+<div class="automation-example">IF the first person changes from Away to Home
+AND the arrival remains stable
+THEN set the house to Home
+AND light the entry path if it is dark
+AND restore approved comfort settings
+BUT do not unlock a door from phone location alone</div>
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Person arrives home (state 'home') for 20 sec</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Was previously 'not_home' + driveway motion (optional)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Unlock door, send notification, set mode "Home"</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Routine 1</span>
-        <span class="step-content">Member arrives + 20 sec → Unlock door</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Routine 2</span>
-        <span class="step-content">Door unlocks → Mode "Home", lights, welcome scene</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Presence sensor arrives for 20 sec</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Previous state was "not present"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Unlock door, Mode "Home", welcome actions</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Combined Presence or Life360 + Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">I arrive home (or anyone arrives)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Unlock door, Turn on lights, Activate home scene</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Requires device to be home hub
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <h4>August/Yale App</h4>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Built-in</span>
-        <span class="step-content">Most smart locks have auto-unlock feature</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Settings → Auto-Unlock → Set distance threshold</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">You arrive home + Wait 20 sec</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Unlock door (requires voice PIN), lights, music</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">When I arrive home + Delay 20 sec</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Unlock door, Turn on lights, Change mode</span>
-      </div>
-    </div>
-  </div>
-</div>
+## Setup notes
 
-## Home mode actions
+1. Make the arrival routine consume the same Home and Away states used by the [away-mode recipe](/automation/daily-routines/away-mode.html).
+2. Start with a notification-only test and record false arrivals for at least a week.
+3. Add entry lighting next because it is visible and easy to reverse.
+4. Restore climate only within the thermostat's independent safe limits.
+5. Run whole-house actions only for the first arrival. Later arrivals should not restart music, change temperatures, or disturb people already home.
+6. Keep door access manual unless a separate, owner-verified lock feature has its own safeguards and audit trail.
 
-When door unlocks OR person arrives, activate Home Mode:
+## Safe first actions
 
-### Lighting
-* **Entry lights** - 100% brightness
-* **Living room** - 60% brightness
-* **Kitchen** - If dark, 80%
-* **Hallway** - Path to main areas
+- Change the shared state from Away to Home.
+- Cancel pending away actions.
+- Turn on the porch, entry, or path light when it is dark.
+- Resume a normal thermostat schedule.
+- Stop an away-lighting pattern.
+- Notify the household that Home mode was restored.
 
-### Climate
-* **Thermostat** - Resume home temperature
-  - Heating: 70°F (21°C)
-  - Cooling: 72°F (22°C)
-* **Fans** - Resume normal schedule
+## Actions to keep separate
 
-### Security
-* **Disarm system** - Interior motion sensors
-* **Pause recording** - Interior cameras
-* **Exterior cameras** - Continue recording
+- Unlocking an exterior door.
+- Opening a garage door or gate.
+- Disarming an alarm.
+- Starting a coffee maker, fireplace, heater, or cooking appliance.
+- Playing audio without checking the time and current occupants.
 
-### Entertainment
-* **Music** - Start favorite station/playlist
-* **Volume** - Moderate level (40%)
-* **Speakers** - Living room, kitchen
-
-### Appliances
-* **Robot vacuum** - Return to dock
-* **Coffee maker** - Start brewing (if configured)
-* **Fireplace** - Turn on (electric only)
-
-### Notifications
-Send useful status updates:
-* "Dryer finished while you were out"
-* "Package delivered today"
-* "Windows left open"
-* "Take out trash tonight"
-
-## Security considerations
-
-### Important: Multiple verification points
-
-**Never rely solely on GPS!** Use multiple signals:
-
-✅ **Recommended Verification:**
-1. Phone location (primary)
-2. Motion in driveway (physical confirmation)
-3. Time delay (20-30 seconds to confirm)
-4. Away → Home state change (must have left first)
-
-❌ **Don't Do:**
-- Unlock based only on GPS
-- No delay/verification
-- No motion confirmation
-
-### Geo-fence configuration
-
-**Home zone settings:**
-- **Radius:** 50-100 meters (150-300 feet)
-- **Too small:** Late unlocking, already at door
-- **Too large:** Unlocks while approaching
-
-**Test and adjust:**
-1. Set initial radius
-2. Test arriving from different directions
-3. Note when trigger happens
-4. Adjust for 20-30 seconds before reaching door
-
-### Security best practices
-
-**Driveway motion sensor:**
-Add condition: Motion detected in driveway
-
-**Why:** Confirms physical presence, not just GPS.
-
-**Time-based restrictions:**Add condition: Only between 6 AM and 11 PM
-
-**Why:** Unusual for late-night arrivals, adds security.
-
-**Notification always:**
-Always send notification when door auto-unlocks, including person's name
-
-**Why:** Aware of all auto-unlocks, spot any unusual activity.
+Each of these needs its own trigger, safeguards, and acceptance tests. Arrival should not silently grant access or start equipment.
 
 ## Advanced features
 
-### Approaching home detection
+### First arrival versus later arrivals
 
-Create "Approaching" zone (500m radius):
+The first arrival can restore Home mode and normal comfort. A later arrival may need only entry lighting. This prevents repeated thermostat changes and unwanted announcements.
 
-**Benefits:**
-- Pre-heat/cool home
-- Turn on exterior lights (if dark)
-- Prepare home before arrival
-- Smoother experience
+### Approaching versus home
 
-**Setup:** Create automation triggered when person enters approaching zone:
-- Start climate adjustment (set thermostat to desired temperature)
-- Turn on exterior lights if after sunset
+An approaching signal can prepare slow, reversible actions such as climate recovery. Do not treat approaching as proof that someone has reached the property.
 
-### Staggered unlocking
+### Physical arrival confirmation
 
-Only unlock when very close:
+A deliberate door unlock, garage-door operation, or entry contact event can confirm that someone reached the house. Use it to improve lighting timing, not to weaken the security of the access control itself.
 
-**Zone Strategy:**
-- **Approaching (500m):** Prepare home
-- **Nearby (200m):** Turn on lights
-- **Arrival (50m):** Unlock door
+## Failure modes
 
-### Person-specific actions
+- **Arrival triggers while passing nearby:** Reduce the home area, require the previous state to be Away, and add a stability delay.
+- **The house remains Away after entry:** Check the person's location permissions and provide a visible Home control.
+- **The second arrival repeats every action:** Gate whole-house actions on whether anyone is already home.
+- **Lights turn on during daylight:** Add a darkness condition to lighting actions, not to the Home-state change.
+- **Climate restores too early:** Move climate recovery to a confirmed Home state or use a smaller approaching area.
+- **The hub or internet is down:** Keys, keypads, wall switches, alarm controls, and thermostat controls remain the fallback.
 
-Different routines per person:
-- Check which person triggered the automation
-- Play their preferred music playlist
-- Example: Parent 1 plays jazz, Parent 2 plays rock
+## Done when
 
-### First person vs. additional
+- [ ] Passing near the property does not switch the house to Home.
+- [ ] The first real arrival restores Home mode reliably.
+- [ ] A second person's arrival does not repeat whole-house actions.
+- [ ] Entry lighting runs only when it is useful.
+- [ ] No door, garage, gate, or alarm changes from phone location alone.
+- [ ] Every entry and comfort device remains manually usable.
+- [ ] Someone who did not configure the automation can enter normally.
 
-Different behavior for first arrival:
+## FAQ
 
-Add condition: Check if only 1 person is home (first arrival)
+### Should arrival automation unlock the front door?
 
-**First person:**
-- Full home activation
-- All lights
-- Music starts
+Not from phone location alone. Keep a key, keypad, or deliberate lock action as the normal entry path unless a separately tested lock feature meets the household's security requirements.
 
-**Additional arrivals:**
-- Just unlock door
-- Minimal disruption
+### Why does arrival sometimes trigger while passing nearby?
 
-## Troubleshooting
+The home area may be too large or the phone location may drift. Require a real Away-to-Home transition and delay nonessential actions until arrival remains stable.
 
-### Door unlocks too early
+### What should happen for the second person arriving home?
 
-**Causes:**
-- Geofence too large
-- No arrival delay
-- GPS drift
+Usually very little. Reserve whole-house Home actions for the first arrival and use only entry lighting or a notification for later arrivals.
 
-**Solutions:**
-- Reduce geofence radius
-- Add 20-30 second delay
-- Require driveway motion
+## Related recipes
 
-### Door doesn't unlock
-
-**Check:**
-- Location services enabled
-- App has background permissions
-- Geofence configured
-- Lock has power/battery
-
-**Fix:**
-- Verify location settings
-- Check app permissions
-- Test geofence manually
-- Replace lock batteries
-
-### Unlocks while approaching
-
-**Causes:**
-- Geofence too large
-- No delay configured
-
-**Solutions:**
-- Reduce radius to 50-100m
-- Add 20 second arrival delay
-- Require physical trigger (motion)
-
-### False unlocks from GPS drift
-
-**Causes:**
-- GPS inaccuracy
-- Phone location jumps
-
-**Solutions:**
-- Add motion sensor requirement
-- Increase arrival confirmation time
-- Require Home → Away → Home state change
-
-## Manual override options
-
-**Always Maintain:**
-- Physical key still works
-- Keypad code entry
-- Manual unlock from app
-- Voice unlock (with PIN)
-
-**Disable auto-unlock:**
-- Vacation mode toggle
-- Guest mode
-- "Manual only" period
-- Temporary disable (24 hours)
-
-## Battery backup
-
-**Smart lock considerations:**
-- Most use batteries (4-6 months life)
-- Monitor battery level
-- Replace proactively
-- Some support external power
-
-**Low battery automation:**
-Create automation that monitors lock battery level and sends notification when it drops below 20%.
-
----
-
-**Related automations:**
-- [Set away mode when leaving](/automation/daily-routines/away-mode/)
-- [Morning routine](/automation/daily-routines/morning-routine/)
-- [Home mode activation](/automation/daily-routines/)
+- [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
+- [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
+- [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
+- [Daily routine automations](/automation/daily-routines/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/daily-routines/">← Back to Daily Routines</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/daily-routines/index.html">Back to daily routine automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

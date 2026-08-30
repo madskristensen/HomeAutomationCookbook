@@ -15,9 +15,9 @@ Daily routine automations make your smart home adapt to the rhythm of your life.
 
 **Consistent Experience** - Same great start to every morning
 
-**Energy Savings** - Automatic away mode reduces heating/cooling costs by 10-15%
+**Less Waste** - Away mode can reduce unnecessary lighting and climate runtime
 
-**Enhanced Security** - Home arms itself when everyone leaves
+**Safer Transitions** - Security actions remain separate until the household verifies them
 
 **Seamless Transitions** - Arrive home to perfect lighting and temperature
 
@@ -69,11 +69,11 @@ Wind down with automated lighting, temperature adjustment, and security checks.
 
 <div class="automation-card" markdown="1">
 
-### Unlock door on arrival
+### Prepare the house on arrival
 
-Automatically unlock your door as you arrive home for truly hands-free entry.
+Restore Home mode, light the entry when needed, and resume approved comfort settings without unlocking a door from phone location alone.
 
-<span class="card-meta">**Best for:** Hands-full arrivals, convenience</span>
+<span class="card-meta">**Best for:** Safe entry lighting and comfort recovery</span>
 
 <p><a href="/automation/daily-routines/unlock-door-arrival.html" class="card-link">View Automation →</a></p>
 
@@ -153,7 +153,7 @@ Gradually dim lights, cool the house, and quiet notifications 30 minutes before 
 <li>Longer delays (15 min before away mode)</li>
 <li>Multiple verification methods</li>
 <li>Manual override always available</li>
-<li>Conservative geofence radius (100+ meters)</li>
+<li>A home area large enough to avoid location flapping</li>
 </ul>
 </div>
 
@@ -161,9 +161,8 @@ Gradually dim lights, cool the house, and quiet notifications 30 minutes before 
 <h3>Notification strategy</h3>
 <ul>
 <li><strong>Always notify:</strong> Away mode activation</li>
-<li><strong>Always notify:</strong> Door auto-unlock</li>
 <li><strong>Always notify:</strong> Security state changes</li>
-<li><strong>Optional:</strong> Someone arrived home</li>
+<li><strong>Optional:</strong> Home mode restored on arrival</li>
 </ul>
 </div>
 
@@ -171,7 +170,7 @@ Gradually dim lights, cool the house, and quiet notifications 30 minutes before 
 <h3>Fail-safe design</h3>
 <ul>
 <li>When uncertain, don't activate away mode</li>
-<li>When uncertain, don't unlock doors</li>
+<li>Do not unlock doors from phone location alone</li>
 <li>Better safe than automated</li>
 <li>Physical controls always work</li>
 </ul>
