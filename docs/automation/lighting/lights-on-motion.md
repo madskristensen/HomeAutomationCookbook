@@ -81,39 +81,13 @@ See [recommended gear](/gear.html) for the job-first checklist. Product links on
 <div class="automation-example">IF entry motion is detected AND the room is dark
 THEN turn on the light</div>
 
-<div class="info-box">
-  <strong>🌞 Day vs. Night Dimming Enhancement</strong>
-  <ul>
-    <li><strong>Daytime:</strong> Brightness 100% OR skip turning on if room has natural light (use lux sensor)</li>
-    <li><strong>Nighttime (9 PM - 11 PM):</strong> Medium brightness 50%</li>
-    <li><strong>Deep Night (11 PM - 6 AM):</strong> Low brightness 10-20% with warm color temperature</li>
-    <li><strong>Early Morning (6 AM - 9 AM):</strong> Full brightness 100%</li>
-  </ul>
-</div>
+## Setup notes
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Motion detected by sensor</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <strong>Time-based:</strong> Different behavior for day vs. night<br>
-    <strong>Lux sensor:</strong> Only activate if room is dark (below certain lux level)<br>
-    <strong>Home mode:</strong> Only when home is occupied
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on light switch or bulb</li>
-      <li>Set to preferred brightness level (dimming percentage)</li>
-    </ul>
-  </div>
-</div>
+Start with only the trigger and light action. Once that is reliable, add the daylight condition and any night brightness adjustment.
+
+- **Daytime:** Leave the light off when daylight is sufficient.
+- **Evening:** Use the brightness that makes the room useful.
+- **Deep night:** Start at 10 to 20 percent and raise it only enough for safe navigation.
 
 ## Platform-specific examples
 

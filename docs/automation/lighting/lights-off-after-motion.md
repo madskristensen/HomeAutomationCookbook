@@ -79,42 +79,13 @@ See [recommended gear](/gear.html) for the job-first checklist. Product links on
 AND no manual override is active
 THEN turn off the light</div>
 
-<div class="info-box">
-  <strong>⏱️ Timing Strategies by Room Type</strong>
-  <ul>
-    <li><strong>Quick Access (1-2 min):</strong> Closets, pantry, laundry room, hallways - Brief visits, quick in and out</li>
-    <li><strong>Living Spaces (3-5 min):</strong> Living room, dining room, kitchen, home gym - May have brief stationary moments, but generally active</li>
-    <li><strong>Work/Relaxation (5-10 min):</strong> Home office, reading nook, craft room, bathroom - People often sit still for extended periods</li>
-    <li><strong>Bathroom Special:</strong> Use door sensor override (don't turn off if door closed), OR extended delay (10-15 min), OR multiple sensors</li>
-  </ul>
-</div>
+## Setup notes
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Motion no longer detected for X minutes</li>
-      <li>Fast-access areas: 1-2 minutes</li>
-      <li>Living spaces: 3-5 minutes</li>
-      <li>Work areas: 5-10 minutes</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <strong>Time-based:</strong> Different delays for day vs. night<br>
-    <strong>Door status:</strong> Don't turn off if bathroom door is closed (someone may be sitting still)<br>
-    <strong>Additional sensors:</strong> Check other sensors in room for activity
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn off light switch/bulb</li>
-      <li>Can include gradual dimming before turning off (advanced)</li>
-    </ul>
-  </div>
-</div>
+Start with a longer delay than you expect to need, then shorten it only after normal household use.
+
+- **Quick access spaces:** One to two minutes can work for a closet or hallway.
+- **Living spaces:** Start at three to five minutes.
+- **Bathrooms and quiet spaces:** Start at 10 minutes, or use a contact sensor, another motion sensor, or presence sensing before reducing the delay.
 
 ## Platform-specific examples
 
