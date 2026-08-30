@@ -91,6 +91,8 @@ navigation:
             url: /automation/daily-routines/morning-routine.html
           - title: Family-safe bedtime
             url: /automation/daily-routines/bedtime-routine.html
+          - title: Guest mode
+            url: /automation/daily-routines/guest-mode.html
       - title: Climate and comfort
         url: /automation/climate/index.html
         subitems:

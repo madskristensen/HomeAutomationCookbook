@@ -79,6 +79,18 @@ Restore Home mode, light the entry when needed, and resume approved comfort sett
 
 </div>
 
+<div class="automation-card" markdown="1">
+
+### Predictable guest mode
+
+Keep physical controls and useful lighting normal, prevent false Away mode, and quiet only non-urgent personal automation.
+
+<span class="card-meta">**Best for:** Overnight visitors, house sitters, babysitters, and gatherings</span>
+
+<p><a href="/automation/daily-routines/guest-mode.html" class="card-link">View automation</a></p>
+
+</div>
+
 </div>
 
 ---
