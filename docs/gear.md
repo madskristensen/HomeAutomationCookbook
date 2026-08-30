@@ -24,10 +24,10 @@ A PIR sensor is often enough for halls and closets. Use an mmWave presence senso
 
 | Job | Good enough | Never think about it | Local or cloud | Guest-proof note |
 |---|---|---|---|---|
-| Dim a fixed light | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | TODO(owner): preferred premium dimmer | Local with a compatible Z-Wave hub | The paddle remains a normal wall control. |
-| Switch a fixed light on or off | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | TODO(owner): preferred premium on/off switch | Local with a compatible Z-Wave hub | The paddle remains a normal wall control. |
+| Dim a fixed light | [Lower-cost smart dimmer](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Verify compatibility; local or cloud behavior depends on the chosen dimmer. | The paddle remains a normal wall control. |
+| Switch a fixed light on or off | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Local with a compatible hub | The paddle remains a normal wall control. |
 | Control a plug-in light or appliance | [Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2) | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | Local with a compatible Z-Wave hub | Keep the appliance's physical control usable. |
-| Control outdoor plug-in lighting | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | TODO(owner): preferred premium outdoor plug | Local with a compatible Z-Wave hub | Use only where an outdoor-rated plug is appropriate. |
+| Control outdoor plug-in lighting | [Lower-cost outdoor smart plug](https://www.amazon.com/dp/B07X52W1J8) | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | Verify compatibility for the lower-cost option; Minoston is local with a compatible Z-Wave hub. | Use only where an outdoor-rated plug is appropriate. |
 
 A smart switch is usually the safer choice for shared rooms because it keeps the familiar wall control in place.
 
@@ -35,7 +35,7 @@ A smart switch is usually the safer choice for shared rooms because it keeps the
 
 | Job | Good enough | Never think about it | Local or cloud | Guest-proof note |
 |---|---|---|---|---|
-| Adjust heating and cooling | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | TODO(owner): preferred premium thermostat | Local with a compatible Z-Wave hub | Someone should be able to change the temperature at the thermostat. |
+| Adjust heating and cooling | [Sensi ST55 Wi-Fi Smart Thermostat](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Sensi uses Wi-Fi services; Honeywell can be local with a compatible Z-Wave hub. | Someone should be able to change the temperature at the thermostat. |
 
 ## Leaks and safety
 

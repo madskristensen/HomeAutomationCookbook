@@ -32,8 +32,8 @@ Guest mode is an explicit household state, not a guess. It protects privacy, pre
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
 | Start and end Guest mode | A clearly labeled dashboard control or voice phrase | TODO(owner): preferred physical Guest-mode button | A host should be able to change the mode without editing automation. |
-| Keep fixed lights familiar | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Normal wall paddles are the primary guest interface. |
-| Keep climate adjustable | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | TODO(owner): preferred premium thermostat | Guests can request or make normal adjustments at the thermostat. |
+| Keep fixed lights familiar | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Normal wall paddles are the primary guest interface. |
+| Keep climate adjustable | [Sensi ST55 Wi-Fi Smart Thermostat](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Guests can request or make normal adjustments at the thermostat. |
 
 See [recommended gear](/gear.html) for the job-first checklist. Guest mode should not require a guest to install an app, join an account, or learn special tap patterns.
 

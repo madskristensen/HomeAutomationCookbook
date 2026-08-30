@@ -57,7 +57,7 @@ Bright bathroom light at 2am is miserable. This recipe uses only enough light to
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
 | Detect bathroom motion, humidity, temperature, and light | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | TODO(owner): preferred bathroom multisensor | Use the extra readings where they solve a real bathroom problem. |
-| Dim a fixed light | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | TODO(owner): preferred premium dimmer | The physical paddle must remain usable. |
+| Dim a fixed light | [Lower-cost smart dimmer](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Verify hub compatibility. The physical paddle must remain usable. |
 
 See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

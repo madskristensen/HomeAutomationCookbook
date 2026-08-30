@@ -32,8 +32,8 @@ An intentional trigger gives the first awake person control. Local motion lighti
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
 | Start the routine | A "Good morning" voice phrase or manual scene control | TODO(owner): preferred bedside button | The trigger should be intentional and easy to cancel. |
-| Light the morning path | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | TODO(owner): preferred premium dimmer | Keep every wall paddle working normally. |
-| Restore approved comfort | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | TODO(owner): preferred premium thermostat | Someone can always change the temperature at the thermostat. |
+| Light the morning path | [Lower-cost smart dimmer](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Verify hub compatibility. Keep every wall paddle working normally. |
+| Restore approved comfort | [Sensi ST55 Wi-Fi Smart Thermostat](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Someone can always change the temperature at the thermostat. |
 
 See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

@@ -32,8 +32,8 @@ Use arrival to restore Home mode. Keep entry access deliberate unless the househ
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
 | Detect the first return home | TODO(owner): verified household presence source | TODO(owner): verified presence plus a physical arrival signal | Require a real Away-to-Home transition. |
-| Light the entry path | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Keep the physical paddle usable. |
-| Restore heating and cooling | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | TODO(owner): preferred premium thermostat | The thermostat's safe limits remain authoritative. |
+| Light the entry path | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Keep the physical paddle usable. |
+| Restore heating and cooling | [Sensi ST55 Wi-Fi Smart Thermostat](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | The thermostat's safe limits remain authoritative. |
 
 See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
