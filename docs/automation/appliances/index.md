@@ -6,7 +6,7 @@ description: Practical recipes for appliance completion alerts, deliberate coffe
 
 # Appliance automations
 
-The most useful appliance automations observe, remind, and coordinate. They do not put an unverified relay in a high-current appliance circuit or pretend a weak signal proves a task is complete.
+The most useful appliance automations observe, remind, and coordinate, so you stop walking to the laundry room or the kitchen just to check on a cycle. They do not put an unverified relay in a high-current appliance circuit or pretend a weak signal proves a task is complete.
 
 <div class="category-intro" markdown="1">
 

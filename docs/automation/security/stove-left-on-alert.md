@@ -1,7 +1,7 @@
 ---
 layout: automation
-title: Get a stove reminder without pretending it is a safety system
-description: Use a deliberate cooking timer or approved appliance status signal for stove reminders without unsafe smart plugs, improvised heat sensors, or inferred shutoff.
+title: Set a cooking reminder that stays visible until you clear it
+description: Keep a visible cooking reminder active until someone clears it, using a deliberate timer or an approved appliance status signal rather than an unsafe workaround.
 keywords: stove reminder, oven left on alert, cooking timer, appliance status notification, kitchen safety
 last_modified_at: 2026-08-30
 faqs:
@@ -23,7 +23,7 @@ Starting to cook also starts a reminder, and only a person or an appliance-appro
 
 ## Why this exists
 
-The safe version of this idea is a reminder, not a claim that the smart home knows whether every burner is safe. Power, temperature, presence, and motion can all be ambiguous.
+A visible reminder that stays active until someone acknowledges it is more useful than a sensor guess about what is happening on the stove. It remains a reminder, not a claim that the smart home knows whether every burner is safe, because power, temperature, presence, and motion can all be ambiguous.
 
 Use a timer every time cooking starts. If the appliance exposes a supported status through its manufacturer, that status can improve the message, but it still does not replace checking the controls in person.
 

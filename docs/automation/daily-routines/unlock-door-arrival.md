@@ -1,7 +1,7 @@
 ---
 layout: automation
 title: Prepare the house when someone arrives (without automatic unlocking)
-description: A platform-neutral arrival recipe that restores Home mode, lights a safe path, and resumes approved comfort settings without unlocking a door from phone location alone.
+description: Restore Home mode, light a safe path, and return the house to its normal comfort settings without treating phone location as proof that the right person is at the door.
 keywords: arrival home automation, welcome home automation, presence detection, entry lighting, home mode automation
 last_modified_at: 2026-08-30
 faqs:

@@ -9,6 +9,8 @@ last_modified_at: 2026-08-30
 
 Do not start with a brand or a box of discounted devices. Start with one household job, write the rule in plain English, and identify the capabilities that rule needs.
 
+The goal is not to collect compatible gadgets. It is to buy the smallest amount of equipment that removes a repeated task or makes everyday life easier to manage.
+
 ## Start with the automation
 
 Write these six lines before buying:

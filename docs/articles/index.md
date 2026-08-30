@@ -6,7 +6,7 @@ description: Explanations and comparisons that support the recipe library, liste
 
 # Home automation articles
 
-Articles explain a technology, tradeoff, or design decision that applies across several recipes. Unlike the recipe library, this section is chronological.
+Articles explain a technology, tradeoff, or design decision that applies across several recipes. Use them to understand your options and make confident choices for your own rooms and routines. Unlike the recipe library, this section is chronological.
 
 {% assign sorted_articles = site.articles | sort: "date" | reverse %}
 

@@ -23,7 +23,7 @@ Pair a reliable door-open light with a delayed door-close rule that turns off on
 
 ## Why this exists
 
-Turning the light on when a door opens is easy. Turning it off safely needs ownership and cancellation. Without those, a close event can reverse a manual choice, a bouncing contact can cycle the light, or a person in a walk-in space can be left in the dark.
+A small cupboard or closet light should turn itself off after the door closes without undoing a manual choice or cycling when the contact bounces. That requires ownership and cancellation, while a walk-in space needs occupancy logic instead of relying on the door alone.
 
 This recipe is deliberately narrow. Door position is a good task signal for a small cupboard, but it is not a general occupancy sensor.
 

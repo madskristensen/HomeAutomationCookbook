@@ -6,7 +6,7 @@ description: Practical recipes for HVAC, humidity, air quality, blinds, and cold
 
 # Climate automations
 
-Climate automation should reduce waste and handle routine adjustments without hiding what the heating, cooling, or ventilation system is doing.
+Climate automation works best when it quietly picks up the routine adjustments you already mean to make, like starting the bathroom fan or closing the blinds, without hiding what the heating, cooling, or ventilation system is actually doing or taking away the manual controls you already trust.
 
 <div class="category-intro" markdown="1">
 
@@ -50,7 +50,7 @@ Pause heating or cooling after a delay, then resume only when every monitored op
 
 ### Turn on the bathroom fan for a shower
 
-Use a measured humidity rise or the bathroom light as the trigger, then stop after humidity settles.
+Use a measured humidity rise or the bathroom light as the trigger, then stop after humidity settles, so nobody has to remember to switch the fan on or off.
 
 [View automation](/automation/climate/fan-shower.html)
 
@@ -70,7 +70,7 @@ Use sunrise and sunset with a fixed privacy fallback and physical controls that 
 
 ### Run an air purifier when air quality drops
 
-Respond to a sustained sensor reading without cycling the purifier on every brief change.
+Respond to a sustained sensor reading without cycling the purifier on every brief change, so nobody has to watch an air quality app themselves.
 
 [View automation](/automation/climate/air-quality-purifier.html)
 

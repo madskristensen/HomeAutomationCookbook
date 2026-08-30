@@ -1,7 +1,7 @@
 ---
 layout: automation
-title: Use speaker volume presets
-description: A platform-neutral recipe that sets speakers to a consistent low, medium, or loud level with one command instead of adjusting each speaker by hand.
+title: Set every speaker to the right volume with one command
+description: Choose a quiet, normal, or loud preset once instead of adjusting each speaker by hand whenever the household changes activities.
 keywords: speaker volume automation, audio presets, volume control scenes, smart speaker volume, consistent volume
 last_modified_at: 2026-08-30
 faqs:

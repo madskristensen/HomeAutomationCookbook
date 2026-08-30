@@ -1,29 +1,29 @@
 ---
 layout: default
 title: Entertainment automations
-description: Control your home entertainment with smart automations. Music playback, TV integration, volume control, and movie mode lighting.
+description: Remove the repeated setup around music, TV, and lighting while keeping familiar remotes, switches, and apps available.
 keywords: entertainment automation, smart music, TV automation, media control, smart speakers, movie mode, home theater automation
 ---
 
 # Entertainment automations
 
-Music and entertainment control automations make your smart home feel more alive and responsive. From automatic shower music to movie mode lighting, these automations enhance your daily routines.
+Entertainment automations take over the small, repeatable steps around music and screens, so a shower playlist starts on its own and the lights settle into a known scene when the TV comes on. Done well, they support routines you already have without replacing the remote, switch, or app you already reach for.
 
 <div class="category-intro" markdown="1">
 
 ## Why entertainment automation?
 
-**Activity-based audio** - Music starts for a deliberate household activity
+**Music that matches your routine** - A shower, a workout, or a morning start, and the right playlist begins without asking
 
-**Predictable lighting** - Lights use a known scene when the TV turns on
+**A lighting scene you can count on** - Lights settle into the same tested scene whenever the TV turns on
 
-**Physical control** - Buttons and switches are faster than finding an app
+**Physical controls stay quickest** - A button or switch is still faster than waking a phone and opening an app
 
-**Safe volume** - Startup limits prevent unexpectedly loud audio
+**Volume starts safe** - A tested startup limit keeps audio from opening louder than expected
 
-**Easy cancellation** - A person can stop the action immediately
+**One step to stop** - Cancelling an automation is immediate, so nothing keeps playing once you want quiet
 
-**Manual fallback** - Normal remotes and controls remain available
+**Normal remotes still work** - Every automation here leaves the remote, switch, and app fully usable on their own
 
 </div>
 
@@ -47,7 +47,7 @@ Dim selected lights to a tested scene while normal switches remain available.
 
 ### Physical switch music control
 
-Use smart buttons or switches to instantly play/pause your favorite stations.
+Use a smart button or switch to play or pause your favorite stations without reaching for your phone.
 
 <span class="card-meta">**Best for:** Quick access, avoiding voice commands</span>
 
@@ -59,7 +59,7 @@ Use smart buttons or switches to instantly play/pause your favorite stations.
 
 ### Shower music
 
-Automatically play music when you start your morning shower.
+Start your morning shower music automatically, so playing it is one less thing to do before you're even awake.
 
 <span class="card-meta">**Best for:** Morning motivation, hands-free audio</span>
 
@@ -71,7 +71,7 @@ Automatically play music when you start your morning shower.
 
 ### Speaker volume presets
 
-Maintain consistent volume levels across all your speakers.
+Keep every speaker at a volume you expect, so nobody is startled by a blast the next time music starts.
 
 <span class="card-meta">**Best for:** Predictable audio, preventing blasting</span>
 

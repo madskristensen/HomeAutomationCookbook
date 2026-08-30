@@ -1,7 +1,7 @@
 ---
 layout: automation
-title: Get notified about entrance activity that may indicate a delivery
-description: A platform-neutral recipe that uses an outdoor motion sensor near the front door to send a phone notification about entrance activity that may indicate a delivery.
+title: Get a heads-up when there is movement near your front door
+description: Use an outdoor motion sensor to prompt a quick check when someone or something moves near the entrance, without claiming that every alert is a delivery.
 keywords: package delivery alert, delivery notification, outdoor motion sensor, front porch sensor, entrance activity detection
 last_modified_at: 2026-08-30
 faqs:

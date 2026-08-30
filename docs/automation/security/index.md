@@ -7,7 +7,7 @@ keywords: safety automation, security notification, fire alert, water leak alert
 
 # Safety and security automations
 
-These recipes add information and supplemental actions. They do not replace listed alarms, approved safety controls, professional monitoring, practiced emergency plans, or a person checking the situation.
+These recipes give the household a clearer, faster picture of what is happening, so a leak, an open door, or a stove left on gets noticed sooner instead of being found by accident. They add information and supplemental actions. They do not replace listed alarms, approved safety controls, professional monitoring, practiced emergency plans, or a person checking the situation.
 
 ## Start with alerts
 

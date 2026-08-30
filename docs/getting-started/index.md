@@ -11,6 +11,8 @@ Start with one repeated household problem. Do not start with a shopping list.
 
 The first automation should be easy to observe, safe to undo, and understandable to someone who did not build it.
 
+By the end of this path, you should have one small routine working in your own home and a pattern you can reuse for the next one.
+
 ## 1. Pick one job
 
 Good first jobs:

@@ -1,29 +1,29 @@
 ---
 layout: default
 title: Lighting Automations - Smart Home Lighting Guide
-description: Master automatic lighting for your smart home. Motion-triggered lights, door-activated lighting, night lights, and outdoor illumination.
+description: Make lights respond to movement, doors, and time of day while keeping every familiar wall switch useful.
 keywords: smart lighting automation, motion sensor lights, automatic lighting, door sensor lights, outdoor lights, night light automation
 ---
 
 # Lighting automations
 
-Lighting is often the first area people automate because the result is immediate and easy to verify. Good lighting automations respond predictably while leaving every wall switch useful.
+Lighting is usually the first thing people automate, because the payoff is easy to feel: you stop reaching for switches in the dark and stop wondering whether you left a light on somewhere. Good lighting automations support the way you already move through the house, and every wall switch keeps working exactly as it always has.
 
 <div class="category-intro" markdown="1">
 
 ## Why automate lighting?
 
-**Hands-Free Convenience** - Lights turn on automatically as you enter any room
+**Fewer switches to hunt for** - Lights come on as you walk into a room, so you are not groping for a switch with your hands full or the room dark.
 
-**Energy Savings** - Lights turn off when rooms are unoccupied
+**Less energy left running** - A room that empties out turns its own lights off, so you do not have to circle back and check.
 
-**Safety at Night** - Never stumble in the dark with gentle nighttime lighting
+**Safer footing at night** - Gentle nighttime lighting means a trip to the bathroom does not require full brightness or a fumble in the dark.
 
-**True Automation** - Works without any input from you
+**One less thing to remember** - Once it is set up, the lighting keeps working without you thinking about it each time.
 
-**Versatile Triggers** - Motion sensors, door sensors, time of day, and more
+**A trigger for almost any room** - Motion, a door opening, or the time of day - choose whichever fits the space, and change it later if it does not.
 
-**Instant Response** - Modern sensors detect presence in milliseconds
+**Fast enough to feel automatic** - Modern sensors respond quickly enough that the light feels like it was already on when you needed it.
 
 </div>
 
@@ -35,7 +35,7 @@ Lighting is often the first area people automate because the result is immediate
 
 ### Turn on lights when motion is detected
 
-The most common and useful automation. Automatically turn on lights when entering a room.
+The automation most people try first. Lights come on as you enter a room, so you stop reaching for a switch when your hands are full or the room is dark.
 
 <span class="card-meta">**Best for:** Bathrooms, hallways, closets, entryways</span>
 
@@ -47,7 +47,7 @@ The most common and useful automation. Automatically turn on lights when enterin
 
 ### Turn off lights after motion stops
 
-Complete the cycle by turning lights off when a room is no longer occupied.
+Finish the cycle so a light left on in an empty room is not something you have to remember to check.
 
 <span class="card-meta">**Best for:** All rooms with motion sensors, energy savings</span>
 
@@ -71,7 +71,7 @@ Gentle low-brightness lighting for nighttime bathroom visits that won't disrupt 
 
 ### Toggle lights when door opens
 
-Turn on lights when doors open in closets, pantries, and garage entries.
+Turn on lights the moment a door opens, so closets, pantries, and garage entries are already lit instead of making you feel around first.
 
 <span class="card-meta">**Best for:** Closets, pantries, cabinets, garage entry</span>
 
@@ -95,7 +95,7 @@ Complete the door-lighting cycle without reversing a manual wall-switch choice o
 
 ### Outdoor night lights
 
-Turn on outdoor lights automatically at sunset for safety, curb appeal, and convenience.
+Turn on outdoor lights at sunset, so the path to your door is already lit and nobody has to remember a switch.
 
 <span class="card-meta">**Best for:** Curb appeal, safety, holiday lights</span>
 
@@ -107,7 +107,7 @@ Turn on outdoor lights automatically at sunset for safety, curb appeal, and conv
 
 ### Gradual wake-up lights
 
-Simulate a natural sunrise to wake up gently with gradually brightening lights.
+Simulate a natural sunrise, so mornings start gradually instead of with a jarring alarm and a hand fumbling for a lamp.
 
 <span class="card-meta">**Best for:** Better mornings, dark winter wake-ups</span>
 
@@ -119,7 +119,7 @@ Simulate a natural sunrise to wake up gently with gradually brightening lights.
 
 ### Verified entry welcome lights
 
-Confirm a real after-dark arrival before lighting the entry, without unlocking a door or overriding dusk lighting.
+Confirm a real after-dark arrival before lighting the entry, so the walk from the car is lit without unlocking a door or overriding dusk lighting.
 
 <span class="card-meta">**Best for:** A safe path from the driveway or entry after dark</span>
 

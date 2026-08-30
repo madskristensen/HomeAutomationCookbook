@@ -1,7 +1,7 @@
 ---
 layout: automation
-title: Light the entry after a verified arrival
-description: A platform-neutral welcome-light recipe that confirms a real arrival before lighting the entry and never unlocks a door or overrides manually controlled lights.
+title: Light the path to your door after a confirmed arrival
+description: Make the final steps to the door easier after dark while leaving the lock and manually controlled lights alone.
 keywords: arrival lighting, welcome home lights, entry light automation, outdoor arrival lights, verified presence lighting
 last_modified_at: 2026-08-30
 faqs:

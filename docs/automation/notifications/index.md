@@ -6,7 +6,7 @@ description: Practical recipes for persistent status, maintenance reminders, doo
 
 # Notifications and alerts
 
-A useful notification explains what happened, what remains uncertain, and whether anyone needs to act. It should reach the right people without training the household to ignore it.
+A useful notification explains what happened, what remains uncertain, and whether anyone needs to act, so nobody has to walk over and check for themselves. It should reach the right people without training the household to ignore it.
 
 <div class="category-intro" markdown="1">
 

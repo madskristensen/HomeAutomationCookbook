@@ -1,12 +1,13 @@
 ---
-layout: default
+layout: guide
 title: Home automation philosophy
 description: Learn the core principles of home automation that work for everyone - reliability, natural behavior adaptation, and graceful failure modes.
+last_modified_at: 2026-08-30
 ---
 
 # Home automation philosophy
 
-A useful smart home works for everyone, requires little explanation, and continues functioning when something goes wrong. These principles guide every automation on this site.
+A useful smart home gives time and attention back to the household. It works for everyone, requires little explanation, and continues functioning when something goes wrong. These principles help you build automations that support ordinary routines instead of creating new work.
 
 <div class="philosophy-grid">
 
@@ -16,7 +17,7 @@ A useful smart home works for everyone, requires little explanation, and continu
     <h2>Works for everybody</h2>
   </div>
   
-  <p class="philosophy-intro">Home automation must work for all members of the household - kids, adults, elderly parents, and even guests. It should never require people to change their behavior to accommodate the technology. Instead, the automation should intelligently adapt to serve everyone's needs.</p>
+  <p class="philosophy-intro">Home automation should work for all members of the household - kids, adults, elderly parents, and guests. People should not have to change ordinary behavior to accommodate the technology. The automation should be adjusted until it supports how the household already uses the space.</p>
   
   <div class="philosophy-example">
     <h3>Example: automatic lights done wrong</h3>
@@ -65,7 +66,7 @@ A useful smart home works for everyone, requires little explanation, and continu
     <h2>No further explanation needed</h2>
   </div>
   
-  <p class="philosophy-intro">When the smart home works for everybody and adapts to natural behavior, it shouldn't require explanation. However, some advanced automations go beyond discoverable natural behavior and need to be taught.</p>
+  <p class="philosophy-intro">When the smart home works for everybody and adapts to natural behavior, it should not require explanation. A few optional shortcuts may need to be taught, but normal household control should remain obvious.</p>
   
   <div class="philosophy-section">
     <h3>Hidden features as patterns</h3>
@@ -89,7 +90,7 @@ A useful smart home works for everyone, requires little explanation, and continu
     <h2>Resiliency built in</h2>
   </div>
   
-  <p class="philosophy-intro">When your internet goes down or the smart home hub fails, the smart home must still be functional. All lights must work from physical switches, door locks must still let you in, and basic functions should continue operating.</p>
+  <p class="philosophy-intro">Reliable fallback gives everyone confidence to use the automation. When the internet goes down or the hub fails, lights should still work from physical switches, door locks should still let people in, and basic functions should continue operating.</p>
   
   <div class="philosophy-takeaway">
     <strong>The smart home must fail gracefully.</strong>

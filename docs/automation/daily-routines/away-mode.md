@@ -23,7 +23,7 @@ When the house is confidently empty, it switches to Away, turns off what is safe
 
 ## Why this exists
 
-Away mode should be a shared state that other automations can use, not one giant routine with every possible action. The expensive failure is not forgetting to save a little energy. It is locking in a guest, arming an occupied house, or changing the temperature unsafely because a phone reported the wrong location.
+The expensive failure is not forgetting to save a little energy. It is locking in a guest, arming an occupied house, or changing the temperature unsafely because a phone reported the wrong location. Away mode should be a shared state that other automations can use, not one giant routine with every possible action.
 
 Start with reversible actions and a notification. Add locks, alarms, or appliance control only after the empty-home decision has proved reliable.
 

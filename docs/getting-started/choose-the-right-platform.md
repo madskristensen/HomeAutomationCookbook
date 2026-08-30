@@ -11,6 +11,8 @@ Choose for the person who will troubleshoot the house at night, not for the long
 
 I have personally used Amazon Echo with Alexa, SmartThings, and Hubitat. I now prefer Hubitat because daily management is friendly while detailed rules and coding are available when I need them. I have not personally run Home Assistant, so I describe its technical fit rather than presenting a hands-on review.
 
+The platform is successful when it helps you build useful routines and then fades into the background. It should increase what you feel able to automate, not make the household dependent on one expert.
+
 ## The short answer
 
 | Platform | Good fit when | Main tradeoff | My experience |

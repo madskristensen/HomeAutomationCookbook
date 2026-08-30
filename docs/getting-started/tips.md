@@ -7,7 +7,7 @@ last_modified_at: 2026-08-30
 
 # Practical home automation tips
 
-Most improvements come from removing surprises, not adding features.
+Most improvements come from removing surprises, not adding features. These patterns help the house take on repeated work without taking control away from the people who live there.
 
 ## Let the physical control win
 

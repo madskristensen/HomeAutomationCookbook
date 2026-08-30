@@ -11,6 +11,8 @@ Home Automation Cookbook is written by Mads Kristensen for people who want a hom
 
 The goal is simple: the house should do the helpful thing, and the physical switch should still work when it does not. A good automation feels ordinary. A bad one leaves someone standing in the dark, looking for an app.
 
+This site is here to help you remove small repeated tasks, make useful conditions visible, and feel confident changing the logic as your household changes. The technology is supporting material. The benefit is having less to remember and fewer interruptions during an ordinary day.
+
 ## How recipes are chosen
 
 Every recipe starts with a real household job: light a hallway, avoid heating an open window, or tell someone the laundry is done. The logic comes first. Platform instructions come second.

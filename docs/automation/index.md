@@ -6,7 +6,9 @@ description: Browse platform-neutral home automation recipes with plain-English 
 
 # Automation recipes
 
-Start with the household job, not the app. Each recipe explains what triggers the automation, what conditions must be true, what ends it, and what should happen when a device stops reporting.
+Start with the household job, not the app. Choose something you want to stop remembering, checking, or adjusting. Each recipe then explains what triggers the automation, what conditions must be true, what ends it, and what should happen when a device stops reporting.
+
+You can copy a recipe, change it to fit your household, or use its logic as a starting point for a routine that is entirely your own.
 
 ## Choose a category
 

@@ -23,7 +23,7 @@ Open a window for fresh air, and heating or cooling pauses after a short delay. 
 
 ## Why this exists
 
-The useful behavior is not simply turning the thermostat off. The recipe must ignore quick door trips, remember whether it caused the pause, wait for every monitored opening to close, and avoid undoing a manual thermostat change.
+Pausing heating or cooling when a window stays open avoids using energy on air that is immediately lost outside. The recipe must ignore quick door trips, remember whether it caused the pause, wait for every monitored opening to close, and avoid undoing a manual thermostat change.
 
 Start with one frequently used window. Expand only after the full pause-and-resume cycle works reliably.
 

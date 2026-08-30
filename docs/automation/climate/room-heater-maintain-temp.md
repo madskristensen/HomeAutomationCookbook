@@ -1,7 +1,7 @@
 ---
 layout: automation
-title: Monitor a cold room without smart-plug heater control
-description: Monitor a cold room, alert when it falls outside a safe range, and use only heating controls approved for unattended thermostat operation.
+title: Get an alert before a cold room drifts outside its safe range
+description: Know when a cold room needs attention, then respond through heating controls approved for unattended thermostat operation rather than a general-purpose smart plug.
 keywords: cold room alert, room temperature monitoring, space heater safety, thermostat alert, supplemental heating
 last_modified_at: 2026-08-30
 faqs:

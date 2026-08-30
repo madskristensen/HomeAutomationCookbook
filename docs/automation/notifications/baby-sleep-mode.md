@@ -23,7 +23,7 @@ A caregiver explicitly selects Quiet, and the room uses dimmer, quieter convenie
 
 ## Why this exists
 
-A white-noise machine can be on while a baby is awake, and it can be off while a baby is asleep. Power use is not proof of sleep, presence, identity, or safety.
+Caregivers should decide when the nursery enters Quiet mode rather than leaving that judgment to a sensor. A white-noise machine can be on while a baby is awake, and it can be off while a baby is asleep. Power use is not proof of sleep, presence, identity, or safety.
 
 Model the thing the automation actually knows: a caregiver requested Quiet mode. Keep its effects narrow, visible, easy to cancel, and separate from every urgent alert.
 

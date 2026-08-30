@@ -6,6 +6,13 @@
 - Use each recommended product's name. Do not use price adjectives such as "lower-cost" or "cheaper" as the link text.
 - Never publish TODO placeholders for unverified hardware. Use "No personally verified recommendation yet" or a specific variation that names the unverified job.
 
+# Editorial promise
+- Frame home automation as a way to quietly support routines the household already has.
+- Lead with the reader's benefit: less to remember, fewer repeated checks or adjustments, better comfort or coordination, and more confidence to build and adapt.
+- Help readers understand the reusable pattern rather than merely copy a finished rule.
+- For substantive pages, make clear what burden is removed, what everyday benefit remains, what control the household keeps, how the reader can adapt the idea, and how they can tell it works.
+- Keep products, platforms, and technical features in supporting roles. Do not make the site feel like a sales funnel.
+
 # Site structure
 - This is a Jekyll static site for homeautomationcookbook.com
 - Main CSS: `docs/assets/css/style.css` (consolidated stylesheet, ~1200 lines)

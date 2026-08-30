@@ -1,7 +1,7 @@
 ---
 layout: automation
 title: Prepare morning coffee with a deliberate ready step
-description: Use a coffee maker's approved delayed-brew feature and an explicit ready step instead of treating smart-plug state as proof that water and grounds are loaded.
+description: Prepare the coffee maker the night before and get a clear morning result without wondering whether it was actually made ready.
 keywords: morning coffee reminder, delayed brew coffee, coffee ready mode, morning routine, coffee maker safety
 last_modified_at: 2026-08-30
 faqs:
@@ -23,7 +23,7 @@ A person loads the coffee maker and explicitly marks it ready, then the machine 
 
 ## Why this exists
 
-An outlet cannot see water, grounds, the carafe, or a blocked basket. An off plug is not a ready signal.
+The coffee maker's delayed-brew feature can remove one more step from the morning, while an explicit Ready state keeps anyone from wondering whether it was prepared the night before. An outlet cannot see water, grounds, the carafe, or a blocked basket, so an off plug is not a ready signal.
 
 Keep brewing inside the coffee maker's documented controls. Home automation can remind someone to prepare it and track an explicit Ready for morning state, but it should fail by skipping coffee rather than starting an unprepared heating appliance.
 
