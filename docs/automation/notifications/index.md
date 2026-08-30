@@ -9,8 +9,6 @@ keywords: smart home notifications, dashboard alerts, status tiles, low battery 
 
 Smart notifications keep you informed without overwhelming you. From dashboard tiles that persist until addressed to proactive battery alerts that prevent automation failures, these automations ensure you never miss important information.
 
-<p class="last-reviewed">Last reviewed: February 2026</p>
-
 <div class="category-intro" markdown="1">
 
 ## Why smart notifications?

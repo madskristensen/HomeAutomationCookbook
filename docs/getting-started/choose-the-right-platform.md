@@ -8,8 +8,6 @@ description: Compare Home Assistant, Hubitat, HomeKit, SmartThings, Google Home,
 
 Choosing the right platform is crucial for your smart home success. Here's a detailed comparison of popular options.
 
-<p class="last-reviewed">Last reviewed: February 2026</p>
-
 ## Platform comparison
 
 | Feature | <span class="platform-table-header"><img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo" class="platform-table-logo"><span class="platform-table-name">Home Assistant</span></span> | <span class="platform-table-header"><img src="/assets/img/logos/hubitat.png" alt="Hubitat logo" class="platform-table-logo"><span class="platform-table-name">Hubitat</span></span> | <span class="platform-table-header"><img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo" class="platform-table-logo"><span class="platform-table-name">Apple HomeKit</span></span> | <span class="platform-table-header"><img src="/assets/img/logos/smartthings.png" alt="SmartThings logo" class="platform-table-logo"><span class="platform-table-name">SmartThings</span></span> | <span class="platform-table-header"><img src="/assets/img/logos/google.png" alt="Google Home logo" class="platform-table-logo"><span class="platform-table-name">Google Home</span></span> | <span class="platform-table-header"><img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo" class="platform-table-logo"><span class="platform-table-name">Amazon Alexa</span></span> |

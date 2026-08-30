@@ -19,8 +19,6 @@ Walk in half asleep, get enough light to see, and do not wake the house. If it f
 
 **Not for:** A bathroom where a short PIR timeout would turn lights off during a shower. A PIR sees movement, not a still person. Start with a longer timeout or add an [mmWave presence sensor](/gear.html) that can detect someone even when they are not moving.
 
-<p class="last-reviewed">Last reviewed: August 2026</p>
-
 ## Why this exists
 
 Bright bathroom light at 2am is miserable. This recipe uses only enough light to navigate safely, then hands the shutoff to the paired motion-lighting recipe. It should work without explaining a special night mode to a guest.

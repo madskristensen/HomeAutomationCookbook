@@ -8,8 +8,6 @@ description: Get notified when appliances finish their cycles. Washer, dryer, di
 
 The latest generation of appliances have WiFi connectivity and phone apps. But you may want deeper integration with your smart home, or you may have "dumb" appliances that need creative solutions. Here are ways to automate any appliance.
 
-<p class="last-reviewed">Last reviewed: February 2026</p>
-
 <div class="category-intro" markdown="1">
 
 ## Why appliance automation?

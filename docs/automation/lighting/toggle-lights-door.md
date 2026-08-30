@@ -21,8 +21,6 @@ Open the closet or pantry, and the light comes on. If the automation is unavaila
 
 **Not for:** A shared room or exterior door where normal door traffic would make the light surprising. Use a motion or presence recipe when the door does not reliably mean someone entered the lit space.
 
-<p class="last-reviewed">Last reviewed: August 2026</p>
-
 ## Why this exists
 
 A contact sensor is more decisive than a motion sensor in a small enclosed space. It sees the action that starts the task - opening the door - and can turn on a fixed light before someone has to search for a switch. The physical switch remains the Level 1 fallback for guests, maintenance, and every failure mode.

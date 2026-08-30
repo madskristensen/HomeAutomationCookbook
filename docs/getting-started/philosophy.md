@@ -8,8 +8,6 @@ description: Learn the core principles of home automation that work for everyone
 
 The best smart home is one that works seamlessly for everyone, requires no explanation, and continues functioning even when things go wrong. These core principles should guide every automation you create.
 
-<p class="last-reviewed">Last reviewed: February 2026</p>
-
 <div class="philosophy-grid">
 
 <div class="philosophy-card">
@@ -208,4 +206,3 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 ---
 
 [Ready to build automations? →](/automation/)
-

@@ -9,8 +9,6 @@ keywords: daily routine automation, morning routine, bedtime automation, away mo
 
 Daily routine automations make your smart home adapt to the rhythm of your life. From gentle morning wake-ups to secure away modes, these automations handle the repetitive tasks so you don't have to think about them.
 
-<p class="last-reviewed">Last reviewed: February 2026</p>
-
 <div class="category-intro" markdown="1">
 
 ## Why automate daily routines?

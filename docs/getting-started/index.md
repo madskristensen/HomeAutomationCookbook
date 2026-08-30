@@ -8,8 +8,6 @@ description: Learn how to plan and set up your smart home. Choose the right plat
 
 This guide will help you plan and set up your first smart home devices. Let's start by thinking through what you want to achieve and how to get there.
 
-<p class="last-reviewed">Last reviewed: February 2026</p>
-
 ## Planning your smart home
 
 Before diving into products and platforms, take time to consider these three key factors:

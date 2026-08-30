@@ -8,8 +8,6 @@ description: Control temperature, humidity, and air quality automatically. Smart
 
 Controlling your indoor climate for optimal comfort and energy savings is at the core of a smart home. These automations will elevate both your wellbeing and wallet.
 
-<p class="last-reviewed">Last reviewed: February 2026</p>
-
 <div class="category-intro" markdown="1">
 
 ## Why climate automation?

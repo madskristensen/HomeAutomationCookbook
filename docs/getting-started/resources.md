@@ -8,8 +8,6 @@ description: Curated list of the best home automation resources, communities, Yo
 
 Learn more about home automation through these excellent online resources, communities, and channels.
 
-<p class="last-reviewed">Last reviewed: February 2026</p>
-
 <div class="resources-grid">
 
 <div class="resource-category">
@@ -316,4 +314,3 @@ Learn more about home automation through these excellent online resources, commu
 </div>
 
 [← Back to Getting started](/getting-started/) | [← Back to Home](/)
-

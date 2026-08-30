@@ -21,8 +21,6 @@ Walk in, lights on. If that fails at 2am, the wall switch still works.
 
 **Not for:** A room where people sit still for long periods, or a bathroom with a short PIR timer. A PIR is best for detecting entry motion. Use a longer timeout and an [mmWave presence sensor](/gear.html) where the automation must know that someone is still in the room.
 
-<p class="last-reviewed">Last reviewed: August 2026</p>
-
 ## Why this exists
 
 Nobody should have to fumble for a switch with a basket of laundry or explain the light system to a guest. The first detection needs to happen before a hand reaches the wall control. Keep the switch useful so the room remains ordinary when the hub, sensor, or internet is not.

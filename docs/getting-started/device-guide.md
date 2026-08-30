@@ -8,8 +8,6 @@ description: Comprehensive guide to choosing smart home devices. Compare motion 
 
 Choosing the right smart home devices can feel overwhelming with hundreds of options available. This guide breaks down each device category, explains what to look for, and helps you make informed decisions based on your specific needs and budget.
 
-<p class="last-reviewed">Last reviewed: February 2026</p>
-
 <div class="category-intro">
   <h2>Before you start</h2>
   <p><strong>Start with sensors:</strong> Sensors are the foundation of any smart home. They detect what's happening and trigger automations. Without sensors, you're just controlling devices manually through an app.</p>

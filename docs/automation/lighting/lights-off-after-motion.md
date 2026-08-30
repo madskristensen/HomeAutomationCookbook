@@ -21,8 +21,6 @@ Leave the room, lights off. Stay still, and they should not leave you in the dar
 
 **Not for:** A bathroom with a short PIR timer, or a quiet work space. A PIR detects movement, not a person sitting still. Start with a longer delay, or use an [mmWave presence sensor](/gear.html) that can keep detecting someone when motion stops.
 
-<p class="last-reviewed">Last reviewed: August 2026</p>
-
 ## Why this exists
 
 The off half makes automatic lighting useful without making it hostile. It should wait long enough for real people, then turn the light off after the room is clear. It must not fight a guest who used the familiar wall switch.
