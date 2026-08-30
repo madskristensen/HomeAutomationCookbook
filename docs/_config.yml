@@ -89,10 +89,8 @@ navigation:
             url: /automation/daily-routines/unlock-door-arrival.html
           - title: Good morning routine
             url: /automation/daily-routines/morning-routine.html
-          - title: Bedtime routine
+          - title: Family-safe bedtime
             url: /automation/daily-routines/bedtime-routine.html
-          - title: Bedtime wind-down
-            url: /automation/daily-routines/bedtime-wind-down.html
       - title: Climate and comfort
         url: /automation/climate/index.html
         subitems:

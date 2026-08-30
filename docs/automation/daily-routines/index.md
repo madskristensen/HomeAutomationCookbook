@@ -57,11 +57,11 @@ Use an intentional signal to leave Night mode, light one person's route, and lea
 
 <div class="automation-card" markdown="1">
 
-### Bedtime routine
+### Family-safe bedtime routine
 
-Wind down with automated lighting, temperature adjustment, and security checks.
+Offer a reversible wind-down, then use an intentional good-night action that preserves occupied rooms, path lighting, and urgent alerts.
 
-<span class="card-meta">**Best for:** Better sleep, end-of-day consistency</span>
+<span class="card-meta">**Best for:** Different bedtimes, guests, and late arrivals</span>
 
 <p><a href="/automation/daily-routines/bedtime-routine.html" class="card-link">View Automation →</a></p>
 
@@ -76,18 +76,6 @@ Restore Home mode, light the entry when needed, and resume approved comfort sett
 <span class="card-meta">**Best for:** Safe entry lighting and comfort recovery</span>
 
 <p><a href="/automation/daily-routines/unlock-door-arrival.html" class="card-link">View Automation →</a></p>
-
-</div>
-
-<div class="automation-card" markdown="1">
-
-### Family bedtime wind-down
-
-Gradually dim lights, cool the house, and quiet notifications 30 minutes before bedtime with easy cancel option.
-
-<span class="card-meta">**Best for:** Better sleep, family coordination</span>
-
-<p><a href="/automation/daily-routines/bedtime-wind-down.html" class="card-link">View Automation →</a></p>
 
 </div>
 

@@ -1,351 +1,147 @@
 ---
 layout: automation
-title: Bedtime Routine Automation - Smart Home Night Mode
-description: Automate your bedtime routine with lights off, doors locked, and thermostat adjusted. Complete guide for nighttime smart home automation.
-keywords: bedtime routine automation, night mode automation, smart home bedtime, automatic bedtime routine, good night automation
+title: Run a bedtime routine without surprising the household
+description: A platform-neutral bedtime routine that separates a gentle wind-down from an intentional good-night action and preserves occupied rooms, safety alerts, and manual control.
+keywords: bedtime routine automation, good night routine, night mode automation, family bedtime automation, smart home bedtime
+last_modified_at: 2026-08-30
+faqs:
+  - question: Should bedtime run automatically at a fixed time?
+    answer: Use a schedule to offer or begin a limited wind-down, not to put the entire home into Night mode. Require an intentional button, phrase, or control for the final good-night action.
+  - question: Should the routine lock doors and close the garage?
+    answer: Start by reporting their status. Add a command only after each lock or door has separate position feedback, obstruction handling, and a tested manual fallback.
+  - question: What should quiet mode never silence?
+    answer: Keep smoke, carbon-monoxide, water-leak, security, medical, and other urgent household alerts outside routine notification muting.
 ---
 
-# Turn on all lights when going to bed
+# Run a bedtime routine without surprising the household
 
-This automation is a real time-saver that can be customized for more than just bedtime. One command prepares your entire home for sleep.
+Offer a gentle wind-down, then use an intentional good-night signal to change Night mode and turn off only the lights that are safe to change.
 
-## Use cases
+**Best for:** Families with different bedtimes, occupied common rooms, guests, and a need for predictable path lighting after dark.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Trigger Methods</h4>
-    <ul>
-      <li><strong>Bedtime</strong> - Turn off lights throughout house</li>
-      <li><strong>Voice Command</strong> - "Good night" to Alexa/Google/Siri</li>
-      <li><strong>Button Press</strong> - Physical bedside button</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Automation Styles</h4>
-    <ul>
-      <li><strong>One-Button Routine</strong> - Single trigger for multiple actions</li>
-      <li><strong>Scheduled</strong> - Automatic at set time</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A fixed-time "all off" command, automatic garage movement, unverified lock or security changes, or muting urgent safety alerts.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Lights</strong>
-      <div class="product-details">
-        Throughout house for automation control
-      </div>
-    </div>
-  </div>
-</div>
+Bedtime is rarely one moment for everyone. Someone may be finishing homework, arriving late, hosting a guest, feeding a baby, or using the kitchen. A schedule that suddenly darkens the home or locks an expected person out is not helpful.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Button</strong>
-      <div class="product-details">
-        Bedside trigger for one-press routine
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Locks</strong>
-      <div class="product-details">
-        Auto-lock doors at bedtime
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Thermostat</strong>
-      <div class="product-details">
-        Temperature adjustment for sleep
-      </div>
-    </div>
-  </div>
-</div>
+Separate the recipe into two stages: a reversible wind-down and an intentional final transition. The final stage changes only the devices the household has approved.
 
-## Basic automation setup
+## What I used
 
-<div class="automation-example">IF bedtime button pressed (or time is 10:30 PM)
-THEN turn off all downstairs lights
-AND lock doors
-AND set thermostat to sleep mode</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Start bedtime | A "Good night" phrase or manual scene control | TODO(owner): preferred bedside button | The final trigger should be intentional and available without an app. |
+| Control selected lights | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Wall paddles remain normal controls before, during, and after the routine. |
+| Apply an approved sleep setting | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | TODO(owner): preferred premium thermostat | Respect manual holds, safety limits, and the open-window pause recipe. |
+| Report open doors or windows | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | TODO(owner): preferred contact sensor | Report status first; do not treat a contact sensor as proof that a door is locked. |
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is 10:00 PM</li>
-      <li>OR button is pressed</li>
-      <li>OR voice command "Good night"</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <p>None (immediate execution desired)</p>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn off all main lights in house</li>
-      <li>Keep nightlights on (optional)</li>
-      <li>Put house in Night Mode</li>
-    </ul>
-  </div>
-</div>
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-## Platform-specific examples
+## Logic
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Time is 10:00 PM OR bedside button pressed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Turn off main lights, nightlights to 10%, set mode to "Night"</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">WHEN</span>
-        <span class="step-content">Time is 10:00 PM OR button pressed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Change mode to "Night", turn off main lights</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Time is 10:00 PM OR button pressed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Change mode to "Night" → Turn off main lights</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Mode Manager + Rule Machine for mode-based actions
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Scene</span>
-        <span class="step-content">"Good Night" - turn off main lights, nightlights to 10%</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Voice "Hey Siri, good night" or button/time automation</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">You say "Good night"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Turn off lights, lock doors, set thermostat</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">I say "Good night"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Adjust lights, lock doors, set thermostat</span>
-      </div>
-    </div>
-  </div>
-</div>
+- **Trigger:** A scheduled wind-down prompt or an intentional good-night button, phrase, or control.
+- **Conditions:** The home is occupied, no emergency mode is active, and the selected stage is allowed in the current Home or Guest mode.
+- **Action:** For wind-down, gently adjust only approved shared-room lights. For good night, set Night mode, turn off approved unoccupied lights, preserve path lighting, apply an approved climate setting, and report unresolved door or appliance status.
+- **Wait / timeout:** Give delayed light changes a visible cancel window and cancel them when someone manually changes that room.
+- **Stop condition:** Complete one pass, report anything needing a person, and do not repeat until Night mode ends.
+- **Manual override:** Wall controls, thermostat controls, urgent alerts, and a one-action cancel always remain available.
 
-## Night mode actions
+<div class="automation-example">IF the wind-down schedule arrives
+AND the home is in normal Home mode
+THEN offer wind-down with a cancel action
+AND gently adjust only approved shared-room lights
 
-### Lighting
-* **Turn off:**
-  - Living room
-  - Kitchen
-  - Office
-  - Hallway main lights
-  
-* **Keep on (dim):**
-  - Bedroom nightlight (10%)
-  - Bathroom nightlight (10%)
-  - Hallway nightlight (5%)
+IF someone intentionally starts Good night
+THEN change Home mode to Night
+AND turn off approved unoccupied lights
+AND preserve path lighting and urgent alerts
+AND report anything that still needs a person</div>
 
-### Security
-* **Lock all doors:**
-  - Front door
-  - Back door
-  - Side doors
-  - Garage door
-  
-* **Close garage door** - If open
+## Setup notes
 
-* **Arm security:**
-  - Motion sensors
-  - Cameras (enable night mode)
-  - Perimeter sensors
+1. List the devices the final routine may change. Leave everything else out.
+2. Create separate Wind-down and Good-night actions.
+3. Make Wind-down optional, limited to shared-room lighting, and easy to cancel.
+4. Require an intentional trigger before setting Night mode.
+5. Exclude occupied rooms, guest rooms, children's rooms, stairs, bathrooms, and emergency path lighting from broad off commands.
+6. Use door, window, garage, lock, and appliance information as a checklist before adding any control command.
+7. Keep safety alerts outside quiet-notification rules.
+8. Test each action separately, then test the complete routine with someone intentionally staying awake.
 
-### Climate
-* **Adjust thermostat:**
-  - Lower to sleeping temperature
-  - Heating: 65°F (18°C)
-  - Cooling: 70°F (21°C)
-  
-* **Enable DND mode** - Quiet smart speakers
+## Build a night checklist
 
-### Cameras
-* **Set privacy mode** - Indoor cameras
-* **Enable night vision** - Outdoor cameras
-* **Reduce sensitivity** - Prevent alerts from normal movement
+Status is safer than control for the first version:
 
-### Appliances
-* **Turn off non-essentials:**
-  - Coffee maker
-  - Fans (except bedroom)
-  - Entertainment systems
-  - Office equipment
+| Check | Initial behavior |
+|---|---|
+| Exterior door or window open | Name the opening and ask a person to inspect it |
+| Lock state unknown | Report unknown; do not infer locked from a closed contact sensor |
+| Garage position unknown | Report unknown; do not issue a blind close command |
+| Washer or dryer running | Leave power alone and show the current state |
+| Thermostat on manual hold | Preserve the hold |
+| Urgent incident active | Cancel bedtime changes that could hide or hinder the response |
+
+Add control later only when feedback, obstruction behavior, manual fallback, and household expectations have been verified for that exact device.
 
 ## Advanced features
 
-### Gradual dimming (15 minutes before bedtime)
+### Scope bedtime by person
 
-Create automation that gradually dims lights before bedtime:
-- **Trigger:** Time is 9:45 PM (15 minutes before bedtime)
-- **Action:** Dim living room lights to 30% over 15 minute transition
+A child's bedtime can affect only that bedroom and nearby path lighting. The final household Good-night action can run later without replaying the earlier room changes.
 
-### Sleep tracking integration
+### Hand rooms back to local automation
 
-If using sleep tracker (Apple Watch, Fitbit, etc.):
+After the routine sets an initial state, occupancy and wall controls should take over. Do not keep forcing a room dark after someone turns its light back on.
 
-Create trigger: When sleep status changes to "sleeping"
+### Delay non-urgent notifications
 
-### Reminder checks
+Queue routine summaries until morning, but keep urgent leak, fire, carbon-monoxide, medical, and security alerts immediate.
 
-Before activating Night Mode, verify:
-- All windows closed
-- Appliances off
-- Doors locked
-- Garage closed
+## Failure modes
 
-Send notification if any issues.
+- **Lights change while someone is using the room:** Require occupancy-aware exclusions or remove the room from the broad scene.
+- **A fixed schedule starts Night mode too early:** Make the schedule a prompt and keep final activation intentional.
+- **A manual light change is reversed:** Cancel pending actions for that device or room.
+- **A guest room is affected:** Use a Guest-mode scope that excludes private rooms and global announcements.
+- **A late arrival is locked out:** Report lock status until household arrival expectations and lock feedback are explicitly verified.
+- **The thermostat fights another recipe:** Preserve manual holds, safety limits, and climate automation ownership.
+- **Urgent alerts become quiet:** Exempt all safety and security channels from notification muting.
+- **The hub is unavailable:** Wall switches, thermostat controls, keys, and manual door operation still work.
 
-### Kids bedtime vs. adult bedtime
+## Done when
 
-**Kids Bedtime (8:30 PM):**
-- Dim kids' room lights
-- Turn off playroom
-- Start white noise
-- Keep hallway lights
+- [ ] A schedule never puts the whole home into Night mode by itself.
+- [ ] The intentional Good-night trigger works without opening an app.
+- [ ] An occupied or manually controlled room is not forced dark.
+- [ ] Path and bathroom lighting remain available.
+- [ ] Guest mode uses a smaller, predictable scope.
+- [ ] Unknown door, lock, garage, or appliance states are reported rather than guessed.
+- [ ] Manual thermostat holds and active safety modes are respected.
+- [ ] Urgent alerts remain immediate.
+- [ ] The household can complete bedtime normally when the hub is unavailable.
 
-**Adult Bedtime (10:30 PM):**
-- Full house Night Mode
-- All lights off (except nightlights)
-- Lock everything
-- Lower thermostat
+## FAQ
 
-## Safety considerations
+### Should bedtime run automatically at a fixed time?
 
-**Always Keep:**
-- Path lighting (nightlights)
-- Emergency exit lighting
-- Quick access to manual controls
-- Physical keys accessible
+Use a schedule to offer or begin a limited wind-down, not to put the entire home into Night mode. Require an intentional button, phrase, or control for the final good-night action.
 
-**Smart speaker settings:**
-- Reduce volume at night
-- Or enable DND completely
-- Allow emergency phrases through
+### Should the routine lock doors and close the garage?
 
-## Troubleshooting
+Start by reporting their status. Add a command only after each lock or door has separate position feedback, obstruction handling, and a tested manual fallback.
 
-### Lights don't turn off
+### What should quiet mode never silence?
 
-**Check:**
-- Automation is enabled
-- Lights are connected
-- No competing automations
-- Switch positions
+Keep smoke, carbon-monoxide, water-leak, security, medical, and other urgent household alerts outside routine notification muting.
 
-### Nightlights too bright/dim
+## Related recipes
 
-**Adjust brightness:**
-- Test different percentages
-- 5-15% typical range
-- Warmer color temperature better
-
-### Locks don't engage
-
-**Verify:**
-- Lock battery level
-- Lock is in range
-- Automation includes lock command
-- Check lock status in app
-
----
-
-**Related automations:**
-- [Morning routine](/automation/daily-routines/morning-routine/)
-- [Set away mode](/automation/daily-routines/away-mode/)
-- [Bathroom night light](/automation/lighting/bathroom-night-light/)
+- [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
+- [Bathroom night lighting](/automation/lighting/bathroom-night-light.html)
+- [Daily routines](/automation/daily-routines/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/daily-routines/">← Back to Daily Routines</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/daily-routines/index.html">Back to daily routines</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>
