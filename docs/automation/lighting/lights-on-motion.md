@@ -19,7 +19,7 @@ Walk in, lights on. If that fails at 2am, the wall switch still works.
 
 **Best for:** Hallways, closets, entryways, laundry rooms, and bathrooms with a sensor that sees the door.
 
-**Not for:** A room where people sit still for long periods, or a bathroom with a cheap PIR facing the shower. Use a longer timeout and better occupancy detection there.
+**Not for:** A room where people sit still for long periods, or a bathroom with a short PIR timer. A PIR is best for detecting entry motion. Use a longer timeout and an [mmWave presence sensor](/gear.html) where the automation must know that someone is still in the room.
 
 <p class="last-reviewed">Last reviewed: August 2026</p>
 
