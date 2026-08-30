@@ -17,7 +17,7 @@ Walk in half asleep, get enough light to see, and do not wake the house. If it f
 
 **Best for:** Bathrooms with a dimmable light and a sensor placed near the entry.
 
-**Not for:** A bathroom where a short PIR timeout would turn lights off during a shower. A PIR sees movement, not a still person. Start with a longer timeout or add an [mmWave presence sensor](/gear.html) that can detect someone even when they are not moving.
+**Not for:** A bathroom where a short PIR timeout would turn lights off during a shower. A PIR sees movement, not a still person. Start with a longer timeout or use the [PIR vs mmWave presence guide](/getting-started/pir-vs-mmwave-presence.html) to add occupancy sensing.
 
 ## Why this exists
 
@@ -256,7 +256,7 @@ See [turn lights off after motion stops](/automation/lighting/lights-off-after-m
 ## Failure modes
 
 - **The light is too bright:** Start at 10 percent, then test in a dark bathroom. Increase only enough for safe footing.
-- **It turns off during a shower:** A PIR can miss a still person through steam or a shower curtain. Use the paired off recipe with a 10-minute starting timeout, or add an [mmWave presence sensor](/gear.html) to keep detecting a person after motion stops.
+- **It turns off during a shower:** A PIR can miss a still person through steam or a shower curtain. Use the paired off recipe with a 10-minute starting timeout, or follow the [PIR vs mmWave presence guide](/getting-started/pir-vs-mmwave-presence.html) to keep detecting a person after motion stops.
 - **The sensor sees a hallway instead:** Aim and test the sensor so passing traffic does not light the bathroom unnecessarily.
 - **A guest uses the wall switch:** Treat it as the final answer. The next automation must not immediately undo that choice.
 - **The hub or internet is down:** The wall switch remains the fallback. Confirm that any relied-on Level 2 path is local.

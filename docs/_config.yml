@@ -54,6 +54,8 @@ navigation:
         url: /getting-started/choose-the-right-platform.html
       - title: Device guide
         url: /getting-started/device-guide.html
+      - title: PIR vs mmWave presence
+        url: /getting-started/pir-vs-mmwave-presence.html
       - title: Tips and tricks
         url: /getting-started/tips.html
       - title: Resources

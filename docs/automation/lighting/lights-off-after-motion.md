@@ -83,7 +83,7 @@ Start with a longer delay than you expect to need, then shorten it only after no
 
 - **Quick access spaces:** One to two minutes can work for a closet or hallway.
 - **Living spaces:** Start at three to five minutes.
-- **Bathrooms and quiet spaces:** Start at 10 minutes, or use a contact sensor, another motion sensor, or presence sensing before reducing the delay.
+- **Bathrooms and quiet spaces:** Start at 10 minutes, or use a contact sensor, another motion sensor, or [mmWave presence sensing](/getting-started/pir-vs-mmwave-presence.html) before reducing the delay.
 
 ## Advanced features
 

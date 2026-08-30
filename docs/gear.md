@@ -41,8 +41,8 @@ A smart switch is usually the safer choice for shared rooms because it keeps the
 
 | Job | Good enough | Never think about it | Local or cloud | Guest-proof note |
 |---|---|---|---|---|
-| Detect water where it should not be | [NEO Z-Wave Plus 700 water leak sensor](https://www.amazon.com/dp/B0FSKFCKTB) | TODO(owner): verified leak sensor with shutoff compatibility | Local with a compatible Z-Wave hub | Test the alert and make sure the source is obvious. |
-| Detect an open door or window | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | TODO(owner): preferred contact sensor | Local with a compatible Z-Wave hub | A contact sensor is easy for a guest to understand because the door itself is the trigger. |
-| Know whether a garage door is open | [Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT) | TODO(owner): preferred garage tilt sensor | Local with a compatible Z-Wave hub | Use it for status and alerts before adding automatic closing. |
+| Detect water where it should not be | [THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2) | [NEO Z-Wave Plus 700 water leak sensor](https://www.amazon.com/dp/B0FSKFCKTB) | Local with a compatible hub | Test the alert and make sure the source is obvious. |
+| Detect an open door or window | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Local with a compatible hub | A contact sensor is easy for a guest to understand because the door itself is the trigger. |
+| Know whether a garage door is open | [Lower-cost garage tilt sensor](https://www.amazon.com/dp/B0CZP2CJXF) | [Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT) | Verify compatibility for the lower-cost option; the premium option is local with a compatible Z-Wave hub. | Use it for status and alerts before adding automatic closing. |
 
 Before buying, read the [home automation philosophy](/getting-started/philosophy.html).
