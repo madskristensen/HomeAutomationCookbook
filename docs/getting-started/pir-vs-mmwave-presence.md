@@ -56,6 +56,12 @@ A cheap PIR and a short timer can turn off the lights while someone is in the sh
 
 If you only have PIR, start with a longer delay. Saving a few minutes of light is not worth leaving someone in the dark.
 
+## Home offices need a hold signal
+
+A PIR can detect someone entering an office, then lose them while they type, read, or sit through a long call. Those activities may not create enough movement across the PIR's detection zones.
+
+Use PIR as the fast arrival trigger and mmWave to hold the occupied state. Turn the office off only after mmWave clears for a forgiving delay. The desk light and wall switch should still work manually throughout the workday.
+
 ## Choose by room
 
 | Room | Start with | Add mmWave when |

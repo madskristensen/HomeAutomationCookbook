@@ -19,7 +19,7 @@ Leave the room, lights off. Stay still, and they should not leave you in the dar
 
 **Best for:** Hallways, closets, laundry rooms, and other spaces with predictable short visits.
 
-**Not for:** A bathroom with a short PIR timer, or a quiet work space. A PIR detects movement, not a person sitting still. Start with a longer delay, or use an [mmWave presence sensor](/gear.html) that can keep detecting someone when motion stops.
+**Not for:** A bathroom with a short PIR timer, or a home office where someone sits still for long periods. A PIR detects movement, not a person sitting still. Start with a longer delay, or follow the [PIR vs mmWave presence guide](/getting-started/pir-vs-mmwave-presence.html).
 
 ## Why this exists
 
@@ -228,7 +228,7 @@ Start with a longer delay than you expect to need, then shorten it only after no
 
 ## Failure modes
 
-- **The light turns off while someone is still:** Increase the timeout before changing anything else. A PIR does not see a person reading, showering, or standing behind a towel. For those rooms, add an [mmWave presence sensor](/gear.html), which can detect a person after motion stops.
+- **The light turns off while someone is still:** Increase the timeout before changing anything else. A PIR does not see a person working quietly, reading, showering, or standing behind a towel. For those rooms, follow the [PIR vs mmWave presence guide](/getting-started/pir-vs-mmwave-presence.html).
 - **A guest uses the wall switch:** Treat that as an override. Do not let the next sensor event immediately undo it.
 - **The sensor sees motion outside the room:** Reposition it or narrow its view before shortening the timeout.
 - **The hub reboots or the internet is down:** The wall switch remains the fallback. A local automation may resume after the hub is ready, but do not rely on it for Level 1 control.
