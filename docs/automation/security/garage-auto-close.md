@@ -35,7 +35,7 @@ Start with an alert. Add unattended closing only through equipment designed for 
 | Close the door | Existing wall control and opener remote | No personally verified unattended-closing controller yet | Use only equipment approved for the opener and unattended operation. |
 | Detect an obstruction | The opener's required, tested entrapment protection | The opener's required, tested entrapment protection | Never replace or bypass it with hobby sensors. |
 
-See [recommended gear](/gear.html) for the tilt sensors I have used. No unattended-closing controller is recommended until I have verified one.
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the tilt sensors I have used. No unattended-closing controller is recommended until I have verified one.
 
 ## Logic
 

@@ -36,7 +36,7 @@ Separate the recipe into two stages: a reversible wind-down and an intentional f
 | Apply an approved sleep setting | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Respect manual holds, safety limits, and the open-window pause recipe. |
 | Report open doors or windows | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Report status first; do not treat a contact sensor as proof that a door is locked. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

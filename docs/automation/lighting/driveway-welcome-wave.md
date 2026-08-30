@@ -36,7 +36,7 @@ The old version of this page described a multi-zone driveway wave without verifi
 | Confirm entry-door activity | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | A door event confirms activity; it does not prove identity or unlock anything. |
 | Suggest that someone is approaching | No personally verified household presence source yet | No personally verified combined arrival method yet | Use phone location only to open a short pending-arrival window. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

@@ -32,7 +32,7 @@ A vacuum that starts when the house is empty is only half the job. It also needs
 | Confirm the whole household has left and returned | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a single presence source that reliably covers every household member for both departure and arrival. |
 | Robot vacuum with remote dock command | No personally verified recommendation yet | No personally verified recommendation yet | Confirm the vacuum accepts a return-to-dock command from automation, not only a manual app tap. |
 
-See [recommended gear](/gear.html) for the job-first checklist.
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 
 ## Logic
 

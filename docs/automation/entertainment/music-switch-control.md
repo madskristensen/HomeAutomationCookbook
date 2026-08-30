@@ -32,7 +32,7 @@ Asking a voice assistant for the same thing every day gets old, and voice comman
 | Trigger the automation | No personally verified recommendation yet | No personally verified recommendation yet | Any smart button, wall switch, or remote that can trigger a platform automation will work. |
 | Play the music | No personally verified recommendation yet | No personally verified recommendation yet | Any speaker that accepts playback and volume commands from the platform. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

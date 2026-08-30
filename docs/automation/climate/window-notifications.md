@@ -32,7 +32,7 @@ Free heating or cooling from outdoor air is easy to miss without a specific remi
 | Track whether a window is open | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Optional. Useful for skipping a notification about a window that is already open. |
 | Compare indoor and outdoor temperature | No personally verified recommendation yet | No personally verified recommendation yet | Many platforms already provide an outdoor reading through an existing weather integration, so a dedicated purchase may not be needed. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

@@ -32,7 +32,7 @@ Cooking, cleaning products, and pet activity all cause brief air quality dips th
 | Control a plug-in air purifier | [Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2) | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | Confirm the plug's current rating covers the purifier's startup draw, and keep the purifier's own physical switch usable. |
 | Measure indoor air quality | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a specific air quality or PM2.5 sensor. Any sensor used here should report a stable, current reading before it drives the purifier. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

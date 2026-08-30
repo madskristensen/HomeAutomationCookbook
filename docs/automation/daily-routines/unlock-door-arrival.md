@@ -35,7 +35,7 @@ Use arrival to restore Home mode. Keep entry access deliberate unless the househ
 | Light the entry path | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Keep the physical paddle usable. |
 | Restore heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | The thermostat's safe limits remain authoritative. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

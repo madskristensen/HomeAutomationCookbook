@@ -35,7 +35,7 @@ Automatic shutoff can reduce damage, but a valve that cannot reopen, closes on a
 | Stop incoming water | Manual main-water shutoff | No personally verified automatic shutoff valve yet | Everyone responsible for the home should know the manual valve location. |
 | Reach the household | Persistent phone notification to at least two adults | No personally verified backup alert path yet | A local audible alert is useful when phones are muted or away. |
 
-See [recommended gear](/gear.html) for the job-first checklist. I have used both leak sensors. No automatic shutoff product is recommended until I have verified one in this home.
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. I have used both leak sensors. No automatic shutoff product is recommended until I have verified one in this home.
 
 ## Logic
 

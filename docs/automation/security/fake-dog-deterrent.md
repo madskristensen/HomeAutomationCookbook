@@ -32,7 +32,7 @@ A sound reacting to motion, even one that is not perfectly convincing, adds a mo
 | Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) | Matches an indoor entry point well; an outdoor-rated equivalent is not something I have personally verified. |
 | Play the barking sound on a speaker | No personally verified recommendation yet | No personally verified recommendation yet | This depends on the platform's existing speaker integration and an audio file it can play; no specific speaker model is recommended here. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

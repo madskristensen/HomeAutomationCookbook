@@ -13,6 +13,7 @@
 - Layout: `docs/_layouts/default.html` is the main template
 - Homepage: `docs/index.md`
 - Documentation pages: `docs/getting-started/philosophy.md`, `docs/getting-started/tips.md`, `docs/getting-started/resources.md`
+- Device selection and personally used products: `docs/getting-started/device-guide.md`
 - Chronological articles: `docs/_articles/`, listed at `docs/articles/index.md`
 - Automation categories: 7 directories under `docs/automation/`, plus the main automation hub page
 - Each category has: `index.md` (overview) and individual automation pages

@@ -31,7 +31,7 @@ A dead battery in a motion sensor, door sensor, or lock does not usually announc
 |---|---|---|---|
 | Detect low battery levels | No personally verified recommendation yet | No personally verified recommendation yet | This depends on the platform reporting battery data for each device, not on any single piece of hardware. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

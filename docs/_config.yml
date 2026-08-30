@@ -45,8 +45,6 @@ kramdown:
   
 # Navigation
 navigation:
-  - title: Home
-    url: /
   - title: Getting started
     url: /getting-started/index.html
     subitems:
@@ -54,7 +52,7 @@ navigation:
         url: /getting-started/philosophy.html
       - title: Choose the right platform
         url: /getting-started/choose-the-right-platform.html
-      - title: Device guide
+      - title: Choose devices and gear
         url: /getting-started/device-guide.html
       - title: Tips and tricks
         url: /getting-started/tips.html
@@ -186,8 +184,6 @@ navigation:
             url: /automation/notifications/maintenance-reminder-dashboard.html
   - title: Articles
     url: /articles/index.html
-  - title: Recommended gear
-    url: /gear.html
   - title: FAQ
     url: /faq/index.html
   - title: About

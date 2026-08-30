@@ -31,4 +31,4 @@ I have not personally run Home Assistant. When I discuss it, I identify that dis
 
 This is not a gadget review farm. It does not rank products by commission, invent test results, or require an app for ordinary household tasks.
 
-For the design rules behind every recipe, read the [home automation philosophy](/getting-started/philosophy.html). For named devices I have used, see [recommended gear](/gear.html).
+For the design rules behind every recipe, read the [home automation philosophy](/getting-started/philosophy.html). For named devices I have used, see [choose smart-home devices and gear](/getting-started/device-guide.html#products-i-have-used).

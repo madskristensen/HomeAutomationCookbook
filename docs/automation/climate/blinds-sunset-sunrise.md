@@ -31,7 +31,7 @@ A fixed clock schedule drifts away from actual daylight as the seasons change, w
 |---|---|---|---|
 | Motorize existing blinds or shades | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a specific motorized blind or retrofit motor. Confirm the household still has a physical remote, wand, or wall control after motorizing. |
 
-See [recommended gear](/gear.html) for the job-first checklist.
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 
 ## Logic
 

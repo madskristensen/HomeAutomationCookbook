@@ -58,10 +58,10 @@ description: Build useful home automations with plain-English logic, manual cont
     <span class="category-count">First recipe</span>
   </a>
 
-  <a href="/gear.html" class="category-card">
-    <h3>Choosing devices</h3>
-    <p>See the products I have used, organized by the job they perform</p>
-    <span class="category-count">Recommended gear</span>
+  <a href="/getting-started/device-guide.html" class="category-card">
+    <h3>Choose devices and gear</h3>
+    <p>Learn what to verify, then see products I have personally used</p>
+    <span class="category-count">Buying guide</span>
   </a>
 </div>
 

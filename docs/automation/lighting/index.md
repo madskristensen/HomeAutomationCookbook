@@ -144,7 +144,7 @@ Motion sensors are a common trigger for lighting automation:
 - Hands-full situations (laundry, garage)
 - Nighttime navigation
 
-Choose a sensor that works with your hub and fits the room. See [Recommended gear](/gear.html) for the models I have personally used.
+Choose a sensor that works with your hub and fits the room. See [Recommended gear](/getting-started/device-guide.html#products-i-have-used) for the models I have personally used.
 
 ### Door and window sensors (contact sensors)
 

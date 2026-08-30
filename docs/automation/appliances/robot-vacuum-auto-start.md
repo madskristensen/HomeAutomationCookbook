@@ -32,7 +32,7 @@ Vacuuming is more useful, and less disruptive, when nobody is underfoot and no p
 | Confirm the whole household has left | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a single presence source that reliably covers every household member. Test whatever signal is available against real daily patterns before trusting it. |
 | Robot vacuum with app control | No personally verified recommendation yet | No personally verified recommendation yet | Confirm the vacuum supports remote start, reports errors, and can be sent back to its dock from automation before relying on this recipe. |
 
-See [recommended gear](/gear.html) for the job-first checklist.
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 
 ## Logic
 

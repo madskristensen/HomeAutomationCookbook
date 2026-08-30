@@ -35,7 +35,7 @@ Start with monitoring. If a room needs automatic supplemental heat, use a fixed 
 | Control central heating | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | I have used both. Keep safe limits and manual control at the thermostat. |
 | Add supplemental heat | Manually operated equipment used exactly as instructed | Fixed, purpose-built heating with an approved thermostat | Have wiring and equipment evaluated by a qualified professional where appropriate. |
 
-See [recommended gear](/gear.html) for the products I have used. This page does not recommend a smart plug for a portable heater.
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the products I have used. This page does not recommend a smart plug for a portable heater.
 
 ## Logic
 

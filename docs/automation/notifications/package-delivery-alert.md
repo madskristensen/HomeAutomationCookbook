@@ -31,7 +31,7 @@ Missing a delivery notification from a carrier, or not hearing a knock, can mean
 |---|---|---|---|
 | Detect motion near the front entrance | No personally verified recommendation yet | No personally verified recommendation yet | This specifically needs a sensor rated for outdoor exposure if it is mounted outside; the motion sensor options already covered are evaluated for indoor use. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

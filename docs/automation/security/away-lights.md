@@ -33,7 +33,7 @@ A home with every light off every evening, night after night, is a visible patte
 | Dim a fixed light | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch. |
 | Control a plug-in light or appliance | [Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2) | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | Works for a lamp plugged into an outlet rather than a wired fixture. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

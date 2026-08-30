@@ -31,7 +31,7 @@ Not everyone wants to replace a working doorbell with a smart one, especially if
 |---|---|---|---|
 | Detect the doorbell press | No personally verified recommendation yet | No personally verified recommendation yet | This job specifically needs a contact sensor with external wire terminals, which is a different requirement than a standard door or window contact sensor. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

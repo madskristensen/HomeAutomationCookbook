@@ -57,7 +57,7 @@ Check the exact model, region, firmware, and required capability against current
 
 Then decide whether it deserves to be repeated around the house.
 
-[Choose devices by the job](/getting-started/device-guide.html) or see [products I have used](/gear.html).
+[Choose devices by the job and see products I have used](/getting-started/device-guide.html).
 
 ## 5. Run in observation mode
 
@@ -87,8 +87,7 @@ A second sensor, longer timeout, or additional mode should fix an observed probl
 ## Next steps
 
 - [Choose a platform](/getting-started/choose-the-right-platform.html)
-- [Choose devices by job](/getting-started/device-guide.html)
-- [Browse recommended gear](/gear.html)
+- [Choose devices and gear](/getting-started/device-guide.html)
 - [Read practical setup tips](/getting-started/tips.html)
 - [Browse all recipes](/automation/index.html)
 

@@ -32,7 +32,7 @@ Coming home to music playing is a small but pleasant touch, and it removes the n
 | Detect arrival | No personally verified recommendation yet | No personally verified recommendation yet | Phone-based location, a smart lock, or a garage door sensor can all work; use whichever the household has already tested. |
 | Play the music | No personally verified recommendation yet | No personally verified recommendation yet | Any speaker that accepts playback and volume commands from the platform. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

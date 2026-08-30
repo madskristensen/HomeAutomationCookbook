@@ -31,7 +31,7 @@ Music controls scattered across separate manufacturer apps means switching apps 
 |---|---|---|---|
 | Control connected speakers from a dashboard | No personally verified recommendation yet | No personally verified recommendation yet | This depends on the platform's existing integration with each speaker brand; no additional hardware is needed beyond the speakers themselves. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

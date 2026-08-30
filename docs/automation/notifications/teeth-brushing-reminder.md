@@ -31,7 +31,7 @@ Reminding kids to brush their teeth often falls on a parent to check manually. D
 |---|---|---|---|
 | Detect the toothbrush being removed from its charger | No personally verified recommendation yet | No personally verified recommendation yet | This specifically needs a smart plug with power or wattage monitoring, which is a different capability than the basic on/off plug jobs already covered. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

@@ -73,7 +73,7 @@ There is no dependable universal number. Battery chemistry, reporting frequency,
 <details markdown="1">
 <summary>Where are the product recommendations?</summary>
 
-The [Recommended gear](/gear.html) page lists only products I have used. It is organized by household job rather than generic brand rankings.
+The [Choose smart-home devices and gear](/getting-started/device-guide.html#products-i-have-used) page lists only products I have used. It is organized by household job rather than generic brand rankings.
 </details>
 
 ## Reliable automation

@@ -151,5 +151,5 @@ No. Select it explicitly after reviewing pets, plumbing, plants, water, deliveri
 
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Pause heating or cooling when a window stays open](/automation/climate/thermostat-windows-open.html)
-- [Recommended smart home gear](/gear.html)
+- [Recommended smart home gear](/getting-started/device-guide.html#products-i-have-used)
 - [Home automation philosophy](/getting-started/philosophy.html)

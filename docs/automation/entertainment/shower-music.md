@@ -32,7 +32,7 @@ Remembering to start music before stepping into the shower, especially early in 
 | Trigger the automation | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Use the existing shower light switch as the trigger where possible. |
 | Play the music | No personally verified recommendation yet | No personally verified recommendation yet | A waterproof or water-resistant speaker is worth choosing for a bathroom, but no specific model has been personally verified here. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

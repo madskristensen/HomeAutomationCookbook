@@ -95,7 +95,7 @@ Use a combined PIR and mmWave sensor when one mounting location sees both the en
 
 Use separate sensors when the doorway needs a fast PIR trigger but the desk, shower, or seating area needs a differently aimed presence zone. Separate devices also let an existing PIR continue doing the job it already does well.
 
-See [recommended smart home gear](/gear.html) for examples I have used in both tiers.
+See [recommended smart home gear](/getting-started/device-guide.html#products-i-have-used) for examples I have used in both tiers.
 
 ## Failure modes
 

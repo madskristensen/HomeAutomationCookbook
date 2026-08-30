@@ -33,7 +33,7 @@ Turning on several outdoor devices individually is slow, and it is easy to forge
 | Outdoor music playback | No personally verified recommendation yet | No personally verified recommendation yet | Needs to be weatherproof or otherwise suitable for the location and accept playback and volume commands. |
 | Trigger the scene | No personally verified recommendation yet | No personally verified recommendation yet | Any button, voice command, or dashboard tile the platform can use to start an automation. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

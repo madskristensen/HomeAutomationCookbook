@@ -1,15 +1,13 @@
 ---
 layout: guide
-title: Choose smart-home devices by the job
-description: A practical checklist for choosing compatible sensors, switches, plugs, and climate devices without relying on generic brand rankings.
+title: Choose smart-home devices and gear
+description: Choose compatible smart-home devices by job, then compare the sensors, switches, plugs, and climate gear I have personally used.
 last_modified_at: 2026-08-30
 ---
 
-# Choose smart-home devices by the job
+# Choose smart-home devices and gear
 
 Do not start with a brand or a box of discounted devices. Start with one household job, write the rule in plain English, and identify the capabilities that rule needs.
-
-For named products I have personally used, see [Recommended gear](/gear.html). This page explains how to evaluate everything else.
 
 ## Start with the automation
 
@@ -56,6 +54,41 @@ Use equipment approved for the exact job. Hobby motion, location, and contact se
 | Know garage-door position | Tilt or purpose-built position sensor | Position does not prove that the doorway is clear. |
 
 Read [PIR vs mmWave presence](/articles/pir-vs-mmwave-presence.html) before choosing occupancy sensors for bathrooms or home offices.
+
+## Products I have used
+
+I have bought and used every product named below. Links go directly to Amazon product pages without affiliate tracking. If that changes, the [disclosure](/disclosure.html) will identify the relationship before the first affiliate link.
+
+### Occupancy and motion
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) - my favorite for fast reactions. | Put it where it sees the doorway before someone reaches the switch. |
+| Detect a person who is still | [Besisglas Zigbee Human Presence Sensor](https://www.amazon.com/dp/B0GYJ3LQ5W) | [Aqara Presence Sensor FP300](https://www.amazon.com/dp/B0FG2MD3YP) | Use this for home offices, showers, reading, or other rooms where a PIR can time out while someone is still. |
+| Detect bathroom motion with humidity, temperature, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | Use it where the extra sensor readings are useful, not where the fastest motion response matters most. |
+
+### Lighting control
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Dim a fixed light | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | The paddle remains a normal wall control. |
+| Switch a fixed light on or off | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | The paddle remains a normal wall control. |
+| Control a plug-in light or appliance | [Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2) | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | Keep the appliance's physical control usable. |
+| Control outdoor plug-in lighting | [Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8) | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | Use only where an outdoor-rated plug is appropriate. |
+
+### Climate
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Someone should be able to change the temperature at the thermostat. |
+
+### Leaks and safety
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Detect water where it should not be | [THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2) | [NEO Z-Wave Plus 700 water leak sensor](https://www.amazon.com/dp/B0FSKFCKTB) | Test the alert and make sure the source is obvious. |
+| Detect an open door or window | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | A contact sensor is easy for a guest to understand because the door itself is the trigger. |
+| Know whether a garage door is open | [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF) | [Ecolink Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT) | Use it for status and alerts before adding automatic closing. |
 
 ## Verify compatibility
 
@@ -108,12 +141,11 @@ Choose one fast motion sensor and one wall-controlled light for a low-risk room.
 
 ## Next steps
 
-- [See products I have used](/gear.html)
 - [Choose a platform](/getting-started/choose-the-right-platform.html)
 - [Read the philosophy](/getting-started/philosophy.html)
 - [Build the first lighting recipe](/automation/lighting/lights-on-motion.html)
 
 <div class="page-navigation">
   <a href="/getting-started/index.html">Back to getting started</a>
-  <a href="/gear.html">Recommended gear</a>
+  <a href="/automation/index.html">Browse automations</a>
 </div>

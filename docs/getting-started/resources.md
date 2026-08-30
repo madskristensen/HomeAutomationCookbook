@@ -60,8 +60,7 @@ Home Automation Cookbook is open source:
 ## Next steps
 
 - [Choose a platform](/getting-started/choose-the-right-platform.html)
-- [Choose devices by job](/getting-started/device-guide.html)
-- [See products I have used](/gear.html)
+- [Choose devices and see products I have used](/getting-started/device-guide.html)
 - [Read the disclosure](/disclosure.html)
 
 <div class="page-navigation">

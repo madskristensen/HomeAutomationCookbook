@@ -31,7 +31,7 @@ A push notification is easy to dismiss with a swipe and then forget entirely. A 
 |---|---|---|---|
 | Display persistent status information | No personally verified recommendation yet | No personally verified recommendation yet | This only needs virtual switches or variables and a dashboard; no physical hardware is required. |
 
-See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
