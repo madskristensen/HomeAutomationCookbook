@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: Choose smart-home devices by the job
 description: A practical checklist for choosing compatible sensors, switches, plugs, and climate devices without relying on generic brand rankings.
 last_modified_at: 2026-08-30
@@ -55,7 +55,7 @@ Use equipment approved for the exact job. Hobby motion, location, and contact se
 | Measure room conditions | Temperature or humidity sensor | Placement may represent a draft, vent, or wall rather than the occupied area. |
 | Know garage-door position | Tilt or purpose-built position sensor | Position does not prove that the doorway is clear. |
 
-Read [PIR vs mmWave presence](/getting-started/pir-vs-mmwave-presence.html) before choosing occupancy sensors for bathrooms or home offices.
+Read [PIR vs mmWave presence](/articles/pir-vs-mmwave-presence.html) before choosing occupancy sensors for bathrooms or home offices.
 
 ## Verify compatibility
 

@@ -19,7 +19,7 @@ Walk in, lights on. If that fails at 2am, the wall switch still works.
 
 **Best for:** Hallways, closets, entryways, laundry rooms, and bathrooms with a sensor that sees the door.
 
-**Not for:** A room where people sit still for long periods, or a bathroom with a short PIR timer. A PIR is best for detecting entry motion. Use a longer timeout and the [PIR vs mmWave presence guide](/getting-started/pir-vs-mmwave-presence.html) where the automation must know that someone is still in the room.
+**Not for:** A room where people sit still for long periods, or a bathroom with a short PIR timer. A PIR is best for detecting entry motion. Use a longer timeout and the [PIR vs mmWave presence article](/articles/pir-vs-mmwave-presence.html) where the automation must know that someone is still in the room.
 
 ## Why this exists
 

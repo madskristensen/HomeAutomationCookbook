@@ -13,6 +13,7 @@
 - Layout: `docs/_layouts/default.html` is the main template
 - Homepage: `docs/index.md`
 - Documentation pages: `docs/getting-started/philosophy.md`, `docs/getting-started/tips.md`, `docs/getting-started/resources.md`
+- Chronological articles: `docs/_articles/`, listed at `docs/articles/index.md`
 - Automation categories: 7 directories under `docs/automation/`, plus the main automation hub page
 - Each category has: `index.md` (overview) and individual automation pages
 
@@ -46,6 +47,13 @@ When creating or updating an automation detail page, use this structure:
 - Related recipes
 
 Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, code blocks, logos, or capability claims unless Mads has personally verified them and they materially change the recipe.
+
+# Content dates
+- Recipes use `layout: automation` and always include `last_modified_at`.
+- Substantive evergreen guides use `layout: guide` and include `last_modified_at`; the guide layout shows the date below the headline.
+- Articles use `layout: guide` and include a publication `date`. Add `last_modified_at` only after a later substantive update.
+- Hub, category, redirect, and navigation pages use `layout: default` and remain undated.
+- Legal pages may show an explicit date in their content when the wording requires it.
 
 # Navigation
 - Main nav in `docs/_includes/navigation.html`

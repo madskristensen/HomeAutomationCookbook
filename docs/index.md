@@ -67,19 +67,19 @@ description: Build useful home automations with plain-English logic, manual cont
 
 ## Why this site exists
 
-**Most smart homes aren't actually smart.** They're full of gadgets that need constant attention, confuse guests, and frustrate family members.
+Smart-home gear stops being helpful when it needs constant attention, confuses guests, or makes ordinary controls less reliable.
 
-I built this cookbook around the rules that have held up in my own family home. Finished recipes follow these principles, and older pages are being brought up to the same standard:
+I built this cookbook around the rules that have held up in my own family home. Every recipe now follows these principles:
 
 <div class="principles-grid">
   <div class="principle-card">
     <h3>Works for everyone</h3>
-    <p>Your kids, guests, and spouse shouldn't need training. Physical switches still work. Automations feel natural.</p>
+    <p>Kids, guests, and other household members should not need training. Physical switches still work and the automation remains understandable.</p>
   </div>
 
   <div class="principle-card">
-    <h3>Actually saves time</h3>
-    <p>Each automation eliminates a real daily task. No more checking if doors are locked or wondering if the dryer finished.</p>
+    <h3>Solves a repeated job</h3>
+    <p>Each automation removes a repeated action or makes a condition visible when someone needs to respond.</p>
   </div>
   <div class="principle-card">
     <h3>Platform-neutral logic</h3>

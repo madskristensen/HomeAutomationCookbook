@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: Frequently asked questions
 description: Direct answers about choosing a platform, buying compatible devices, building reliable automations, privacy, and troubleshooting.
 last_modified_at: 2026-08-30

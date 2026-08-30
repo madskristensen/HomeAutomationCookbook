@@ -34,6 +34,11 @@ author:
 markdown: kramdown
 theme: jekyll-theme-cayman
 
+collections:
+  articles:
+    output: true
+    permalink: /articles/:name.html
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge
@@ -179,6 +184,8 @@ navigation:
             url: /automation/notifications/pet-feeding-reminder.html
           - title: Maintenance reminder dashboard
             url: /automation/notifications/maintenance-reminder-dashboard.html
+  - title: Articles
+    url: /articles/index.html
   - title: Recommended gear
     url: /gear.html
   - title: FAQ

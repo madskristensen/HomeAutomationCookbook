@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: Home automation resources
 description: A short list of official documentation, support communities, and research checks for verifying devices and platform behavior.
 last_modified_at: 2026-08-30

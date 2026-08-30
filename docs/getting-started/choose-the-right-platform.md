@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: Choose the platform you will actually maintain
 description: A candid platform chooser based on firsthand Alexa, SmartThings, and Hubitat experience, with Home Assistant clearly marked as a technical-fit comparison.
 last_modified_at: 2026-08-30

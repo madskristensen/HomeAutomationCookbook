@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: About Home Automation Cookbook
 description: Practical, family-first smart home recipes that keep physical controls working and automations local when possible.
 last_modified_at: 2026-08-30

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: Safe thermostat auto-away for pets and pipes
 description: Use a modest thermostat setback when the home is empty without risking pets, frozen pipes, manual holds, or an unsafe recovery.
 last_modified_at: 2026-08-30

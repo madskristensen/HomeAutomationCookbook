@@ -3,7 +3,6 @@ layout: default
 title: Safety and security automations
 description: Alert-first safety and security recipes that keep approved alarms, appliance controls, door protections, and human decisions in charge.
 keywords: safety automation, security notification, fire alert, water leak alert, garage door status, stove reminder
-last_modified_at: 2026-08-30
 ---
 
 # Safety and security automations

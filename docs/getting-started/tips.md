@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: guide
 title: Practical home automation tips
 description: Small patterns that make home automations easier for family and guests to understand, control, and recover when something fails.
 last_modified_at: 2026-08-30
