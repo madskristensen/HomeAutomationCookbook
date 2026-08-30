@@ -149,7 +149,7 @@ navigation:
             url: /automation/security/fire-safety.html
           - title: Fake dog deterrent
             url: /automation/security/fake-dog-deterrent.html
-          - title: Water leak response
+          - title: Water leak alert
             url: /automation/security/water-leak-response.html
           - title: Garage door notification
             url: /automation/security/garage-door-notification.html

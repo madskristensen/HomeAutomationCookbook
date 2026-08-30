@@ -1,432 +1,158 @@
 ---
 layout: automation
-title: Water Leak Detection and Response - Smart Home Safety
-description: Detect water leaks early and respond automatically with alerts, water shutoff, and damage prevention. Complete guide for water leak automation.
-keywords: water leak sensor, leak detection, water damage prevention, smart water shutoff, flood sensor, basement flooding, leak alert, water sensor automation
+title: Get an immediate alert when water is detected
+description: A platform-neutral leak recipe that identifies the wet sensor, alerts the household immediately, and adds automatic water shutoff only after verified testing.
+keywords: water leak alert, leak sensor notification, water detection automation, smart water shutoff, flood sensor, NEO water leak sensor
+last_modified_at: 2026-08-30
+faqs:
+  - question: Should one leak sensor automatically close the main water valve?
+    answer: Start with immediate alerts. Add automatic shutoff only after the valve, manual bypass, sensor behavior, and safe reopen procedure have all been tested with the household.
+  - question: Does a dry sensor mean the leak is resolved?
+    answer: No. A dry report can mean water moved away from the contacts or the sensor was picked up. Require a person to inspect the area and clear the alert manually.
+  - question: Where should leak sensors go first?
+    answer: Start where a hidden or pressurized leak would cause damage quickly, such as the water heater, washing-machine supply hoses, under sinks, and near a dishwasher or refrigerator water line.
 ---
 
-# Water leak detection and response
+# Get an immediate alert when water is detected
 
-Water damage is one of the most expensive home disasters. A single undetected leak can cause thousands of dollars in damage within hours. Smart water leak sensors combined with automated responses can detect leaks early and minimize damage.
+Put a name on the exact sensor, alert the household at any hour, and require a person to inspect the source before clearing the incident.
 
-## Use cases
+**Best for:** Water heaters, washing-machine hoses, sinks, dishwashers, refrigerator water lines, sump areas, and other places where water would collect near a sensor.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Leak detection locations</h4>
-    <ul>
-      <li><strong>Under sinks</strong> - Kitchen and bathroom pipe connections</li>
-      <li><strong>Near water heater</strong> - Tank failures and pressure relief</li>
-      <li><strong>Behind washing machine</strong> - Hose failures and connections</li>
-      <li><strong>Near dishwasher</strong> - Supply line and drain issues</li>
-      <li><strong>Basement/utility room</strong> - Sump pump failures, foundation seepage</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Response actions</h4>
-    <ul>
-      <li><strong>Immediate alerts</strong> - Phone notifications day or night</li>
-      <li><strong>Automatic water shutoff</strong> - Stop the source immediately</li>
-      <li><strong>Turn off water heater</strong> - Prevent dry-fire damage</li>
-      <li><strong>Alert family members</strong> - Multiple people notified</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Replacing smoke, carbon-monoxide, sump, or professionally monitored safety systems, or automatically operating an untested main-water valve.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Water leak sensors</strong>
-      <div class="product-details">
-        Popular brands: Aqara, Samsung SmartThings, Honeywell, Fibaro<br>
-        Place at each potential leak location - plan for 5-10 sensors for full coverage
-      </div>
-    </div>
-  </div>
-</div>
+A generic "water detected" message wastes time. The useful alert says where water was found, reaches more than one responsible person, stays visible until acknowledged, and still leaves a clear manual response when the hub or internet is unavailable.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart water shutoff valve</strong>
-      <div class="product-details">
-        Brands: Moen Flo, Phyn, LeakSmart, Dome<br>
-        Installs on main water line - automatically stops water flow when leak detected
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart water heater controller</strong>
-      <div class="product-details">
-        Turn off water heater to prevent dry-fire damage when water is shut off
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Rope-style water sensors</strong>
-      <div class="product-details">
-        Extends detection area - good for long runs like behind washer or along basement walls
-      </div>
-    </div>
-  </div>
-</div>
+Automatic shutoff can reduce damage, but a valve that cannot reopen, closes on a false report, or has no manual bypass creates a different emergency. Build and test the alert first.
 
-<div class="info-box">
-  <strong>💡 Sensor placement tips</strong>
-  <ul>
-    <li>Place sensors on the floor where water would collect first</li>
-    <li>Ensure sensor contacts touch the floor surface directly</li>
-    <li>Avoid carpeted areas if possible - use hard surface or drip tray</li>
-    <li>Check sensors periodically - dust can affect sensitivity</li>
-  </ul>
-</div>
+## What I used
 
-## Basic automation setup
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect water | [NEO Z-Wave Plus 700 water leak sensor](https://www.amazon.com/dp/B0FSKFCKTB) | TODO(owner): preferred leak sensor with a remote probe or sensing cable | Name every sensor for the place a person should inspect. |
+| Stop incoming water | Manual main-water shutoff | TODO(owner): verified automatic shutoff valve | Everyone responsible for the home should know the manual valve location. |
+| Reach the household | Persistent phone notification to at least two adults | TODO(owner): verified backup alert path | A local audible alert is useful when phones are muted or away. |
 
-<div class="automation-example">IF any water sensor detects leak
-THEN send critical notification to all family
-AND turn on all lights in affected area
-AND (if equipped) shut off main water valve</div>
+See [recommended gear](/gear.html) for the job-first checklist. The NEO sensor is owner-used. No automatic shutoff product is recommended until the owner has verified one in this home.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Any water leak sensor detects water (wet)</li>
-      <li>Water sensor state changes to "wet" or "leak detected"</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <p>None - this should always trigger regardless of time, mode, or other factors</p>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Send critical/high-priority notification with sensor location</li>
-      <li>Send notification to all family members</li>
-      <li>Turn on lights in affected area</li>
-      <li>If equipped: Close smart water shutoff valve</li>
-      <li>If water heater area: Turn off water heater</li>
-      <li>Optional: Flash lights or sound alarm</li>
-    </ul>
-  </div>
-</div>
+## Logic
 
-## Platform-specific examples
+- **Trigger:** Any leak sensor reports wet.
+- **Conditions:** None for the first alert. Leak alerts run in Home, Away, Night, and guest modes.
+- **Action:** Send a persistent high-priority notification naming the sensor and location, alert at least two responsible people, and turn on a local indicator if it is safe and useful.
+- **Wait / timeout:** Repeat through a separate backup path only while the incident remains unacknowledged.
+- **Stop condition:** A person inspects the source, stops the water if necessary, and manually clears the incident.
+- **Manual override:** The main water supply and any automatic valve remain manually operable.
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Any water sensor state changes to "on" or "wet"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">None - always run</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Send persistent notification, turn on lights, close valve</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Any water sensor detects water</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Send notification to all members + turn on lights</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Close smart water valve if compatible
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Any water sensor wet</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Push notification, turn on lights, close valve</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine or Hubitat Safety Monitor
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Water sensor detects leak</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Send notification, turn on lights</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Water shutoff requires HomeKit-compatible valve
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Water sensor detects water</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Notification, announce on Echo, turn on lights</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Water sensor detects leak</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send notification, turn on lights, announce</span>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="automation-example">IF any leak sensor reports wet
+THEN create a persistent incident with the sensor's location
+AND alert the responsible household members
+AND activate the local warning
 
-## Priority sensor locations
+IF a verified automatic shutoff is enabled
+AND the wet report passes its tested confirmation rule
+THEN close the main-water valve
+AND report whether the valve actually reached closed</div>
 
-### High priority (install first)
+## Setup notes
 
-**Water heater area:**
-- Tank failures can release 40-80 gallons quickly
-- Place sensor at base of water heater
-- Consider rope sensor around perimeter
+1. Name each sensor for the response location, such as "Laundry supply hoses" instead of "Leak sensor 3."
+2. Place the contacts where the first escaping water is likely to collect, without blocking drains or creating a trip hazard.
+3. Confirm wet, dry, unavailable, low-battery, and tamper states before writing the response.
+4. Send the first alert without time, presence, or mode conditions.
+5. Include the sensor name, location, detection time, manual shutoff location, and acknowledgment action.
+6. Deliver the alert to at least two responsible people.
+7. Test a local audible or visible warning that does not depend on a phone.
+8. Require manual incident clearing even after the sensor reports dry.
 
-**Under kitchen sink:**
-- Multiple connections, garbage disposal
-- Common failure point for supply lines
-- Place sensor at lowest point under sink
+## Test the alert safely
 
-**Behind washing machine:**
-- Supply hoses are common failure point
-- High water pressure area
-- Place sensor on floor behind or beside machine
+Follow the sensor's instructions for testing. Use a damp test surface or cloth on the sensing contacts rather than immersing a device unless its documentation explicitly permits that.
 
-### Medium priority
+Run the test with:
 
-**Under bathroom sinks:**
-- P-trap connections, supply lines
-- Place sensor at lowest point in cabinet
+- Every phone locked and muted as it would normally be overnight.
+- Home and Away modes active in separate tests.
+- The internet disconnected if local alert behavior is expected.
+- The sensor marked unavailable to verify that missing data does not look dry.
+- A household member following the message to the correct shutoff.
 
-**Near dishwasher:**
-- Supply line connection to hot water
-- Place sensor at front edge where water would spread
+Retest after moving a sensor, changing its battery, changing notification settings, or editing the automation.
 
-**Near refrigerator (if ice maker):**
-- Ice maker supply line is small but can leak continuously
-- Often goes unnoticed in back corner
+## Optional automatic shutoff
 
-### Recommended for full coverage
+Do not add valve control until alert-only behavior is dependable. Before enabling automatic closure:
 
-**Basement or utility room:**
-- Sump pump area
-- HVAC condensate drain
-- Foundation walls (rope sensor)
+- Have the valve installed in a manner appropriate for the plumbing and local requirements.
+- Verify it can close the actual valve fully and report the final position.
+- Label and test the manual bypass.
+- Decide which sensors may close the main supply and which should only alert.
+- Use a short, tested confirmation rule without delaying the first notification.
+- Notify on the close command, successful closure, failure, and unexpected reopening.
+- Require a person to inspect the home before reopening.
+- Keep freeze protection, fire-suppression supply, boilers, irrigation, and other water-dependent systems in the safety review.
 
-**Near toilets:**
-- Supply line connection
-- Wax ring failures
+Do not automatically turn off a water heater or other appliance unless its manufacturer instructions and a qualified professional support that exact response.
 
 ## Advanced features
 
-### Location-specific responses
+### Add a sensing cable
 
-Create separate automations for different areas:
+A remote probe or sensing cable can cover a wider edge behind an appliance or around a tank. Test every section that must detect water and keep the control body above the likely water line.
 
-**Water heater leak:**
-- All standard actions plus
-- Turn off water heater power (smart plug or circuit)
-- Prevents dry-fire damage
+### Escalate only when nobody acknowledges
 
-**Basement leak:**
-- Check sump pump status
-- Notify if pump not running
-- Higher urgency during rain
+Send the immediate alert to the primary household group. If nobody acknowledges it, use one independent backup route to a trusted person. Avoid endless repeated notifications that hide new information.
 
-**Washer area leak:**
-- Turn off washer power (smart plug)
-- Prevents further water addition
+### Track sensor health
 
-### Escalating alerts
+Treat low battery, unavailable, and stale reports as maintenance problems. A silent sensor must not appear healthy just because it is not reporting wet.
 
-Create progressive notification system:
+## Failure modes
 
-1. **Immediate:** Critical push notification to all phones
-2. **2 minutes later:** If not acknowledged, call phones (using IFTTT or Pushover)
-3. **5 minutes later:** Text emergency contacts or neighbors
-4. **10 minutes later:** Continue calling until acknowledged
+- **Alert does not identify the source:** Rename the sensor for a physical location and include that name in every message.
+- **Only one person receives the alert:** Add a second responsible recipient and test both locked phones.
+- **Sensor reports dry after being moved:** Keep the incident open until a person inspects and clears it.
+- **Condensation causes nuisance alerts:** Move the sensor without moving it away from the first likely leak path, or use a remote probe suited to the location.
+- **Water misses the contacts:** Observe drainage paths and use a tray, probe, or sensing cable where appropriate.
+- **Sensor becomes unavailable:** Create a separate health alert and inspect the device promptly.
+- **Automatic valve does not close:** Report the failure clearly and direct the household to the labeled manual shutoff.
+- **Automatic valve closes unexpectedly:** Keep manual bypass instructions at the valve and disable automation until the cause is understood.
 
-### All-clear notification
+## Done when
 
-When sensor dries:
+- [ ] Every sensor has a response-oriented location name.
+- [ ] A wet test creates one immediate persistent incident in every household mode.
+- [ ] At least two responsible people receive an alert naming the correct location.
+- [ ] The local warning works without relying on a phone.
+- [ ] Dry or unavailable never clears the incident automatically.
+- [ ] A person can find and operate the manual shutoff from the alert instructions.
+- [ ] If automatic shutoff is enabled, closure, failure, bypass, and manual reopen have all been tested.
+- [ ] The system remains useful when the internet is unavailable.
 
-- **Trigger:** Water sensor state changes to "dry"
-- **Condition:** Previous state was "wet"
-- **Action:** Send notification "Water sensor dried - check area and assess damage"
+## FAQ
 
-### Integration with insurance
+### Should one leak sensor automatically close the main water valve?
 
-Some insurance companies offer discounts for:
-- Whole-home water shutoff valves
-- Connected leak detection systems
-- Check with your insurer for potential savings
+Start with immediate alerts. Add automatic shutoff only after the valve, manual bypass, sensor behavior, and safe reopen procedure have all been tested with the household.
 
-## Troubleshooting
+### Does a dry sensor mean the leak is resolved?
 
-### Issue: False alerts
+No. A dry report can mean water moved away from the contacts or the sensor was picked up. Require a person to inspect the area and clear the alert manually.
 
-**Causes:**
-- High humidity triggering sensor
-- Condensation on cold pipes
-- Sensor placed on damp surface
-- Sensor battery dying (erratic behavior)
+### Where should leak sensors go first?
 
-**Solutions:**
-✅ Raise sensor slightly off ground (still touching but elevated)
-✅ Move away from high-humidity areas
-✅ Use drip tray under potential leak sources
-✅ Check and replace batteries regularly
-✅ Clean sensor contacts periodically
+Start where a hidden or pressurized leak would cause damage quickly, such as the water heater, washing-machine supply hoses, under sinks, and near a dishwasher or refrigerator water line.
 
-### Issue: Sensor not detecting water
+## Related recipes
 
-**Causes:**
-- Sensor placed too far from leak source
-- Water flowing away from sensor
-- Sensor contacts dirty or corroded
-- Wireless signal not reaching hub
-
-**Solutions:**
-✅ Test sensor by placing wet paper towel on contacts
-✅ Reposition sensor to lowest point where water collects
-✅ Clean contacts with isopropyl alcohol
-✅ Add repeater or move hub closer
-✅ Check battery level
-
-### Issue: Notification not received
-
-**Causes:**
-- Phone notifications disabled
-- Automation disabled or errored
-- Critical alerts filtered by phone
-- Hub offline
-
-**Solutions:**
-✅ Verify push notification permissions
-✅ Check automation is enabled and error-free
-✅ Mark app as critical/priority in phone settings
-✅ Test automation with manual trigger
-✅ Ensure hub is online and connected
-
-## Best practices
-
-### Sensor maintenance
-
-**Monthly:**
-- Test sensors with wet paper towel
-- Check battery levels
-- Verify notifications arrive
-
-**Quarterly:**
-- Clean sensor contacts
-- Check sensor placement
-- Review automation logs
-
-### Response planning
-
-**Know your shutoff locations:**
-- Main water shutoff valve location
-- Individual fixture shutoffs
-- Water heater shutoff
-
-**Emergency contacts:**
-- Plumber phone number saved
-- Water damage restoration service
-- Insurance claim contact
-
-**Family awareness:**
-- All adults know manual shutoff location
-- Emergency procedures documented
-- Test automation with family periodically
-
-### Battery management
-
-- Use quality batteries (lithium recommended for sensors)
-- Set low battery alerts
-- Replace on schedule, not when dead
-- Keep spare batteries on hand
-
----
-
-**Related automations:**
-- [Fire safety emergency response](/automation/security/fire-safety/)
-- [Away mode automation](/automation/daily-routines/away-mode/)
-- [Low battery alerts](/automation/notifications/low-battery-alerts.html)
+- [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
+- [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
+- [Safety and security automations](/automation/security/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/security/">← Back to Security Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/security/index.html">Back to safety and security automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

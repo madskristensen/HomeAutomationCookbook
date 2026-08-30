@@ -57,11 +57,11 @@ Automated response when smoke detector sounds - lights on, doors unlocked, irrig
 
 <div class="automation-card" markdown="1">
 
-### Water leak detection and response
+### Immediate water leak alert
 
-Detect leaks early and respond automatically with alerts, water shutoff, and damage prevention.
+Identify the wet sensor, alert the household immediately, and add automatic shutoff only after the valve and recovery procedure are tested.
 
-<span class="card-meta">**Best for:** Preventing water damage, protecting your home</span>
+<span class="card-meta">**Best for:** Water heaters, appliance hoses, sinks, and sump areas</span>
 
 <p><a href="/automation/security/water-leak-response.html" class="card-link">View Automation →</a></p>
 
@@ -231,6 +231,6 @@ Automatically close the garage if left open when nobody's home and get a photo c
 </div>
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/notifications/">Next: Notifications →</a>
+  <a href="/automation/index.html">Back to all automations</a>
+  <a href="/automation/notifications/index.html">Next: Notifications</a>
 </div>
