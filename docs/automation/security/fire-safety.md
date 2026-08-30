@@ -44,7 +44,7 @@ A variation of this is to listen for the sound of a window breaking at night or 
       <div class="product-details">
         Options:<br>
         • Native smart detector: Nest Protect, First Alert Onelink<br>
-        • Sound listener: Amazon Echo Guard feature, dedicated listeners<br>
+        • Listed alarm listener designed for the installed smoke alarms<br>
         • Wired relay: Attached to existing smoke detector wiring
       </div>
     </div>
@@ -91,11 +91,11 @@ A variation of this is to listen for the sound of a window breaking at night or 
   <ul>
     <li><strong>Wired relays:</strong> Attach to existing smoke detector wiring, acts like an open/closed sensor when alarm sounds</li>
     <li><strong>Sound listeners:</strong> Devices that pick up the specific sound pattern of smoke detectors and send signals to your smart home</li>
-    <li><strong>Amazon Echo Guard:</strong> Built into Echo devices, can detect smoke alarm sounds through its Guard feature</li>
+    <li><strong>Listed alarm listener:</strong> Use only a listener designed and approved for the installed alarm type</li>
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF smoke detector goes off
 THEN turn on all lights
@@ -128,184 +128,6 @@ AND send notifications</div>
       <li>Start the outdoor irrigation (if available)</li>
       <li>Send critical notifications to all family members</li>
       <li>Optional: Announce evacuation message on smart speakers</li>
-    </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Smoke detector state changes to "on" or "smoke"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">None (always run)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">All lights 100% + Unlock doors + Start irrigation + Critical notifications</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Optional:</strong> TTS announcement "Fire alarm activated, evacuate immediately"
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Smoke detector detects smoke</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Turn on all lights + Unlock doors + Start irrigation</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Use SHM (SmartThings Home Monitor) for enhanced integration
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Smoke sensor active</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">All lights on + Doors unlocked + Irrigation on + Push notifications</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine or HSM (Hubitat Safety Monitor)
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Smoke detected by HomeKit smoke sensor</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Turn on all lights + Unlock doors</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Limited irrigation control, notifications automatic
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Enable Guard feature in Alexa app</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Guard detects emergency</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on all lights, Smart Alerts sends notifications</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Smoke alarm activates (Nest Protect native)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on lights, send notifications</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Nest integrates with Works with Google devices
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-## Glass break detection setup
-
-A variation of fire safety is detecting window break sounds:
-
-<div class="automation-example">IF glass break detected
-AND time is nighttime OR home is in Away mode
-THEN turn on all lights
-AND send critical alert
-AND start recording cameras</div>
-
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Glass break sensor detects breaking glass</li>
-      <li>OR Sound listener detects glass break pattern</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <ul>
-      <li>Time is between 10 PM and 6 AM</li>
-      <li>OR Home is in Away mode</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on all interior and exterior lights</li>
-      <li>Send high-priority notification with location</li>
-      <li>Start camera recording</li>
-      <li>Optional: Sound audible alarm</li>
-      <li>Optional: Announce warning message</li>
     </ul>
   </div>
 </div>
@@ -484,7 +306,7 @@ Create lit paths to exits:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Away lights](/automation/security/away-lights/)
 - [Fake dog deterrent](/automation/security/fake-dog-deterrent/)
 - [Away mode](/automation/daily-routines/away-mode/)

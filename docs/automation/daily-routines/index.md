@@ -180,7 +180,7 @@ Keep physical controls and useful lighting normal, prevent false Away mode, and 
 
 ---
 
-## Troubleshooting
+## Failure modes
 
 <div class="troubleshooting-grid">
 

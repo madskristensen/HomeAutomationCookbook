@@ -100,7 +100,7 @@ Transform your backyard into party mode instantly with a single tap or voice com
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF "Pool party" voice command OR button press
 THEN set pool lights to color cycle
@@ -138,161 +138,6 @@ AND pause backyard motion notifications for 4 hours</div>
       <li>Pause motion notifications for outdoor cameras</li>
       <li>Announce "Pool party mode activated" on outdoor speaker</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Script called via button, voice, or Lovelace dashboard</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Optional time restriction (10 AM - 11 PM)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Activate pool_party scene, start media player, set timer</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Create a script that activates scene and sets an input_boolean for tracking party mode status
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Virtual switch "Pool Party" turns on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">Time between 10 AM and 11 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Activate party scene, play music, adjust devices</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Use virtual switch to enable voice activation via Alexa or Google
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Button press OR virtual switch activation</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time between 10 AM - 11 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Activate party mode group, control speakers via integration</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Groups and Scenes app for light coordination
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">"Pool Party" scene is activated</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time is between 10 AM and 11 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Set all pool area accessories to party settings</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Say "Hey Siri, pool party" to activate scene
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Voice command "Alexa, pool party"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Between 10 AM and 11 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Activate party scene, play music on speaker group</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">"Hey Google, start pool party"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time between 10 AM - 11 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Activate outdoor scene, play party playlist</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Create a custom routine for the voice command
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -417,7 +262,7 @@ AND pause backyard motion notifications for 4 hours</div>
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Welcome home music](/automation/entertainment/welcome-home-music/)
 - [TV dims lights](/automation/entertainment/tv-dim-lights/)
 - [Speaker volume presets](/automation/entertainment/speaker-volume-presets/)

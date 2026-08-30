@@ -49,7 +49,7 @@ Never worry about leaving your garage door open again. This automation automatic
     <div class="product-item">
       <strong>Presence detection</strong>
       <div class="product-details">
-        Options: Phone GPS/geofencing, smart home presence sensors, Life360<br>
+        Options: Phone location, shared house mode, and recent indoor activity<br>
         Must accurately detect when all family members have left
       </div>
     </div>
@@ -87,7 +87,7 @@ Never worry about leaving your garage door open again. This automation automatic
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF garage door is open
 AND nobody is home (all phones away)
@@ -126,161 +126,6 @@ THEN send notification with photo "Garage closed"</div>
       <li>Take snapshot from garage camera</li>
       <li>Send confirmation notification with photo</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Zone.home person count = 0 for 5 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">cover.garage_door is open AND no motion for 2 min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Notify, delay, close cover, snapshot, notify with image</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Use actionable notification with "Cancel" button during warning delay
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Everyone leaves (location mode: Away)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">Garage door is open</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Notify, wait 2 min, close garage, send confirmation</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Use Smart Home Monitor for additional security integration
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Mode changes to Away</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Garage door is open</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send notification, delay 2 min, close door</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine for complex logic with delays
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Last person leaves home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Garage door is open</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Close garage door, send notification</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Use Shortcuts app for delays and photo capture
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Location: Everyone leaves</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Garage door sensor reports open</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Wait 2 min, close garage, send notification</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">Everyone leaves home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Garage door is open (if supported)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Close garage via connected controller</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> May need Home Assistant or IFTTT for full automation
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -425,7 +270,7 @@ THEN send notification with photo "Garage closed"</div>
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Garage door notification](/automation/security/garage-door-notification/)
 - [Away mode](/automation/daily-routines/away-mode/)
 - [Doorbell notification](/automation/notifications/doorbell-notification/)

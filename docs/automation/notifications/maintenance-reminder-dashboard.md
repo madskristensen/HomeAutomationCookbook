@@ -49,8 +49,7 @@ Keep track of all household maintenance with a wall-mounted tablet that shows da
     <div class="product-item">
       <strong>Dashboard software</strong>
       <div class="product-details">
-        Home Assistant dashboard, Fully Kiosk Browser, ActionTiles, SharpTools<br>
-        Displays maintenance counters and status
+        Any dashboard that can display shared maintenance counters and status
       </div>
     </div>
   </div>
@@ -63,8 +62,7 @@ Keep track of all household maintenance with a wall-mounted tablet that shows da
     <div class="product-item">
       <strong>Shopping list integration</strong>
       <div class="product-details">
-        Todoist, AnyList, OurGroceries, Apple Reminders, Alexa Shopping List<br>
-        For one-tap adding items when maintenance is due
+        Any shared list the household already uses, with one-tap entry when maintenance is due
       </div>
     </div>
     
@@ -89,7 +87,7 @@ Keep track of all household maintenance with a wall-mounted tablet that shows da
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">DASHBOARD DISPLAY:
 - Show card for each maintenance item
@@ -141,146 +139,6 @@ AND optionally reset counter when marked complete</div>
       <li>Weekly summary of upcoming maintenance</li>
       <li>Confirmation when item added to shopping list</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Counters</span>
-        <span class="step-content">Use input_datetime for last replaced date per item</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Templates</span>
-        <span class="step-content">Calculate days remaining with template sensor</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Dashboard</span>
-        <span class="step-content">Lovelace cards with gauge/progress display</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Use button card with tap_action to call shopping list service
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Use virtual switches for each maintenance item</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Dashboard</span>
-        <span class="step-content">SharpTools or ActionTiles for display</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Link to IFTTT or Alexa for shopping list</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Tracking</span>
-        <span class="step-content">Use Hub Variables for dates and intervals</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Dashboard</span>
-        <span class="step-content">Hubitat Dashboard or SharpTools</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Rules</span>
-        <span class="step-content">Rule Machine for notifications and actions</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Reminders</span>
-        <span class="step-content">Use Apple Reminders with recurring dates</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Display</span>
-        <span class="step-content">iPad with Reminders widget or Home app</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Shopping</span>
-        <span class="step-content">Link to Apple Reminders shopping list</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Use Shortcuts for more advanced automation
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Reminders</span>
-        <span class="step-content">Alexa recurring reminders for each item</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Display</span>
-        <span class="step-content">Echo Show or Fire Tablet with reminder display</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Shopping</span>
-        <span class="step-content">"Add HVAC filter to shopping list"</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Reminders</span>
-        <span class="step-content">Google Calendar events for maintenance</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Display</span>
-        <span class="step-content">Nest Hub or Android tablet with calendar</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Shopping</span>
-        <span class="step-content">"Add to shopping list" via Google Assistant</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -469,7 +327,7 @@ AND optionally reset counter when marked complete</div>
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Status tiles](/automation/notifications/status-tiles/)
 - [Low battery alerts](/automation/notifications/low-battery-alerts/)
 - [Garbage day reminder](/automation/notifications/garbage-day-reminder/)

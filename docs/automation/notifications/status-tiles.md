@@ -47,7 +47,7 @@ It's easy to ignore or forget notifications sent to your phone. Also, they don't
     <div class="product-item">
       <strong>Dashboard Software</strong>
       <div class="product-details">
-        SharpTools, Home Assistant Lovelace, Hubitat Dashboard, or ActionTiles
+        Any dashboard that can display and change shared virtual states
       </div>
     </div>
     
@@ -60,7 +60,7 @@ It's easy to ignore or forget notifications sent to your phone. Also, they don't
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 Any automation where you send a notification, consider using a dashboard tile instead. You can do that by using either a virtual switch or variable.
 
@@ -124,101 +124,6 @@ THEN set "Washer Done" switch OFF
 - Reminder to tidy up before it starts
 - Countdown to scheduled run
 
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create input_boolean for each status</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Automation</span>
-        <span class="step-content">Toggle based on events</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Dashboard</span>
-        <span class="step-content">Conditional cards in Lovelace with card-mod colors</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switches for each status</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Routines</span>
-        <span class="step-content">Toggle on events</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Display</span>
-        <span class="step-content">SharpTools with color rules</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switches</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Logic</span>
-        <span class="step-content">Rule Machine for complex logic</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Dashboard</span>
-        <span class="step-content">Hubitat Dashboard with state-based colors</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <h4>SharpTools</h4>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Link virtual switches from hub</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Tiles</span>
-        <span class="step-content">Hero tiles for visibility</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Config</span>
-        <span class="step-content">Active/Inactive colors, group related tiles</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-## Why tiles beat notifications
-
-| Notifications | Dashboard Tiles |
-|---------------|-----------------|
-| Can be dismissed and forgotten | Persistent until addressed |
-| Individual to one person | Visible to whole household |
-| Interrupt what you're doing | Glanceable at your convenience |
-| No ongoing reminder | Always visible status |
-| Easy to miss | Hard to miss in high-traffic area |
-
 ## Advanced features
 
 ### Priority-based colors
@@ -246,7 +151,7 @@ Some status tiles should reset automatically:
 - **Event-based:** Reset when related event occurs (door opens, motion detected)
 - **Manual:** Require tap to reset (for important items)
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Tile not updating
 
@@ -274,7 +179,7 @@ Some status tiles should reset automatically:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Garbage day reminder](/automation/notifications/garbage-day-reminder.html)
 - [Music controls](/automation/notifications/music-controls.html)
 - [Washer done notification](/automation/appliances/washer-done-notification.html)

@@ -73,7 +73,7 @@ Using a voice assistant to request the same radio station every day can be annoy
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF smart switch pressed
 THEN toggle music playback on speaker
@@ -105,132 +105,6 @@ AND adjust volume to preset level</div>
       <li>Optional: Set volume to preset level</li>
       <li>Optional: Adjust lights for ambiance</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Kitchen button pressed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set speaker volume 40%, Play playlist</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Option:</strong> Toggle play/pause for simple control
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Button pressed (or switch on)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Play music, Set volume to 40%</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Toggle:</strong> IF playing → Pause, ELSE → Play
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Button pressed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set volume 40%, Play playlist</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Button Controllers or Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Button is pressed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Play music on HomePod, Set volume 40%</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Best with Apple Music and HomePods
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Smart Home button pressed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Play music on Echo, Set volume to level 4</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">Button pressed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Play music, Set volume to 40%</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -293,7 +167,7 @@ Create automation with these elements:
 - **Trigger:** NFC tag "workshop_music_tag" scanned
 - **Action:** Play workshop rock playlist on garage speaker
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Button press doesn't start music
 
@@ -346,7 +220,7 @@ Clear any current playback before starting new music:
 
 **Solutions:**
 ✅ Move button closer to hub or add Zigbee router/repeater
-✅ Use local automation (Home Assistant, Hubitat) vs cloud (SmartThings cloud)
+✅ Keep the button rule local when your hub and speaker integration support it
 ✅ Check hub CPU usage - restart if high
 ✅ Simplify automation - remove unnecessary conditions
 ✅ Test with different button placement
@@ -354,7 +228,7 @@ Clear any current playback before starting new music:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Play music when shower starts](/automation/entertainment/shower-music/)
 - [Welcome home music automation](/automation/entertainment/welcome-home-music/)
 - [Speaker volume presets](/automation/entertainment/speaker-volume-presets/)

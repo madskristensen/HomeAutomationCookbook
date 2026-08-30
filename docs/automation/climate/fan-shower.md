@@ -74,7 +74,7 @@ Remembering to turn on the ceiling fan when taking a shower early in the morning
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF shower lights turn on
 THEN turn on bathroom fan</div>
@@ -100,142 +100,6 @@ THEN turn on bathroom fan</div>
       <li>Optional: Set fan to specific speed if multi-speed fan</li>
       <li>Optional: Send notification "Bathroom fan activated"</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Shower lights turn on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time is between 5 AM and 11 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on bathroom fan switch</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Alt trigger:</strong> Humidity rises above 75%
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Shower lights turn on AND Time is 5 AM - 11 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Turn on bathroom fan switch</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Shower light turns on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time 5 AM - 11 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on bathroom fan</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Simple Automation Rules or Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Shower light turns on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time is between 5:00 AM and 11:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Turn on bathroom fan</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Shower light turns on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time between 5:00 AM - 11:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on bathroom fan</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Shower light turns on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time between 5:00 AM - 11:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on bathroom fan</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -336,7 +200,7 @@ THEN turn on bathroom fan</div>
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Play music when shower starts](/automation/entertainment/shower-music/)
 - [Morning routine automation](/automation/daily-routines/morning-routine/)
 - [Maintain room temperature with smart heater](/automation/climate/room-heater-maintain-temp/)

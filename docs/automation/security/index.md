@@ -182,7 +182,7 @@ Automatically close the garage if left open when nobody's home and get a photo c
 
 ---
 
-## Troubleshooting
+## Failure modes
 
 <div class="troubleshooting-grid">
 

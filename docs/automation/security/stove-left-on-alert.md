@@ -103,7 +103,7 @@ Forgetting to turn off the stove or oven is a common kitchen hazard that can lea
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF stove/oven power draw > 100W for 30 minutes
 AND no motion in kitchen for 15 minutes
@@ -144,148 +144,6 @@ THEN send notification "Stove may be left on unattended"</div>
       <li>Send high-priority notification: "WARNING: Stove is still on and nobody is home!"</li>
       <li>Optional: Turn off smart plug if electric stove</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Power sensor > 100W for 60 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Kitchen motion inactive 15+ minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">notify.mobile_app + tts.speak on kitchen speaker</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Create separate critical automation for "away + stove on"
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Power meter > 100W for 60 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">No motion in kitchen for 15 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Send push notification</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Power meter reports > 100W for 60 min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Kitchen motion inactive</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send push notification</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine with power trigger capabilities
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited power monitoring support natively</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Eve Energy plug with Eve app automations</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Alternative:</strong> Use temperature sensor as trigger
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">No native power level triggers</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use with smart plug that has own app + IFTTT</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Announce on Echo devices</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited power monitoring automation</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home Assistant or third-party integration</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Can announce on Nest speakers via integration
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -461,7 +319,7 @@ THEN send notification "Stove may be left on unattended"</div>
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Fire safety response](/automation/security/fire-safety.html)
 - [Away mode automation](/automation/daily-routines/away-mode.html)
 - [Bedtime routine](/automation/daily-routines/bedtime-routine.html)

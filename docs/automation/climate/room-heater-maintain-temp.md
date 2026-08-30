@@ -81,7 +81,7 @@ In colder rooms, add supplemental heating to maintain comfortable temperature au
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF room temperature < 68°F
 THEN turn on space heater
@@ -112,146 +112,6 @@ THEN turn off space heater</div>
     <strong>Trigger:</strong> Room temperature rises above 70°F (21°C)<br>
     <strong>Conditions:</strong> None (always turn off when warm enough)<br>
     <strong>Action:</strong> Turn off smart plug with room heater
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Bedroom temp below 68°F for 5 min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Window closed AND time 6 PM - 8 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on heater smart plug</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Create second rule: Temp above 70°F for 2 min → Turn off
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Bedroom temp sensor below 68°F</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">Window closed AND Time 6 PM - 8 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Turn on bedroom heater plug</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Temp sensor below 68°F for 5 min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Window closed AND time 6 PM - 8 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on heater plug</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Thermostat Controller or Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Bedroom temperature falls below 68°F</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Window closed, Time 6 PM - 8 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Turn on heater smart plug</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Temperature sensor below 68°F</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Window closed, Time 6 PM - 8 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on heater smart plug</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">Temperature sensor below 68°F</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Window closed, Time 6 PM - 8 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on heater smart plug</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -343,7 +203,7 @@ Always implement maximum runtime shutoff (shown in examples above).
 **Away Mode:**
 Turn off all heaters when house is in Away mode.
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Room never reaches target temperature
 
@@ -402,7 +262,7 @@ Modify trigger with:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
 - [Turn on bathroom fan when starting shower](/automation/climate/fan-shower/)
 - [Bedtime routine automation](/automation/daily-routines/bedtime-routine/)

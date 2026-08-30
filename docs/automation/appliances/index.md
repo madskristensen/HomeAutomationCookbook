@@ -190,7 +190,7 @@ Start your vacuum only when the house is truly empty and finish before anyone re
 
 ---
 
-## Troubleshooting
+## Failure modes
 
 <div class="troubleshooting-grid">
 

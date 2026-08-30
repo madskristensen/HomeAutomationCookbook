@@ -1,23 +1,15 @@
 ---
 layout: default
-title: Automation Recipes
-description: Dozens of tested smart home automation recipes that work with Home Assistant, HomeKit, SmartThings, Hubitat, Google Home, and Alexa.
+title: Automation recipes
+description: Practical, platform-neutral home automation recipes built around plain-English logic, normal physical controls, and household failure modes.
 ---
 
 # Automation recipes
 
-This is the main section with dozens of practical automation recipes for your smart home. These automations have been tested and refined over years to be as accurate and easy to set up as possible.
+These recipes start with the household job and explain the logic without tying it to one platform. Verify that your hub and devices support the required triggers, conditions, and actions before building a recipe.
 
 <div class="platform-compatibility">
-  <p><strong>Platform agnostic:</strong> All recipes work with</p>
-  <div class="platform-logos">
-    <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo" title="Home Assistant" class="platform-logo">
-    <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo" title="Hubitat" class="platform-logo">
-    <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo" title="Apple HomeKit" class="platform-logo">
-    <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo" title="SmartThings" class="platform-logo">
-    <img src="/assets/img/logos/google.png" alt="Google Home logo" title="Google Home" class="platform-logo">
-    <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo" title="Amazon Alexa" class="platform-logo">
-  </div>
+  <p><strong>Platform-neutral:</strong> Build the plain-English rule with capabilities you have personally verified on your own platform.</p>
 </div>
 
 ## Categories

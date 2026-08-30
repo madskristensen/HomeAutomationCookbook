@@ -60,7 +60,7 @@ If you don't want a smart doorbell, but still want a notification when someone r
   <p><strong>Video Tutorial:</strong> This one is best explained if you watch a video on how to do it. There are several available online. Here is one that I like: <a href="https://www.youtube.com/watch?v=2IsiWG-BOTs" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=2IsiWG-BOTs</a></p>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF contact sensor changes state (open or closed)
 THEN send notification to phone
@@ -99,132 +99,6 @@ THEN send notification to phone
       <li>Optional: Flash lights</li>
       <li>Optional: Play chime on smart speaker</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">binary_sensor.doorbell_sensor changes to "on"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">notify.mobile_app with "Someone at the door"</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Optional:</strong> Add media_player.play_media for chime sound
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Contact opens</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Send push notification</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Optional:</strong> Add smart speaker chime action
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Contact sensor opens/closes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send push notification via Hubitat app</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine or Notification rule
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Sensor opens</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Send notification</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> May need Home app or third-party for notifications
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Sensor detects</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send notification, announce on Echo devices</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Sensor trigger via compatible integration</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send notification or announce</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -297,7 +171,7 @@ For hearing impaired household members:
 - Pop up notification on tablets
 - Dashboard tile activation
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Sensor doesn't trigger when doorbell pressed
 
@@ -393,7 +267,7 @@ For hearing impaired household members:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Motion detection lights](/automation/lighting/lights-on-motion/)
 - [Away mode](/automation/daily-routines/away-mode/)
 - [Dashboards](/automation/notifications/dashboards/)

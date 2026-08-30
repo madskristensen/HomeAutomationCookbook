@@ -87,7 +87,7 @@ Indoor air quality fluctuates throughout the day from cooking, outdoor pollution
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF air quality poor (AQI > 100)
 THEN turn on air purifier to high
@@ -117,126 +117,6 @@ AND send notification "Poor air quality detected"</div>
       <li>Optional: Close smart windows/vents</li>
       <li>Optional: Send notification with current air quality reading</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Air quality sensor drops below 35 AQI</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on air purifier at 100%, send notification</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Alternative:</strong> Use PM2.5 sensor above 50 μg/m³
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Air quality sensor reports AQI below 35</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Turn on air purifier smart plug, send notification</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">AQI sensor drops below 35</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on air purifier at high, send notification</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine with air quality device
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Air quality sensor detects poor air quality</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">AQI below threshold (if supported)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Turn on air purifier</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Air quality sensor value below 35 AQI</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on air purifier, send notification</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">Air quality sensor detects poor quality</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on air purifier, announce status</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -302,7 +182,7 @@ If you don't have an air purifier:
 - Seal windows/doors
 - Consider evacuation if outdoor air (wildfire)
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Purifier doesn't turn on
 
@@ -360,7 +240,7 @@ If you don't have an air purifier:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Smart window open/close notifications](/automation/climate/window-notifications/)
 - [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
 - [Away mode automation](/automation/daily-routines/away-mode/)

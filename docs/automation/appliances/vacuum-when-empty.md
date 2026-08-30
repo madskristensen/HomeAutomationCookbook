@@ -49,7 +49,7 @@ Make your robot vacuum truly smart by only running when the house is completely 
     <div class="product-item">
       <strong>Presence detection</strong>
       <div class="product-details">
-        Options: Phone GPS/geofencing, Life360, smart home presence<br>
+        Options: Phone location, shared house mode, and recent indoor activity<br>
         Must track all household members accurately
       </div>
     </div>
@@ -86,7 +86,7 @@ Make your robot vacuum truly smart by only running when the house is completely 
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF last person leaves home
 AND time is after 9:00 AM (everyone should be gone for work)
@@ -135,161 +135,6 @@ THEN send vacuum to dock immediately</div>
       <li>If running, send vacuum to dock immediately</li>
       <li>Notify: "Vacuum returning to dock - you're home early"</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Zone.home person count changes to 0</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time after 9 AM, weekday, vacuum not run today</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Delay 10 min, verify empty, vacuum.start</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Use input_boolean.vacuum_ran_today to track daily runs
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Everyone leaves (location mode Away)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">Time between 9 AM - 5 PM on weekdays</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Wait 10 min, start robot vacuum</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Use iRobot or Roborock SmartThings integration
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Mode changes to Away</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time after 9 AM, day is weekday</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Wait 10 min, start vacuum via integration</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use community Roomba or Roborock driver
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Last person leaves home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time is after 9:00 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Start vacuum via Homebridge/HomePod shortcut</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> May need Homebridge plugin for vacuum integration
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Location: Everyone leaves</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time between 9 AM - 5 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Wait 10 min, start iRobot Roomba</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">Everyone leaves home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Weekday, after 9 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Start vacuum via Google Home integration</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Vacuum must have Google Home integration
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -432,7 +277,7 @@ THEN send vacuum to dock immediately</div>
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Robot vacuum auto start](/automation/appliances/robot-vacuum-auto-start/)
 - [Away mode](/automation/daily-routines/away-mode/)
 - [Morning routine](/automation/daily-routines/morning-routine/)

@@ -161,20 +161,12 @@ Wall-mounted tablets provide persistent visibility for your smart home status.
 
 ### Dashboard software
 
-**SharpTools:**
-- Works with SmartThings, Hubitat, Home Assistant
-- Web-based builder
-- Cross-platform access
+Choose a dashboard that works with your hub and remains understandable to the household. It should:
 
-**Home Assistant Lovelace:**
-- Native dashboards
-- Highly customizable
-- Local control
-
-**Hubitat Dashboard:**
-- Built-in option
-- Local network access
-- Simple setup
+- Show current state without requiring several taps.
+- Provide large, clear controls for tasks that need acknowledgment.
+- Remain useful on the local network when possible.
+- Avoid exposing locks, alarms, or other sensitive controls without appropriate access.
 
 ---
 

@@ -168,7 +168,7 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 
 ---
 
-## Troubleshooting
+## Failure modes
 
 <div class="troubleshooting-grid">
 

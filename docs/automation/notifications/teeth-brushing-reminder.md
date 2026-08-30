@@ -66,7 +66,7 @@ Instead of chasing the kids before bedtime to make sure they brush their teeth, 
   <p>The electric toothbrush charger is plugged into the smart plug. When the child brushes their teeth and returns the toothbrush to its charging base, the power consumption increases as the charger begins recharging the depleted battery. The smart plug detects this power spike (typically from near-zero to 2-5 watts), which tells your automation that the toothbrush was just used.</p>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF time is between 8:00 - 10:00 PM
 AND toothbrush NOT used in last 2 hours
@@ -118,148 +118,6 @@ THEN announce "It's time to brush your teeth, kids!"</div>
       <li>Turn OFF "Teeth Brushed Today" switch</li>
       <li>Reset tracking variable</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create input_boolean: "teeth_brushed_evening"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Detection</span>
-        <span class="step-content">Power > 2W between 6 PM-10 PM → Turn on helper</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Reminder</span>
-        <span class="step-content">At 8:30 PM if helper off → TTS announcement</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Reset:</strong> At 6 PM → Reset helper to off
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switch "Teeth Brushed"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Detection</span>
-        <span class="step-content">Power > 2W between 6-10 PM → Switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Reminder</span>
-        <span class="step-content">8:30 PM + Switch off → Speaker announcement</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Reset:</strong> 6 PM → Switch off
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switch for tracking</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Detection</span>
-        <span class="step-content">Power trigger with time window</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Reminder</span>
-        <span class="step-content">Scheduled if switch not set, daily reset</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switch via Homebridge</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Automation</span>
-        <span class="step-content">Power rises → Switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Reminder</span>
-        <span class="step-content">Time-based reminder if switch off</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Detection</span>
-        <span class="step-content">Power > 2W → Switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Reminder</span>
-        <span class="step-content">8:30 PM + Switch off → Alexa says reminder</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Virtual switch via SmartThings
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited native power monitoring</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home Assistant or Hubitat for logic</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -333,7 +191,7 @@ Tie brushing to privileges:
 2. 9 PM → Disable entertainment plug
 3. Next day → Repeat
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Charger always draws power
 
@@ -432,7 +290,7 @@ Tie brushing to privileges:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Baby sleep mode](/automation/notifications/baby-sleep-mode/)
 - [Morning routine](/automation/daily-routines/morning-routine/)
 - [Bedtime routine](/automation/daily-routines/bedtime-routine/)

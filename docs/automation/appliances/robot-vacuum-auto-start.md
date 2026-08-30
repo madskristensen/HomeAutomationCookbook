@@ -46,7 +46,7 @@ Robot vacuums are great, but even better when they clean while you're away. Auto
     <div class="product-item">
       <strong>Presence Detection</strong>
       <div class="product-details">
-        Phone app location services, GPS-based (Home Assistant, SmartThings, Life360)<br>
+        A household presence source you have tested for every regular occupant<br>
         OR door lock status + motion sensors
       </div>
     </div>
@@ -73,7 +73,7 @@ Robot vacuums are great, but even better when they clean while you're away. Auto
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF everyone leaves home
 AND time between 9:00 AM - 5:00 PM
@@ -101,146 +101,6 @@ THEN start robot vacuum</div>
       <li>Start robot vacuum cleaning cycle</li>
       <li>OR trigger vacuum's existing schedule</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Home mode 'Away' for 15 min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time 9am-6pm, weekdays, vacuum docked</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Start robot vacuum cleaning cycle</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Stop:</strong> When home → Send vacuum to dock
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Home mode "Away" for 15 minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">Time 9 AM - 6 PM, Mon-Fri</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Start robot vacuum</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Mode changes to "Away" for 15 min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time 9am-6pm, weekdays</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Start vacuum cleaning cycle</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Mode Manager with vacuum integration
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Last person leaves home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time 9 AM - 6 PM, Weekdays</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Start vacuum (if HomeKit supported)</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Last person leaves (location)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time 9 AM - 6 PM, Weekdays</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Start vacuum</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">Last person leaves home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time 9 AM - 6 PM, weekdays</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Start robot vacuum</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -301,7 +161,7 @@ Create automation with these elements:
 - **Condition:** Vacuum is currently cleaning
 - **Action:** Send vacuum to dock (return to base)
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Vacuum starts when someone is still home
 
@@ -316,7 +176,7 @@ Create automation with these elements:
 ✅ Use "all persons away" not "any person away"
 ✅ Combine presence with door lock status
 ✅ Add motion sensor check - no motion for 15+ minutes
-✅ Use more reliable presence detection (Life360, multiple methods)
+✅ Combine more than one tested presence signal
 
 Add multiple detection methods to conditions:
 - All persons away for 15+ minutes
@@ -360,7 +220,7 @@ Add diagnostics to automation:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Away mode automation](/automation/daily-routines/away-mode/)
 - [Morning routine automation](/automation/daily-routines/morning-routine/)
 - [Washer done notification](/automation/appliances/washer-done-notification/)

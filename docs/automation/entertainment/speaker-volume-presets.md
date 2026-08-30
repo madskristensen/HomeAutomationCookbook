@@ -65,7 +65,7 @@ Volume presets for all speakers save time and create consistency. Define levels 
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF volume preset changes to "Low"
 THEN set all speakers to 20-30%
@@ -108,153 +108,6 @@ THEN set all speakers to 70-80%</div>
   </div>
 </div>
 
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create dropdown helper with Low/Medium/Loud options</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Input select state changes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set speaker volumes based on selection</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Reset:</strong> Auto-reset to Low at 4 AM daily
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create scene for each volume preset</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Presets</span>
-        <span class="step-content">Low: Echos 30%, Medium: Echos 50%, Party: Echos 60%</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create scenes: Low, Medium, Loud</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Button, time, or mode change</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Use:</strong> Groups and Scenes or Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Scene: Low Volume (HomePods 30%)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Activate</span>
-        <span class="step-content">"Hey Siri, set low volume"</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Routine: Low Volume (all Echos level 3)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Activate</span>
-        <span class="step-content">"Alexa, low volume"</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Routine: Party Volume - speakers 80%, Home 60%</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Activate</span>
-        <span class="step-content">"Hey Google, party volume"</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-## Room-specific presets
-
-Different rooms may need different levels:
-
-### Kitchen
-- Low: 30% (morning coffee)
-- Medium: 50% (cooking)
-- Loud: 70% (party prep)
-
-### Bedroom
-- Low: 15% (sleep sounds)
-- Medium: 30% (getting ready)
-- Loud: 50% (never too loud)
-
-### Living Room
-- Low: 25% (background)
-- Medium: 45% (normal use)
-- Loud: 80% (party time)
-
-**Implementation:**
-
-Create automation with room-specific volume levels:
-- **Trigger:** Volume preset changes
-- **Low preset:** Kitchen 30%, Bedroom 15%, Living room 25%
-- **Medium preset:** Kitchen 50%, Bedroom 30%, Living room 45%
-- **Loud preset:** Kitchen 70%, Bedroom 50%, Living room 80%
-
 ## Advanced features
 
 ### Time-based auto-adjustment
@@ -289,7 +142,7 @@ Different presets for different activities:
 - Movie (low volume, living room only)
 - Sleep (minimal, bedroom only)
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Volumes change unexpectedly
 
@@ -338,7 +191,7 @@ Different presets for different activities:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Play music when shower starts](/automation/entertainment/shower-music/)
 - [Welcome home music automation](/automation/entertainment/welcome-home-music/)
 - [Control music with physical switch](/automation/entertainment/music-switch-control/)

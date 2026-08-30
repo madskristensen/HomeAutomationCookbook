@@ -86,7 +86,7 @@ Wake up to freshly brewed coffee automatically. Start your day right with coffee
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF time is 7:00 AM on weekdays
 AND coffee maker plug is OFF (loaded and ready)
@@ -139,167 +139,15 @@ AND send notification "Coffee brewing ☕"</div>
   </ul>
 </div>
 
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Time is 7:00 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Weekdays, Plug is OFF (ready)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on coffee maker plug</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Safety:</strong> Auto-shutoff after 30 minutes
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Time is 7:00 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">Day is Mon-Fri, Plug is OFF</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Turn on coffee maker plug</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Safety:</strong> Create routine to turn off after 30 min
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Time is 7:00 AM, Weekdays</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Plug is OFF</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on plug, Auto-shutoff after 30 min</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Simple Automation Rules or Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Time is 7:00 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Weekdays only</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Turn on coffee maker plug</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Safety:</strong> Create separate auto-shutoff after 30 min
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Schedule 7:00 AM weekdays</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on coffee maker plug</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Safety:</strong> Turn off after 30 minutes
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">Time 7:00 AM on weekdays</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on coffee maker plug</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Add separate safety shutoff routine
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 ## Advanced features
 
 ### Voice-activated coffee
 
 Make coffee on demand:
 
-Create automation triggered by voice command (e.g., Alexa actionable notification) that turns on coffee maker plug if it's currently off (loaded and ready).
+Create an optional voice routine that turns on the coffee maker plug only when the ready state is set.
 
-Say: "Alexa, start coffee"
+Use a clear phrase such as "start coffee."
 
 ### Pre-warm before arrival
 
@@ -326,7 +174,7 @@ Create automation that runs at wake-up time:
 
 Start coffee when alarm dismissed:
 
-If using phone alarm with Home Assistant, trigger coffee maker when mobile app sends alarm dismissed event.
+If your phone exposes an alarm-dismissed event to the hub, use that event as the trigger.
 
 ### Presence + time
 
@@ -342,7 +190,7 @@ Skip on very hot days:
 
 Add condition: Only brew if outdoor temperature is below 75°F (don't brew hot coffee when already hot outside)
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Coffee maker doesn't start
 
@@ -421,7 +269,7 @@ Create emergency shutoff automation:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Morning routine automation](/automation/daily-routines/morning-routine/)
 - [Play music when shower starts](/automation/entertainment/shower-music/)
 - [Turn on bathroom fan when starting shower](/automation/climate/fan-shower/)

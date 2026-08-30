@@ -47,7 +47,7 @@ Coming home to a house with lights on and music playing feels welcoming. It's th
       <strong>Presence Detection</strong>
       <div class="product-details">
         Phone app/GPS location services, Smart lock unlock detection, OR Garage door sensor<br>
-        Platforms: Home Assistant, SmartThings, Life360
+        A household presence source tested with every regular occupant
       </div>
     </div>
   </div>
@@ -73,7 +73,7 @@ Coming home to a house with lights on and music playing feels welcoming. It's th
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF person arrives home
 AND time between 5:00 PM - 9:00 PM
@@ -105,141 +105,6 @@ AND set volume to 35%</div>
       <li>Optionally announce "Welcome home"</li>
       <li>Optional: Turn on lights, unlock door</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Home mode changes from 'Away' to 'Home'</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time is after 4 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Activate welcome scene, Set volume 35%, Play playlist</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Home mode changes to "Home"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">Time is after 4:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Turn on welcome scene, Play music, Set volume 35%</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Mode changes to "Home"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time is after 4 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set volume 35%, Play welcome playlist</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Mode Manager for presence detection
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">First person arrives home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time is after 4:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Welcome scene, Play music, Set volume 35%</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">You arrive home (location-based)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time after 4:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on lights, Play music, Alexa says "Welcome home"</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">When you get home (location)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time after 4:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Activate welcome scene, Play music, Adjust volume</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -284,7 +149,7 @@ Combine with greeting:
 - Wait 3 seconds for greeting to finish
 - Then: Start playing music playlist
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Music plays every time door opens
 
@@ -339,7 +204,7 @@ Use template logic to set volume based on hour:
 ✅ Set arrival zone radius appropriately (100-200m)
 ✅ Combine with garage door sensor or door unlock
 ✅ Disable battery optimization for home automation app
-✅ Use Life360 or similar reliable presence app
+✅ Combine more than one tested presence signal
 ✅ Add short delay (2-3 minutes) to allow all sensors to update
 
 **Multi-method example:**
@@ -352,7 +217,7 @@ This ensures music plays even if one detection method fails.
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Play music when shower starts](/automation/entertainment/shower-music/)
 - [Control music with physical switch](/automation/entertainment/music-switch-control/)
 - [Morning routine automation](/automation/daily-routines/morning-routine/)

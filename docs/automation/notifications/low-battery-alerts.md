@@ -40,8 +40,7 @@ Smart home devices with dead batteries can't do their jobs. Motion sensors stop 
     <div class="product-item">
       <strong>Smart home platform that reports battery levels</strong>
       <div class="product-details">
-        Most platforms: Home Assistant, SmartThings, Hubitat, HomeKit<br>
-        Devices must report battery percentage or low battery status
+        The hub must receive a battery percentage or low-battery state from each monitored device
       </div>
     </div>
   </div>
@@ -85,7 +84,7 @@ Smart home devices with dead batteries can't do their jobs. Motion sensors stop 
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF any device battery drops below 20%
 THEN send notification with device name and battery level
@@ -118,188 +117,6 @@ AND add to low battery list on dashboard</div>
     </ul>
   </div>
 </div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create sensor group for all battery entities</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Any battery drops below 20%</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send notification with device name and level</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Optional:</strong> Create Lovelace card showing all batteries
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Device battery is less than 20%</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Send notification to phone</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Set up for each critical device
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Use Device Watchdog app or Rule Machine</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Config</span>
-        <span class="step-content">Battery threshold (20%), notification method</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Benefit:</strong> Device Watchdog provides dashboard view
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited native support</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home+ app for advanced automations</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Consider Home Assistant bridge for full monitoring
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Check</span>
-        <span class="step-content">Device health in Alexa app</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited automation for battery alerts</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Workaround:</strong> Use third-party integration
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Check</span>
-        <span class="step-content">Battery status in device settings</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited native battery automations</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Workaround:</strong> Use Home Assistant for comprehensive monitoring
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-## Monitoring approaches
-
-### Individual device automations
-
-Create one automation per device:
-
-**Pros:**
-- Simple to set up
-- Custom thresholds per device
-- Specific messaging
-
-**Cons:**
-- Many automations to manage
-- Easy to miss new devices
-- Harder to maintain
-
-**Best for:** Small setups (< 10 devices)
-
-### Group/template-based monitoring
-
-One automation monitors all devices:
-
-**Pros:**
-- Single automation to maintain
-- Automatically includes new devices
-- Easier to manage
-
-**Cons:**
-- Same threshold for all devices
-- More complex setup initially
-
-**Best for:** Larger setups (10+ devices)
-
-### Daily battery report
-
-Scheduled check of all batteries:
-
-- **Trigger:** Daily at 9:00 AM
-- **Action:** Check all battery levels
-- **Report:** List any devices below threshold
-- **Benefit:** One notification instead of many
 
 ## Advanced features
 
@@ -398,7 +215,7 @@ Prevent repeated alerts:
 - Unless level drops to next tier
 - Reset cooldown when battery replaced
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Battery shows 100% then suddenly 0%
 
@@ -494,7 +311,7 @@ Prevent repeated alerts:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Water leak detection](/automation/security/water-leak-response.html)
 - [Away mode automation](/automation/daily-routines/away-mode/)
 - [Bedtime routine](/automation/daily-routines/bedtime-routine/)

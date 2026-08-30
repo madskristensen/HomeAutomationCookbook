@@ -47,7 +47,7 @@ See [recommended gear](/gear.html) for the job-first checklist. Product links on
 <div class="automation-example">IF the closet door opens AND the closet is dark
 THEN turn on the closet light</div>
 
-## Basic automation setup
+## Setup notes
 
 <div class="setup-steps">
   <div class="setup-step">

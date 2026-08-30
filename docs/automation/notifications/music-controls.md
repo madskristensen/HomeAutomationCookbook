@@ -2,7 +2,7 @@
 layout: automation
 title: Music Controls on Dashboard - Smart Home Automation
 description: Control music from your dashboard with favorite stations, volume presets, and now playing display. No more yelling at voice assistants.
-keywords: music dashboard, smart home music, dashboard controls, volume presets, music tiles, SharpTools music
+keywords: music dashboard, smart home music, dashboard controls, volume presets, music tiles
 ---
 
 # Music controls
@@ -52,7 +52,7 @@ All these controls eliminate the need to yell at Alexa/Google/Siri repeatedly, w
     <div class="product-item">
       <strong>Dashboard</strong>
       <div class="product-details">
-        Wall-mounted tablet with SharpTools, Home Assistant, or native dashboard
+        Wall-mounted tablet with a dashboard connected to your verified speaker controls
       </div>
     </div>
     
@@ -97,7 +97,7 @@ All these controls eliminate the need to yell at Alexa/Google/Siri repeatedly, w
 - Group rooms together
 - Ungroup for individual control
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF "Dinner Music" tile tapped
 THEN play "Dinner Jazz" playlist on Kitchen speaker
@@ -118,91 +118,6 @@ AND set volume to 40%</div>
       <li>Set volume to preferred level</li>
       <li>Target specific speaker or group</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Now Playing</span>
-        <span class="step-content">Use media_player cards</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Presets</span>
-        <span class="step-content">Create scripts for favorite playlists</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Controls</span>
-        <span class="step-content">Button cards + slider for volume</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <h4>SharpTools</h4>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Display</span>
-        <span class="step-content">Media tile for now playing</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Presets</span>
-        <span class="step-content">Virtual switches + automation for each</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Tiles</span>
-        <span class="step-content">Hero tiles for playlist buttons</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited native music control</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Integration</span>
-        <span class="step-content">SmartThings-Sonos integration</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Display</span>
-        <span class="step-content">SharpTools dashboard</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Integration</span>
-        <span class="step-content">Sonos or Chromecast integration</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Presets</span>
-        <span class="step-content">Virtual switches + Rule Machine</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Dashboard</span>
-        <span class="step-content">Hubitat Dashboard</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -253,7 +168,7 @@ Let guests participate:
 3. Allow skip voting (multiple taps to skip)
 4. Maintain backup playlist for when queue is empty
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Now playing not updating
 
@@ -312,7 +227,7 @@ Let guests participate:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Garbage day reminder](/automation/notifications/garbage-day-reminder.html)
 - [Status tiles instead of notifications](/automation/notifications/status-tiles.html)
 - [Music switch control](/automation/entertainment/music-switch-control.html)

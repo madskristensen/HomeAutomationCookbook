@@ -53,7 +53,7 @@ Save energy by using outdoor air for heating or cooling instead of running HVAC.
     <div class="product-item">
       <strong>Smart Home Platform</strong>
       <div class="product-details">
-        For notifications and logic: Home Assistant, SmartThings, Hubitat, etc.
+        Must support delayed conditions and household notifications
       </div>
     </div>
   </div>
@@ -79,7 +79,7 @@ Save energy by using outdoor air for heating or cooling instead of running HVAC.
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF outside temp > inside temp + 5°F (in heating season)
 THEN send notification "Open windows for free heating!"</div>
@@ -97,138 +97,6 @@ THEN send notification "Open windows for free heating!"</div>
     <strong>Trigger:</strong> Outside temp drops below thermostat cooling setpoint<br>
     <strong>Conditions:</strong> Windows currently closed • House in cooling mode • Evening/night time (optional)<br>
     <strong>Action:</strong> Send notification "Outside is cooler than inside! Open windows to save energy."
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Outside temp rises above heating setpoint</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Windows closed, heating mode, daytime</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send notification with current temps</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Option:</strong> Add temperature difference threshold (5°F min)
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Outdoor temp sensor > thermostat setpoint</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">All windows are closed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Send notification "Open windows for free heating"</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Outdoor temp rises above indoor temp + 5°F</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Windows closed, heating season</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send notification "Open windows for free heating"</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine with temperature comparison
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited native temperature comparison</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home Assistant or similar hub for logic</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Outdoor temperature changes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Outdoor temp > Indoor temp by 5°</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send notification to phone</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited native support for complex temp comparisons</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use IFTTT or Home Assistant for logic</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -267,7 +135,7 @@ Create automation with these elements:
 - **Condition:** Rain predicted in next period AND windows are open
 - **Action:** Send high-priority notification: "Rain expected soon - close windows!"
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Too many notifications
 
@@ -328,7 +196,7 @@ Add multiple conditions:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
 - [Pause HVAC when windows stay open](/automation/climate/thermostat-windows-open.html)
 - [Activate air purifier when air quality drops](/automation/climate/air-quality-purifier/)

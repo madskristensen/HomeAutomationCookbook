@@ -47,7 +47,7 @@ This is the automation where you play dog barking noises when motion is detected
     <div class="product-item">
       <strong>Smart Speaker or Audio Device</strong>
       <div class="product-details">
-        Options: Smart speaker (Alexa, Google), Sonos, or any speaker connected to smart home<br>
+        Any speaker your hub can control locally or through a verified integration<br>
         Placement: Near entry points for maximum effect
       </div>
     </div>
@@ -85,13 +85,12 @@ This is the automation where you play dog barking noises when motion is detected
   <strong>🐕 Finding Dog Barking Audio</strong>
   <ul>
     <li><strong>MP3 files:</strong> Search for "dog barking sound effect" - many free options available</li>
-    <li><strong>Alexa:</strong> Enable "Guard Dog" skill or search for dog sounds</li>
-    <li><strong>Sonos/Speakers:</strong> Upload MP3 to media library</li>
+    <li><strong>Speaker library:</strong> Add an audio file your verified speaker integration can play</li>
     <li><strong>Realistic variety:</strong> Use sounds that include initial bark, sustained barking, and growling</li>
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF motion detected outside
 AND home is in Away mode
@@ -124,149 +123,6 @@ AND send notification</div>
       <li>Send notification about motion detected</li>
       <li>Optional: Turn on exterior lights</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Motion sensor state changes to "on"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Mode is "Away" or time after 10 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">media_player.play_media with dog barking + notify</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Add dog barking MP3 to media folder
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Motion detected AND Mode is Away</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Play audio on speaker + Send notification</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Use Alexa or Sonos for audio playback
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Motion triggers audio playback</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Mode = Away or time-based</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Speak or play audio file</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Chromecast or Sonos integration
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Motion detected + No one home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Shortcut</span>
-        <span class="step-content">Play specific audio from library</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Use HomePod with Shortcuts automation
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Enable "Guard Dog" skill or similar</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Motion sensor triggers</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Play dog sounds via routine</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Motion detected (routine triggered)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Play dog barking sound on speaker</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Add Away mode condition if available
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -339,7 +195,7 @@ Make it more realistic:
 - Vary duration each time
 - Random delays between bark sequences
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Barking triggers too often
 
@@ -448,7 +304,7 @@ Make it more realistic:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Away lights](/automation/security/away-lights/)
 - [Fire safety response](/automation/security/fire-safety/)
 - [Away mode](/automation/daily-routines/away-mode/)

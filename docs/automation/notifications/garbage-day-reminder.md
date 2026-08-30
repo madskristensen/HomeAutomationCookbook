@@ -40,7 +40,7 @@ This is a great way to remember to take out the trash before garbage day. The ti
       <strong>Dashboard</strong>
       <div class="product-details">
         Wall-mounted tablet or phone dashboard<br>
-        SharpTools, Home Assistant, Hubitat Dashboard, or ActionTiles
+        Any dashboard that can show and change a shared task state
       </div>
     </div>
     
@@ -53,7 +53,7 @@ This is a great way to remember to take out the trash before garbage day. The ti
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF it is Wednesday at 6:00 PM
 THEN turn on "Garbage Out" virtual switch
@@ -91,101 +91,6 @@ THEN turn on "Garbage Out" virtual switch
    - **ON state (red):** Garbage needs to go out
 4. When you complete the task, tap the tile to turn it green
 
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create input_boolean helper "garbage_out"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Time Wednesday at 6:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on input_boolean.garbage_out</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Dashboard:</strong> Add button card with color conditions
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switch "Garbage Out"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Time is Wednesday 6 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on virtual switch</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Dashboard:</strong> Add to SharpTools with colors
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switch "Garbage Out"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Time trigger via Simple Automation Rules</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Dashboard</span>
-        <span class="step-content">Add with templates, configure ON/OFF colors</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <h4>SharpTools</h4>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Link virtual switch from your hub</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Dashboard</span>
-        <span class="step-content">Add Hero tile to dashboard</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Colors</span>
-        <span class="step-content">Active = red, Inactive = green</span>
-      </div>
-    </div>
-  </div>
-</div>
-
 ## Advanced features
 
 ### Calendar integration
@@ -194,7 +99,7 @@ You can take this to a new level if you integrate with the garbage company's ser
 
 **Implementation options:**
 - **ICS calendar import:** Many garbage companies provide ICS calendar feeds you can subscribe to
-- **Custom integration:** Some regions have community-built integrations (check Home Assistant Community Store)
+- **Community integration:** Some regions have integrations for local collection schedules
 - **Manual calendar:** Create a Google/Apple calendar with your garbage schedule and check it as a condition
 - **API integration:** Some waste management companies offer APIs for service schedules
 
@@ -217,7 +122,7 @@ Reset the reminder automatically after garbage is collected:
 **Actions:**
 - Turn off "Garbage Out" virtual switch
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Reminder at wrong time
 
@@ -238,11 +143,11 @@ Reset the reminder automatically after garbage is collected:
 **Solutions:**
 ✅ Add auto-reset automation as described above
 ✅ Use NFC tag at trash cans to automatically complete
-✅ Create voice command: "Alexa, garbage is out"
+✅ Create an optional voice phrase such as "garbage is out"
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Status tiles instead of notifications](/automation/notifications/status-tiles.html)
 - [Music controls](/automation/notifications/music-controls.html)
 

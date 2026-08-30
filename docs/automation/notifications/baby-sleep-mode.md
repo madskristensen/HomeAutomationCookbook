@@ -59,7 +59,7 @@ Nothing is worse than putting the baby to sleep, just for the automated lights t
   <p>Plug the white noise machine or baby monitor into the smart plug. When the baby goes down for sleep, turn on the white noise or monitor. This will draw power, which you monitor using the smart plug. When power consumption rises, you know baby is sleeping.</p>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF plug power rises above 5 watts
 THEN set "baby sleeping" to true
@@ -107,145 +107,6 @@ AND disable nursery automations</div>
       <li><strong>Condition:</strong> "Baby Sleeping" is OFF</li>
       <li>This prevents the automation from running when baby is asleep</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create input_boolean helper: "baby_sleeping"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Power > 5W → Turn on helper</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">End</span>
-        <span class="step-content">Power < 2W for 2 min → Turn off helper</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Usage:</strong> Add condition "baby_sleeping is off" to nursery automations
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switch "Baby Sleeping"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Power > 5W → Switch on</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">End</span>
-        <span class="step-content">Power < 2W → Switch off</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Usage:</strong> Add "Baby Sleeping is off" to nursery routines
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switch "Baby Sleeping"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Power monitoring triggers switch</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine, add condition to nursery rules
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create dummy switch or HomeKit-compatible virtual switch</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Automation</span>
-        <span class="step-content">Power rises → Switch on</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Usage:</strong> Add switch state as condition to nursery automations
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Setup</span>
-        <span class="step-content">Create virtual switch via SmartThings or similar</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Routine</span>
-        <span class="step-content">Power rises → Switch on</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Usage:</strong> Use switch state in routine conditions
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited power monitoring support natively</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home Assistant or Hubitat for logic</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -317,7 +178,7 @@ Track multiple children:
 - Global quiet mode if ANY child sleeping
 - Different automation rules per room
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: False "sleeping" detection
 
@@ -414,7 +275,7 @@ Track multiple children:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Lights off after motion](/automation/lighting/lights-off-after-motion/)
 - [Bedtime routine](/automation/daily-routines/bedtime-routine/)
 - [Teeth brushing reminder](/automation/notifications/teeth-brushing-reminder/)

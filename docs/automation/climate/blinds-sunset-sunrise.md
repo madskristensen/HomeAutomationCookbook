@@ -86,7 +86,7 @@ Automating your blinds to open at sunrise and close at sunset is one of the most
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF time is sunrise
 THEN open all blinds to 100%
@@ -132,185 +132,6 @@ THEN close all blinds to 0%</div>
     </ul>
   </div>
 </div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Open</span>
-        <span class="step-content">Trigger on sun rising, action cover.open</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Close</span>
-        <span class="step-content">Trigger on sun setting, action cover.close</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Add offset: sunrise + 30 minutes for delayed open
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Time is sunrise THEN Open blinds</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Time is sunset THEN Close blinds</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Add routines for weekend variations
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Sunrise/Sunset (built-in)</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set shade level to 0% or 100%</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Simple Automation Rules or Rule Machine
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Sunrise</span>
-        <span class="step-content">Create automation: When sunrise, open blinds</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Sunset</span>
-        <span class="step-content">Create automation: When sunset, close blinds</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Add time offsets in automation settings
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Sunrise</span>
-        <span class="step-content">Routine: When sunrise → Open blinds</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Sunset</span>
-        <span class="step-content">Routine: When sunset → Close blinds</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Works with compatible blind devices
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Sunrise</span>
-        <span class="step-content">Starter: Sunrise → Open blinds</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Sunset</span>
-        <span class="step-content">Starter: Sunset → Close blinds</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Requires Works with Google compatible shades
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-## Room-specific strategies
-
-### Bedrooms
-
-**Morning:**
-- Open later than common areas (allow sleeping in)
-- Weekday: 30 min before alarm
-- Weekend: Manual or later trigger
-- Consider blackout shades for better sleep
-
-**Evening:**
-- Close at sunset for privacy
-- Close earlier if preparing for bed
-
-### Living areas
-
-**Morning:**
-- Open at sunrise or shortly after
-- Maximize natural light during the day
-
-**Evening:**
-- Close at sunset or when lights turn on inside
-- Privacy as interior becomes visible from outside
-
-### South-facing windows (Northern Hemisphere)
-
-**Winter:**
-- Open early to capture passive solar heating
-- Keep open during sunny days
-- Close at sunset to retain heat
-
-**Summer:**
-- Close during peak sun hours (11 AM - 4 PM)
-- Reopen in evening for views
-- Prevents overheating and reduces AC load
-
-### West-facing windows
-
-**Year-round:**
-- Close in afternoon to block intense setting sun
-- Prevents furniture fading and overheating
-- Open in morning for indirect light
 
 ## Advanced features
 
@@ -368,7 +189,7 @@ Create scene for quick adjustment:
 - "Privacy mode" - Closes only street-facing windows
 - Map to physical button or voice command
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Blinds don't respond to automation
 
@@ -464,7 +285,7 @@ For battery-powered blinds:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Away lights automation](/automation/security/away-lights/)
 - [Morning routine](/automation/daily-routines/morning-routine/)
 - [Bedtime routine](/automation/daily-routines/bedtime-routine/)

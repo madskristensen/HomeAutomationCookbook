@@ -87,7 +87,7 @@ Get alerted when dishes are clean and ready to be put away. This clever temperat
   </div>
 </div>
 
-## Automation setup - Temperature method
+## Logic
 
 <div class="automation-example">IF temperature > 90°F
 AND door closed for 60 minutes
@@ -144,154 +144,6 @@ AND set dishwasher_clean to true</div>
   </div>
 </div>
 
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Door closes → Turn on "dishwasher_running"</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Done</span>
-        <span class="step-content">Temp > 90°F AND door closed 60min AND running</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Notify, Turn off running, Turn on clean</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Reset:</strong> Door opens → Turn off both booleans
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Routine 1</span>
-        <span class="step-content">Temp > 90°F AND door closed 60+ min</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Notify, Turn on virtual switch "Dishwasher Clean"</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Routine 2:</strong> Door opens → Turn off virtual switch
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Start</span>
-        <span class="step-content">Door closes → Set "running" variable</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Done</span>
-        <span class="step-content">Temp > 90°F AND door closed 60min → Notify</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine with temperature sensor
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Temperature sensor above 90°F</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Contact sensor closed for 60+ minutes</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Send notification</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Temperature sensor value above 90°F</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Contact sensor closed</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Actions</span>
-        <span class="step-content">Send notification, Alexa announces</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Limitation</span>
-        <span class="step-content">Limited native support for temperature triggers</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Workaround</span>
-        <span class="step-content">Use Home Assistant or IFTTT for logic</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-## Power monitoring method
-
-If temperature method doesn't work, use power monitoring:
-
-**Setup:**
-1. Plug dishwasher into power monitoring smart plug
-2. Monitor power consumption during full cycle
-3. Note idle (<10W), running (500-1500W), and done (<10W) levels
-
-**Automation:**
-- Start detection: Power above 100W
-- Done detection: Power below 20W for 5 minutes after running
-
-See [Washer Done Notification](/automation/appliances/washer-done-notification/) for detailed power monitoring setup.
-
 ## Advanced features
 
 ### Clean/dirty dashboard
@@ -311,7 +163,7 @@ Create two scripts:
 1. **Mark Dishwasher Dirty:** Turn off both dishwasher_clean and dishwasher_running booleans
 2. **Mark Dishwasher Clean:** Turn on dishwasher_clean, turn off dishwasher_running
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Temperature never rises enough
 
@@ -364,7 +216,7 @@ Add conditions to automation:
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Washer done notification](/automation/appliances/washer-done-notification/)
 - [Dryer done notification](/automation/appliances/dryer-done-notification/)
 - [Morning routine automation](/automation/daily-routines/morning-routine/)

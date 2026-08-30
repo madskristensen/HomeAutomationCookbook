@@ -52,8 +52,7 @@ Enhance movie watching by automatically dimming lights when the TV turns on. Cre
     <div class="product-item">
       <strong>Smart TV with Platform Integration</strong>
       <div class="product-details">
-        Compatible: Chromecast, Fire TV, Roku, Apple TV, Samsung, LG<br>
-        Works with: Home Assistant, SmartThings
+        The TV or player must expose a reliable power or playback state to your hub
       </div>
     </div>
     
@@ -87,7 +86,7 @@ Enhance movie watching by automatically dimming lights when the TV turns on. Cre
   </div>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF TV power > 50W
 AND time after sunset
@@ -107,142 +106,6 @@ AND close blinds</div>
     <strong>Trigger:</strong> TV turns on OR specific app opens (Netflix, Disney+, etc.)<br>
     <strong>Conditions:</strong> Time between 6 PM - midnight (movie hours) • Only for video apps<br>
     <strong>Actions:</strong> Dim lights to 10-20% • Close blinds if daytime
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">TV plug power > 50W for 5 sec</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time after sunset, before sunrise</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Dim living room lights to 10%</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Alternative:</strong> Use media player 'playing' state
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">TV plug power > 50W for 5 sec AND after sunset</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Set lights to 10% AND Close blinds</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">TV plug power > 50W for 5 sec</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time after sunset</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set living room lights to 10%</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine with power monitoring plug
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">TV power monitor > 50W</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time after sunset</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Dim lights to 10%, Close blinds</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">TV plug power above 50W</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time after 6:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set lights to 10%, Close smart blinds</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">TV plug power above 50 watts</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Time after 6:00 PM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Dim living room lights to 10%</span>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -287,7 +150,7 @@ Don't dim if people are moving around:
 
 Add condition: No motion detected in last 5 minutes before dimming lights
 
-## Troubleshooting
+## Failure modes
 
 ### Issue: Lights dim when TV menu on
 
@@ -340,7 +203,7 @@ Add condition: No motion detected in last 5 minutes before dimming lights
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Away mode automation](/automation/daily-routines/away-mode/)
 - [Bedtime routine automation](/automation/daily-routines/bedtime-routine/)
 - [Speaker volume presets](/automation/entertainment/speaker-volume-presets/)

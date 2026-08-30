@@ -191,7 +191,7 @@ Instantly activate pool party mode with colorful lights, music, and pool cover w
 
 ---
 
-## Troubleshooting
+## Failure modes
 
 <div class="troubleshooting-grid">
 

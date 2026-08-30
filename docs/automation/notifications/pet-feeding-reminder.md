@@ -40,7 +40,7 @@ Consistent feeding times are important for pet health, but busy schedules can le
       <strong>Smart home platform</strong>
       <div class="product-details">
         Any platform with time-based automation and notifications<br>
-        Home Assistant, SmartThings, Hubitat, or even phone reminders
+        A hub, dashboard, or shared reminder system the household already uses
       </div>
     </div>
   </div>
@@ -85,7 +85,7 @@ Consistent feeding times are important for pet health, but busy schedules can le
   </ul>
 </div>
 
-## Basic automation setup
+## Logic
 
 <div class="automation-example">IF time is 7:00 AM
 AND pet not fed yet today (optional tracking)
@@ -141,150 +141,6 @@ AND announce on kitchen speaker</div>
       <li>Set helper variable "pet_fed_today" to true</li>
       <li>Send confirmation: "Feeding logged for Max and Luna"</li>
     </ul>
-  </div>
-</div>
-
-## Platform-specific examples
-
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Time is 7:00 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">input_boolean.pets_fed_morning is off</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">notify.mobile_app + tts.speak on kitchen speaker</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Create input_boolean to track feeding status, reset at midnight
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Time is 7:00 AM every day</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Send push notification to all members</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Optional:</strong> Use virtual switch to track feeding status
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Time is 7:00 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Virtual switch "Pets Fed" is off</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send push notification + speak on device</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine with virtual switches
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Time of day is 7:00 AM</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Send notification</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Limited native tracking; use Shortcuts for complex logic
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Schedule: 7:00 AM every day</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Send notification + announce on Echo devices</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Say "Alexa, pets are fed" to log via voice
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Schedule: 7:00 AM daily</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Announce on Nest speakers</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Say "Hey Google, mark pets as fed"
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -475,7 +331,7 @@ AND announce on kitchen speaker</div>
 
 ---
 
-**Related automations:**
+## Related recipes
 - [Morning routine automation](/automation/daily-routines/morning-routine.html)
 - [Garbage day reminder](/automation/notifications/garbage-day-reminder.html)
 - [Low battery alerts](/automation/notifications/low-battery-alerts.html)
