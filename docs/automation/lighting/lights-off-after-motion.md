@@ -51,7 +51,7 @@ The off half makes automatic lighting useful without making it hostile. It shoul
 
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
-| Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | Aeotec SmartThings Motion Sensor - owner favorite for fast reactions. TODO(owner): add the exact Amazon product link. | A PIR needs a conservative timer for people who sit still. |
+| Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) - owner favorite for fast reactions | A PIR needs a conservative timer for people who sit still. |
 | Dim a fixed light | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | TODO(owner): preferred premium dimmer | Keep the physical paddle usable. |
 | Switch a fixed light on or off | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | TODO(owner): preferred premium on/off switch | Keep the physical paddle usable. |
 
