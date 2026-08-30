@@ -78,7 +78,7 @@ navigation:
             url: /automation/lighting/outdoor-night-lights.html
           - title: Wake-up lights
             url: /automation/lighting/wake-up-lights.html
-          - title: Driveway welcome wave
+          - title: Verified entry welcome
             url: /automation/lighting/driveway-welcome-wave.html
       - title: Daily routines
         url: /automation/daily-routines/index.html

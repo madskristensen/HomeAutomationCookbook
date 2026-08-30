@@ -1,412 +1,143 @@
 ---
 layout: automation
-title: Driveway Welcome Wave - Smart Arrival Lighting Automation
-description: Create a stunning ripple lighting effect from street to front door when you arrive home. Step-by-step guide for driveway welcome lighting automation.
-keywords: driveway lights, arrival lighting, welcome home lights, ripple effect lights, smart outdoor lighting, pathway lights automation, garage arrival lights
+title: Light the entry after a verified arrival
+description: A platform-neutral welcome-light recipe that confirms a real arrival before lighting the entry and never unlocks a door or overrides manually controlled lights.
+keywords: arrival lighting, welcome home lights, entry light automation, outdoor arrival lights, verified presence lighting
+last_modified_at: 2026-08-30
+faqs:
+  - question: Why not turn on the lights as soon as a phone enters the home area?
+    answer: Phone location can drift or trigger while someone passes nearby. Use it only to create a short pending-arrival window, then require a physical entry signal before running the welcome lights.
+  - question: Should the welcome recipe turn lights off later?
+    answer: Only lights it turned on. Track automation ownership, cancel the timeout after a manual change, and leave dusk lighting or already-on lights alone.
+  - question: Can the same arrival signal unlock the door?
+    answer: No. Lighting is easy to reverse; access control is not. Keep keys, keypads, or a deliberate lock action separate from this recipe.
 ---
 
-# Driveway welcome wave
+# Light the entry after a verified arrival
 
-Create a stunning visual welcome when you arrive home by having lights ripple from the street toward your front door. This choreographed lighting sequence creates an impressive pathway effect that guides you home while adding security and curb appeal.
+After dark, confirm that someone has reached the entry before turning on the porch or path light. Keep the lock, garage, alarm, and every manual light control separate.
 
-## Use cases
+**Best for:** A home with a reliable Away state, an owner-used exterior or entry light control, and a physical signal that confirms someone reached the property.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Daily arrivals</h4>
-    <ul>
-      <li><strong>Evening homecoming</strong> - Lights guide you from street to door after dark</li>
-      <li><strong>Late night returns</strong> - Safe, well-lit path to your entrance</li>
-      <li><strong>Guest arrivals</strong> - Impressive welcome for visitors</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Security and ambiance</h4>
-    <ul>
-      <li><strong>Deterrent effect</strong> - Active lighting discourages intruders</li>
-      <li><strong>Pathway visibility</strong> - Clearly illuminated walkway prevents trips</li>
-      <li><strong>Curb appeal</strong> - Dramatic effect impresses neighbors and guests</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A phone geofence by itself, an unverified driveway sensor, theatrical multi-zone effects that have not been installed, or any automatic unlocking or garage movement.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart outdoor lights</strong>
-      <div class="product-details">
-        Popular brands: Philips Hue Outdoor, LIFX, Ring Smart Lighting, Govee<br>
-        Multiple zones: Street/driveway entrance, pathway, gate area, front door
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Arrival detection</strong>
-      <div class="product-details">
-        Options: GPS geofencing, driveway motion sensor, garage door sensor, or car presence sensor<br>
-        Platforms: Home Assistant, SmartThings, Hubitat with presence detection
-      </div>
-    </div>
-  </div>
-</div>
+Arrival lighting should make the final steps to the door easier, not advertise every location wobble. Phone presence can suggest that someone is approaching, but a door contact, deliberate garage operation, keypad event, or other tested property signal is stronger evidence that the arrival is real.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Driveway motion sensor</strong>
-      <div class="product-details">
-        Detects car approaching before reaching garage for earlier trigger
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Color-capable lights</strong>
-      <div class="product-details">
-        Add color effects like warm amber wave or holiday themes
-      </div>
-    </div>
-  </div>
-</div>
+The old version of this page described a multi-zone driveway wave without verified hardware. This recipe uses owner-used lighting and contact hardware instead. Add more zones only after each physical light and trigger exists and works independently.
 
-<div class="info-box">
-  <strong>💡 Light zone planning tip</strong>
-  <ul>
-    <li>Zone 1: Street/driveway entrance lights</li>
-    <li>Zone 2: Mid-driveway or pathway lights</li>
-    <li>Zone 3: Gate or garage area lights</li>
-    <li>Zone 4: Front porch and door lights</li>
-  </ul>
-</div>
+## What I used
 
-## Basic automation setup
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Control plug-in exterior lighting | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | TODO(owner): preferred premium outdoor plug | Use only with a suitable outdoor receptacle, enclosure, and lighting load. |
+| Control a fixed entry light | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | The wall paddle remains the normal control. |
+| Confirm entry-door activity | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | TODO(owner): preferred contact sensor | A door event confirms activity; it does not prove identity or unlock anything. |
+| Suggest that someone is approaching | TODO(owner): verified household presence source | TODO(owner): verified presence plus a separate property signal | Use phone location only to open a short pending-arrival window. |
 
-<div class="automation-example">IF car detected in driveway OR geofence arrival
-AND time is after sunset
-THEN turn on street lights
-WAIT 1 second
-THEN turn on pathway lights
-WAIT 1 second
-THEN turn on gate lights
-WAIT 1 second
-THEN turn on front door lights</div>
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Driveway motion sensor detects vehicle</li>
-      <li>OR phone GPS enters home zone</li>
-      <li>OR garage door begins opening</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <strong>Time-based:</strong> Only after sunset or before sunrise<br>
-    <strong>Mode:</strong> Only when arriving (not when already home)<br>
-    <strong>Cooldown:</strong> Don't repeat within 10 minutes
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on Zone 1 (street) lights to 100%</li>
-      <li>Wait 1-2 seconds</li>
-      <li>Turn on Zone 2 (pathway) lights to 100%</li>
-      <li>Wait 1-2 seconds</li>
-      <li>Turn on Zone 3 (gate) lights to 100%</li>
-      <li>Wait 1-2 seconds</li>
-      <li>Turn on Zone 4 (front door) lights to 100%</li>
-    </ul>
-  </div>
-</div>
+## Logic
 
-## Platform-specific examples
+- **Trigger:** A pending-arrival state is followed by a tested physical entry signal within a short confirmation window.
+- **Conditions:** It is dark, the home was Away before the candidate arrival, no safety mode blocks the action, and the target light is not already on.
+- **Action:** Turn on the approved entry or path light and mark only that light as owned by this welcome run.
+- **Wait / timeout:** Keep the light on for a household-tested entry period, then turn it off only if automation still owns it.
+- **Stop condition:** The pending arrival expires without a physical signal, the person returns to Away, or a manual light change cancels ownership.
+- **Manual override:** Wall switches, outdoor plug controls, keys, keypads, locks, and garage controls remain independent.
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Person enters home zone OR driveway motion detected</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Sun is below horizon</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Run script with sequential light activation and delays</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Use a script with delay actions between each light zone
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Member arrives at home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">AND</span>
-        <span class="step-content">Time is between sunset and sunrise</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Activate welcome wave scene</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Create scene with timed light sequences using SmartThings Routines
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Presence sensor arrives OR motion on driveway</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Mode is Night or time after sunset</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Run Rule Machine sequence with delays</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine for complex sequencing with wait actions
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">First person arrives home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">After sunset</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Activate welcome wave scene</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> Use Shortcuts app for advanced sequencing with delays
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Amazon Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Location: You arrive home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Between sunset and sunrise</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Turn on lights with wait actions between each zone</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Starter</span>
-        <span class="step-content">When first person arrives home</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">After sunset</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Activate arrival lighting scene</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Note:</strong> May need third-party app for sequential delays
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="automation-example">IF a candidate arrival creates Pending arrival
+AND a tested entry signal occurs before that state expires
+AND it is dark
+THEN turn on the approved entry light if it was off
+AND mark that light as owned by this welcome run
+
+IF the entry timeout ends
+AND the welcome run still owns the light
+THEN turn it off
+BUT never unlock a door or move a garage</div>
+
+## Setup notes
+
+1. Complete the [safe arrival routine](/automation/daily-routines/unlock-door-arrival.html) and use its Home, Away, and pending-arrival states.
+2. Start with one owner-used porch or entry light, not a sequence of imagined zones.
+3. Choose a physical confirmation signal that occurs reliably during real arrivals.
+4. Log candidate arrivals and confirmation timing before controlling a light.
+5. Require both darkness and a real Away-to-arrival transition.
+6. If the target light is already on, leave it alone and do not claim ownership.
+7. Clear ownership whenever someone changes the light manually.
+8. Test the timeout, a canceled arrival, a second person arriving, and an internet outage.
+
+## Choose a confirmation signal
+
+| Signal | What it can establish |
+|---|---|
+| Entry contact opens during pending arrival | Someone used that entry; it does not establish identity |
+| Deliberate garage or gate operation | The access point was operated; keep movement control separate |
+| Verified local vehicle or driveway sensor | Something reached the property; test animals, deliveries, and street traffic |
+| Phone enters a geofence | Someone may be approaching; insufficient by itself |
+
+Use the weakest signal only for reversible lighting. Never reuse it as proof for unlocking, disarming, or opening access points.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Color wave effect</h3>
-    <p>Add color transitions for extra visual impact:</p>
-    <ul>
-      <li>Warm amber wave from street to door</li>
-      <li>Cool white to warm white transition</li>
-      <li>Holiday colors for seasonal themes</li>
-      <li>Family member-specific colors (Dad = blue, Mom = purple)</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Speed variations</h3>
-    <p>Adjust timing based on context:</p>
-    <ul>
-      <li><strong>Normal arrival:</strong> 1-2 second delays between zones</li>
-      <li><strong>Quick entry:</strong> 0.5 second delays</li>
-      <li><strong>Dramatic effect:</strong> 3-4 second delays</li>
-      <li><strong>Guest mode:</strong> Slower, more impressive wave</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Per-person customization</h3>
-    <p>Different effects for different family members:</p>
-    <ul>
-      <li>Track which phone triggered arrival</li>
-      <li>Assign different colors or brightness per person</li>
-      <li>Kids get fun colors, adults get warm white</li>
-    </ul>
-  </div>
-</div>
+### Add a second real lighting zone
 
-## Common issues and solutions
+After the first light is reliable, add one physically installed path zone. Turn zones on for visibility, not spectacle, and track ownership separately so one timeout cannot override another schedule or manual state.
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Lights activate too late</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Already at the door before lights start rippling.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Use GPS geofence trigger further from home (200-300m radius)</li>
-        <li>Add driveway motion sensor for earlier detection</li>
-        <li>Trigger on garage door opening instead of arrival</li>
-        <li>Use faster local processing (Zigbee/Z-Wave vs cloud)</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Sequence feels disjointed</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Lights don't flow smoothly from zone to zone.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Reduce delay time between zones (try 0.5-1 second)</li>
-        <li>Ensure all lights are on same protocol for consistent timing</li>
-        <li>Add transition time to lights so they fade on gradually</li>
-        <li>Test and adjust timing to match your walking pace</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Triggers for other family members</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Wave activates when already home and someone else arrives.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Add condition: Only if home mode was "Away"</li>
-        <li>Add cooldown period (don't repeat within 30 minutes)</li>
-        <li>Track if first person arriving (not subsequent arrivals)</li>
-        <li>Use car-specific detection if possible</li>
-      </ul>
-    </div>
-  </div>
-</div>
+### Handle later arrivals quietly
 
-## Best practices
+When someone is already home, a later arrival may still need the entry light. Use the same physical confirmation and darkness rules, but skip whole-house mode, climate, and announcement changes.
 
-<div class="best-practice-card">
-  <h3>Light zone planning</h3>
-  <ol>
-    <li>Map out your driveway and pathway into 3-5 distinct zones</li>
-    <li>Ensure zones follow natural walking/driving path</li>
-    <li>Position lights to illuminate walkway, not just be decorative</li>
-    <li>Consider both car and pedestrian arrival paths</li>
-    <li>Test timing by walking the path while watching lights</li>
-  </ol>
-</div>
+### Coordinate with dusk lighting
 
-<div class="warning-card">
-  <h3>What to avoid</h3>
-  <ul>
-    <li><strong>Too many zones</strong> - 3-5 zones is ideal, more becomes chaotic</li>
-    <li><strong>Delays too long</strong> - You'll arrive before the wave finishes</li>
-    <li><strong>Bright flash</strong> - Use gradual transitions, not instant on</li>
-    <li><strong>Daytime activation</strong> - Wastes energy and isn't visible anyway</li>
-  </ul>
-</div>
+If the outdoor-night-light recipe already owns the porch light, the arrival recipe does nothing to that device. It may turn on a separate entry light, but it must not shorten the dusk schedule.
 
----
+## Failure modes
 
-**Related automations:**
-- [Outdoor night lights](/automation/lighting/outdoor-night-lights/)
-- [Welcome home music](/automation/entertainment/welcome-home-music/)
-- [Prepare home on arrival](/automation/daily-routines/unlock-door-arrival.html)
+- **Lights run while someone passes nearby:** Require a physical property signal after the candidate arrival.
+- **The light is late:** Measure the real delay and choose a confirmation point earlier on the actual path without enlarging the geofence blindly.
+- **Dusk lighting turns off after the arrival timeout:** Track ownership per light and never claim a light that was already on.
+- **A manual change is reversed:** Clear ownership and cancel the timeout on any external light change.
+- **The second arrival repeats whole-house actions:** Keep this recipe scoped to entry lighting and let the first-arrival routine own Home-state changes.
+- **The entry contact fires for departures:** Require the pending-arrival or known arrival context, not the contact event alone.
+- **The sensor becomes unavailable:** Expire pending arrival without running the light and show a maintenance warning.
+- **The hub or internet is down:** The wall switch, plug control, key, keypad, and garage control remain normal fallbacks.
+
+## Done when
+
+- [ ] Passing near the property never turns on the welcome light.
+- [ ] A real after-dark arrival turns on the light before it is needed.
+- [ ] Daylight arrivals do not change lighting.
+- [ ] A light already on remains under its original schedule or manual control.
+- [ ] A manual change cancels welcome-light ownership.
+- [ ] Departure contact events do not look like arrivals.
+- [ ] A second arrival changes only the entry lighting.
+- [ ] No lock, garage, gate, or alarm changes from this recipe.
+- [ ] The entry remains usable when the hub or internet is unavailable.
+
+## FAQ
+
+### Why not turn on the lights as soon as a phone enters the home area?
+
+Phone location can drift or trigger while someone passes nearby. Use it only to create a short pending-arrival window, then require a physical entry signal before running the welcome lights.
+
+### Should the welcome recipe turn lights off later?
+
+Only lights it turned on. Track automation ownership, cancel the timeout after a manual change, and leave dusk lighting or already-on lights alone.
+
+### Can the same arrival signal unlock the door?
+
+No. Lighting is easy to reverse; access control is not. Keep keys, keypads, or a deliberate lock action separate from this recipe.
+
+## Related recipes
+
+- [Prepare the house when someone arrives](/automation/daily-routines/unlock-door-arrival.html)
+- [Turn outdoor lights on at dusk](/automation/lighting/outdoor-night-lights.html)
+- [Lighting automations](/automation/lighting/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/lighting/">← Back to Lighting Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/lighting/index.html">Back to lighting automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>
