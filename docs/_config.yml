@@ -85,7 +85,7 @@ navigation:
         subitems:
           - title: Away mode
             url: /automation/daily-routines/away-mode.html
-          - title: Unlock door on arrival
+          - title: Prepare home on arrival
             url: /automation/daily-routines/unlock-door-arrival.html
           - title: Morning routine
             url: /automation/daily-routines/morning-routine.html
@@ -96,10 +96,8 @@ navigation:
       - title: Climate and comfort
         url: /automation/climate/index.html
         subitems:
-          - title: Thermostat - windows open
+          - title: Pause HVAC for open windows
             url: /automation/climate/thermostat-windows-open.html
-          - title: Thermostat - windows close
-            url: /automation/climate/thermostat-windows-close.html
           - title: Window notifications
             url: /automation/climate/window-notifications.html
           - title: Air quality purifier
@@ -110,8 +108,6 @@ navigation:
             url: /automation/climate/room-heater-maintain-temp.html
           - title: Blinds at sunset/sunrise
             url: /automation/climate/blinds-sunset-sunrise.html
-          - title: Window HVAC pause
-            url: /automation/climate/window-hvac-pause.html
       - title: Entertainment
         url: /automation/entertainment/index.html
         subitems:

@@ -404,7 +404,7 @@ THEN turn on front door lights</div>
 **Related automations:**
 - [Outdoor night lights](/automation/lighting/outdoor-night-lights/)
 - [Welcome home music](/automation/entertainment/welcome-home-music/)
-- [Unlock door on arrival](/automation/daily-routines/unlock-door-arrival/)
+- [Prepare home on arrival](/automation/daily-routines/unlock-door-arrival.html)
 
 <div class="page-navigation">
   <a href="/automation/lighting/">← Back to Lighting Automations</a>

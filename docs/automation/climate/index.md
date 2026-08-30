@@ -6,37 +6,37 @@ description: Control temperature, humidity, and air quality automatically. Smart
 
 # Climate automations
 
-Controlling your indoor climate for optimal comfort and energy savings is at the core of a smart home. These automations will elevate both your wellbeing and wallet.
+Climate automation should reduce waste without making the house uncomfortable or taking control away from the thermostat on the wall.
 
 <div class="category-intro" markdown="1">
 
 ## Why climate automation?
 
-**Energy Savings** — Save 10-30% on heating and cooling costs
+**Less waste** - Pause heating or cooling when fresh air is already doing the work
 
-**Perfect Comfort** — Maintain ideal temperature in every room
+**Practical comfort** - Keep manual thermostat control and safe temperature limits
 
-**Smart HVAC Control** — Don't heat/cool the outdoors when windows open
+**Smart HVAC control** - Don't heat or cool the outdoors when windows open
 
-**Air Quality** — Automatically improve indoor air quality
+**Air quality** - Run ventilation when measured conditions call for it
 
-**Set and Forget** — Climate adjusts without your input
+**Understandable behavior** - Make every automatic change visible and reversible
 
-**Eco-Friendly** — Reduce energy waste and carbon footprint
+**Manual fallback** - Keep every thermostat and switch usable at the wall
 
 </div>
 
-## 🌟 Essential Automations
+## Essential automations
 
 <div class="automation-cards">
 
 <div class="automation-card" markdown="1">
 
-### Stop thermostat when windows open
+### Pause HVAC when windows stay open
 
-Pause heating or cooling when windows open to save energy and avoid conditioning the outdoors.
+Pause heating or cooling after a window remains open, then resume safely when every monitored opening closes.
 
-<span class="card-meta">**Best for:** Energy savings, fresh air, nice weather</span>
+<span class="card-meta">**Best for:** Avoiding HVAC waste during fresh-air breaks</span>
 
 <p><a href="/automation/climate/thermostat-windows-open.html" class="card-link">View Automation →</a></p>
 
@@ -63,18 +63,6 @@ Open blinds at sunrise for natural light and close at sunset for privacy and ene
 <span class="card-meta">**Best for:** Energy savings, privacy, natural daily rhythm</span>
 
 <p><a href="/automation/climate/blinds-sunset-sunrise.html" class="card-link">View Automation →</a></p>
-
-</div>
-
-<div class="automation-card" markdown="1">
-
-### Pause HVAC when window opens
-
-Automatically pause heating or cooling when a window or patio door opens with a visual blinking light reminder.
-
-<span class="card-meta">**Best for:** Energy savings, fresh air breaks, visual reminders</span>
-
-<p><a href="/automation/climate/window-hvac-pause.html" class="card-link">View Automation →</a></p>
 
 </div>
 
@@ -167,10 +155,10 @@ Automatically pause heating or cooling when a window or patio door opens with a 
 <div class="placement-card">
 <h3>Energy optimization</h3>
 <ul>
-<li>Temperature setbacks save 1% per degree per 8 hours</li>
-<li>Smart scheduling for occupied hours only</li>
+<li>Use modest setbacks that fit the household</li>
+<li>Schedule around confirmed household routines</li>
 <li>Zone control for unused rooms</li>
-<li>Regular HVAC maintenance (clean filters monthly)</li>
+<li>Follow the equipment manufacturer's maintenance schedule</li>
 </ul>
 </div>
 
@@ -241,6 +229,6 @@ Automatically pause heating or cooling when a window or patio door opens with a 
 </div>
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
-  <a href="/automation/entertainment/">Next: Entertainment →</a>
+  <a href="/automation/index.html">Back to all automations</a>
+  <a href="/automation/entertainment/index.html">Next: Entertainment</a>
 </div>

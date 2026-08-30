@@ -1,342 +1,136 @@
 ---
 layout: automation
-title: Stop Thermostat When Windows Open - Energy Saving Automation
-description: Save energy by automatically stopping your thermostat when windows or doors are opened. Complete guide with sensor integration and delay strategies.
-keywords: thermostat window sensor, stop HVAC windows open, energy saving automation, smart thermostat control, window sensor thermostat, automatic climate control, prevent heating outside
+title: Pause heating or cooling when a window stays open
+description: A platform-neutral climate recipe that pauses HVAC after a window remains open and resumes only when every monitored opening is closed.
+keywords: thermostat window sensor, stop HVAC windows open, smart thermostat control, window sensor thermostat, prevent heating outside
+last_modified_at: 2026-08-30
+faqs:
+  - question: How long should a window stay open before HVAC pauses?
+    answer: Start with two minutes for windows. Use a longer delay or exclude exterior doors that normally open for brief trips.
+  - question: When should the thermostat resume?
+    answer: Resume only after every monitored window and door has remained closed briefly, and only if this automation was responsible for the pause.
+  - question: What if someone changes the thermostat while a window is open?
+    answer: Treat the manual thermostat change as the new instruction. Do not restore an older saved mode over it when the window closes.
 ---
 
-# Stop thermostat when windows and doors are opened
+# Pause heating or cooling when a window stays open
 
-Let fresh air into your house without wasting energy heating or cooling the outdoors. This automation pauses your HVAC system when windows or doors are opened.
+Open a window for fresh air, and heating or cooling pauses after a short delay. Close every monitored opening, and the system resumes only if this recipe paused it.
 
-## Use cases
+**Best for:** Homes with a controllable thermostat and reliable contact sensors on the windows or patio doors people intentionally leave open.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Energy savings</h4>
-    <ul>
-      <li><strong>Fresh Air</strong> - Stop thermostat when opening windows to air out the house</li>
-      <li><strong>Nice Weather</strong> - Save energy during pleasant weather when windows are open</li>
-      <li><strong>Prevent Energy Waste</strong> - Don't heat or cool the outdoors</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Smart control</h4>
-    <ul>
-      <li><strong>Guest Traffic</strong> - Pause HVAC when front door is open as guests come and go</li>
-      <li><strong>Spring/Fall Optimization</strong> - Take advantage of natural ventilation</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Briefly used exterior doors, homes with unmonitored openings, or HVAC equipment whose thermostat mode cannot be safely paused and restored.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Thermostat</strong>
-      <div class="product-details">
-        Popular brands: Nest, Ecobee, Honeywell, Sensi<br>
-        WiFi or Zigbee enabled • API control • Remote off capability
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Contact Sensors</strong>
-      <div class="product-details">
-        Popular brands: Aqara, Wyze, SmartThings, Ring<br>
-        Zigbee, Z-Wave, or WiFi options • Start with frequently opened windows
-      </div>
-    </div>
-  </div>
-</div>
+The useful behavior is not simply turning the thermostat off. The recipe must ignore quick door trips, remember whether it caused the pause, wait for every monitored opening to close, and avoid undoing a manual thermostat change.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Weather Station</strong>
-      <div class="product-details">
-        Track outdoor temperature to optimize window opening decisions
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Dashboard Display</strong>
-      <div class="product-details">
-        Visual indicator showing which windows are open and thermostat status
-      </div>
-    </div>
-  </div>
-</div>
+Start with one frequently used window. Expand only after the full pause-and-resume cycle works reliably.
 
-## Basic automation setup
+## What I used
 
-<div class="automation-example">IF window open for 1 minute
-THEN turn off thermostat
-AND send notification "Thermostat off - living room window open"</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Control heating and cooling | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | TODO(owner): preferred premium thermostat | Keep safe limits and manual control at the thermostat. |
+| Detect an open window or door | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | TODO(owner): preferred premium contact sensor | Test every open and closed report before enabling HVAC control. |
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Any window or door has been open for over 1 minute</li>
-      <li>OR specific high-traffic door (front, back) open for 30 seconds</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions (optional)</h4>
-    <strong>HVAC Currently Running:</strong> Only trigger if heating or cooling is active<br>
-    <strong>Time-Based:</strong> Only during typical awake hours<br>
-    <strong>Temperature Check:</strong> Outside temp not extreme (optional safety)
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn off thermostat (or set to "off" mode)</li>
-      <li>Optional: Send notification "Thermostat paused - window open"</li>
-      <li>Optional: Update dashboard tile to show status</li>
-    </ul>
-  </div>
-</div>
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-## Platform-specific examples
+## Logic
 
-<div class="platform-grid">
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homeassistant.png" alt="Home Assistant logo">
-      <h4>Home Assistant</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Window or door opens for 1 minute</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set thermostat HVAC mode to "off"</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Tip:</strong> Save previous state to helper variable for restoration
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/smartthings.png" alt="SmartThings logo">
-      <h4>SmartThings</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">IF</span>
-        <span class="step-content">Living room window opens AND stays open for 1 minute</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">THEN</span>
-        <span class="step-content">Set thermostat mode to "Off"</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/hubitat.png" alt="Hubitat logo">
-      <h4>Hubitat</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">Trigger</span>
-        <span class="step-content">Contact sensor open for 1 minute</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set thermostat mode to "off"</span>
-      </div>
-      <div class="platform-step-variant">
-        <div class="step-variant">
-          <strong>Setup:</strong> Use Rule Machine or Thermostat Scheduler
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/homekit.png" alt="Apple HomeKit logo">
-      <h4>Apple HomeKit</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Any window or door opens</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Stays open for at least 1 minute</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Do</span>
-        <span class="step-content">Turn off thermostat</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/alexa.png" alt="Alexa logo">
-      <h4>Alexa</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Smart Home sensor opens</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Wait</span>
-        <span class="step-content">1 minute</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set thermostat to Off mode</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="platform-card">
-    <div class="platform-card-header">
-      <img src="/assets/img/logos/google.png" alt="Google Home logo">
-      <h4>Google Home</h4>
-    </div>
-    <div class="platform-steps">
-      <div class="platform-step">
-        <span class="step-label">When</span>
-        <span class="step-content">Window sensor opens</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Condition</span>
-        <span class="step-content">Sensor open for at least 1 minute</span>
-      </div>
-      <div class="platform-step">
-        <span class="step-label">Action</span>
-        <span class="step-content">Set thermostat to Off</span>
-      </div>
-    </div>
-  </div>
-</div>
+- **Trigger:** Any monitored window or door remains open for two minutes.
+- **Conditions:** Heating or cooling is active, climate pause is enabled, and no safety condition requires HVAC to continue.
+- **Action:** Record that this recipe owns the pause, save the current thermostat mode if the system can do so reliably, pause HVAC, and identify the opening in a notification.
+- **Wait / timeout:** Ignore quick openings. Remind the household if an opening remains open long enough for indoor temperature to become a concern.
+- **Stop condition:** Every monitored opening has remained closed briefly.
+- **Manual override:** A thermostat change made during the pause cancels automatic restoration of the old state.
+
+<div class="automation-example">IF any monitored window remains open for two minutes
+AND heating or cooling is active
+THEN mark HVAC as paused by this recipe
+AND pause the thermostat
+
+IF every monitored opening remains closed
+AND this recipe still owns the pause
+THEN restore the saved thermostat mode
+AND clear the pause marker</div>
+
+## Setup notes
+
+1. Start with windows people intentionally leave open. Exclude exterior doors used for quick trips.
+2. Verify each contact sensor reports open and closed correctly ten times.
+3. Create one combined "any monitored opening is open" state.
+4. Add a two-minute open delay and a short all-closed delay to prevent rapid cycling.
+5. Track whether this recipe paused HVAC. Never resume merely because a window closed.
+6. During testing, notify without changing the thermostat.
+7. After notifications are reliable, test pause and resume while someone watches the thermostat.
+
+## Safe restoration
+
+The resume half is more important than the pause:
+
+- Resume only when all monitored openings are closed.
+- Resume only when the recipe still owns the pause.
+- Restore the saved mode, not an assumed seasonal mode.
+- If the saved state is missing or invalid, notify instead of guessing.
+- If someone manually changed the thermostat, clear recipe ownership and leave their choice alone.
+- Keep independent freeze and overheat protection active.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Different delays per window</h3>
-    <p>Set different delays based on window location:</p>
-    <ul>
-      <li><strong>Front door:</strong> 1 minute delay (high-traffic)</li>
-      <li><strong>Remote bedroom:</strong> 5 minutes delay (less impact)</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Visual feedback dashboard</h3>
-    <p>Display which windows/doors are open and thermostat status:</p>
-    <ul>
-      <li>Show count of open windows</li>
-      <li>List specific windows currently open</li>
-      <li>Thermostat current status (Off due to windows)</li>
-      <li>Time since thermostat turned off</li>
-      <li>Outdoor vs indoor temperature comparison</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Seasonal variations</h3>
-    <p>Adjust behavior based on season:</p>
-    <ul>
-      <li><strong>Winter:</strong> Shorter delay (1 min), aggressive shutdown</li>
-      <li><strong>Summer:</strong> Medium delay (2 min), standard shutdown</li>
-      <li><strong>Spring/Fall:</strong> Longer delay (5 min), encourage natural ventilation</li>
-    </ul>
-  </div>
-</div>
+### Use different delays by opening
 
-## Common issues and solutions
+A window intended for ventilation can use a short delay. A frequently used patio door needs a longer delay or should be excluded. The goal is to catch sustained openings without cycling HVAC during normal traffic.
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Thermostat shuts off too frequently</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Delay too short or too many sensors triggering shutdown.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Increase delay to 2-3 minutes before shutting off thermostat</li>
-        <li>Differentiate between doors (longer delay) and windows (shorter delay)</li>
-        <li>Exclude mudroom/garage doors that open briefly</li>
-        <li>Add condition: Only shut off if multiple windows open</li>
-        <li>Add manual override button to temporarily disable automation</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Temperature becomes uncomfortable</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Thermostat off too long - forgot window was open.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Create companion automation to turn thermostat back on</li>
-        <li>Set maximum "off" duration: Resume after 30-60 minutes</li>
-        <li>Monitor indoor temperature: Resume if temp changes too much</li>
-        <li>Send reminder notification after 15 minutes</li>
-        <li>Add temperature safety limits (e.g., resume if below 65°F in winter)</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Automation doesn't trigger</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Contact sensors not reporting open state or automation has errors.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Test contact sensors individually - check status in app</li>
-        <li>Verify automation is enabled with no error indicators</li>
-        <li>Check thermostat API compatibility for remote off</li>
-        <li>Review automation logs to see if triggers are firing</li>
-        <li>Check WiFi signal strength for sensors and thermostat</li>
-      </ul>
-    </div>
-  </div>
-</div>
+### Add a reminder instead of a blinking light
 
----
+Send one useful notification when HVAC pauses and another only if the opening remains open. Repeated blinking or phone alerts become noise and teach the household to ignore the recipe.
 
-**Related automations:**
-- [Resume thermostat when all windows close](/automation/climate/thermostat-windows-close/)
-- [Smart window open/close notifications](/automation/climate/window-notifications/)
-- [Away mode automation](/automation/daily-routines/away-mode/)
+### Show which opening blocks resume
+
+A status tile can list the windows still open. This makes a failed resume understandable without exposing platform-specific implementation details.
+
+## Failure modes
+
+- **HVAC cycles during quick door trips:** Increase that door's delay or remove it from the monitored group.
+- **HVAC never resumes:** Find the sensor still reporting open and verify that this recipe owns the pause.
+- **The wrong mode resumes:** Do not guess heat, cool, or auto. Validate saved-state handling before enabling restoration.
+- **A manual thermostat change is reversed:** Clear recipe ownership whenever the thermostat changes outside this automation.
+- **A sensor battery dies while reporting open:** Alert on unavailable or stale sensors and require manual review instead of forcing a resume.
+- **Indoor temperature becomes unsafe:** Independent thermostat limits override the automation and notify the household.
+- **The hub or internet is down:** The thermostat remains usable at the wall and continues enforcing its own safety limits.
+
+## Done when
+
+- [ ] Ten quick window openings do not pause HVAC before the delay.
+- [ ] A sustained opening pauses HVAC once and identifies the correct window.
+- [ ] Closing only one of several open windows does not resume HVAC.
+- [ ] Closing every monitored opening resumes the exact prior mode.
+- [ ] A manual thermostat change during the pause is not overwritten.
+- [ ] An unavailable contact sensor produces a visible warning.
+- [ ] The thermostat remains fully controllable at the wall.
+
+## FAQ
+
+### How long should a window stay open before HVAC pauses?
+
+Start with two minutes for windows. Use a longer delay or exclude exterior doors that normally open for brief trips.
+
+### When should the thermostat resume?
+
+Resume only after every monitored window and door has remained closed briefly, and only if this automation was responsible for the pause.
+
+### What if someone changes the thermostat while a window is open?
+
+Treat the manual thermostat change as the new instruction. Do not restore an older saved mode over it when the window closes.
+
+## Related recipes
+
+- [Window open and close notifications](/automation/climate/window-notifications.html)
+- [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
+- [Climate automations](/automation/climate/index.html)
 
 <div class="page-navigation">
-  <a href="/automation/climate/">← Back to Climate Automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/climate/index.html">Back to climate automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

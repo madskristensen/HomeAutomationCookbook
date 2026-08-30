@@ -102,7 +102,7 @@ This cookbook is different. Every automation here follows proven principles:
   
   <a href="/automation/climate/thermostat-windows-open.html" class="featured-card">
     <h3>Smart thermostat control</h3>
-    <p>Stop heating or cooling the outdoors. Save 10-30% on energy bills automatically.</p>
+    <p>Pause heating or cooling when a window stays open, then resume safely after every monitored opening closes.</p>
     <span class="card-arrow">View guide →</span>
   </a>
   

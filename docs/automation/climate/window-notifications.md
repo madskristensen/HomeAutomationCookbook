@@ -330,7 +330,7 @@ Add multiple conditions:
 
 **Related automations:**
 - [Stop thermostat when windows open](/automation/climate/thermostat-windows-open/)
-- [Resume thermostat when all windows close](/automation/climate/thermostat-windows-close/)
+- [Pause HVAC when windows stay open](/automation/climate/thermostat-windows-open.html)
 - [Activate air purifier when air quality drops](/automation/climate/air-quality-purifier/)
 
 <div class="page-navigation">
