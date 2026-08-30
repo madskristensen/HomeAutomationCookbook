@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Entertainment Automations - Music and Media Control
+title: Entertainment automations
 description: Control your home entertainment with smart automations. Music playback, TV integration, volume control, and movie mode lighting.
 keywords: entertainment automation, smart music, TV automation, media control, smart speakers, movie mode, home theater automation
 ---
@@ -13,17 +13,17 @@ Music and entertainment control automations make your smart home feel more alive
 
 ## Why entertainment automation?
 
-**Soundtrack Your Life** — Music starts automatically for different activities
+**Activity-based audio** - Music starts for a deliberate household activity
 
-**Perfect Ambiance** — Lights dim automatically when watching movies
+**Predictable lighting** - Lights use a known scene when the TV turns on
 
-**Morning Motivation** — Shower music plays without touching your phone
+**Physical control** - Buttons and switches are faster than finding an app
 
-**Welcome Home** — Arrive to music and perfect lighting
+**Safe volume** - Startup limits prevent unexpectedly loud audio
 
-**Physical Control** — Buttons and switches are faster than voice commands
+**Easy cancellation** - A person can stop the action immediately
 
-**Consistent Volume** — No more blasting speakers or quiet audio
+**Manual fallback** - Normal remotes and controls remain available
 
 </div>
 
@@ -35,7 +35,7 @@ Music and entertainment control automations make your smart home feel more alive
 
 ### Dim lights when TV turns on
 
-Automatically dim lights for optimal movie watching experience.
+Dim selected lights to a tested scene while normal switches remain available.
 
 <span class="card-meta">**Best for:** Movie nights, TV viewing, ambiance</span>
 
@@ -83,7 +83,7 @@ Maintain consistent volume levels across all your speakers.
 
 ### One-tap pool party mode
 
-Instantly activate pool party mode with colorful lights, music, and pool cover with a single tap or voice command.
+Start a tested lighting and music scene from one deliberate control. Keep pool safety equipment outside the routine.
 
 <span class="card-meta">**Best for:** Backyard entertaining, instant ambiance</span>
 

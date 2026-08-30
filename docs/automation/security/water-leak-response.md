@@ -32,8 +32,8 @@ Automatic shutoff can reduce damage, but a valve that cannot reopen, closes on a
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
 | Detect water | [THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2) | [NEO Z-Wave Plus 700 water leak sensor](https://www.amazon.com/dp/B0FSKFCKTB) | Name every sensor for the place a person should inspect. |
-| Stop incoming water | Manual main-water shutoff | TODO: verified automatic shutoff valve | Everyone responsible for the home should know the manual valve location. |
-| Reach the household | Persistent phone notification to at least two adults | TODO: verified backup alert path | A local audible alert is useful when phones are muted or away. |
+| Stop incoming water | Manual main-water shutoff | No personally verified automatic shutoff valve yet | Everyone responsible for the home should know the manual valve location. |
+| Reach the household | Persistent phone notification to at least two adults | No personally verified backup alert path yet | A local audible alert is useful when phones are muted or away. |
 
 See [recommended gear](/gear.html) for the job-first checklist. I have used both leak sensors. No automatic shutoff product is recommended until I have verified one in this home.
 

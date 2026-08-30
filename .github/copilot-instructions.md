@@ -4,6 +4,7 @@
 - Don't use emojis in the text.
 - In public content, describe the author's experience with "I" and "my." Never call the author "the owner."
 - Use each recommended product's name. Do not use price adjectives such as "lower-cost" or "cheaper" as the link text.
+- Never publish TODO placeholders for unverified hardware. Use "No personally verified recommendation yet" or a specific variation that names the unverified job.
 
 # Site structure
 - This is a Jekyll static site for homeautomationcookbook.com
@@ -12,7 +13,7 @@
 - Layout: `docs/_layouts/default.html` is the main template
 - Homepage: `docs/index.md`
 - Documentation pages: `docs/getting-started/philosophy.md`, `docs/getting-started/tips.md`, `docs/getting-started/resources.md`
-- Automation categories: 6 directories under `docs/automation/` (motion, contact, presence, climate, media, appliances)
+- Automation categories: 7 directories under `docs/automation/`, plus the main automation hub page
 - Each category has: `index.md` (overview) and individual automation pages
 
 # Design system

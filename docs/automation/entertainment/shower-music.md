@@ -1,218 +1,110 @@
 ---
 layout: automation
-title: Play Music When Shower Starts - Bathroom Automation
-description: Automatically play your favorite music or podcasts when you start the shower. Complete guide for bathroom entertainment automation.
-keywords: shower music automation, bathroom speaker automation, automatic music, shower entertainment, smart bathroom music, bathroom audio control, morning music
+title: Play music when a shower starts
+description: A platform-neutral recipe that starts music or a podcast in the bathroom when a shower begins, using a light or door sensor as the trigger.
+keywords: shower music automation, bathroom speaker automation, automatic music, shower entertainment, bathroom audio control
+last_modified_at: 2026-08-30
+faqs:
+  - question: Which trigger works best, the light switch or a door sensor?
+    answer: A light switch trigger is usually the most reliable since the light almost always goes on before the shower starts. A door sensor is a reasonable backup for a glass enclosure without a separate switch.
+  - question: Will this wake other people in the house?
+    answer: Not if a night-mode or quiet-hours condition is included. Restrict playback to normal waking hours, or add a condition that skips playback when the household is in a sleeping state.
+  - question: Does the music stop automatically when the shower ends?
+    answer: Yes, if a matching "lights off" or "door closed for a while" condition is set up to stop or pause playback a couple of minutes after the shower trigger clears.
 ---
 
-# Play music in the bathroom when you start a shower
+# Play music when a shower starts
 
-Having music in the bathroom is one of life's luxuries. However, remembering to turn on your favorite jam isn't always easy, especially early in the morning. Automate your shower soundtrack for the perfect start to your day.
+Start music or a podcast on a bathroom speaker automatically when the shower light goes on, and stop it again once the shower ends.
 
-## Use cases
+**Best for:** A bathroom with a smart light switch or door sensor that reliably signals when a shower is starting, paired with a speaker that already works in that room.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Morning Routines</h4>
-    <ul>
-      <li><strong>Morning Shower Music</strong> - Automatically start your favorite playlist when shower begins</li>
-      <li><strong>News Briefing</strong> - Catch up on morning news while getting ready</li>
-      <li><strong>Multi-User Households</strong> - Everyone gets their preferred audio automatically</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Entertainment & Relaxation</h4>
-    <ul>
-      <li><strong>Podcast Listening</strong> - Continue your audiobook or podcast during shower time</li>
-      <li><strong>Relaxing Bath Sounds</strong> - Calming music for evening bath routine</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Waking a sleeping household. Restrict this to normal waking hours or add a quiet-hours condition.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Speaker/Music System</strong>
-      <div class="product-details">
-        Popular brands: Amazon Echo, Google Home, Sonos, JBL waterproof speakers<br>
-        Waterproof or water-resistant recommended • WiFi connectivity
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Trigger Option (choose one)</strong>
-      <div class="product-details">
-        <strong>Smart Light Switch:</strong> Trigger when shower lights turn on (easiest, most reliable)<br>
-        <strong>Contact Sensor:</strong> Trigger when shower door opens (best for glass enclosures)
-      </div>
-    </div>
-  </div>
-</div>
+Remembering to start music before stepping into the shower, especially early in the morning, is easy to forget. Tying playback to a signal that already exists, like the light switch, removes the need to think about it and gives a consistent morning routine without extra steps.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Fan Switch</strong>
-      <div class="product-details">
-        Also turn on fan automatically with music
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Motion Sensor</strong>
-      <div class="product-details">
-        Alternative trigger option for bathroom entry
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Trigger the automation | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Use the existing shower light switch as the trigger where possible. |
+| Play the music | No personally verified recommendation yet | No personally verified recommendation yet | A waterproof or water-resistant speaker is worth choosing for a bathroom, but no specific model has been personally verified here. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF shower lights turn on
-AND time between 6:00 AM - 10:00 AM
-THEN play music on bathroom speaker
-AND set volume to 35%</div>
+- **Trigger:** The bathroom light turns on, or a door sensor reports the shower door opening.
+- **Conditions:** The current time is within normal waking hours, and the household is not in a sleeping or quiet-hours state.
+- **Action:** Start music or the last-used podcast on the bathroom speaker at a preset volume.
+- **Wait / timeout:** Keep playing until the stop condition is met.
+- **Stop condition:** The light stays off, or the door stays closed, for a couple of minutes.
+- **Manual override:** The speaker's own controls always work to pause, stop, or change volume directly.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers (choose one method)</h4>
-    <strong>Method 1 - Light-based:</strong> Shower lights turn on<br>
-    <strong>Method 2 - Door sensor:</strong> Shower door opens (contact sensor)<br>
-    <strong>Method 3 - Combined:</strong> Shower lights on AND door opens (more reliable)
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions (optional)</h4>
-    <strong>Home Mode:</strong> Home is NOT in Night mode (don't wake sleeping household)<br>
-    <strong>Time-Based:</strong> Only between 6 AM and 10 AM (morning routine)<br>
-    <strong>Day of Week:</strong> Only weekdays (different weekend routine)
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Play music/podcast on bathroom speaker</li>
-      <li>Set volume to preset level (30-40%)</li>
-      <li>Optional: Turn on bathroom fan</li>
-      <li>Optional: Flash lights if doorbell rings</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the bathroom light turns on
+AND the current time is within waking hours
+AND the household is not in quiet hours
+THEN play music on the bathroom speaker at the preset volume
+
+IF the bathroom light has been off for a couple of minutes
+THEN stop or pause the bathroom speaker</div>
+
+## Setup notes
+
+1. Choose one trigger, the light switch or a door sensor, and treat the other as an optional backup rather than combining both in a way that is hard to troubleshoot.
+2. Add a quiet-hours or night-mode condition so this does not start music while someone else in the house is asleep.
+3. Set a fixed starting volume so the result is predictable regardless of the speaker's last setting.
+4. Require the stop condition to hold for a couple of minutes so briefly leaving the bathroom does not cut off the music early.
+5. Confirm the speaker and trigger both respond reliably in the platform's automation log before relying on this daily.
 
 ## Advanced features
 
-### Auto-stop music
+### Time-of-day content
 
-Turn off music automatically after shower ends:
+Where useful, play a news podcast on weekday mornings and a relaxing playlist at other times, using the same trigger with different content chosen by time and day.
 
-Create automation with these elements:
-- **Trigger:** Shower lights turn off for 2 minutes
-- **Action:** Stop music playback on bathroom speaker
+### Pause instead of stop for podcasts
 
-**Pause instead (for podcasts):**
-Use pause action instead of stop to maintain position for next shower
-
-### Context-aware audio
-
-Play different content based on time or day:
-
-Use conditional logic:
-- **Weekday morning (6-8 AM):** Play news podcast
-- **Weekend morning:** Play relaxing music playlist
-- **Evening (after 6 PM):** Resume previous podcast
-- **Default:** Play favorite shower playlist
-
-Automation checks day of week and time, then plays appropriate content.
-
-### Bonus automations
-
-Since your smart home knows when you're showering:
-
-**Flash lights for doorbell:**
-When doorbell rings while shower lights are on:
-- Flash bathroom main lights
-- Send mobile notification: "Someone at the door!"
-
-**Lock front door:**
-Automatically lock front door for security
-
-**Adjust temperature:**
-Increase thermostat by 2°F for comfort
+Use a pause action rather than stop for podcast content so playback resumes from the same point on the next shower.
 
 ## Failure modes
 
-### Issue: Music doesn't play
+- **Music does not start:** Confirm the speaker is online, the streaming account is still logged in, and the trigger is registering in the automation log.
+- **Music starts at the wrong volume:** Set the volume explicitly as part of the action, not left to whatever the speaker was last set to.
+- **Music plays at night:** Check that the quiet-hours condition is present and correctly configured.
+- **Wrong content plays:** Confirm the playlist or podcast reference still matches what is expected, since streaming services occasionally change identifiers.
+- **Music does not stop after the shower:** Confirm the off-condition requires a sustained clear period and is not just checking a single instantaneous reading.
 
-**Causes:**
-- Speaker not connected to WiFi
-- Music service not linked or subscription expired
-- Automation not triggering
-- Speaker already playing something else
-- Volume set to zero
+## Done when
 
-**Solutions:**
-✅ Verify speaker shows as online in your app
-✅ Test speaker manually - play music directly to verify it works
-✅ Check music service login (Spotify, Apple Music, etc.)
-✅ Review automation logs to see if trigger fired
-✅ Test trigger manually (turn shower light on via app)
-✅ Ensure volume preset is audible (30-40% recommended)
-✅ Add stop/pause action before playing new content
+- [ ] A real shower reliably starts music using the chosen trigger.
+- [ ] Playback does not start during quiet hours.
+- [ ] Music stops within a couple of minutes after the shower ends.
+- [ ] The speaker's own manual controls still work independently.
 
-### Issue: Wrong music plays
+## FAQ
 
-**Causes:**
-- Playlist URI incorrect
-- Music service changed playlist ID
-- Speaker grouped with other rooms
-- Previous music still queued
+### Which trigger works best, the light switch or a door sensor?
 
-**Check:**
-- ✅ Verify playlist URI/ID in automation matches desired playlist
-- ✅ Test playlist manually in music app
-- ✅ Check speaker grouping - ungroup from other rooms
-- ✅ Clear speaker queue before playing new content
-- ✅ Use specific content type (playlist, album, station)
+A light switch trigger is usually the most reliable since the light almost always goes on before the shower starts. A door sensor is a reasonable backup for a glass enclosure without a separate switch.
 
-**Fix:**
-Sequence of actions:
-1. Clear previous queue on speaker
-2. Set volume to 35%
-3. Play specific playlist by URI
+### Will this wake other people in the house?
 
-### Issue: Music too loud or too quiet
+Not if a night-mode or quiet-hours condition is included. Restrict playback to normal waking hours, or add a condition that skips playback when the household is in a sleeping state.
 
-**Causes:**
-- Volume preset incorrect for room acoustics
-- Previous manual adjustment not reset
-- Speaker settings changed
-- Time of day not considered
+### Does the music stop automatically when the shower ends?
 
-**Solutions:**
-✅ Adjust volume level in automation (test range 0.20-0.50)
-✅ Set volume BEFORE playing content (shown in examples)
-✅ Use volume presets automation to reset daily
-✅ Add time-based volume:
-  - Early morning (6-7 AM): 25%
-  - Morning (7-9 AM): 35%
-  - Evening (6-10 PM): 30%
-✅ Test with actual shower running (sound dampening affects perception)
-
----
+Yes, if a matching "lights off" or "door closed for a while" condition is set up to stop or pause playback a couple of minutes after the shower trigger clears.
 
 ## Related recipes
-- [Turn on bathroom fan when starting shower](/automation/climate/fan-shower.html)
-- [Morning routine automation](/automation/daily-routines/morning-routine.html)
-- [Speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
+
+- [Turn on the bathroom fan when a shower starts](/automation/climate/fan-shower.html)
+- [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
+- [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 <div class="page-navigation">
   <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

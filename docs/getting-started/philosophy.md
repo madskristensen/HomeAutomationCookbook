@@ -6,13 +6,13 @@ description: Learn the core principles of home automation that work for everyone
 
 # Home automation philosophy
 
-The best smart home is one that works seamlessly for everyone, requires no explanation, and continues functioning even when things go wrong. These core principles should guide every automation you create.
+A useful smart home works for everyone, requires little explanation, and continues functioning when something goes wrong. These principles guide every automation on this site.
 
 <div class="philosophy-grid">
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon" role="img" aria-label="Group of people">👥</span>
+    <span class="philosophy-icon" aria-hidden="true">1</span>
     <h2>Works for everybody</h2>
   </div>
   
@@ -20,7 +20,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
   
   <div class="philosophy-example">
     <h3>Example: automatic lights done wrong</h3>
-    <p>When I first installed automatic lights in my bathrooms, they worked perfectly for me. However, my wife complained that they didn't work for her at all. The problem? The motion sensor delay. By the time she opened the door and walked in, the lights would just be turning on, which prevented her muscle memory from reaching for the light switch. But once she clicked the switch out of habit, the lights would turn off instead of on.</p>
+    <p>When I first installed automatic lights in my bathrooms, they worked for me but not for my wife. The motion sensor was too slow. By the time she reached for the switch out of habit, the automation had turned the light on, so her tap turned it off again.</p>
   </div>
   
   <div class="philosophy-fix">
@@ -36,11 +36,11 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon" role="img" aria-label="Target">🎯</span>
+    <span class="philosophy-icon" aria-hidden="true">2</span>
     <h2>Adapts to natural behavior</h2>
   </div>
   
-  <p class="philosophy-intro">Home automation systems should improve people's lives by working in ways that follow natural human behavior. It's easy to build automations that work perfectly when people use them the "correct" way, but if that's not how people naturally behave, the automation needs adjustment.</p>
+  <p class="philosophy-intro">Home automation should follow natural human behavior. A rule that works only when people use the room the "correct" way needs adjustment.</p>
   
   <div class="philosophy-example">
     <h3>Example: linen closet lights</h3>
@@ -61,7 +61,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon" role="img" aria-label="Thought bubble">💭</span>
+    <span class="philosophy-icon" aria-hidden="true">3</span>
     <h2>No further explanation needed</h2>
   </div>
   
@@ -85,7 +85,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon" role="img" aria-label="Shield">🛡️</span>
+    <span class="philosophy-icon" aria-hidden="true">4</span>
     <h2>Resiliency built in</h2>
   </div>
   
@@ -115,7 +115,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon" role="img" aria-label="Ruler">📐</span>
+    <span class="philosophy-icon" aria-hidden="true">5</span>
     <h2>The automation pyramid</h2>
   </div>
   
@@ -166,7 +166,7 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 <div class="philosophy-card">
   <div class="philosophy-header">
-    <span class="philosophy-icon" role="img" aria-label="Checkmark">✅</span>
+    <span class="philosophy-icon" aria-hidden="true">6</span>
     <h2>Putting philosophy into practice</h2>
   </div>
   
@@ -174,23 +174,23 @@ The best smart home is one that works seamlessly for everyone, requires no expla
     <h3>As you build your automations, ask yourself:</h3>
     <div class="checklist-items">
       <div class="checklist-item">
-        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
+        <span class="checklist-icon" aria-hidden="true">Yes</span>
         <span><strong>Does it work for everyone in my household?</strong></span>
       </div>
       <div class="checklist-item">
-        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
+        <span class="checklist-icon" aria-hidden="true">Yes</span>
         <span><strong>Does it adapt to how people naturally behave?</strong></span>
       </div>
       <div class="checklist-item">
-        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
+        <span class="checklist-icon" aria-hidden="true">Yes</span>
         <span><strong>Can people figure it out without my explanation?</strong></span>
       </div>
       <div class="checklist-item">
-        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
+        <span class="checklist-icon" aria-hidden="true">Yes</span>
         <span><strong>Will it still work if the internet goes down?</strong></span>
       </div>
       <div class="checklist-item">
-        <span class="checklist-icon" role="img" aria-label="Checkmark">✅</span>
+        <span class="checklist-icon" aria-hidden="true">Yes</span>
         <span><strong>Do physical controls still function as expected?</strong></span>
       </div>
     </div>
@@ -205,4 +205,4 @@ The best smart home is one that works seamlessly for everyone, requires no expla
 
 ---
 
-[Ready to build automations? →](/automation/)
+[Ready to build automations?](/automation/index.html)

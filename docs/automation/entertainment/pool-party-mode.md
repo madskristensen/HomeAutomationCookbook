@@ -1,273 +1,116 @@
 ---
 layout: automation
-title: One-Tap Pool Party Mode - Smart Home Entertainment Automation
-description: Instantly activate pool party mode with one tap or voice command. Colorful lights, music, pool cover opens, and safety features pause automatically.
-keywords: pool party automation, backyard party mode, outdoor entertainment, pool lights, party scene, smart pool, one tap party mode
+title: Set up one-tap pool party mode
+description: A platform-neutral recipe that starts music and lighting for a pool or backyard party with one button press, without touching safety alarms.
+keywords: pool party automation, backyard party mode, outdoor entertainment, party scene, one tap party mode
+last_modified_at: 2026-08-30
+faqs:
+  - question: Does party mode disable any safety alarms?
+    answer: No. This recipe should never touch pool alarms, gate sensors, or other safety features. It only controls lighting, music, and non-critical notifications.
+  - question: Why include an automatic end time?
+    answer: A party scene left running after everyone has gone home wastes electricity and can annoy neighbors with music or bright colored lights running unattended.
+  - question: Can more than one button trigger the same scene?
+    answer: Yes, a voice command, a physical button, and a dashboard tile can all point at the same automation, which keeps behavior consistent regardless of how it is started.
 ---
 
-# One-tap pool party mode
+# Set up one-tap pool party mode
 
-Transform your backyard into party mode instantly with a single tap or voice command. This automation coordinates music, colorful lights, pool cover, and temporarily adjusts safety settings for the perfect pool party atmosphere.
+Turn on party lighting and music around a pool or backyard with a single button press, and automatically end it after a set time.
 
-## Use cases
+**Best for:** A backyard or pool area with color-capable outdoor lighting and a weatherproof speaker that already respond to platform automation commands.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Entertainment scenarios</h4>
-    <ul>
-      <li><strong>Spontaneous gatherings</strong> - Guests arrive and party mode is one tap away</li>
-      <li><strong>Weekend pool parties</strong> - Instant ambiance for planned events</li>
-      <li><strong>Evening swims</strong> - Create the perfect nighttime pool atmosphere</li>
-      <li><strong>Kids' pool parties</strong> - Fun lights and music for birthday celebrations</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Convenience benefits</h4>
-    <ul>
-      <li><strong>One action, many devices</strong> - No fumbling with multiple apps</li>
-      <li><strong>Guest-friendly</strong> - Anyone can activate with voice or button</li>
-      <li><strong>Consistent experience</strong> - Perfect setup every time</li>
-      <li><strong>Quick deactivation</strong> - End party mode just as easily</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Disabling pool safety alarms, gate sensors, or any other safety feature. Those must keep working regardless of party mode.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart outdoor lights</strong>
-      <div class="product-details">
-        Popular brands: Philips Hue Outdoor, LIFX, Govee RGBIC, Nanoleaf Outdoor<br>
-        Color-capable lights for pool area, patio, and landscape
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Outdoor speakers</strong>
-      <div class="product-details">
-        Options: Sonos Outdoor, Bose Outdoor, Amazon Echo Outdoor, weatherproof Bluetooth speakers<br>
-        Streaming music capability required
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Trigger device</strong>
-      <div class="product-details">
-        Smart button (Flic, Aqara), voice assistant, or wall-mounted tablet<br>
-        Should be accessible near pool area
-      </div>
-    </div>
-  </div>
-</div>
+Turning on several outdoor devices individually is slow, and it is easy to forget one, or forget to turn everything off again afterward. A single trigger that sets lighting and music to a consistent state, and reverses itself automatically, is a better fit for something as informal as a pool gathering.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart pool cover</strong>
-      <div class="product-details">
-        Automatic pool cover with smart home integration for hands-free opening
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Pool lighting</strong>
-      <div class="product-details">
-        Color-changing underwater pool lights (Pentair, Hayward IntelliBrite)
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Outdoor heater</strong>
-      <div class="product-details">
-        Smart patio heaters for comfortable evening parties
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Safety consideration</strong>
-  <ul>
-    <li>Pool party mode should only pause non-critical notifications (like motion alerts)</li>
-    <li>Never disable water safety alarms or pool gate sensors during parties</li>
-    <li>Consider adding a "kids present" mode with additional safety features active</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Outdoor party lighting | No personally verified recommendation yet | No personally verified recommendation yet | Needs to be rated for outdoor use and support color or scene control from the platform. |
+| Outdoor music playback | No personally verified recommendation yet | No personally verified recommendation yet | Needs to be weatherproof or otherwise suitable for the location and accept playback and volume commands. |
+| Trigger the scene | No personally verified recommendation yet | No personally verified recommendation yet | Any button, voice command, or dashboard tile the platform can use to start an automation. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF "Pool party" voice command OR button press
-THEN set pool lights to color cycle
-AND set patio lights to party colors
-AND play party playlist on outdoor speakers at 60% volume
-AND open pool cover (if equipped)
-AND pause backyard motion notifications for 4 hours</div>
+- **Trigger:** A button press, voice command, or dashboard tile for "pool party mode."
+- **Conditions:** The current time falls within hours the household considers reasonable for outdoor music.
+- **Action:** Set outdoor lighting to a party scene, start the party playlist at a set volume, and pause only non-critical outdoor notifications, such as routine motion alerts.
+- **Wait / timeout:** Run for a fixed duration, such as four hours, unless ended manually first.
+- **Stop condition:** A separate "end party" trigger, or the automatic timeout, restores normal lighting and stops music.
+- **Manual override:** Any light, speaker, or notification setting can still be changed directly at any time.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Voice command: "Pool party" or "Party mode"</li>
-      <li>OR smart button press near pool</li>
-      <li>OR NFC tag tap</li>
-      <li>OR dashboard button on tablet</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions (optional)</h4>
-    <strong>Time-based:</strong> Only allow activation between 10 AM and 11 PM<br>
-    <strong>Weather:</strong> Check if rain is expected (optional warning)<br>
-    <strong>Pool temperature:</strong> Announce if water is too cold
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Set pool lights to color cycle mode</li>
-      <li>Set patio and landscape lights to party colors (60% brightness)</li>
-      <li>Start party playlist on outdoor speakers at 60% volume</li>
-      <li>Open pool cover (if equipped)</li>
-      <li>Turn on patio heaters (if evening and temperature below 70°F)</li>
-      <li>Pause motion notifications for outdoor cameras</li>
-      <li>Announce "Pool party mode activated" on outdoor speaker</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF "pool party mode" is triggered
+AND the current time is within allowed hours
+THEN set outdoor lights to the party scene
+AND start the party playlist at the preset volume
+AND pause routine outdoor motion notifications
+
+IF four hours have passed since party mode started
+OR "end pool party" is triggered
+THEN restore normal outdoor lighting
+AND stop music
+AND resume routine outdoor motion notifications</div>
+
+## Setup notes
+
+1. Confirm outdoor lighting and the speaker both respond reliably to platform commands before wiring them into a single scene.
+2. Set a maximum volume level as part of the automation so it cannot be started louder than the household considers acceptable for neighbors.
+3. Choose which notifications, if any, should pause during party mode, and confirm safety-related alarms and sensors are explicitly excluded.
+4. Build a matching "end party" action, whether a separate button or a timeout, so the scene does not run indefinitely.
+5. Restrict activation to hours the household is comfortable with outdoor music and lights running.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Party mode variations</h3>
-    <p>Create different party scenes for different occasions:</p>
-    <ul>
-      <li><strong>Day party:</strong> Upbeat music, subtle light colors</li>
-      <li><strong>Night party:</strong> Vibrant colors, synchronized light shows</li>
-      <li><strong>Kids party:</strong> Fun music, rainbow colors, safety features stay on</li>
-      <li><strong>Romantic evening:</strong> Soft colors, jazz playlist, lower volume</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Auto-deactivation</h3>
-    <p>Automatically end party mode:</p>
-    <ul>
-      <li><strong>Timer:</strong> End after 4 hours automatically</li>
-      <li><strong>Time-based:</strong> Always end by 11 PM (quiet hours)</li>
-      <li><strong>Manual:</strong> "End pool party" voice command</li>
-      <li><strong>Gradual wind-down:</strong> Slowly dim lights and lower volume before ending</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Music integration</h3>
-    <p>Coordinate music with lights:</p>
-    <ul>
-      <li>Sync light colors to music beat (Philips Hue Sync)</li>
-      <li>Pre-configured party playlists by genre</li>
-      <li>Volume scheduling (louder during peak hours)</li>
-      <li>Guest playlist requests via shared Spotify</li>
-    </ul>
-  </div>
-</div>
+### Gradual wind-down
 
-## Common issues and solutions
+Instead of stopping abruptly at the timeout, gradually lower volume and dim lights over several minutes so the change feels less sudden.
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Lights don't sync properly</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Some lights respond faster than others, breaking the effect.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Use lights from same brand/ecosystem for consistent timing</li>
-        <li>Group lights by protocol (all Zigbee, all WiFi)</li>
-        <li>Add small delays to faster lights to sync with slower ones</li>
-        <li>Use a dedicated light sync controller for music-reactive modes</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Music doesn't start</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Lights activate but speakers stay silent.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Verify speaker is powered on and connected to network</li>
-        <li>Check streaming service authentication</li>
-        <li>Ensure playlist is accessible (not private or deleted)</li>
-        <li>Test speaker independently before troubleshooting automation</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Voice command not recognized</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Assistant doesn't understand "pool party" command.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Create explicit routine with trigger phrase</li>
-        <li>Try alternative phrases: "party mode", "backyard party"</li>
-        <li>Use virtual switch that can be controlled by name</li>
-        <li>Add the phrase to your custom voice commands</li>
-      </ul>
-    </div>
-  </div>
-</div>
+### Scene variations
 
-## Best practices
+Where the platform supports more than one saved scene, offer a quieter daytime version and a more vivid evening version, selected by time of day.
 
-<div class="best-practice-card">
-  <h3>Setting up party mode</h3>
-  <ol>
-    <li>Test each device individually before combining into scene</li>
-    <li>Set reasonable volume limits to respect neighbors</li>
-    <li>Create both activate and deactivate automations</li>
-    <li>Include voice confirmation so you know it activated</li>
-    <li>Add a physical button backup for when voice fails</li>
-    <li>Set auto-shutoff timer as safety net</li>
-  </ol>
-</div>
+## Failure modes
 
-<div class="warning-card">
-  <h3>What to avoid</h3>
-  <ul>
-    <li><strong>Disabling safety features</strong> - Pool alarms should never be disabled</li>
-    <li><strong>No volume limits</strong> - Set maximum volume to avoid disturbing neighbors</li>
-    <li><strong>No end time</strong> - Always include auto-deactivation or reminder</li>
-    <li><strong>Too complex</strong> - Keep it simple; guests should be able to activate easily</li>
-  </ul>
-</div>
+- **Lights and music start at different speeds:** Group devices by the same wireless protocol where possible, or add a short delay to the slower devices so they land closer together.
+- **Music does not start:** Confirm the speaker is online and the streaming account used by the automation is still authenticated.
+- **Party mode never ends:** Confirm the timeout action exists and is enabled; a scene should never rely on someone remembering to turn it off manually.
+- **Safety notifications get paused by mistake:** Review exactly which notification types the automation pauses and remove anything safety-related.
+- **Volume is too loud:** Lower the preset volume in the action itself rather than relying on someone adjusting it after the fact.
 
----
+## Done when
+
+- [ ] A single trigger reliably turns on both lighting and music together.
+- [ ] The scene never disables a safety alarm or sensor.
+- [ ] The automation ends itself automatically after a set duration.
+- [ ] Volume stays within a level the household is comfortable with.
+- [ ] A manual "end party" option exists and works.
+
+## FAQ
+
+### Does party mode disable any safety alarms?
+
+No. This recipe should never touch pool alarms, gate sensors, or other safety features. It only controls lighting, music, and non-critical notifications.
+
+### Why include an automatic end time?
+
+A party scene left running after everyone has gone home wastes electricity and can annoy neighbors with music or bright colored lights running unattended.
+
+### Can more than one button trigger the same scene?
+
+Yes, a voice command, a physical button, and a dashboard tile can all point at the same automation, which keeps behavior consistent regardless of how it is started.
 
 ## Related recipes
-- [Welcome home music](/automation/entertainment/welcome-home-music.html)
-- [TV dims lights](/automation/entertainment/tv-dim-lights.html)
-- [Speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
+
+- [Play music when arriving home](/automation/entertainment/welcome-home-music.html)
+- [Dim lights when the TV turns on](/automation/entertainment/tv-dim-lights.html)
+- [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 <div class="page-navigation">
   <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

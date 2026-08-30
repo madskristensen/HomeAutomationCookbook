@@ -1,157 +1,109 @@
 ---
 layout: automation
-title: Garbage Day Reminder - Dashboard Automation
-description: Create a dashboard tile that reminds you to take out the trash. The tile turns red until the task is complete.
-keywords: garbage reminder, trash day, dashboard automation, virtual switch, weekly reminder, smart home dashboard
+title: Set up a garbage day reminder tile
+description: A platform-neutral recipe that turns a dashboard tile red before garbage day and green again once the task is marked done.
+keywords: garbage reminder, trash day, dashboard automation, virtual switch, weekly reminder
+last_modified_at: 2026-08-30
+faqs:
+  - question: What happens if I forget to mark the tile as done?
+    answer: The tile stays red until it is tapped or an auto-reset automation clears it the next morning. Either way, nothing is lost; the reminder simply persists until acknowledged.
+  - question: Can I track more than one type of collection with this?
+    answer: Yes, create a separate virtual switch and tile for each collection type, such as trash, recycling, and yard waste, since they often run on different schedules.
+  - question: Should this account for holiday schedule changes?
+    answer: If the local collection service publishes a calendar, checking it as a condition avoids a false reminder on a week when collection is skipped. Otherwise, the reminder runs on a fixed weekly schedule.
 ---
 
-# Garbage day reminder
+# Set up a garbage day reminder tile
 
-This is a great way to remember to take out the trash before garbage day. The tile on the dashboard lights up red, so you know you have a task to complete. Once you are done, simply click the tile to turn it back green. This indicates you have completed the task.
+Turn a dashboard tile red the evening before garbage day, and green again once the task is marked complete.
 
-## Use cases
+**Best for:** A household using a shared dashboard that already displays other status tiles, with a consistent weekly collection schedule.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Weekly reminders</h4>
-    <ul>
-      <li><strong>Garbage Day</strong> - Take out the trash before collection</li>
-      <li><strong>Recycling Day</strong> - Sort and put out recycling</li>
-      <li><strong>Yard Waste</strong> - Seasonal collection reminders</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Other scheduled tasks</h4>
-    <ul>
-      <li><strong>Water Plants</strong> - Weekly or bi-weekly reminders</li>
-      <li><strong>Pet Care</strong> - Medication or grooming reminders</li>
-      <li><strong>Filter Changes</strong> - HVAC or water filter reminders</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A household without any shared dashboard; a simple phone notification may be a better fit in that case.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Dashboard</strong>
-      <div class="product-details">
-        Wall-mounted tablet or phone dashboard<br>
-        Any dashboard that can show and change a shared task state
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Virtual Switch or Variable</strong>
-      <div class="product-details">
-        Created in your smart home platform to track task status
-      </div>
-    </div>
-  </div>
-</div>
+A phone notification about trash day is easy to dismiss and forget. A tile that stays a visible color until the task is actually done gives a persistent reminder instead of a one-time alert, without needing any new hardware.
+
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Track and display the reminder | No personally verified recommendation yet | No personally verified recommendation yet | This only needs a virtual switch or variable and a dashboard tile; no physical hardware is required. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF it is Wednesday at 6:00 PM
-THEN turn on "Garbage Out" virtual switch
-(tile turns red on dashboard)</div>
+- **Trigger:** A fixed time the evening before collection, such as 6:00 PM on the day before pickup.
+- **Conditions:** None required for the basic version; a calendar check can be added if the collection schedule varies.
+- **Action:** Turn on the virtual switch tied to the dashboard tile, which turns the tile red.
+- **Wait / timeout:** The tile stays red until manually cleared.
+- **Stop condition:** Tapping the tile, or an optional auto-reset the morning after collection, turns the virtual switch off again.
+- **Manual override:** The tile can always be tapped directly regardless of the schedule.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Every Wednesday at 6:00 PM (adjust for your garbage day)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <ul>
-      <li>None</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on the virtual switch or variable</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF it is the evening before collection day
+THEN turn on the "garbage out" virtual switch
+(tile turns red on the dashboard)
 
-## Dashboard tile setup
+IF the tile is tapped
+OR it is the morning after collection day
+THEN turn off the "garbage out" virtual switch
+(tile returns to its normal color)</div>
 
-1. Create a virtual switch named "Garbage Out"
-2. Add tile to dashboard linked to the virtual switch
-3. Configure tile colors:
-   - **OFF state (green):** Task completed or not due
-   - **ON state (red):** Garbage needs to go out
-4. When you complete the task, tap the tile to turn it green
+## Setup notes
+
+1. Create a virtual switch or variable to represent the reminder's state.
+2. Add a dashboard tile linked to that switch, with a clear color difference between the "needs attention" and "done" states.
+3. Schedule the switch to turn on the evening before the actual collection day.
+4. Confirm tapping the tile turns the switch back off, so the household has a simple way to clear the reminder.
+5. If the collection schedule changes for holidays, consider checking a published collection calendar as a condition before the reminder fires.
 
 ## Advanced features
 
-### Calendar integration
+### Multiple collection types
 
-You can take this to a new level if you integrate with the garbage company's service calendar. That way you don't falsely get a reminder on holidays when no garbage is being picked up. Also, if there's a change in schedule due to weather your smart home adapts accordingly.
+Create a separate virtual switch and tile for each collection type, such as trash, recycling, and yard waste, since they often run on different days or frequencies.
 
-**Implementation options:**
-- **ICS calendar import:** Many garbage companies provide ICS calendar feeds you can subscribe to
-- **Community integration:** Some regions have integrations for local collection schedules
-- **Manual calendar:** Create a Google/Apple calendar with your garbage schedule and check it as a condition
-- **API integration:** Some waste management companies offer APIs for service schedules
+### Auto-reset after collection
 
-### Multiple bins
-
-Create separate virtual switches for different collection types:
-
-- **Trash:** Every week (e.g., Wednesday)
-- **Recycling:** Every two weeks or different day
-- **Yard Waste:** Seasonal schedule
-- **Bulk Pickup:** Monthly or on-demand
-
-### Auto-reset
-
-Reset the reminder automatically after garbage is collected:
-
-**Triggers:**
-- Time is Thursday at 10:00 AM (after collection)
-
-**Actions:**
-- Turn off "Garbage Out" virtual switch
+Add a second automation that turns the switch off automatically the morning after collection, in case the tile was never tapped, so it does not stay stuck on for the rest of the week.
 
 ## Failure modes
 
-### Issue: Reminder at wrong time
+- **Reminder appears at the wrong time:** Check the hub's time zone setting and confirm any daylight saving adjustment is correct.
+- **Tile does not change color:** Confirm the tile is linked to the correct virtual switch and refresh the dashboard if it is showing a cached view.
+- **Reminder is forgotten because the tile was never tapped:** Add the auto-reset automation so the tile clears itself the next morning regardless.
+- **Reminder fires on a week collection is skipped:** Add a calendar condition if the local service publishes a schedule.
 
-**Solutions:**
-✅ Verify your hub's time zone settings
-✅ Check daylight saving time adjustments
-✅ Use local time, not UTC
+## Done when
 
-### Issue: Tile doesn't change color
+- [ ] The tile turns red at the correct time the evening before collection.
+- [ ] Tapping the tile clears the reminder.
+- [ ] An auto-reset exists in case the tile is never tapped.
+- [ ] The schedule matches the actual local collection day.
 
-**Solutions:**
-✅ Verify virtual switch is properly linked to tile
-✅ Check dashboard tile color settings
-✅ Refresh dashboard if using cached view
+## FAQ
 
-### Issue: Forgot to tap tile after completing task
+### What happens if I forget to mark the tile as done?
 
-**Solutions:**
-✅ Add auto-reset automation as described above
-✅ Use NFC tag at trash cans to automatically complete
-✅ Create an optional voice phrase such as "garbage is out"
+The tile stays red until it is tapped or an auto-reset automation clears it the next morning. Either way, nothing is lost; the reminder simply persists until acknowledged.
 
----
+### Can I track more than one type of collection with this?
+
+Yes, create a separate virtual switch and tile for each collection type, such as trash, recycling, and yard waste, since they often run on different schedules.
+
+### Should this account for holiday schedule changes?
+
+If the local collection service publishes a calendar, checking it as a condition avoids a false reminder on a week when collection is skipped. Otherwise, the reminder runs on a fixed weekly schedule.
 
 ## Related recipes
-- [Status tiles instead of notifications](/automation/notifications/status-tiles.html)
-- [Music controls](/automation/notifications/music-controls.html)
+
+- [Use status tiles instead of notifications](/automation/notifications/status-tiles.html)
+- [Set up a maintenance reminder dashboard](/automation/notifications/maintenance-reminder-dashboard.html)
+- [Set up a pet feeding reminder](/automation/notifications/pet-feeding-reminder.html)
 
 <div class="page-navigation">
   <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

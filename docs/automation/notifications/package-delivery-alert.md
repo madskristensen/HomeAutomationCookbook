@@ -1,305 +1,103 @@
 ---
 layout: automation
-title: Package Delivery Detection - Smart Home Notification
-description: Get notified when packages are delivered to your door without needing a smart doorbell. Use motion sensors and cameras for reliable delivery alerts.
-keywords: package delivery notification, delivery alert, porch package detection, smart home delivery, motion sensor package, front door delivery notification
+title: Get notified about entrance activity that may indicate a delivery
+description: A platform-neutral recipe that uses an outdoor motion sensor near the front door to send a phone notification about entrance activity that may indicate a delivery.
+keywords: package delivery alert, delivery notification, outdoor motion sensor, front porch sensor, entrance activity detection
+last_modified_at: 2026-08-30
+faqs:
+  - question: Will this only trigger for actual deliveries?
+    answer: No. It triggers on any motion near the front door, including people walking by, so it is a "something happened at the door" alert rather than a confirmed delivery alert.
+  - question: How is this different from a video doorbell's delivery detection?
+    answer: A video doorbell with package recognition is more specific, but this recipe describes a plain motion sensor approach, which is simpler and works without a camera.
+  - question: Does the sensor need to be rated for outdoor use?
+    answer: Yes, if it is mounted outside a covered porch or in an area exposed to weather. Standard indoor motion sensors are not designed for that exposure.
 ---
 
-# Package delivery detection
+# Get notified about entrance activity that may indicate a delivery
 
-Know when packages arrive at your door even without a smart doorbell. This automation uses motion sensors and optional cameras to detect deliveries and send you instant notifications, helping prevent package theft and letting you retrieve deliveries promptly.
+Use a motion sensor near the front door to send a phone notification about entrance activity that may indicate a delivery, without claiming to confirm one.
 
-## Use cases
+**Best for:** A front entrance where packages are commonly left, and a household that wants a heads up without a video doorbell.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Security and awareness</h4>
-    <ul>
-      <li><strong>Prevent theft</strong> - Retrieve packages quickly before porch pirates strike</li>
-      <li><strong>Working from home</strong> - Know when to grab packages without watching the door</li>
-      <li><strong>Away from home</strong> - Get notified to arrange pickup or ask neighbor to collect</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Convenience</h4>
-    <ul>
-      <li><strong>Expecting important delivery</strong> - Immediate notification for time-sensitive packages</li>
-      <li><strong>Multiple deliveries</strong> - Track when each carrier arrives</li>
-      <li><strong>Apartment living</strong> - Know when lobby deliveries arrive</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Confirming an actual package arrived; this only detects motion, not the presence of a package itself.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Outdoor motion sensor</strong>
-      <div class="product-details">
-        Popular brands: Philips Hue Outdoor, Aqara (with weatherproof case), Ring Motion Sensor<br>
-        Requirements: Weatherproof (IP65+), reliable detection range for porch area
-      </div>
-    </div>
-  </div>
-</div>
+Missing a delivery notification from a carrier, or not hearing a knock, can mean a package sits outside longer than it should. A motion sensor near the entrance gives a general heads up that something happened at the door, prompting a quick check.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Outdoor camera</strong>
-      <div class="product-details">
-        Brands: Wyze, Ring, Arlo, Eufy, Reolink<br>
-        Capture snapshot with notification for visual confirmation
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Pressure mat or step sensor</strong>
-      <div class="product-details">
-        Place under doormat for more precise detection<br>
-        Only triggers when someone steps on porch
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart lock</strong>
-      <div class="product-details">
-        Know if door was opened (you) vs. just motion (delivery person)
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Motion sensor vs. smart doorbell</strong>
-  <ul>
-    <li><strong>Motion sensor approach:</strong> Works for deliveries that don't ring doorbell (most carriers)</li>
-    <li><strong>Lower cost:</strong> Motion sensor typically cheaper than smart doorbell</li>
-    <li><strong>Privacy:</strong> No camera required if you prefer minimal surveillance</li>
-    <li><strong>Complement doorbell:</strong> Use both for complete coverage</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect motion near the front entrance | No personally verified recommendation yet | No personally verified recommendation yet | This specifically needs a sensor rated for outdoor exposure if it is mounted outside; the motion sensor options already covered are evaluated for indoor use. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF motion detected on porch
-AND front door not opened in last 30 seconds
-AND time is during delivery hours (8 AM - 8 PM)
-THEN send notification "Possible package delivery"</div>
+- **Trigger:** The entrance motion sensor detects movement.
+- **Conditions:** No motion has already been detected within a short cooldown window, to avoid repeat notifications for the same visit.
+- **Action:** Send a phone notification, such as "Motion detected at the front door."
+- **Wait / timeout:** None; the notification is sent as soon as motion is detected.
+- **Stop condition:** Not applicable; each motion event is a separate notification, subject to any cooldown.
+- **Manual override:** None needed; this is a passive alert rather than a controllable device.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Motion detected on porch/front door sensor</li>
-      <li>OR Camera detects person (if using AI detection)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <ul>
-      <li>Front door was not opened in last 30-60 seconds (not you coming/going)</li>
-      <li>Time is between 8 AM and 8 PM (typical delivery hours)</li>
-      <li>Optional: Doorbell was not pressed (delivery person didn't ring)</li>
-      <li>Optional: Smart lock was not used recently</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "Motion at front door - possible delivery"</li>
-      <li>Optional: Attach camera snapshot</li>
-      <li>Optional: Start recording on porch camera</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the front entrance motion sensor detects movement
+AND no motion has been detected in the last 5 minutes
+THEN send a phone notification: "Motion detected at the front door"</div>
+
+## Setup notes
+
+1. Mount a motion sensor rated for the entrance's actual exposure, whether that is a covered porch or a fully exposed area.
+2. Aim the sensor to cover the area packages are typically left, without pointing at a public sidewalk or street where it would trigger constantly.
+3. Add a cooldown, such as 5 minutes, so a single visitor does not generate repeat notifications while lingering near the door.
+4. Test the notification by walking through the sensor's detection area.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Camera snapshot with notification</h3>
-    <p>Visual confirmation of who's at the door:</p>
-    <ul>
-      <li>Capture snapshot when motion triggers</li>
-      <li>Attach image to push notification</li>
-      <li>See if it's delivery person, neighbor, or solicitor</li>
-      <li>Provides evidence if package is stolen</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>AI person detection</h3>
-    <p>Reduce false alerts from animals and cars:</p>
-    <ul>
-      <li>Use camera AI to detect human presence</li>
-      <li>Filter out pets, leaves, shadows</li>
-      <li>More accurate than basic motion sensing</li>
-      <li>Available on: Frigate, Wyze, Ring, Google Nest</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Delivery service integration</h3>
-    <p>Combine with carrier tracking:</p>
-    <ul>
-      <li>Enable notifications only on expected delivery days</li>
-      <li>Match motion alert with tracking "delivered" status</li>
-      <li>Use Informed Delivery, UPS My Choice, FedEx Delivery Manager</li>
-    </ul>
-  </div>
-</div>
+### Time-of-day filtering
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Repeated motion detection</h3>
-    <p>Distinguish delivery from passersby:</p>
-    <ul>
-      <li><strong>Single brief motion:</strong> Someone walking by - lower priority</li>
-      <li><strong>Motion, pause, motion:</strong> Likely package drop-off - higher priority</li>
-      <li>Delivery pattern: approach, stop, leave</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Package area monitoring</h3>
-    <p>Continue monitoring after delivery:</p>
-    <ul>
-      <li>If motion detected after initial delivery alert</li>
-      <li>Could be another delivery or theft attempt</li>
-      <li>Higher alert priority: "Motion near package"</li>
-    </ul>
-  </div>
-</div>
+Suppress or lower the notification priority overnight, when deliveries are unlikely and the alert is more likely to be about something else worth noting differently.
 
-## Common issues and solutions
+### Combine with a camera snapshot
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Too many false alerts</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Motion sensor triggers from cars, animals, wind-blown items.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Adjust sensor sensitivity</li>
-        <li>Reposition to focus on porch area only</li>
-        <li>Use camera with AI person detection</li>
-        <li>Add pet-immune motion sensor</li>
-        <li>Use narrower detection zone</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Missing deliveries</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Sensor not detecting delivery person.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check sensor coverage area</li>
-        <li>Test sensor with walk-through</li>
-        <li>Verify sensor battery/connectivity</li>
-        <li>Add second sensor for better coverage</li>
-        <li>Check for obstructions in detection zone</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Alerts when I come home</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Getting alerted by your own motion when arriving/departing.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Add condition: door not opened recently</li>
-        <li>Add condition: smart lock not used</li>
-        <li>Use presence detection to suppress when arriving</li>
-        <li>Exclude alerts when garage door opens</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Late night false alarms</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Motion from animals or passersby at odd hours.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Restrict to delivery hours (8 AM - 8 PM)</li>
-        <li>Use different notification for after-hours (security focus)</li>
-        <li>Reduce sensitivity at night</li>
-        <li>Only alert if motion persists for several seconds</li>
-      </ul>
-    </div>
-  </div>
-</div>
+If a camera already covers the entrance, attach a snapshot to the notification so it is possible to see what triggered the motion without walking to the door.
 
-## Best practices
+## Failure modes
 
-### Sensor placement
+- **Sensor triggers constantly from street traffic:** Adjust the sensor's position or angle to narrow its detection area to the entrance itself.
+- **Sensor misses a delivery:** Check its detection range and confirm it covers where packages are actually placed, not just the walkway.
+- **Repeated notifications for one visit:** Increase the cooldown period.
+- **Sensor fails outdoors after a period of use:** Confirm it is actually rated for the exposure level at its mounting location; an indoor-rated sensor will degrade faster outside.
 
-**Optimal positions:**
-- Under porch roof (protected from weather)
-- Aimed at typical package drop zone
-- Avoiding direct sunlight (causes false triggers)
-- 6-8 feet high for best coverage
+## Done when
 
-**Coverage area:**
-- Focus on delivery zone, not sidewalk
-- Include path delivery person takes
-- Minimize detection of street traffic
+- [ ] The sensor reliably detects motion in the area packages are left.
+- [ ] A single visit produces one notification, not several.
+- [ ] The sensor does not trigger constantly from unrelated street activity.
+- [ ] The sensor is rated appropriately for its actual outdoor exposure.
 
-### Notification management
+## FAQ
 
-**Keep alerts useful:**
-- Include location: "Front porch motion"
-- Attach camera snapshot when available
-- Different sound for delivery vs. security alerts
+### Will this only trigger for actual deliveries?
 
-**Reduce notification fatigue:**
-- Restrict to delivery hours
-- Add cooldown (ignore repeat triggers within 5 minutes)
-- Use different notification levels based on confidence
+No. It triggers on any motion near the front door, including people walking by, so it is a "something happened at the door" alert rather than a confirmed delivery alert.
 
-### Privacy considerations
+### How is this different from a video doorbell's delivery detection?
 
-**If using camera:**
-- Position to capture porch, not public sidewalk
-- Check local laws on recording public areas
-- Consider camera with local storage vs. cloud
-- Notify visitors (signs or announcements)
+A video doorbell with package recognition is more specific, but this recipe describes a plain motion sensor approach, which is simpler and works without a camera.
 
----
+### Does the sensor need to be rated for outdoor use?
+
+Yes, if it is mounted outside a covered porch or in an area exposed to weather. Standard indoor motion sensors are not designed for that exposure.
 
 ## Related recipes
-- [Doorbell notification](/automation/notifications/doorbell-notification.html)
-- [Away mode automation](/automation/daily-routines/away-mode.html)
-- [Motion detection lights](/automation/lighting/lights-on-motion.html)
+
+- [Get a phone notification when a traditional doorbell rings](/automation/notifications/doorbell-notification.html)
+- [Set up away mode](/automation/daily-routines/away-mode.html)
+- [Turn on lights when motion is detected](/automation/lighting/lights-on-motion.html)
 
 <div class="page-navigation">
   <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

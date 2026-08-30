@@ -1,278 +1,104 @@
 ---
 layout: automation
-title: Traditional Doorbell Notification - Smart Alert for Dumb Doorbells
-description: Get phone notifications when your traditional doorbell rings. No smart doorbell needed - just a contact sensor and existing doorbell.
-keywords: doorbell notification, traditional doorbell, dumb doorbell alert, doorbell sensor, smart doorbell alternative, contact sensor doorbell
+title: Get a phone notification when a traditional doorbell rings
+description: A platform-neutral recipe that wires a contact sensor in parallel with an existing wired doorbell chime so ringing it sends a phone notification.
+keywords: doorbell notification, traditional doorbell, dumb doorbell alert, doorbell sensor, contact sensor doorbell
+last_modified_at: 2026-08-30
+faqs:
+  - question: Do I need to replace my doorbell with a smart doorbell?
+    answer: No. This recipe wires a contact sensor in parallel with the existing chime, so the original doorbell keeps working exactly as before, and a notification is added on top.
+  - question: Is it safe to wire into the doorbell chime?
+    answer: Doorbell transformers are typically low voltage, around 16 to 24 volts AC, but power should still be turned off before any wiring work, and anyone unsure should consult an electrician.
+  - question: Why do I need a debounce delay in the automation?
+    answer: A doorbell button can send more than one signal for a single press. A short debounce window after the first trigger prevents multiple notifications for the same ring.
 ---
 
-# Notify when traditional doorbell rings
+# Get a phone notification when a traditional doorbell rings
 
-If you don't want a smart doorbell, but still want a notification when someone rings the doorbell, then this is for you. It comes in handy when you are outside in the backyard and can't hear the chime. It requires a little bit of extra work to set up but works like a charm.
+Wire a contact sensor in parallel with an existing wired doorbell chime so pressing the doorbell also sends a phone notification, without replacing the doorbell itself.
 
-## Use cases
+**Best for:** A household with an existing wired doorbell and chime, and someone comfortable doing simple low-voltage wiring or willing to have it done once.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Awareness</h4>
-    <ul>
-      <li><strong>Backyard Notification</strong> - Know when someone's at the door even when outside</li>
-      <li><strong>Large House</strong> - Don't miss doorbell in distant rooms</li>
-      <li><strong>Hearing Impaired</strong> - Visual/vibration notification alternative</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Away Notifications</h4>
-    <ul>
-      <li><strong>Package Delivery</strong> - Know when delivery person arrives</li>
-      <li><strong>Visitor Log</strong> - Track when doorbell is pressed</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A doorbell that is already a smart doorbell, or a household not comfortable with any wiring, even low voltage. A standalone smart doorbell may be simpler in that case.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Regular "Dumb" Doorbell</strong>
-      <div class="product-details">
-        Your existing wired doorbell with transformer
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Dry Contact Sensor with External Wires</strong>
-      <div class="product-details">
-        Options:<br>
-        • Aqara Door/Window Sensor (has external wire terminals)<br>
-        • Ecolink Z-Wave Door/Window Sensor<br>
-        • Any contact sensor with external input terminals
-      </div>
-    </div>
-  </div>
-</div>
+Not everyone wants to replace a working doorbell with a smart one, especially if the traditional chime is loud enough indoors but easy to miss from the backyard or a distant room. Wiring a contact sensor in parallel with the existing chime adds a notification without changing how the doorbell itself works.
 
-<div class="info-box">
-  <strong>🔧 How It Works</strong>
-  <p>The contact sensor is wired in parallel with your doorbell chime. When someone presses the doorbell button, the sensor detects the circuit change and triggers your automation. The existing doorbell continues to work normally.</p>
-  <p><strong>Video Tutorial:</strong> This one is best explained if you watch a video on how to do it. There are several available online. Here is one that I like: <a href="https://www.youtube.com/watch?v=2IsiWG-BOTs" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=2IsiWG-BOTs</a></p>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect the doorbell press | No personally verified recommendation yet | No personally verified recommendation yet | This job specifically needs a contact sensor with external wire terminals, which is a different requirement than a standard door or window contact sensor. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF contact sensor changes state (open or closed)
-THEN send notification to phone
-"Someone is at the front door"</div>
+- **Trigger:** The contact sensor changes state, wired in parallel with the doorbell chime circuit.
+- **Conditions:** None; every press should notify.
+- **Action:** Send a phone notification, such as "Someone is at the front door."
+- **Wait / timeout:** None; the notification is sent immediately.
+- **Stop condition:** Not applicable; each press is a separate event.
+- **Manual override:** The physical doorbell button and chime continue to work exactly as before, independent of the automation.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Hardware Setup (Summary)</h4>
-    <ol>
-      <li>Turn off power to doorbell transformer</li>
-      <li>Connect sensor wires to doorbell chime terminals</li>
-      <li>Restore power</li>
-      <li>Test: Press doorbell button, sensor should change state</li>
-    </ol>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Contact changes to open or closed (depending on how you set it up)</li>
-      <li>Some setups trigger on open, some on closed - test yours</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <ul>
-      <li>None - always notify on doorbell press</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification to phone: "Someone is at the front door"</li>
-      <li>Optional: Flash lights</li>
-      <li>Optional: Play chime on smart speaker</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the contact sensor changes state
+AND it has not changed state again within the last 10 seconds
+THEN send a phone notification: "Someone is at the front door"</div>
+
+## Setup notes
+
+1. Turn off power to the doorbell transformer before doing any wiring.
+2. Connect the contact sensor's external wire terminals in parallel with the doorbell chime's existing wiring, so the original doorbell circuit is unaffected.
+3. Restore power and test by pressing the doorbell button; confirm the sensor changes state in the platform's automation log.
+4. Add a short debounce delay, such as 10 seconds, so a single press that causes more than one signal does not send duplicate notifications.
+5. If unsure about any part of the wiring, consult an electrician; doorbell transformers are low voltage but the wiring should still be done carefully.
 
 ## Advanced features
 
-### Multi-location notification
+### Quiet hours behavior
 
-Different notifications for different situations:
+Reduce or silence any accompanying chime sound overnight while still sending the phone notification, so a late visitor does not wake the household unnecessarily.
 
-**At Home:**
-- Flash lights in current room
-- Play chime on nearby speaker
-- Send standard notification
+### Visual alert for accessibility
 
-**Away:**
-- High-priority push notification
-- Start camera recording (if available)
-- Activate porch light
-
-### Time-based behavior
-
-Adjust response based on time:
-
-**Daytime:**
-- Standard notification
-- Normal chime
-
-**Evening (after 8 PM):**
-- Quieter chime volume
-- Still send notification
-
-**Nighttime (10 PM - 7 AM):**
-- Silent chime (or very quiet)
-- Notification only
-- Perhaps flash bedroom light instead
-
-### Visitor detection pattern
-
-Track and identify visitors:
-
-**Logging:**
-- Record timestamp of each ring
-- Track frequency
-- Identify patterns
-
-**Repeat Detection:**
-- If doorbell pressed twice in 2 minutes: "Persistent visitor at door"
-- Different notification for repeat presses
-
-### Integration with cameras
-
-If you have a porch camera:
-
-**Trigger on Doorbell:**
-- Send snapshot from camera with notification
-- Start recording
-- Keep recording for 2 minutes after last motion
-
-### Visual alerts for accessibility
-
-For hearing impaired household members:
-
-**Flash Lights:**
-- Flash hallway light 3 times
-- Pulse smart bulb in living room
-- Different flash pattern for doorbell vs. other alerts
-
-**Smart Display:**
-- Show "Doorbell" on smart display
-- Pop up notification on tablets
-- Dashboard tile activation
+For a household member who is hard of hearing, add a light flash as part of the same automation so the doorbell is noticeable without relying on sound.
 
 ## Failure modes
 
-### Issue: Sensor doesn't trigger when doorbell pressed
+- **Sensor does not trigger on a press:** Verify the wiring connections at the chime and confirm which terminals were used; test with a multimeter during a press if available.
+- **Sensor triggers without anyone pressing the doorbell:** Check for loose connections or electrical interference near the wiring, and confirm the transformer voltage matches what the sensor expects.
+- **Multiple notifications for one press:** Add or lengthen the debounce delay in the automation.
+- **Notifications arrive with a noticeable delay:** Check the sensor's wireless connection to the hub and consider moving it closer or adding a repeater.
 
-**Causes:**
-- Wiring not connected properly
-- Wrong terminals on chime
-- Sensor not detecting voltage change
+## Done when
 
-**Solutions:**
-✅ Verify wiring connections at chime
-✅ Test with multimeter during button press
-✅ Try different terminals on chime
-✅ Ensure sensor is designed for this use (has external wire capability)
+- [ ] The wiring has been completed with power off and restored safely.
+- [ ] A doorbell press reliably registers in the automation log.
+- [ ] A single press produces exactly one notification.
+- [ ] The doorbell chime itself still works normally.
 
-### Issue: Sensor triggers constantly
+## FAQ
 
-**Causes:**
-- Wiring picking up interference
-- Sensor too sensitive
-- Doorbell transformer voltage issues
+### Do I need to replace my doorbell with a smart doorbell?
 
-**Solutions:**
-✅ Check for loose connections
-✅ Add capacitor if sensor supports it
-✅ Verify transformer is correct voltage
-✅ Shield wiring from interference
+No. This recipe wires a contact sensor in parallel with the existing chime, so the original doorbell keeps working exactly as before, and a notification is added on top.
 
-### Issue: False notifications
+### Is it safe to wire into the doorbell chime?
 
-**Causes:**
-- Electrical noise triggering sensor
-- Doorbell transformer humming
-- Other electrical interference
+Doorbell transformers are typically low voltage, around 16 to 24 volts AC, but power should still be turned off before any wiring work, and anyone unsure should consult an electrician.
 
-**Solutions:**
-✅ Add debounce delay in automation (ignore triggers within 10 seconds)
-✅ Check transformer condition
-✅ Add filtering capacitor
-✅ Relocate sensor away from interference sources
+### Why do I need a debounce delay in the automation?
 
-### Issue: Notifications arrive late
-
-**Causes:**
-- Cloud processing delay
-- Network latency
-- Phone notification settings
-
-**Solutions:**
-✅ Use local processing hub if possible
-✅ Check network connectivity
-✅ Verify app notification permissions
-✅ Disable battery optimization for smart home app
-
-## Best practices
-
-### Wiring safety
-
-**Important:**
-- Turn off power before any wiring work
-- Doorbell transformers are typically 16-24V AC (low voltage, but still be careful)
-- If unsure, consult an electrician
-- Don't modify the doorbell button or transformer
-
-**Recommended Approach:**
-- Work only at the chime unit
-- Add sensor in parallel (existing doorbell still works)
-- Secure all connections properly
-- Test thoroughly before closing up
-
-### Debounce logic
-
-**Why Needed:**
-- Doorbell button can bounce (multiple quick signals)
-- Prevents multiple notifications for one press
-- Cleaner automation behavior
-
-**Implementation:**
-- Ignore repeat triggers within 30 seconds
-- Only notify on first press
-- Reset after delay
-
-### Notification management
-
-**Keep Useful:**
-- Include location: "Front doorbell"
-- Include time if logged
-- Different tone than other notifications
-
-**Avoid Fatigue:**
-- Don't over-notify
-- Group repeat presses
-- Consider quiet hours
-
----
+A doorbell button can send more than one signal for a single press. A short debounce window after the first trigger prevents multiple notifications for the same ring.
 
 ## Related recipes
-- [Motion detection lights](/automation/lighting/lights-on-motion.html)
-- [Away mode](/automation/daily-routines/away-mode.html)
-- [Status tiles](/automation/notifications/status-tiles.html)
+
+- [Turn on lights when motion is detected](/automation/lighting/lights-on-motion.html)
+- [Set up away mode](/automation/daily-routines/away-mode.html)
+- [Use status tiles instead of notifications](/automation/notifications/status-tiles.html)
 
 <div class="page-navigation">
   <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

@@ -7,7 +7,7 @@ keywords: smart lighting automation, motion sensor lights, automatic lighting, d
 
 # Lighting automations
 
-Lighting is often the first area people automate in their smart home - and for good reason. Automatic lighting creates a magical experience where lights respond to your presence and needs without you ever touching a switch.
+Lighting is often the first area people automate because the result is immediate and easy to verify. Good lighting automations respond predictably while leaving every wall switch useful.
 
 <div class="category-intro" markdown="1">
 
@@ -71,7 +71,7 @@ Gentle low-brightness lighting for nighttime bathroom visits that won't disrupt 
 
 ### Toggle lights when door opens
 
-Automatically turn on lights when doors open - perfect for closets, pantries, and garages.
+Turn on lights when doors open in closets, pantries, and garage entries.
 
 <span class="card-meta">**Best for:** Closets, pantries, cabinets, garage entry</span>
 
@@ -135,7 +135,7 @@ Confirm a real after-dark arrival before lighting the entry, without unlocking a
 
 ### Motion sensors
 
-Motion sensors are the most popular trigger for lighting automation:
+Motion sensors are a common trigger for lighting automation:
 
 **How it works:** Detects movement using infrared (PIR), microwave, or mmWave technology
 
@@ -144,7 +144,7 @@ Motion sensors are the most popular trigger for lighting automation:
 - Hands-full situations (laundry, garage)
 - Nighttime navigation
 
-**Popular sensors:** Philips Hue, Aqara, SmartThings, Wyze
+Choose a sensor that works with your hub and fits the room. See [Recommended gear](/gear.html) for the models I have personally used.
 
 ### Door and window sensors (contact sensors)
 
@@ -153,11 +153,11 @@ Contact sensors trigger lights when doors or windows open:
 **How it works:** Magnetic sensor detects when door/window opens or closes
 
 **Best for:**
-- Closets and pantries (100% reliable - door must open to access)
+- Closets and pantries where the door state matches the lighting need
 - Garage entry lighting
 - Preventing lights turning off while occupied
 
-**Popular sensors:** Aqara, SmartThings, Ring, Sonoff
+Contact sensors are easier to reason about than occupancy sensors, but alignment and battery state still matter.
 
 ### Time-based triggers
 
@@ -186,27 +186,11 @@ The most reliable automations use multiple triggers:
 
 ### Sensor placement
 
-**Motion sensors:**
-- 6-8 feet high for optimal coverage
-- Pointed toward entry points
-- Away from windows and heat sources
-- Test coverage before permanent mounting
-
-**Door sensors:**
-- Sensor on door frame, magnet on door
-- Within 20mm gap when closed
-- Clean surfaces before mounting
+Follow the sensor manufacturer's placement and alignment guidance. Test the final approach path, seated positions, doors, sunlight, and heat sources before mounting anything permanently.
 
 ### Timing strategies
 
-**Quick access spaces (1-2 min timeout):**
-- Closets, pantry, laundry room, hallways
-
-**Living spaces (3-5 min timeout):**
-- Living room, dining room, kitchen
-
-**Work/relaxation (5-10 min timeout):**
-- Home office, reading nook, bathroom
+Start with a conservative timeout, then tune it from real use. Passing spaces can usually use a shorter delay. Bathrooms, offices, and rooms where people sit still need a longer delay or a presence sensor.
 
 ### Night vs. day
 

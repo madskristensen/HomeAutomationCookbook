@@ -1,322 +1,104 @@
 ---
 layout: automation
-title: Low Battery Alerts - Smart Home Maintenance Automation
-description: Never be surprised by dead smart home device batteries. Get proactive alerts when device batteries are low to maintain reliable automation.
-keywords: low battery alert, smart home battery, device battery notification, battery monitoring, smart device maintenance, battery replacement reminder
+title: Get low battery alerts for smart home devices
+description: A platform-neutral recipe that notifies when a battery-powered sensor, lock, or button drops below a set level, before it fails silently.
+keywords: low battery alert, smart home battery, device battery notification, battery monitoring, smart device maintenance
+last_modified_at: 2026-08-30
+faqs:
+  - question: What battery percentage should trigger a warning?
+    answer: Around 20 to 25 percent is a reasonable starting point for most sensors, giving a few weeks of remaining life to plan a replacement. A smart lock is worth a slightly higher threshold, since running out unexpectedly is more disruptive.
+  - question: Why does a device's battery sometimes jump straight from fine to dead?
+    answer: Some devices only report a simple "ok" or "low" state instead of a percentage, or their battery chemistry drops voltage quickly near the end of its life. Where only a state is available, treat "low" as the trigger instead of a percentage threshold.
+  - question: Should every device get the same alert priority?
+    answer: No. A water leak sensor or smart lock losing power is more urgent than a motion sensor, so it is worth treating a small set of critical devices as higher priority than the rest.
 ---
 
-# Low battery alerts
+# Get low battery alerts for smart home devices
 
-Smart home devices with dead batteries can't do their jobs. Motion sensors stop detecting, door sensors go offline, and automations fail silently. Proactive battery monitoring ensures your smart home stays reliable.
+Get a notification when a battery-powered device drops below a set level, so it can be replaced before the device stops working silently.
 
-## Use cases
+**Best for:** Any platform that reports battery percentage or a low-battery state for its connected sensors, locks, or buttons.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Prevention</h4>
-    <ul>
-      <li><strong>Security gaps</strong> - Door/window sensors going offline unnoticed</li>
-      <li><strong>Failed automations</strong> - Motion sensors not triggering lights</li>
-      <li><strong>Missed alerts</strong> - Water leak sensors not reporting</li>
-      <li><strong>Lock failures</strong> - Smart lock battery dying at worst time</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Maintenance</h4>
-    <ul>
-      <li><strong>Proactive replacement</strong> - Replace before failure</li>
-      <li><strong>Batch ordering</strong> - Know which batteries to stock</li>
-      <li><strong>Scheduled maintenance</strong> - Plan battery swaps efficiently</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A device that does not report battery status at all; nothing can be automated against a reading that is not available.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart home platform that reports battery levels</strong>
-      <div class="product-details">
-        The hub must receive a battery percentage or low-battery state from each monitored device
-      </div>
-    </div>
-  </div>
-</div>
+A dead battery in a motion sensor, door sensor, or lock does not usually announce itself. It just stops reporting, and the automations relying on it quietly stop working. A proactive alert catches this before it turns into a missed automation or, worse, a lock that will not open.
 
-<div class="product-section">
-  <h4>Devices that commonly need battery monitoring</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Sensors</strong>
-      <div class="product-details">
-        Motion sensors, door/window contact sensors, water leak sensors, temperature sensors
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Locks and controls</strong>
-      <div class="product-details">
-        Smart locks, smart buttons, remote controls, keypads
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Other battery devices</strong>
-      <div class="product-details">
-        Smoke detectors, blinds, some cameras, wireless switches
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Stock common battery types</strong>
-  <ul>
-    <li><strong>CR2032:</strong> Most small sensors (Aqara, SmartThings)</li>
-    <li><strong>CR123A:</strong> Some motion sensors, locks</li>
-    <li><strong>AA/AAA:</strong> Larger sensors, some locks, remotes</li>
-    <li><strong>CR2450:</strong> Some Zigbee sensors</li>
-    <li>Keep 2-3 of each common type on hand</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect low battery levels | No personally verified recommendation yet | No personally verified recommendation yet | This depends on the platform reporting battery data for each device, not on any single piece of hardware. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF any device battery drops below 20%
-THEN send notification with device name and battery level
-AND add to low battery list on dashboard</div>
+- **Trigger:** A monitored device's battery level drops below its set threshold, or reports a "low battery" state.
+- **Conditions:** The device has not already been flagged within the last several days, to avoid repeat alerts for the same drop.
+- **Action:** Send a notification naming the device and its battery level.
+- **Wait / timeout:** None; the notification is sent once the condition is met.
+- **Stop condition:** The alert resets once the battery is replaced and reports a normal level again.
+- **Manual override:** Battery levels can always be checked directly in the platform regardless of the automation.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Any battery-powered device drops below 20%</li>
-      <li>OR Device reports "low battery" state</li>
-      <li>OR Daily check of all battery levels</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions (optional)</h4>
-    <ul>
-      <li>Battery level dropped (not already low)</li>
-      <li>Haven't notified about this device in last 7 days</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "[Device name] battery is at [X]%"</li>
-      <li>Update dashboard tile or list</li>
-      <li>Optional: Log to file for tracking</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF a monitored device's battery drops below its threshold
+AND this device has not been flagged in the last 7 days
+THEN send a notification: "[Device name] battery is at [level]"</div>
+
+## Setup notes
+
+1. Confirm which devices actually report battery data in the platform; some devices only expose a simple low-battery flag rather than a percentage.
+2. Set a threshold, such as 20 to 25 percent, as a starting point, and adjust based on how quickly a specific device's battery tends to drop.
+3. Add a cooldown so the same device does not send repeat alerts every time its reading is checked while still below the threshold.
+4. Identify a small set of critical devices, such as locks and water leak sensors, and consider giving them a lower threshold or higher-priority notification.
+5. Keep a small stock of the common battery types used across devices so a replacement does not require an extra trip.
 
 ## Advanced features
 
-### Tiered warnings
+### Tiered alert levels
 
-Different alerts at different levels:
+Use two thresholds, such as 25 percent for an early notice and 10 percent for an urgent one, so the household gets more time to plan a replacement before it becomes critical.
 
-**First warning (25%):**
-- Normal notification
-- "Consider replacing soon"
-- Add to low battery list
+### Daily consolidated report
 
-**Second warning (15%):**
-- Higher priority notification
-- "Replace within next few days"
-
-**Critical (5%):**
-- Urgent notification
-- "Replace immediately - device may stop working"
-
-### Battery dashboard
-
-Create visual overview:
-
-**Dashboard elements:**
-- All devices with battery percentage
-- Color coding: green (50%+), yellow (20-50%), red (<20%)
-- Sort by lowest first
-- Show days since last change (if tracked)
-
-### Device offline detection
-
-Catch devices that died without warning:
-
-- **Trigger:** Device hasn't reported in 24 hours
-- **Action:** Send alert: "[Device] may be offline - check battery"
-- **Note:** Some devices only report when triggered
-
-### Battery change tracking
-
-Log when batteries are replaced:
-
-**Create input helper:**
-- Date of last battery change per device
-- Calculate expected replacement date
-- Alert when approaching typical lifespan
-
-**Typical battery life:**
-- Contact sensors: 1-2 years
-- Motion sensors: 6-18 months
-- Smart locks: 6-12 months
-- Temperature sensors: 1-2 years
-
-### Critical device priority
-
-Higher priority for important devices:
-
-**Critical devices (immediate alert):**
-- Smart locks
-- Water leak sensors
-- Smoke detector sensors
-
-**Standard devices (daily report):**
-- Motion sensors
-- Temperature sensors
-- Remote buttons
-
-## Notification strategies
-
-### Consolidated daily report
-
-Instead of individual alerts:
-
-**Daily at 9 AM:**
-- Check all batteries
-- Group into categories
-- Send single notification:
-  - "Critical: Front door lock (8%)"
-  - "Low: Kitchen motion (18%), Garage door (22%)"
-  - "OK: 15 devices above 30%"
-
-### Weekly maintenance reminder
-
-Scheduled battery check:
-
-**Every Sunday at 10 AM:**
-- List all devices below 30%
-- Remind to check and replace
-- Include battery types needed
-
-### Notification cooldown
-
-Prevent repeated alerts:
-
-- Only notify once per device per week
-- Unless level drops to next tier
-- Reset cooldown when battery replaced
+Instead of a separate notification per device, send one daily summary listing every device currently below its threshold, to reduce notification fatigue on days with several low devices.
 
 ## Failure modes
 
-### Issue: Battery shows 100% then suddenly 0%
+- **Battery reading jumps from fine to dead with no warning:** Some devices only report a simple low-battery state rather than a percentage; treat that state itself as the trigger instead of expecting a gradual decline.
+- **Battery percentage fluctuates and causes repeat alerts:** Add a cooldown, or require the drop to hold for a period before alerting, rather than reacting to every reading.
+- **A device is missing from monitoring:** Confirm it actually reports battery data to the platform; not every device type does.
+- **Too many notifications arrive:** Raise the threshold slightly, add a longer cooldown, or switch to a consolidated daily report.
 
-**Causes:**
-- Device doesn't report gradual levels
-- Reporting only "OK" or "Low"
-- Battery type issue (some drop voltage rapidly)
+## Done when
 
-**Solutions:**
-✅ Check if device supports gradual reporting
-✅ Watch for "low battery" state instead of percentage
-✅ Use quality batteries (may report more accurately)
-✅ Set replacement schedule based on time, not percentage
+- [ ] Every device expected to report battery status is confirmed to actually do so.
+- [ ] A real low-battery condition produces exactly one notification, not several.
+- [ ] Critical devices, such as locks, are treated with appropriate priority.
+- [ ] The alert clears once a battery is replaced.
 
-### Issue: Battery percentage fluctuates
+## FAQ
 
-**Causes:**
-- Temperature affecting readings
-- Voltage bounce after use
-- Sensor inaccuracy
-- Old battery recovering temporarily
+### What battery percentage should trigger a warning?
 
-**Solutions:**
-✅ Use average over time instead of instant reading
-✅ Only alert if low for extended period (hours)
-✅ Consider actual battery age not just percentage
-✅ Ignore small fluctuations (±5%)
+Around 20 to 25 percent is a reasonable starting point for most sensors, giving a few weeks of remaining life to plan a replacement. A smart lock is worth a slightly higher threshold, since running out unexpectedly is more disruptive.
 
-### Issue: Missing devices in monitoring
+### Why does a device's battery sometimes jump straight from fine to dead?
 
-**Causes:**
-- Device doesn't report battery
-- Entity not included in group
-- Device using different attribute name
+Some devices only report a simple "ok" or "low" state instead of a percentage, or their battery chemistry drops voltage quickly near the end of its life. Where only a state is available, treat "low" as the trigger instead of a percentage threshold.
 
-**Solutions:**
-✅ Check device capabilities for battery reporting
-✅ Manually add to monitoring group
-✅ Check for alternative battery entity names
-✅ Some devices need custom integration
+### Should every device get the same alert priority?
 
-### Issue: Too many notifications
-
-**Causes:**
-- Threshold too high (50% is too early)
-- No cooldown between alerts
-- Fluctuating readings triggering repeatedly
-
-**Solutions:**
-✅ Lower threshold to 20-25%
-✅ Add cooldown (one notification per week)
-✅ Use "dropped below" trigger not "is below"
-✅ Consolidate into daily/weekly report
-
-## Best practices
-
-### Setting thresholds
-
-**Recommended levels:**
-- **Warning:** 20-25% (weeks of life remaining)
-- **Low:** 10-15% (days of life remaining)
-- **Critical:** 5% (replace immediately)
-
-**Adjust for device type:**
-- Smart locks: Higher threshold (25%) - don't want lockout
-- Motion sensors: Standard threshold (20%)
-- Temperature sensors: Lower threshold (15%) - less critical
-
-### Battery inventory
-
-**Keep on hand:**
-- List of all battery types used
-- 2-3 spares of common types
-- Note which devices use which battery
-- Order before running out
-
-### Replacement strategy
-
-**Best practices:**
-- Replace at warning level, not when dead
-- Replace all batteries in multi-battery devices together
-- Note replacement date for tracking
-- Use quality batteries for critical devices
-- Consider rechargeable for frequently changed devices
-
-### Device placement for longevity
-
-**Extend battery life:**
-- Avoid extreme temperatures
-- Reduce unnecessary triggers (adjust sensitivity)
-- Keep devices in good signal range (less retry = less battery)
-- Consider wired alternatives for high-use locations
-
----
+No. A water leak sensor or smart lock losing power is more urgent than a motion sensor, so it is worth treating a small set of critical devices as higher priority than the rest.
 
 ## Related recipes
-- [Water leak detection](/automation/security/water-leak-response.html)
-- [Away mode automation](/automation/daily-routines/away-mode.html)
-- [Bedtime routine](/automation/daily-routines/bedtime-routine.html)
+
+- [Set up water leak response](/automation/security/water-leak-response.html)
+- [Set up away mode](/automation/daily-routines/away-mode.html)
+- [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 <div class="page-navigation">
   <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

@@ -1,231 +1,118 @@
 ---
 layout: automation
-title: Start Robot Vacuum When Everyone Leaves
-description: Automatically start your robot vacuum when the house is empty. Clean while away without lifting a finger.
-keywords: robot vacuum automation, auto start vacuum, vacuum when away, automatic vacuum cleaning, smart vacuum, presence detection vacuum, away mode cleaning
+title: Start the robot vacuum when everyone leaves
+description: A platform-neutral recipe that starts a robot vacuum only after a tested presence signal confirms the home is empty, and only during a daytime window.
+keywords: robot vacuum automation, auto start vacuum, vacuum when away, presence detection vacuum, away mode cleaning
+last_modified_at: 2026-08-30
+faqs:
+  - question: What proves the house is actually empty?
+    answer: Only a presence signal you have tested for every regular occupant. A single phone leaving a geofence is not enough if other household members or their phones behave differently.
+  - question: Why restrict the vacuum to a daytime window?
+    answer: A daytime window avoids starting the vacuum during sleeping hours if a presence signal is briefly wrong, and matches when the house is normally empty.
+  - question: What should happen if someone comes home while the vacuum is running?
+    answer: Send it back to its dock immediately. See the companion recipe for returning-early handling.
 ---
 
-# Start the robot vacuum when everybody leaves
+# Start the robot vacuum when everyone leaves
 
-Robot vacuums are great, but even better when they clean while you're away. Automate daily cleaning to happen when no one is home to disturb or be disturbed.
+Once a tested presence signal confirms the home is empty during a daytime window, start the robot vacuum's existing cleaning cycle.
 
-## Use cases
+**Best for:** A household with a presence signal that has been tested for every regular occupant and a robot vacuum with its own scheduling and app control.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Automated Cleaning</h4>
-    <ul>
-      <li><strong>Clean During Work Hours</strong> - House cleaned while away at work</li>
-      <li><strong>No Disturbance</strong> - No one home to be bothered by vacuum noise</li>
-      <li><strong>Daily Cleaning</strong> - Automatic consistent cleaning schedule</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Convenience</h4>
-    <ul>
-      <li><strong>Pet Hair Management</strong> - Keep up with pet shedding automatically</li>
-      <li><strong>Guest Ready</strong> - House always clean when you return</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A single untested phone-location trigger, night hours, or a vacuum with no reliable dock or error reporting.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>WiFi-Enabled Robot Vacuum</strong>
-      <div class="product-details">
-        Popular brands: Roomba, Roborock, Eufy, Shark, Neato<br>
-        WiFi connectivity • App control • Scheduling override
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Presence Detection</strong>
-      <div class="product-details">
-        A household presence source you have tested for every regular occupant<br>
-        OR door lock status + motion sensors
-      </div>
-    </div>
-  </div>
-</div>
+Vacuuming is more useful, and less disruptive, when nobody is underfoot and no pet is startled by it. The trigger only matters if it reliably reflects that everyone has actually left; an unverified presence signal can start the vacuum while someone is still home.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Contact Sensors</strong>
-      <div class="product-details">
-        On doors to ensure all closed before starting
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Notifications</strong>
-      <div class="product-details">
-        Alert if vacuum gets stuck or has errors
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Confirm the whole household has left | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a single presence source that reliably covers every household member. Test whatever signal is available against real daily patterns before trusting it. |
+| Robot vacuum with app control | No personally verified recommendation yet | No personally verified recommendation yet | Confirm the vacuum supports remote start, reports errors, and can be sent back to its dock from automation before relying on this recipe. |
+
+See [recommended gear](/gear.html) for the job-first checklist.
 
 ## Logic
 
-<div class="automation-example">IF everyone leaves home
-AND time between 9:00 AM - 5:00 PM
-THEN start robot vacuum</div>
+- **Trigger:** The tested presence signal reports the home as empty.
+- **Conditions:** The time is within the chosen daytime window, Guest mode is off, and the vacuum has not already run today.
+- **Action:** Wait briefly to confirm the departure is real, then start the vacuum's existing cleaning cycle.
+- **Wait / timeout:** Skip the run if the confirmed-empty period ends before the wait completes.
+- **Stop condition:** The vacuum finishes, or the tested presence signal reports that someone returned; in either case, send it back to its dock.
+- **Manual override:** The vacuum's own app or button can start or stop it at any time regardless of this automation.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Home goes into Away Mode</li>
-      <li>(Last person leaves house based on presence detection)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <strong>Time is between 9 AM - 6 PM:</strong> Vacuum during daytime only<br>
-    <strong>House in Away Mode for 15 min:</strong> Ensure everyone actually left<br>
-    <strong>Optional:</strong> Day of week (e.g., only weekdays)
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Start robot vacuum cleaning cycle</li>
-      <li>OR trigger vacuum's existing schedule</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the tested presence signal reports the home as empty
+AND the time is within the daytime window
+AND the vacuum has not already run today
+THEN wait a short confirmation period
+IF the home is still reported empty
+THEN start the vacuum's cleaning cycle
+
+IF the presence signal reports that someone returned while the vacuum is cleaning
+THEN send the vacuum back to its dock</div>
+
+## Setup notes
+
+1. Confirm the presence signal against at least a week of real household comings and goings before using it to start anything.
+2. Choose a daytime window that matches when the home is normally empty.
+3. Add a short confirmation wait after the empty signal to avoid reacting to a brief false departure.
+4. Disable automatic starts while Guest mode is active so a visitor without a tracked presence signal is not treated as an empty home.
+5. Track whether the vacuum has already run today so a return-and-leave-again pattern does not start a second run.
+6. Confirm the vacuum reports docked, cleaning, and error states before relying on any of them.
+7. Test manually with someone intentionally staying home, then with someone returning during a test run.
 
 ## Advanced features
 
-### Room-by-room daily schedule
+### Skip when maintenance is needed
 
-Different rooms on different days:
+Check that the vacuum is docked and not already reporting an error or a full bin before starting a new cycle.
 
-Create automation that triggers when away for 15 minutes during daytime (9am-6pm), then uses day-based logic:
-- **Monday:** Clean kitchen & dining room (segment IDs 1, 2)
-- **Tuesday:** Clean living room (segment 3)
-- **Wednesday:** Clean bedrooms (segments 4, 5)
-- **Thursday:** Clean hallways (segment 6)
-- **Friday:** Full house cleaning (all rooms)
+### Notify on a stuck vacuum
 
-*Note: Requires vacuum model supporting room-specific cleaning commands*
-
-### Pre-cleaning notification
-
-Remind to tidy up before vacuum starts:
-
-Create automation with these elements:
-- **Trigger:** Home mode changes to 'Away' for 5 minutes
-- **Condition:** Time between 9am-6pm
-- **Action:** Send notification "Vacuum will start in 10 minutes. Tidy floors if needed!"
-
-### Stuck vacuum alert
-
-Get notified if vacuum has problems:
-
-Create automation with these elements:
-- **Trigger:** Vacuum state changes to 'error'
-- **Action:** Send high-priority notification "Robot vacuum is stuck or has an error!"
-
-### Battery-based smart start
-
-Only start if battery sufficient:
-
-Add condition to automation: Vacuum battery level must be above 50% before starting cleaning cycle.
-
-## Safety considerations
-
-### Pre-checks before starting
-
-Ensure conditions are safe:
-
-Add conditions to automation:
-- All doors closed (prevent vacuum getting stuck in closets - check bedroom closet door, utility room door)
-- No maintenance needed (vacuum is docked AND bin is not full)
-
-### Stop conditions
-
-Automatically stop vacuum if:
-
-Create automation with these elements:
-- **Trigger:** Any person arrives home (group.all_persons changes to 'home')
-- **Condition:** Vacuum is currently cleaning
-- **Action:** Send vacuum to dock (return to base)
+Send an alert if the vacuum reports an error state during a cycle so it is not left stuck for hours.
 
 ## Failure modes
 
-### Issue: Vacuum starts when someone is still home
+- **Vacuum starts while someone is still home:** The presence signal is not reliable enough. Add a longer confirmation wait or combine more than one tested signal.
+- **Vacuum runs more than once a day:** Track a per-day run flag and reset it at a fixed time, such as midnight.
+- **Vacuum gets stuck:** Clear obstacles and closed-off areas the vacuum can wander into, and add a stuck-error notification.
+- **Vacuum does not start:** Confirm it is docked, charged, and not already reporting an error before the automation runs.
+- **The presence signal disagrees with reality:** Stop relying on it and retest, rather than tuning the delay indefinitely.
 
-**Causes:**
-- Presence detection too fast/inaccurate
-- Phone GPS delay
-- One person left but others home
-- Away mode triggered prematurely
+## Done when
 
-**Solutions:**
-✅ Increase away delay to 20-30 minutes
-✅ Use "all persons away" not "any person away"
-✅ Combine presence with door lock status
-✅ Add motion sensor check - no motion for 15+ minutes
-✅ Combine more than one tested presence signal
+- [ ] The presence signal has been tested against a week of real household activity.
+- [ ] The vacuum only starts within the chosen daytime window.
+- [ ] The vacuum does not start when someone is intentionally home for a test.
+- [ ] The vacuum returns to its dock when someone comes home during a test run.
+- [ ] Guest mode prevents an automatic start.
+- [ ] The vacuum does not run a second time on a day it already completed a cycle.
+- [ ] A stuck-vacuum error produces a notification.
+- [ ] The vacuum's own app and buttons still work normally.
 
-Add multiple detection methods to conditions:
-- All persons away for 15+ minutes
-- AND no motion detected for 15+ minutes
-- AND front door locked
+## FAQ
 
-### Issue: Vacuum gets stuck
+### What proves the house is actually empty?
 
-**Causes:**
-- Doors left open (closets, bathrooms)
-- Obstacles not cleared (shoes, toys, cables)
-- Low battery starting cycle
-- Virtual barriers not set
+Only a presence signal you have tested for every regular occupant. A single phone leaving a geofence is not enough if other household members or their phones behave differently.
 
-**Solutions:**
-✅ Add notification before start: "Tidy floors in 10 minutes"
-✅ Check battery level before starting (>50%)
-✅ Set virtual barriers in vacuum app
-✅ Add door sensors - only start if problem doors closed
-✅ Implement stuck detection and notification (shown above)
+### Why restrict the vacuum to a daytime window?
 
-### Issue: Vacuum doesn't start
+A daytime window avoids starting the vacuum during sleeping hours if a presence signal is briefly wrong, and matches when the house is normally empty.
 
-**Causes:**
-- Vacuum already running or has error
-- Battery too low
-- Maintenance needed (bin full, filter)
-- Integration not working
+### What should happen if someone comes home while the vacuum is running?
 
-**Check:**
-- ✅ Verify vacuum shows as "docked" before automation triggers
-- ✅ Check vacuum battery level
-- ✅ Empty bin and clean filter
-- ✅ Test manual start via app
-- ✅ Review automation logs
-- ✅ Check vacuum WiFi connection
-
-Add diagnostics to automation:
-- If vacuum is docked, start cleaning
-- Otherwise, send notification with current vacuum state and battery level
-
----
+Send it back to its dock immediately. See the companion recipe for returning-early handling.
 
 ## Related recipes
-- [Away mode automation](/automation/daily-routines/away-mode.html)
-- [Morning routine automation](/automation/daily-routines/morning-routine.html)
-- [Washer done notification](/automation/appliances/washer-done-notification.html)
+
+- [Run the vacuum only while the house stays empty](/automation/appliances/vacuum-when-empty.html)
+- [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
+- [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 
 <div class="page-navigation">
   <a href="/automation/appliances/index.html">Back to appliance automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

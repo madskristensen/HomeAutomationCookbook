@@ -1,288 +1,116 @@
 ---
 layout: automation
-title: Robot Vacuum Only When Empty - Smart Cleaning Automation
-description: Start your robot vacuum only when the house is truly empty and finish before anyone returns. Smart presence-based cleaning automation.
-keywords: robot vacuum automation, smart vacuum scheduling, presence-based cleaning, roomba automation, robot vacuum when away, automatic vacuum, smart home cleaning
+title: Run the vacuum only while the house stays empty
+description: A platform-neutral recipe that starts a robot vacuum only after confirming the home is empty and sends it back to the dock the moment anyone returns.
+keywords: robot vacuum automation, presence-based cleaning, robot vacuum when away, smart vacuum scheduling, vacuum return protection
+last_modified_at: 2026-08-30
+faqs:
+  - question: How is this different from a simple auto-start recipe?
+    answer: This recipe adds a once-per-day limit and immediately docks the vacuum if anyone returns early, instead of only starting a cleaning cycle.
+  - question: What happens if someone comes home while the vacuum is cleaning?
+    answer: The vacuum is sent back to its dock as soon as the tested presence signal reports anyone home, rather than finishing the room it is in.
+  - question: Can this run more than once if someone leaves and returns several times in a day?
+    answer: No. A per-day flag prevents a second run once the vacuum has completed a cycle that day.
 ---
 
-# Robot vacuum only when house is empty
+# Run the vacuum only while the house stays empty
 
-Make your robot vacuum truly smart by only running when the house is completely empty and ensuring it finishes before anyone returns. No more vacuums running underfoot or startling pets.
+Start the robot vacuum only after the home is confirmed empty, limit it to once a day, and send it back to the dock immediately if anyone returns early.
 
-## Use cases
+**Best for:** Households that want the vacuum to stay out from underfoot completely, including sending it home the moment someone returns.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Convenience benefits</h4>
-    <ul>
-      <li><strong>Out of the way</strong> - Vacuum runs while you're at work</li>
-      <li><strong>No pet stress</strong> - Pets aren't home to be scared</li>
-      <li><strong>Quiet home</strong> - Never hear the vacuum running</li>
-      <li><strong>Always clean</strong> - Come home to freshly cleaned floors</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Smart scheduling</h4>
-    <ul>
-      <li><strong>Presence-aware</strong> - Only when truly empty</li>
-      <li><strong>Return estimation</strong> - Finishes before you're back</li>
-      <li><strong>Skip when needed</strong> - Doesn't run on work-from-home days</li>
-      <li><strong>Guest awareness</strong> - Skips when guests are visiting</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A household without a presence signal tested across every regular occupant, or a vacuum that cannot be commanded to dock from automation.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart robot vacuum</strong>
-      <div class="product-details">
-        Popular brands: iRobot Roomba, Roborock, Ecovacs Deebot, Shark<br>
-        Must support smart home integration (WiFi, app control)
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Presence detection</strong>
-      <div class="product-details">
-        Options: Phone location, shared house mode, and recent indoor activity<br>
-        Must track all household members accurately
-      </div>
-    </div>
-  </div>
-</div>
+A vacuum that starts when the house is empty is only half the job. It also needs to stop cleaning and return to its dock the moment anyone comes home early, and it should not restart every time someone steps out briefly during the same day.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Calendar integration</strong>
-      <div class="product-details">
-        Connect to work calendars to predict return times
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Self-emptying base</strong>
-      <div class="product-details">
-        Vacuum can run longer cleaning cycles without manual bin emptying
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Cleaning time estimation</strong>
-  <ul>
-    <li>Most robot vacuums clean 1,000 sq ft in 60-90 minutes</li>
-    <li>Factor in return-to-dock time (5-10 minutes)</li>
-    <li>Add buffer time for unexpected obstacles</li>
-    <li>Consider if vacuum needs to empty mid-cycle</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Confirm the whole household has left and returned | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a single presence source that reliably covers every household member for both departure and arrival. |
+| Robot vacuum with remote dock command | No personally verified recommendation yet | No personally verified recommendation yet | Confirm the vacuum accepts a return-to-dock command from automation, not only a manual app tap. |
+
+See [recommended gear](/gear.html) for the job-first checklist.
 
 ## Logic
 
-<div class="automation-example">IF last person leaves home
-AND time is after 9:00 AM (everyone should be gone for work)
-AND vacuum hasn't run today
-AND estimated return is more than 2 hours away
-THEN wait 10 minutes (confirm everyone really left)
-THEN start robot vacuum
+- **Trigger:** The tested presence signal reports the home as empty during the chosen daytime window.
+- **Conditions:** The vacuum has not already completed a cycle today.
+- **Action:** Wait briefly to confirm the departure is real, then start cleaning.
+- **Wait / timeout:** If the confirmed-empty period ends before the wait completes, skip the run for today.
+- **Stop condition:** As soon as the presence signal reports anyone home, send the vacuum back to its dock immediately, whether or not the room it was cleaning is finished.
+- **Manual override:** The vacuum's own app or button can start, stop, or dock it at any time regardless of this automation.
 
-IF anyone arrives home
-AND vacuum is running
-THEN send vacuum to dock immediately</div>
+<div class="automation-example">IF the tested presence signal reports the home as empty
+AND the vacuum has not completed a cycle today
+THEN wait a short confirmation period
+IF the home is still reported empty
+THEN start the vacuum's cleaning cycle
+AND mark the daily run as complete
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Home mode changes to "Away" (last person left)</li>
-      <li>OR scheduled time when typically away (backup)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <strong>Time:</strong> After 9 AM (avoid early morning false triggers)<br>
-    <strong>Day:</strong> Weekdays only, or specific days of week<br>
-    <strong>Already ran:</strong> Vacuum hasn't run today<br>
-    <strong>Duration:</strong> Expected away time > cleaning time + buffer<br>
-    <strong>Guest mode:</strong> No guests present
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Wait 10 minutes (confirm departure is real)</li>
-      <li>Verify still in Away mode</li>
-      <li>Start robot vacuum cleaning cycle</li>
-      <li>Send notification: "Vacuum started cleaning"</li>
-      <li>Mark that vacuum ran today (prevent duplicate runs)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Return protection</h4>
-    <ul>
-      <li>When anyone enters home zone, check if vacuum is running</li>
-      <li>If running, send vacuum to dock immediately</li>
-      <li>Notify: "Vacuum returning to dock - you're home early"</li>
-    </ul>
-  </div>
-</div>
+IF the tested presence signal reports anyone home
+AND the vacuum is currently cleaning
+THEN send the vacuum back to its dock immediately</div>
+
+## Setup notes
+
+1. Confirm the presence signal against a week of real comings and goings for every household member before using it here.
+2. Choose a daytime window and add a short confirmation wait before starting, as in the simpler auto-start recipe.
+3. Track a per-day completed flag so a brief errand does not trigger a second run once today's cycle already finished.
+4. Reset the per-day flag at a fixed time, such as midnight.
+5. Add the return-to-dock action as its own rule so it fires immediately, independent of the start logic.
+6. Test by starting the vacuum manually and then simulating an early return to confirm it docks promptly.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Smart return estimation</h3>
-    <p>Predict when to stop cleaning:</p>
-    <ul>
-      <li>Check calendar for meeting end times</li>
-      <li>Track typical commute duration</li>
-      <li>Monitor phone location distance from home</li>
-      <li>Stop cleaning when anyone is 20 minutes away</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Room-by-room scheduling</h3>
-    <p>Clean different areas on different days:</p>
-    <ul>
-      <li><strong>Monday/Thursday:</strong> Living room and kitchen</li>
-      <li><strong>Tuesday/Friday:</strong> Bedrooms and hallways</li>
-      <li><strong>Wednesday:</strong> Bathrooms and entryway</li>
-      <li><strong>Weekend:</strong> Full house deep clean if away</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Completion notification</h3>
-    <p>Know when cleaning is done:</p>
-    <ul>
-      <li>Notification when vacuum returns to dock</li>
-      <li>Report on area cleaned and duration</li>
-      <li>Alert if vacuum got stuck or needs attention</li>
-      <li>Reminder if bin needs emptying</li>
-    </ul>
-  </div>
-</div>
+### Skip a day intentionally
 
-## Common issues and solutions
+Offer a simple manual control that skips today's run, for a day someone is working from home without leaving.
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Vacuum starts when someone's home</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Presence detection falsely reported everyone away.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Add 10-15 minute delay before starting</li>
-        <li>Re-check presence status after delay</li>
-        <li>Use multiple presence detection methods</li>
-        <li>Add manual override button to cancel</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Vacuum still running when you arrive</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Came home early and vacuum is still cleaning.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Add "return protection" automation to dock vacuum on arrival</li>
-        <li>Send vacuum to dock when anyone enters home zone</li>
-        <li>Use location-based trigger when 10-15 min away</li>
-        <li>Voice command: "Stop the vacuum"</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Vacuum runs multiple times per day</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Every time someone leaves and returns, vacuum starts again.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Track if vacuum already ran today (input_boolean)</li>
-        <li>Reset "ran today" flag at midnight</li>
-        <li>Add condition: only run if last run was > 20 hours ago</li>
-        <li>Limit to specific time window (9 AM - 2 PM)</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Doesn't run on work-from-home days</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Vacuum never runs when working from home.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Add manual trigger: "Run the vacuum" voice command</li>
-        <li>Schedule specific rooms while in another part of house</li>
-        <li>Create "WFH mode" that runs vacuum during lunch hour</li>
-        <li>Use weekend for full-house cleaning</li>
-      </ul>
-    </div>
-  </div>
-</div>
+### Notify on completion
 
-## Best practices
+Send one notification when the vacuum reports it has returned to its dock after a completed cycle.
 
-<div class="best-practice-card">
-  <h3>Setting up smart vacuum scheduling</h3>
-  <ol>
-    <li>Track presence for all household members</li>
-    <li>Add 10-15 minute delay after departure</li>
-    <li>Re-verify empty status before starting</li>
-    <li>Create "return protection" to dock on arrival</li>
-    <li>Track daily runs to prevent duplicates</li>
-    <li>Include manual trigger for work-from-home days</li>
-  </ol>
-</div>
+## Failure modes
 
-<div class="warning-card">
-  <h3>What to avoid</h3>
-  <ul>
-    <li><strong>No departure buffer</strong> - Quick trips will trigger vacuum</li>
-    <li><strong>No return protection</strong> - Vacuum still running when you get home</li>
-    <li><strong>Running during sleep</strong> - Add time restrictions</li>
-    <li><strong>Ignoring pets</strong> - Pets may be home alone and stressed by vacuum</li>
-  </ul>
-</div>
+- **Vacuum keeps cleaning after someone returns:** Confirm the dock command is wired to the presence signal directly, not only checked at the next scheduled interval.
+- **Vacuum runs again the same day:** Confirm the per-day flag is being set and is not being reset by an unrelated automation.
+- **Vacuum never starts:** Confirm the presence signal actually reports empty during the chosen window and that the per-day flag was reset that day.
+- **Vacuum docks and immediately restarts:** Separate the stop logic from the start logic so a docking event does not itself look like a new empty-house signal.
+- **The presence signal disagrees with reality:** Stop relying on it and retest with a longer confirmation wait rather than tuning indefinitely.
 
----
+## Done when
+
+- [ ] The vacuum starts only after the confirmed-empty wait completes.
+- [ ] The vacuum returns to its dock within moments of a simulated early return.
+- [ ] The vacuum does not start a second time after completing a cycle the same day.
+- [ ] The per-day flag resets reliably at the chosen time.
+- [ ] A manual skip-today control works and is reset the next day.
+- [ ] The vacuum's own app and buttons still work normally.
+
+## FAQ
+
+### How is this different from a simple auto-start recipe?
+
+This recipe adds a once-per-day limit and immediately docks the vacuum if anyone returns early, instead of only starting a cleaning cycle.
+
+### What happens if someone comes home while the vacuum is cleaning?
+
+The vacuum is sent back to its dock as soon as the tested presence signal reports anyone home, rather than finishing the room it is in.
+
+### Can this run more than once if someone leaves and returns several times in a day?
+
+No. A per-day flag prevents a second run once the vacuum has completed a cycle that day.
 
 ## Related recipes
-- [Robot vacuum auto start](/automation/appliances/robot-vacuum-auto-start.html)
-- [Away mode](/automation/daily-routines/away-mode.html)
-- [Morning routine](/automation/daily-routines/morning-routine.html)
+
+- [Start the robot vacuum when everyone leaves](/automation/appliances/robot-vacuum-auto-start.html)
+- [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
+- [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/appliances/index.html">Back to appliances</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/appliances/index.html">Back to appliance automations</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

@@ -1,214 +1,110 @@
 ---
 layout: automation
-title: Dim Lights When TV Turns On - Theater Mode Automation
-description: Automatically dim lights when TV turns on for better viewing experience. Complete guide with power monitoring and smart TV integration.
-keywords: TV lighting automation, dim lights TV, theater mode automation, movie lighting, automatic TV lights, smart TV automation, cinema mode
+title: Dim lights when the TV turns on
+description: A platform-neutral recipe that dims the living room lights when the TV turns on, using either power monitoring or a smart TV signal, and restores them afterward.
+keywords: TV lighting automation, dim lights TV, theater mode automation, movie lighting, automatic TV lights
+last_modified_at: 2026-08-30
+faqs:
+  - question: Should I use power monitoring or a smart TV signal as the trigger?
+    answer: Power monitoring works with almost any TV and plug, but can be fooled by a menu screen drawing similar power to actual playback. A smart TV or streaming device signal is more accurate if the platform supports it reliably.
+  - question: Why does the TV menu sometimes dim the lights by mistake?
+    answer: A power-based trigger cannot always tell a menu screen from active playback, since both can draw similar wattage. Raising the power threshold or adding a short delay before dimming reduces this.
+  - question: Will the lights go back to their previous brightness after the TV turns off?
+    answer: Yes, if the previous brightness is saved before dimming and restored once the TV has been off for a couple of minutes, rather than always returning to one fixed level.
 ---
 
-# Dim lights when TV turns on
+# Dim lights when the TV turns on
 
-Enhance movie watching by automatically dimming lights when the TV turns on. Create the perfect viewing atmosphere without fumbling for light switches.
+Automatically dim the living room lights when the TV turns on, and restore them to their previous level once the TV turns off.
 
-## Use cases
+**Best for:** A living room with dimmable smart lights and either a smart plug with power monitoring or a TV/streaming device that reports its power or playback state reliably.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Entertainment</h4>
-    <ul>
-      <li><strong>Movie Watching</strong> - Optimize lighting for better screen visibility</li>
-      <li><strong>TV Show Viewing</strong> - Reduce glare and eye strain</li>
-      <li><strong>Gaming</strong> - Create immersive gaming environment</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Comfort & Ambiance</h4>
-    <ul>
-      <li><strong>Afternoon Viewing</strong> - Close blinds when sun hits screen</li>
-      <li><strong>Theater Experience</strong> - Automatic cinema mode in your living room</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A room where lights need to stay bright regardless of what is on screen, or a TV whose power state cannot be read reliably by the platform.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 1: Power Monitoring (Most Universal)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Plug with Power Monitoring</strong>
-      <div class="product-details">
-        Popular brands: TP-Link Kasa, Shelly, Zigbee power monitoring plugs<br>
-        Real-time power measurement • Relay control
-      </div>
-    </div>
-  </div>
-</div>
+Dimming the lights by hand every time a movie starts is a small chore that is easy to skip, and it means the room does not settle into a consistent viewing setup. Automating it removes the extra step, and restoring the previous brightness afterward avoids leaving the room dim once viewing is over.
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 2: Smart TV Integration (More Reliable)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart TV with Platform Integration</strong>
-      <div class="product-details">
-        The TV or player must expose a reliable power or playback state to your hub
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Lights or Light Switches</strong>
-      <div class="product-details">
-        Popular brands: Philips Hue, LIFX, Lutron, Inovelli<br>
-        Dimmable capability required
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>RGB Bias Lighting</strong>
-      <div class="product-details">
-        Colored LED strip behind TV for enhanced viewing
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Blinds</strong>
-      <div class="product-details">
-        For daytime glare control
-      </div>
-    </div>
-  </div>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect the TV turning on | No personally verified recommendation yet | No personally verified recommendation yet | A power-monitoring smart plug or a supported smart TV/streaming device integration can both work; neither has a specific personally verified recommendation here. |
+| Dim the living room lights | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Requires a dimmable fixture and a switch rated for the load. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF TV power > 50W
-AND time after sunset
-THEN dim living room lights to 10%
-AND close blinds</div>
+- **Trigger:** Power draw on the TV's smart plug rises above a threshold, or the TV/streaming device reports it is playing.
+- **Conditions:** The current time is after a chosen hour, such as sunset, if daytime dimming is not wanted.
+- **Action:** Save the current light brightness, then dim the living room lights to a low level.
+- **Wait / timeout:** Keep the lights dimmed until the stop condition is met.
+- **Stop condition:** Power draw drops below a lower threshold, or the TV reports it has stopped, for a couple of minutes.
+- **Manual override:** The physical light switch or app always works to change brightness directly.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Using Power Monitor</h4>
-    <strong>Trigger:</strong> Smart plug power consumption rises above 50 watts (TV turns on)<br>
-    <strong>Conditions:</strong> Time between sunset and sunrise (optional)<br>
-    <strong>Actions:</strong> Dim lights to 10% OR turn off completely • Optional: Close blinds/curtains
-  </div>
-  
-  <div class="setup-step">
-    <h4>Using Smart TV</h4>
-    <strong>Trigger:</strong> TV turns on OR specific app opens (Netflix, Disney+, etc.)<br>
-    <strong>Conditions:</strong> Time between 6 PM - midnight (movie hours) • Only for video apps<br>
-    <strong>Actions:</strong> Dim lights to 10-20% • Close blinds if daytime
-  </div>
-</div>
+<div class="automation-example">IF TV power draw rises above the "on" threshold
+OR the TV/streaming device reports it is playing
+THEN save the current light brightness
+AND dim the living room lights to the preset level
+
+IF TV power draw has stayed below the "off" threshold for a couple of minutes
+OR the TV has reported "off" for the same period
+THEN restore the living room lights to the saved brightness</div>
+
+## Setup notes
+
+1. If using power monitoring, test the TV's actual wattage in both standby and active playback so the "on" and "off" thresholds are set apart from real values, not guessed.
+2. Add a short delay, such as thirty seconds, before dimming so a menu screen briefly drawing similar power does not trigger it.
+3. If using a smart TV or streaming device signal instead, confirm the platform reads its state reliably before relying on it daily.
+4. Save the current brightness before dimming so the lights can return to where they were, rather than always resetting to one fixed level.
+5. Require the "off" condition to hold for a couple of minutes so a brief pause does not restore full brightness mid-movie.
 
 ## Advanced features
 
-### Content-aware lighting
+### Daytime versus evening dimming
 
-Different content types get different lighting:
+Use a lighter dim, such as 40 percent, during the day for glare control, and a deeper dim, such as 10 percent, in the evening once natural light is gone.
 
-Create automation triggered by TV app changes with conditional logic:
-- **Movie mode (Netflix, Disney+, Plex):** 5% brightness, warm white, close blinds
-- **TV show mode (Hulu, YouTube TV):** 15% brightness
-- **Gaming mode (HDMI inputs):** 25% brightness, activate RGB bias lighting with dynamic effect
-- **Sports mode (ESPN):** 30% brightness
+### Skip dimming during activity
 
-Use app name or input source to determine content type and adjust accordingly.
-
-### Daytime glare control
-
-Different behavior for daytime vs nighttime:
-
-Create two automations:
-
-**Daytime (sunrise to sunset):**
-- Close blinds to reduce glare
-- Keep lights at 40% (more light needed during day)
-
-**Nighttime (after sunset):**
-- Dim lights significantly to 10%
-- Blinds already closed or less critical
-
-### Bias lighting synchronization
-
-Sync LED strip behind TV:
-- Dim main room lights to 5%
-- Activate TV backlight LED strip at 50% brightness
-- Set warm white/orange color (RGB: 255, 140, 60)
-
-### Pause dimming for movement
-
-Don't dim if people are moving around:
-
-Add condition: No motion detected in last 5 minutes before dimming lights
+Add a condition that skips dimming if recent motion has been detected in the room, so lights stay normal while people are still moving around rather than settling in to watch.
 
 ## Failure modes
 
-### Issue: Lights dim when TV menu on
+- **Lights dim when only the menu is open:** Raise the power threshold or add a longer delay before dimming; consider switching to a TV-state trigger if available.
+- **Lights do not restore when the TV turns off:** Confirm the "off" threshold or state check is set below actual standby power, and that the previous brightness was saved before dimming.
+- **Lights dim during the day unexpectedly:** Add or correct a time-of-day condition if daytime dimming is not wanted.
+- **TV state reported inaccurately:** Check the TV or streaming device's network connection and platform integration; power monitoring can serve as a fallback trigger.
 
-**Causes:**
-- Power monitoring can't differentiate between menu and playback
-- Trigger threshold too low
-- No delay to ensure actually watching content
+## Done when
 
-**Solutions:**
-✅ Increase power threshold (try 80W instead of 50W)
-✅ Add longer delay (30 seconds) before dimming
-✅ Use smart TV integration instead - detect 'playing' state
-✅ Add condition: Only between certain hours (6 PM - midnight)
-✅ Use app-specific triggers (Netflix/Disney+ only)
+- [ ] Actual TV wattage has been tested in standby and while playing.
+- [ ] The lights dim reliably once real playback starts, not just when the menu is open.
+- [ ] The lights restore to their previous brightness after the TV turns off.
+- [ ] Daytime behavior matches what the household wants.
 
-### Issue: Lights don't restore when TV off
+## FAQ
 
-**Causes:**
-- Power drops gradually, not instantly
-- No reverse automation created
-- Previous brightness not saved
-- TV on standby still drawing power
+### Should I use power monitoring or a smart TV signal as the trigger?
 
-**Check:**
-- ✅ Create separate "restore lights" automation (shown in examples)
-- ✅ Use lower power threshold for "off" detection (below 10W)
-- ✅ Add 2-minute delay to ensure TV actually off (not just paused)
-- ✅ Save previous light state before dimming
-- ✅ Test actual TV power consumption when off (may be 5-15W)
+Power monitoring works with almost any TV and plug, but can be fooled by a menu screen drawing similar power to actual playback. A smart TV or streaming device signal is more accurate if the platform supports it reliably.
 
-**Fix with state saving:**
-- When dimming: Create scene snapshot of current light state, then dim
-- When restoring: Activate saved scene to restore exact previous brightness
+### Why does the TV menu sometimes dim the lights by mistake?
 
-### Issue: Smart TV state inaccurate
+A power-based trigger cannot always tell a menu screen from active playback, since both can draw similar wattage. Raising the power threshold or adding a short delay before dimming reduces this.
 
-**Causes:**
-- TV integration losing connection
-- TV firmware outdated
-- Network issues
-- Platform doesn't support TV model well
+### Will the lights go back to their previous brightness after the TV turns off?
 
-**Solutions:**
-✅ Update TV firmware to latest version
-✅ Check TV integration in platform (reconnect if needed)
-✅ Use power monitoring as backup method
-✅ Restart hub/integration
-✅ Check TV is on same network as hub
-✅ Use Cast device (Chromecast) instead of TV direct integration
-
----
+Yes, if the previous brightness is saved before dimming and restored once the TV has been off for a couple of minutes, rather than always returning to one fixed level.
 
 ## Related recipes
-- [Away mode automation](/automation/daily-routines/away-mode.html)
-- [Bedtime routine automation](/automation/daily-routines/bedtime-routine.html)
-- [Speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
+
+- [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
+- [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
+- [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 <div class="page-navigation">
   <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

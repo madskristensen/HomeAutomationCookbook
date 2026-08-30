@@ -1,251 +1,114 @@
 ---
 layout: automation
-title: Activate Air Purifier When Air Quality Drops - Health Automation
-description: Automatically run your air purifier when indoor air quality drops below healthy levels. Monitor AQI and PM2.5 for cleaner air.
-keywords: air quality automation, air purifier control, AQI sensor automation, PM2.5 automation, indoor air quality, automatic air purifier, health automation, allergy automation
+title: Run the air purifier when indoor air quality drops
+description: A platform-neutral recipe that runs a plug-controlled air purifier when an air quality sensor reports a sustained drop, and stops nagging once the air clears.
+keywords: air quality automation, air purifier control, AQI sensor automation, PM2.5 automation, indoor air quality
+last_modified_at: 2026-08-30
+faqs:
+  - question: Why require a sustained reading instead of reacting to a single spike?
+    answer: Cooking and brief odors cause short spikes that clear on their own. A sustained reading over several minutes better reflects an actual air quality problem worth running the purifier for.
+  - question: What if there is no air quality sensor at all?
+    answer: Send a notification suggesting ventilation instead of guessing. Do not run the purifier on a fixed schedule with no sensor to justify it.
+  - question: Should the purifier ever run at maximum speed automatically?
+    answer: Only when the sensor is available and reporting a clearly unhealthy reading. Treat a missing or unavailable reading as unknown, not as a reason to run at maximum.
 ---
 
-# Clean the air when air quality drops
+# Run the air purifier when indoor air quality drops
 
-Indoor air quality fluctuates throughout the day from cooking, outdoor pollution, pet dander, and more. Automate air purification when quality drops below healthy thresholds for better health and comfort.
+Watch an air quality sensor for a sustained unhealthy reading, run the purifier, and turn it off again once the air has stayed clear for a while.
 
-## Use cases
+**Best for:** A room with both an air quality sensor and a purifier that can be switched or controlled remotely.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Indoor Sources</h4>
-    <ul>
-      <li><strong>Cooking Smoke</strong> - Air quality drops when cooking creates smoke or strong odors</li>
-      <li><strong>Pet Odors</strong> - Dander and smells accumulating in living spaces</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>External Factors</h4>
-    <ul>
-      <li><strong>Seasonal Allergies</strong> - Outdoor pollen affecting indoor air quality</li>
-      <li><strong>Poor Outdoor AQI</strong> - Wildfire smoke or pollution entering home</li>
-      <li><strong>Health Maintenance</strong> - Proactive air quality management for respiratory health</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Homes without any air quality sensor, or treating this as a substitute for evacuating during a genuine hazard such as heavy smoke.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 1: Smart Air Purifier</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Air Quality Sensor</strong>
-      <div class="product-details">
-        Popular brands: Awair, IQAir, Aqara, PurpleAir<br>
-        PM2.5 detection • WiFi connectivity • Measures AQI or PM2.5
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Air Purifier</strong>
-      <div class="product-details">
-        Brands: Coway, Levoit, Dyson, Winix<br>
-        WiFi-enabled OR regular purifier on smart plug (simpler option)
-      </div>
-    </div>
-  </div>
-</div>
+Cooking, cleaning products, and pet activity all cause brief air quality dips that clear on their own. Reacting to every small spike leads to a purifier that runs constantly and an alert nobody trusts. Requiring a sustained reading, then confirming the air has cleared before stopping, keeps the automation both useful and quiet.
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 2: HVAC-Based</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Air Quality Sensor + Smart Thermostat</strong>
-      <div class="product-details">
-        Brands: Ecobee, Honeywell<br>
-        Smart thermostat with air filter/circulation mode
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Multiple Sensors</strong>
-      <div class="product-details">
-        Track air quality in different rooms
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Outdoor Air Quality Monitor</strong>
-      <div class="product-details">
-        Compare indoor vs outdoor conditions
-      </div>
-    </div>
-  </div>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Control a plug-in air purifier | [Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2) | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | Confirm the plug's current rating covers the purifier's startup draw, and keep the purifier's own physical switch usable. |
+| Measure indoor air quality | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a specific air quality or PM2.5 sensor. Any sensor used here should report a stable, current reading before it drives the purifier. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF air quality poor (AQI > 100)
-THEN turn on air purifier to high
-AND send notification "Poor air quality detected"</div>
+- **Trigger:** The air quality sensor reports an unhealthy reading.
+- **Conditions:** The sensor is available and the reading has held at an unhealthy level for several minutes.
+- **Action:** Turn on the purifier, choosing a higher speed for a worse reading if the purifier supports it.
+- **Wait / timeout:** Keep the purifier running until the reading returns to a healthy level and stays there for a similar confirmation period.
+- **Stop condition:** Turn off the purifier once the air has stayed clear through the confirmation period.
+- **Manual override:** The purifier's own power button or app control always works regardless of the automation.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Air quality (AQI) drops below 35</li>
-      <li>OR PM2.5 concentration above 50 μg/m³</li>
-      <li>OR VOC (Volatile Organic Compounds) exceeds threshold</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions (optional)</h4>
-    <strong>Note:</strong> Air quality is health-critical and should be addressed immediately<br>
-    <strong>Optional:</strong> Only during occupied hours
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on air purifier at high speed</li>
-      <li>OR activate HVAC fan with filter</li>
-      <li>Optional: Close smart windows/vents</li>
-      <li>Optional: Send notification with current air quality reading</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the air quality sensor reports unhealthy
+AND the reading holds for several minutes
+THEN turn on the purifier
+
+IF the air quality sensor reports healthy
+AND the purifier is currently on
+AND the healthy reading holds for a similar confirmation period
+THEN turn off the purifier</div>
+
+## Setup notes
+
+1. Place the sensor away from the kitchen, a litter box, or other constant local sources so it reflects the room's general air rather than one corner.
+2. Record a few days of readings to see the sensor's normal range before choosing thresholds.
+3. Require the unhealthy reading to hold for several minutes before starting the purifier, so a brief cooking spike does not trigger it.
+4. Require a similar clear period before stopping, so the purifier does not cycle on and off around the threshold.
+5. Confirm the purifier's own switch and app control still work after wiring it through a smart plug.
+6. Test with a deliberate short-lived source, such as burnt toast, to confirm the automation ignores it.
 
 ## Advanced features
 
-### Automatic purifier shutoff
+### Graduated speed by severity
 
-Turn off when air quality improves:
+Where the purifier supports more than one speed, use a lower speed for a moderate reading and reserve the highest speed for a clearly unhealthy one.
 
-Create automation with these elements:
-- **Trigger:** Air quality rises above 50 AQI for 30 minutes
-- **Condition:** Purifier is currently on
-- **Action:**
-  - Turn off purifier
-  - Send notification: "Air quality improved ([current AQI]) - Purifier turned off"
+### Notify without a purifier
 
-### Graduated speed control
-
-Adjust purifier speed based on air quality level:
-
-Create automation triggered by air quality sensor state change:
-- **Good air (AQI above 50):** Set fan to 25% (low/auto)
-- **Moderate (AQI 35-50):** Set fan to 50% (medium)
-- **Unhealthy (AQI below 35):** Set fan to 100% (high)
-
-Use conditional logic to check current AQI and set appropriate fan speed.
-
-### No purifier? Alternative actions
-
-If you don't have an air purifier:
-- Send mobile notification: "Air quality poor ([current AQI]). Consider opening windows or improving ventilation."
-- Create persistent notification on dashboard with current AQI and suggestion to check outdoor air quality before opening windows
-
-## Air quality levels reference
-
-### AQI scale
-
-**Good (0-50 AQI):**
-- No action needed
-- Air quality satisfactory
-
-**Moderate (51-100):**
-- Turn on purifier at low speed
-- Sensitive individuals may experience minor effects
-
-**Unhealthy for Sensitive Groups (101-150):**
-- Purifier on medium to high
-- People with respiratory conditions should limit outdoor activity
-
-**Unhealthy (151-200):**
-- Purifier on maximum
-- Notify household members
-- Everyone may experience health effects
-
-**Very Unhealthy (201-300):**
-- Purifier maximum
-- Urgent notification
-- Health warnings for everyone
-
-**Hazardous (301+):**
-- Purifier maximum
-- Emergency notification
-- Seal windows/doors
-- Consider evacuation if outdoor air (wildfire)
+If no purifier is connected yet, send a notification suggesting ventilation or checking outdoor air quality before opening windows, instead of taking no action at all.
 
 ## Failure modes
 
-### Issue: Purifier doesn't turn on
+- **Purifier runs almost constantly:** Move the sensor away from a nearby pollution source and confirm the purifier's filter is still effective.
+- **Purifier never turns on:** Confirm the sensor is reporting current data and that the unhealthy threshold is realistic for the sensor's normal range.
+- **Cooking triggers the purifier every time:** Lengthen the sustained-reading delay or raise the threshold slightly during cooking hours.
+- **Purifier cycles on and off repeatedly:** Widen the gap between the on and off thresholds, or require a longer confirmation period.
+- **Sensor goes unavailable:** Treat the missing reading as unknown and leave the purifier in its current state rather than assuming clean air.
 
-**Causes:**
-- Air quality sensor not reporting correctly
-- Threshold too low (never reaches trigger point)
-- Smart plug or purifier not responding
-- Automation disabled or has errors
+## Done when
 
-**Solutions:**
-✅ Check air quality sensor battery and connectivity
-✅ View current sensor reading in app - is it updating?
-✅ Adjust threshold based on typical readings (try 45-50 instead of 35)
-✅ Test purifier control manually - verify smart plug works
-✅ Check automation logs to see if triggers are firing
-✅ Verify automation is enabled
+- [ ] A few days of baseline readings inform the chosen thresholds.
+- [ ] A brief cooking spike does not start the purifier.
+- [ ] A sustained unhealthy reading reliably starts the purifier.
+- [ ] The purifier turns off only after the air has stayed clear through the confirmation period.
+- [ ] The purifier's own switch and app control still work normally.
+- [ ] An unavailable sensor reading does not force the purifier on or off.
 
-### Issue: Purifier runs constantly
+## FAQ
 
-**Causes:**
-- Air quality sensor placed poorly (near kitchen, litter box, etc.)
-- Outdoor air quality consistently poor
-- Purifier not actually improving air (filter needs replacement)
-- Threshold set too high (always triggers)
-- No shutoff automation created
+### Why require a sustained reading instead of reacting to a single spike?
 
-**Check:**
-- ✅ Review sensor placement - away from heat, humidity, direct sources
-- ✅ Check outdoor AQI - if outdoor is poor, indoor will be affected
-- ✅ Inspect purifier filter - replace if dirty or old
-- ✅ Monitor air quality trends - is it improving when purifier runs?
-- ✅ Create companion shutoff automation (see Advanced Features above)
+Cooking and brief odors cause short spikes that clear on their own. A sustained reading over several minutes better reflects an actual air quality problem worth running the purifier for.
 
-**Fix:**
-- Move sensor to central location away from direct pollution sources
-- Lower threshold (trigger at 30 instead of 35)
-- Add time delay: Only turn on if quality stays poor for 5+ minutes
-- Set maximum run time: Turn off after 2 hours, reassess air quality
-- Add shutoff automation with 30-minute "quality stable" delay
+### What if there is no air quality sensor at all?
 
-### Issue: False triggers from cooking
+Send a notification suggesting ventilation instead of guessing. Do not run the purifier on a fixed schedule with no sensor to justify it.
 
-**Causes:**
-- Sensor too close to kitchen
-- Cooking creates brief air quality spikes
-- No delay to differentiate temporary vs sustained poor quality
+### Should the purifier ever run at maximum speed automatically?
 
-**Solutions:**
-✅ Move sensor away from kitchen or add delay before triggering
-✅ Add condition: Only trigger between certain hours (not dinner time)
-✅ Use "for: 5 minutes" delay to ignore brief spikes
-✅ Install separate kitchen hood fan automation
-✅ Add condition: Don't trigger if stove is in use (if smart)
-✅ Use higher threshold for cooking hours (trigger at 30 instead of 35)
-
----
+Only when the sensor is available and reporting a clearly unhealthy reading. Treat a missing or unavailable reading as unknown, not as a reason to run at maximum.
 
 ## Related recipes
-- [Smart window open/close notifications](/automation/climate/window-notifications.html)
-- [Stop thermostat when windows open](/automation/climate/thermostat-windows-open.html)
-- [Away mode automation](/automation/daily-routines/away-mode.html)
+
+- [Get notified when to open or close windows](/automation/climate/window-notifications.html)
+- [Pause heating or cooling when a window stays open](/automation/climate/thermostat-windows-open.html)
+- [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 
 <div class="page-navigation">
   <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

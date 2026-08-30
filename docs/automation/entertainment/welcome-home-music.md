@@ -1,228 +1,108 @@
 ---
 layout: automation
-title: Play Music When Arriving Home - Welcome Automation
-description: Automatically start music when you arrive home. Create a welcoming atmosphere with automatic audio.
-keywords: welcome home music, arrival music automation, automatic music greeting, home mode music, presence detection music, greeting automation, arrival routine
+title: Play music when arriving home
+description: A platform-neutral recipe that starts music on arrival, using a tested presence signal, to create a consistent welcome-home moment.
+keywords: welcome home music, arrival music automation, automatic music greeting, presence detection music, greeting automation
+last_modified_at: 2026-08-30
+faqs:
+  - question: What presence signal should trigger this?
+    answer: Use whatever the household has already tested and trusts, such as a phone's location, a smart lock unlocking, or a garage door opening. A single untested signal is the most common source of false triggers.
+  - question: Will this play music every time the front door opens?
+    answer: Not if it is built around a change from away to home, rather than the door itself. A door can open and close many times while everyone is already home, and only the arrival transition should start music.
+  - question: What if multiple people arrive separately?
+    answer: Add a cooldown period, so the automation only plays music once per arrival window rather than restarting every time a different household member gets home shortly after the first.
 ---
 
-# Play music when you come home
+# Play music when arriving home
 
-Coming home to a house with lights on and music playing feels welcoming. It's the little touches that make a house feel like home.
+Start music automatically when the household arrives home, using a presence signal that has already been tested and trusted.
 
-## Use cases
+**Best for:** A household with a presence-detection method, such as phone location, a smart lock, or a garage door sensor, that has been confirmed to work reliably for every regular occupant.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Daily Arrivals</h4>
-    <ul>
-      <li><strong>After Work Greeting</strong> - Welcome yourself home after long day</li>
-      <li><strong>Morning Wake-Up</strong> - Greet you as morning routine starts</li>
-      <li><strong>Energy Boost</strong> - Uplifting music when arriving home</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Atmosphere</h4>
-    <ul>
-      <li><strong>Pleasant Atmosphere</strong> - Create welcoming ambiance automatically</li>
-      <li><strong>Guest Welcome</strong> - Music plays when guests arrive</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A home where presence detection is unreliable or untested; a false trigger here just means music plays at an odd time, which is a minor nuisance, but it is still worth getting right.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Speaker/Music System</strong>
-      <div class="product-details">
-        Popular brands: Sonos, Amazon Echo, Google Home, Apple HomePod<br>
-        Single room or multi-room audio • WiFi connectivity • Streaming service integration
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Presence Detection</strong>
-      <div class="product-details">
-        Phone app/GPS location services, Smart lock unlock detection, OR Garage door sensor<br>
-        A household presence source tested with every regular occupant
-      </div>
-    </div>
-  </div>
-</div>
+Coming home to music playing is a small but pleasant touch, and it removes the need to reach for a phone or speak to an assistant right after walking in. Using an arrival transition, rather than a door sensor alone, keeps it from firing every time someone opens a door while already home.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Multiple Speakers</strong>
-      <div class="product-details">
-        Music in entry, kitchen, and living room for full-home welcome
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Lights</strong>
-      <div class="product-details">
-        Also turn on lights when arriving for complete welcome scene
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect arrival | No personally verified recommendation yet | No personally verified recommendation yet | Phone-based location, a smart lock, or a garage door sensor can all work; use whichever the household has already tested. |
+| Play the music | No personally verified recommendation yet | No personally verified recommendation yet | Any speaker that accepts playback and volume commands from the platform. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF person arrives home
-AND time between 5:00 PM - 9:00 PM
-THEN play welcome playlist on main speaker
-AND set volume to 35%</div>
+- **Trigger:** The household's presence state changes from away to home.
+- **Conditions:** The current time falls within hours the household wants a welcome-home moment, and music is not already playing.
+- **Action:** Start the welcome playlist on the main speaker at a preset volume.
+- **Wait / timeout:** None; playback continues normally once started.
+- **Stop condition:** Manual, or a separate automation that stops music after a set duration if desired.
+- **Manual override:** The speaker's own controls always work to pause, stop, or change volume directly.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Home goes into Home mode (when first person arrives)</li>
-      <li>OR specific person arrives home</li>
-      <li>OR morning routine starts (wake-up music)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions (optional)</h4>
-    <strong>NOT between 7 AM - 10 AM:</strong> If you don't want morning music<br>
-    <strong>Time is after 4 PM:</strong> Only afternoon/evening arrivals<br>
-    <strong>Music not already playing:</strong> Don't interrupt existing playback
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Play music on selected speakers</li>
-      <li>Set volume to appropriate level</li>
-      <li>Optionally announce "Welcome home"</li>
-      <li>Optional: Turn on lights, unlock door</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the household's presence state changes from away to home
+AND the current time is within the hours the household wants this
+AND music is not already playing
+THEN play the welcome playlist on the main speaker at the preset volume</div>
+
+## Setup notes
+
+1. Confirm the presence signal being used, phone location, lock, or garage sensor, has been tested and works reliably for every regular household member, not just one phone.
+2. Trigger on the transition from away to home, not on a door or lock event by itself, so this does not fire repeatedly while everyone is already home.
+3. Add a condition that skips the action if music is already playing, so returning briefly does not interrupt something already going.
+4. Add a cooldown period so multiple people arriving within a short window only starts music once.
+5. Restrict the hours this runs, if the household does not want a welcome-home moment at every hour, such as very early morning.
 
 ## Advanced features
 
-### Speaker selection by time and arrival
+### Time-based volume and playlist
 
-**Smart grouping:**
+Choose a different playlist and volume depending on arrival time, such as a quieter volume for a late-evening arrival and a livelier one earlier in the day.
 
-Adjust which speakers play based on arrival time:
-- **Afternoon arrival (4-7 PM):** Entry, kitchen, living room speakers play "after work playlist"
-- **Morning routine (6-10 AM):** Bedroom, bathroom, kitchen speakers play morning news radio
-- **Evening arrival (after 7 PM):** Living room and dining room only play "evening relaxing" playlist
+### Voice announcement before music
 
-Use conditional logic based on current time to select appropriate speakers and content.
-
-### Time-based volume levels
-
-Adjust volume based on time of day:
-- **Morning (6-10 AM):** 20% volume
-- **Daytime (10 AM - 6 PM):** 40% volume
-- **Evening (6-10 PM):** 35% volume
-- **Late night (after 10 PM):** 15% volume
-
-Use template logic to check current hour and set appropriate volume.
-
-### Auto-stop after duration
-
-Stop music after certain time if no interaction:
-
-Create automation:
-- **Trigger:** Music has been playing for 30 minutes
-- **Condition:** Welcome music flag is active
-- **Actions:**
-  - Stop music playback
-  - Turn off welcome music flag
-
-### Voice announcement
-
-Combine with greeting:
-- First: Play voice greeting "Welcome home, [name]!"
-- Wait 3 seconds for greeting to finish
-- Then: Start playing music playlist
+Play a short spoken greeting first, then start the playlist a few seconds later, if the platform supports sequencing announcements and playback.
 
 ## Failure modes
 
-### Issue: Music plays every time door opens
+- **Music plays every time a door opens:** Confirm the trigger uses the away-to-home presence transition, not a raw door or lock event.
+- **Presence detection is unreliable:** Combine more than one tested signal, such as phone location together with a garage door or lock event, rather than relying on a single method.
+- **Music plays at an inconvenient time:** Add or correct the hours condition.
+- **Music restarts for each household member arriving separately:** Add a cooldown so only the first arrival within a window starts playback.
+- **Volume is inappropriate for the time of day:** Set volume explicitly per time window rather than using one fixed level for every arrival.
 
-**Causes:**
-- Triggering on door sensor instead of presence
-- No condition to check if already home
-- Triggering when leaving and returning briefly
-- Family members arriving separately trigger multiple times
+## Done when
 
-**Solutions:**
-✅ Use home mode change (Away → Home) not door sensor
-✅ Add condition: Only if music not already playing
-✅ Add delay: Only if away for at least 30 minutes
-✅ Use cooldown: Only play once per 2-hour period
-✅ Track automation: Set flag when music plays, reset after time
+- [ ] The presence signal has been tested and confirmed reliable for every regular household member.
+- [ ] Arriving home reliably starts music without needing a manual action.
+- [ ] The automation does not restart music when someone who is already home opens a door.
+- [ ] Multiple arrivals in a short window do not restart music repeatedly.
+- [ ] The speaker's own manual controls still work independently.
 
-**Cooldown example:**
-Add condition to check that automation hasn't triggered in last 2 hours (7200 seconds) by checking last triggered time.
+## FAQ
 
-### Issue: Music volume inappropriate
+### What presence signal should trigger this?
 
-**Causes:**
-- Fixed volume doesn't suit all times of day
-- Previous manual adjustment not considered
-- Room acoustics vary
-- Other household members affected
+Use whatever the household has already tested and trusts, such as a phone's location, a smart lock unlocking, or a garage door opening. A single untested signal is the most common source of false triggers.
 
-**Check:**
-- ✅ Use time-based volume (shown in Advanced Features)
-- ✅ Lower volume for late arrivals (after 9 PM)
-- ✅ Higher volume for afternoon (4-7 PM)
-- ✅ Consider who's home - quieter if kids sleeping
-- ✅ Test volume in actual conditions (with people talking, etc.)
+### Will this play music every time the front door opens?
 
-**Fix:**
-Use template logic to set volume based on hour:
-- If after 9 PM: 15% volume
-- If after 6 PM: 30% volume  
-- Otherwise: 40% volume
+Not if it is built around a change from away to home, rather than the door itself. A door can open and close many times while everyone is already home, and only the arrival transition should start music.
 
-### Issue: Presence detection unreliable
+### What if multiple people arrive separately?
 
-**Causes:**
-- Phone GPS inaccurate
-- WiFi-based detection has delays
-- Router drops phone connection
-- Battery saver mode disabling location
-- Multiple phones not synchronized
-
-**Solutions:**
-✅ Use multiple detection methods (GPS + WiFi + Bluetooth)
-✅ Set arrival zone radius appropriately (100-200m)
-✅ Combine with garage door sensor or door unlock
-✅ Disable battery optimization for home automation app
-✅ Combine more than one tested presence signal
-✅ Add short delay (2-3 minutes) to allow all sensors to update
-
-**Multi-method example:**
-Use multiple triggers for reliability:
-- GPS arrival
-- OR garage door opens
-- OR front door unlocks
-
-This ensures music plays even if one detection method fails.
-
----
+Add a cooldown period, so the automation only plays music once per arrival window rather than restarting every time a different household member gets home shortly after the first.
 
 ## Related recipes
-- [Play music when shower starts](/automation/entertainment/shower-music.html)
-- [Control music with physical switch](/automation/entertainment/music-switch-control.html)
-- [Morning routine automation](/automation/daily-routines/morning-routine.html)
+
+- [Play music when a shower starts](/automation/entertainment/shower-music.html)
+- [Play or pause music with a physical switch](/automation/entertainment/music-switch-control.html)
+- [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 
 <div class="page-navigation">
   <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

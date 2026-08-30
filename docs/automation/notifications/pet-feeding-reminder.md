@@ -1,342 +1,107 @@
 ---
 layout: automation
-title: Pet Feeding Reminder - Smart Home Pet Care
-description: Never forget to feed your pets with automated feeding reminders. Time-based notifications and smart feeder integration for consistent pet care.
-keywords: pet feeding reminder, dog feeding notification, cat feeding alert, smart pet care, automatic feeding reminder, pet schedule automation
+title: Set up a pet feeding reminder
+description: A platform-neutral recipe that uses a smart button or repurposed sensor to track and remind about pet feeding times.
+keywords: pet feeding reminder, pet feeding tracker, smart button pet care, feeding schedule automation
+last_modified_at: 2026-08-30
+faqs:
+  - question: What if more than one person feeds the pet?
+    answer: The button or tracked action should be pressed by whoever actually feeds the pet, regardless of who it is. The reminder cares about whether feeding happened, not who did it.
+  - question: What happens if feeding is logged twice by accident?
+    answer: A double press simply resets the "last fed" timestamp again with no harmful effect; the next reminder timing is based on whichever press was most recent.
+  - question: Can this track more than one pet?
+    answer: Yes, use a separate button and tracked state for each pet, since they may have different feeding schedules or need separate confirmation.
 ---
 
-# Pet feeding reminder
+# Set up a pet feeding reminder
 
-Consistent feeding times are important for pet health, but busy schedules can lead to forgotten meals or double-feeding. This automation reminds you when it's time to feed your pets and tracks whether feeding has occurred, ensuring your furry family members are properly cared for.
+Use a smart button or repurposed sensor to track when a pet was last fed and send a reminder if too much time passes without it being logged.
 
-## Use cases
+**Best for:** A household where feeding responsibilities are shared and it is easy to lose track of whether the pet has already been fed.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Feeding consistency</h4>
-    <ul>
-      <li><strong>Busy mornings</strong> - Don't forget to feed before rushing out</li>
-      <li><strong>Multiple people</strong> - Coordinate who feeds to avoid double-feeding</li>
-      <li><strong>Medication timing</strong> - Ensure meds are given with food on schedule</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Household coordination</h4>
-    <ul>
-      <li><strong>Kids helping</strong> - Remind children of their pet care responsibilities</li>
-      <li><strong>Traveling</strong> - Remind pet sitter of feeding times</li>
-      <li><strong>Work from home</strong> - Easy to lose track of time</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A household with a single consistent feeder who already reliably tracks feeding mentally; the added button press may not be worth it.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Basic setup (reminders only)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart home platform</strong>
-      <div class="product-details">
-        Any platform with time-based automation and notifications<br>
-        A hub, dashboard, or shared reminder system the household already uses
-      </div>
-    </div>
-  </div>
-</div>
+When feeding responsibilities are shared across household members, it is easy for everyone to assume someone else already fed the pet, or to forget entirely. A simple button press to log feeding, paired with a reminder if too much time passes, keeps this from slipping through the cracks.
 
-<div class="product-section">
-  <h4>Enhanced setup (tracking completion)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart pet feeder</strong>
-      <div class="product-details">
-        Brands: PetSafe, Petlibro, WOpet, Sure Petcare<br>
-        Features: WiFi, portion control, feeding logs
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart button</strong>
-      <div class="product-details">
-        Brands: Flic, Aqara, SmartThings Button<br>
-        Press to confirm feeding (for manual feeders)
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Contact sensor on food container</strong>
-      <div class="product-details">
-        Detect when food container is opened<br>
-        Auto-track feeding without button press
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Smart feeder vs. reminder</strong>
-  <ul>
-    <li><strong>Smart auto-feeder:</strong> Dispenses food automatically at set times - no reminder needed</li>
-    <li><strong>Reminder automation:</strong> For wet food, special diets, or when you prefer manual feeding</li>
-    <li><strong>Combination:</strong> Auto-feeder for dry food, reminders for wet food supplements</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Log a feeding event | No personally verified recommendation yet | No personally verified recommendation yet | A smart button or a contact sensor repurposed for this job works, but this specific use case is not directly matched by the door and window sensor jobs already covered. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF time is 7:00 AM
-AND pet not fed yet today (optional tracking)
-THEN send notification "Time to feed the pets"
-AND announce on kitchen speaker</div>
+- **Trigger:** The feeding button is pressed, or a scheduled check runs to see how long it has been since the last press.
+- **Conditions:** More time has passed than the expected feeding interval, such as 8 to 12 hours.
+- **Action:** Send a reminder notification if feeding has not been logged within the expected window; reset the "last fed" timestamp when the button is pressed.
+- **Wait / timeout:** The reminder repeats at intervals, such as every 30 minutes, until feeding is logged.
+- **Stop condition:** Pressing the feeding button clears the reminder and resets the timer.
+- **Manual override:** The pet can always be fed and the button pressed regardless of the reminder state.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Automation 1: Morning feeding reminder</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is 7:00 AM (adjust to your schedule)</li>
-    </ul>
-    <h4>Conditions (optional)</h4>
-    <ul>
-      <li>Pets not fed today (if tracking)</li>
-      <li>Someone is home</li>
-      <li>Not vacation mode</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "Time to feed Max and Luna!"</li>
-      <li>Announce on kitchen speaker</li>
-      <li>Optional: Flash kitchen lights</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Automation 2: Evening feeding reminder</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is 6:00 PM</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Morning feeding confirmed (if tracking)</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "Time for evening feeding"</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Automation 3: Mark as fed (with button)</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Smart button pressed</li>
-      <li>OR Food container contact sensor opened</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Set helper variable "pet_fed_today" to true</li>
-      <li>Send confirmation: "Feeding logged for Max and Luna"</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the feeding button is pressed
+THEN reset the "last fed" timestamp to now
+
+IF more than 10 hours have passed since the last fed timestamp
+THEN send a reminder notification: "Has the dog been fed?"
+AND repeat every 30 minutes until the button is pressed</div>
+
+## Setup notes
+
+1. Choose a smart button, or repurpose a contact sensor, as the physical feeding-log trigger, placed somewhere convenient near the feeding area.
+2. Create a variable or virtual switch to track the "last fed" timestamp.
+3. Set the expected feeding interval, such as 8 to 12 hours, based on the pet's actual schedule.
+4. Schedule a check that compares the current time to the last-fed timestamp and sends a reminder once the interval is exceeded.
+5. Confirm pressing the button both logs the feeding and clears any active reminder.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Feeding status tracking</h3>
-    <p>Track whether feeding has occurred:</p>
-    <ul>
-      <li><strong>Button press:</strong> Physical confirmation</li>
-      <li><strong>Food container sensor:</strong> Automatic detection</li>
-      <li><strong>Smart feeder integration:</strong> Feeder reports feeding</li>
-      <li><strong>Voice command:</strong> "Pets are fed"</li>
-      <li><strong>Dashboard display:</strong> Visual status indicator</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Escalating reminders</h3>
-    <p>Persistent reminders if feeding is missed:</p>
-    <ul>
-      <li><strong>First reminder:</strong> 7:00 AM - Standard notification</li>
-      <li><strong>Second reminder:</strong> 7:30 AM - "Pets still waiting for breakfast!"</li>
-      <li><strong>Third reminder:</strong> 8:00 AM - High priority + voice announcement</li>
-      <li><strong>Final reminder:</strong> 8:30 AM - Alert all family members</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Multi-pet management</h3>
-    <p>Track different pets with different schedules:</p>
-    <ul>
-      <li>Separate tracking per pet</li>
-      <li>Different feeding times (e.g., puppy needs 3x daily)</li>
-      <li>Medication reminders tied to specific pets</li>
-      <li>Special diet notifications</li>
-    </ul>
-  </div>
-</div>
+### Multiple pets
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Dashboard status tile</h3>
-    <p>Visual feeding status:</p>
-    <ul>
-      <li>Morning fed: ✅ / ❌</li>
-      <li>Evening fed: ✅ / ❌</li>
-      <li>Last fed time displayed</li>
-      <li>Days since last medication (if applicable)</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Family coordination</h3>
-    <p>Prevent double-feeding:</p>
-    <ul>
-      <li>Announce to household when fed: "Pets have been fed by Mom"</li>
-      <li>Show feeding status prominently on dashboard</li>
-      <li>Ask for confirmation before second feeding</li>
-    </ul>
-  </div>
-</div>
+Add a separate button and tracked timestamp for each pet, since feeding schedules or reminder intervals may differ between them.
 
-## Common issues and solutions
+### Escalating reminders
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Reminder comes too early/late</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Feeding time doesn't match your schedule.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Adjust reminder time to match your routine</li>
-        <li>Create weekday vs. weekend schedules</li>
-        <li>Tie to motion sensor (when you wake up)</li>
-        <li>Link to morning routine trigger</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Pet gets fed twice</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Multiple family members feeding because they don't know it's done.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Implement feeding tracking with confirmation</li>
-        <li>Announce to whole house when fed</li>
-        <li>Show status on kitchen dashboard</li>
-        <li>Visual indicator (physical sign or smart display)</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Reminder when already fed</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Getting reminders even after feeding.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Add feeding tracking via button or sensor</li>
-        <li>Add condition to check if fed before reminding</li>
-        <li>Use snooze action on notification</li>
-        <li>Voice command to cancel reminder</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Tracking not resetting</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Fed status stays "fed" and reminders never trigger.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Create automation to reset status at midnight</li>
-        <li>Reset both morning and evening trackers</li>
-        <li>Verify reset automation is running</li>
-        <li>Check for automation errors in logs</li>
-      </ul>
-    </div>
-  </div>
-</div>
+If the first reminder is ignored for an extended period, such as an hour, escalate to a different notification method or a louder in-home alert.
 
-## Best practices
+## Failure modes
 
-### Timing feeding reminders
+- **Reminder never clears after feeding:** Confirm the button press is correctly resetting the "last fed" timestamp, not just triggering a one-time action.
+- **Reminder fires too early or too late:** Adjust the expected feeding interval to better match the pet's actual schedule.
+- **Button is pressed but nothing resets:** Check the button's battery and its connection to the hub.
+- **Repeated reminders become annoying:** Lengthen the repeat interval, or add an escalation step instead of repeating the same notification indefinitely.
 
-**Morning feeding:**
-- Set for when you typically wake up
-- Give 15-30 minutes buffer before you need to leave
-- Weekend schedule may differ from weekdays
+## Done when
 
-**Evening feeding:**
-- Set for when you typically get home
-- Or when dinner prep usually starts
-- Consistent time helps pet's digestion
+- [ ] Pressing the feeding button reliably resets the "last fed" timestamp.
+- [ ] A missed feeding window produces a reminder notification.
+- [ ] The reminder stops once feeding is logged.
+- [ ] Each pet being tracked has its own button and timestamp, if there is more than one.
 
-### Tracking methods comparison
+## FAQ
 
-**Smart button (manual):**
-- Simple and reliable
-- Requires remembering to press
-- Works for any feeding type
+### What if more than one person feeds the pet?
 
-**Food container sensor:**
-- Automatic detection
-- Only works for dry food container
-- May miss wet food from fridge
+The button or tracked action should be pressed by whoever actually feeds the pet, regardless of who it is. The reminder cares about whether feeding happened, not who did it.
 
-**Smart feeder integration:**
-- Fully automatic
-- Only for compatible feeders
-- Best for dry food automation
+### What happens if feeding is logged twice by accident?
 
-### Pet-specific considerations
+A double press simply resets the "last fed" timestamp again with no harmful effect; the next reminder timing is based on whichever press was most recent.
 
-**Dogs:**
-- Usually 1-2 meals per day
-- More flexible timing
-- Consider medication with meals
+### Can this track more than one pet?
 
-**Cats:**
-- Often prefer smaller, frequent meals
-- Timed feeder works well for dry food
-- Reminder for daily wet food supplement
-
-**Multiple pets:**
-- Track each pet separately if different schedules
-- Consider slow feeder bowls for fast eaters
-- Monitor that each pet eats their own food
-
----
+Yes, use a separate button and tracked state for each pet, since they may have different feeding schedules or need separate confirmation.
 
 ## Related recipes
-- [Morning routine automation](/automation/daily-routines/morning-routine.html)
-- [Garbage day reminder](/automation/notifications/garbage-day-reminder.html)
-- [Low battery alerts](/automation/notifications/low-battery-alerts.html)
+
+- [Set up a garbage day reminder tile](/automation/notifications/garbage-day-reminder.html)
+- [Use status tiles instead of notifications](/automation/notifications/status-tiles.html)
+- [Get low battery alerts for smart home devices](/automation/notifications/low-battery-alerts.html)
 
 <div class="page-navigation">
   <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

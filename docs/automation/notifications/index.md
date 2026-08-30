@@ -1,33 +1,26 @@
 ---
 layout: default
-title: Notifications and Alerts - Smart Home Reminders and Dashboards
-description: Stay informed with smart notifications, dashboard tiles, and automated reminders. Low battery alerts, doorbell notifications, and family reminders.
-keywords: smart home notifications, dashboard alerts, status tiles, low battery alerts, doorbell notification, smart home reminders, family automation
+title: Notifications and alerts
+description: Practical recipes for persistent status, maintenance reminders, doorbell alerts, household routines, and activity notifications.
 ---
 
 # Notifications and alerts
 
-Smart notifications keep you informed without overwhelming you. From dashboard tiles that persist until addressed to proactive battery alerts that prevent automation failures, these automations ensure you never miss important information.
+A useful notification explains what happened, what remains uncertain, and whether anyone needs to act. It should reach the right people without training the household to ignore it.
 
 <div class="category-intro" markdown="1">
 
-## Why smart notifications?
+## Choose the right kind of notice
 
-**Persistent Visibility** - Dashboard tiles remind you until tasks are done
-
-**Proactive Alerts** - Know about issues before they cause problems
-
-**Whole Household** - Everyone sees the same information on dashboards
-
-**Reduced Notification Fatigue** - Smart filtering shows only what matters
-
-**Actionable Information** - Notifications that help you take action
-
-**Family Coordination** - Reminders that work for everyone
+- Use a persistent dashboard tile for a condition that remains true.
+- Use a phone alert for time-sensitive information.
+- Reserve audible announcements for events that need immediate household attention.
+- Group repeated events and add cooldowns where duplicates add no value.
+- Never let a missing sensor or failed delivery look like success.
 
 </div>
 
-## Essential automations
+## Choose a recipe
 
 <div class="automation-cards">
 
@@ -35,23 +28,19 @@ Smart notifications keep you informed without overwhelming you. From dashboard t
 
 ### Low battery alerts
 
-Get notified before device batteries die to maintain reliable automation.
+Find devices that need attention before a battery failure breaks an automation.
 
-<span class="card-meta">**Best for:** Preventive maintenance, avoiding automation failures</span>
-
-<p><a href="/automation/notifications/low-battery-alerts.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/notifications/low-battery-alerts.html)
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-### Status tiles instead of notifications
+### Persistent status tiles
 
-Persistent dashboard tiles that stay visible until addressed - better than fleeting phone notifications.
+Keep a condition visible until it is resolved or acknowledged.
 
-<span class="card-meta">**Best for:** Appliance status, door/window alerts</span>
-
-<p><a href="/automation/notifications/status-tiles.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/notifications/status-tiles.html)
 
 </div>
 
@@ -59,35 +48,29 @@ Persistent dashboard tiles that stay visible until addressed - better than fleet
 
 ### Garbage day reminder
 
-A weekly reminder tile that lights up when it's time to take out the trash.
+Show a shared reminder until someone marks the task complete.
 
-<span class="card-meta">**Best for:** Weekly tasks, recycling day</span>
-
-<p><a href="/automation/notifications/garbage-day-reminder.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/notifications/garbage-day-reminder.html)
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-### Doorbell notification
+### Traditional doorbell notification
 
-Get notified when someone rings your doorbell, even if it's not a smart doorbell.
+Observe an existing wired chime without replacing the doorbell's normal function.
 
-<span class="card-meta">**Best for:** Older doorbells, whole-house awareness</span>
-
-<p><a href="/automation/notifications/doorbell-notification.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/notifications/doorbell-notification.html)
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-### Baby sleep mode
+### Nursery quiet mode
 
-Automatically disable automations when baby is sleeping using power monitoring.
+Let a caregiver request quiet behavior explicitly while urgent safety alerts remain active.
 
-<span class="card-meta">**Best for:** New parents, quiet nap time</span>
-
-<p><a href="/automation/notifications/baby-sleep-mode.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/notifications/baby-sleep-mode.html)
 
 </div>
 
@@ -95,23 +78,19 @@ Automatically disable automations when baby is sleeping using power monitoring.
 
 ### Teeth brushing reminder
 
-Help kids build healthy habits with automated reminders.
+Use a measured charger pattern as a household reminder, not as proof of brushing quality.
 
-<span class="card-meta">**Best for:** Family routines, building habits</span>
-
-<p><a href="/automation/notifications/teeth-brushing-reminder.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/notifications/teeth-brushing-reminder.html)
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-### Package delivery detection
+### Entrance activity that may indicate a delivery
 
-Get notified when packages are delivered to your door without needing a smart doorbell.
+Report motion near the front door without claiming it proves a package arrived.
 
-<span class="card-meta">**Best for:** Prevent package theft, working from home</span>
-
-<p><a href="/automation/notifications/package-delivery-alert.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/notifications/package-delivery-alert.html)
 
 </div>
 
@@ -119,180 +98,39 @@ Get notified when packages are delivered to your door without needing a smart do
 
 ### Pet feeding reminder
 
-Never forget to feed your pets with automated feeding reminders and tracking.
+Track a deliberate button press or sensor event so the household can see whether feeding was recorded.
 
-<span class="card-meta">**Best for:** Pet care, household coordination</span>
-
-<p><a href="/automation/notifications/pet-feeding-reminder.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/notifications/pet-feeding-reminder.html)
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-### Maintenance reminder dashboard
+### Home maintenance dashboard
 
-Wall-mounted tablet showing days remaining for filters, pool chemicals, and one-tap add to shopping list.
+Keep recurring maintenance dates and acknowledgments in one shared place.
 
-<span class="card-meta">**Best for:** Home maintenance, recurring tasks</span>
+[View automation](/automation/notifications/maintenance-reminder-dashboard.html)
 
-<p><a href="/automation/notifications/maintenance-reminder-dashboard.html" class="card-link">View Automation →</a></p>
+</div>
+
+<div class="automation-card" markdown="1">
+
+### Shared music controls
+
+Put basic playback and volume controls on a household dashboard.
+
+[View automation](/automation/notifications/music-controls.html)
 
 </div>
 
 </div>
 
----
+## What to verify
 
-## Dashboard basics
-
-Wall-mounted tablets provide persistent visibility for your smart home status.
-
-### Choosing a tablet
-
-**Budget options:**
-- Amazon Fire tablets (most affordable)
-- Older Android tablets
-- Refurbished iPads
-
-**Premium options:**
-- iPad (best display)
-- Samsung Galaxy Tab
-- Google Pixel Tablet
-
-### Dashboard software
-
-Choose a dashboard that works with your hub and remains understandable to the household. It should:
-
-- Show current state without requiring several taps.
-- Provide large, clear controls for tasks that need acknowledgment.
-- Remain useful on the local network when possible.
-- Avoid exposing locks, alarms, or other sensitive controls without appropriate access.
-
----
-
-## Notification types
-
-<div class="use-case-grid">
-
-<div class="use-case-card">
-<h4>Dashboard tiles</h4>
-<ul>
-<li>Status that needs attention (washer done, door open)</li>
-<li>Tasks that need completing (garbage day)</li>
-<li>Everyone sees them</li>
-<li>Can't be dismissed accidentally</li>
-</ul>
-</div>
-
-<div class="use-case-card">
-<h4>Phone notifications</h4>
-<ul>
-<li>Urgent alerts (security, fire, water leak)</li>
-<li>Time-sensitive information</li>
-<li>Personal reminders</li>
-<li>Only reaches one person</li>
-</ul>
-</div>
-
-<div class="use-case-card">
-<h4>Voice announcements</h4>
-<ul>
-<li>Immediate attention needed</li>
-<li>Hands-busy situations</li>
-<li>Whole-house awareness</li>
-<li>Use quiet hours appropriately</li>
-</ul>
-</div>
-
-</div>
-
----
-
-## Common use cases
-
-<div class="use-case-grid">
-
-<div class="use-case-card">
-<h4>Maintenance alerts</h4>
-<ul>
-<li>Low battery warnings</li>
-<li>Filter replacement reminders</li>
-<li>Smoke detector test reminders</li>
-<li>HVAC maintenance due</li>
-</ul>
-</div>
-
-<div class="use-case-card">
-<h4>Family coordination</h4>
-<ul>
-<li>Teeth brushing reminders</li>
-<li>School departure countdown</li>
-<li>Chore completion tracking</li>
-<li>Package delivery alerts</li>
-</ul>
-</div>
-
-<div class="use-case-card">
-<h4>Home status</h4>
-<ul>
-<li>Appliance completion (washer, dryer)</li>
-<li>Door/window open alerts</li>
-<li>Garage door status</li>
-<li>Security system state</li>
-</ul>
-</div>
-
-</div>
-
----
-
-## Best practices
-
-<div class="placement-grid">
-
-<div class="placement-card">
-<h3>Reduce fatigue</h3>
-<ul>
-<li>Consolidate similar alerts</li>
-<li>Use escalating severity levels</li>
-<li>Set appropriate quiet hours</li>
-<li>Filter by mode (home/away/night)</li>
-</ul>
-</div>
-
-<div class="placement-card">
-<h3>Dashboard design</h3>
-<ul>
-<li>Most important items largest</li>
-<li>Group related items together</li>
-<li>Use consistent layout</li>
-<li>Apply meaningful colors</li>
-</ul>
-</div>
-
-<div class="placement-card">
-<h3>Color conventions</h3>
-<ul>
-<li><strong>Green:</strong> Good/off/complete</li>
-<li><strong>Red:</strong> Attention needed/warning</li>
-<li><strong>Yellow:</strong> Caution/transitional</li>
-<li><strong>Blue:</strong> Informational</li>
-</ul>
-</div>
-
-<div class="placement-card">
-<h3>Quiet hours</h3>
-<ul>
-<li>Visual only (no sounds) at night</li>
-<li>Emergency-only alerts audible</li>
-<li>Dashboard dims automatically</li>
-<li>Resume normal in morning</li>
-</ul>
-</div>
-
-</div>
+Test quiet hours, duplicate events, offline phones, sensor loss, acknowledgment, and escalation. Safety alerts should not be muted by convenience modes. A dashboard should distinguish normal, attention needed, pending, and unavailable states without relying on color alone.
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
+  <a href="/automation/index.html">Back to all automations</a>
   <a href="/getting-started/tips.html">View tips and tricks</a>
 </div>

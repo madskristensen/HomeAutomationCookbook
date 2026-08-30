@@ -1,227 +1,126 @@
 ---
 layout: automation
-title: Dishwasher Done Notification - Temperature Method
-description: Get notified when dishwasher finishes using temperature detection from drying cycle. Alternative method to power monitoring.
-keywords: dishwasher done alert, temperature sensor dishwasher, completion notification, dishwasher automation, drying cycle detection, appliance monitoring
+title: Get notified when the dishwasher finishes
+description: A platform-neutral dishwasher recipe that learns the dishwasher's own power or vibration pattern and sends one reliable completion alert without controlling appliance power.
+keywords: dishwasher finished alert, dishwasher notification, dishwasher power monitoring, kitchen appliance automation, dishwasher done notification
+last_modified_at: 2026-08-30
+faqs:
+  - question: What signal proves a dishwasher cycle is actually finished?
+    answer: Look for a sustained drop to the dishwasher's stable idle level after it has already been confirmed running. A single low reading during a pause between wash phases is not proof of finished.
+  - question: Why does the automation need to remember that the dishwasher was running?
+    answer: Without a running marker, an idle dishwasher, or a monitoring device that just reconnected, can look finished and send a false alert.
+  - question: Should the automation turn off power to the dishwasher?
+    answer: No. Use any monitoring device only to observe, and keep its relay on. Do not remotely interrupt a wash or dry cycle.
 ---
 
-# Notify me when the dishwasher is done
+# Get notified when the dishwasher finishes
 
-Get alerted when dishes are clean and ready to be put away. This clever temperature-based method detects the heat from the drying cycle.
+Learn the dishwasher's own running pattern, confirm a real cycle happened, and send one alert once it settles into its finished state.
 
-## Use cases
+**Best for:** Dishwashers whose electrical load can be observed safely and whose running and finished states are clearly different.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Efficiency</h4>
-    <ul>
-      <li><strong>Prompt Dish Removal</strong> - Empty dishwasher right when cycle ends</li>
-      <li><strong>Kitchen Cleanup</strong> - Know when you can run another load</li>
-      <li><strong>Track Dish Status</strong> - Dashboard showing clean/dirty</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Convenience</h4>
-    <ul>
-      <li><strong>Prevent Dishes Sitting</strong> - Don't let clean dishes sit too long</li>
-      <li><strong>Multi-Tasking</strong> - Get alerted while doing other things</li>
-    </ul>
-  </div>
-</div>
+**Not for:** An unverified inline monitoring device, a shared circuit with combined readings, or a dishwasher whose pause between wash phases looks the same as its finished state.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 1: Temperature Sensor (Clever!)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Multi-Purpose Sensor or Temperature Sensor</strong>
-      <div class="product-details">
-        Popular brands: Aeotec, SmartThings, Zigbee multi-sensors<br>
-        Temperature detection • Contact/tilt sensor • Mount on side or top of dishwasher door<br>
-        <em>Detects heat from drying cycle - very clever and reliable!</em>
-      </div>
-    </div>
-  </div>
-</div>
+A dishwasher full of clean dishes is easy to forget when it is tucked under the counter. A useful alert has to tell a completed cycle apart from a pause between wash phases, a delayed start, and a monitoring device that just reconnected after an outage.
 
-<div class="product-section">
-  <h4>Essential Equipment - Option 2: Power Monitoring (Traditional)</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Power Metering Smart Plug</strong>
-      <div class="product-details">
-        15A rated minimum • Plug dishwasher into smart plug<br>
-        Use same technique as washer automation
-      </div>
-    </div>
-  </div>
-</div>
+The reliable pattern is stateful: prove the dishwasher was running before treating sustained settling as done.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Dashboard Tile</strong>
-      <div class="product-details">
-        Showing clean/dirty status
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Light</strong>
-      <div class="product-details">
-        In kitchen for visual alert
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Voice Announcement</strong>
-      <div class="product-details">
-        Via smart speaker when dishes are clean
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Observe dishwasher power or vibration | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a monitoring device rated for this appliance's load and startup current. Do not assume a general-purpose smart plug is suitable. |
+| Clear the waiting-dishes state | A manual dashboard or phone action | No personally verified recommendation yet | A manual reset is simpler and more reliable than an unverified door sensor. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Do not buy an inline monitor until its voltage, continuous-current, startup-current, grounding, and appliance-load ratings have been checked against the dishwasher and its manual.
 
 ## Logic
 
-<div class="automation-example">IF temperature > 90°F
-AND door closed for 60 minutes
-AND dishwasher running
-THEN send notification "Dishwasher done!"
-AND set dishwasher_clean to true</div>
+- **Trigger:** Measured power or vibration stays above the dishwasher's calibrated running threshold long enough to prove a cycle started.
+- **Conditions:** Monitoring data is current and the dishwasher was not already marked as running.
+- **Action:** Mark the dishwasher as running and clear any previous waiting-dishes state.
+- **Wait / timeout:** After a real start, wait until the signal remains below the calibrated finished threshold longer than the dishwasher's longest normal pause between wash phases.
+- **Stop condition:** Mark the cycle finished, send one notification, and set a waiting-dishes state.
+- **Manual override:** A person can clear the waiting state without affecting the dishwasher.
 
-<div class="info-box">
-  <strong>💡 Sensor Placement & Temperature Patterns</strong>
-  <ul>
-    <li><strong>Mounting:</strong> On side or top of dishwasher door. Position to detect heat from drying cycle vent. May require experimentation to find best spot (usually near top of door or side vent).</li>
-    <li><strong>Contact Sensor:</strong> Register as "tilt sensor" or "garage door sensor" so it only triggers "open" when door is fully horizontal (open), not just cracked.</li>
-    <li><strong>Temperature Pattern:</strong> Normal: 68-75°F (room temp) • Drying cycle: 90-120°F • After cycle: Gradually cools over 30-60 minutes</li>
-  </ul>
-</div>
+<div class="automation-example">IF dishwasher power or vibration stays above the calibrated running threshold
+THEN mark the dishwasher as running
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Automation: Detect Dishwasher Done</h4>
-    
-    <h4>Triggers</h4>
-    <ul>
-      <li>Temperature rises above 90°F (32°C)</li>
-    </ul>
-    
-    <h4>Conditions</h4>
-    <ul>
-      <li>Contact/tilt sensor has been closed for 60 minutes (ensures it's the drying cycle, not just running/wash cycle)</li>
-      <li>Dishwasher in use (based on time of day or manual indicator)</li>
-    </ul>
-    
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "Dishwasher is done!"</li>
-      <li>Turn on dashboard tile showing "clean"</li>
-      <li>Optional: Flash kitchen light</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Auto-Reset: Door Opens</h4>
-    
-    <h4>Triggers</h4>
-    <ul>
-      <li>Contact/tilt sensor opens (door opened)</li>
-    </ul>
-    
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn off dashboard tile</li>
-      <li>Reset variable</li>
-      <li>Assumes dishwasher emptied when door opened</li>
-    </ul>
-  </div>
-</div>
+IF the signal stays below the calibrated finished threshold
+AND the dishwasher is marked as running
+AND the low period is longer than any normal pause between wash phases
+THEN send one "Dishwasher finished" notification
+AND mark dishes as waiting
+AND clear the running marker</div>
+
+## Setup notes
+
+1. Check the dishwasher manual and nameplate before connecting any inline monitoring device.
+2. Configure the monitoring device as observe-only. Keep its relay on and exclude it from broad "turn everything off" routines.
+3. Record power or vibration through at least three complete cycles, including the modes the household actually uses.
+4. Identify a running threshold that idle noise never reaches.
+5. Identify a finished threshold and a delay longer than every pause seen between wash phases.
+6. Create separate running and waiting-dishes states.
+7. Test with silent logging before enabling notifications.
+8. Enable one completion alert, then add a quiet reminder only if it proves useful.
 
 ## Advanced features
 
-### Clean/dirty dashboard
+### Add one restrained reminder
 
-Visual indicator on dashboard:
+Set a waiting-dishes state when the first alert is sent. If it is still set after a household-chosen interval, send one quiet reminder. Clear it manually rather than guessing from a door sensor.
 
-Create template sensor that displays:
-- **"Clean - Ready to Empty"** with alert icon (when dishwasher_clean is on)
-- **"Running"** with running icon (when dishwasher_running is on)
-- **"Dirty - Ready for Dishes"** with off icon (when both are off)
+### Respect quiet hours
 
-### Manual status control
+Keep the completion event in history, but delay speaker announcements until daytime. A phone notification can remain silent overnight.
 
-Add buttons to manually set clean/dirty:
+### Show data health
 
-Create two scripts:
-1. **Mark Dishwasher Dirty:** Turn off both dishwasher_clean and dishwasher_running booleans
-2. **Mark Dishwasher Clean:** Turn on dishwasher_clean, turn off dishwasher_running
+Display unavailable or stale monitoring as unknown, not idle. Missing measurements must never count as a finished cycle.
 
 ## Failure modes
 
-### Issue: Temperature never rises enough
+- **Alert arrives during a pause between wash phases:** Lower the finished threshold, lengthen the delay, or use a different signal.
+- **No alert arrives:** Confirm the running marker was set and that recent readings continued through the end of the cycle.
+- **Alert arrives while the dishwasher is idle:** Require a sustained running state before completion can trigger.
+- **Duplicate alerts arrive:** Clear the running marker atomically with the first completion alert.
+- **The monitoring device reconnects at zero:** Treat unavailable-to-zero transitions as startup recovery, not completion.
+- **Someone turns off the monitoring plug:** Restore power manually and remove the device from all remote shutoff routines.
+- **The monitor is not rated for the dishwasher:** Remove it. Use a properly rated monitor or have an electrician install circuit-level monitoring.
 
-**Causes:**
-- Sensor not positioned near heat vent
-- Dishwasher doesn't have heated dry
-- Sensor too far from heat source
-- Threshold too high
+## Done when
 
-**Solutions:**
-✅ Reposition sensor closer to drying vent/exhaust
-✅ Lower temperature threshold (try 85°F instead of 90°F)
-✅ Check if dishwasher has heated dry option enabled
-✅ Test with thermometer to find hottest spot on door
-✅ Use power monitoring method instead
+- [ ] The monitor's ratings have been checked against the dishwasher and its manual.
+- [ ] Three representative cycles establish the thresholds and longest normal pause.
+- [ ] An idle dishwasher never creates a completion notification.
+- [ ] Every test cycle creates exactly one completion notification.
+- [ ] A simulated unavailable reading does not count as finished.
+- [ ] The alert remains useful during quiet hours.
+- [ ] The dishwasher still works normally without the automation.
 
-### Issue: False notifications
+## FAQ
 
-**Causes:**
-- Temperature rises from nearby heat source (oven, sun)
-- Door opened mid-cycle
-- Minimum closed time too short
+### What signal proves a dishwasher cycle is actually finished?
 
-**Check:**
-- ✅ Increase required door closed time (90 minutes instead of 60)
-- ✅ Position sensor away from other heat sources
-- ✅ Add time-based condition (only during typical dishwasher hours)
-- ✅ Combine with other detection methods
+Look for a sustained drop to the dishwasher's stable idle level after it has already been confirmed running. A single low reading during a pause between wash phases is not proof of finished.
 
-**Fix:**
+### Why does the automation need to remember that the dishwasher was running?
 
-Add conditions to automation:
-- Only trigger during typical dishwasher hours (after meals: 7-9am or 7-11pm)
-- Require door closed for 90 minutes instead of 60
+Without a running marker, an idle dishwasher, or a monitoring device that just reconnected, can look finished and send a false alert.
 
-### Issue: No notification when done
+### Should the automation turn off power to the dishwasher?
 
-**Causes:**
-- Sensor battery dead
-- Sensor fell off dishwasher
-- Door opened before drying cycle started
-- Temperature threshold never reached
-
-**Solutions:**
-✅ Check sensor battery level
-✅ Verify sensor still attached securely
-✅ Monitor temperature during actual cycle
-✅ Adjust threshold based on actual readings
-✅ Switch to power monitoring method if temperature unreliable
-
----
+No. Use any monitoring device only to observe, and keep its relay on. Do not remotely interrupt a wash or dry cycle.
 
 ## Related recipes
-- [Washer done notification](/automation/appliances/washer-done-notification.html)
-- [Dryer done notification](/automation/appliances/dryer-done-notification.html)
-- [Morning routine automation](/automation/daily-routines/morning-routine.html)
+
+- [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
+- [Get notified when the dryer finishes](/automation/appliances/dryer-done-notification.html)
+- [Appliance automations](/automation/appliances/index.html)
 
 <div class="page-navigation">
   <a href="/automation/appliances/index.html">Back to appliance automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

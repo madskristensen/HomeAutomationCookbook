@@ -9,6 +9,8 @@ faqs:
     answer: Start at 10 percent, then test it in the dark. Raise it only enough for safe navigation.
   - question: Why does a bathroom motion light turn off during a shower?
     answer: A PIR sensor can miss someone who is still or hidden by steam and a shower curtain. Use a longer timeout or a presence sensor.
+  - question: What happens if the hub or internet connection goes down?
+    answer: The physical wall switch still works independent of the automation, so the bathroom light can always be turned on manually.
 ---
 
 # Turn on a dim bathroom light at night
@@ -73,9 +75,9 @@ See [recommended gear](/gear.html) for the job-first checklist. Product links on
 <div class="automation-example">IF bathroom motion is detected during the night window
 THEN turn on the light at 10%</div>
 
-## Creating "Night Mode"
+## Setup notes
 
-Night Mode is a home state that indicates sleeping hours. Set it up using:
+These steps create the "Night Mode" state that the Logic section above checks as a condition:
 
 **Option 1: Time-based**
 - IF time is 10:00 PM
@@ -278,6 +280,10 @@ Start at 10 percent, then test it in the dark. Raise it only enough for safe nav
 ### Why does a bathroom motion light turn off during a shower?
 
 A PIR sensor can miss someone who is still or hidden by steam and a shower curtain. Use a longer timeout or a presence sensor.
+
+### What happens if the hub or internet connection goes down?
+
+The physical wall switch still works independent of the automation, so the bathroom light can always be turned on manually.
 
 ## Related recipes
 

@@ -1,300 +1,106 @@
 ---
 layout: automation
-title: Fridge or Freezer Door Left Open Alert - Smart Home Safety
-description: Get notified when your refrigerator or freezer door is left open too long. Prevent food spoilage and save energy with this simple automation.
-keywords: fridge door alert, freezer door notification, refrigerator door left open, food spoilage prevention, smart home appliance monitoring, door sensor fridge
+title: Get an alert when the fridge or freezer door is left open
+description: A platform-neutral recipe that alerts when a refrigerator or freezer door has been open too long, with a shorter delay for the freezer and conservative handling of missing sensor data.
+keywords: fridge door alert, freezer door notification, refrigerator door left open, food spoilage prevention, door sensor fridge
+last_modified_at: 2026-08-30
+faqs:
+  - question: Why does the freezer need a shorter delay than the fridge?
+    answer: Frozen food starts to soften sooner than refrigerated food tolerates a temperature swing, so a shorter open-door delay is safer for the freezer.
+  - question: Will normal grocery loading trigger a false alert?
+    answer: A door open for a minute or two while unloading groceries should not reach the delay. If it does, lengthen the delay slightly rather than removing it.
+  - question: Can the same contact sensor go in both the fridge and the freezer?
+    answer: Only if its documented operating temperature range covers the freezer. Check the manufacturer's rating before relying on it below freezing.
 ---
 
-# Fridge or freezer door left open alert
+# Get an alert when the fridge or freezer door is left open
 
-An open refrigerator or freezer door leads to food spoilage, wasted energy, and potential damage to the appliance. This automation sends you an alert when a door has been open too long, giving you time to close it before problems occur.
+Send one alert when a refrigerator or freezer door has stayed open past a safe delay, with a shorter delay for the freezer.
 
-## Use cases
+**Best for:** Households that want a simple reminder before food spoils, energy is wasted, or the compressor runs longer than necessary.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Food safety</h4>
-    <ul>
-      <li><strong>Prevent spoilage</strong> - Know before food reaches unsafe temperatures</li>
-      <li><strong>Freezer protection</strong> - Stop thawing before items are ruined</li>
-      <li><strong>Kids leaving doors open</strong> - Get notified when children forget to close the door</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Energy and appliance</h4>
-    <ul>
-      <li><strong>Energy savings</strong> - Open doors waste electricity as compressor works harder</li>
-      <li><strong>Appliance protection</strong> - Prevent compressor strain and ice buildup</li>
-      <li><strong>Ice maker issues</strong> - Avoid frozen water lines from temperature fluctuations</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Treating a missing or low-battery sensor reading as a closed door, or as the sole safeguard against a failing appliance.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Contact sensor</strong>
-      <div class="product-details">
-        Popular brands: Aqara, SmartThings, Wyze, Eve, Sonoff<br>
-        Look for: Compact size to fit in fridge gap, good battery life in cold temperatures
-      </div>
-    </div>
-  </div>
-</div>
+A door left open a few seconds while grabbing something is normal. A door left open for several minutes is a problem, and freezer contents tolerate far less warm-up time than refrigerator contents. Two separate delays, one per appliance, keep the alert useful without nagging over routine use.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Temperature sensor</strong>
-      <div class="product-details">
-        Monitor actual fridge/freezer temperature<br>
-        Some contact sensors include temperature sensing
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart speaker</strong>
-      <div class="product-details">
-        Announce alerts audibly in the kitchen
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Sensor placement tip</strong>
-  <ul>
-    <li>Place sensor on the door frame, not on the door itself (easier battery changes)</li>
-    <li>Test that sensor works in cold temperatures - some have minimum operating temps</li>
-    <li>Aqara and Sonoff sensors are known to work well in freezer temperatures</li>
-    <li>Mount magnet on the door edge where gap is smallest when closed</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect an open door or window | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Confirm the manufacturer's operating temperature range before using one inside a freezer rather than a refrigerator. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF fridge door open for 2 minutes
-THEN send notification "Fridge door left open"
-AND announce on kitchen speaker</div>
+- **Trigger:** The fridge or freezer door sensor reports open.
+- **Conditions:** The sensor is available and reporting current data.
+- **Action:** Start a timer specific to that appliance.
+- **Wait / timeout:** The freezer uses a shorter delay than the fridge because frozen food tolerates less warm-up time.
+- **Stop condition:** The door closes before the delay elapses, which cancels the alert.
+- **Manual override:** Anyone can close the door at any time. The automation only observes.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Automation 1: Fridge door alert</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Fridge door sensor is "open" for 2 minutes</li>
-    </ul>
-    <h4>Conditions (optional)</h4>
-    <ul>
-      <li>Someone is home (no point alerting if away)</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "Fridge door has been open for 2 minutes"</li>
-      <li>Optional: Announce on kitchen speaker</li>
-      <li>Optional: Flash kitchen lights</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Automation 2: Freezer door alert (more urgent)</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Freezer door sensor is "open" for 1 minute</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Send high-priority notification: "Freezer door left open!"</li>
-      <li>Announce on all speakers</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF fridge door sensor reports open
+AND remains open for the fridge delay
+THEN send one "Fridge door left open" notification
 
-## Advanced features
+IF freezer door sensor reports open
+AND remains open for the shorter freezer delay
+THEN send one "Freezer door left open" notification
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Escalating alerts</h3>
-    <p>Increasingly urgent notifications if door stays open:</p>
-    <ul>
-      <li><strong>2 minutes:</strong> Standard notification</li>
-      <li><strong>5 minutes:</strong> Louder announcement + flash lights</li>
-      <li><strong>10 minutes:</strong> High-priority alert to all family members</li>
-      <li><strong>15 minutes:</strong> Critical alert - food may be at risk</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Temperature monitoring</h3>
-    <p>Add temperature sensor for comprehensive monitoring:</p>
-    <ul>
-      <li><strong>Fridge:</strong> Alert if temp rises above 40°F (4°C)</li>
-      <li><strong>Freezer:</strong> Alert if temp rises above 0°F (-18°C)</li>
-      <li>Track temperature history for troubleshooting</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Away from home handling</h3>
-    <p>Different behavior when nobody is home:</p>
-    <ul>
-      <li>Still send notification (might be appliance failure)</li>
-      <li>Don't announce on speakers (nobody to hear)</li>
-      <li>Consider calling family member if open 30+ minutes</li>
-    </ul>
-  </div>
-</div>
+IF either sensor closes before its delay elapses
+THEN cancel that pending alert</div>
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Notification cooldown</h3>
-    <p>Prevent notification spam:</p>
-    <ul>
-      <li>Only alert once per open event</li>
-      <li>Reset when door closes</li>
-      <li>Follow-up alerts at longer intervals</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Dashboard status</h3>
-    <p>Visual monitoring on home dashboard:</p>
-    <ul>
-      <li>Current door state (open/closed)</li>
-      <li>Time since last opened</li>
-      <li>Current temperature (if monitored)</li>
-      <li>Color coding: green (closed), red (open)</li>
-    </ul>
-  </div>
-</div>
+## Setup notes
 
-## Common issues and solutions
+1. Mount the sensor body on the door frame and the magnet on the door edge, where the gap stays smallest when closed.
+2. Confirm the sensor's rated operating temperature before placing it in a freezer.
+3. Time a normal grocery-unloading session and set the fridge delay comfortably longer than that.
+4. Set a shorter delay for the freezer to reflect its lower tolerance for warming.
+5. Send exactly one alert per open event, and reset it only when the door closes.
+6. Test with the door propped open on purpose before trusting the alert during real use.
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Sensor stops working in freezer</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Cold temperatures drain battery faster or cause sensor to malfunction.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Use sensors rated for cold temperatures (Aqara works well)</li>
-        <li>Mount sensor on door frame (warmer than inside freezer)</li>
-        <li>Use lithium batteries (better in cold)</li>
-        <li>Replace batteries proactively every 6 months</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>False alerts when loading groceries</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Door open for extended time during normal grocery loading.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Increase delay to 3-5 minutes for fridge</li>
-        <li>Keep freezer at 1-2 minutes (more critical)</li>
-        <li>Add snooze option to notification</li>
-        <li>Create "loading groceries" mode that temporarily disables</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Sensor reports wrong state</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Magnet misaligned or sensor not detecting properly.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check magnet/sensor gap (should be less than 1 inch)</li>
-        <li>Realign magnet on door edge</li>
-        <li>Clean sensor surface</li>
-        <li>Test with door clearly open and closed</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Notifications not arriving</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Phone settings or automation configuration issues.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check app notification permissions</li>
-        <li>Verify automation is enabled</li>
-        <li>Test automation manually</li>
-        <li>Check Do Not Disturb exceptions</li>
-      </ul>
-    </div>
-  </div>
-</div>
+## Failure modes
 
-## Best practices
+- **Alert fires during normal grocery loading:** Lengthen the fridge delay slightly rather than removing the alert.
+- **No alert arrives:** Confirm the sensor is paired, has a working battery, and is reporting current data.
+- **The sensor stops reporting in cold temperatures:** Replace it with one rated for the freezer's operating range, or move it to the door frame where it may run slightly warmer.
+- **Sensor reports the wrong state:** Check the magnet-to-sensor gap and realign it; a gap larger than the manufacturer's spec will misreport.
+- **Repeated alerts for one open event:** Reset the pending alert only on a confirmed close, not on every sensor report.
+- **A stale or unavailable sensor:** Treat unavailable as unknown, not closed, and mention it in the notification rather than staying silent.
 
-### Choosing the right delay time
+## Done when
 
-**Fridge door:**
-- **2-3 minutes:** Good for most households
-- **5 minutes:** If you often load groceries or cook frequently
-- **1 minute:** If you have young children who leave doors open
+- [ ] The fridge and freezer each have their own tested delay.
+- [ ] A normal grocery-loading session does not trigger an alert.
+- [ ] Propping the freezer door open triggers an alert sooner than propping the fridge door open.
+- [ ] Closing the door before the delay elapses cancels the pending alert.
+- [ ] Exactly one alert arrives per open event.
+- [ ] An unavailable sensor is reported as unknown rather than assumed closed.
 
-**Freezer door:**
-- **1-2 minutes:** Freezer contents are more sensitive
-- **Shorter is better:** Frozen food can start thawing quickly
+## FAQ
 
-### Sensor selection for cold environments
+### Why does the freezer need a shorter delay than the fridge?
 
-**Recommended:**
-- Aqara door/window sensor (works in freezer temps)
-- Sensors with external probe capability
-- Lithium battery powered sensors
+Frozen food starts to soften sooner than refrigerated food tolerates a temperature swing, so a shorter open-door delay is safer for the freezer.
 
-**Avoid:**
-- Sensors with minimum operating temp above 32°F/0°C
-- Alkaline battery sensors (poor cold performance)
-- Large sensors that won't fit in door gap
+### Will normal grocery loading trigger a false alert?
 
-### Installation tips
+A door open for a minute or two while unloading groceries should not reach the delay. If it does, lengthen the delay slightly rather than removing it.
 
-**Door frame mounting (recommended):**
-- Sensor on frame, magnet on door
-- Easier battery replacement
-- Warmer operating temperature
+### Can the same contact sensor go in both the fridge and the freezer?
 
-**Gap considerations:**
-- Test with door closed normally
-- Account for seal compression
-- Leave small margin for door seal variation
-
----
+Only if its documented operating temperature range covers the freezer. Check the manufacturer's rating before relying on it below freezing.
 
 ## Related recipes
+
 - [Low battery alerts](/automation/notifications/low-battery-alerts.html)
-- [Water leak response](/automation/security/water-leak-response.html)
-- [Washer done notification](/automation/appliances/washer-done-notification.html)
+- [Detect a water leak before it spreads](/automation/security/water-leak-response.html)
+- [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
 
 <div class="page-navigation">
   <a href="/automation/appliances/index.html">Back to appliance automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

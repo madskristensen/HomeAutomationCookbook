@@ -1,190 +1,107 @@
 ---
 layout: automation
-title: Status Tiles Instead of Notifications - Dashboard Automation
-description: Use dashboard status tiles for persistent reminders instead of phone notifications. See appliance status, door states, and delivery alerts at a glance.
-keywords: dashboard tiles, status tiles, smart home dashboard, appliance status, persistent notifications, visual alerts
+title: Use status tiles instead of notifications
+description: A platform-neutral recipe that replaces one-time push notifications with persistent dashboard tiles for household status information.
+keywords: status tiles, dashboard status, notification alternative, smart home dashboard, persistent status display
+last_modified_at: 2026-08-30
+faqs:
+  - question: Why use tiles instead of just sending more notifications?
+    answer: Notifications are easy to dismiss without acting on them, and too many of them get ignored entirely. A tile stays visible until the underlying condition changes, so it does not rely on someone reacting the moment it fires.
+  - question: Does this replace notifications completely?
+    answer: Not necessarily. Time-sensitive alerts, such as a water leak, are still worth an actual notification. Tiles work best for ongoing status rather than urgent one-time events.
+  - question: What kind of information works well as a tile?
+    answer: Anything with a clear "needs attention" versus "fine" state, such as garbage day, a maintenance task, a door left open, or a load of laundry waiting to be moved to the dryer.
 ---
 
-# Status tiles instead of notifications
+# Use status tiles instead of notifications
 
-It's easy to ignore or forget notifications sent to your phone. Also, they don't keep reminding you once you've seen or dismissed them. Status tiles on a dashboard located in a place you often see solves that problem.
+Replace one-time push notifications with persistent dashboard tiles that stay visible until the underlying condition is resolved.
 
-## Use cases
+**Best for:** A household with a shared dashboard already in use, and recurring status information that tends to get missed as a one-time notification.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Appliance Status</h4>
-    <ul>
-      <li><strong>Washer Done</strong> - Time to put clothes in the dryer</li>
-      <li><strong>Dishwasher Clean</strong> - Ready to be emptied</li>
-      <li><strong>Dryer Done</strong> - Clothes ready to fold</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Home Awareness</h4>
-    <ul>
-      <li><strong>Doors/Windows Open</strong> - Know before leaving the house</li>
-      <li><strong>Delivery Waiting</strong> - Package on porch to bring in</li>
-      <li><strong>Robot Vacuum</strong> - Scheduled to run, time to tidy up</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Genuinely time-sensitive alerts, such as a security or safety event; those are better served by an actual notification that demands attention.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Tablet</strong>
-      <div class="product-details">
-        Any tablet you prefer (Amazon Fire tablets are an affordable option)<br>
-        Wall-mounted in high-traffic area
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Dashboard Software</strong>
-      <div class="product-details">
-        Any dashboard that can display and change shared virtual states
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Virtual Switches</strong>
-      <div class="product-details">
-        One for each status you want to track
-      </div>
-    </div>
-  </div>
-</div>
+A push notification is easy to dismiss with a swipe and then forget entirely. A dashboard tile that stays a visible color until the underlying condition changes works better for ongoing status information, such as garbage day or a pending maintenance task, where the goal is persistent visibility rather than a single alert.
+
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Display persistent status information | No personally verified recommendation yet | No personally verified recommendation yet | This only needs virtual switches or variables and a dashboard; no physical hardware is required. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-Any automation where you send a notification, consider using a dashboard tile instead. You can do that by using either a virtual switch or variable.
+- **Trigger:** The underlying condition for a given tile changes, such as a scheduled reminder becoming due.
+- **Conditions:** None beyond the specific condition each tile is tracking.
+- **Action:** Update the tile's virtual switch or variable to reflect the new state, changing its color or label on the dashboard.
+- **Wait / timeout:** The tile stays in its current state until the condition changes again.
+- **Stop condition:** The condition being tracked resolves, either automatically or by a household member marking it done.
+- **Manual override:** Any tile can be manually toggled if the automation misses an edge case.
 
-<div class="automation-example">IF washer is done
-THEN set "Washer Done" switch ON
-(tile shows red until clothes moved)
+<div class="automation-example">IF the tracked condition for a tile becomes true
+THEN set that tile's virtual switch to its "needs attention" state
 
-IF dryer door opens
-THEN set "Washer Done" switch OFF
-(tile returns to normal)</div>
+IF the tracked condition is resolved
+OR the tile is tapped to mark it done
+THEN set that tile's virtual switch back to its normal state</div>
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Step 1: Create virtual switch</h4>
-    <ul>
-      <li>Name it descriptively (e.g., "Washer Needs Attention")</li>
-      <li>Add to dashboard with appropriate colors</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Step 2: Set switch ON when attention needed</h4>
-    <ul>
-      <li>Trigger from the event that needs attention</li>
-      <li>Turn on the virtual switch</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Step 3: Set switch OFF when resolved</h4>
-    <ul>
-      <li>Trigger from the resolution action</li>
-      <li>Turn off the virtual switch</li>
-    </ul>
-  </div>
-</div>
+## Setup notes
 
-## Status tile examples
-
-### Washer/Dryer status
-
-- Create virtual switch for each appliance
-- Turn on when cycle completes (power monitoring)
-- Turn off when door opens or manually tapped
-
-### Door/Window status
-
-- Show all open doors/windows
-- Glanceable before leaving house
-- No action needed - just informational
-
-### Delivery status
-
-- Turn on when package detected on porch (camera or motion sensor)
-- Turn off when front door opens (brought in)
-- Persistent until addressed
-
-### Robot vacuum schedule
-
-- Show when vacuum will run today
-- Reminder to tidy up before it starts
-- Countdown to scheduled run
+1. Identify recurring status information currently sent as one-time notifications that would work better as a persistent tile.
+2. Create a virtual switch or variable for each piece of tracked status.
+3. Add a dashboard section with one tile per tracked item, using a clear visual difference between "needs attention" and "fine."
+4. Wire each tile's underlying automation to set the switch based on its specific condition, whether that is a schedule, a sensor, or a manual action.
+5. Confirm each tile can also be cleared manually, in case its automatic condition does not cover every case.
 
 ## Advanced features
 
-### Priority-based colors
+### Grouped dashboard section
 
-Use a color system to indicate urgency:
+Group related tiles together, such as all household chores in one section and all maintenance tasks in another, so the dashboard stays organized as more tiles are added.
 
-- **Green:** All good, no action needed
-- **Yellow:** Attention needed soon (informational)
-- **Red:** Urgent, needs immediate attention
-- **Blue:** In progress or running
+### Tile history
 
-### Escalating alerts
-
-If a status tile stays red too long, add additional alerts:
-
-1. **0-30 min:** Red tile only
-2. **30 min - 2 hours:** Add flashing or notification
-3. **2+ hours:** Add voice announcement
-
-### Auto-reset
-
-Some status tiles should reset automatically:
-
-- **Time-based:** Reset at midnight if not addressed
-- **Event-based:** Reset when related event occurs (door opens, motion detected)
-- **Manual:** Require tap to reset (for important items)
+If the platform supports it, log when each tile last changed state, to see how consistently a recurring task is actually being handled.
 
 ## Failure modes
 
-### Issue: Tile not updating
+- **A tile never updates:** Confirm the automation driving that tile's virtual switch is actually running and check its trigger conditions.
+- **A tile is stuck in the wrong state:** Manually toggle the tile's switch to reset it, and check whether its automation properly handles the reset case.
+- **Too many tiles make the dashboard cluttered:** Group related tiles into sections, or remove tiles for status information that is no longer useful.
+- **A genuinely urgent event only shows as a tile:** Reserve actual notifications for time-sensitive alerts and use tiles only for ongoing status.
 
-**Solutions:**
-✅ Check virtual switch is properly linked
-✅ Verify automation is firing (check logs)
-✅ Refresh dashboard browser/app
-✅ Check hub connectivity
+## Done when
 
-### Issue: Too many tiles clutter dashboard
+- [ ] Each tracked piece of status information has its own tile and clear visual states.
+- [ ] Each tile updates correctly based on its underlying condition.
+- [ ] Tiles can be cleared manually as a fallback.
+- [ ] Genuinely urgent alerts are still sent as actual notifications, not just tiles.
 
-**Solutions:**
-✅ Group related items on separate screen
-✅ Use conditional visibility (only show when active)
-✅ Prioritize most important status items
-✅ Create summary tile that shows count of issues
+## FAQ
 
-### Issue: Family ignores tiles
+### Why use tiles instead of just sending more notifications?
 
-**Solutions:**
-✅ Place dashboard in high-traffic area
-✅ Use motion sensor to wake screen when approaching
-✅ Add audio alerts for critical items
-✅ Make tiles actionable (tap to dismiss)
+Notifications are easy to dismiss without acting on them, and too many of them get ignored entirely. A tile stays visible until the underlying condition changes, so it does not rely on someone reacting the moment it fires.
 
----
+### Does this replace notifications completely?
+
+Not necessarily. Time-sensitive alerts, such as a water leak, are still worth an actual notification. Tiles work best for ongoing status rather than urgent one-time events.
+
+### What kind of information works well as a tile?
+
+Anything with a clear "needs attention" versus "fine" state, such as garbage day, a maintenance task, a door left open, or a load of laundry waiting to be moved to the dryer.
 
 ## Related recipes
-- [Garbage day reminder](/automation/notifications/garbage-day-reminder.html)
-- [Music controls](/automation/notifications/music-controls.html)
-- [Washer done notification](/automation/appliances/washer-done-notification.html)
+
+- [Set up a garbage day reminder tile](/automation/notifications/garbage-day-reminder.html)
+- [Add dashboard tiles for music playback controls](/automation/notifications/music-controls.html)
+- [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
 
 <div class="page-navigation">
   <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

@@ -59,7 +59,7 @@ For a bathroom that needs humidity, temperature, and light readings too, use the
 See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 <div class="info-box">
-  <strong>💡 Outdoor Motion Sensing Tip</strong>
+  <strong>Outdoor motion sensing tip</strong>
   <ul>
     <li>Use sensors specifically rated for outdoor use (IP65 or higher)</li>
     <li>OR protect indoor sensors with weatherproof enclosures</li>

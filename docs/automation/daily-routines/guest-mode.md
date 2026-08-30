@@ -31,7 +31,7 @@ Guest mode is an explicit household state, not a guess. It protects privacy, pre
 
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
-| Start and end Guest mode | A clearly labeled dashboard control or voice phrase | TODO: preferred physical Guest-mode button | A host should be able to change the mode without editing automation. |
+| Start and end Guest mode | A clearly labeled dashboard control or voice phrase | No personally verified physical Guest-mode button yet | A host should be able to change the mode without editing automation. |
 | Keep fixed lights familiar | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Normal wall paddles are the primary guest interface. |
 | Keep climate adjustable | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Guests can request or make normal adjustments at the thermostat. |
 

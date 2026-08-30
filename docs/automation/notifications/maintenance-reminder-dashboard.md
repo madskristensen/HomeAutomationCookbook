@@ -1,338 +1,106 @@
 ---
 layout: automation
-title: Maintenance Reminder Dashboard - Smart Home Notifications
-description: Wall-mounted tablet showing days remaining for filters, pool chemicals, and other maintenance tasks. One-tap add to shopping list.
-keywords: maintenance reminder, smart home dashboard, filter replacement, pool maintenance, household tasks, shopping list automation, home maintenance tracker
+title: Build a home maintenance reminder dashboard
+description: A platform-neutral recipe that tracks recurring home maintenance tasks, such as filter changes, on a shared dashboard instead of relying on memory.
+keywords: maintenance reminder, home maintenance dashboard, filter change reminder, recurring task tracker, smart home dashboard
+last_modified_at: 2026-08-30
+faqs:
+  - question: How is this different from a phone calendar reminder?
+    answer: A calendar reminder is easy to dismiss and forget. A dashboard tile stays visibly overdue until someone marks the task done, which works better for tasks that are easy to keep postponing.
+  - question: What tasks work well on this kind of dashboard?
+    answer: Recurring tasks with a rough interval rather than an exact date work best, such as changing an HVAC filter every 60 to 90 days, replacing a water filter, or checking smoke detector batteries twice a year.
+  - question: Do I need a wall-mounted tablet for this to work?
+    answer: No. A shared dashboard on a phone, a tablet, or even a wall-mounted display all work the same way; the important part is that it is somewhere the household actually looks.
 ---
 
-# Maintenance reminder dashboard
+# Build a home maintenance reminder dashboard
 
-Keep track of all household maintenance with a wall-mounted tablet that shows days remaining for filters, pool chemicals, and other recurring tasks. One tap adds items to your shopping list when it's time to restock.
+Track recurring home maintenance tasks, such as HVAC filter changes, on a shared dashboard so they stay visible instead of relying on memory.
 
-## Use cases
+**Best for:** A household with a shared dashboard already in use, and a handful of recurring maintenance tasks that tend to get forgotten.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Maintenance tracking</h4>
-    <ul>
-      <li><strong>HVAC filters</strong> - Replace every 30-90 days</li>
-      <li><strong>Water filters</strong> - Fridge, whole-house, under-sink</li>
-      <li><strong>Pool chemicals</strong> - Weekly chlorine, monthly pH adjusters</li>
-      <li><strong>Smoke detector batteries</strong> - Annual replacement</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Convenience features</h4>
-    <ul>
-      <li><strong>Visual countdown</strong> - See days remaining at a glance</li>
-      <li><strong>One-tap shopping</strong> - Add to list with single touch</li>
-      <li><strong>Color-coded status</strong> - Green/yellow/red indicators</li>
-      <li><strong>Family visibility</strong> - Everyone sees what's needed</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A single task with an exact one-time deadline; a simple calendar reminder is likely simpler for that.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Wall-mounted tablet</strong>
-      <div class="product-details">
-        Options: Amazon Fire tablet, iPad, Android tablet<br>
-        Mount: Wall mount bracket or magnetic mount
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Dashboard software</strong>
-      <div class="product-details">
-        Any dashboard that can display shared maintenance counters and status
-      </div>
-    </div>
-  </div>
-</div>
+Maintenance tasks like changing an HVAC filter or checking smoke detector batteries do not have a hard deadline, which makes them easy to keep pushing back. A dashboard tile that stays visibly overdue until marked done works better than a one-time notification that gets dismissed and forgotten.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Shopping list integration</strong>
-      <div class="product-details">
-        Any shared list the household already uses, with one-tap entry when maintenance is due
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart sensors</strong>
-      <div class="product-details">
-        Filter pressure sensors, water quality monitors for automatic tracking
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Common maintenance intervals</strong>
-  <ul>
-    <li><strong>HVAC filter:</strong> 30-90 days (depends on filter type)</li>
-    <li><strong>Fridge water filter:</strong> 6 months</li>
-    <li><strong>Pool chlorine:</strong> Weekly</li>
-    <li><strong>Smoke detector battery:</strong> 12 months</li>
-    <li><strong>Water softener salt:</strong> Monthly (varies by usage)</li>
-    <li><strong>Vacuum filter/bag:</strong> 1-3 months</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Track and display maintenance tasks | No personally verified recommendation yet | No personally verified recommendation yet | This only needs virtual switches or variables and a dashboard; no physical hardware is required. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">DASHBOARD DISPLAY:
-- Show card for each maintenance item
-- Display days remaining with color coding
-- Green (>30% time left), Yellow (10-30%), Red (<10%)
-- Show "Add to shopping list" button when Red
+- **Trigger:** A fixed interval since the task was last marked done, such as every 60 to 90 days for an HVAC filter.
+- **Conditions:** The task has not already been marked done within that interval.
+- **Action:** Mark the dashboard tile for that task as overdue.
+- **Wait / timeout:** The tile stays overdue until marked done.
+- **Stop condition:** Marking the task done resets the interval and clears the tile.
+- **Manual override:** Any task can be marked done manually at any time, independent of the schedule.
 
-ONE-TAP ACTION:
-IF "Add to list" button tapped
-THEN add item to shopping list
-AND mark as "ordered/added"
-AND optionally reset counter when marked complete</div>
+<div class="automation-example">IF it has been more than 75 days since the HVAC filter was last marked done
+THEN mark the "HVAC filter" tile as overdue on the dashboard
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Dashboard elements</h4>
-    <ul>
-      <li>Card for each maintenance item</li>
-      <li>Days remaining counter</li>
-      <li>Progress bar or color indicator</li>
-      <li>Last replaced date</li>
-      <li>Action buttons (Add to list, Mark complete)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Counter logic</h4>
-    <strong>Start date:</strong> When item was last replaced/added<br>
-    <strong>Interval:</strong> Days until next replacement needed<br>
-    <strong>Days remaining:</strong> Start date + Interval - Today<br>
-    <strong>Status:</strong> Green/Yellow/Red based on percentage
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li><strong>Add to list:</strong> Push item to shopping list app</li>
-      <li><strong>Mark complete:</strong> Reset counter to full interval</li>
-      <li><strong>Snooze:</strong> Delay reminder by X days</li>
-      <li><strong>Adjust interval:</strong> Change if replacing more/less often</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Notifications</h4>
-    <ul>
-      <li>Alert when item reaches Yellow status</li>
-      <li>Urgent alert when Red status</li>
-      <li>Weekly summary of upcoming maintenance</li>
-      <li>Confirmation when item added to shopping list</li>
-    </ul>
-  </div>
-</div>
+IF the "HVAC filter" tile is marked done
+THEN reset its overdue state and restart the 75 day interval</div>
+
+## Setup notes
+
+1. List the recurring maintenance tasks worth tracking, along with a rough interval for each one.
+2. Create a virtual switch or variable per task to represent its "done" state and the date it was last completed.
+3. Add a dashboard section with one tile per task, showing a clear visual difference between "on schedule" and "overdue."
+4. Schedule a check that compares the current date to the last completed date and flags a task as overdue once its interval has passed.
+5. Confirm marking a tile done resets both its overdue state and its interval starting point.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Automatic tracking</h3>
-    <p>Use sensors to detect when maintenance is actually needed:</p>
-    <ul>
-      <li><strong>HVAC filter:</strong> Pressure differential sensor across filter</li>
-      <li><strong>Water filter:</strong> Flow rate or TDS sensor</li>
-      <li><strong>Pool:</strong> Automated water chemistry testing</li>
-      <li><strong>Vacuum:</strong> Track usage hours or cleaning cycles</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Smart shopping integration</h3>
-    <p>Automated purchasing options:</p>
-    <ul>
-      <li>Add to Amazon Subscribe & Save</li>
-      <li>Push to shared family shopping list</li>
-      <li>Create recurring Amazon orders</li>
-      <li>Integration with grocery delivery services</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Cost tracking</h3>
-    <p>Monitor maintenance expenses:</p>
-    <ul>
-      <li>Log cost of each item when replaced</li>
-      <li>Track monthly/yearly maintenance spending</li>
-      <li>Compare costs between brands</li>
-      <li>Predict upcoming expenses</li>
-    </ul>
-  </div>
-</div>
+### Different intervals per task type
 
-## Common maintenance items to track
+Give each task its own interval instead of a single shared schedule, since an HVAC filter, a water filter, and smoke detector batteries do not follow the same timeline.
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>HVAC and air quality</h3>
-    <ul>
-      <li>HVAC air filter (30-90 days)</li>
-      <li>Humidifier filter (30-60 days)</li>
-      <li>Air purifier filter (6-12 months)</li>
-      <li>Dryer vent cleaning (yearly)</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Water systems</h3>
-    <ul>
-      <li>Refrigerator water filter (6 months)</li>
-      <li>Under-sink filter (6-12 months)</li>
-      <li>Whole-house filter (3-6 months)</li>
-      <li>Water softener salt (monthly)</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Pool and outdoor</h3>
-    <ul>
-      <li>Pool chlorine (weekly)</li>
-      <li>Pool pH adjuster (as needed)</li>
-      <li>Pool filter cleaning (monthly)</li>
-      <li>Lawn fertilizer (seasonal)</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Safety and appliances</h3>
-    <ul>
-      <li>Smoke detector batteries (yearly)</li>
-      <li>CO detector replacement (5-7 years)</li>
-      <li>Vacuum filter/bags (1-3 months)</li>
-      <li>Dishwasher cleaner (monthly)</li>
-    </ul>
-  </div>
-</div>
+### Overdue escalation
 
-## Common issues and solutions
+Add a secondary notification, separate from the dashboard tile, once a task has been overdue for an extended period, such as two weeks past its interval, so it is not indefinitely ignored.
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Counters not updating</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Days remaining stays the same or shows wrong value.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Verify template sensor is calculating correctly</li>
-        <li>Check that start date was set properly</li>
-        <li>Ensure timezone settings are correct</li>
-        <li>Force refresh of template sensors</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Shopping list not syncing</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Items don't appear in shopping list app.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Verify API connection to shopping list service</li>
-        <li>Check authentication hasn't expired</li>
-        <li>Test service call manually in developer tools</li>
-        <li>Use alternative integration (IFTTT, Zapier)</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Tablet screen burns in</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Static dashboard causes screen burn-in over time.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Enable screensaver or screen-off during unused hours</li>
-        <li>Use Fully Kiosk Browser with motion-activated screen</li>
-        <li>Reduce brightness when not in use</li>
-        <li>Use OLED-safe themes with moving elements</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Family doesn't check dashboard</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Dashboard exists but nobody looks at it.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Mount in high-traffic area (kitchen, entryway)</li>
-        <li>Send push notifications when items need attention</li>
-        <li>Add useful features (weather, calendar) to encourage viewing</li>
-        <li>Make screen activate on motion detection</li>
-      </ul>
-    </div>
-  </div>
-</div>
+## Failure modes
 
-## Best practices
+- **A task never gets marked overdue:** Confirm the last-completed date was actually recorded when the task was marked done, and check the interval comparison logic.
+- **A task shows overdue immediately after being marked done:** Check that the "last completed" timestamp is being updated correctly rather than left at its previous value.
+- **Dashboard tiles do not update:** Refresh the dashboard view, since some platforms cache tile states.
+- **Too many tasks pile up as overdue at once:** Stagger the initial setup dates so tasks do not all become due in the same week.
 
-<div class="best-practice-card">
-  <h3>Setting up maintenance dashboard</h3>
-  <ol>
-    <li>List all recurring maintenance items in your home</li>
-    <li>Research proper replacement intervals for each</li>
-    <li>Set up counters with last-replaced dates</li>
-    <li>Create visual dashboard with color-coded status</li>
-    <li>Connect to shopping list for one-tap adding</li>
-    <li>Add notifications for Yellow and Red status items</li>
-    <li>Mount tablet where family will see it daily</li>
-  </ol>
-</div>
+## Done when
 
-<div class="warning-card">
-  <h3>What to avoid</h3>
-  <ul>
-    <li><strong>Too many items</strong> - Start with 5-10 most important</li>
-    <li><strong>Wrong intervals</strong> - Research proper timing for your equipment</li>
-    <li><strong>Hidden location</strong> - Put dashboard where everyone sees it</li>
-    <li><strong>No notifications</strong> - Dashboard alone won't catch attention</li>
-    <li><strong>Static intervals</strong> - Some items need adjustment based on usage</li>
-  </ul>
-</div>
+- [ ] Every tracked task has its own interval and dashboard tile.
+- [ ] A task correctly flags as overdue once its interval passes.
+- [ ] Marking a task done clears its tile and restarts its interval.
+- [ ] The dashboard is somewhere the household actually looks regularly.
 
----
+## FAQ
+
+### How is this different from a phone calendar reminder?
+
+A calendar reminder is easy to dismiss and forget. A dashboard tile stays visibly overdue until someone marks the task done, which works better for tasks that are easy to keep postponing.
+
+### What tasks work well on this kind of dashboard?
+
+Recurring tasks with a rough interval rather than an exact date work best, such as changing an HVAC filter every 60 to 90 days, replacing a water filter, or checking smoke detector batteries twice a year.
+
+### Do I need a wall-mounted tablet for this to work?
+
+No. A shared dashboard on a phone, a tablet, or even a wall-mounted display all work the same way; the important part is that it is somewhere the household actually looks.
 
 ## Related recipes
-- [Status tiles](/automation/notifications/status-tiles.html)
-- [Low battery alerts](/automation/notifications/low-battery-alerts.html)
-- [Garbage day reminder](/automation/notifications/garbage-day-reminder.html)
+
+- [Use status tiles instead of notifications](/automation/notifications/status-tiles.html)
+- [Set up a garbage day reminder tile](/automation/notifications/garbage-day-reminder.html)
+- [Get low battery alerts for smart home devices](/automation/notifications/low-battery-alerts.html)
 
 <div class="page-navigation">
   <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

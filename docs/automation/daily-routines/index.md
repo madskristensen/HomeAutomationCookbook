@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Daily Routines - Morning, Bedtime, and Away Mode Automations
+title: Daily routine automations
 description: Automate your daily routines with smart home technology. Morning wake-up, bedtime wind-down, away mode, and arrival automations.
 keywords: daily routine automation, morning routine, bedtime automation, away mode, home arrival, presence automation, smart home routines
 ---
@@ -13,17 +13,17 @@ Daily routine automations make your smart home adapt to the rhythm of your life.
 
 ## Why automate daily routines?
 
-**Consistent Experience** - Same great start to every morning
+**Consistent experience** - The same understandable start to each morning
 
 **Less Waste** - Away mode can reduce unnecessary lighting and climate runtime
 
-**Safer Transitions** - Security actions remain separate until the household verifies them
+**Safer transitions** - Security actions remain separate until the household verifies them
 
-**Seamless Transitions** - Arrive home to perfect lighting and temperature
+**Visible transitions** - The household can see when Home, Away, or Night changes
 
-**Reduced Mental Load** - No more "did I remember to..." anxiety
+**Reduced mental load** - Fewer repeated checks
 
-**Family Coordination** - Routines work for everyone, not just the tech-savvy
+**Family coordination** - Routines work for everyone, not just the person who built them
 
 </div>
 
@@ -37,7 +37,7 @@ Daily routine automations make your smart home adapt to the rhythm of your life.
 
 Automatically activate Away Mode when the last person leaves. Includes energy savings, security activation, and verification strategies.
 
-<span class="card-meta">**Best for:** Energy savings, security, peace of mind</span>
+<span class="card-meta">**Best for:** Reversible lighting and climate changes after the home is confidently empty</span>
 
 <p><a href="/automation/daily-routines/away-mode.html" class="card-link">View Automation →</a></p>
 

@@ -1,211 +1,113 @@
 ---
 layout: automation
-title: Turn On Bathroom Fan When Starting Shower - Climate Automation
-description: Automatically turn on your bathroom fan when starting a shower. Guide covers multiple trigger methods including lights, humidity sensors, and door contacts.
-keywords: bathroom fan automation, shower fan control, humidity sensor automation, automatic fan, bathroom ventilation, smart fan switch, prevent mirror fog, mold prevention
+title: Turn on the bathroom fan when a shower starts
+description: A platform-neutral recipe that turns on a bathroom fan from a humidity rise or a light trigger, and turns it off again once humidity settles.
+keywords: bathroom fan automation, shower fan control, humidity sensor automation, automatic fan, bathroom ventilation
+last_modified_at: 2026-08-30
+faqs:
+  - question: Which trigger is more reliable, the light switch or humidity?
+    answer: A light-based trigger is simpler and more reliable, since the light almost always goes on first. A humidity sensor is more accurate about the shower itself but reacts a little later and needs its own calibration.
+  - question: Why not just leave the fan on a timer?
+    answer: A fixed timer either wastes electricity by running too long or shuts off too early on a long shower. Tying the fan to the actual trigger and humidity level fits real use better.
+  - question: Should the fan run overnight?
+    answer: Restrict it to normal waking hours unless the household specifically wants ventilation overnight, since a fan running unexpectedly at night can be startling.
 ---
 
-# Turn on bathroom fan when starting shower
+# Turn on the bathroom fan when a shower starts
 
-Remembering to turn on the ceiling fan when taking a shower early in the morning isn't always easy. Automate it to prevent mirror fog, reduce humidity, and improve air quality without thinking about it.
+Turn the bathroom fan on when the shower light goes on or humidity rises, and turn it off once the bathroom has stayed dry for a while.
 
-## Use cases
+**Best for:** A bathroom fan on a smart switch and either a shower light or a humidity sensor that can trigger it reliably.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Convenience & Comfort</h4>
-    <ul>
-      <li><strong>Morning Shower</strong> - Automatically turn on fan when starting your morning shower</li>
-      <li><strong>Prevent Mirror Fog</strong> - Keep bathroom mirrors clear during showers</li>
-      <li><strong>Multi-User Households</strong> - Everyone gets fan benefits without remembering</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Health & Safety</h4>
-    <ul>
-      <li><strong>Humidity Control</strong> - Reduce excess moisture to prevent mold and mildew</li>
-      <li><strong>Bathroom Ventilation</strong> - Improve air quality automatically</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A shared circuit where the fan cannot be switched independently of the light, or overnight hours unless the household wants ventilation running while sleeping.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Fan Switch</strong>
-      <div class="product-details">
-        Popular brands: Lutron, GE, Leviton, Inovelli<br>
-        WiFi or Zigbee • Works with existing fan • Load rating sufficient for fan motor
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Trigger Option (choose one)</strong>
-      <div class="product-details">
-        <strong>Smart Light Switch:</strong> Trigger when shower lights turn on (easiest method)<br>
-        <strong>Contact Sensor:</strong> Trigger when shower door opens (best for glass enclosures)<br>
-        <strong>Humidity Sensor:</strong> Trigger when humidity rises (most accurate - Aqara, Sonoff, Zigbee)
-      </div>
-    </div>
-  </div>
-</div>
+A fan that only runs when someone remembers to flip the switch does not help with mirror fog or lingering humidity. Tying the fan to an existing shower signal, whether the light or a humidity reading, removes the need to remember, and turning it off automatically once humidity settles avoids a fan running long after the shower ends.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Multi-Sensor</strong>
-      <div class="product-details">
-        Combines temperature, humidity, and motion for advanced control
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Speaker</strong>
-      <div class="product-details">
-        Announce "Fan turned on" or play shower music
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect bathroom motion with humidity, temperature, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | Use this for the humidity-based trigger, not for the fastest motion response. |
+| Switch the bathroom fan independently | No personally verified recommendation yet | No personally verified recommendation yet | Confirm any smart switch used here is rated for the fan motor's load and that the physical wall switch keeps working. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF shower lights turn on
-THEN turn on bathroom fan</div>
+- **Trigger:** The shower light turns on, or bathroom humidity rises above its calibrated baseline.
+- **Conditions:** The time falls within the household's normal waking hours, unless overnight ventilation is specifically wanted.
+- **Action:** Turn on the bathroom fan.
+- **Wait / timeout:** Keep the fan running until the trigger clears and stays clear for several minutes.
+- **Stop condition:** The light turns off, or humidity drops back to baseline, for the confirmation period.
+- **Manual override:** The physical wall switch always works regardless of the automation.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers (choose one method)</h4>
-    <strong>Method 1 - Light-based:</strong> Shower lights turn on<br>
-    <strong>Method 2 - Door sensor:</strong> Shower door opens (contact sensor)<br>
-    <strong>Method 3 - Humidity-based:</strong> Bathroom humidity rises above 75%
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions (optional)</h4>
-    <strong>Time-Based:</strong> Only between 5 AM and 11 PM (quiet hours at night)<br>
-    <strong>Home Mode:</strong> Only when someone is home
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on bathroom fan switch</li>
-      <li>Optional: Set fan to specific speed if multi-speed fan</li>
-      <li>Optional: Send notification "Bathroom fan activated"</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the shower light turns on
+OR bathroom humidity rises above the calibrated baseline
+THEN turn on the bathroom fan
+
+IF the shower light has been off for several minutes
+AND humidity has returned to baseline for the same period
+THEN turn off the bathroom fan</div>
+
+## Setup notes
+
+1. Choose one primary trigger, either the shower light or a humidity sensor, and treat the other as a backup rather than combining them in a way that confuses troubleshooting.
+2. Record the bathroom's humidity baseline on a normal day with no shower running.
+3. Set the on-threshold clearly above that baseline so normal humidity swings do not start the fan.
+4. Require the trigger to clear for several minutes before turning the fan off, so a brief pause in the shower does not shut it off early.
+5. Restrict the automation to normal waking hours unless the household wants it running overnight.
+6. Test with an actual shower, not just running the sink, before trusting the thresholds.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Automatic fan shutoff</h3>
-    <p>Turn off the fan automatically after the shower ends:</p>
-    <ul>
-      <li><strong>Trigger:</strong> Shower lights turn off for 10 minutes</li>
-      <li><strong>Action:</strong> Turn off bathroom fan</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Humidity-based shutoff</h3>
-    <p>Turn off when humidity returns to normal:</p>
-    <ul>
-      <li><strong>Trigger:</strong> Humidity drops below 60% for 5 min</li>
-      <li><strong>Condition:</strong> Fan is currently on</li>
-      <li><strong>Action:</strong> Turn off bathroom fan</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Bonus automations</h3>
-    <p>Since your smart home now knows when you're showering:</p>
-    <ul>
-      <li><strong>Play Music:</strong> Start shower playlist on speaker</li>
-      <li><strong>Flash Lights:</strong> Alert when doorbell rings</li>
-      <li><strong>Lock Front Door:</strong> Secure home while showering</li>
-      <li><strong>Adjust Thermostat:</strong> Increase bathroom temp</li>
-    </ul>
-  </div>
-</div>
+### Fixed maximum run time
 
-## Common issues and solutions
+Add a maximum run time, such as 30 minutes, so a stuck sensor or an unusually long humid period cannot leave the fan running indefinitely unnoticed.
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Fan doesn't turn on</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Smart fan switch not responding or automation disabled.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Test fan switch manually through app</li>
-        <li>Check automation triggers - simulate shower start</li>
-        <li>Verify automation is enabled in your platform</li>
-        <li>Ensure physical fan switch is in "on" position</li>
-        <li>Check fan switch load rating matches fan motor</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Fan turns on at wrong times</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Multiple triggers firing or humidity sensor triggered by other sources.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Review automation logs to see what triggered</li>
-        <li>Add time-based conditions to limit hours</li>
-        <li>Increase humidity threshold (try 80% instead of 75%)</li>
-        <li>Add delay: Only trigger if condition persists for 2-3 min</li>
-        <li>Use multiple conditions: Light ON + Humidity rising</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Fan doesn't turn off</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Auto-off automation not created or humidity not dropping.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Create separate automation for fan shutoff</li>
-        <li>Increase shutoff delay if humidity drops slowly</li>
-        <li>Check bathroom ventilation - fan may need cleaning</li>
-        <li>Add manual override button</li>
-        <li>Set maximum run time: Off after 30 minutes regardless</li>
-      </ul>
-    </div>
-  </div>
-</div>
+### Combine light and humidity
 
----
+Where both are available, use the light as the immediate on-trigger and the humidity reading only to extend the off-delay on longer showers.
+
+## Failure modes
+
+- **Fan does not turn on:** Confirm the trigger source is reporting current data and that the fan switch responds to a manual test.
+- **Fan turns on for unrelated reasons:** If using humidity, raise the threshold or confirm nothing else in the bathroom (kettle steam, an open window on a humid day) is triggering it.
+- **Fan does not turn off:** Confirm the off-condition requires both the trigger and a sustained clear period, and check for a stuck humidity reading.
+- **Fan runs at night unexpectedly:** Add or correct the waking-hours condition.
+- **Physical switch stops working:** Reconnect or replace the smart switch; the wall control must always be usable.
+
+## Done when
+
+- [ ] The baseline humidity level has been recorded on a normal day.
+- [ ] A real shower reliably starts the fan using the chosen trigger.
+- [ ] The fan turns off within a reasonable time after the shower ends.
+- [ ] A brief pause mid-shower does not turn the fan off early.
+- [ ] The automation stays within the intended hours.
+- [ ] The physical wall switch still works normally.
+
+## FAQ
+
+### Which trigger is more reliable, the light switch or humidity?
+
+A light-based trigger is simpler and more reliable, since the light almost always goes on first. A humidity sensor is more accurate about the shower itself but reacts a little later and needs its own calibration.
+
+### Why not just leave the fan on a timer?
+
+A fixed timer either wastes electricity by running too long or shuts off too early on a long shower. Tying the fan to the actual trigger and humidity level fits real use better.
+
+### Should the fan run overnight?
+
+Restrict it to normal waking hours unless the household specifically wants ventilation overnight, since a fan running unexpectedly at night can be startling.
 
 ## Related recipes
-- [Play music when shower starts](/automation/entertainment/shower-music.html)
-- [Morning routine automation](/automation/daily-routines/morning-routine.html)
-- [Monitor a cold room](/automation/climate/room-heater-maintain-temp.html)
+
+- [Play music when a shower starts](/automation/entertainment/shower-music.html)
+- [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
+- [Monitor a cold room without smart-plug heater control](/automation/climate/room-heater-maintain-temp.html)
 
 <div class="page-navigation">
   <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

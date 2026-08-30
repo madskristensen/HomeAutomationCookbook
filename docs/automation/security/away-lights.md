@@ -1,289 +1,110 @@
 ---
 layout: automation
-title: Away Lights Automation - Make Your Home Look Occupied
-description: Deter break-ins and package theft by making your home look occupied with strategic away lighting automation. Complete setup guide.
-keywords: away lights, security lighting, home occupied simulation, break-in prevention, package theft prevention, smart home security
+title: Turn on away lights to look occupied
+description: A platform-neutral recipe that turns on a few strategic lights while away to make the home look occupied, without an unnatural all-lights-on pattern.
+keywords: away lights, security lighting, home occupied simulation, break-in deterrent, smart home security
+last_modified_at: 2026-08-30
+faqs:
+  - question: Will turning on a couple of lights actually deter a break-in?
+    answer: There is no certainty either way, but a home that looks occupied is generally considered less appealing to an opportunistic intruder than one that clearly looks empty. This is one layer among several, not a guarantee.
+  - question: Should every light in the house turn on?
+    answer: No. Turning on every light at once tends to look unnatural. A couple of rooms that a person home alone would realistically use, such as a living room and one bedroom, reads as more convincing.
+  - question: What if I forget to turn Away mode off when I get home?
+    answer: Arriving home and disarming Away mode, however the platform signals that, should turn the lights back to their normal schedule. It is worth confirming this transition works before relying on it.
 ---
 
-# Turn on away lights
+# Turn on away lights to look occupied
 
-Turning on a few strategic lights in the house can make it look like you are home and deter potential thieves from breaking in or stealing packages from the porch. If your smart electric fireplace is also on, you can make it look even more convincing.
+Turn on a couple of strategic lights while away, on a schedule that mimics normal evening use, so the home does not look obviously empty.
 
-## Use cases
+**Best for:** A household that already uses an away or vacation mode and wants a lighting pattern that looks natural from the street.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Security</h4>
-    <ul>
-      <li><strong>Deter Break-ins</strong> - Make it look like someone is home</li>
-      <li><strong>Package Theft Prevention</strong> - Discourage porch pirates</li>
-      <li><strong>Vacation Security</strong> - Maintain occupied appearance during trips</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Peace of Mind</h4>
-    <ul>
-      <li><strong>Extended Absences</strong> - Feel secure during business trips</li>
-      <li><strong>Evening Events</strong> - Come home to a lit house</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A home with no away mode concept at all; this recipe assumes the platform can distinguish "away" from "home" as a starting condition.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Light Switches or Bulbs</strong>
-      <div class="product-details">
-        Strategic placement in visible rooms<br>
-        Switches: Lutron, GE, Inovelli, Leviton<br>
-        Bulbs: Philips Hue, LIFX, Wyze, Sengled
-      </div>
-    </div>
-  </div>
-</div>
+A home with every light off every evening, night after night, is a visible pattern to anyone paying attention. Turning on a couple of lights that a person home alone would realistically use, on a normal evening schedule, is a simple layer that avoids an obviously empty appearance.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Electric Fireplace</strong>
-      <div class="product-details">
-        Adds convincing warmth and movement visible from outside
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart TV Simulator</strong>
-      <div class="product-details">
-        LED device that mimics TV glow patterns
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Blinds/Shades</strong>
-      <div class="product-details">
-        Automated movement adds to lived-in appearance
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Strategic Light Selection</strong>
-  <ul>
-    <li>Choose lights visible from the street or driveway</li>
-    <li>Living room, kitchen, and one bedroom work well</li>
-    <li>Avoid turning on ALL lights - looks unnatural</li>
-    <li>Consider what a person home alone would use</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Switch a fixed light on or off | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Good for a wired fixture the household wants to keep as a simple on/off. |
+| Dim a fixed light | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch. |
+| Control a plug-in light or appliance | [Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2) | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | Works for a lamp plugged into an outlet rather than a wired fixture. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-Away lights is a great candidate for a scene or lighting group if your smart home platform supports them. Create an "Away Lights" scene with your strategic lights configured.
+- **Trigger:** The home enters Away mode, or the time reaches sunset while already in Away mode.
+- **Conditions:** The home is currently in Away mode, and the time is between sunset and a set cutoff, such as 11:00 PM.
+- **Action:** Turn on the selected away lights, ideally as a single scene rather than individually.
+- **Wait / timeout:** The lights stay on until the cutoff time.
+- **Stop condition:** The cutoff time is reached, or the home leaves Away mode because someone returns.
+- **Manual override:** Every light switch keeps its normal physical and app-based control, regardless of Away mode.
 
-<div class="automation-example">IF home goes into Away mode
-AND time is between sunset and 11 PM
-THEN turn on away lights scene</div>
+<div class="automation-example">IF the home enters Away mode
+AND the time is between sunset and 11:00 PM
+THEN turn on the away lights scene
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Automation 1: Turn on away lights</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Home goes into Away mode</li>
-      <li>OR Time is between sunset and 11 PM (check if already in Away mode)</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Home is in Away mode</li>
-      <li>Time is between sunset and 11 PM</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn on indoor lights (living room, kitchen)</li>
-      <li>Turn on electric fireplace (optional)</li>
-      <li>OR Execute scene that turns on the away lights</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Automation 2: Turn off at bedtime</h4>
-    <p>At 11 PM, or whatever your normal bedtime is, turn off the away lights:</p>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is 11:00 PM</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Home is in Away mode</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn off indoor lights</li>
-      <li>Turn off electric fireplace</li>
-      <li>OR Execute a scene that turns off all lights</li>
-    </ul>
-  </div>
-</div>
+IF the time reaches 11:00 PM
+AND the home is still in Away mode
+THEN turn off the away lights scene</div>
+
+## Setup notes
+
+1. Choose two or three lights that a person home alone would realistically use, such as a living room lamp and one bedroom light; avoid lighting every room.
+2. Group the selected lights into a single scene if the platform supports it, so they can be turned on and off together.
+3. Set the trigger to turn the scene on at sunset only while Away mode is active, and off again at a fixed cutoff time such as 11:00 PM.
+4. Confirm returning home and leaving Away mode correctly stops the pattern and returns lights to their normal schedule.
+5. Test the full cycle once with Away mode manually enabled, rather than waiting for an actual absence to find a problem.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Randomized lighting patterns</h3>
-    <p>Make the pattern less predictable and more realistic:</p>
-    <ul>
-      <li><strong>Staggered timing:</strong> Living room at sunset, kitchen 15 min later</li>
-      <li><strong>Random delays:</strong> 5-10 minute variations each day</li>
-      <li><strong>Room rotation:</strong> Different rooms on different nights</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Vacation mode enhancement</h3>
-    <p>During extended absences, enhance the pattern:</p>
-    <ul>
-      <li><strong>Multiple rooms:</strong> Rotate throughout evening</li>
-      <li><strong>Dinner simulation:</strong> Kitchen early, living room later</li>
-      <li><strong>Blind movement:</strong> Open in morning, close at dusk</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>TV simulator integration</h3>
-    <p>Add realistic glow for enhanced effect:</p>
-    <ul>
-      <li>FakeTV device or smart LED strip</li>
-      <li>Position where visible from outside</li>
-      <li>Colored smart bulb with random color scenes</li>
-    </ul>
-  </div>
-</div>
+### Staggered timing
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Motion-activated exterior</h3>
-    <p>Combine with motion-triggered outdoor lighting:</p>
-    <ul>
-      <li>Exterior motion sensors trigger bright lights</li>
-      <li>Stays on for 5-10 minutes</li>
-      <li>Startles potential intruders and activates cameras</li>
-    </ul>
-  </div>
-</div>
+Turn on the living room light at sunset and the bedroom light 15 to 20 minutes later, rather than all at once, to look closer to normal evening activity.
 
-## Common issues and solutions
+### Room rotation
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Lights come on during daytime</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Sunset condition not working or time zone incorrectly set.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Verify sunset trigger or condition is active</li>
-        <li>Check platform time zone settings</li>
-        <li>Add explicit "after sunset" condition</li>
-        <li>Use lux sensor as alternative to sunset</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Lights don't turn off at scheduled time</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Automation scheduled wrong or mode changed unexpectedly.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check 11 PM automation trigger</li>
-        <li>Verify mode is still "Away"</li>
-        <li>Check for conflicting automations</li>
-        <li>Add logging to troubleshoot</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Pattern looks too predictable</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Same lights, same time every day with no variation.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Add random time offsets (5-15 minutes)</li>
-        <li>Rotate which rooms are used</li>
-        <li>Include occasional TV simulator or fireplace</li>
-        <li>Vary turn-off time slightly</li>
-      </ul>
-    </div>
-  </div>
-</div>
+Alternate which rooms light up on different nights during an extended absence, so the pattern does not repeat identically every evening.
 
-## Best practices
+## Failure modes
 
-### Light selection
+- **Lights turn on during the day:** Confirm the sunset condition and the platform's time zone setting are both correct; add an explicit time window if the sunset trigger alone is unreliable.
+- **Lights do not turn off at the cutoff:** Check that Away mode is still active at that time and that no other automation is overriding the schedule.
+- **Pattern looks the same every night:** Add staggered timing or room rotation so it is less obviously automated.
+- **Lights stay on after returning home:** Confirm arriving home correctly disables Away mode, since this automation depends on that condition to stop.
 
-**Good Choices:**
-✅ Living room - visible from street
-✅ Kitchen - common evening activity area
-✅ One bedroom - suggests someone home
-✅ Entry/foyer - normal usage pattern
+## Done when
 
-**Avoid:**
-❌ Every room lit - looks suspicious
-❌ Outdoor lights only - no interior activity
-❌ Basement/attic - unusual pattern
-❌ Bathroom only - strange choice
+- [ ] The selected lights turn on at sunset only while Away mode is active.
+- [ ] The lights turn off at the scheduled cutoff time.
+- [ ] Returning home stops the pattern correctly.
+- [ ] The lighting pattern uses a couple of rooms rather than the entire house.
 
-### Timing considerations
+## FAQ
 
-**Natural Patterns:**
-- Lights on after sunset
-- Activity in kitchen 5-8 PM (dinner)
-- Living room 7-11 PM (relaxing)
-- Bedroom 10-11 PM (winding down)
-- All off by 11 PM (sleep)
+### Will turning on a couple of lights actually deter a break-in?
 
-**Avoid:**
-- Lights on 24/7
-- Exact same time every day
-- Lights on before sunset
-- Lights off at unusual times
+There is no certainty either way, but a home that looks occupied is generally considered less appealing to an opportunistic intruder than one that clearly looks empty. This is one layer among several, not a guarantee.
 
-### Security layering
+### Should every light in the house turn on?
 
-**Combine With:**
-- Motion-activated exterior lights
-- Camera recording
-- Smart door locks
-- Alarm system
-- Neighbor alerts
+No. Turning on every light at once tends to look unnatural. A couple of rooms that a person home alone would realistically use, such as a living room and one bedroom, reads as more convincing.
 
----
+### What if I forget to turn Away mode off when I get home?
+
+Arriving home and disarming Away mode, however the platform signals that, should turn the lights back to their normal schedule. It is worth confirming this transition works before relying on it.
 
 ## Related recipes
-- [Away mode automation](/automation/daily-routines/away-mode.html)
-- [Fire safety response](/automation/security/fire-safety.html)
-- [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
+
+- [Set up away mode](/automation/daily-routines/away-mode.html)
+- [Set up fire safety response](/automation/security/fire-safety.html)
+- [Set up outdoor night lights](/automation/lighting/outdoor-night-lights.html)
 
 <div class="page-navigation">
-  <a href="/automation/security/index.html">Back to security automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/security/index.html">Back to security</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

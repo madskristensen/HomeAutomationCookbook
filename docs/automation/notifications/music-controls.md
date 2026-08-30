@@ -1,238 +1,106 @@
 ---
 layout: automation
-title: Music Controls on Dashboard - Smart Home Automation
-description: Control music from your dashboard with favorite stations, volume presets, and now playing display. No more yelling at voice assistants.
-keywords: music dashboard, smart home music, dashboard controls, volume presets, music tiles
+title: Add dashboard tiles for music playback controls
+description: A platform-neutral recipe that puts play, pause, and volume controls for whole-home audio on a shared dashboard.
+keywords: music dashboard, playback controls, whole home audio, dashboard tiles, music control automation
+last_modified_at: 2026-08-30
+faqs:
+  - question: Do I need whole-home audio for this to be useful?
+    answer: It helps, since a single dashboard controlling several speakers at once is more valuable than controlling just one. It still works for a single speaker, but a dedicated app may be just as convenient in that case.
+  - question: Why use dashboard tiles instead of the speaker manufacturer's app?
+    answer: A shared dashboard keeps music controls next to other household controls, such as lights and locks, so anyone in the house can adjust playback without switching apps or needing a specific phone.
+  - question: Can this control speakers from different brands together?
+    answer: Only if the platform already integrates with each speaker brand individually. This recipe describes the dashboard layer on top of that integration, not a way to unify incompatible speaker ecosystems.
 ---
 
-# Music controls
+# Add dashboard tiles for music playback controls
 
-Controlling the music from a dashboard solves several problems. One is to see the album art, artist, and song name to know more information about the current song playing. This is a topic that comes up all the time, and being able to glance at the dashboard to see the information is super convenient.
+Put play, pause, and volume controls for whole-home audio on a shared dashboard instead of a separate speaker app.
 
-If you're like me, you have a few favorite stations or playlists that you play most of the time. Giving each of them a tile on the dashboard makes it easy to play any of them. The same goes with presets for volume like low, normal, and loud.
+**Best for:** A household with more than one connected speaker and a shared dashboard already in use for other controls.
 
-All these controls eliminate the need to yell at Alexa/Google/Siri repeatedly, which is often a cause of frustration.
+**Not for:** A single standalone speaker with no other dashboard use; the manufacturer's own app is likely simpler in that case.
 
-## Use cases
+## Why this exists
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>For the Household</h4>
-    <ul>
-      <li><strong>One-Tap Music</strong> - Start favorite playlists instantly</li>
-      <li><strong>Volume Control</strong> - Preset levels for different activities</li>
-      <li><strong>Now Playing</strong> - See what song is playing at a glance</li>
-      <li><strong>No Voice Needed</strong> - Control without speaking</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>For Parties</h4>
-    <ul>
-      <li><strong>Guest Friendly</strong> - Anyone can control music</li>
-      <li><strong>Party Playlists</strong> - Pre-configured party music</li>
-      <li><strong>Volume Presets</strong> - Easy adjustment for different phases</li>
-      <li><strong>Room Control</strong> - Group or ungroup speakers</li>
-    </ul>
-  </div>
-</div>
+Music controls scattered across separate manufacturer apps means switching apps just to pause a speaker in another room. Bringing playback controls onto the same dashboard used for lights, locks, and other status tiles keeps everything in one place.
 
-## Products needed
+## What I used
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Speakers</strong>
-      <div class="product-details">
-        Sonos, Amazon Echo, Google Home, HomePod, or any smart speaker system
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Dashboard</strong>
-      <div class="product-details">
-        Wall-mounted tablet with a dashboard connected to your verified speaker controls
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Music Service</strong>
-      <div class="product-details">
-        Spotify, Apple Music, Amazon Music, or other streaming service
-      </div>
-    </div>
-  </div>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Control connected speakers from a dashboard | No personally verified recommendation yet | No personally verified recommendation yet | This depends on the platform's existing integration with each speaker brand; no additional hardware is needed beyond the speakers themselves. |
 
-## Dashboard elements for music
-
-### Now playing tile
-
-- Album art display
-- Artist and song name
-- Play/pause button
-- Skip forward/back
-
-### Favorite stations/playlists
-
-- One tile per favorite
-- Tap to instantly play
-- Examples:
-  - "Dinner Music" playlist
-  - "Morning Energy" station
-  - "Kids Favorites"
-  - "Party Mix"
-
-### Volume presets
-
-- "Low" (30%) - background music
-- "Normal" (50%) - everyday listening
-- "Loud" (70%) - party mode
-- Eliminates "Alexa, set volume to..." commands
-
-### Room/Zone selection
-
-- Quick switch between rooms
-- Group rooms together
-- Ungroup for individual control
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF "Dinner Music" tile tapped
-THEN play "Dinner Jazz" playlist on Kitchen speaker
-AND set volume to 40%</div>
+- **Trigger:** A dashboard tile is tapped, such as play, pause, or a volume adjustment.
+- **Conditions:** The targeted speaker is online and reachable by the platform.
+- **Action:** Send the corresponding playback or volume command to that speaker.
+- **Wait / timeout:** None; the command is sent immediately when the tile is tapped.
+- **Stop condition:** Not applicable; each tile press is a separate command.
+- **Manual override:** The speaker's own physical controls or manufacturer app continue to work independent of the dashboard.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Dashboard tile tapped (virtual switch turned on)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Play specific playlist or station</li>
-      <li>Set volume to preferred level</li>
-      <li>Target specific speaker or group</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the "pause" tile is tapped for the living room speaker
+THEN send a pause command to the living room speaker
+
+IF the volume slider is adjusted for the kitchen speaker
+THEN set the kitchen speaker's volume to the selected level</div>
+
+## Setup notes
+
+1. Confirm the platform already integrates with each speaker brand in use; this recipe only adds a dashboard layer on top of that integration.
+2. Add a dashboard section for music controls, with play, pause, and volume tiles per room or speaker.
+3. Group tiles by room so it is clear which speaker each control affects.
+4. Test each tile individually to confirm it targets the correct speaker.
+5. If the household plays synchronized audio across multiple rooms, consider adding a single tile that controls the whole group at once.
 
 ## Advanced features
 
-### Party dashboard
+### Whole-home group control
 
-Create a special dashboard for parties and gatherings:
+Add a tile that sends play, pause, or volume commands to every speaker at once, useful for parties or when leaving the house and wanting music off everywhere.
 
-**Include:**
-- Large now playing display
-- Prominent volume controls
-- Favorite party playlists
-- Group speaker controls
+### Now playing display
 
-**Exclude:**
-- Home automation controls
-- Security features
-- Sensitive settings
-- Anything confusing for guests
-
-### Volume automation
-
-Automatically adjust volume based on context:
-
-- **Time-based:** Lower volume after 10 PM
-- **Activity-based:** Reduce during phone calls
-- **Mode-based:** Louder during party mode
-- **Noise-based:** Adjust based on ambient noise sensor
-
-### Multi-room audio
-
-Control speaker groups from dashboard:
-
-- **All Speakers:** Whole house audio
-- **Main Floor:** Kitchen, living room, dining
-- **Upstairs:** Bedrooms, office
-- **Outside:** Patio, garage
-
-Add tiles to quickly switch between groups or individual rooms.
-
-### DJ mode
-
-Let guests participate:
-
-1. Create a shared playlist everyone can add to
-2. Display playlist queue on dashboard
-3. Allow skip voting (multiple taps to skip)
-4. Maintain backup playlist for when queue is empty
+If the platform supports it, show the current track or source on the dashboard alongside the controls, so it is clear what is playing without opening a separate app.
 
 ## Failure modes
 
-### Issue: Now playing not updating
+- **A tile does not respond:** Confirm the target speaker is online and check the platform's integration status for that speaker brand.
+- **The wrong speaker responds to a tile:** Double check the tile's configured target device.
+- **Volume changes lag behind the tile:** Some speaker integrations poll status rather than update instantly; this is a platform limitation rather than a dashboard problem.
+- **Group control does not include a new speaker:** Confirm the new speaker was added to the group definition, not just the individual room tiles.
 
-**Solutions:**
-✅ Check speaker integration is properly configured
-✅ Verify media_player entity is available
-✅ Refresh dashboard connection
-✅ Check speaker is on same network as hub
+## Done when
 
-### Issue: Playlist won't start
+- [ ] Every connected speaker has working play, pause, and volume tiles.
+- [ ] Tiles are clearly grouped or labeled by room.
+- [ ] A whole-home group control tile works if the household uses synchronized audio.
+- [ ] Each tile reliably targets the correct speaker.
 
-**Solutions:**
-✅ Verify music service is linked to speaker
-✅ Check playlist still exists in music service
-✅ Test playing from music app directly
-✅ Re-link music service account
+## FAQ
 
-### Issue: Volume too loud/quiet
+### Do I need whole-home audio for this to be useful?
 
-**Solutions:**
-✅ Calibrate volume presets to your preference
-✅ Consider room acoustics
-✅ Test at different times of day
-✅ Add volume normalization if supported
+It helps, since a single dashboard controlling several speakers at once is more valuable than controlling just one. It still works for a single speaker, but a dedicated app may be just as convenient in that case.
 
-### Issue: Wrong speaker plays
+### Why use dashboard tiles instead of the speaker manufacturer's app?
 
-**Solutions:**
-✅ Verify correct speaker entity in automation
-✅ Check speaker groups are configured correctly
-✅ Ensure default speaker is set properly
-✅ Specify speaker explicitly in each automation
+A shared dashboard keeps music controls next to other household controls, such as lights and locks, so anyone in the house can adjust playback without switching apps or needing a specific phone.
 
-## Best practices
+### Can this control speakers from different brands together?
 
-### Dashboard layout
-
-- Place music controls prominently
-- Large tap targets for volume
-- Now playing visible at a glance
-- Favorite presets easily accessible
-
-### Family-friendly setup
-
-- Include kid-friendly playlists
-- Parental controls on explicit content
-- Simple interface for all ages
-- Guest-accessible controls
-
-### Performance tips
-
-- Use local integrations when possible
-- Minimize cloud dependencies
-- Cache album art locally
-- Test response time of controls
-
----
+Only if the platform already integrates with each speaker brand individually. This recipe describes the dashboard layer on top of that integration, not a way to unify incompatible speaker ecosystems.
 
 ## Related recipes
-- [Garbage day reminder](/automation/notifications/garbage-day-reminder.html)
-- [Status tiles instead of notifications](/automation/notifications/status-tiles.html)
-- [Music switch control](/automation/entertainment/music-switch-control.html)
+
+- [Control music with a wall switch](/automation/entertainment/music-switch-control.html)
+- [Use status tiles instead of notifications](/automation/notifications/status-tiles.html)
+- [Set volume presets for a speaker](/automation/entertainment/speaker-volume-presets.html)
 
 <div class="page-navigation">
   <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

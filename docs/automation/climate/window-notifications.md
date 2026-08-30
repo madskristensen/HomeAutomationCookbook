@@ -1,207 +1,116 @@
 ---
 layout: automation
-title: Smart Window Open/Close Notifications for Energy Savings
-description: Get notified when outdoor temperature is ideal for opening or closing windows. Save energy by using free heating or cooling.
-keywords: window notification automation, energy saving alerts, when to open windows, temperature notification, smart thermostat notifications, free heating, free cooling, natural ventilation
+title: Get notified when to open or close windows
+description: A platform-neutral recipe that compares indoor and outdoor temperature and notifies the household when opening or closing windows would save energy.
+keywords: window notification automation, energy saving alerts, when to open windows, temperature notification, natural ventilation
+last_modified_at: 2026-08-30
+faqs:
+  - question: How large should the temperature difference be before notifying?
+    answer: Start with a difference of at least 5 degrees Fahrenheit between indoor and outdoor readings. A smaller difference is not worth interrupting anyone for.
+  - question: Why require the difference to hold for a while before sending an alert?
+    answer: Outdoor temperature can swing briefly with wind, clouds, or a passing shower. Requiring the difference to hold for several minutes avoids notifying on a reading that will not last.
+  - question: Should the automation close windows automatically?
+    answer: No. This recipe only notifies. Closing or opening a window is a manual action so a person can also check weather, security, and whether the window can be reached safely.
 ---
 
-# Notify when to open or close windows
+# Get notified when to open or close windows
 
-Save energy by using outdoor air for heating or cooling instead of running HVAC. Get smart notifications when outdoor temperature is perfect for opening or closing windows.
+Compare indoor and outdoor temperature, and send one notification when opening or closing windows would take advantage of free heating or cooling.
 
-## Use cases
+**Best for:** Homes with a working indoor and outdoor temperature reading that want a reminder instead of running heating or cooling unnecessarily.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Energy Savings</h4>
-    <ul>
-      <li><strong>Free Heating</strong> - Warm winter days when outside air warmer than heating setpoint</li>
-      <li><strong>Free Cooling</strong> - Cool summer nights when outside air cooler than cooling setpoint</li>
-      <li><strong>Energy Savings</strong> - Take advantage of nice weather instead of running HVAC</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Comfort & Awareness</h4>
-    <ul>
-      <li><strong>Optimal Ventilation</strong> - Know the best times to air out your home</li>
-      <li><strong>Weather Awareness</strong> - Stay informed about ideal conditions</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Automatically opening or closing any window, or replacing a working thermostat schedule with notification-driven manual habits nobody follows.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Indoor Temperature Sensor</strong>
-      <div class="product-details">
-        Can use smart thermostat's sensor or standalone temperature sensors
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Outdoor Temperature Sensor</strong>
-      <div class="product-details">
-        Popular brands: Ambient Weather, Ecowitt, Aqara outdoor sensor<br>
-        Weather station integration (Weather Underground, OpenWeatherMap) OR physical outdoor sensor
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Home Platform</strong>
-      <div class="product-details">
-        Must support delayed conditions and household notifications
-      </div>
-    </div>
-  </div>
-</div>
+Free heating or cooling from outdoor air is easy to miss without a specific reminder. A one-time notification, sent only when the temperature difference is meaningful and has held steady for a while, is more useful than expecting anyone to check the weather and compare it against the thermostat throughout the day.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Contact Sensors</strong>
-      <div class="product-details">
-        Track which windows are currently open/closed
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Weather Forecast Integration</strong>
-      <div class="product-details">
-        Predict upcoming conditions for better planning
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Track whether a window is open | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Optional. Useful for skipping a notification about a window that is already open. |
+| Compare indoor and outdoor temperature | No personally verified recommendation yet | No personally verified recommendation yet | Many platforms already provide an outdoor reading through an existing weather integration, so a dedicated purchase may not be needed. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF outside temp > inside temp + 5°F (in heating season)
-THEN send notification "Open windows for free heating!"</div>
+- **Trigger:** The gap between indoor and outdoor temperature crosses a chosen threshold in the useful direction for the current season.
+- **Conditions:** The gap has held for several minutes, and any tracked windows are currently closed.
+- **Action:** Send one notification suggesting windows be opened or closed.
+- **Wait / timeout:** Wait for a cooldown period, such as two hours, before sending another notification of the same kind.
+- **Stop condition:** The notification is sent once; the household decides whether to act on it.
+- **Manual override:** Opening or closing any window is always a manual decision.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>For Heating Season (Winter)</h4>
-    <strong>Trigger:</strong> Outside temp rises above thermostat heating setpoint<br>
-    <strong>Conditions:</strong> Windows currently closed • House in heating mode • Daytime hours (optional)<br>
-    <strong>Action:</strong> Send notification "Outside is warmer than inside! Open windows to save energy."
-  </div>
-  
-  <div class="setup-step">
-    <h4>For Cooling Season (Summer)</h4>
-    <strong>Trigger:</strong> Outside temp drops below thermostat cooling setpoint<br>
-    <strong>Conditions:</strong> Windows currently closed • House in cooling mode • Evening/night time (optional)<br>
-    <strong>Action:</strong> Send notification "Outside is cooler than inside! Open windows to save energy."
-  </div>
-</div>
+<div class="automation-example">IF outdoor temperature is at least 5 degrees warmer than indoor temperature
+AND it is heating season
+AND the gap has held for several minutes
+AND tracked windows are currently closed
+THEN send one notification: "Outside is warmer than inside. Consider opening a window."
+
+IF outdoor temperature is at least 5 degrees cooler than indoor temperature
+AND it is cooling season
+AND the gap has held for several minutes
+AND tracked windows are currently closed
+THEN send one notification: "Outside is cooler than inside. Consider opening a window."</div>
+
+## Setup notes
+
+1. Confirm both the indoor and outdoor temperature readings are current and reasonably accurate before using them.
+2. Choose a minimum temperature difference, starting around 5 degrees Fahrenheit, and adjust only after seeing how often it fires.
+3. Require the difference to hold for several minutes before sending a notification.
+4. Add a cooldown between notifications so a temperature hovering near the threshold does not send repeated alerts.
+5. If window sensors are available, skip the notification for windows already open.
+6. Restrict notifications to hours when someone is likely to see and act on them.
 
 ## Advanced features
 
-### Notify to close windows
+### Include a rain warning
 
-Alert when outdoor temperature is no longer favorable:
+If a window sensor reports open and rain is forecast, send a separate notification suggesting the window be closed.
 
-Create automation with these elements:
-- **Trigger:** Outside temperature drops 5°F below inside temperature
-- **Condition:** At least one window is open AND in heating season
-- **Action:** Send notification: "Getting cold outside ([temp]°F). Time to close windows and resume heating."
+### Mention an approximate cost difference
 
-### Weather forecast integration
-
-Predict optimal window times using forecast data:
-
-Create automation triggered at 5 PM:
-- Check evening forecast temperature
-- If forecast shows cool evening (below 65°F) AND currently warm inside (above 72°F)
-- Send notification: "Forecast shows cool evening. Good night to open windows!"
-
-### Include estimated savings
-
-Calculate potential savings:
-
-Include message in notification: "Open windows now - save ~$0.50/hour vs running AC!"
-
-### Rain alert for open windows
-
-Warn before rain if windows open:
-
-Create automation with these elements:
-- **Trigger:** Weather forecast changes
-- **Condition:** Rain predicted in next period AND windows are open
-- **Action:** Send high-priority notification: "Rain expected soon - close windows!"
+Where the platform can estimate it, add a rough cost comparison to the notification to make the suggestion more concrete.
 
 ## Failure modes
 
-### Issue: Too many notifications
+- **Too many notifications:** Increase the required temperature difference, lengthen the confirmation delay, or add a longer cooldown between alerts.
+- **Notifications arrive at unhelpful times:** Restrict them to daytime or waking hours.
+- **Notification suggests opening a window that is already open:** Confirm the window-sensor condition is included and the sensor is reporting current data.
+- **Outdoor reading looks wrong:** Check the sensor's placement away from direct sun and heat-radiating walls, or confirm the weather integration is using the correct location.
+- **No notification arrives when it should:** Confirm both temperature sources are reporting and that the season condition matches the current time of year.
 
-**Causes:**
-- Temperature constantly fluctuating around threshold
-- Notifications sent every time temp changes
-- No cooldown period between notifications
-- Both heating and cooling alerts active simultaneously
+## Done when
 
-**Solutions:**
-✅ Add "for: 15 minutes" delay to trigger - ensure temperature stable
-✅ Increase temperature difference threshold (5°F instead of 2°F)
-✅ Send maximum one notification per 2-hour period
-✅ Only notify during specific hours (morning, evening)
-✅ Add actionable notification - dismiss or snooze for certain period
-✅ Use notification cooldown automation
+- [ ] Indoor and outdoor readings are current and reasonably accurate.
+- [ ] A real temperature swing produces exactly one notification.
+- [ ] The cooldown prevents repeated notifications for the same swing.
+- [ ] An already-open window does not trigger a redundant "open a window" notification.
+- [ ] Notifications arrive only during hours someone can act on them.
 
-**Cooldown example:**
-Add condition: Only send notification if previous notification was sent more than 2 hours ago (check automation's last triggered time)
+## FAQ
 
-### Issue: Notifications not helpful
+### How large should the temperature difference be before notifying?
 
-**Causes:**
-- Notification sent at inconvenient times (middle of night, at work)
-- Temperature difference too small to matter
-- Outdoor conditions not actually comfortable (humidity, wind)
-- Windows already open
+Start with a difference of at least 5 degrees Fahrenheit between indoor and outdoor readings. A smaller difference is not worth interrupting anyone for.
 
-**Check:**
-- ✅ Add time restrictions: Only notify 7 AM-10 PM
-- ✅ Only notify when home (presence detection)
-- ✅ Check window sensors - don't notify if windows already open
-- ✅ Increase minimum temperature difference (5-8°F minimum)
-- ✅ Include humidity in decision (high humidity makes cooling less effective)
+### Why require the difference to hold for a while before sending an alert?
 
-**Fix:**
-Add multiple conditions:
-- Only notify during awake hours (7 AM - 10 PM)
-- Only when someone is home (check home mode)
-- Significant temp difference (5°F minimum)
-- Not too humid (outdoor humidity below 70%)
+Outdoor temperature can swing briefly with wind, clouds, or a passing shower. Requiring the difference to hold for several minutes avoids notifying on a reading that will not last.
 
-### Issue: Outdoor temperature sensor inaccurate
+### Should the automation close windows automatically?
 
-**Causes:**
-- Weather integration using wrong location
-- Outdoor sensor in direct sunlight
-- Sensor too close to house (heat radiance)
-- Weather service data delayed or inaccurate
-
-**Solutions:**
-✅ Verify weather integration location (check lat/long coordinates)
-✅ Use multiple weather sources and average them
-✅ Mount physical sensor in shaded area, away from walls
-✅ Compare multiple weather services (OpenWeatherMap, Weather Underground, local station)
-✅ Add calibration offset if sensor consistently off
-✅ Use nearest weather station data instead of forecast
-
----
+No. This recipe only notifies. Closing or opening a window is a manual action so a person can also check weather, security, and whether the window can be reached safely.
 
 ## Related recipes
-- [Stop thermostat when windows open](/automation/climate/thermostat-windows-open.html)
-- [Pause HVAC when windows stay open](/automation/climate/thermostat-windows-open.html)
-- [Activate air purifier when air quality drops](/automation/climate/air-quality-purifier.html)
+
+- [Pause heating or cooling when a window stays open](/automation/climate/thermostat-windows-open.html)
+- [Run the air purifier when indoor air quality drops](/automation/climate/air-quality-purifier.html)
+- [Monitor a cold room without smart-plug heater control](/automation/climate/room-heater-maintain-temp.html)
 
 <div class="page-navigation">
   <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

@@ -1,320 +1,107 @@
 ---
 layout: automation
-title: Gradual Wake-Up Lighting - Sunrise Simulation Alarm
-description: Wake up gently with gradually brightening lights that simulate sunrise. A natural alternative to jarring alarms that improves your morning routine.
-keywords: wake up lights, sunrise alarm, gradual lighting, morning light automation, sleep automation, circadian lighting, gentle wake up
+title: Set up gradual wake-up lighting
+description: A platform-neutral recipe that gradually brightens a bedroom light before a set wake time, simulating a sunrise instead of a jarring alarm.
+keywords: wake up lights, sunrise alarm, gradual lighting, morning light automation, gentle wake up
+last_modified_at: 2026-08-30
+faqs:
+  - question: How long should the wake-up transition last?
+    answer: Fifteen to thirty minutes is a reasonable starting range. A longer transition, up to 45 or 60 minutes, feels more gradual for deep sleepers, but takes more advance planning around the actual wake time.
+  - question: What if my bulb does not dim low enough to start comfortably dim?
+    answer: Some bulbs have a higher minimum brightness than others. If the starting level is already too bright, consider pointing the light away from the bed for the first part of the transition, or choosing a bulb with a lower documented minimum.
+  - question: Can this wake one person without disturbing a partner?
+    answer: Yes, using a single bedside lamp facing away from the partner's side of the bed, and keeping the maximum brightness lower, reduces the effect on someone who is not meant to wake up yet.
 ---
 
-# Gradual wake-up lighting
+# Set up gradual wake-up lighting
 
-Waking up to a blaring alarm in a dark room can leave you feeling groggy and disoriented. Gradual wake-up lighting simulates a natural sunrise, slowly brightening your bedroom over 15-30 minutes to help you wake more naturally and start your day feeling refreshed.
+Gradually brighten a bedroom light before a set wake time, so the room fills with light like a sunrise instead of relying on a jarring alarm alone.
 
-## Use cases
+**Best for:** A bedroom with a smart bulb or light strip that supports a wide dimming range and a fixed wake time worth planning around.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Better mornings</h4>
-    <ul>
-      <li><strong>Dark winter mornings</strong> - Wake up before natural sunrise</li>
-      <li><strong>Deep sleepers</strong> - Light helps transition from sleep gradually</li>
-      <li><strong>Light sleepers nearby</strong> - Partner stays asleep while you wake</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Health and wellness</h4>
-    <ul>
-      <li><strong>Circadian rhythm</strong> - Light cues help regulate sleep cycle</li>
-      <li><strong>Seasonal affective disorder</strong> - Morning light exposure helps mood</li>
-      <li><strong>Gentle transition</strong> - Less stressful than sudden alarm</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A room where the light cannot be dimmed low enough to start comfortably, or a household with an unpredictable wake schedule where the transition would rarely line up.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Dimmable smart bulb or light strip</strong>
-      <div class="product-details">
-        Brands: Philips Hue, LIFX, Sengled, Wyze, Govee<br>
-        Features: Dimming from 1-100%, color temperature adjustment (warm to cool white)<br>
-        Placement: Bedside lamp, ceiling light, or light strip behind headboard
-      </div>
-    </div>
-  </div>
-</div>
+Waking to a sudden bright light or a loud alarm in a dark room can feel abrupt. Gradually brightening a light over a set period gives a more natural transition into the morning and does not require anything beyond a light that is already in the room.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Color-changing bulb</strong>
-      <div class="product-details">
-        Start with warm red/orange, transition to cool white<br>
-        More closely simulates actual sunrise colors
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart blinds</strong>
-      <div class="product-details">
-        Coordinate with natural light by opening blinds as lights brighten<br>
-        Brands: Ikea Fyrtur, Somfy, Lutron Serena
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart speaker</strong>
-      <div class="product-details">
-        Add gentle audio (birds, soft music) at end of wake cycle<br>
-        Announce weather and schedule when fully awake
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Bulb placement tips</strong>
-  <ul>
-    <li><strong>Bedside:</strong> Closest to eyes, most effective</li>
-    <li><strong>Ceiling:</strong> Fills room but less direct on face</li>
-    <li><strong>Light strip behind headboard:</strong> Indirect, diffused light</li>
-    <li><strong>Multiple locations:</strong> Combine for best effect</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Gradually brighten the light | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Confirm the switch or bulb supports a low enough minimum brightness and a smooth transition, not just stepped levels. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">AT 6:00 AM on weekdays
-START light at 1% warm white
-OVER 30 minutes gradually increase to 100% cool white
-AT 6:30 AM play gentle wake-up sound</div>
+- **Trigger:** A fixed time before the desired wake time, such as 30 minutes prior.
+- **Conditions:** The day matches the intended schedule, such as weekdays only, and any vacation or skip setting is off.
+- **Action:** Set the light to a low starting brightness, then gradually raise it toward full brightness over the chosen duration.
+- **Wait / timeout:** The transition runs for its full set duration.
+- **Stop condition:** The transition ends once it reaches full brightness, or is cancelled by a manual override.
+- **Manual override:** The light switch or app always works to change brightness directly, and a skip option can disable the next scheduled run.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Automation: Gradual wake-up</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is 30 minutes before desired wake time</li>
-      <li>Example: 6:00 AM for 6:30 AM wake time</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Day is weekday (Mon-Fri) - or create separate weekend schedule</li>
-      <li>Optional: Vacation mode is off</li>
-      <li>Optional: Someone is in bed (presence sensor)</li>
-    </ul>
-    <h4>Actions (sequence over 30 minutes)</h4>
-    <ul>
-      <li>Set light to 1% brightness, warm white (2700K)</li>
-      <li>Gradually increase to 25% over 10 minutes</li>
-      <li>Gradually increase to 50% over next 10 minutes, shift to neutral (3500K)</li>
-      <li>Gradually increase to 100% over final 10 minutes, shift to cool white (5000K)</li>
-      <li>At end: Play gentle alarm sound or announcement</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the current time is 30 minutes before the desired wake time
+AND today matches the intended schedule
+AND the skip-tomorrow setting is off
+THEN set the light to a low starting brightness
+AND gradually increase it to full brightness over 30 minutes</div>
+
+## Setup notes
+
+1. Decide on the wake time and the transition length, then calculate the start time by subtracting the two, for example 6:00 AM start for a 6:30 AM wake time with a 30 minute transition.
+2. Confirm the light or switch actually supports a smooth transition to the target brightness, rather than jumping in large steps, since some platforms handle this better than others.
+3. Test the lowest brightness the bulb can reach; if it is still too bright to start comfortably, consider pointing the fixture away from the bed for the first part of the cycle.
+4. Add a day-of-week condition if the wake-up schedule differs between weekdays and weekends.
+5. Add a simple way to skip the next run, such as a virtual switch or dashboard toggle, for days the schedule does not apply.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Sunrise color simulation</h3>
-    <p>Mimic natural sunrise colors:</p>
-    <ul>
-      <li><strong>0-10 min:</strong> Deep red/orange (1800K), 1-10%</li>
-      <li><strong>10-20 min:</strong> Warm orange/yellow (2700K), 10-40%</li>
-      <li><strong>20-30 min:</strong> Neutral white (4000K), 40-70%</li>
-      <li><strong>30+ min:</strong> Cool daylight (5500K), 70-100%</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Alarm integration</h3>
-    <p>Sync with phone or smart speaker alarm:</p>
-    <ul>
-      <li>Start light 30 min before alarm rings</li>
-      <li>At alarm time, announce weather and calendar</li>
-      <li>Play gentle music or nature sounds</li>
-      <li>Pause if snooze is pressed</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Weekend flexibility</h3>
-    <p>Different schedule for non-work days:</p>
-    <ul>
-      <li>Later start time (8:00 AM vs. 6:00 AM)</li>
-      <li>Longer transition (45 min instead of 30)</li>
-      <li>Option to disable entirely on weekends</li>
-      <li>Holiday calendar integration</li>
-    </ul>
-  </div>
-</div>
+### Color temperature shift
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Partner-friendly mode</h3>
-    <p>Wake one person without disturbing the other:</p>
-    <ul>
-      <li>Use bedside lamp on one side only</li>
-      <li>Lower maximum brightness (50% instead of 100%)</li>
-      <li>Direct light away from sleeping partner</li>
-      <li>Add gentle vibrating alarm under pillow</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Smart blinds coordination</h3>
-    <p>Combine artificial and natural light:</p>
-    <ul>
-      <li>Begin opening blinds at mid-point of wake cycle</li>
-      <li>Full open when lights reach 100%</li>
-      <li>In summer, may need less artificial light</li>
-      <li>In winter, artificial light compensates for late sunrise</li>
-    </ul>
-  </div>
-</div>
+Where the bulb supports it, start with a warmer color temperature and shift toward a cooler, more daylight-like temperature as brightness increases, to more closely resemble an actual sunrise.
 
-## Common issues and solutions
+### Partner-friendly mode
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Lights are too bright too fast</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Transition feels jarring, not gradual enough.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Increase transition time (try 45-60 minutes)</li>
-        <li>Start at lower brightness (1% instead of 5%)</li>
-        <li>Use bulb behind diffuser for softer light</li>
-        <li>Position light to bounce off wall instead of direct</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Bulb doesn't dim low enough</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Minimum brightness still too bright to start.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Choose bulb with good low-end dimming (Philips Hue excels here)</li>
-        <li>Use lower wattage bulb</li>
-        <li>Add dimmer shade or diffuser</li>
-        <li>Point light away from bed initially</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Transition not smooth</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Light jumps in steps instead of smooth fade.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check bulb supports transition time in platform</li>
-        <li>Use longer transition command if supported</li>
-        <li>Create more intermediate steps in automation</li>
-        <li>Some platforms handle transitions better than others</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Wakes partner too early</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Light disturbs partner who wakes later.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Use bedside lamp only on your side</li>
-        <li>Lower maximum brightness</li>
-        <li>Position light to face away from partner</li>
-        <li>Consider eye mask for partner</li>
-        <li>Use smart blinds on one side of room only</li>
-      </ul>
-    </div>
-  </div>
-</div>
+Use a single bedside lamp facing away from a partner's side of the bed, and cap the maximum brightness lower than a full ceiling fixture would need, to reduce the effect on someone who should stay asleep.
 
-## Best practices
+## Failure modes
 
-### Timing recommendations
+- **Transition feels too fast or abrupt:** Increase the total transition time or lower the starting brightness.
+- **Light does not dim low enough to start:** Check the bulb's documented minimum brightness, or reposition the fixture away from direct line of sight to the bed.
+- **Transition jumps in visible steps instead of fading smoothly:** Confirm the platform and device both support a gradual transition command, not just discrete brightness levels.
+- **The automation wakes someone who should stay asleep:** Reduce maximum brightness, reposition the light, or restrict it to a single lamp rather than the whole room.
+- **The automation runs on a day it should not:** Check the day-of-week condition and confirm any skip setting was applied correctly.
 
-**Wake-up transition duration:**
-- **Minimum:** 15 minutes (noticeable but quick)
-- **Recommended:** 30 minutes (natural feeling)
-- **Extended:** 45-60 minutes (very gradual, deep sleepers)
+## Done when
 
-**Start time calculation:**
-- Desired wake time minus transition duration
-- Example: Wake at 6:30 AM with 30-min transition = Start at 6:00 AM
+- [ ] The wake time and transition length are set and the start time is calculated correctly.
+- [ ] The light fades smoothly rather than in visible steps.
+- [ ] The starting brightness is comfortably dim for the room.
+- [ ] The schedule matches the intended days, with a working way to skip a single day.
 
-### Light placement
+## FAQ
 
-**Most effective positions:**
-- Bedside table lamp facing slightly toward headboard
-- Light strip behind headboard (diffused, indirect)
-- Ceiling fixture with dimmer (fills room evenly)
+### How long should the wake-up transition last?
 
-**Less effective:**
-- Light behind you (can't see it while lying in bed)
-- Light in hallway (too far, limited effect)
-- Covered or obstructed positions
+Fifteen to thirty minutes is a reasonable starting range. A longer transition, up to 45 or 60 minutes, feels more gradual for deep sleepers, but takes more advance planning around the actual wake time.
 
-### Bulb selection
+### What if my bulb does not dim low enough to start comfortably dim?
 
-**Key features:**
-- Wide dimming range (1% to 100%)
-- Adjustable color temperature (2700K to 5500K)
-- Reliable transition time support
-- Quiet operation (some bulbs buzz at low levels)
+Some bulbs have a higher minimum brightness than others. If the starting level is already too bright, consider pointing the light away from the bed for the first part of the transition, or choosing a bulb with a lower documented minimum.
 
-**Recommended bulbs:**
-- Philips Hue (excellent low-end dimming)
-- LIFX (great color range, no hub needed)
-- Sengled (budget-friendly option)
+### Can this wake one person without disturbing a partner?
 
-### Schedule management
-
-**Weekday vs. weekend:**
-- Separate automations for different schedules
-- Or use day-of-week conditions
-- Consider holidays and vacation mode
-
-**Flexibility:**
-- Voice command to skip tomorrow's wake-up
-- Dashboard toggle for quick disable
-- Alarm clock sync if possible
-
----
+Yes, using a single bedside lamp facing away from the partner's side of the bed, and keeping the maximum brightness lower, reduces the effect on someone who is not meant to wake up yet.
 
 ## Related recipes
-- [Morning routine automation](/automation/daily-routines/morning-routine.html)
-- [Bedtime routine automation](/automation/daily-routines/bedtime-routine.html)
-- [Blinds at sunset/sunrise](/automation/climate/blinds-sunset-sunrise.html)
+
+- [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
+- [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
+- [Adjust blinds at sunset and sunrise](/automation/climate/blinds-sunset-sunrise.html)
 
 <div class="page-navigation">
   <a href="/automation/lighting/index.html">Back to lighting automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

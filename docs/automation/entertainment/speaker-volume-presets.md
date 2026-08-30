@@ -1,202 +1,109 @@
 ---
 layout: automation
-title: Speaker Volume Presets - Smart Audio Management
-description: Set and recall speaker volume presets for different occasions. Low, medium, and loud settings for every room.
-keywords: speaker volume automation, audio presets, volume control scenes, smart speaker volume, volume management, consistent volume, audio scenes
+title: Use speaker volume presets
+description: A platform-neutral recipe that sets speakers to a consistent low, medium, or loud level with one command instead of adjusting each speaker by hand.
+keywords: speaker volume automation, audio presets, volume control scenes, smart speaker volume, consistent volume
+last_modified_at: 2026-08-30
+faqs:
+  - question: Why use presets instead of just adjusting volume manually?
+    answer: A preset gives the same result every time with one action, instead of guessing at a percentage on each speaker separately, especially across more than one room.
+  - question: Will a preset override someone who just manually changed the volume?
+    answer: Yes, running a preset sets an explicit level regardless of the current volume. Reserve automatic time-based presets for hours where that tradeoff is acceptable.
+  - question: Can different rooms use different volume levels for the same preset?
+    answer: Yes, a preset can hold a different percentage for each room or speaker, since a comfortable volume in a small bedroom is not the same as in an open living room.
 ---
 
-# Speaker volume presets
+# Use speaker volume presets
 
-Volume presets for all speakers save time and create consistency. Define levels for low, medium, and loud to easily adjust for any occasion with one command.
+Set every speaker to a defined low, medium, or loud level with a single command instead of adjusting each one by hand.
 
-## Use cases
+**Best for:** A household with more than one speaker where a repeatable, predictable volume level matters more than fine manual control every time.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Daily Convenience</h4>
-    <ul>
-      <li><strong>Normal Day</strong> - Always play music at pleasant levels when home</li>
-      <li><strong>One-Button Control</strong> - Single action adjusts all rooms</li>
-      <li><strong>Consistent Experience</strong> - Voice assistant and music always at predictable volume</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Special Occasions</h4>
-    <ul>
-      <li><strong>Party Mode</strong> - Quick adjustment for gatherings and celebrations</li>
-      <li><strong>Time-Based</strong> - Automatically adjust volume throughout the day</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A single-speaker setup where reaching for the volume control is just as fast as running a preset.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart Speakers/Music System</strong>
-      <div class="product-details">
-        Brands: Sonos, Amazon Echo, Google Home, Apple HomePod<br>
-        Individual or grouped speakers • Remote volume control via automation
-      </div>
-    </div>
-  </div>
-</div>
+Manually adjusting several speakers to a consistent level takes longer than it should, and a preset gives the same result every time. It also makes handing off a "party" or "quiet" moment to a single command instead of remembering the right percentage for each room.
 
-<div class="product-section">
-  <h4>Optional Enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Buttons or Switches</strong>
-      <div class="product-details">
-        Physical controls for volume presets
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Voice Commands</strong>
-      <div class="product-details">
-        "Set volume to party mode" for hands-free control
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Store and apply the preset | No personally verified recommendation yet | No personally verified recommendation yet | Any platform that supports scenes or scripts can store a set of volume levels and apply them together. |
+| Play and adjust audio | No personally verified recommendation yet | No personally verified recommendation yet | Any speaker that accepts a volume-set command from the platform. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF volume preset changes to "Low"
-THEN set all speakers to 20-30%
-ELSE IF preset is "Medium"
-THEN set all speakers to 40-50%
-ELSE IF preset is "Loud"
-THEN set all speakers to 70-80%</div>
+- **Trigger:** A button, voice command, or scheduled time selects a preset (low, medium, or loud).
+- **Conditions:** None required; the chosen preset applies immediately.
+- **Action:** Set every speaker in the group to the percentage defined for that preset.
+- **Wait / timeout:** None; the change applies once and stays until another preset or manual adjustment changes it.
+- **Stop condition:** Not applicable; a preset simply sets a level rather than starting or stopping something.
+- **Manual override:** Any speaker can still be adjusted directly at any time after a preset is applied.
 
-<div class="info-box">
-  <strong>🔊 Volume Level Guide</strong>
-  <ul>
-    <li><strong>Low (Quiet/Background):</strong> Voice assistants 30%, Music 20-25% - Normal day, working, early morning</li>
-    <li><strong>Medium (Comfortable):</strong> Voice assistants 50%, Music 40-50% - Entertaining, cooking, cleaning</li>
-    <li><strong>Loud (Party):</strong> Voice assistants 60%, Music 70-80% - Parties, dancing, exercising</li>
-  </ul>
-</div>
+<div class="automation-example">IF the "low" preset is selected
+THEN set all grouped speakers to their low-volume level
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Triggers</h4>
-    <ul>
-      <li>Home goes into Home mode (set to Low)</li>
-      <li>Button/switch pressed</li>
-      <li>Voice command: "Set volume to [low/medium/loud]"</li>
-      <li>Time-based (e.g., 10 PM → Low)</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Conditions</h4>
-    <strong>Note:</strong> Immediate response typically desired
-  </div>
-  
-  <div class="setup-step">
-    <h4>Actions</h4>
-    <ul>
-      <li>Set volume of all speakers to preset levels</li>
-      <li>Can be per-room or whole-house</li>
-    </ul>
-  </div>
-</div>
+IF the "medium" preset is selected
+THEN set all grouped speakers to their medium-volume level
+
+IF the "loud" preset is selected
+THEN set all grouped speakers to their loud-volume level</div>
+
+## Setup notes
+
+1. Decide on a small number of presets, such as low, medium, and loud, rather than a long list that becomes hard to remember.
+2. Set a specific percentage for each speaker under each preset, since a comfortable level in one room is not the same in another.
+3. Choose how each preset will be triggered, whether by button, voice command, or schedule, and confirm each method reliably applies the preset.
+4. If using a scheduled preset, such as automatically lowering volume at night, make sure the household understands it will override a volume they set manually earlier.
 
 ## Advanced features
 
-### Time-based auto-adjustment
+### Scheduled quiet hours
 
-Automatically adjust volume throughout the day:
-
-Create automation with these elements:
-- **Triggers:** Multiple times - 6am, 10am, 6pm, 10pm
-- **Actions based on time:**
-  - **6am-10am:** Set to Low (morning quiet)
-  - **10am-6pm:** Set to Medium (daytime)
-  - **6pm-10pm:** Set to Medium (evening)
-  - **10pm+:** Set to Low (night quiet hours)
-
-### Ungroup speakers during reset
-
-Dissolve temporary speaker groups:
-
-Create automation with these elements:
-- **Trigger:** Time is 4:00 AM daily
-- **Action 1:** Ungroup all Sonos speakers (unjoin command)
-- **Action 2:** Reset volume preset to Low
+Automatically apply the low preset at a set time each night, so volume settles to a quiet level without anyone remembering to do it.
 
 ### Activity-based presets
 
-Different presets for different activities:
-
-**Options:**
-- Podcast (voice-optimized, low volume)
-- Music (balanced, medium volume)
-- Party (loud, all rooms)
-- Movie (low volume, living room only)
-- Sleep (minimal, bedroom only)
+Where useful, add presets tied to an activity rather than just a volume level, such as a lower level for podcasts and a higher one for music, each still defined as a specific percentage per speaker.
 
 ## Failure modes
 
-### Issue: Volumes change unexpectedly
+- **Some speakers do not change:** Confirm every speaker in the group is online and still recognized under its expected name in the platform.
+- **Volume looks wrong for a specific room:** Adjust that room's percentage under the preset rather than changing the preset globally.
+- **A scheduled preset overrides a volume someone just set:** Either accept that tradeoff for the intended hours, or narrow the schedule so it only applies when the household is likely to be away or asleep.
+- **Preset does not apply at all:** Check the trigger, whether a button, voice command, or schedule, is still correctly linked to the preset action.
 
-**Causes:**
-- Family members manually adjusting
-- Multiple automations conflicting
-- Daily reset not accounting for special events
-- Time-based adjustments too aggressive
+## Done when
 
-**Solutions:**
-✅ Communicate volume preset system with household
-✅ Add manual override flag to skip auto-adjustments
-✅ Review all volume automations for conflicts
-✅ Add "party mode" that disables auto-adjustments
-✅ Use longer reset interval (weekly instead of daily)
+- [ ] Each preset produces the same result every time it is applied.
+- [ ] Every speaker in the group responds correctly to each preset.
+- [ ] Volume levels feel appropriate per room, not just globally.
+- [ ] A scheduled preset, if used, applies at a time the household expects it.
 
-### Issue: Some speakers not adjusting
+## FAQ
 
-**Causes:**
-- Speaker offline or unreachable
-- Entity ID incorrect in automation
-- Speaker doesn't support volume control
-- Network connectivity issues
+### Why use presets instead of just adjusting volume manually?
 
-**Check:**
-- ✅ Verify all speakers show as online in app
-- ✅ Test manual volume adjustment for each speaker
-- ✅ Check entity IDs match current speaker names
-- ✅ Review automation logs for errors
-- ✅ Check network connectivity and WiFi signal strength
+A preset gives the same result every time with one action, instead of guessing at a percentage on each speaker separately, especially across more than one room.
 
-### Issue: Volume too loud/quiet for specific rooms
+### Will a preset override someone who just manually changed the volume?
 
-**Causes:**
-- Room acoustics differ significantly
-- Speaker types vary (Echo vs Sonos)
-- Room size not accounted for
-- Personal preference varies
+Yes, running a preset sets an explicit level regardless of the current volume. Reserve automatic time-based presets for hours where that tradeoff is acceptable.
 
-**Solutions:**
-✅ Use room-specific presets (shown above)
-✅ Adjust percentages per room acoustics
-✅ Test in actual use conditions
-✅ Create custom presets for problematic rooms
-✅ Consider different speaker types need different levels
+### Can different rooms use different volume levels for the same preset?
 
----
+Yes, a preset can hold a different percentage for each room or speaker, since a comfortable volume in a small bedroom is not the same as in an open living room.
 
 ## Related recipes
-- [Play music when shower starts](/automation/entertainment/shower-music.html)
-- [Welcome home music automation](/automation/entertainment/welcome-home-music.html)
-- [Control music with physical switch](/automation/entertainment/music-switch-control.html)
+
+- [Play music when a shower starts](/automation/entertainment/shower-music.html)
+- [Play music when arriving home](/automation/entertainment/welcome-home-music.html)
+- [Play or pause music with a physical switch](/automation/entertainment/music-switch-control.html)
 
 <div class="page-navigation">
   <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

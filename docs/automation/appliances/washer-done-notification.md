@@ -31,8 +31,8 @@ The reliable pattern is stateful: prove that the washer was running before treat
 
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
-| Observe washer power | TODO: verified monitoring device rated for the washer's nameplate load and startup current | TODO: preferred circuit-level energy monitor | I have not verified an inline power monitor for this load. Do not assume a general-purpose smart plug is suitable. |
-| Clear the waiting-laundry state | A manual dashboard or phone action | TODO: verified washer-door sensor | A manual reset is better than an unreliable door sensor. |
+| Observe washer power | No personally verified monitor for the washer's nameplate load yet | No personally verified circuit-level energy monitor yet | I have not verified an inline power monitor for this load. Do not assume a general-purpose smart plug is suitable. |
+| Clear the waiting-laundry state | A manual dashboard or phone action | No personally verified washer-door sensor yet | A manual reset is better than an unreliable door sensor. |
 
 See [recommended gear](/gear.html) for the job-first checklist. Do not buy an inline monitor until its voltage, continuous-current, startup-current, grounding, and appliance-load ratings have been checked against the washer and its manual.
 

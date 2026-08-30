@@ -1,309 +1,104 @@
 ---
 layout: automation
-title: Garage Door Left Open Notification - Smart Home Safety
-description: Get alerted when your garage door is left open too long. Automatic notifications and optional auto-close for security and weather protection.
-keywords: garage door notification, garage door left open, smart garage, garage door sensor, garage door automation, auto close garage, garage security
+title: Get notified when the garage door is left open
+description: A platform-neutral recipe that alerts when a garage door has been left open too long. Alerting only; closing stays manual or with equipment built for it.
+keywords: garage door notification, garage door left open, garage door sensor, garage door automation, garage door alert
+last_modified_at: 2026-08-30
+faqs:
+  - question: How long should the garage door be open before I get a notification?
+    answer: Around 10 to 15 minutes works well for normal daytime use, such as loading a car. A shorter window, such as 5 minutes, makes sense at night or while the home is in Away mode.
+  - question: Does this automation close the garage door?
+    answer: No. This recipe only alerts. Closing stays with the normal wall control and remote, or with a complete opener and controller system explicitly designed and approved for unattended closing, as described in the paired garage-auto-close recipe.
+  - question: What if I have more than one garage door?
+    answer: Set up a separate automation per door, since each can have its own sensor, its own typical usage pattern, and its own appropriate delay before alerting.
 ---
 
-# Garage door left open notification
+# Get notified when the garage door is left open
 
-An open garage door is a security risk and can let in weather, pests, or unwanted visitors. This automation notifies you when the garage door has been open too long and optionally closes it automatically.
+Send a notification when the garage door has been open longer than expected. This recipe alerts only; it does not close the door.
 
-## Use cases
+**Best for:** A garage door with a sensor or smart controller that reports open and closed status to the platform.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Security and safety</h4>
-    <ul>
-      <li><strong>Forgot to close</strong> - Get reminded after leaving</li>
-      <li><strong>Kids left it open</strong> - Know when door is forgotten</li>
-      <li><strong>Night security</strong> - Alert if open after bedtime</li>
-      <li><strong>Away from home</strong> - Close remotely from anywhere</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Protection</h4>
-    <ul>
-      <li><strong>Weather protection</strong> - Close before rain or snow</li>
-      <li><strong>Temperature control</strong> - Don't heat/cool the outdoors</li>
-      <li><strong>Pest prevention</strong> - Keep animals out of garage</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A garage door with no way to report its state; a sensor or smart controller has to be added first. Also not for anyone looking for automatic closing; see [close a garage safely after an open-door alert](/automation/security/garage-auto-close.html) for that, and its required precautions.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Garage door sensor</strong>
-      <div class="product-details">
-        Options: Smart garage controller (Chamberlain myQ, Tailwind, Meross), tilt sensor, or contact sensor on door<br>
-        Must report open/closed state to smart home platform
-      </div>
-    </div>
-  </div>
-</div>
+A garage door left open is an easy thing to forget about, whether it was left open while unloading a car or simply overlooked before bed. A notification after it has been open longer than expected catches this before it becomes a security or weather problem, without moving the door on its own.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Smart garage door controller</strong>
-      <div class="product-details">
-        Brands: Chamberlain myQ, Tailwind iQ3, Meross, Ratgdo<br>
-        Enables remote open/close and status monitoring
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Camera</strong>
-      <div class="product-details">
-        Visual confirmation of garage status and contents
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Motion sensor</strong>
-      <div class="product-details">
-        Detect activity in garage for smarter auto-close timing
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Choosing a garage door sensor</strong>
-  <ul>
-    <li><strong>Smart controller:</strong> Best option - controls door AND reports status</li>
-    <li><strong>Tilt sensor:</strong> Detects when door tilts (opens) - easy install</li>
-    <li><strong>Contact sensor:</strong> Mount on door frame and door - reports open/closed</li>
-    <li><strong>Existing opener:</strong> Some openers have built-in WiFi (check for myQ compatibility)</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Know whether a garage door is open | [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF) | [Ecolink Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT) | Reports open and closed state without replacing the existing garage door opener. It reports door position only, not whether the doorway is clear. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF garage door open for 10 minutes
-AND nobody is in garage (optional)
-THEN send notification "Garage door still open"</div>
+- **Trigger:** The garage door sensor reports "open" and stays in that state for a set duration, such as 10 minutes.
+- **Conditions:** The door is still open at the time the duration elapses.
+- **Action:** Send a notification stating how long the door has been open.
+- **Wait / timeout:** None beyond the initial delay; this recipe does not attempt to close the door.
+- **Stop condition:** The door being closed manually clears the alert.
+- **Manual override:** The garage door opener's physical button and any app-based control remain available at all times and are the only way this recipe expects the door to close.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Automation 1: Open too long notification</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Garage door state is "open" for 10 minutes</li>
-    </ul>
-    <h4>Conditions (optional)</h4>
-    <ul>
-      <li>No motion detected in garage for 5 minutes</li>
-      <li>Home mode is not "Away" (separate automation for away)</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Send notification: "Garage door has been open for 10 minutes"</li>
-      <li>Include action button to close door remotely</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Automation 2: Open at night alert</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is 10:00 PM (or bedtime)</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Garage door is open</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Send high-priority notification: "Garage door still open at bedtime!"</li>
-      <li>Optional: Auto-close after 2 minute warning</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the garage door has been open for 10 minutes
+THEN send a notification: "Garage door has been open for 10 minutes"
+
+IF the garage door is still open at 10:00 PM
+THEN send a high-priority notification: "Garage door still open at bedtime"
+
+DO NOT close the door automatically from this recipe</div>
+
+## Setup notes
+
+1. Install a tilt sensor on the garage door, or confirm an existing smart garage controller already reports open and closed state to the platform.
+2. Set a delay before the first notification, such as 10 to 15 minutes, to allow for normal use like loading or unloading a car.
+3. Add a separate, shorter-delay check tied to a fixed nighttime cutoff, such as 10:00 PM, so an open door at bedtime gets flagged even if it was opened well before the standard delay.
+4. Test both automations by leaving the door open deliberately and confirming the timing and notification content are correct.
+5. If closing the door automatically is wanted, do not build it into this recipe; use [close a garage safely after an open-door alert](/automation/security/garage-auto-close.html) instead, which covers the required entrapment protection and warnings.
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Escalating notifications</h3>
-    <p>Progressive alerts if door stays open:</p>
-    <ul>
-      <li><strong>10 minutes:</strong> Standard notification</li>
-      <li><strong>30 minutes:</strong> Reminder with close option</li>
-      <li><strong>1 hour:</strong> High priority alert</li>
-      <li><strong>2 hours:</strong> Alert other family members</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Weather-aware closing</h3>
-    <p>Close before bad weather:</p>
-    <ul>
-      <li><strong>Trigger:</strong> Rain starting within 30 minutes</li>
-      <li><strong>Condition:</strong> Garage door is open</li>
-      <li><strong>Action:</strong> Send notification to consider closing</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Dashboard status tile</h3>
-    <p>Always know garage status:</p>
-    <ul>
-      <li>Color coding: green (closed), red (open)</li>
-      <li>Show time since opened if currently open</li>
-      <li>Quick action button to close</li>
-    </ul>
-  </div>
-</div>
+### Escalating notifications
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Voice announcements</h3>
-    <p>Audio reminders throughout home:</p>
-    <ul>
-      <li><strong>Trigger:</strong> Door open for 10 minutes</li>
-      <li><strong>Action:</strong> Announce on all speakers</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Quiet hours exception</h3>
-    <p>Different behavior at night:</p>
-    <ul>
-      <li><strong>Daytime:</strong> Notification only after 10 min</li>
-      <li><strong>Nighttime:</strong> Immediate + auto-close after 5 min</li>
-      <li><strong>Away mode:</strong> Immediate + auto-close after 2 min</li>
-    </ul>
-  </div>
-</div>
+Send a standard notification at 10 minutes, a stronger reminder at 30 minutes, and a high-priority alert after an hour, so a persistently open door is harder to keep ignoring.
 
-## Common issues and solutions
+## Failure modes
 
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Sensor shows wrong state</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Tilt sensor mounted incorrectly or contact sensor misaligned.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Verify sensor mounting - tilt sensors need proper angle</li>
-        <li>Check magnet/sensor gap for contact sensors (< 1 inch)</li>
-        <li>Replace battery</li>
-        <li>Test sensor manually by opening/closing door</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Notifications not arriving</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Phone notification permissions or automation disabled.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check notification permissions for smart home app</li>
-        <li>Verify automation is enabled and error-free</li>
-        <li>Test with manual trigger</li>
-        <li>Add app to Do Not Disturb exceptions</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Auto-close not working</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Smart controller offline or safety sensors blocked.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Test manual close via app</li>
-        <li>Check safety sensor alignment (floor level)</li>
-        <li>Verify controller is online and connected</li>
-        <li>Check automation logs for condition failures</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Too many notifications</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Delay too short or no cooldown between notifications.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Increase delay time (10-15 minutes)</li>
-        <li>Add condition: only if door was closed within last hour</li>
-        <li>Add notification cooldown (1 per hour max)</li>
-        <li>Use escalating notifications instead of repeated same message</li>
-      </ul>
-    </div>
-  </div>
-</div>
+- **Sensor reports the wrong state:** Recheck a tilt sensor's mounting angle, or a contact sensor's magnet alignment; also check the battery.
+- **Notifications do not arrive:** Confirm notification permissions for the platform's app and that the automation itself is enabled.
+- **Too many repeat notifications:** Increase the delay before the first alert, or switch to escalating notifications instead of repeating the same message.
+- **Sensor reports unavailable:** Treat this as unknown status, not as closed, and still alert if the last known state was open.
 
-## Best practices
+## Done when
 
-### Finding the right delay time
+- [ ] The garage door's open and closed state is reliably reported to the platform.
+- [ ] A door left open past the set delay produces a notification.
+- [ ] The nighttime check correctly flags an open door at the cutoff time.
+- [ ] No automation in this recipe closes the door; closing remains manual or handled by the separate garage-auto-close recipe.
 
-**Consider your habits:**
-- Loading/unloading car: 5-10 minutes typical
-- Doing garage work: 30+ minutes
-- Quick grab from garage: 1-2 minutes
+## FAQ
 
-**Recommended settings:**
-- **Standard alert:** 10-15 minutes
-- **Auto-close:** 20-30 minutes minimum
-- **Night mode:** 5 minutes
-- **Away mode:** 2-5 minutes
+### How long should the garage door be open before I get a notification?
 
-### Safety first
+Around 10 to 15 minutes works well for normal daytime use, such as loading a car. A shorter window, such as 5 minutes, makes sense at night or while the home is in Away mode.
 
-**Always verify:**
-- Safety sensors working properly
-- Warning before auto-close
-- Manual override accessible
-- Family aware of automation
+### Does this automation close the garage door?
 
-**Never auto-close without:**
-- Motion sensor verification OR
-- Significant delay (15+ minutes) OR
-- Warning notification first
+No. This recipe only alerts. Closing stays with the normal wall control and remote, or with a complete opener and controller system explicitly designed and approved for unattended closing, as described in the paired garage-auto-close recipe.
 
-### Multiple garage doors
+### What if I have more than one garage door?
 
-Create separate automations per door:
-
-- Different notification sounds or messages
-- Different timing based on use (main vs. rarely used)
-- Separate status tiles on dashboard
-
----
+Set up a separate automation per door, since each can have its own sensor, its own typical usage pattern, and its own appropriate delay before alerting.
 
 ## Related recipes
-- [Away mode automation](/automation/daily-routines/away-mode.html)
-- [Bedtime routine](/automation/daily-routines/bedtime-routine.html)
-- [Doorbell notification](/automation/notifications/doorbell-notification.html)
+
+- [Close a garage safely after an open-door alert](/automation/security/garage-auto-close.html)
+- [Set up away mode](/automation/daily-routines/away-mode.html)
+- [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 <div class="page-navigation">
-  <a href="/automation/security/index.html">Back to security automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/security/index.html">Back to security</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

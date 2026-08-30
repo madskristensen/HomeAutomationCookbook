@@ -1,32 +1,26 @@
 ---
 layout: default
 title: Appliance automations
-description: Get notified when appliances finish their cycles. Washer, dryer, dishwasher, coffee maker, and robot vacuum automations.
+description: Practical recipes for appliance completion alerts, deliberate coffee preparation, refrigerator doors, and robot vacuums.
 ---
 
 # Appliance automations
 
-The latest generation of appliances have WiFi connectivity and phone apps. But you may want deeper integration with your smart home, or you may have "dumb" appliances that need creative solutions. Here are ways to automate any appliance.
+The most useful appliance automations observe, remind, and coordinate. They do not put an unverified relay in a high-current appliance circuit or pretend a weak signal proves a task is complete.
 
 <div class="category-intro" markdown="1">
 
-## Why appliance automation?
+## Start with observation
 
-**Useful reminders** - Get notified when a washer, dryer, or dishwasher finishes
-
-**Observable behavior** - Know why an appliance state changed
-
-**Safer defaults** - Monitor appliances without remotely interrupting their power
-
-**Manual fallback** - Keep every appliance usable without the automation
-
-**Measured thresholds** - Calibrate from the appliance instead of copying guesses
-
-**Quiet notifications** - Inform the household without repeated announcements
+- Learn an appliance's real power or vibration pattern before setting thresholds.
+- Check every monitoring device against the appliance nameplate and manual.
+- Prefer one clear completion alert over repeated announcements.
+- Keep the appliance usable when the smart-home system is unavailable.
+- Require a deliberate ready step before any unattended preparation.
 
 </div>
 
-## Essential automations
+## Choose a recipe
 
 <div class="automation-cards">
 
@@ -36,9 +30,7 @@ The latest generation of appliances have WiFi connectivity and phone apps. But y
 
 Learn the washer's actual power pattern and send one alert when a real cycle finishes.
 
-<span class="card-meta">**Best for:** Preventing mildew, laundry efficiency</span>
-
-<p><a href="/automation/appliances/washer-done-notification.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/appliances/washer-done-notification.html)
 
 </div>
 
@@ -46,213 +38,69 @@ Learn the washer's actual power pattern and send one alert when a real cycle fin
 
 ### Dryer finished alert
 
-Use calibrated vibration timing to detect a completed dryer cycle without controlling appliance power.
+Use calibrated vibration timing without controlling dryer power.
 
-<span class="card-meta">**Best for:** Dryers with a safe exterior sensor location</span>
-
-<p><a href="/automation/appliances/dryer-done-notification.html" class="card-link">View automation</a></p>
+[View automation](/automation/appliances/dryer-done-notification.html)
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-### Auto-start robot vacuum when away
+### Dishwasher finished alert
 
-Robot vacuum automatically cleans your home when everyone leaves.
+Detect the dishwasher's own sustained power or vibration pattern and notify once.
 
-<span class="card-meta">**Best for:** Automated cleaning, hands-free maintenance</span>
-
-<p><a href="/automation/appliances/robot-vacuum-auto-start.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/appliances/dishwasher-done-notification.html)
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-### Fridge or freezer door left open alert
+### Fridge or freezer door alert
 
-Get notified when your refrigerator or freezer door is left open too long to prevent food spoilage.
+Use a contact sensor and a delay to catch a door that was left open.
 
-<span class="card-meta">**Best for:** Food safety, energy savings, kids</span>
-
-<p><a href="/automation/appliances/fridge-door-alert.html" class="card-link">View Automation →</a></p>
+[View automation](/automation/appliances/fridge-door-alert.html)
 
 </div>
 
 <div class="automation-card" markdown="1">
 
-### Robot vacuum only when empty
+### Prepare morning coffee deliberately
 
-Start your vacuum only when the house is truly empty and finish before anyone returns.
+Use the coffee maker's approved delayed-brew feature only after someone confirms it is ready.
 
-<span class="card-meta">**Best for:** Smart scheduling, no disruption</span>
+[View automation](/automation/appliances/coffee-maker-morning.html)
 
-<p><a href="/automation/appliances/vacuum-when-empty.html" class="card-link">View Automation →</a></p>
+</div>
+
+<div class="automation-card" markdown="1">
+
+### Start the robot vacuum after everyone leaves
+
+Wait for a tested empty-home signal and a daytime window before starting.
+
+[View automation](/automation/appliances/robot-vacuum-auto-start.html)
+
+</div>
+
+<div class="automation-card" markdown="1">
+
+### Keep the vacuum running only while the house is empty
+
+Add a return-home stop condition so the vacuum heads back to its dock when someone arrives.
+
+[View automation](/automation/appliances/vacuum-when-empty.html)
 
 </div>
 
 </div>
 
----
+## What to verify
 
-## Common use cases
-
-<div class="use-case-grid">
-
-<div class="use-case-card">
-<h4>Completion notifications</h4>
-<ul>
-<li>Washer/dryer cycle finished</li>
-<li>Dishwasher clean and ready</li>
-<li>Coffee maker brewing complete</li>
-<li>Bread machine finished baking</li>
-</ul>
-</div>
-
-<div class="use-case-card">
-<h4>Scheduled operations</h4>
-<ul>
-<li>Robot vacuum runs when away</li>
-<li>Dishwasher starts during off-peak hours</li>
-<li>Coffee maker on timer for morning</li>
-<li>Slow cooker timed start</li>
-</ul>
-</div>
-
-<div class="use-case-card">
-<h4>Energy monitoring</h4>
-<ul>
-<li>Track appliance power usage</li>
-<li>Detect always-on power drains</li>
-<li>Identify malfunctioning appliances</li>
-<li>Monitor monthly consumption</li>
-</ul>
-</div>
-
-<div class="use-case-card">
-<h4>Safety automations</h4>
-<ul>
-<li>Auto-shutoff for heaters after X hours</li>
-<li>Notifications if oven left on</li>
-<li>Alerts for abnormal power draw</li>
-<li>Disable appliances when away</li>
-</ul>
-</div>
-
-</div>
-
----
-
-## Best practices
-
-<div class="placement-grid">
-
-<div class="placement-card">
-<h3>Power monitoring tips</h3>
-<ul>
-<li>Watch full cycle to learn patterns</li>
-<li>Use 3-5 minute delays to avoid false triggers</li>
-<li>Set conservative thresholds</li>
-<li>Test multiple times before trusting</li>
-</ul>
-</div>
-
-<div class="placement-card">
-<h3>Smart plug selection</h3>
-<ul>
-<li>Check maximum amperage rating</li>
-<li>Verify power monitoring accuracy</li>
-<li>Consider local vs. cloud processing</li>
-<li>Ensure it won't block other outlets</li>
-</ul>
-</div>
-
-<div class="placement-card">
-<h3>Notification strategy</h3>
-<ul>
-<li><strong>First:</strong> Informational ("Washer done!")</li>
-<li><strong>30 min:</strong> Reminder ("Don't forget wet clothes")</li>
-<li><strong>2 hours:</strong> Urgent ("Mildew risk!")</li>
-<li>Mute audible between 10 PM - 7 AM</li>
-</ul>
-</div>
-
-<div class="placement-card">
-<h3>Safety considerations</h3>
-<ul>
-<li>Do not put an unverified relay in a high-current appliance circuit</li>
-<li>Check device ratings against the appliance nameplate and manual</li>
-<li>Use monitoring-only behavior for laundry completion alerts</li>
-<li>Keep the appliance usable when the smart-home system is unavailable</li>
-</ul>
-</div>
-
-</div>
-
----
-
-## Failure modes
-
-<div class="troubleshooting-grid">
-
-<div class="issue-card">
-<div class="issue-header">
-<h3>Power monitoring not detecting cycle end</h3>
-</div>
-<div class="issue-solutions">
-<ul>
-<li>Lower the power threshold (try 15W instead of 10W)</li>
-<li>Increase delay time (try 5 minutes instead of 3)</li>
-<li>Check if appliance has standby power draw</li>
-<li>Verify smart plug power monitoring accuracy</li>
-</ul>
-</div>
-</div>
-
-<div class="issue-card">
-<div class="issue-header">
-<h3>False "done" notifications</h3>
-</div>
-<div class="issue-solutions">
-<ul>
-<li>Increase delay before triggering (5+ minutes)</li>
-<li>Raise power threshold slightly</li>
-<li>Check for power fluctuations in your home</li>
-<li>Use additional verification (vibration sensor)</li>
-</ul>
-</div>
-</div>
-
-<div class="issue-card">
-<div class="issue-header">
-<h3>Vibration sensor triggers too often</h3>
-</div>
-<div class="issue-solutions">
-<ul>
-<li>Adjust sensitivity in sensor settings</li>
-<li>Add "for: 2 minutes" delay to automation</li>
-<li>Relocate sensor to less vibration-prone spot</li>
-<li>Combine with door sensor for verification</li>
-</ul>
-</div>
-</div>
-
-<div class="issue-card">
-<div class="issue-header">
-<h3>Robot vacuum starts at wrong time</h3>
-</div>
-<div class="issue-solutions">
-<ul>
-<li>Verify presence detection is accurate</li>
-<li>Add 15-minute delay after away mode</li>
-<li>Check for motion sensors that could indicate presence</li>
-<li>Use time-based conditions (only 9 AM - 6 PM)</li>
-</ul>
-</div>
-</div>
-
-</div>
+Run several complete appliance cycles before trusting a threshold. Test interrupted cycles, standby power, sensor loss, and a hub restart. For robot vacuums, include guests, pets, doors, cords, and an unexpected early return.
 
 <div class="page-navigation">
   <a href="/automation/index.html">Back to all automations</a>
-  <a href="/automation/security/index.html">Next: Safety and security</a>
+  <a href="/automation/security/index.html">Next: safety and security</a>
 </div>

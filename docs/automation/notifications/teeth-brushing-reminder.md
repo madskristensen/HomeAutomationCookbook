@@ -1,301 +1,107 @@
 ---
 layout: automation
-title: Remind Kids to Brush Teeth - Automated Tooth Brushing Detection
-description: Smart home automation to remind kids to brush their teeth if they forget. Uses power monitoring to detect electric toothbrush usage.
-keywords: toothbrush reminder, kids automation, teeth brushing, power monitoring, parenting automation, bedtime routine, smart parenting
+title: Set up a teeth brushing reminder for kids
+description: A platform-neutral recipe that uses a power-monitoring smart plug on an electric toothbrush charger to confirm brushing happened, with a reminder if it did not.
+keywords: teeth brushing reminder, kids routine automation, smart plug power monitoring, toothbrush charger sensor
+last_modified_at: 2026-08-30
+faqs:
+  - question: Does this work with a manual, non-electric toothbrush?
+    answer: Not directly. This recipe relies on detecting a power draw change when an electric toothbrush is removed from its charger, so it needs an electric toothbrush and a power-monitoring plug.
+  - question: What if a child brushes but forgets to put the toothbrush back?
+    answer: The automation only detects that the toothbrush was removed from the charger, not that it was actually used or returned. It is a reasonable proxy, not a certainty, and should be treated that way.
+  - question: Can this be tied to a reward or chore system?
+    answer: Yes, if the platform supports it, a successful morning and evening brushing detection can update a tracked count or virtual switch used elsewhere in a rewards routine.
 ---
 
-# Remind kids to brush teeth if they forgot
+# Set up a teeth brushing reminder for kids
 
-Instead of chasing the kids before bedtime to make sure they brush their teeth, let's make the smart home do it for us. That way we as parents don't have to be the bad guy since we're not the ones telling the kids to brush.
+Use a power-monitoring smart plug on an electric toothbrush charger to detect when the toothbrush is removed, as a proxy for brushing happening, with a reminder if it does not happen by a set time.
 
-## Use cases
+**Best for:** A household with kids using an electric toothbrush on a dedicated charger, wanting a lightweight nudge without manual check-ins.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Bedtime Routine</h4>
-    <ul>
-      <li><strong>Evening Reminder</strong> - Announce reminder if teeth not brushed by 9 PM</li>
-      <li><strong>Consistent Habits</strong> - Build routine without nagging</li>
-      <li><strong>Parent Relief</strong> - Smart home is the "bad guy" instead of you</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Morning Routine</h4>
-    <ul>
-      <li><strong>Morning Reminder</strong> - Before school reminder if not brushed</li>
-      <li><strong>Tracking</strong> - Know if kids actually brushed</li>
-    </ul>
-  </div>
-</div>
+**Not for:** A manual, non-electric toothbrush; there is no power draw to detect in that case.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential Equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Electric Toothbrush (any brand)</strong>
-      <div class="product-details">
-        Oral-B, Sonicare, or any rechargeable electric toothbrush<br>
-        Must be charged via plug (not battery-only)
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Power Metering Smart Plug</strong>
-      <div class="product-details">
-        TP-Link Kasa, Shelly, or any plug with power monitoring<br>
-        Detects when toothbrush is placed back on charger
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart Speaker/Music System or Voice Assistant</strong>
-      <div class="product-details">
-        For announcing reminders<br>
-        Amazon Echo, Google Home, Sonos, etc.
-      </div>
-    </div>
-  </div>
-</div>
+Reminding kids to brush their teeth often falls on a parent to check manually. Detecting when the toothbrush is picked up off its charger, based on the change in power draw, gives an automated proxy for whether brushing likely happened, without needing to physically check.
 
-<div class="info-box">
-  <strong>💡 How It Works</strong>
-  <p>The electric toothbrush charger is plugged into the smart plug. When the child brushes their teeth and returns the toothbrush to its charging base, the power consumption increases as the charger begins recharging the depleted battery. The smart plug detects this power spike (typically from near-zero to 2-5 watts), which tells your automation that the toothbrush was just used.</p>
-</div>
+## What I used
+
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Detect the toothbrush being removed from its charger | No personally verified recommendation yet | No personally verified recommendation yet | This specifically needs a smart plug with power or wattage monitoring, which is a different capability than the basic on/off plug jobs already covered. |
+
+See [recommended gear](/gear.html) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 
-<div class="automation-example">IF time is between 8:00 - 10:00 PM
-AND toothbrush NOT used in last 2 hours
-THEN announce "It's time to brush your teeth, kids!"</div>
+- **Trigger:** The smart plug's reported power draw drops, indicating the toothbrush was removed from the charger, or a scheduled check runs near a target brushing time.
+- **Conditions:** A removal has not already been detected within the current brushing window, such as morning or evening.
+- **Action:** Log the brushing window as complete when a removal is detected; send a reminder notification if the target time passes without one.
+- **Wait / timeout:** The reminder is sent once per missed window, not repeatedly.
+- **Stop condition:** A detected removal for the current window clears any pending reminder for that window.
+- **Manual override:** A parent can always mark a brushing window complete manually if the plug misses a detection.
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Step 1: Detect Toothbrush Usage</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Plug's power consumption rises above 2 watts</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>None - we want to track all usage</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Set variable "toothbrush_last_used" to current time</li>
-      <li>OR Turn on virtual switch "Teeth Brushed Today"</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Step 2: Evening Reminder</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is 8:30 PM (or your chosen reminder time)</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Toothbrush power hasn't risen above 2 watts since 6:00 PM</li>
-      <li>OR "Teeth Brushed Today" switch is OFF (reset at 6 PM)</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Announce over the speakers: "It's time to brush your teeth, kids!"</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Step 3: Reset Daily</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is 6:00 PM (before bedtime routine)</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Turn OFF "Teeth Brushed Today" switch</li>
-      <li>Reset tracking variable</li>
-    </ul>
-  </div>
-</div>
+<div class="automation-example">IF the toothbrush charger's power draw drops below its baseline
+THEN mark the current brushing window (morning or evening) as complete
+
+IF the target time for a brushing window passes
+AND that window has not been marked complete
+THEN send a reminder notification: "Time to brush teeth"</div>
+
+## Setup notes
+
+1. Plug the toothbrush charger into a smart plug that supports power or wattage monitoring, not just basic on/off control.
+2. Observe the plug's normal power draw while charging, to establish a baseline for detecting removal.
+3. Set a threshold drop from that baseline that reliably indicates the toothbrush was picked up.
+4. Define morning and evening brushing windows with a target time for each.
+5. Test by removing the toothbrush and confirming the platform correctly logs the window as complete.
 
 ## Advanced features
 
-### Multiple reminder levels
+### Streak tracking
 
-Escalate reminders if not acted upon:
+Track consecutive days with both windows completed, and tie it into a simple reward system if the platform supports counters or variables.
 
-**Level 1 (8:00 PM):**
-- Gentle announcement: "Remember to brush your teeth tonight!"
+### Multiple children
 
-**Level 2 (8:30 PM):**
-- More direct: "It's time to brush your teeth, kids!"
-
-**Level 3 (9:00 PM):**
-- Urgent: "Brushing teeth required before screen time!"
-- Optionally pause TV/gaming until brushed
-
-### Multi-child tracking
-
-Track each child separately:
-
-**Setup:**
-- Separate toothbrush per child (different charger locations)
-- Separate smart plug per toothbrush
-- Individual tracking switches
-
-**Personalized Reminders:**
-- "Emma, time to brush your teeth!"
-- "Jack, you still need to brush!"
-
-### Morning routine integration
-
-Track morning brushing too:
-
-**Morning Tracking (6-9 AM):**
-- Detect morning toothbrush usage
-- Reminder at 7:30 AM if not used
-- Different announcement: "Brush teeth before leaving for school!"
-
-**Reset Logic:**
-- Evening tracking: Reset at 6 PM
-- Morning tracking: Reset at 6 AM
-
-### Reward system integration
-
-Gamify the process:
-
-**Tracking:**
-- Count consecutive days of brushing
-- Log brushing times
-- Weekly/monthly streaks
-
-**Rewards:**
-- Dashboard showing streak
-- Special announcement for milestones
-- Integration with reward chart
-
-### Screen time gating
-
-Tie brushing to privileges:
-
-**Logic:**
-- TV/gaming only available if teeth brushed
-- Smart plug on entertainment controlled by brushing status
-- Turns off at 9 PM regardless
-
-**Setup:**
-1. Teeth brushed → Enable entertainment plug
-2. 9 PM → Disable entertainment plug
-3. Next day → Repeat
+If more than one child uses a separate electric toothbrush and charger, repeat the setup with its own smart plug and tracked windows per child.
 
 ## Failure modes
 
-### Issue: Charger always draws power
+- **Removal is not detected:** Recheck the baseline power draw and threshold; some chargers draw very little power, making a drop harder to detect reliably.
+- **False detection without actual brushing:** The plug only detects removal from the charger, not use; this is a known limitation, not a bug, and should be communicated to the household as such.
+- **Reminder fires even after brushing happened:** Confirm the detected removal is being correctly logged against the current window before the target time passes.
+- **Baseline power draw drifts over time:** Periodically re-check the baseline, since some chargers vary slightly as the battery ages.
 
-**Causes:**
-- Toothbrush charger has constant standby power
-- Power detection threshold too low
-- Charger design varies by model
+## Done when
 
-**Solutions:**
-✅ Measure baseline power with toothbrush NOT on charger
-✅ Measure power WITH toothbrush on charger (charging)
-✅ Set threshold between these values
-✅ Some chargers only draw power when toothbrush is actively charging
+- [ ] The smart plug reliably reports power draw for the toothbrush charger.
+- [ ] A real removal is detected and logged as a completed window.
+- [ ] A missed window produces exactly one reminder.
+- [ ] The household understands this detects removal, not confirmed brushing.
 
-### Issue: Multiple false positives
+## FAQ
 
-**Causes:**
-- Charger power fluctuates
-- Threshold too sensitive
-- Toothbrush replaced on charger multiple times
+### Does this work with a manual, non-electric toothbrush?
 
-**Solutions:**
-✅ Add debounce: Only trigger once per time window
-✅ Increase power threshold
-✅ Add cooldown: Ignore triggers for 30 minutes after first detection
-✅ Focus on first detection in window only
+Not directly. This recipe relies on detecting a power draw change when an electric toothbrush is removed from its charger, so it needs an electric toothbrush and a power-monitoring plug.
 
-### Issue: Reminder announces when kids already brushed
+### What if a child brushes but forgets to put the toothbrush back?
 
-**Causes:**
-- Power detection missed
-- Switch didn't set
-- Timing window issue
+The automation only detects that the toothbrush was removed from the charger, not that it was actually used or returned. It is a reasonable proxy, not a certainty, and should be treated that way.
 
-**Solutions:**
-✅ Verify power monitoring is working
-✅ Check automation logs
-✅ Adjust time window for tracking
-✅ Lower power detection threshold
+### Can this be tied to a reward or chore system?
 
-### Issue: Toothbrush used but power doesn't spike
-
-**Causes:**
-- Toothbrush fully charged (minimal draw)
-- Charger design doesn't show usage
-- Wrong plug or device monitored
-
-**Solutions:**
-✅ Test when toothbrush is partially discharged
-✅ Try different toothbrush model
-✅ Use vibration sensor as alternative
-✅ Manual button press option as backup
-
-## Best practices
-
-### Age-appropriate messaging
-
-**Younger Kids (5-8):**
-- Fun, encouraging tone
-- "Time for sparkly teeth!"
-- Consider character voices if available
-
-**Older Kids (9-12):**
-- Matter-of-fact reminders
-- "Teeth brushing time"
-- Don't be too cutesy
-
-**Teenagers:**
-- Simple notifications
-- Optional: Skip audio, use phone notification
-- Respect independence
-
-### Timing considerations
-
-**Window, Not Single Time:**
-- Allow flexibility in brushing time
-- Remind only if NOT brushed in reasonable window
-- 8:00-9:30 PM is reasonable evening window
-
-**Avoid:**
-- Reminding too early (annoying)
-- Reminding too late (already in bed)
-- Multiple rapid reminders
-
-### Positive reinforcement
-
-**Focus on Success:**
-- "Great job brushing your teeth!" when detected
-- Streak tracking and celebration
-- Avoid negative messaging
-
-**Avoid:**
-- Shaming or guilt-tripping
-- Constant nagging
-- Punitive automation
-
----
+Yes, if the platform supports it, a successful morning and evening brushing detection can update a tracked count or virtual switch used elsewhere in a rewards routine.
 
 ## Related recipes
-- [Nursery quiet mode](/automation/notifications/baby-sleep-mode.html)
-- [Morning routine](/automation/daily-routines/morning-routine.html)
-- [Bedtime routine](/automation/daily-routines/bedtime-routine.html)
+
+- [Set up baby sleep mode](/automation/notifications/baby-sleep-mode.html)
+- [Start the morning routine](/automation/daily-routines/morning-routine.html)
+- [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 <div class="page-navigation">
   <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>

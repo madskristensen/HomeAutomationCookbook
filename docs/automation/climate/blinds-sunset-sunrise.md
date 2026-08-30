@@ -1,296 +1,108 @@
 ---
 layout: automation
-title: Automatic Blinds at Sunset and Sunrise - Climate Automation
-description: Automatically open blinds at sunrise and close them at sunset for energy savings, privacy, and comfort. Complete guide for smart blind automation.
-keywords: smart blinds automation, automatic shades, sunset blinds, sunrise blinds, motorized blinds, privacy automation, energy saving blinds, smart window coverings
+title: Open and close blinds with sunrise and sunset
+description: A platform-neutral recipe that opens motorized blinds near sunrise and closes them near sunset, with a fixed bedtime close for privacy and physical control always available.
+keywords: smart blinds automation, automatic shades, sunset blinds, sunrise blinds, motorized blinds, privacy automation
+last_modified_at: 2026-08-30
+faqs:
+  - question: Should blinds open exactly at sunrise?
+    answer: A small offset after sunrise is usually more comfortable than opening the moment the sun is technically up, especially in a bedroom.
+  - question: Why close blinds at a fixed bedtime instead of only at sunset?
+    answer: Privacy matters most after dark regardless of the season. A fixed bedtime close keeps street-facing rooms private on long summer evenings when sunset is very late.
+  - question: What happens when the hub or internet is down?
+    answer: The blinds' own remote, wall switch, or app pairing must still open and close them manually while the automation is unavailable.
 ---
 
-# Automatic blinds at sunset and sunrise
+# Open and close blinds with sunrise and sunset
 
-Automating your blinds to open at sunrise and close at sunset is one of the most impactful smart home automations. It improves energy efficiency, maintains privacy, and creates a natural daily rhythm in your home without any manual intervention.
+Blinds open a little after sunrise and close at sunset or a fixed bedtime, whichever is more useful for privacy, while the physical remote or wall control still works at any time.
 
-## Use cases
+**Best for:** Motorized blinds or shades with their own reliable open and close commands and a household that wants a predictable daily rhythm without daily manual adjustment.
 
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h4>Energy and comfort</h4>
-    <ul>
-      <li><strong>Winter heating</strong> - Open south-facing blinds to capture passive solar heat</li>
-      <li><strong>Summer cooling</strong> - Close blinds before afternoon sun heats the room</li>
-      <li><strong>Natural light</strong> - Wake up naturally with morning sun</li>
-      <li><strong>Reduce HVAC load</strong> - Keep heat in during winter, out during summer</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h4>Privacy and security</h4>
-    <ul>
-      <li><strong>Evening privacy</strong> - Automatic privacy when lights turn on inside</li>
-      <li><strong>Away mode</strong> - Normal blind patterns even when not home</li>
-      <li><strong>Consistent schedule</strong> - No forgotten open blinds at night</li>
-    </ul>
-  </div>
-</div>
+**Not for:** Manual-only blinds, or relying on a sunset trigger alone in a street-facing room during long summer evenings.
 
-## Products needed
+## Why this exists
 
-<div class="product-section">
-  <h4>Essential equipment</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Motorized blinds or shades</strong>
-      <div class="product-details">
-        Popular brands: Ikea FYRTUR/KADRILJ, Lutron Serena, Hunter Douglas PowerView, Soma Smart Shades<br>
-        Options: Battery-powered (easier install), wired (more reliable), solar-powered (maintenance-free)
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Smart home hub (for some brands)</strong>
-      <div class="product-details">
-        Ikea blinds require Dirigera or third-party Zigbee hub<br>
-        Some brands have native WiFi and work standalone
-      </div>
-    </div>
-  </div>
-</div>
+A fixed clock schedule drifts away from actual daylight as the seasons change, while a sunrise and sunset trigger follows the sun automatically. Privacy, however, does not follow the sun the same way; a bedroom that stays exposed until a 9 PM summer sunset is a real problem, so a fixed bedtime close is worth adding alongside the sunset trigger.
 
-<div class="product-section">
-  <h4>Optional enhancements</h4>
-  
-  <div class="product-list">
-    <div class="product-item">
-      <strong>Light sensor (lux meter)</strong>
-      <div class="product-details">
-        Trigger based on actual light levels instead of time<br>
-        Accounts for cloudy days, seasonal variation
-      </div>
-    </div>
-    
-    <div class="product-item">
-      <strong>Temperature sensor</strong>
-      <div class="product-details">
-        Close blinds when room gets too hot from sun exposure
-      </div>
-    </div>
-  </div>
-</div>
+## What I used
 
-<div class="info-box">
-  <strong>💡 Choosing smart blinds</strong>
-  <ul>
-    <li><strong>Battery-powered:</strong> Easiest DIY install, recharge every 3-6 months</li>
-    <li><strong>Wired:</strong> No battery concerns, requires electrical work</li>
-    <li><strong>Retrofit motors:</strong> Add to existing blinds (Soma, SwitchBot)</li>
-    <li><strong>Check compatibility:</strong> Ensure blinds work with your smart home platform</li>
-  </ul>
-</div>
+| Job | Good enough | Never think about it | Notes |
+|---|---|---|---|
+| Motorize existing blinds or shades | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a specific motorized blind or retrofit motor. Confirm the household still has a physical remote, wand, or wall control after motorizing. |
+
+See [recommended gear](/gear.html) for the job-first checklist.
 
 ## Logic
 
-<div class="automation-example">IF time is sunrise
-THEN open all blinds to 100%
+- **Trigger:** Sunrise, with a comfortable offset, or sunset.
+- **Conditions:** The blind schedule is enabled. A bedroom may also require the household to be awake before opening.
+- **Action:** Open blinds after the sunrise offset. Close them at sunset, or no later than a fixed bedtime for privacy-sensitive rooms.
+- **Wait / timeout:** None beyond the sunrise offset and the fixed bedtime.
+- **Stop condition:** The blinds reach their commanded position.
+- **Manual override:** The remote, wand, or wall control always wins.
 
-IF time is sunset
-THEN close all blinds to 0%</div>
+<div class="automation-example">IF sunrise plus the chosen offset occurs
+THEN open the blinds
 
-<div class="setup-steps">
-  <div class="setup-step">
-    <h4>Automation 1: Morning open</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is sunrise (or sunrise + offset)</li>
-      <li>OR Weekdays at 7:00 AM, weekends at 9:00 AM</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>Home is not in Sleep mode (don't open if still sleeping)</li>
-      <li>Optional: Only if someone is home</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Open blinds to 100%</li>
-      <li>Optional: Stagger opening by room for natural feel</li>
-    </ul>
-  </div>
-  
-  <div class="setup-step">
-    <h4>Automation 2: Evening close</h4>
-    <h4>Triggers</h4>
-    <ul>
-      <li>Time is sunset (or sunset - 15 minutes for privacy before dark)</li>
-      <li>OR Fixed time like 7:00 PM in summer, earlier in winter</li>
-    </ul>
-    <h4>Conditions</h4>
-    <ul>
-      <li>None - always close for privacy</li>
-    </ul>
-    <h4>Actions</h4>
-    <ul>
-      <li>Close all blinds to 0%</li>
-      <li>Optional: Leave some at 50% for partial light</li>
-    </ul>
-  </div>
-</div>
+IF sunset occurs OR the household bedtime arrives, whichever is earlier
+THEN close street-facing and bedroom blinds</div>
+
+## Setup notes
+
+1. Group blinds by job: privacy-sensitive, general living space, and solar-gain windows.
+2. Start with a sunrise offset of 20 to 30 minutes rather than the exact sunrise time.
+3. Give privacy-sensitive rooms a fixed bedtime close in addition to the sunset trigger, so long summer evenings do not leave them exposed.
+4. Confirm the physical remote, wand, or wall control still operates each blind after adding automation.
+5. Test for a full week before assuming the schedule fits the household's actual routine.
 
 ## Advanced features
 
-### Lux-based triggering
+### Add a light sensor only when it solves a problem
 
-Use actual light levels instead of time:
+A sunset trigger is predictable and needs no outdoor sensor. Add a light sensor only if heavy shade, unusual overcast weather, or a specific room consistently needs a different trigger.
 
-**Morning open:**
-- Trigger: Outdoor lux rises above 500
-- More accurate than sunrise time
-- Adjusts for cloudy mornings automatically
+### Stagger multiple blinds
 
-**Evening close:**
-- Trigger: Outdoor lux drops below 200
-- Closes when it's actually getting dark
-- Accounts for overcast days
-
-### Temperature-responsive blinds
-
-Close when room gets too hot:
-
-- **Trigger:** Room temperature rises above 76°F (24°C)
-- **Condition:** Blinds are currently open
-- **Action:** Close blinds to 50% or fully
-- Helps reduce cooling costs in summer
-
-### Away mode patterns
-
-Maintain normal patterns when away:
-
-- Continue normal open/close schedule
-- Varies from "all closed" which looks vacant
-- Combine with away lighting for realistic occupied appearance
-
-### Seasonal adjustments
-
-Create different automations for seasons:
-
-**Summer mode (May-September):**
-- Open later to keep cool morning air
-- Close earlier on hot afternoons
-- West windows close by 3 PM
-
-**Winter mode (October-April):**
-- Open earlier to capture solar heat
-- South-facing open all day if sunny
-- Close at sunset to retain warmth
-
-### One-button override
-
-Create scene for quick adjustment:
-
-- "Open all blinds" - Sets all to 100%
-- "Close all blinds" - Sets all to 0%
-- "Privacy mode" - Closes only street-facing windows
-- Map to physical button or voice command
+Where several blinds share a schedule, opening or closing them a few seconds apart can look more natural and reduces the load on a shared hub or gateway at one instant.
 
 ## Failure modes
 
-### Issue: Blinds don't respond to automation
+- **Blinds open too early or too late:** Confirm the home's location and time zone, then adjust the sunrise or sunset offset.
+- **A bedroom stays exposed on summer evenings:** Add or shorten the fixed bedtime close for that room.
+- **Blinds do not respond:** Check the blind's battery or power, confirm the hub is online, and test the physical remote.
+- **Blinds move at an unexpected time:** Review for a second automation acting on the same blind and remove the conflict.
+- **The hub or internet is down:** Use the physical remote or wall control. Do not make a cloud-only path the only way to operate the blinds.
 
-**Causes:**
-- Blind battery dead
-- Wireless connection lost
-- Hub offline
-- Automation disabled or errored
+## Done when
 
-**Solutions:**
-✅ Check blind battery level in app
-✅ Test blind manually - does button on blind work?
-✅ Verify hub is online and connected
-✅ Re-pair blind to hub if needed
-✅ Check automation is enabled and no errors
+- [ ] Blinds open at a comfortable time after sunrise for seven consecutive days.
+- [ ] Privacy-sensitive rooms close by the fixed bedtime even on the longest days.
+- [ ] The physical remote or wall control still operates every automated blind.
+- [ ] No blind moves from an automation the household did not expect.
+- [ ] Someone who did not configure the automation can operate a blind manually.
 
-### Issue: Timing is wrong
+## FAQ
 
-**Causes:**
-- Time zone set incorrectly
-- Sunrise/sunset calculation wrong
-- No offset configured
-- Location not set properly
+### Should blinds open exactly at sunrise?
 
-**Solutions:**
-✅ Verify time zone in smart home platform
-✅ Check location settings for accurate sunrise/sunset
-✅ Add or adjust offset times
-✅ Use fixed time if dynamic times are unreliable
+A small offset after sunrise is usually more comfortable than opening the moment the sun is technically up, especially in a bedroom.
 
-### Issue: Blinds open when shouldn't
+### Why close blinds at a fixed bedtime instead of only at sunset?
 
-**Causes:**
-- Sleep mode not set
-- Weekend not detected
-- Condition not configured
+Privacy matters most after dark regardless of the season. A fixed bedtime close keeps street-facing rooms private on long summer evenings when sunset is very late.
 
-**Solutions:**
-✅ Add condition: home mode is not "Sleep" or "Night"
-✅ Add condition: day of week check for weekends
-✅ Create separate weekday and weekend automations
-✅ Add manual override that disables auto-open for period
+### What happens when the hub or internet is down?
 
-### Issue: Battery draining fast
-
-**Causes:**
-- Too many movements per day
-- Frequent partial adjustments
-- Cold temperatures (affects battery performance)
-
-**Solutions:**
-✅ Reduce number of daily open/close cycles
-✅ Use fewer intermediate positions
-✅ Keep blinds in moderate temperature environment
-✅ Consider wired option for frequently adjusted blinds
-
-## Best practices
-
-### Gradual transitions
-
-Avoid jarring full open/close:
-
-- Open in stages: 25% → 50% → 75% → 100% over 30 minutes
-- Creates natural daylight transition
-- More pleasant wake-up experience
-
-### Manual override consideration
-
-People still need control:
-
-- Physical buttons or remotes for each blind
-- Voice commands for quick adjustment
-- Dashboard controls easily accessible
-- Override doesn't break future automations
-
-### Grouping by room
-
-Create blind groups:
-
-- "Living Room Blinds" - all blinds in living room
-- "Street-Facing" - privacy-sensitive windows
-- "South Windows" - for solar gain control
-- Easier to automate and control
-
-### Battery management
-
-For battery-powered blinds:
-
-- Set low battery alerts (around 20%)
-- Keep spare batteries
-- Note recharge schedule
-- Wired charging options if available
-
----
+The blinds' own remote, wall switch, or app pairing must still open and close them manually while the automation is unavailable.
 
 ## Related recipes
-- [Away lights automation](/automation/security/away-lights.html)
-- [Morning routine](/automation/daily-routines/morning-routine.html)
-- [Bedtime routine](/automation/daily-routines/bedtime-routine.html)
+
+- [Away lighting](/automation/security/away-lights.html)
+- [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
+- [Run a bedtime routine without surprising the household](/automation/daily-routines/bedtime-routine.html)
 
 <div class="page-navigation">
   <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/">View All Automations →</a>
+  <a href="/automation/index.html">View all automations</a>
 </div>
