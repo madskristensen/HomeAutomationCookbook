@@ -31,3 +31,4 @@ docs/.jekyll-cache/
 # Temporary files
 *.tmp
 *.bak
+/plan.md
