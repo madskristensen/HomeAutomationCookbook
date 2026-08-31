@@ -135,7 +135,7 @@ Add security actions only after the household has tested presence detection and 
 - [Safe thermostat auto-away for pets and pipes](/automation/climate/safe-thermostat-away.html)
 - [Away lighting](/automation/security/away-lights.html)
 - [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
-- [Unlock the door when arriving home](/automation/daily-routines/unlock-door-arrival.html)
+- [Prepare the house when someone arrives](/automation/daily-routines/unlock-door-arrival.html)
 - [Daily routine automations](/automation/daily-routines/index.html)
 
 <div class="page-navigation">

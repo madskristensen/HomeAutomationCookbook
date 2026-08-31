@@ -40,7 +40,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 ## Logic
 
 - **Trigger:** A person intentionally presses the morning button, uses the morning phrase, or dismisses a verified wake alarm.
-- **Conditions:** The home is in Night mode, not Away or Vacation, and the routine is enabled for that person or schedule.
+- **Conditions:** The home is in Night mode, no Guest, Vacation, Away, or safety override is active, and the routine is enabled for that person or schedule.
 - **Action:** Change Night to Home, light only the needed route at a gentle level, and restore previously approved morning comfort settings.
 - **Wait / timeout:** Delay shared-room actions until someone enters that room or explicitly starts the shared routine.
 - **Stop condition:** The routine finishes after its one-time actions and cannot run again until the next Night-mode cycle.
@@ -48,6 +48,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 <div class="automation-example">IF a person intentionally starts Good morning
 AND the home is in Night mode
+AND no Guest or safety override is active
 THEN change Night mode to Home
 AND light that person's morning path gently
 AND restore approved comfort settings

@@ -10,7 +10,7 @@ faqs:
   - question: Will this bother the neighbors?
     answer: It can, if the volume is too high or it triggers too often. A moderate volume, a reasonable clip length, and a cooldown between triggers help keep this from becoming a nuisance.
   - question: Should this run all the time or only while away?
-    answer: Limiting it to Away mode, and optionally nighttime, avoids it firing during normal daytime activity, such as a delivery or a household member arriving home.
+    answer: Run it only in Away mode. You can further limit Away-mode playback to nighttime, but nighttime alone must never enable it while people are home.
 ---
 
 # Play dog barking sounds as an intruder deterrent
@@ -37,7 +37,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 ## Logic
 
 - **Trigger:** A motion sensor covering an entry point detects movement.
-- **Conditions:** The home is in Away mode, or the time is within a defined nighttime window.
+- **Conditions:** The home is in Away mode and, optionally, the time is within a defined nighttime window.
 - **Action:** Play a dog barking audio clip on a nearby speaker at a moderate volume, and send a notification.
 - **Wait / timeout:** The clip plays once per trigger, roughly 10 to 30 seconds.
 - **Stop condition:** A cooldown period, such as several minutes, prevents repeat playback from continued motion in the same area.
@@ -53,7 +53,7 @@ AND send a notification that motion was detected</div>
 
 1. Confirm the platform can play a specific audio file or sound effect on the target speaker; test this manually before wiring it into an automation.
 2. Find or add a dog barking sound file that the speaker integration can play locally.
-3. Set the trigger to the entry-point motion sensor, restricted to Away mode or a nighttime window.
+3. Set the trigger to the entry-point motion sensor and require Away mode. Optionally narrow it to a nighttime window.
 4. Set a moderate volume, loud enough to be heard outside but not so loud it sounds obviously artificial or disturbs neighbors.
 5. Add a cooldown between triggers, such as 5 minutes, so continued motion in the same area does not replay the sound constantly.
 
@@ -72,14 +72,15 @@ Use a lower volume during typical daytime hours, when a delivery or passerby is 
 - **Sound plays too often:** Increase the cooldown period, or narrow the trigger to a smaller motion detection area.
 - **Sound does not play:** Confirm the speaker is online and test the audio file playback manually outside of the automation.
 - **Sound is quiet or distorted:** Check the audio file quality and reduce volume slightly if it is causing distortion at higher levels.
-- **Neighbors notice frequent triggering:** Lower the volume, restrict the automation to nighttime or Away mode only, and increase the cooldown.
+- **Neighbors notice frequent triggering:** Lower the volume, narrow Away-mode playback to nighttime, and increase the cooldown.
+- **Sound plays while someone is home:** Require Away mode as a mandatory condition. A nighttime schedule alone is not enough.
 
 ## Done when
 
 - [ ] The sound plays reliably when the entry-point motion sensor triggers under the right conditions.
 - [ ] The cooldown prevents repeated playback from continued motion.
 - [ ] The volume is reasonable for both effectiveness and neighbor consideration.
-- [ ] The automation only runs during Away mode or the intended nighttime window.
+- [ ] The automation runs only in Away mode.
 
 ## FAQ
 
@@ -93,7 +94,7 @@ It can, if the volume is too high or it triggers too often. A moderate volume, a
 
 ### Should this run all the time or only while away?
 
-Limiting it to Away mode, and optionally nighttime, avoids it firing during normal daytime activity, such as a delivery or a household member arriving home.
+Run it only in Away mode. You can further limit Away-mode playback to nighttime, but nighttime alone must never enable it while people are home.
 
 ## Related recipes
 

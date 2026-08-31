@@ -97,7 +97,7 @@
   }
 
   /**
-   * Move article meta section to after the title wrapper or h1
+   * Move article meta section after the page title
    */
   function moveArticleMetaAfterH1() {
     var articleMeta = document.querySelector('.article-meta');
@@ -106,15 +106,6 @@
     var mainContent = document.querySelector('.main-content');
     if (!mainContent) return;
 
-    // First, check if there's a title-with-favorite wrapper (created by favorites.js)
-    var titleWrapper = mainContent.querySelector('.title-with-favorite');
-    if (titleWrapper) {
-      // Move article meta after the entire title wrapper
-      titleWrapper.parentNode.insertBefore(articleMeta, titleWrapper.nextSibling);
-      return;
-    }
-
-    // Fallback: move after h1 if no title wrapper exists
     var h1 = mainContent.querySelector('h1');
     if (h1) {
       h1.parentNode.insertBefore(articleMeta, h1.nextSibling);
@@ -136,34 +127,8 @@
    * Initialize share functionality
    */
   function init() {
-    // Initialize share buttons first (always works immediately)
     initArticleShareButtons();
-    
-    // Try to move article meta now
     moveArticleMetaAfterH1();
-    
-    // If favorites.js hasn't run yet, the title-with-favorite wrapper won't exist.
-    // Use MutationObserver to watch for it being added and reposition if needed.
-    var articleMeta = document.querySelector('.article-meta');
-    if (articleMeta) {
-      var mainContent = document.querySelector('.main-content');
-      if (mainContent) {
-        var observer = new MutationObserver(function(mutations) {
-          var titleWrapper = mainContent.querySelector('.title-with-favorite');
-          if (titleWrapper) {
-            // Wrapper was added, reposition article meta
-            moveArticleMetaAfterH1();
-            observer.disconnect();
-          }
-        });
-        observer.observe(mainContent, { childList: true, subtree: true });
-        
-        // Disconnect after a short time to avoid memory leaks if wrapper never appears
-        setTimeout(function() {
-          observer.disconnect();
-        }, 1000);
-      }
-    }
   }
 
   // Run on DOMContentLoaded

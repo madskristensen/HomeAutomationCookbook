@@ -45,7 +45,9 @@
   </footer>
   
   <script src="{{ '/assets/js/navigation.js' | relative_url }}" async defer></script>
-  <script src="{{ '/assets/js/favorites.js' | relative_url }}" async defer></script>
   <script src="{{ '/assets/js/share.js' | relative_url }}" async defer></script>
+  {% if page.recipe_directory %}
+  <script src="{{ '/assets/js/recipe-search.js' | relative_url }}" defer></script>
+  {% endif %}
 </body>
 </html>

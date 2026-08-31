@@ -81,6 +81,18 @@ Keep every speaker at a volume you expect, so nobody is startled by a blast the 
 
 <div class="automation-card" markdown="1">
 
+### Welcome-home music
+
+Start a chosen playlist after a tested arrival transition without interrupting audio that is already playing.
+
+<span class="card-meta">**Best for:** A small, reversible welcome after the first arrival</span>
+
+<p><a href="/automation/entertainment/welcome-home-music.html" class="card-link">View automation</a></p>
+
+</div>
+
+<div class="automation-card" markdown="1">
+
 ### One-tap pool party mode
 
 Start a tested lighting and music scene from one deliberate control. Keep pool safety equipment outside the routine.

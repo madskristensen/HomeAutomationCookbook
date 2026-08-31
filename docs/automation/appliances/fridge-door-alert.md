@@ -29,7 +29,7 @@ A door left open a few seconds while grabbing something is normal. A door left o
 
 | Job | Good enough | Never think about it | Notes |
 |---|---|---|---|
-| Detect an open door or window | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Confirm the manufacturer's operating temperature range before using one inside a freezer rather than a refrigerator. |
+| Detect an open refrigerator or freezer door | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Confirm the manufacturer's operating temperature range before using one inside a freezer rather than a refrigerator. |
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

@@ -66,34 +66,29 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 ## Logic
 
 - **Trigger:** Bathroom or entry motion is detected.
-- **Conditions:** It is within your night window, and optionally the room is dark enough.
+- **Conditions:** Night mode is active or it is within your chosen night window, and optionally the room is dark enough.
 - **Action:** Turn on the bathroom light at 10 percent. Set a warm color temperature only if the light supports it.
 - **Wait / timeout:** The paired [turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html) recipe owns the timeout. Start at 10 minutes for a shower bathroom.
 - **Stop condition:** New motion cancels the shutoff. A manual wall-switch change wins.
 - **Manual override:** The wall switch still wins.
 
-<div class="automation-example">IF bathroom motion is detected during the night window
+<div class="automation-example">IF bathroom motion is detected during Night mode or the night window
 THEN turn on the light at 10%</div>
 
 ## Setup notes
 
-These steps create the "Night Mode" state that the Logic section above checks as a condition:
+Choose one understandable signal for nighttime behavior. A fixed night window is simplest. If the household already uses a reliable Night mode, the lighting rule can check that instead.
 
 **Option 1: Time-based**
-- IF time is 10:00 PM
-- THEN set house to Night Mode
+- IF the current time is within the chosen night window
+- THEN use the dim nighttime level
 
 **Option 2: Manual trigger**
 - IF "Good Night" voice command
 - OR bedtime button pressed
 - THEN set house to Night Mode
 
-**Option 3: Presence-based**
-- IF last person goes to bedroom
-- AND time is after 9:00 PM
-- THEN set house to Night Mode
-
-See [daily routine automations](/automation/daily-routines/index.html) for related night-mode setup.
+Do not infer Night mode only because someone entered a bedroom. Different schedules, illness, guests, and brief trips make that signal unreliable. See [daily routine automations](/automation/daily-routines/index.html) for deliberate night-mode patterns.
 
 ## Advanced features
 

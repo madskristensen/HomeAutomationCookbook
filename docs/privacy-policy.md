@@ -27,12 +27,6 @@ Home Automation Cookbook does not:
 - Use cookies for tracking across websites
 - Sell or share data with third parties
 
-### Favorites stored in your browser
-
-If you mark an automation as a favorite, the site stores that recipe's URL in your browser's `localStorage`. This preference stays on your device. The site does not receive it, associate it with an identity, or use it for analytics or cross-site tracking.
-
-You can remove individual favorites with the same button or clear the site's stored data in your browser.
-
 ## GitHub contributions
 
 If you contribute to this project on GitHub:
