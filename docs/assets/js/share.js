@@ -108,6 +108,7 @@
 
     var h1 = mainContent.querySelector('h1');
     if (h1) {
+      h1.classList.add('has-article-meta');
       h1.parentNode.insertBefore(articleMeta, h1.nextSibling);
     }
   }
