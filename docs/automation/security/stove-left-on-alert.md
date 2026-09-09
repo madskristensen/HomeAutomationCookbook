@@ -29,11 +29,29 @@ Use a timer every time cooking starts. If the appliance exposes a supported stat
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Start a cooking reminder | A physical kitchen timer or deliberate phone timer | A visible household cooking mode started by the cook | Starting the timer must be part of starting the appliance. |
-| Read appliance status | No personally verified recommendation yet | Manufacturer-supported status for the exact appliance | Verify what each state means. Do not infer individual burner state from whole-appliance power. |
-| Shut off cooking equipment | A person uses the appliance controls | Purpose-built, approved safety equipment installed for the exact appliance | No general-purpose smart plug or improvised relay is recommended. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Start a cooking reminder**
+
+A physical kitchen timer or deliberate phone timer. Starting the timer must be part of starting the appliance.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Read appliance status**
+
+Manufacturer-supported status for the exact appliance. Verify what each state means. Do not infer individual burner state from whole-appliance power.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Shut off cooking equipment**
+
+A person uses the appliance controls. No general-purpose smart plug or improvised relay is recommended.
+
+</div>
+</div>
 
 ## Logic
 

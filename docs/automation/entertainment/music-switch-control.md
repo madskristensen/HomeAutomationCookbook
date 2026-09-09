@@ -27,10 +27,22 @@ Asking a voice assistant for the same thing every day gets old, and voice comman
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Trigger the automation | No personally verified recommendation yet | No personally verified recommendation yet | Any smart button, wall switch, or remote that can trigger a platform automation will work. |
-| Play the music | No personally verified recommendation yet | No personally verified recommendation yet | Any speaker that accepts playback and volume commands from the platform. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Trigger the automation**
+
+No personally verified recommendation yet. Any smart button, wall switch, or remote that can trigger a platform automation will work.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Play the music**
+
+Any speaker the platform can control works, for example a Sonos speaker, which is what I use.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

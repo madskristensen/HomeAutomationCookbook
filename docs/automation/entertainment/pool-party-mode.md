@@ -27,11 +27,29 @@ Turning on several outdoor devices individually is slow, and it is easy to forge
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Outdoor party lighting | No personally verified recommendation yet | No personally verified recommendation yet | Needs to be rated for outdoor use and support color or scene control from the platform. |
-| Outdoor music playback | No personally verified recommendation yet | No personally verified recommendation yet | Needs to be weatherproof or otherwise suitable for the location and accept playback and volume commands. |
-| Trigger the scene | No personally verified recommendation yet | No personally verified recommendation yet | Any button, voice command, or dashboard tile the platform can use to start an automation. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Outdoor party lighting**
+
+No personally verified recommendation yet. Needs to be rated for outdoor use and support color or scene control from the platform.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Outdoor music playback**
+
+Any speaker the platform can control works, for example a Sonos speaker, which is what I use. Choose a weatherproof or otherwise suitable model for the location.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Trigger the scene**
+
+No personally verified recommendation yet. Any button, voice command, or dashboard tile the platform can use to start an automation.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

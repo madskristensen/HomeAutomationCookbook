@@ -27,10 +27,22 @@ A fan that only runs when someone remembers to flip the switch does not help wit
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Detect bathroom motion with humidity, temperature, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | Use this for the humidity-based trigger, not for the fastest motion response. |
-| Switch the bathroom fan independently | No personally verified recommendation yet | No personally verified recommendation yet | Confirm any smart switch used here is rated for the fan motor's load and that the physical wall switch keeps working. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Detect bathroom motion with humidity, temperature, and light**
+
+[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2). Use this for the humidity-based trigger, not for the fastest motion response.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Switch the bathroom fan independently**
+
+No personally verified recommendation yet. Confirm any smart switch used here is rated for the fan motor's load and that the physical wall switch keeps working.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

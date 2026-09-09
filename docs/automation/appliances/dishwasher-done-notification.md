@@ -29,12 +29,24 @@ The reliable pattern is stateful: prove the dishwasher was running before treati
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Observe dishwasher power or vibration | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a monitoring device rated for this appliance's load and startup current. Do not assume a general-purpose smart plug is suitable. |
-| Clear the waiting-dishes state | A manual dashboard or phone action | No personally verified recommendation yet | A manual reset is simpler and more reliable than an unverified door sensor. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Do not buy an inline monitor until its voltage, continuous-current, startup-current, grounding, and appliance-load ratings have been checked against the dishwasher and its manual.
+**Observe dishwasher power or vibration**
+
+No personally verified recommendation yet. I have not verified a monitoring device rated for this appliance's load and startup current. Do not assume a general-purpose smart plug is suitable; a [vibration sensor](/getting-started/device-guide.html#vibration-sensing) may be a safer non-invasive alternative.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Clear the waiting-dishes state**
+
+A manual dashboard or phone action. A manual reset is simpler and more reliable than an unverified door sensor.
+
+</div>
+</div>
+
+See the full [gear guide](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Do not buy an inline monitor until its voltage, continuous-current, startup-current, grounding, and appliance-load ratings have been checked against the dishwasher and its manual.
 
 ## Logic
 

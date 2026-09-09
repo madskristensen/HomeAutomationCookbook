@@ -27,9 +27,15 @@ Missing a delivery notification from a carrier, or not hearing a knock, can mean
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Detect motion near the front entrance | No personally verified recommendation yet | No personally verified recommendation yet | This specifically needs a sensor rated for outdoor exposure if it is mounted outside; the motion sensor options already covered are evaluated for indoor use. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Detect motion near the front entrance**
+
+[Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I), or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2) for Z-Wave Long Range. Confirm it is rated for the exposure it will face.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

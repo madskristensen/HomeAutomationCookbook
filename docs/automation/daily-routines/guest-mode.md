@@ -29,11 +29,29 @@ Guest mode is an explicit household state, not a guess. It protects privacy, pre
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Start and end Guest mode | A clearly labeled dashboard control or voice phrase | No personally verified physical Guest-mode button yet | A host should be able to change the mode without editing automation. |
-| Keep fixed lights familiar | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Normal wall paddles are the primary guest interface. |
-| Keep climate adjustable | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Guests can request or make normal adjustments at the thermostat. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Start and end Guest mode**
+
+A clearly labeled dashboard control or voice phrase. A host should be able to change the mode without editing automation.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Keep fixed lights familiar**
+
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Normal wall paddles are the primary guest interface.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Keep climate adjustable**
+
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). Guests can request or make normal adjustments at the thermostat.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Guest mode should not require a guest to install an app, join an account, or learn special tap patterns.
 

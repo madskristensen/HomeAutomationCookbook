@@ -29,12 +29,24 @@ Vibration sensing is imperfect, but it is non-invasive and does not put an unver
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Detect dryer vibration | No personally verified battery vibration sensor yet | No personally verified vibration sensor yet | Mount only on a cool, fixed exterior panel after testing surface temperature through a full cycle. |
-| Clear the waiting-laundry state | A manual dashboard or phone action | No personally verified dryer-door sensor yet | Do not assume one sensor can reliably detect both vibration and door position. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. I have not verified a dryer vibration sensor, so no product link is presented as a recommendation.
+**Detect dryer vibration**
+
+A battery vibration sensor mounted on a cool, fixed exterior panel. See [vibration sensing gear](/getting-started/device-guide.html#vibration-sensing) for options.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Clear the waiting-laundry state**
+
+A manual dashboard or phone action. Do not assume one sensor can reliably detect both vibration and door position.
+
+</div>
+</div>
+
+See the full [gear guide](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 
 ## Logic
 

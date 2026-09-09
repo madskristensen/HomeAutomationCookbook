@@ -29,12 +29,36 @@ Separate the recipe into two stages: a reversible wind-down and an intentional f
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Start bedtime | A "Good night" phrase or manual scene control | No personally verified bedside button yet | The final trigger should be intentional and available without an app. |
-| Dim selected lights | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Wall paddles remain normal controls before, during, and after the routine. |
-| Apply an approved sleep setting | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Respect manual holds, safety limits, and the open-window pause recipe. |
-| Report open doors or windows | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Report status first; do not treat a contact sensor as proof that a door is locked. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Start bedtime**
+
+A "Good night" phrase or manual scene control. The final trigger should be intentional and available without an app.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Dim selected lights**
+
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Wall paddles remain normal controls before, during, and after the routine.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Apply an approved sleep setting**
+
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). Respect manual holds, safety limits, and the open-window pause recipe.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Report open doors or windows**
+
+[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL). Report status first; do not treat a contact sensor as proof that a door is locked.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

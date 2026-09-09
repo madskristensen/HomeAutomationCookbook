@@ -29,11 +29,29 @@ Keep brewing inside the coffee maker's documented controls. Home automation can 
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Brew on a schedule | Coffee maker with a documented delayed-brew feature | No personally verified recommendation yet | Follow the appliance instructions, including cleaning and auto-off guidance. |
-| Record readiness | A visible note or physical checklist | A deliberate Ready for morning button or mode | Only the person who loaded the machine sets it ready. |
-| Remind the household | Evening phone reminder | A reminder near the bedtime routine | The reminder never starts the appliance. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Brew on a schedule**
+
+Coffee maker with a documented delayed-brew feature. Follow the appliance instructions, including cleaning and auto-off guidance.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Record readiness**
+
+A visible note or physical checklist. Only the person who loaded the machine sets it ready.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Remind the household**
+
+Evening phone reminder. The reminder never starts the appliance.
+
+</div>
+</div>
 
 No coffee maker or remote-start accessory is recommended until I have verified it.
 

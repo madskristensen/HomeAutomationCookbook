@@ -27,9 +27,15 @@ When feeding responsibilities are shared across household members, it is easy fo
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Log a feeding event | No personally verified recommendation yet | No personally verified recommendation yet | A smart button or a contact sensor repurposed for this job works, but this specific use case is not directly matched by the door and window sensor jobs already covered. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Log a feeding event**
+
+No personally verified recommendation yet. A smart button or a contact sensor repurposed for this job works, but this specific use case is not directly matched by the door and window sensor jobs already covered.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

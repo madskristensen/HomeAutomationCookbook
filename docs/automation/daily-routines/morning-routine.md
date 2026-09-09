@@ -29,11 +29,29 @@ An intentional trigger gives the first awake person control. Local motion lighti
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Start the routine | A "Good morning" voice phrase or manual scene control | No personally verified bedside button yet | The trigger should be intentional and easy to cancel. |
-| Light the morning path | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Verify hub compatibility. Keep every wall paddle working normally. |
-| Restore approved comfort | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Someone can always change the temperature at the thermostat. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Start the routine**
+
+A "Good morning" voice phrase or manual scene control. The trigger should be intentional and easy to cancel.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Light the morning path**
+
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Verify hub compatibility. Keep every wall paddle working normally.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Restore approved comfort**
+
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). Someone can always change the temperature at the thermostat.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

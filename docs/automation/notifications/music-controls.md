@@ -27,9 +27,15 @@ Music controls scattered across separate manufacturer apps means switching apps 
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Control connected speakers from a dashboard | No personally verified recommendation yet | No personally verified recommendation yet | This depends on the platform's existing integration with each speaker brand; no additional hardware is needed beyond the speakers themselves. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Control connected speakers from a dashboard**
+
+Any speaker the platform can control works, for example a Sonos speaker, which is what I use. This depends on the platform's existing integration with each speaker brand; no additional hardware is needed beyond the speakers themselves.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

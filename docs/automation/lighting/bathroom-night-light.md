@@ -56,10 +56,22 @@ Bright bathroom light at 2am is miserable. This recipe uses only enough light to
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Detect bathroom motion, humidity, temperature, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | Use the extra readings where they solve a real bathroom problem. |
-| Dim a fixed light | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Verify hub compatibility. The physical paddle must remain usable. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Detect bathroom motion, humidity, temperature, and light**
+
+[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2). Use the extra readings where they solve a real bathroom problem.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Dim a fixed light**
+
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Verify hub compatibility. The physical paddle must remain usable.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

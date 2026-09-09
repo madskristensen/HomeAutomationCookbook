@@ -27,10 +27,22 @@ Vacuuming is more useful, and less disruptive, when nobody is underfoot and no p
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Confirm the whole household has left | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a single presence source that reliably covers every household member. Test whatever signal is available against real daily patterns before trusting it. |
-| Robot vacuum with app control | No personally verified recommendation yet | No personally verified recommendation yet | Confirm the vacuum supports remote start, reports errors, and can be sent back to its dock from automation before relying on this recipe. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Confirm the whole household has left**
+
+Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Test whatever signal is available against real daily patterns before trusting it, since not every phone or platform behaves the same way.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Robot vacuum with app control**
+
+No personally verified recommendation yet. Confirm the vacuum supports remote start, reports errors, and can be sent back to its dock from automation before relying on this recipe.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 

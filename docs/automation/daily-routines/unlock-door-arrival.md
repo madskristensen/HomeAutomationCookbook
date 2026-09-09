@@ -29,11 +29,29 @@ Use arrival to restore Home mode. Keep entry access deliberate unless the househ
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Detect the first return home | No personally verified household presence source yet | No personally verified combined arrival method yet | Require a real Away-to-Home transition. |
-| Light the entry path | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Keep the physical paddle usable. |
-| Restore heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | The thermostat's safe limits remain authoritative. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Detect the first return home**
+
+Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Require a real Away-to-Home transition.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Light the entry path**
+
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Keep the physical paddle usable.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Restore heating and cooling**
+
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). The thermostat's safe limits remain authoritative.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

@@ -29,11 +29,29 @@ Model the thing the automation actually knows: a caregiver requested Quiet mode.
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Request quiet mode | A physical control or deliberate app button | A dedicated bedside or doorway control | The label should say Quiet, not Baby sleeping. |
-| Provide low light | Existing dimmable room or hallway light | No personally verified nursery-specific recommendation yet | Keep the normal switch usable. |
-| End quiet mode | The same visible control | A deliberate caregiver action plus a maximum-duration reminder | Automatic expiry may remind, but must not claim anyone woke up. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Request quiet mode**
+
+A physical control or deliberate app button. The label should say Quiet, not Baby sleeping.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Provide low light**
+
+Existing dimmable room or hallway light. Keep the normal switch usable.
+
+</div>
+<div class="product-item" markdown="1">
+
+**End quiet mode**
+
+The same visible control. Automatic expiry may remind, but must not claim anyone woke up.
+
+</div>
+</div>
 
 ## Logic
 

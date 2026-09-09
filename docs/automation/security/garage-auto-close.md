@@ -29,11 +29,29 @@ Start with an alert. Add unattended closing only through equipment designed for 
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Know door position | [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF) | [Ecolink Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT) | I have used both. They report position, not a clear doorway. |
-| Close the door | Existing wall control and opener remote | No personally verified unattended-closing controller yet | Use only equipment approved for the opener and unattended operation. |
-| Detect an obstruction | The opener's required, tested entrapment protection | The opener's required, tested entrapment protection | Never replace or bypass it with hobby sensors. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Know door position**
+
+[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF). I have used both. They report position, not a clear doorway.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Close the door**
+
+Existing wall control and opener remote. Use only equipment approved for the opener and unattended operation.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Detect an obstruction**
+
+The opener's required, tested entrapment protection. Never replace or bypass it with hobby sensors.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the tilt sensors I have used. No unattended-closing controller is recommended until I have verified one.
 

@@ -29,10 +29,22 @@ Start with one frequently used window. Expand only after the full pause-and-resu
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Control heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Keep safe limits and manual control at the thermostat. |
-| Detect an open window or door | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Test every open and closed report before enabling HVAC control. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Control heating and cooling**
+
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). Keep safe limits and manual control at the thermostat.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Detect an open window or door**
+
+[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL). Test every open and closed report before enabling HVAC control.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

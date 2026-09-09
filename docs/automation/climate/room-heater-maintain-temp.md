@@ -29,11 +29,29 @@ Start with monitoring. If a room needs automatic supplemental heat, use a fixed 
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Measure room temperature | No personally verified recommendation yet | No personally verified recommendation yet | Compare the reading with a known thermometer before using it for alerts. |
-| Control central heating | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | I have used both. Keep safe limits and manual control at the thermostat. |
-| Add supplemental heat | Manually operated equipment used exactly as instructed | Fixed, purpose-built heating with an approved thermostat | Have wiring and equipment evaluated by a qualified professional where appropriate. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Measure room temperature**
+
+[THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3). Compare the reading with a known thermometer before using it for alerts.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Control central heating**
+
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). I have used both. Keep safe limits and manual control at the thermostat.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Add supplemental heat**
+
+Manually operated equipment used exactly as instructed. Have wiring and equipment evaluated by a qualified professional where appropriate.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the products I have used. This page does not recommend a smart plug for a portable heater.
 

@@ -29,12 +29,36 @@ The old version of this page described a multi-zone driveway wave without verifi
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Control plug-in exterior lighting | [Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8) | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | Use only with a suitable outdoor receptacle, enclosure, and lighting load. |
-| Switch a fixed entry light | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | The wall paddle remains the normal control. |
-| Confirm entry-door activity | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | A door event confirms activity; it does not prove identity or unlock anything. |
-| Suggest that someone is approaching | No personally verified household presence source yet | No personally verified combined arrival method yet | Use phone location only to open a short pending-arrival window. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Control plug-in exterior lighting**
+
+[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8). Use only with a suitable outdoor receptacle, enclosure, and lighting load.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Switch a fixed entry light**
+
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). The wall paddle remains the normal control.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Confirm entry-door activity**
+
+[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL). A door event confirms activity; it does not prove identity or unlock anything.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Suggest that someone is approaching**
+
+Use your platform's built-in presence feature, driven by phone location, only to open a short pending-arrival window.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

@@ -68,6 +68,11 @@ I have bought and used every product named below. Links go directly to Amazon pr
 | Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) - my favorite for fast reactions. | Put it where it sees the doorway before someone reaches the switch. |
 | Detect a person who is still | [Besisglas Zigbee Human Presence Sensor](https://www.amazon.com/dp/B0GYJ3LQ5W) | [Aqara Presence Sensor FP300](https://www.amazon.com/dp/B0FG2MD3YP) | Use this for home offices, showers, reading, or other rooms where a PIR can time out while someone is still. |
 | Detect bathroom motion with humidity, temperature, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | Use it where the extra sensor readings are useful, not where the fastest motion response matters most. |
+| Detect outdoor motion | [Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I) | [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2) - Z-Wave Long Range with an 800-series radio for better range from a detached garage or driveway. | Confirm it is rated for the exposure it will face, and angle it to avoid false triggers from passing cars or blowing branches. |
+
+### Household presence
+
+This one usually isn't a separate product. Most platforms already offer a presence feature through their own phone app, using the phone's location or its connection to the home Wi-Fi or network. I use a Ubiquiti network that integrates directly with Hubitat to set each family member's presence from their phone's network connection, so nobody has to install a separate app. If your platform has an equivalent built-in presence feature, or your network gear integrates with it, start there before buying anything dedicated to this job.
 
 ### Lighting control
 
@@ -83,12 +88,13 @@ I have bought and used every product named below. Links go directly to Amazon pr
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
 | Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Someone should be able to change the temperature at the thermostat. |
+| Measure room temperature and humidity | [THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3) | [Zooz ZSE44 800LR Temperature/Humidity XS Sensor](https://www.amazon.com/dp/B0B3G9Z4LJ) | Placement matters more than the sensor. Keep it away from vents, drafts, and direct sun. |
 
 ### Power monitoring
 
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
-| Detect whether a TV is on | Zooz ZEN15 Power Switch | No personally verified recommendation yet | Use the power reading as a signal only. Keep the TV's remote and normal power controls unchanged. |
+| Detect whether a TV is on | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | [Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY) - a heavier-duty, hardwired-capable power-metering switch for a higher-draw load. | Use the power reading as a signal only. Keep the TV's remote and normal power controls unchanged. |
 
 ### Leaks and safety
 
@@ -97,6 +103,12 @@ I have bought and used every product named below. Links go directly to Amazon pr
 | Detect water where it should not be | [THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2) | [NEO Z-Wave Plus 700 water leak sensor](https://www.amazon.com/dp/B0FSKFCKTB) | Test the alert and make sure the source is obvious. |
 | Detect an open door or window | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | A contact sensor is easy for a guest to understand because the door itself is the trigger. |
 | Know whether a garage door is open | [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF) | [Ecolink Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT) | Use it for status and alerts before adding automatic closing. |
+
+### Vibration sensing
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Detect appliance vibration (dryer, washer, garage door motor) | [THIRDREALITY Zigbee Smart Vibration Sensor](https://www.amazon.com/dp/B0C9DP249C) | [Aeotec SmartThings Multipurpose Sensor](https://www.amazon.com/dp/B095TPSQ3S) - a Zigbee door/window sensor with a built-in accelerometer for vibration and tilt, worth it if you also want the contact-sensor reading in the same spot. | Mount only on a cool, fixed exterior panel after testing surface temperature through a full cycle. Sensitivity usually needs adjusting to ignore normal household bumps. |
 
 ## Verify compatibility
 

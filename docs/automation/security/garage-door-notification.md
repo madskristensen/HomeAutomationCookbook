@@ -27,9 +27,15 @@ A garage door left open is an easy thing to forget about, whether it was left op
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Know whether a garage door is open | [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF) | [Ecolink Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT) | Reports open and closed state without replacing the existing garage door opener. It reports door position only, not whether the doorway is clear. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Know whether a garage door is open**
+
+[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF). Reports open and closed state without replacing the existing garage door opener. It reports door position only, not whether the doorway is clear.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

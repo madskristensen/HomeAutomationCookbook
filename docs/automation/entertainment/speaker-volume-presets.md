@@ -27,10 +27,22 @@ Manually adjusting several speakers to a consistent level takes longer than it s
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Store and apply the preset | No personally verified recommendation yet | No personally verified recommendation yet | Any platform that supports scenes or scripts can store a set of volume levels and apply them together. |
-| Play and adjust audio | No personally verified recommendation yet | No personally verified recommendation yet | Any speaker that accepts a volume-set command from the platform. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Store and apply the preset**
+
+No personally verified recommendation yet. Any platform that supports scenes or scripts can store a set of volume levels and apply them together.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Play and adjust audio**
+
+Any speaker the platform can control works, for example a Sonos speaker, which is what I use.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

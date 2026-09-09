@@ -27,10 +27,22 @@ A vacuum that starts when the house is empty is only half the job. It also needs
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Confirm the whole household has left and returned | No personally verified recommendation yet | No personally verified recommendation yet | I have not verified a single presence source that reliably covers every household member for both departure and arrival. |
-| Robot vacuum with remote dock command | No personally verified recommendation yet | No personally verified recommendation yet | Confirm the vacuum accepts a return-to-dock command from automation, not only a manual app tap. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Confirm the whole household has left and returned**
+
+Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Test it against both departure and arrival for every household member before trusting it.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Robot vacuum with remote dock command**
+
+No personally verified recommendation yet. Confirm the vacuum accepts a return-to-dock command from automation, not only a manual app tap.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 

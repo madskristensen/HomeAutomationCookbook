@@ -27,10 +27,22 @@ A fixed clock schedule drifts away from daylight as the seasons change. A sunset
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Control outdoor plug-in lighting | [Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8) | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | Use only with an outdoor-rated fixture and receptacle. |
-| Switch a fixed outdoor circuit | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Keep the physical paddle usable. Confirm the switch and installation suit the circuit. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Control outdoor plug-in lighting**
+
+[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8). Use only with an outdoor-rated fixture and receptacle.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Switch a fixed outdoor circuit**
+
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Keep the physical paddle usable. Confirm the switch and installation suit the circuit.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

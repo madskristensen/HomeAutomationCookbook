@@ -29,12 +29,36 @@ This recipe deliberately excludes automatic door unlocking, irrigation, alarm de
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Detect smoke and carbon monoxide | Listed alarms installed and maintained for the home | Professionally designed or monitored alarm system where appropriate | Follow local requirements and the alarm manufacturer's placement, interconnection, testing, and replacement instructions. |
-| Expose an alarm event to the hub | No personally verified recommendation yet | Manufacturer-supported integration or a listed listener approved for the installed alarm type | Failure of the integration must not affect the alarms. |
-| Light an exit path | Existing fixed lights with working wall controls | No personally verified recommendation yet | Lighting is supplemental. People must know the exits in darkness. |
-| Reach the household | Alarm sound and practiced evacuation plan | Supplemental phone alerts to responsible adults | A phone notification is not the primary warning. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Detect smoke and carbon monoxide**
+
+Listed alarms installed and maintained for the home. Follow local requirements and the alarm manufacturer's placement, interconnection, testing, and replacement instructions.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Expose an alarm event to the hub**
+
+Manufacturer-supported integration or a listed listener approved for the installed alarm type. Failure of the integration must not affect the alarms.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Light an exit path**
+
+Existing fixed lights with working wall controls. Lighting is supplemental. People must know the exits in darkness.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Reach the household**
+
+Alarm sound and practiced evacuation plan. A phone notification is not the primary warning.
+
+</div>
+</div>
 
 Do not add an unlisted relay, microphone, or modification to alarm wiring. Use only equipment and installation methods approved for the installed alarm system.
 

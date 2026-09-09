@@ -27,11 +27,29 @@ A home with every light off every evening, night after night, is a visible patte
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Switch a fixed light on or off | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Good for a wired fixture the household wants to keep as a simple on/off. |
-| Dim a fixed light | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch. |
-| Control a plug-in light or appliance | [Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2) | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | Works for a lamp plugged into an outlet rather than a wired fixture. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Switch a fixed light on or off**
+
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Good for a wired fixture the household wants to keep as a simple on/off.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Dim a fixed light**
+
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Control a plug-in light or appliance**
+
+[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2). Works for a lamp plugged into an outlet rather than a wired fixture.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

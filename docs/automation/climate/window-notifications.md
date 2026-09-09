@@ -27,10 +27,22 @@ Free heating or cooling from outdoor air is easy to miss without a specific remi
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Track whether a window is open | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Optional. Useful for skipping a notification about a window that is already open. |
-| Compare indoor and outdoor temperature | No personally verified recommendation yet | No personally verified recommendation yet | Many platforms already provide an outdoor reading through an existing weather integration, so a dedicated purchase may not be needed. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Track whether a window is open**
+
+[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL). Optional. Useful for skipping a notification about a window that is already open.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Compare indoor and outdoor temperature**
+
+Many platforms already provide an outdoor reading through an existing weather integration, so a dedicated outdoor purchase may not be needed. For the indoor reading, see [temperature and humidity sensor gear](/getting-started/device-guide.html#climate) if the platform does not already have one placed well.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

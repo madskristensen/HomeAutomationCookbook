@@ -27,10 +27,22 @@ Dimming the lights by hand every time a movie starts is a small chore that is ea
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Detect the TV turning on | Zooz ZEN15 Power Switch | No personally verified recommendation yet | I use the ZEN15's power readings to distinguish standby from the TV being on. Measure the TV's actual draw before setting thresholds. |
-| Dim the living room lights | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Requires a dimmable fixture and a switch rated for the load. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Detect the TV turning on**
+
+Zooz ZEN15 Power Switch. I use the ZEN15's power readings to distinguish standby from the TV being on. Measure the TV's actual draw before setting thresholds.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Dim the living room lights**
+
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Requires a dimmable fixture and a switch rated for the load.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

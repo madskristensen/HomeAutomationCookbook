@@ -27,9 +27,15 @@ A phone notification about trash day is easy to dismiss and forget. A tile that 
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Track and display the reminder | No personally verified recommendation yet | No personally verified recommendation yet | This only needs a virtual switch or variable and a dashboard tile; no physical hardware is required. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Track and display the reminder**
+
+No personally verified recommendation yet. This only needs a virtual switch or variable and a dashboard tile; no physical hardware is required.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

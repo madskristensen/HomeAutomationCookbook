@@ -1,3 +1,4 @@
 @echo off
 cd docs
-bundle exec jekyll serve --livereload --port 4001
+rem bundle exec jekyll serve --livereload --port 4001
+bundle exec jekyll serve --port 4001

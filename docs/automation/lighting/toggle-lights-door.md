@@ -27,11 +27,29 @@ The pantry or utility-room light should be on before anyone has to reach for the
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Detect an open door | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | Test the closed state before relying on it. |
-| Dim a fixed light | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | Verify hub compatibility. Keep the physical paddle usable. |
-| Switch a fixed light on or off | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Keep the physical paddle usable. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Detect an open door**
+
+[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL). Test the closed state before relying on it.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Dim a fixed light**
+
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Verify hub compatibility. Keep the physical paddle usable.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Switch a fixed light on or off**
+
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Keep the physical paddle usable.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

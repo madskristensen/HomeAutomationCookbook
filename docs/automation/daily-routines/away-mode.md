@@ -29,12 +29,36 @@ Start with reversible actions and a notification. Add locks, alarms, or applianc
 
 ## What I used
 
-| Job | Good enough | Never think about it | Notes |
-|---|---|---|---|
-| Decide who is home | No personally verified household presence source yet | No personally verified combined presence method yet | Every person and guest needs a safe path through the logic. |
-| Detect recent indoor activity | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) | [Aqara Presence Sensor FP300](https://www.amazon.com/dp/B0FG2MD3YP) | Use activity as a reason to delay Away, not as proof that the home is empty. |
-| Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Keep safe minimum and maximum temperatures at the thermostat. |
-| Control fixed lights | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | Physical paddles must keep working. |
+<div class="product-list" markdown="1">
+<div class="product-item" markdown="1">
+
+**Decide who is home**
+
+Use your platform's built-in presence feature, usually driven by each family member's phone location or its connection to the home network, rather than a dedicated product. Every person and guest still needs a safe path through the logic.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Detect recent indoor activity**
+
+[Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB). Use activity as a reason to delay Away, not as proof that the home is empty.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Adjust heating and cooling**
+
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). Keep safe minimum and maximum temperatures at the thermostat.
+
+</div>
+<div class="product-item" markdown="1">
+
+**Control fixed lights**
+
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Physical paddles must keep working.
+
+</div>
+</div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
