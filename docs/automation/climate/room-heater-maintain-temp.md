@@ -4,6 +4,7 @@ title: Get an alert before a cold room drifts outside its safe range
 description: Know when a cold room needs attention, then respond through heating controls approved for unattended thermostat operation rather than a general-purpose smart plug.
 keywords: cold room alert, room temperature monitoring, space heater safety, thermostat alert, supplemental heating
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Can I control a portable space heater with a general smart plug?
     answer: Do not assume that is safe. Follow the heater manufacturer's instructions. This recipe does not switch a portable heater through a general-purpose smart plug.
@@ -26,6 +27,24 @@ The house reports a room that is too cold or too warm, while any automatic heat 
 A temperature alert is useful. Turning a high-wattage portable heater on through a general-purpose smart plug adds failure points around an appliance that can start a fire if it is covered, tipped, damaged, or used contrary to its instructions.
 
 Start with monitoring. If a room needs automatic supplemental heat, use a fixed or purpose-built heating system with its own approved thermostat, limits, and professional installation where required.
+
+## Logic
+
+<div class="automation-example">IF the room stays below its alert threshold
+OR the temperature sensor becomes unavailable
+THEN alert a responsible person
+AND name the room and current sensor state
+
+DO NOT switch a portable heater through a general-purpose smart plug</div>
+
+- **Trigger:** The room remains outside its chosen temperature range, or the sensor stops reporting.
+- **Conditions:** The reading is recent and the sensor has been compared with a known thermometer.
+- **Action:** Send an alert naming the room and show the current reading.
+- **Wait / timeout:** Require a sustained reading long enough to avoid alerts from a brief draft.
+- **Stop condition:** A person inspects the room and acknowledges the alert.
+- **Manual override:** Heating remains controllable at its normal thermostat or appliance controls.
+
+
 
 ## What I used
 
@@ -54,22 +73,6 @@ Manually operated equipment used exactly as instructed. Have wiring and equipmen
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the products I have used. This page does not recommend a smart plug for a portable heater.
-
-## Logic
-
-- **Trigger:** The room remains outside its chosen temperature range, or the sensor stops reporting.
-- **Conditions:** The reading is recent and the sensor has been compared with a known thermometer.
-- **Action:** Send an alert naming the room and show the current reading.
-- **Wait / timeout:** Require a sustained reading long enough to avoid alerts from a brief draft.
-- **Stop condition:** A person inspects the room and acknowledges the alert.
-- **Manual override:** Heating remains controllable at its normal thermostat or appliance controls.
-
-<div class="automation-example">IF the room stays below its alert threshold
-OR the temperature sensor becomes unavailable
-THEN alert a responsible person
-AND name the room and current sensor state
-
-DO NOT switch a portable heater through a general-purpose smart plug</div>
 
 ## Setup notes
 
@@ -108,16 +111,6 @@ After the central system starts, note whether the room moves toward the expected
 - **Alerts repeat constantly:** Add acknowledgment and hysteresis without hiding a sustained unsafe condition.
 - **Central heat cannot maintain the room:** Inspect vents, doors, insulation, and the heating system rather than adding unverified plug control.
 - **The hub is down:** The normal thermostat and heating equipment continue operating independently.
-
-## Done when
-
-- [ ] The sensor has been compared with a known thermometer.
-- [ ] Placement represents the occupied part of the room.
-- [ ] Low, high, and unavailable states each create a clear alert.
-- [ ] A person must inspect and acknowledge the condition.
-- [ ] No general-purpose smart plug controls a portable heater.
-- [ ] Normal thermostat and appliance controls work without the hub.
-- [ ] Any automatic supplemental heat uses equipment approved for that operation.
 
 ## FAQ
 

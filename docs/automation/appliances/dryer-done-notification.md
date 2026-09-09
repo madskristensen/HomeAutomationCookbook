@@ -3,7 +3,8 @@ layout: automation
 title: Get notified when the dryer finishes
 description: A platform-neutral laundry recipe that detects sustained dryer vibration and sends one completion alert without controlling appliance power.
 keywords: dryer finished alert, dryer vibration sensor, laundry notification, dryer automation, dryer done notification
-last_modified_at: 2026-08-30
+last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Why use vibration instead of a smart plug for a dryer?
     answer: Many electric dryers use a 240-volt high-current circuit that a normal smart plug cannot safely monitor. A battery vibration sensor is non-invasive when mounted away from hot and moving parts.
@@ -27,6 +28,27 @@ Dryers can pause, reverse, tumble intermittently, or run a cooldown phase. Nearb
 
 Vibration sensing is imperfect, but it is non-invasive and does not put an unverified relay in the dryer's power path.
 
+## Logic
+
+<div class="automation-example">IF dryer vibration remains active for the calibrated start delay
+THEN mark the dryer as running
+
+IF vibration remains inactive for the calibrated finish delay
+AND the dryer is marked as running
+AND the sensor is available
+THEN send one "Dryer finished" notification
+AND mark laundry as waiting
+AND clear the running marker</div>
+
+- **Trigger:** Vibration remains active long enough to prove the dryer started.
+- **Conditions:** The sensor is available and the dryer was not already marked as running.
+- **Action:** Mark the dryer as running and clear any previous waiting-laundry state.
+- **Wait / timeout:** Wait until vibration remains inactive longer than the dryer's longest observed pause or cooldown gap.
+- **Stop condition:** Mark the cycle finished, send one notification, and set a waiting-laundry state.
+- **Manual override:** A person can clear the waiting state without changing power to the dryer.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -47,25 +69,6 @@ A manual dashboard or phone action. Do not assume one sensor can reliably detect
 </div>
 
 See the full [gear guide](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
-
-## Logic
-
-- **Trigger:** Vibration remains active long enough to prove the dryer started.
-- **Conditions:** The sensor is available and the dryer was not already marked as running.
-- **Action:** Mark the dryer as running and clear any previous waiting-laundry state.
-- **Wait / timeout:** Wait until vibration remains inactive longer than the dryer's longest observed pause or cooldown gap.
-- **Stop condition:** Mark the cycle finished, send one notification, and set a waiting-laundry state.
-- **Manual override:** A person can clear the waiting state without changing power to the dryer.
-
-<div class="automation-example">IF dryer vibration remains active for the calibrated start delay
-THEN mark the dryer as running
-
-IF vibration remains inactive for the calibrated finish delay
-AND the dryer is marked as running
-AND the sensor is available
-THEN send one "Dryer finished" notification
-AND mark laundry as waiting
-AND clear the running marker</div>
 
 ## Setup notes
 
@@ -116,16 +119,6 @@ Alert on a low battery or stale sensor before laundry day. Never interpret unava
 - **Duplicate alerts arrive:** Clear the running marker with the first completion event.
 - **The sensor falls or gets hot:** Stop using that mounting point and inspect the sensor and adhesive.
 - **Someone tries to add a normal smart plug:** Do not connect an ordinary inline plug to a high-voltage or high-current dryer circuit.
-
-## Done when
-
-- [ ] The mounting point stays cool and clear through a complete cycle.
-- [ ] Three representative cycles establish reliable start and finish delays.
-- [ ] Washer-only operation never marks the dryer as running.
-- [ ] A door slam never proves a cycle started.
-- [ ] Every test cycle creates exactly one completion notification.
-- [ ] An unavailable sensor does not count as finished.
-- [ ] The dryer still works normally without the automation.
 
 ## FAQ
 

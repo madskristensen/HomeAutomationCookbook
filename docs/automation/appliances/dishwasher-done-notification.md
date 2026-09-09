@@ -4,6 +4,7 @@ title: Get notified when the dishwasher finishes
 description: A platform-neutral dishwasher recipe that learns the dishwasher's own power or vibration pattern and sends one reliable completion alert without controlling appliance power.
 keywords: dishwasher finished alert, dishwasher notification, dishwasher power monitoring, kitchen appliance automation, dishwasher done notification
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: What signal proves a dishwasher cycle is actually finished?
     answer: Look for a sustained drop to the dishwasher's stable idle level after it has already been confirmed running. A single low reading during a pause between wash phases is not proof of finished.
@@ -27,6 +28,27 @@ A dishwasher full of clean dishes is easy to forget when it is tucked under the 
 
 The reliable pattern is stateful: prove the dishwasher was running before treating sustained settling as done.
 
+## Logic
+
+<div class="automation-example">IF dishwasher power or vibration stays above the calibrated running threshold
+THEN mark the dishwasher as running
+
+IF the signal stays below the calibrated finished threshold
+AND the dishwasher is marked as running
+AND the low period is longer than any normal pause between wash phases
+THEN send one "Dishwasher finished" notification
+AND mark dishes as waiting
+AND clear the running marker</div>
+
+- **Trigger:** Measured power or vibration stays above the dishwasher's calibrated running threshold long enough to prove a cycle started.
+- **Conditions:** Monitoring data is current and the dishwasher was not already marked as running.
+- **Action:** Mark the dishwasher as running and clear any previous waiting-dishes state.
+- **Wait / timeout:** After a real start, wait until the signal remains below the calibrated finished threshold longer than the dishwasher's longest normal pause between wash phases.
+- **Stop condition:** Mark the cycle finished, send one notification, and set a waiting-dishes state.
+- **Manual override:** A person can clear the waiting state without affecting the dishwasher.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -47,25 +69,6 @@ A manual dashboard or phone action. A manual reset is simpler and more reliable 
 </div>
 
 See the full [gear guide](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Do not buy an inline monitor until its voltage, continuous-current, startup-current, grounding, and appliance-load ratings have been checked against the dishwasher and its manual.
-
-## Logic
-
-- **Trigger:** Measured power or vibration stays above the dishwasher's calibrated running threshold long enough to prove a cycle started.
-- **Conditions:** Monitoring data is current and the dishwasher was not already marked as running.
-- **Action:** Mark the dishwasher as running and clear any previous waiting-dishes state.
-- **Wait / timeout:** After a real start, wait until the signal remains below the calibrated finished threshold longer than the dishwasher's longest normal pause between wash phases.
-- **Stop condition:** Mark the cycle finished, send one notification, and set a waiting-dishes state.
-- **Manual override:** A person can clear the waiting state without affecting the dishwasher.
-
-<div class="automation-example">IF dishwasher power or vibration stays above the calibrated running threshold
-THEN mark the dishwasher as running
-
-IF the signal stays below the calibrated finished threshold
-AND the dishwasher is marked as running
-AND the low period is longer than any normal pause between wash phases
-THEN send one "Dishwasher finished" notification
-AND mark dishes as waiting
-AND clear the running marker</div>
 
 ## Setup notes
 
@@ -101,16 +104,6 @@ Display unavailable or stale monitoring as unknown, not idle. Missing measuremen
 - **The monitoring device reconnects at zero:** Treat unavailable-to-zero transitions as startup recovery, not completion.
 - **Someone turns off the monitoring plug:** Restore power manually and remove the device from all remote shutoff routines.
 - **The monitor is not rated for the dishwasher:** Remove it. Use a properly rated monitor or have an electrician install circuit-level monitoring.
-
-## Done when
-
-- [ ] The monitor's ratings have been checked against the dishwasher and its manual.
-- [ ] Three representative cycles establish the thresholds and longest normal pause.
-- [ ] An idle dishwasher never creates a completion notification.
-- [ ] Every test cycle creates exactly one completion notification.
-- [ ] A simulated unavailable reading does not count as finished.
-- [ ] The alert remains useful during quiet hours.
-- [ ] The dishwasher still works normally without the automation.
 
 ## FAQ
 

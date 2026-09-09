@@ -4,6 +4,7 @@ title: Turn on the bathroom fan when a shower starts
 description: Run the bathroom fan when a shower starts and turn it off once the steam clears, with nothing to remember and no fan left running all morning.
 keywords: bathroom fan automation, shower fan control, humidity sensor automation, automatic fan, bathroom ventilation
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Which trigger is more reliable, the light switch or humidity?
     answer: A light-based trigger is simpler and more reliable, since the light almost always goes on first. A humidity sensor is more accurate about the shower itself but reacts a little later and needs its own calibration.
@@ -25,6 +26,27 @@ Turn the bathroom fan on when the shower light goes on or humidity rises, and tu
 
 A fan that only runs when someone remembers to flip the switch does not help with mirror fog or lingering humidity. Tying the fan to an existing shower signal, whether the light or a humidity reading, removes the need to remember, and turning it off automatically once humidity settles avoids a fan running long after the shower ends.
 
+?? If motion is part of the trigger, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html) before mounting the sensor.
+
+## Logic
+
+<div class="automation-example">IF the shower light turns on
+OR bathroom humidity rises above the calibrated baseline
+THEN turn on the bathroom fan
+
+IF the shower light has been off for several minutes
+AND humidity has returned to baseline for the same period
+THEN turn off the bathroom fan</div>
+
+- **Trigger:** The shower light turns on, or bathroom humidity rises above its calibrated baseline.
+- **Conditions:** The time falls within the household's normal waking hours, unless overnight ventilation is specifically wanted.
+- **Action:** Turn on the bathroom fan.
+- **Wait / timeout:** Keep the fan running until the trigger clears and stays clear for several minutes.
+- **Stop condition:** The light turns off, or humidity drops back to baseline, for the confirmation period.
+- **Manual override:** The physical wall switch always works regardless of the automation.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,23 +67,6 @@ No personally verified recommendation yet. Confirm any smart switch used here is
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The shower light turns on, or bathroom humidity rises above its calibrated baseline.
-- **Conditions:** The time falls within the household's normal waking hours, unless overnight ventilation is specifically wanted.
-- **Action:** Turn on the bathroom fan.
-- **Wait / timeout:** Keep the fan running until the trigger clears and stays clear for several minutes.
-- **Stop condition:** The light turns off, or humidity drops back to baseline, for the confirmation period.
-- **Manual override:** The physical wall switch always works regardless of the automation.
-
-<div class="automation-example">IF the shower light turns on
-OR bathroom humidity rises above the calibrated baseline
-THEN turn on the bathroom fan
-
-IF the shower light has been off for several minutes
-AND humidity has returned to baseline for the same period
-THEN turn off the bathroom fan</div>
 
 ## Setup notes
 
@@ -89,15 +94,6 @@ Where both are available, use the light as the immediate on-trigger and the humi
 - **Fan does not turn off:** Confirm the off-condition requires both the trigger and a sustained clear period, and check for a stuck humidity reading.
 - **Fan runs at night unexpectedly:** Add or correct the waking-hours condition.
 - **Physical switch stops working:** Reconnect or replace the smart switch; the wall control must always be usable.
-
-## Done when
-
-- [ ] The baseline humidity level has been recorded on a normal day.
-- [ ] A real shower reliably starts the fan using the chosen trigger.
-- [ ] The fan turns off within a reasonable time after the shower ends.
-- [ ] A brief pause mid-shower does not turn the fan off early.
-- [ ] The automation stays within the intended hours.
-- [ ] The physical wall switch still works normally.
 
 ## FAQ
 

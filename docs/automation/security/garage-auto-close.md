@@ -4,6 +4,7 @@ title: Close a garage safely after an open-door alert
 description: Alert first, keep people in control, and allow unattended closing only through equipment designed for it with working entrapment protection and warnings.
 keywords: garage door left open, garage close alert, unattended garage closing, garage door safety, tilt sensor
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Is a motion sensor enough to prove the garage is empty?
     answer: No. Motion can miss a still person, child, pet, or obstruction. It is not entrapment protection and must not authorize a close.
@@ -26,6 +27,26 @@ The house reports a garage door left open, and closing remains manual unless the
 An open garage door is easy to forget, but an unattended close moves a large door where people, pets, vehicles, and objects may be present. Presence and motion signals are useful for deciding who should receive an alert. They are not safety devices.
 
 Start with an alert. Add unattended closing only through equipment designed for that operation, installed and maintained exactly as required.
+
+## Logic
+
+<div class="automation-example">IF the garage door remains open past the chosen delay
+THEN send a persistent open-door alert
+
+IF a person chooses Close
+AND the installed opener supports that operation
+THEN let the opener perform its required warning and safety checks
+
+DO NOT use motion, location, a camera, or a tilt sensor as entrapment protection</div>
+
+- **Trigger:** The door remains open longer than the household expects.
+- **Conditions:** The position sensor is recent and available.
+- **Action:** Send a persistent alert naming the door and its reported state.
+- **Wait / timeout:** Escalate once if the alert remains unacknowledged.
+- **Stop condition:** The position sensor reports closed after a person closes it, or a person explicitly dismisses the reminder.
+- **Manual override:** The normal wall control and remotes remain primary.
+
+
 
 ## What I used
 
@@ -54,24 +75,6 @@ The opener's required, tested entrapment protection. Never replace or bypass it 
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the tilt sensors I have used. No unattended-closing controller is recommended until I have verified one.
-
-## Logic
-
-- **Trigger:** The door remains open longer than the household expects.
-- **Conditions:** The position sensor is recent and available.
-- **Action:** Send a persistent alert naming the door and its reported state.
-- **Wait / timeout:** Escalate once if the alert remains unacknowledged.
-- **Stop condition:** The position sensor reports closed after a person closes it, or a person explicitly dismisses the reminder.
-- **Manual override:** The normal wall control and remotes remain primary.
-
-<div class="automation-example">IF the garage door remains open past the chosen delay
-THEN send a persistent open-door alert
-
-IF a person chooses Close
-AND the installed opener supports that operation
-THEN let the opener perform its required warning and safety checks
-
-DO NOT use motion, location, a camera, or a tilt sensor as entrapment protection</div>
 
 ## Setup notes
 
@@ -111,16 +114,6 @@ After a supported close command, report success only when the position sensor re
 - **Motion reports clear while someone is present:** Ignore it for safety authorization.
 - **Phone location says everyone left:** Use it only to route the alert, not to approve movement.
 - **Close command receives no final state:** Send "close not confirmed" rather than a success message.
-
-## Done when
-
-- [ ] Open, closed, unavailable, and low-battery states are distinguishable.
-- [ ] The alert names the exact door and remains visible until handled.
-- [ ] Normal wall controls and remotes still work.
-- [ ] Required photo-eyes, warnings, and reversal behavior pass manufacturer tests.
-- [ ] No motion, location, camera, or tilt sensor is used as entrapment protection.
-- [ ] A failed close never produces a success-shaped notification.
-- [ ] Unattended closing is disabled unless the complete installed system supports it.
 
 ## FAQ
 

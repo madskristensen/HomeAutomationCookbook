@@ -4,6 +4,7 @@ title: Set up gradual wake-up lighting
 description: A platform-neutral recipe that gradually brightens a bedroom light before a set wake time, simulating a sunrise instead of a jarring alarm.
 keywords: wake up lights, sunrise alarm, gradual lighting, morning light automation, gentle wake up
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: How long should the wake-up transition last?
     answer: Fifteen to thirty minutes is a reasonable starting range. A longer transition, up to 45 or 60 minutes, feels more gradual for deep sleepers, but takes more advance planning around the actual wake time.
@@ -25,6 +26,23 @@ Gradually brighten a bedroom light before a set wake time, so the room fills wit
 
 Waking to a sudden bright light or a loud alarm in a dark room can feel abrupt. Gradually brightening a light over a set period gives a more natural transition into the morning and does not require anything beyond a light that is already in the room.
 
+## Logic
+
+<div class="automation-example">IF the current time is 30 minutes before the desired wake time
+AND today matches the intended schedule
+AND the skip-tomorrow setting is off
+THEN set the light to a low starting brightness
+AND gradually increase it to full brightness over 30 minutes</div>
+
+- **Trigger:** A fixed time before the desired wake time, such as 30 minutes prior.
+- **Conditions:** The day matches the intended schedule, such as weekdays only, and any vacation or skip setting is off.
+- **Action:** Set the light to a low starting brightness, then gradually raise it toward full brightness over the chosen duration.
+- **Wait / timeout:** The transition runs for its full set duration.
+- **Stop condition:** The transition ends once it reaches full brightness, or is cancelled by a manual override.
+- **Manual override:** The light switch or app always works to change brightness directly, and a skip option can disable the next scheduled run.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,21 +56,6 @@ Waking to a sudden bright light or a loud alarm in a dark room can feel abrupt. 
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A fixed time before the desired wake time, such as 30 minutes prior.
-- **Conditions:** The day matches the intended schedule, such as weekdays only, and any vacation or skip setting is off.
-- **Action:** Set the light to a low starting brightness, then gradually raise it toward full brightness over the chosen duration.
-- **Wait / timeout:** The transition runs for its full set duration.
-- **Stop condition:** The transition ends once it reaches full brightness, or is cancelled by a manual override.
-- **Manual override:** The light switch or app always works to change brightness directly, and a skip option can disable the next scheduled run.
-
-<div class="automation-example">IF the current time is 30 minutes before the desired wake time
-AND today matches the intended schedule
-AND the skip-tomorrow setting is off
-THEN set the light to a low starting brightness
-AND gradually increase it to full brightness over 30 minutes</div>
 
 ## Setup notes
 
@@ -79,13 +82,6 @@ Use a single bedside lamp facing away from a partner's side of the bed, and cap 
 - **Transition jumps in visible steps instead of fading smoothly:** Confirm the platform and device both support a gradual transition command, not just discrete brightness levels.
 - **The automation wakes someone who should stay asleep:** Reduce maximum brightness, reposition the light, or restrict it to a single lamp rather than the whole room.
 - **The automation runs on a day it should not:** Check the day-of-week condition and confirm any skip setting was applied correctly.
-
-## Done when
-
-- [ ] The wake time and transition length are set and the start time is calculated correctly.
-- [ ] The light fades smoothly rather than in visible steps.
-- [ ] The starting brightness is comfortably dim for the room.
-- [ ] The schedule matches the intended days, with a working way to skip a single day.
 
 ## FAQ
 

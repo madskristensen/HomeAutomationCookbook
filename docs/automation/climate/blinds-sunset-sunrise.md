@@ -4,6 +4,7 @@ title: Open and close blinds with sunrise and sunset
 description: A platform-neutral recipe that opens motorized blinds near sunrise and closes them near sunset, with a fixed bedtime close for privacy and physical control always available.
 keywords: smart blinds automation, automatic shades, sunset blinds, sunrise blinds, motorized blinds, privacy automation
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Should blinds open exactly at sunrise?
     answer: A small offset after sunrise is usually more comfortable than opening the moment the sun is technically up, especially in a bedroom.
@@ -25,6 +26,23 @@ Blinds open a little after sunrise and close at sunset or a fixed bedtime, which
 
 A fixed clock schedule drifts away from actual daylight as the seasons change, while a sunrise and sunset trigger follows the sun automatically. Privacy, however, does not follow the sun the same way; a bedroom that stays exposed until a 9 PM summer sunset is a real problem, so a fixed bedtime close is worth adding alongside the sunset trigger.
 
+## Logic
+
+<div class="automation-example">IF sunrise plus the chosen offset occurs
+THEN open the blinds
+
+IF sunset occurs OR the household bedtime arrives, whichever is earlier
+THEN close street-facing and bedroom blinds</div>
+
+- **Trigger:** Sunrise, with a comfortable offset, or sunset.
+- **Conditions:** The blind schedule is enabled. A bedroom may also require the household to be awake before opening.
+- **Action:** Open blinds after the sunrise offset. Close them at sunset, or no later than a fixed bedtime for privacy-sensitive rooms.
+- **Wait / timeout:** None beyond the sunrise offset and the fixed bedtime.
+- **Stop condition:** The blinds reach their commanded position.
+- **Manual override:** The remote, wand, or wall control always wins.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,21 +56,6 @@ No personally verified recommendation yet. I have not verified a specific motori
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
-
-## Logic
-
-- **Trigger:** Sunrise, with a comfortable offset, or sunset.
-- **Conditions:** The blind schedule is enabled. A bedroom may also require the household to be awake before opening.
-- **Action:** Open blinds after the sunrise offset. Close them at sunset, or no later than a fixed bedtime for privacy-sensitive rooms.
-- **Wait / timeout:** None beyond the sunrise offset and the fixed bedtime.
-- **Stop condition:** The blinds reach their commanded position.
-- **Manual override:** The remote, wand, or wall control always wins.
-
-<div class="automation-example">IF sunrise plus the chosen offset occurs
-THEN open the blinds
-
-IF sunset occurs OR the household bedtime arrives, whichever is earlier
-THEN close street-facing and bedroom blinds</div>
 
 ## Setup notes
 
@@ -79,14 +82,6 @@ Where several blinds share a schedule, opening or closing them a few seconds apa
 - **Blinds do not respond:** Check the blind's battery or power, confirm the hub is online, and test the physical remote.
 - **Blinds move at an unexpected time:** Review for a second automation acting on the same blind and remove the conflict.
 - **The hub or internet is down:** Use the physical remote or wall control. Do not make a cloud-only path the only way to operate the blinds.
-
-## Done when
-
-- [ ] Blinds open at a comfortable time after sunrise for seven consecutive days.
-- [ ] Privacy-sensitive rooms close by the fixed bedtime even on the longest days.
-- [ ] The physical remote or wall control still operates every automated blind.
-- [ ] No blind moves from an automation the household did not expect.
-- [ ] Someone who did not configure the automation can operate a blind manually.
 
 ## FAQ
 

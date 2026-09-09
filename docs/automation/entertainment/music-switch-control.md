@@ -4,6 +4,7 @@ title: Play or pause music with a physical switch
 description: A platform-neutral recipe that uses a wall switch or button to start, stop, or adjust music instead of relying on a voice assistant.
 keywords: music button control, physical music switch, smart home music control, button music automation, instant music playback
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Why use a physical button instead of a voice assistant?
     answer: A button is faster for a repeated action, works without speaking, and does not depend on the assistant correctly hearing a request every time.
@@ -25,6 +26,21 @@ Press a button or flip a switch to start, stop, or adjust music, instead of aski
 
 Asking a voice assistant for the same thing every day gets old, and voice commands can fail to be heard or understood. A physical button gives an instant, reliable result for a repeated action, and it still works if the household is talking, the room is noisy, or nobody wants to raise their voice.
 
+## Logic
+
+<div class="automation-example">IF the music button is pressed
+THEN toggle playback on the chosen speaker
+AND set volume to the preset level</div>
+
+- **Trigger:** The button is pressed, or the switch changes position.
+- **Conditions:** None required; an instant response is usually the point.
+- **Action:** Toggle playback, or start a specific playlist at a preset volume, on the chosen speaker.
+- **Wait / timeout:** None; the action happens immediately.
+- **Stop condition:** A second press toggles playback off, or a separate button stops it.
+- **Manual override:** The speaker's own app or physical controls always work directly.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,19 +61,6 @@ Any speaker the platform can control works, for example a Sonos speaker, which i
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The button is pressed, or the switch changes position.
-- **Conditions:** None required; an instant response is usually the point.
-- **Action:** Toggle playback, or start a specific playlist at a preset volume, on the chosen speaker.
-- **Wait / timeout:** None; the action happens immediately.
-- **Stop condition:** A second press toggles playback off, or a separate button stops it.
-- **Manual override:** The speaker's own app or physical controls always work directly.
-
-<div class="automation-example">IF the music button is pressed
-THEN toggle playback on the chosen speaker
-AND set volume to the preset level</div>
 
 ## Setup notes
 
@@ -83,13 +86,6 @@ If the speaker platform supports grouping, use one button press to group several
 - **Wrong playlist plays:** Confirm the playlist reference in the automation still matches what is expected; streaming services occasionally change identifiers.
 - **Delay between press and playback:** Check the button's wireless connection to the hub and consider moving it closer or adding a repeater.
 - **Music starts at the wrong volume:** Confirm the volume is set as part of the action, before playback starts, not left to whatever the speaker was last set to.
-
-## Done when
-
-- [ ] The button reliably registers a press in the automation log.
-- [ ] A press starts or toggles the intended playlist every time.
-- [ ] The volume is consistent regardless of what the speaker was previously set to.
-- [ ] The speaker's own manual controls still work independently of the automation.
 
 ## FAQ
 

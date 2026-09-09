@@ -4,6 +4,7 @@ title: Start the robot vacuum when everyone leaves
 description: A platform-neutral recipe that starts a robot vacuum only after a tested presence signal confirms the home is empty, and only during a daytime window.
 keywords: robot vacuum automation, auto start vacuum, vacuum when away, presence detection vacuum, away mode cleaning
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: What proves the house is actually empty?
     answer: Only a presence signal you have tested for every regular occupant. A single phone leaving a geofence is not enough if other household members or their phones behave differently.
@@ -25,6 +26,27 @@ Once a tested presence signal confirms the home is empty during a daytime window
 
 Vacuuming is more useful, and less disruptive, when nobody is underfoot and no pet is startled by it. The trigger only matters if it reliably reflects that everyone has actually left; an unverified presence signal can start the vacuum while someone is still home.
 
+## Logic
+
+<div class="automation-example">IF the tested presence signal reports the home as empty
+AND the time is within the daytime window
+AND the vacuum has not already run today
+THEN wait a short confirmation period
+IF the home is still reported empty
+THEN start the vacuum's cleaning cycle
+
+IF the presence signal reports that someone returned while the vacuum is cleaning
+THEN send the vacuum back to its dock</div>
+
+- **Trigger:** The tested presence signal reports the home as empty.
+- **Conditions:** The time is within the chosen daytime window, Guest mode is off, and the vacuum has not already run today.
+- **Action:** Wait briefly to confirm the departure is real, then start the vacuum's existing cleaning cycle.
+- **Wait / timeout:** Skip the run if the confirmed-empty period ends before the wait completes.
+- **Stop condition:** The vacuum finishes, or the tested presence signal reports that someone returned; in either case, send it back to its dock.
+- **Manual override:** The vacuum's own app or button can start or stop it at any time regardless of this automation.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,25 +67,6 @@ No personally verified recommendation yet. Confirm the vacuum supports remote st
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
-
-## Logic
-
-- **Trigger:** The tested presence signal reports the home as empty.
-- **Conditions:** The time is within the chosen daytime window, Guest mode is off, and the vacuum has not already run today.
-- **Action:** Wait briefly to confirm the departure is real, then start the vacuum's existing cleaning cycle.
-- **Wait / timeout:** Skip the run if the confirmed-empty period ends before the wait completes.
-- **Stop condition:** The vacuum finishes, or the tested presence signal reports that someone returned; in either case, send it back to its dock.
-- **Manual override:** The vacuum's own app or button can start or stop it at any time regardless of this automation.
-
-<div class="automation-example">IF the tested presence signal reports the home as empty
-AND the time is within the daytime window
-AND the vacuum has not already run today
-THEN wait a short confirmation period
-IF the home is still reported empty
-THEN start the vacuum's cleaning cycle
-
-IF the presence signal reports that someone returned while the vacuum is cleaning
-THEN send the vacuum back to its dock</div>
 
 ## Setup notes
 
@@ -92,17 +95,6 @@ Send an alert if the vacuum reports an error state during a cycle so it is not l
 - **Vacuum gets stuck:** Clear obstacles and closed-off areas the vacuum can wander into, and add a stuck-error notification.
 - **Vacuum does not start:** Confirm it is docked, charged, and not already reporting an error before the automation runs.
 - **The presence signal disagrees with reality:** Stop relying on it and retest, rather than tuning the delay indefinitely.
-
-## Done when
-
-- [ ] The presence signal has been tested against a week of real household activity.
-- [ ] The vacuum only starts within the chosen daytime window.
-- [ ] The vacuum does not start when someone is intentionally home for a test.
-- [ ] The vacuum returns to its dock when someone comes home during a test run.
-- [ ] Guest mode prevents an automatic start.
-- [ ] The vacuum does not run a second time on a day it already completed a cycle.
-- [ ] A stuck-vacuum error produces a notification.
-- [ ] The vacuum's own app and buttons still work normally.
 
 ## FAQ
 

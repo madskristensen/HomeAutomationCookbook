@@ -4,6 +4,7 @@ title: Get notified when to open or close windows
 description: A platform-neutral recipe that compares indoor and outdoor temperature and notifies the household when opening or closing windows would save energy.
 keywords: window notification automation, energy saving alerts, when to open windows, temperature notification, natural ventilation
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: How large should the temperature difference be before notifying?
     answer: Start with a difference of at least 5 degrees Fahrenheit between indoor and outdoor readings. A smaller difference is not worth interrupting anyone for.
@@ -25,6 +26,29 @@ Compare indoor and outdoor temperature, and send one notification when opening o
 
 Free heating or cooling from outdoor air is easy to miss without a specific reminder. A one-time notification, sent only when the temperature difference is meaningful and has held steady for a while, is more useful than expecting anyone to check the weather and compare it against the thermostat throughout the day.
 
+## Logic
+
+<div class="automation-example">IF outdoor temperature is at least 5 degrees warmer than indoor temperature
+AND it is heating season
+AND the gap has held for several minutes
+AND tracked windows are currently closed
+THEN send one notification: "Outside is warmer than inside. Consider opening a window."
+
+IF outdoor temperature is at least 5 degrees cooler than indoor temperature
+AND it is cooling season
+AND the gap has held for several minutes
+AND tracked windows are currently closed
+THEN send one notification: "Outside is cooler than inside. Consider opening a window."</div>
+
+- **Trigger:** The gap between indoor and outdoor temperature crosses a chosen threshold in the useful direction for the current season.
+- **Conditions:** The gap has held for several minutes, and any tracked windows are currently closed.
+- **Action:** Send one notification suggesting windows be opened or closed.
+- **Wait / timeout:** Wait for a cooldown period, such as two hours, before sending another notification of the same kind.
+- **Stop condition:** The notification is sent once; the household decides whether to act on it.
+- **Manual override:** Opening or closing any window is always a manual decision.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,27 +69,6 @@ Many platforms already provide an outdoor reading through an existing weather in
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The gap between indoor and outdoor temperature crosses a chosen threshold in the useful direction for the current season.
-- **Conditions:** The gap has held for several minutes, and any tracked windows are currently closed.
-- **Action:** Send one notification suggesting windows be opened or closed.
-- **Wait / timeout:** Wait for a cooldown period, such as two hours, before sending another notification of the same kind.
-- **Stop condition:** The notification is sent once; the household decides whether to act on it.
-- **Manual override:** Opening or closing any window is always a manual decision.
-
-<div class="automation-example">IF outdoor temperature is at least 5 degrees warmer than indoor temperature
-AND it is heating season
-AND the gap has held for several minutes
-AND tracked windows are currently closed
-THEN send one notification: "Outside is warmer than inside. Consider opening a window."
-
-IF outdoor temperature is at least 5 degrees cooler than indoor temperature
-AND it is cooling season
-AND the gap has held for several minutes
-AND tracked windows are currently closed
-THEN send one notification: "Outside is cooler than inside. Consider opening a window."</div>
 
 ## Setup notes
 
@@ -93,14 +96,6 @@ Where the platform can estimate it, add a rough cost comparison to the notificat
 - **Notification suggests opening a window that is already open:** Confirm the window-sensor condition is included and the sensor is reporting current data.
 - **Outdoor reading looks wrong:** Check the sensor's placement away from direct sun and heat-radiating walls, or confirm the weather integration is using the correct location.
 - **No notification arrives when it should:** Confirm both temperature sources are reporting and that the season condition matches the current time of year.
-
-## Done when
-
-- [ ] Indoor and outdoor readings are current and reasonably accurate.
-- [ ] A real temperature swing produces exactly one notification.
-- [ ] The cooldown prevents repeated notifications for the same swing.
-- [ ] An already-open window does not trigger a redundant "open a window" notification.
-- [ ] Notifications arrive only during hours someone can act on them.
 
 ## FAQ
 

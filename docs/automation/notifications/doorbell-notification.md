@@ -4,6 +4,7 @@ title: Get a phone notification when a traditional doorbell rings
 description: A platform-neutral recipe that wires a contact sensor in parallel with an existing wired doorbell chime so ringing it sends a phone notification.
 keywords: doorbell notification, traditional doorbell, dumb doorbell alert, doorbell sensor, contact sensor doorbell
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Do I need to replace my doorbell with a smart doorbell?
     answer: No. This recipe wires a contact sensor in parallel with the existing chime, so the original doorbell keeps working exactly as before, and a notification is added on top.
@@ -25,6 +26,21 @@ Wire a contact sensor in parallel with an existing wired doorbell chime so press
 
 Not everyone wants to replace a working doorbell with a smart one, especially if the traditional chime is loud enough indoors but easy to miss from the backyard or a distant room. Wiring a contact sensor in parallel with the existing chime adds a notification without changing how the doorbell itself works.
 
+## Logic
+
+<div class="automation-example">IF the contact sensor changes state
+AND it has not changed state again within the last 10 seconds
+THEN send a phone notification: "Someone is at the front door"</div>
+
+- **Trigger:** The contact sensor changes state, wired in parallel with the doorbell chime circuit.
+- **Conditions:** None; every press should notify.
+- **Action:** Send a phone notification, such as "Someone is at the front door."
+- **Wait / timeout:** None; the notification is sent immediately.
+- **Stop condition:** Not applicable; each press is a separate event.
+- **Manual override:** The physical doorbell button and chime continue to work exactly as before, independent of the automation.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,19 +54,6 @@ No personally verified recommendation yet. This job specifically needs a contact
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The contact sensor changes state, wired in parallel with the doorbell chime circuit.
-- **Conditions:** None; every press should notify.
-- **Action:** Send a phone notification, such as "Someone is at the front door."
-- **Wait / timeout:** None; the notification is sent immediately.
-- **Stop condition:** Not applicable; each press is a separate event.
-- **Manual override:** The physical doorbell button and chime continue to work exactly as before, independent of the automation.
-
-<div class="automation-example">IF the contact sensor changes state
-AND it has not changed state again within the last 10 seconds
-THEN send a phone notification: "Someone is at the front door"</div>
 
 ## Setup notes
 
@@ -76,13 +79,6 @@ For a household member who is hard of hearing, add a light flash as part of the 
 - **Sensor triggers without anyone pressing the doorbell:** Check for loose connections or electrical interference near the wiring, and confirm the transformer voltage matches what the sensor expects.
 - **Multiple notifications for one press:** Add or lengthen the debounce delay in the automation.
 - **Notifications arrive with a noticeable delay:** Check the sensor's wireless connection to the hub and consider moving it closer or adding a repeater.
-
-## Done when
-
-- [ ] The wiring has been completed with power off and restored safely.
-- [ ] A doorbell press reliably registers in the automation log.
-- [ ] A single press produces exactly one notification.
-- [ ] The doorbell chime itself still works normally.
 
 ## FAQ
 

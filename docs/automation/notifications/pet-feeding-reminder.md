@@ -4,6 +4,7 @@ title: Set up a pet feeding reminder
 description: A platform-neutral recipe that uses a smart button or repurposed sensor to track and remind about pet feeding times.
 keywords: pet feeding reminder, pet feeding tracker, smart button pet care, feeding schedule automation
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: What if more than one person feeds the pet?
     answer: The button or tracked action should be pressed by whoever actually feeds the pet, regardless of who it is. The reminder cares about whether feeding happened, not who did it.
@@ -25,6 +26,24 @@ Use a smart button or repurposed sensor to track when a pet was last fed and sen
 
 When feeding responsibilities are shared across household members, it is easy for everyone to assume someone else already fed the pet, or to forget entirely. A simple button press to log feeding, paired with a reminder if too much time passes, keeps this from slipping through the cracks.
 
+## Logic
+
+<div class="automation-example">IF the feeding button is pressed
+THEN reset the "last fed" timestamp to now
+
+IF more than 10 hours have passed since the last fed timestamp
+THEN send a reminder notification: "Has the dog been fed?"
+AND repeat every 30 minutes until the button is pressed</div>
+
+- **Trigger:** The feeding button is pressed, or a scheduled check runs to see how long it has been since the last press.
+- **Conditions:** More time has passed than the expected feeding interval, such as 8 to 12 hours.
+- **Action:** Send a reminder notification if feeding has not been logged within the expected window; reset the "last fed" timestamp when the button is pressed.
+- **Wait / timeout:** The reminder repeats at intervals, such as every 30 minutes, until feeding is logged.
+- **Stop condition:** Pressing the feeding button clears the reminder and resets the timer.
+- **Manual override:** The pet can always be fed and the button pressed regardless of the reminder state.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,22 +57,6 @@ No personally verified recommendation yet. A smart button or a contact sensor re
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The feeding button is pressed, or a scheduled check runs to see how long it has been since the last press.
-- **Conditions:** More time has passed than the expected feeding interval, such as 8 to 12 hours.
-- **Action:** Send a reminder notification if feeding has not been logged within the expected window; reset the "last fed" timestamp when the button is pressed.
-- **Wait / timeout:** The reminder repeats at intervals, such as every 30 minutes, until feeding is logged.
-- **Stop condition:** Pressing the feeding button clears the reminder and resets the timer.
-- **Manual override:** The pet can always be fed and the button pressed regardless of the reminder state.
-
-<div class="automation-example">IF the feeding button is pressed
-THEN reset the "last fed" timestamp to now
-
-IF more than 10 hours have passed since the last fed timestamp
-THEN send a reminder notification: "Has the dog been fed?"
-AND repeat every 30 minutes until the button is pressed</div>
 
 ## Setup notes
 
@@ -79,13 +82,6 @@ If the first reminder is ignored for an extended period, such as an hour, escala
 - **Reminder fires too early or too late:** Adjust the expected feeding interval to better match the pet's actual schedule.
 - **Button is pressed but nothing resets:** Check the button's battery and its connection to the hub.
 - **Repeated reminders become annoying:** Lengthen the repeat interval, or add an escalation step instead of repeating the same notification indefinitely.
-
-## Done when
-
-- [ ] Pressing the feeding button reliably resets the "last fed" timestamp.
-- [ ] A missed feeding window produces a reminder notification.
-- [ ] The reminder stops once feeding is logged.
-- [ ] Each pet being tracked has its own button and timestamp, if there is more than one.
 
 ## FAQ
 

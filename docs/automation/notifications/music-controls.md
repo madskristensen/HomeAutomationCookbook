@@ -4,6 +4,7 @@ title: Control music in any room from one shared dashboard
 description: Stop switching between manufacturer apps just to pause a speaker or change its volume in another room.
 keywords: music dashboard, playback controls, whole home audio, dashboard tiles, music control automation
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Do I need whole-home audio for this to be useful?
     answer: It helps, since a single dashboard controlling several speakers at once is more valuable than controlling just one. It still works for a single speaker, but a dedicated app may be just as convenient in that case.
@@ -25,6 +26,23 @@ Put play, pause, and volume controls for whole-home audio on a shared dashboard 
 
 Music controls scattered across separate manufacturer apps means switching apps just to pause a speaker in another room. Bringing playback controls onto the same dashboard used for lights, locks, and other status tiles keeps everything in one place.
 
+## Logic
+
+<div class="automation-example">IF the "pause" tile is tapped for the living room speaker
+THEN send a pause command to the living room speaker
+
+IF the volume slider is adjusted for the kitchen speaker
+THEN set the kitchen speaker's volume to the selected level</div>
+
+- **Trigger:** A dashboard tile is tapped, such as play, pause, or a volume adjustment.
+- **Conditions:** The targeted speaker is online and reachable by the platform.
+- **Action:** Send the corresponding playback or volume command to that speaker.
+- **Wait / timeout:** None; the command is sent immediately when the tile is tapped.
+- **Stop condition:** Not applicable; each tile press is a separate command.
+- **Manual override:** The speaker's own physical controls or manufacturer app continue to work independent of the dashboard.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,21 +56,6 @@ Any speaker the platform can control works, for example a Sonos speaker, which i
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A dashboard tile is tapped, such as play, pause, or a volume adjustment.
-- **Conditions:** The targeted speaker is online and reachable by the platform.
-- **Action:** Send the corresponding playback or volume command to that speaker.
-- **Wait / timeout:** None; the command is sent immediately when the tile is tapped.
-- **Stop condition:** Not applicable; each tile press is a separate command.
-- **Manual override:** The speaker's own physical controls or manufacturer app continue to work independent of the dashboard.
-
-<div class="automation-example">IF the "pause" tile is tapped for the living room speaker
-THEN send a pause command to the living room speaker
-
-IF the volume slider is adjusted for the kitchen speaker
-THEN set the kitchen speaker's volume to the selected level</div>
 
 ## Setup notes
 
@@ -78,13 +81,6 @@ If the platform supports it, show the current track or source on the dashboard a
 - **The wrong speaker responds to a tile:** Double check the tile's configured target device.
 - **Volume changes lag behind the tile:** Some speaker integrations poll status rather than update instantly; this is a platform limitation rather than a dashboard problem.
 - **Group control does not include a new speaker:** Confirm the new speaker was added to the group definition, not just the individual room tiles.
-
-## Done when
-
-- [ ] Every connected speaker has working play, pause, and volume tiles.
-- [ ] Tiles are clearly grouped or labeled by room.
-- [ ] A whole-home group control tile works if the household uses synchronized audio.
-- [ ] Each tile reliably targets the correct speaker.
 
 ## FAQ
 

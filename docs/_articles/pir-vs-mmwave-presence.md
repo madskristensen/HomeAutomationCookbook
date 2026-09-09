@@ -106,16 +106,6 @@ See [recommended smart home gear](/getting-started/device-guide.html#products-i-
 - **The sensor becomes unavailable:** Keep the wall switch usable. Missing sensor data must not look like a confidently empty room.
 - **Guests fight the automation:** Preserve normal physical controls and use forgiving timeouts.
 
-## Done when
-
-- [ ] Entry is detected before someone reaches for the switch.
-- [ ] Sitting or showering does not cause a false turn-off.
-- [ ] Walking past the room does not hold it occupied.
-- [ ] The room clears after everyone leaves.
-- [ ] Fans, curtains, pets, and adjacent rooms have been tested.
-- [ ] An unavailable sensor does not turn the room off unexpectedly.
-- [ ] The physical switch works normally without an app.
-
 ## FAQ
 
 ### Is mmWave always better than PIR?

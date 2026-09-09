@@ -4,6 +4,7 @@ title: Build a home maintenance reminder dashboard
 description: A platform-neutral recipe that tracks recurring home maintenance tasks, such as filter changes, on a shared dashboard instead of relying on memory.
 keywords: maintenance reminder, home maintenance dashboard, filter change reminder, recurring task tracker, smart home dashboard
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: How is this different from a phone calendar reminder?
     answer: A calendar reminder is easy to dismiss and forget. A dashboard tile stays visibly overdue until someone marks the task done, which works better for tasks that are easy to keep postponing.
@@ -25,6 +26,23 @@ Track recurring home maintenance tasks, such as HVAC filter changes, on a shared
 
 Maintenance tasks like changing an HVAC filter or checking smoke detector batteries do not have a hard deadline, which makes them easy to keep pushing back. A dashboard tile that stays visibly overdue until marked done works better than a one-time notification that gets dismissed and forgotten.
 
+## Logic
+
+<div class="automation-example">IF it has been more than 75 days since the HVAC filter was last marked done
+THEN mark the "HVAC filter" tile as overdue on the dashboard
+
+IF the "HVAC filter" tile is marked done
+THEN reset its overdue state and restart the 75 day interval</div>
+
+- **Trigger:** A fixed interval since the task was last marked done, such as every 60 to 90 days for an HVAC filter.
+- **Conditions:** The task has not already been marked done within that interval.
+- **Action:** Mark the dashboard tile for that task as overdue.
+- **Wait / timeout:** The tile stays overdue until marked done.
+- **Stop condition:** Marking the task done resets the interval and clears the tile.
+- **Manual override:** Any task can be marked done manually at any time, independent of the schedule.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,21 +56,6 @@ No personally verified recommendation yet. This only needs virtual switches or v
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A fixed interval since the task was last marked done, such as every 60 to 90 days for an HVAC filter.
-- **Conditions:** The task has not already been marked done within that interval.
-- **Action:** Mark the dashboard tile for that task as overdue.
-- **Wait / timeout:** The tile stays overdue until marked done.
-- **Stop condition:** Marking the task done resets the interval and clears the tile.
-- **Manual override:** Any task can be marked done manually at any time, independent of the schedule.
-
-<div class="automation-example">IF it has been more than 75 days since the HVAC filter was last marked done
-THEN mark the "HVAC filter" tile as overdue on the dashboard
-
-IF the "HVAC filter" tile is marked done
-THEN reset its overdue state and restart the 75 day interval</div>
 
 ## Setup notes
 
@@ -78,13 +81,6 @@ Add a secondary notification, separate from the dashboard tile, once a task has 
 - **A task shows overdue immediately after being marked done:** Check that the "last completed" timestamp is being updated correctly rather than left at its previous value.
 - **Dashboard tiles do not update:** Refresh the dashboard view, since some platforms cache tile states.
 - **Too many tasks pile up as overdue at once:** Stagger the initial setup dates so tasks do not all become due in the same week.
-
-## Done when
-
-- [ ] Every tracked task has its own interval and dashboard tile.
-- [ ] A task correctly flags as overdue once its interval passes.
-- [ ] Marking a task done clears its tile and restarts its interval.
-- [ ] The dashboard is somewhere the household actually looks regularly.
 
 ## FAQ
 

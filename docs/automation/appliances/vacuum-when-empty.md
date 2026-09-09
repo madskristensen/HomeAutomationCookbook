@@ -4,6 +4,7 @@ title: Run the vacuum only while the house stays empty
 description: A platform-neutral recipe that starts a robot vacuum only after confirming the home is empty and sends it back to the dock the moment anyone returns.
 keywords: robot vacuum automation, presence-based cleaning, robot vacuum when away, smart vacuum scheduling, vacuum return protection
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: How is this different from a simple auto-start recipe?
     answer: This recipe adds a once-per-day limit and immediately docks the vacuum if anyone returns early, instead of only starting a cleaning cycle.
@@ -25,6 +26,28 @@ Start the robot vacuum only after the home is confirmed empty, limit it to once 
 
 A vacuum that starts when the house is empty is only half the job. It also needs to stop cleaning and return to its dock the moment anyone comes home early, and it should not restart every time someone steps out briefly during the same day.
 
+## Logic
+
+<div class="automation-example">IF the tested presence signal reports the home as empty
+AND the vacuum has not completed a cycle today
+THEN wait a short confirmation period
+IF the home is still reported empty
+THEN start the vacuum's cleaning cycle
+AND mark the daily run as complete
+
+IF the tested presence signal reports anyone home
+AND the vacuum is currently cleaning
+THEN send the vacuum back to its dock immediately</div>
+
+- **Trigger:** The tested presence signal reports the home as empty during the chosen daytime window.
+- **Conditions:** The vacuum has not already completed a cycle today.
+- **Action:** Wait briefly to confirm the departure is real, then start cleaning.
+- **Wait / timeout:** If the confirmed-empty period ends before the wait completes, skip the run for today.
+- **Stop condition:** As soon as the presence signal reports anyone home, send the vacuum back to its dock immediately, whether or not the room it was cleaning is finished.
+- **Manual override:** The vacuum's own app or button can start, stop, or dock it at any time regardless of this automation.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,26 +68,6 @@ No personally verified recommendation yet. Confirm the vacuum accepts a return-t
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
-
-## Logic
-
-- **Trigger:** The tested presence signal reports the home as empty during the chosen daytime window.
-- **Conditions:** The vacuum has not already completed a cycle today.
-- **Action:** Wait briefly to confirm the departure is real, then start cleaning.
-- **Wait / timeout:** If the confirmed-empty period ends before the wait completes, skip the run for today.
-- **Stop condition:** As soon as the presence signal reports anyone home, send the vacuum back to its dock immediately, whether or not the room it was cleaning is finished.
-- **Manual override:** The vacuum's own app or button can start, stop, or dock it at any time regardless of this automation.
-
-<div class="automation-example">IF the tested presence signal reports the home as empty
-AND the vacuum has not completed a cycle today
-THEN wait a short confirmation period
-IF the home is still reported empty
-THEN start the vacuum's cleaning cycle
-AND mark the daily run as complete
-
-IF the tested presence signal reports anyone home
-AND the vacuum is currently cleaning
-THEN send the vacuum back to its dock immediately</div>
 
 ## Setup notes
 
@@ -92,15 +95,6 @@ Send one notification when the vacuum reports it has returned to its dock after 
 - **Vacuum never starts:** Confirm the presence signal actually reports empty during the chosen window and that the per-day flag was reset that day.
 - **Vacuum docks and immediately restarts:** Separate the stop logic from the start logic so a docking event does not itself look like a new empty-house signal.
 - **The presence signal disagrees with reality:** Stop relying on it and retest with a longer confirmation wait rather than tuning indefinitely.
-
-## Done when
-
-- [ ] The vacuum starts only after the confirmed-empty wait completes.
-- [ ] The vacuum returns to its dock within moments of a simulated early return.
-- [ ] The vacuum does not start a second time after completing a cycle the same day.
-- [ ] The per-day flag resets reliably at the chosen time.
-- [ ] A manual skip-today control works and is reset the next day.
-- [ ] The vacuum's own app and buttons still work normally.
 
 ## FAQ
 

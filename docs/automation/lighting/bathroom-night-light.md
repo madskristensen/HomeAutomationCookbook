@@ -4,6 +4,7 @@ title: Turn on a dim bathroom light at night (without waking everyone)
 description: A local-first bathroom night-light recipe that uses motion, low brightness, and a reliable wall-switch fallback.
 keywords: bathroom night light, nighttime motion lighting, low brightness automation, smart bathroom lighting, motion sensor dimming, night mode lighting
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: What brightness should a bathroom night light use?
     answer: Start at 10 percent, then test it in the dark. Raise it only enough for safe navigation.
@@ -24,6 +25,8 @@ Walk in half asleep, get enough light to see, and do not wake the house. If it f
 ## Why this exists
 
 Bright bathroom light at 2am is miserable. This recipe uses only enough light to navigate safely, then hands the shutoff to the paired motion-lighting recipe. It should work without explaining a special night mode to a guest.
+
+💡 For sensor positioning and coverage testing, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html).
 
 <div class="info-box">
   <strong>🌙 Why This Automation Matters</strong>
@@ -54,6 +57,20 @@ Bright bathroom light at 2am is miserable. This recipe uses only enough light to
   </div>
 </div>
 
+## Logic
+
+<div class="automation-example">IF bathroom motion is detected during Night mode or the night window
+THEN turn on the light at 10%</div>
+
+- **Trigger:** Bathroom or entry motion is detected.
+- **Conditions:** Night mode is active or it is within your chosen night window, and optionally the room is dark enough.
+- **Action:** Turn on the bathroom light at 10 percent. Set a warm color temperature only if the light supports it.
+- **Wait / timeout:** The paired [turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html) recipe owns the timeout. Start at 10 minutes for a shower bathroom.
+- **Stop condition:** New motion cancels the shutoff. A manual wall-switch change wins.
+- **Manual override:** The wall switch still wins.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -74,18 +91,6 @@ Bright bathroom light at 2am is miserable. This recipe uses only enough light to
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** Bathroom or entry motion is detected.
-- **Conditions:** Night mode is active or it is within your chosen night window, and optionally the room is dark enough.
-- **Action:** Turn on the bathroom light at 10 percent. Set a warm color temperature only if the light supports it.
-- **Wait / timeout:** The paired [turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html) recipe owns the timeout. Start at 10 minutes for a shower bathroom.
-- **Stop condition:** New motion cancels the shutoff. A manual wall-switch change wins.
-- **Manual override:** The wall switch still wins.
-
-<div class="automation-example">IF bathroom motion is detected during Night mode or the night window
-THEN turn on the light at 10%</div>
 
 ## Setup notes
 
@@ -269,14 +274,6 @@ See [turn lights off after motion stops](/automation/lighting/lights-off-after-m
 - **The sensor sees a hallway instead:** Aim and test the sensor so passing traffic does not light the bathroom unnecessarily.
 - **A guest uses the wall switch:** Treat it as the final answer. The next automation must not immediately undo that choice.
 - **The hub or internet is down:** The wall switch remains the fallback. Confirm that any relied-on Level 2 path is local.
-
-## Done when
-
-- [ ] Enter during the night window and the room has enough light to navigate before you reach the switch.
-- [ ] Enter outside the night window and the recipe does not turn on the dim night setting.
-- [ ] Shower or sit still for the chosen off timeout and confirm the light does not turn off.
-- [ ] Use the physical switch and verify the automation respects it.
-- [ ] Have someone who did not configure the automation use the room at night.
 
 ## FAQ
 

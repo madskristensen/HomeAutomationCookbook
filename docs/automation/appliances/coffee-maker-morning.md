@@ -4,6 +4,7 @@ title: Prepare morning coffee with a deliberate ready step
 description: Prepare the coffee maker the night before and get a clear morning result without wondering whether it was actually made ready.
 keywords: morning coffee reminder, delayed brew coffee, coffee ready mode, morning routine, coffee maker safety
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Does an off smart plug prove that the coffee maker is loaded?
     answer: No. Plug state says nothing about water, grounds, the carafe, or whether the machine is clean and assembled. Readiness must come from a deliberate person.
@@ -26,6 +27,27 @@ A person loads the coffee maker and explicitly marks it ready, then the machine 
 The coffee maker's delayed-brew feature can remove one more step from the morning, while an explicit Ready state keeps anyone from wondering whether it was prepared the night before. An outlet cannot see water, grounds, the carafe, or a blocked basket, so an off plug is not a ready signal.
 
 Keep brewing inside the coffee maker's documented controls. Home automation can remind someone to prepare it and track an explicit Ready for morning state, but it should fail by skipping coffee rather than starting an unprepared heating appliance.
+
+## Logic
+
+<div class="automation-example">AT evening preparation time
+THEN remind a person to prepare the coffee maker
+
+IF a person loads and checks the machine
+AND sets the machine's own delayed-brew control
+THEN the person marks Ready for morning
+
+IF Ready was never set
+THEN do not brew automatically</div>
+
+- **Trigger:** Evening preparation time or the household bedtime routine.
+- **Conditions:** None for the reminder.
+- **Action:** Remind a person to load the machine, set its approved delayed-brew controls, and deliberately mark Ready for morning.
+- **Wait / timeout:** Clear Ready after the expected brew window whether brewing occurred or not.
+- **Stop condition:** A person cancels Ready or the morning window ends.
+- **Manual override:** The coffee maker's own controls always remain primary.
+
+
 
 ## What I used
 
@@ -54,25 +76,6 @@ Evening phone reminder. The reminder never starts the appliance.
 </div>
 
 No coffee maker or remote-start accessory is recommended until I have verified it.
-
-## Logic
-
-- **Trigger:** Evening preparation time or the household bedtime routine.
-- **Conditions:** None for the reminder.
-- **Action:** Remind a person to load the machine, set its approved delayed-brew controls, and deliberately mark Ready for morning.
-- **Wait / timeout:** Clear Ready after the expected brew window whether brewing occurred or not.
-- **Stop condition:** A person cancels Ready or the morning window ends.
-- **Manual override:** The coffee maker's own controls always remain primary.
-
-<div class="automation-example">AT evening preparation time
-THEN remind a person to prepare the coffee maker
-
-IF a person loads and checks the machine
-AND sets the machine's own delayed-brew control
-THEN the person marks Ready for morning
-
-IF Ready was never set
-THEN do not brew automatically</div>
 
 ## Setup notes
 
@@ -111,16 +114,6 @@ Display Not prepared, Ready for morning, and Expired. Do not display Brewed unle
 - **The carafe or basket is missing:** The person preparing the machine catches it before setting Ready.
 - **Power returns after an outage:** Follow the appliance instructions and require preparation again if its clock or schedule reset.
 - **The hub is unavailable:** The appliance's documented delayed-brew feature and manual controls remain independent.
-
-## Done when
-
-- [ ] The coffee maker's own instructions support delayed brewing.
-- [ ] A person completes the preparation checklist before marking Ready.
-- [ ] Plug, motion, time, and presence states cannot mark the machine ready.
-- [ ] Ready expires after each morning window.
-- [ ] Cancel is available from the normal household routine.
-- [ ] Missing preparation results in no automatic brew.
-- [ ] Appliance controls and safety features remain unchanged.
 
 ## FAQ
 

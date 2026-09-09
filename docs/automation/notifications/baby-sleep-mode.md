@@ -4,6 +4,7 @@ title: Set a nursery quiet mode without guessing whether a baby is asleep
 description: Let a caregiver explicitly request nursery quiet mode while urgent safety alerts, manual controls, and normal emergency behavior remain active.
 keywords: nursery quiet mode, baby sleep automation, quiet lighting, nursery automation, caregiver control
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Can white-noise power use prove that a baby is asleep?
     answer: No. It can be a convenient hint that quiet mode was requested, but it does not reveal whether anyone is asleep, awake, present, or safe.
@@ -26,6 +27,26 @@ A caregiver explicitly selects Quiet, and the room uses dimmer, quieter convenie
 Caregivers should decide when the nursery enters Quiet mode rather than leaving that judgment to a sensor. A white-noise machine can be on while a baby is awake, and it can be off while a baby is asleep. Power use is not proof of sleep, presence, identity, or safety.
 
 Model the thing the automation actually knows: a caregiver requested Quiet mode. Keep its effects narrow, visible, easy to cancel, and separate from every urgent alert.
+
+## Logic
+
+<div class="automation-example">IF a caregiver selects Nursery Quiet
+THEN use dim path lighting
+AND lower only optional household sounds
+
+KEEP smoke, carbon-monoxide, leak, security, medical, and urgent alerts active
+
+IF a caregiver selects Normal
+THEN restore normal convenience behavior</div>
+
+- **Trigger:** A caregiver deliberately selects Quiet.
+- **Conditions:** None based on inferred sleep, motion, sound, or device power.
+- **Action:** Use the household's chosen dim lighting and lower only optional chimes or media.
+- **Wait / timeout:** Remind the caregiver after the expected quiet window, but do not silently change safety behavior.
+- **Stop condition:** A caregiver selects Normal.
+- **Manual override:** Physical light, audio, monitor, and emergency controls remain usable.
+
+
 
 ## What I used
 
@@ -52,24 +73,6 @@ The same visible control. Automatic expiry may remind, but must not claim anyone
 
 </div>
 </div>
-
-## Logic
-
-- **Trigger:** A caregiver deliberately selects Quiet.
-- **Conditions:** None based on inferred sleep, motion, sound, or device power.
-- **Action:** Use the household's chosen dim lighting and lower only optional chimes or media.
-- **Wait / timeout:** Remind the caregiver after the expected quiet window, but do not silently change safety behavior.
-- **Stop condition:** A caregiver selects Normal.
-- **Manual override:** Physical light, audio, monitor, and emergency controls remain usable.
-
-<div class="automation-example">IF a caregiver selects Nursery Quiet
-THEN use dim path lighting
-AND lower only optional household sounds
-
-KEEP smoke, carbon-monoxide, leak, security, medical, and urgent alerts active
-
-IF a caregiver selects Normal
-THEN restore normal convenience behavior</div>
 
 ## Setup notes
 
@@ -106,16 +109,6 @@ A caregiver can temporarily brighten the room for feeding, medicine, or cleanup 
 - **An urgent alert is muted:** Remove Quiet from that alert path immediately and retest every urgent category.
 - **The hub restarts:** Restore a visible known state or ask for confirmation. Do not infer sleep.
 - **A guest does not understand the mode:** Use plain labels and keep normal room controls functional.
-
-## Done when
-
-- [ ] A caregiver deliberately starts and ends Quiet mode.
-- [ ] The state is labeled Quiet, not Sleeping.
-- [ ] Only documented convenience behaviors change.
-- [ ] Every urgent safety, security, and medical alert still runs.
-- [ ] Physical lighting and audio controls still work.
-- [ ] Power, motion, sound, and camera signals do not infer sleep or identity.
-- [ ] A forgotten mode creates a reminder rather than a false wake assumption.
 
 ## FAQ
 

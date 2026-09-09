@@ -4,6 +4,7 @@ title: Prepare the house when someone arrives (without automatic unlocking)
 description: Restore Home mode, light a safe path, and return the house to its normal comfort settings without treating phone location as proof that the right person is at the door.
 keywords: arrival home automation, welcome home automation, presence detection, entry lighting, home mode automation
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Should arrival automation unlock the front door?
     answer: Not from phone location alone. Keep a key, keypad, or deliberate lock action as the normal entry path unless a separately tested lock feature meets the household's security requirements.
@@ -26,6 +27,24 @@ When the first person returns, the house switches to Home, lights a safe path wh
 Arrival automation should remove small annoyances without creating a security shortcut. Phone location is useful for preparing lights and climate because those actions are easy to reverse. It is not strong proof that the right person is standing at the door.
 
 Use arrival to restore Home mode. Keep entry access deliberate unless the household separately tests and accepts a lock's own arrival feature.
+
+## Logic
+
+<div class="automation-example">IF the first person changes from Away to Home
+AND the arrival remains stable
+THEN set the house to Home
+AND light the entry path if it is dark
+AND restore approved comfort settings
+BUT do not unlock a door from phone location alone</div>
+
+- **Trigger:** A tracked household member changes from Away to Home.
+- **Conditions:** The house was actually in Away mode, the arrival remains stable briefly, and this is the first person home.
+- **Action:** Set the house to Home, turn on entry or path lights if it is dark, restore the approved thermostat setting, and send a concise status notification.
+- **Wait / timeout:** Wait long enough to reject a momentary location jump before running nonessential actions.
+- **Stop condition:** The presence signal returns to Away before the confirmation delay ends.
+- **Manual override:** Physical switches, thermostat controls, keys, and keypads still work normally.
+
+
 
 ## What I used
 
@@ -54,22 +73,6 @@ Use your platform's built-in presence feature (phone location or network connect
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A tracked household member changes from Away to Home.
-- **Conditions:** The house was actually in Away mode, the arrival remains stable briefly, and this is the first person home.
-- **Action:** Set the house to Home, turn on entry or path lights if it is dark, restore the approved thermostat setting, and send a concise status notification.
-- **Wait / timeout:** Wait long enough to reject a momentary location jump before running nonessential actions.
-- **Stop condition:** The presence signal returns to Away before the confirmation delay ends.
-- **Manual override:** Physical switches, thermostat controls, keys, and keypads still work normally.
-
-<div class="automation-example">IF the first person changes from Away to Home
-AND the arrival remains stable
-THEN set the house to Home
-AND light the entry path if it is dark
-AND restore approved comfort settings
-BUT do not unlock a door from phone location alone</div>
 
 ## Setup notes
 
@@ -121,16 +124,6 @@ A deliberate door unlock, garage-door operation, or entry contact event can conf
 - **Lights turn on during daylight:** Add a darkness condition to lighting actions, not to the Home-state change.
 - **Climate restores too early:** Move climate recovery to a confirmed Home state or use a smaller approaching area.
 - **The hub or internet is down:** Keys, keypads, wall switches, alarm controls, and thermostat controls remain the fallback.
-
-## Done when
-
-- [ ] Passing near the property does not switch the house to Home.
-- [ ] The first real arrival restores Home mode reliably.
-- [ ] A second person's arrival does not repeat whole-house actions.
-- [ ] Entry lighting runs only when it is useful.
-- [ ] No door, garage, gate, or alarm changes from phone location alone.
-- [ ] Every entry and comfort device remains manually usable.
-- [ ] Someone who did not configure the automation can enter normally.
 
 ## FAQ
 

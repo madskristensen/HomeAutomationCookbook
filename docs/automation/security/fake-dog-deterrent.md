@@ -4,6 +4,7 @@ title: Play dog barking sounds as an intruder deterrent
 description: A platform-neutral recipe that plays a dog barking sound through a speaker when motion is detected while away, as a supplementary deterrent layer.
 keywords: fake dog deterrent, dog barking security, motion triggered sound, intruder deterrent, smart home security
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Does this actually fool anyone into thinking there is a real dog?
     answer: It does not need to fully convince anyone. The goal is to add a moment of hesitation and an audible signal that something in the home reacted, which can be enough to change an opportunistic intruder's decision.
@@ -25,6 +26,23 @@ Play a dog barking sound through a speaker when motion is detected while the hom
 
 A sound reacting to motion, even one that is not perfectly convincing, adds a moment of uncertainty for anyone approaching a home that otherwise looks unattended. It is an addition on top of existing motion sensors and speakers, without new dedicated hardware.
 
+## Logic
+
+<div class="automation-example">IF motion is detected at an entry point
+AND the home is in Away mode
+AND no bark has played in the last 5 minutes
+THEN play a dog barking sound on the nearby speaker
+AND send a notification that motion was detected</div>
+
+- **Trigger:** A motion sensor covering an entry point detects movement.
+- **Conditions:** The home is in Away mode and, optionally, the time is within a defined nighttime window.
+- **Action:** Play a dog barking audio clip on a nearby speaker at a moderate volume, and send a notification.
+- **Wait / timeout:** The clip plays once per trigger, roughly 10 to 30 seconds.
+- **Stop condition:** A cooldown period, such as several minutes, prevents repeat playback from continued motion in the same area.
+- **Manual override:** The speaker and its normal use remain available at any time outside of this automation.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,21 +63,6 @@ Any speaker the platform can control works, for example a Sonos speaker, which i
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A motion sensor covering an entry point detects movement.
-- **Conditions:** The home is in Away mode and, optionally, the time is within a defined nighttime window.
-- **Action:** Play a dog barking audio clip on a nearby speaker at a moderate volume, and send a notification.
-- **Wait / timeout:** The clip plays once per trigger, roughly 10 to 30 seconds.
-- **Stop condition:** A cooldown period, such as several minutes, prevents repeat playback from continued motion in the same area.
-- **Manual override:** The speaker and its normal use remain available at any time outside of this automation.
-
-<div class="automation-example">IF motion is detected at an entry point
-AND the home is in Away mode
-AND no bark has played in the last 5 minutes
-THEN play a dog barking sound on the nearby speaker
-AND send a notification that motion was detected</div>
 
 ## Setup notes
 
@@ -86,13 +89,6 @@ Use a lower volume during typical daytime hours, when a delivery or passerby is 
 - **Sound is quiet or distorted:** Check the audio file quality and reduce volume slightly if it is causing distortion at higher levels.
 - **Neighbors notice frequent triggering:** Lower the volume, narrow Away-mode playback to nighttime, and increase the cooldown.
 - **Sound plays while someone is home:** Require Away mode as a mandatory condition. A nighttime schedule alone is not enough.
-
-## Done when
-
-- [ ] The sound plays reliably when the entry-point motion sensor triggers under the right conditions.
-- [ ] The cooldown prevents repeated playback from continued motion.
-- [ ] The volume is reasonable for both effectiveness and neighbor consideration.
-- [ ] The automation runs only in Away mode.
 
 ## FAQ
 

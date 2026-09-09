@@ -4,6 +4,7 @@ title: Light the path to your door after a confirmed arrival
 description: Make the final steps to the door easier after dark while leaving the lock and manually controlled lights alone.
 keywords: arrival lighting, welcome home lights, entry light automation, outdoor arrival lights, verified presence lighting
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Why not turn on the lights as soon as a phone enters the home area?
     answer: Phone location can drift or trigger while someone passes nearby. Use it only to create a short pending-arrival window, then require a physical entry signal before running the welcome lights.
@@ -26,6 +27,28 @@ After dark, confirm that someone has reached the entry before turning on the por
 Arrival lighting should make the final steps to the door easier, not advertise every location wobble. Phone presence can suggest that someone is approaching, but a door contact, deliberate garage operation, keypad event, or other tested property signal is stronger evidence that the arrival is real.
 
 The old version of this page described a multi-zone driveway wave without verified hardware. This recipe uses lighting and contact hardware I have used instead. Add more zones only after each physical light and trigger exists and works independently.
+
+## Logic
+
+<div class="automation-example">IF a candidate arrival creates Pending arrival
+AND a tested entry signal occurs before that state expires
+AND it is dark
+THEN turn on the approved entry light if it was off
+AND mark that light as owned by this welcome run
+
+IF the entry timeout ends
+AND the welcome run still owns the light
+THEN turn it off
+BUT never unlock a door or move a garage</div>
+
+- **Trigger:** A pending-arrival state is followed by a tested physical entry signal within a short confirmation window.
+- **Conditions:** It is dark, the home was Away before the candidate arrival, no safety mode blocks the action, and the target light is not already on.
+- **Action:** Turn on the approved entry or path light and mark only that light as owned by this welcome run.
+- **Wait / timeout:** Keep the light on for a household-tested entry period, then turn it off only if automation still owns it.
+- **Stop condition:** The pending arrival expires without a physical signal, the person returns to Away, or a manual light change cancels ownership.
+- **Manual override:** Wall switches, outdoor plug controls, keys, keypads, locks, and garage controls remain independent.
+
+
 
 ## What I used
 
@@ -61,26 +84,6 @@ Use your platform's built-in presence feature, driven by phone location, only to
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A pending-arrival state is followed by a tested physical entry signal within a short confirmation window.
-- **Conditions:** It is dark, the home was Away before the candidate arrival, no safety mode blocks the action, and the target light is not already on.
-- **Action:** Turn on the approved entry or path light and mark only that light as owned by this welcome run.
-- **Wait / timeout:** Keep the light on for a household-tested entry period, then turn it off only if automation still owns it.
-- **Stop condition:** The pending arrival expires without a physical signal, the person returns to Away, or a manual light change cancels ownership.
-- **Manual override:** Wall switches, outdoor plug controls, keys, keypads, locks, and garage controls remain independent.
-
-<div class="automation-example">IF a candidate arrival creates Pending arrival
-AND a tested entry signal occurs before that state expires
-AND it is dark
-THEN turn on the approved entry light if it was off
-AND mark that light as owned by this welcome run
-
-IF the entry timeout ends
-AND the welcome run still owns the light
-THEN turn it off
-BUT never unlock a door or move a garage</div>
 
 ## Setup notes
 
@@ -128,18 +131,6 @@ If the outdoor-night-light recipe already owns the porch light, the arrival reci
 - **The entry contact fires for departures:** Require the pending-arrival or known arrival context, not the contact event alone.
 - **The sensor becomes unavailable:** Expire pending arrival without running the light and show a maintenance warning.
 - **The hub or internet is down:** The wall switch, plug control, key, keypad, and garage control remain normal fallbacks.
-
-## Done when
-
-- [ ] Passing near the property never turns on the welcome light.
-- [ ] A real after-dark arrival turns on the light before it is needed.
-- [ ] Daylight arrivals do not change lighting.
-- [ ] A light already on remains under its original schedule or manual control.
-- [ ] A manual change cancels welcome-light ownership.
-- [ ] Departure contact events do not look like arrivals.
-- [ ] A second arrival changes only the entry lighting.
-- [ ] No lock, garage, gate, or alarm changes from this recipe.
-- [ ] The entry remains usable when the hub or internet is unavailable.
 
 ## FAQ
 

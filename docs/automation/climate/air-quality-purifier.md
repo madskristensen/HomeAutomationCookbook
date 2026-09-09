@@ -4,6 +4,7 @@ title: Run the air purifier when indoor air quality drops
 description: A platform-neutral recipe that runs a plug-controlled air purifier when an air quality sensor reports a sustained drop, and stops nagging once the air clears.
 keywords: air quality automation, air purifier control, AQI sensor automation, PM2.5 automation, indoor air quality
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Why require a sustained reading instead of reacting to a single spike?
     answer: Cooking and brief odors cause short spikes that clear on their own. A sustained reading over several minutes better reflects an actual air quality problem worth running the purifier for.
@@ -25,6 +26,26 @@ Watch an air quality sensor for a sustained unhealthy reading, run the purifier,
 
 Cooking, cleaning products, and pet activity all cause brief air quality dips that clear on their own. Reacting to every small spike leads to a purifier that runs constantly and an alert nobody trusts. Requiring a sustained reading, then confirming the air has cleared before stopping, keeps the automation both useful and quiet.
 
+## Logic
+
+<div class="automation-example">IF the air quality sensor reports unhealthy
+AND the reading holds for several minutes
+THEN turn on the purifier
+
+IF the air quality sensor reports healthy
+AND the purifier is currently on
+AND the healthy reading holds for a similar confirmation period
+THEN turn off the purifier</div>
+
+- **Trigger:** The air quality sensor reports an unhealthy reading.
+- **Conditions:** The sensor is available and the reading has held at an unhealthy level for several minutes.
+- **Action:** Turn on the purifier, choosing a higher speed for a worse reading if the purifier supports it.
+- **Wait / timeout:** Keep the purifier running until the reading returns to a healthy level and stays there for a similar confirmation period.
+- **Stop condition:** Turn off the purifier once the air has stayed clear through the confirmation period.
+- **Manual override:** The purifier's own power button or app control always works regardless of the automation.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,24 +66,6 @@ No personally verified recommendation yet. I have not verified a specific air qu
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The air quality sensor reports an unhealthy reading.
-- **Conditions:** The sensor is available and the reading has held at an unhealthy level for several minutes.
-- **Action:** Turn on the purifier, choosing a higher speed for a worse reading if the purifier supports it.
-- **Wait / timeout:** Keep the purifier running until the reading returns to a healthy level and stays there for a similar confirmation period.
-- **Stop condition:** Turn off the purifier once the air has stayed clear through the confirmation period.
-- **Manual override:** The purifier's own power button or app control always works regardless of the automation.
-
-<div class="automation-example">IF the air quality sensor reports unhealthy
-AND the reading holds for several minutes
-THEN turn on the purifier
-
-IF the air quality sensor reports healthy
-AND the purifier is currently on
-AND the healthy reading holds for a similar confirmation period
-THEN turn off the purifier</div>
 
 ## Setup notes
 
@@ -90,15 +93,6 @@ If no purifier is connected yet, send a notification suggesting ventilation or c
 - **Cooking triggers the purifier every time:** Lengthen the sustained-reading delay or raise the threshold slightly during cooking hours.
 - **Purifier cycles on and off repeatedly:** Widen the gap between the on and off thresholds, or require a longer confirmation period.
 - **Sensor goes unavailable:** Treat the missing reading as unknown and leave the purifier in its current state rather than assuming clean air.
-
-## Done when
-
-- [ ] A few days of baseline readings inform the chosen thresholds.
-- [ ] A brief cooking spike does not start the purifier.
-- [ ] A sustained unhealthy reading reliably starts the purifier.
-- [ ] The purifier turns off only after the air has stayed clear through the confirmation period.
-- [ ] The purifier's own switch and app control still work normally.
-- [ ] An unavailable sensor reading does not force the purifier on or off.
 
 ## FAQ
 

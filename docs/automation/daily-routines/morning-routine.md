@@ -4,6 +4,7 @@ title: Start a quiet good-morning routine
 description: A platform-neutral morning routine that starts from an intentional signal, lights only the needed path, and leaves sleeping household members undisturbed.
 keywords: good morning routine, morning lighting automation, quiet wake-up automation, smart home morning, family morning routine
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Why not trigger the whole routine from bedroom motion?
     answer: One person may get up briefly or wake earlier than everyone else. Use an intentional button, phrase, or alarm dismissal as the main trigger and keep motion limited to local path lighting.
@@ -26,6 +27,27 @@ Use one intentional signal to leave Night mode, light the route someone needs, a
 Morning is a transition, not a fixed time. A schedule cannot know whether the household is awake, someone is sick, school is delayed, or a guest is sleeping. Motion cannot tell a real wake-up from a quick bathroom trip.
 
 An intentional trigger gives the first awake person control. Local motion lighting can still make the path safe without declaring that the whole home is ready for daytime behavior.
+
+## Logic
+
+<div class="automation-example">IF a person intentionally starts Good morning
+AND the home is in Night mode
+AND no Guest or safety override is active
+THEN change Night mode to Home
+AND light that person's morning path gently
+AND restore approved comfort settings
+
+IF a shared room is still unoccupied
+THEN leave its lights, blinds, and audio unchanged</div>
+
+- **Trigger:** A person intentionally presses the morning button, uses the morning phrase, or dismisses a verified wake alarm.
+- **Conditions:** The home is in Night mode, no Guest, Vacation, Away, or safety override is active, and the routine is enabled for that person or schedule.
+- **Action:** Change Night to Home, light only the needed route at a gentle level, and restore previously approved morning comfort settings.
+- **Wait / timeout:** Delay shared-room actions until someone enters that room or explicitly starts the shared routine.
+- **Stop condition:** The routine finishes after its one-time actions and cannot run again until the next Night-mode cycle.
+- **Manual override:** Any light, thermostat, blind, or media control remains independently usable.
+
+
 
 ## What I used
 
@@ -54,25 +76,6 @@ A "Good morning" voice phrase or manual scene control. The trigger should be int
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A person intentionally presses the morning button, uses the morning phrase, or dismisses a verified wake alarm.
-- **Conditions:** The home is in Night mode, no Guest, Vacation, Away, or safety override is active, and the routine is enabled for that person or schedule.
-- **Action:** Change Night to Home, light only the needed route at a gentle level, and restore previously approved morning comfort settings.
-- **Wait / timeout:** Delay shared-room actions until someone enters that room or explicitly starts the shared routine.
-- **Stop condition:** The routine finishes after its one-time actions and cannot run again until the next Night-mode cycle.
-- **Manual override:** Any light, thermostat, blind, or media control remains independently usable.
-
-<div class="automation-example">IF a person intentionally starts Good morning
-AND the home is in Night mode
-AND no Guest or safety override is active
-THEN change Night mode to Home
-AND light that person's morning path gently
-AND restore approved comfort settings
-
-IF a shared room is still unoccupied
-THEN leave its lights, blinds, and audio unchanged</div>
 
 ## Setup notes
 
@@ -121,17 +124,6 @@ Weather, calendar, or travel information can be a separate spoken request. Do no
 - **The thermostat fights another recipe:** Do not restore comfort while a window pause, safety limit, or manual hold owns climate control.
 - **A delayed action overrides a manual choice:** Cancel pending actions when the affected device is changed manually.
 - **The hub is unavailable:** Wall switches and the thermostat still provide normal morning control.
-
-## Done when
-
-- [ ] A bathroom trip does not start the full routine.
-- [ ] The intentional trigger works without opening an app.
-- [ ] Only the needed path lights during a personal start.
-- [ ] Away, Vacation, Guest, and safety modes are never overwritten.
-- [ ] A second trigger does not duplicate announcements or device changes.
-- [ ] Manual light and thermostat changes are respected.
-- [ ] The cancel action prevents pending shared-room behavior.
-- [ ] The household can complete the morning normally when the hub is unavailable.
 
 ## FAQ
 

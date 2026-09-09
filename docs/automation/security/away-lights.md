@@ -4,6 +4,7 @@ title: Turn on away lights to look occupied
 description: A platform-neutral recipe that turns on a few strategic lights while away to make the home look occupied, without an unnatural all-lights-on pattern.
 keywords: away lights, security lighting, home occupied simulation, break-in deterrent, smart home security
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Will turning on a couple of lights actually deter a break-in?
     answer: There is no certainty either way, but a home that looks occupied is generally considered less appealing to an opportunistic intruder than one that clearly looks empty. This is one layer among several, not a guarantee.
@@ -24,6 +25,25 @@ Turn on a couple of strategic lights while away, on a schedule that mimics norma
 ## Why this exists
 
 A home with every light off every evening, night after night, is a visible pattern to anyone paying attention. Turning on a couple of lights that a person home alone would realistically use, on a normal evening schedule, is a simple layer that avoids an obviously empty appearance.
+
+## Logic
+
+<div class="automation-example">IF the home enters Away mode
+AND the time is between sunset and 11:00 PM
+THEN turn on the away lights scene
+
+IF the time reaches 11:00 PM
+AND the home is still in Away mode
+THEN turn off the away lights scene</div>
+
+- **Trigger:** The home enters Away mode, or the time reaches sunset while already in Away mode.
+- **Conditions:** The home is currently in Away mode, and the time is between sunset and a set cutoff, such as 11:00 PM.
+- **Action:** Turn on the selected away lights, ideally as a single scene rather than individually.
+- **Wait / timeout:** The lights stay on until the cutoff time.
+- **Stop condition:** The cutoff time is reached, or the home leaves Away mode because someone returns.
+- **Manual override:** Every light switch keeps its normal physical and app-based control, regardless of Away mode.
+
+
 
 ## What I used
 
@@ -53,23 +73,6 @@ A home with every light off every evening, night after night, is a visible patte
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-## Logic
-
-- **Trigger:** The home enters Away mode, or the time reaches sunset while already in Away mode.
-- **Conditions:** The home is currently in Away mode, and the time is between sunset and a set cutoff, such as 11:00 PM.
-- **Action:** Turn on the selected away lights, ideally as a single scene rather than individually.
-- **Wait / timeout:** The lights stay on until the cutoff time.
-- **Stop condition:** The cutoff time is reached, or the home leaves Away mode because someone returns.
-- **Manual override:** Every light switch keeps its normal physical and app-based control, regardless of Away mode.
-
-<div class="automation-example">IF the home enters Away mode
-AND the time is between sunset and 11:00 PM
-THEN turn on the away lights scene
-
-IF the time reaches 11:00 PM
-AND the home is still in Away mode
-THEN turn off the away lights scene</div>
-
 ## Setup notes
 
 1. Choose two or three lights that a person home alone would realistically use, such as a living room lamp and one bedroom light; avoid lighting every room.
@@ -94,13 +97,6 @@ Alternate which rooms light up on different nights during an extended absence, s
 - **Lights do not turn off at the cutoff:** Check that Away mode is still active at that time and that no other automation is overriding the schedule.
 - **Pattern looks the same every night:** Add staggered timing or room rotation so it is less obviously automated.
 - **Lights stay on after returning home:** Confirm arriving home correctly disables Away mode, since this automation depends on that condition to stop.
-
-## Done when
-
-- [ ] The selected lights turn on at sunset only while Away mode is active.
-- [ ] The lights turn off at the scheduled cutoff time.
-- [ ] Returning home stops the pattern correctly.
-- [ ] The lighting pattern uses a couple of rooms rather than the entire house.
 
 ## FAQ
 

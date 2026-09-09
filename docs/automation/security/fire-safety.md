@@ -4,6 +4,7 @@ title: Support a fire evacuation without delaying the alarm
 description: A conservative fire-response recipe that treats listed smoke alarms as primary, turns on useful lighting immediately, and never infers that a fire is over.
 keywords: fire safety automation, smoke alarm notification, evacuation lighting, smart home fire alert, smoke alarm listener
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Should a smart-home rule wait for a second smoke alarm before responding?
     answer: No. Never delay an alarm, evacuation, or emergency call while waiting for another sensor. Any automation is supplemental to the installed smoke and carbon-monoxide alarms.
@@ -26,6 +27,25 @@ When a listed smoke or carbon-monoxide alarm activates, optional lighting and no
 A smart home can make an alarm easier to notice, especially at night. It must not become part of the life-safety decision. The installed alarms, clear exits, and the household evacuation plan still work when the hub, power, or internet is unavailable.
 
 This recipe deliberately excludes automatic door unlocking, irrigation, alarm delays, and automatic all-clear messages.
+
+## Logic
+
+<div class="automation-example">IF a supported smoke or carbon-monoxide alarm reports an alarm
+THEN turn on the tested evacuation-path lights
+AND send a supplemental alert naming the alarm
+
+DO NOT delay the response
+DO NOT unlock doors automatically
+DO NOT declare an all-clear automatically</div>
+
+- **Trigger:** A supported alarm integration reports smoke or carbon monoxide.
+- **Conditions:** None. Do not add mode, time, occupancy, or multi-sensor confirmation conditions.
+- **Action:** Turn on fixed path and exterior lights that are safe to operate, then send a supplemental alert naming the reported alarm.
+- **Wait / timeout:** None before the first response.
+- **Stop condition:** A responsible person manually resets the supplemental response after emergency services or a qualified person says it is safe.
+- **Manual override:** Wall switches, normal locks, alarm controls, and exits remain usable without the hub.
+
+
 
 ## What I used
 
@@ -61,23 +81,6 @@ Alarm sound and practiced evacuation plan. A phone notification is not the prima
 </div>
 
 Do not add an unlisted relay, microphone, or modification to alarm wiring. Use only equipment and installation methods approved for the installed alarm system.
-
-## Logic
-
-- **Trigger:** A supported alarm integration reports smoke or carbon monoxide.
-- **Conditions:** None. Do not add mode, time, occupancy, or multi-sensor confirmation conditions.
-- **Action:** Turn on fixed path and exterior lights that are safe to operate, then send a supplemental alert naming the reported alarm.
-- **Wait / timeout:** None before the first response.
-- **Stop condition:** A responsible person manually resets the supplemental response after emergency services or a qualified person says it is safe.
-- **Manual override:** Wall switches, normal locks, alarm controls, and exits remain usable without the hub.
-
-<div class="automation-example">IF a supported smoke or carbon-monoxide alarm reports an alarm
-THEN turn on the tested evacuation-path lights
-AND send a supplemental alert naming the alarm
-
-DO NOT delay the response
-DO NOT unlock doors automatically
-DO NOT declare an all-clear automatically</div>
 
 ## Setup notes
 
@@ -120,16 +123,6 @@ Glass-break and intrusion events have different risks and actions. Do not combin
 - **The wrong location appears:** Rename and retest the integration so the message does not send someone toward danger.
 - **The alarm stops:** Keep the supplemental incident open until a person with authority at the scene clears it.
 - **Power or internet fails:** Battery-backed alarms and practiced exits must still work.
-
-## Done when
-
-- [ ] The installed alarms meet local requirements and pass their manufacturer test.
-- [ ] Everyone can leave through normal exits without the hub or phone.
-- [ ] Supplemental lights and messages run immediately from the supported alarm event.
-- [ ] The first response has no time, mode, occupancy, or confirmation condition.
-- [ ] No automation unlocks doors, starts irrigation, or declares an all-clear.
-- [ ] Missing integration data creates a maintenance alert.
-- [ ] The household has practiced the evacuation plan and meeting place.
 
 ## FAQ
 

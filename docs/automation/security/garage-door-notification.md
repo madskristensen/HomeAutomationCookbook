@@ -4,6 +4,7 @@ title: Get notified when the garage door is left open
 description: A platform-neutral recipe that alerts when a garage door has been left open too long. Alerting only; closing stays manual or with equipment built for it.
 keywords: garage door notification, garage door left open, garage door sensor, garage door automation, garage door alert
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: How long should the garage door be open before I get a notification?
     answer: Around 10 to 15 minutes works well for normal daytime use, such as loading a car. A shorter window, such as 5 minutes, makes sense at night or while the home is in Away mode.
@@ -25,6 +26,25 @@ Send a notification when the garage door has been open longer than expected. Thi
 
 A garage door left open is an easy thing to forget about, whether it was left open while unloading a car or simply overlooked before bed. A notification after it has been open longer than expected catches this before it becomes a security or weather problem, without moving the door on its own.
 
+## Logic
+
+<div class="automation-example">IF the garage door has been open for 10 minutes
+THEN send a notification: "Garage door has been open for 10 minutes"
+
+IF the garage door is still open at 10:00 PM
+THEN send a high-priority notification: "Garage door still open at bedtime"
+
+DO NOT close the door automatically from this recipe</div>
+
+- **Trigger:** The garage door sensor reports "open" and stays in that state for a set duration, such as 10 minutes.
+- **Conditions:** The door is still open at the time the duration elapses.
+- **Action:** Send a notification stating how long the door has been open.
+- **Wait / timeout:** None beyond the initial delay; this recipe does not attempt to close the door.
+- **Stop condition:** The door being closed manually clears the alert.
+- **Manual override:** The garage door opener's physical button and any app-based control remain available at all times and are the only way this recipe expects the door to close.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,23 +58,6 @@ A garage door left open is an easy thing to forget about, whether it was left op
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The garage door sensor reports "open" and stays in that state for a set duration, such as 10 minutes.
-- **Conditions:** The door is still open at the time the duration elapses.
-- **Action:** Send a notification stating how long the door has been open.
-- **Wait / timeout:** None beyond the initial delay; this recipe does not attempt to close the door.
-- **Stop condition:** The door being closed manually clears the alert.
-- **Manual override:** The garage door opener's physical button and any app-based control remain available at all times and are the only way this recipe expects the door to close.
-
-<div class="automation-example">IF the garage door has been open for 10 minutes
-THEN send a notification: "Garage door has been open for 10 minutes"
-
-IF the garage door is still open at 10:00 PM
-THEN send a high-priority notification: "Garage door still open at bedtime"
-
-DO NOT close the door automatically from this recipe</div>
 
 ## Setup notes
 
@@ -76,13 +79,6 @@ Send a standard notification at 10 minutes, a stronger reminder at 30 minutes, a
 - **Notifications do not arrive:** Confirm notification permissions for the platform's app and that the automation itself is enabled.
 - **Too many repeat notifications:** Increase the delay before the first alert, or switch to escalating notifications instead of repeating the same message.
 - **Sensor reports unavailable:** Treat this as unknown status, not as closed, and still alert if the last known state was open.
-
-## Done when
-
-- [ ] The garage door's open and closed state is reliably reported to the platform.
-- [ ] A door left open past the set delay produces a notification.
-- [ ] The nighttime check correctly flags an open door at the cutoff time.
-- [ ] No automation in this recipe closes the door; closing remains manual or handled by the separate garage-auto-close recipe.
 
 ## FAQ
 

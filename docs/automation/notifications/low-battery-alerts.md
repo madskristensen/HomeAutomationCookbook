@@ -4,6 +4,7 @@ title: Get low battery alerts for smart home devices
 description: A platform-neutral recipe that notifies when a battery-powered sensor, lock, or button drops below a set level, before it fails silently.
 keywords: low battery alert, smart home battery, device battery notification, battery monitoring, smart device maintenance
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: What battery percentage should trigger a warning?
     answer: Around 20 to 25 percent is a reasonable starting point for most sensors, giving a few weeks of remaining life to plan a replacement. A smart lock is worth a slightly higher threshold, since running out unexpectedly is more disruptive.
@@ -25,6 +26,21 @@ Get a notification when a battery-powered device drops below a set level, so it 
 
 A dead battery in a motion sensor, door sensor, or lock does not usually announce itself. It just stops reporting, and the automations relying on it quietly stop working. A proactive alert catches this before it turns into a missed automation or, worse, a lock that will not open.
 
+## Logic
+
+<div class="automation-example">IF a monitored device's battery drops below its threshold
+AND this device has not been flagged in the last 7 days
+THEN send a notification: "[Device name] battery is at [level]"</div>
+
+- **Trigger:** A monitored device's battery level drops below its set threshold, or reports a "low battery" state.
+- **Conditions:** The device has not already been flagged within the last several days, to avoid repeat alerts for the same drop.
+- **Action:** Send a notification naming the device and its battery level.
+- **Wait / timeout:** None; the notification is sent once the condition is met.
+- **Stop condition:** The alert resets once the battery is replaced and reports a normal level again.
+- **Manual override:** Battery levels can always be checked directly in the platform regardless of the automation.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,19 +54,6 @@ No personally verified recommendation yet. This depends on the platform reportin
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A monitored device's battery level drops below its set threshold, or reports a "low battery" state.
-- **Conditions:** The device has not already been flagged within the last several days, to avoid repeat alerts for the same drop.
-- **Action:** Send a notification naming the device and its battery level.
-- **Wait / timeout:** None; the notification is sent once the condition is met.
-- **Stop condition:** The alert resets once the battery is replaced and reports a normal level again.
-- **Manual override:** Battery levels can always be checked directly in the platform regardless of the automation.
-
-<div class="automation-example">IF a monitored device's battery drops below its threshold
-AND this device has not been flagged in the last 7 days
-THEN send a notification: "[Device name] battery is at [level]"</div>
 
 ## Setup notes
 
@@ -76,13 +79,6 @@ Instead of a separate notification per device, send one daily summary listing ev
 - **Battery percentage fluctuates and causes repeat alerts:** Add a cooldown, or require the drop to hold for a period before alerting, rather than reacting to every reading.
 - **A device is missing from monitoring:** Confirm it actually reports battery data to the platform; not every device type does.
 - **Too many notifications arrive:** Raise the threshold slightly, add a longer cooldown, or switch to a consolidated daily report.
-
-## Done when
-
-- [ ] Every device expected to report battery status is confirmed to actually do so.
-- [ ] A real low-battery condition produces exactly one notification, not several.
-- [ ] Critical devices, such as locks, are treated with appropriate priority.
-- [ ] The alert clears once a battery is replaced.
 
 ## FAQ
 

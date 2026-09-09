@@ -4,6 +4,7 @@ title: Set up a teeth brushing reminder for kids
 description: A platform-neutral recipe that uses a power-monitoring smart plug on an electric toothbrush charger to confirm brushing happened, with a reminder if it did not.
 keywords: teeth brushing reminder, kids routine automation, smart plug power monitoring, toothbrush charger sensor
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Does this work with a manual, non-electric toothbrush?
     answer: Not directly. This recipe relies on detecting a power draw change when an electric toothbrush is removed from its charger, so it needs an electric toothbrush and a power-monitoring plug.
@@ -25,6 +26,24 @@ Use a power-monitoring smart plug on an electric toothbrush charger to detect wh
 
 Reminding kids to brush their teeth often falls on a parent to check manually. Detecting when the toothbrush is picked up off its charger, based on the change in power draw, gives an automated proxy for whether brushing likely happened, without needing to physically check.
 
+## Logic
+
+<div class="automation-example">IF the toothbrush charger's power draw drops below its baseline
+THEN mark the current brushing window (morning or evening) as complete
+
+IF the target time for a brushing window passes
+AND that window has not been marked complete
+THEN send a reminder notification: "Time to brush teeth"</div>
+
+- **Trigger:** The smart plug's reported power draw drops, indicating the toothbrush was removed from the charger, or a scheduled check runs near a target brushing time.
+- **Conditions:** A removal has not already been detected within the current brushing window, such as morning or evening.
+- **Action:** Log the brushing window as complete when a removal is detected; send a reminder notification if the target time passes without one.
+- **Wait / timeout:** The reminder is sent once per missed window, not repeatedly.
+- **Stop condition:** A detected removal for the current window clears any pending reminder for that window.
+- **Manual override:** A parent can always mark a brushing window complete manually if the plug misses a detection.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,22 +57,6 @@ No personally verified recommendation yet. This specifically needs a smart plug 
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The smart plug's reported power draw drops, indicating the toothbrush was removed from the charger, or a scheduled check runs near a target brushing time.
-- **Conditions:** A removal has not already been detected within the current brushing window, such as morning or evening.
-- **Action:** Log the brushing window as complete when a removal is detected; send a reminder notification if the target time passes without one.
-- **Wait / timeout:** The reminder is sent once per missed window, not repeatedly.
-- **Stop condition:** A detected removal for the current window clears any pending reminder for that window.
-- **Manual override:** A parent can always mark a brushing window complete manually if the plug misses a detection.
-
-<div class="automation-example">IF the toothbrush charger's power draw drops below its baseline
-THEN mark the current brushing window (morning or evening) as complete
-
-IF the target time for a brushing window passes
-AND that window has not been marked complete
-THEN send a reminder notification: "Time to brush teeth"</div>
 
 ## Setup notes
 
@@ -79,13 +82,6 @@ If more than one child uses a separate electric toothbrush and charger, repeat t
 - **False detection without actual brushing:** The plug only detects removal from the charger, not use; this is a known limitation, not a bug, and should be communicated to the household as such.
 - **Reminder fires even after brushing happened:** Confirm the detected removal is being correctly logged against the current window before the target time passes.
 - **Baseline power draw drifts over time:** Periodically re-check the baseline, since some chargers vary slightly as the battery ages.
-
-## Done when
-
-- [ ] The smart plug reliably reports power draw for the toothbrush charger.
-- [ ] A real removal is detected and logged as a completed window.
-- [ ] A missed window produces exactly one reminder.
-- [ ] The household understands this detects removal, not confirmed brushing.
 
 ## FAQ
 

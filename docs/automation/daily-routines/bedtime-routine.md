@@ -4,6 +4,7 @@ title: Run a bedtime routine without surprising the household
 description: A platform-neutral bedtime routine that separates a gentle wind-down from an intentional good-night action and preserves occupied rooms, safety alerts, and manual control.
 keywords: bedtime routine automation, good night routine, night mode automation, family bedtime automation, smart home bedtime
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Should bedtime run automatically at a fixed time?
     answer: Use a schedule to offer or begin a limited wind-down, not to put the entire home into Night mode. Require an intentional button, phrase, or control for the final good-night action.
@@ -26,6 +27,28 @@ Offer a gentle wind-down, then use an intentional good-night signal to change Ni
 Bedtime is rarely one moment for everyone. Someone may be finishing homework, arriving late, hosting a guest, feeding a baby, or using the kitchen. A schedule that suddenly darkens the home or locks an expected person out is not helpful.
 
 Separate the recipe into two stages: a reversible wind-down and an intentional final transition. The final stage changes only the devices the household has approved.
+
+## Logic
+
+<div class="automation-example">IF the wind-down schedule arrives
+AND the home is in normal Home mode
+THEN offer wind-down with a cancel action
+AND gently adjust only approved shared-room lights
+
+IF someone intentionally starts Good night
+THEN change Home mode to Night
+AND turn off approved unoccupied lights
+AND preserve path lighting and urgent alerts
+AND report anything that still needs a person</div>
+
+- **Trigger:** A scheduled wind-down prompt or an intentional good-night button, phrase, or control.
+- **Conditions:** The home is occupied, no emergency mode is active, and the selected stage is allowed in the current Home or Guest mode.
+- **Action:** For wind-down, gently adjust only approved shared-room lights. For good night, set Night mode, turn off approved unoccupied lights, preserve path lighting, apply an approved climate setting, and report unresolved door or appliance status.
+- **Wait / timeout:** Give delayed light changes a visible cancel window and cancel them when someone manually changes that room.
+- **Stop condition:** Complete one pass, report anything needing a person, and do not repeat until Night mode ends.
+- **Manual override:** Wall controls, thermostat controls, urgent alerts, and a one-action cancel always remain available.
+
+
 
 ## What I used
 
@@ -61,26 +84,6 @@ A "Good night" phrase or manual scene control. The final trigger should be inten
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A scheduled wind-down prompt or an intentional good-night button, phrase, or control.
-- **Conditions:** The home is occupied, no emergency mode is active, and the selected stage is allowed in the current Home or Guest mode.
-- **Action:** For wind-down, gently adjust only approved shared-room lights. For good night, set Night mode, turn off approved unoccupied lights, preserve path lighting, apply an approved climate setting, and report unresolved door or appliance status.
-- **Wait / timeout:** Give delayed light changes a visible cancel window and cancel them when someone manually changes that room.
-- **Stop condition:** Complete one pass, report anything needing a person, and do not repeat until Night mode ends.
-- **Manual override:** Wall controls, thermostat controls, urgent alerts, and a one-action cancel always remain available.
-
-<div class="automation-example">IF the wind-down schedule arrives
-AND the home is in normal Home mode
-THEN offer wind-down with a cancel action
-AND gently adjust only approved shared-room lights
-
-IF someone intentionally starts Good night
-THEN change Home mode to Night
-AND turn off approved unoccupied lights
-AND preserve path lighting and urgent alerts
-AND report anything that still needs a person</div>
 
 ## Setup notes
 
@@ -132,18 +135,6 @@ Queue routine summaries until morning, but keep urgent leak, fire, carbon-monoxi
 - **The thermostat fights another recipe:** Preserve manual holds, safety limits, and climate automation ownership.
 - **Urgent alerts become quiet:** Exempt all safety and security channels from notification muting.
 - **The hub is unavailable:** Wall switches, thermostat controls, keys, and manual door operation still work.
-
-## Done when
-
-- [ ] A schedule never puts the whole home into Night mode by itself.
-- [ ] The intentional Good-night trigger works without opening an app.
-- [ ] An occupied or manually controlled room is not forced dark.
-- [ ] Path and bathroom lighting remain available.
-- [ ] Guest mode uses a smaller, predictable scope.
-- [ ] Unknown door, lock, garage, or appliance states are reported rather than guessed.
-- [ ] Manual thermostat holds and active safety modes are respected.
-- [ ] Urgent alerts remain immediate.
-- [ ] The household can complete bedtime normally when the hub is unavailable.
 
 ## FAQ
 

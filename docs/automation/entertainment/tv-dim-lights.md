@@ -4,6 +4,7 @@ title: Dim lights when the TV turns on
 description: A platform-neutral recipe that dims the living room lights when the TV turns on, using either power monitoring or a smart TV signal, and restores them afterward.
 keywords: TV lighting automation, dim lights TV, theater mode automation, movie lighting, automatic TV lights
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Should I use power monitoring or a smart TV signal as the trigger?
     answer: A compatible power-monitoring plug works with many TVs, but can be fooled by a menu screen drawing similar power to active playback. A smart TV or streaming device signal is more accurate if the platform supports it reliably.
@@ -25,6 +26,26 @@ Automatically dim the living room lights when the TV turns on, and restore them 
 
 Dimming the lights by hand every time a movie starts is a small chore that is easy to skip, and it means the room does not settle into a consistent viewing setup. Automating it removes the extra step, and restoring the previous brightness afterward avoids leaving the room dim once viewing is over.
 
+## Logic
+
+<div class="automation-example">IF TV power draw rises above the "on" threshold
+OR the TV/streaming device reports it is playing
+THEN save the current light brightness
+AND dim the living room lights to the preset level
+
+IF TV power draw has stayed below the "off" threshold for a couple of minutes
+OR the TV has reported "off" for the same period
+THEN restore the living room lights to the saved brightness</div>
+
+- **Trigger:** Power draw on the TV's smart plug rises above a threshold, or the TV/streaming device reports it is playing.
+- **Conditions:** The current time is after a chosen hour, such as sunset, if daytime dimming is not wanted.
+- **Action:** Save the current light brightness, then dim the living room lights to a low level.
+- **Wait / timeout:** Keep the lights dimmed until the stop condition is met.
+- **Stop condition:** Power draw drops below a lower threshold, or the TV reports it has stopped, for a couple of minutes.
+- **Manual override:** The physical light switch or app always works to change brightness directly.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,24 +66,6 @@ Zooz ZEN15 Power Switch. I use the ZEN15's power readings to distinguish standby
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** Power draw on the TV's smart plug rises above a threshold, or the TV/streaming device reports it is playing.
-- **Conditions:** The current time is after a chosen hour, such as sunset, if daytime dimming is not wanted.
-- **Action:** Save the current light brightness, then dim the living room lights to a low level.
-- **Wait / timeout:** Keep the lights dimmed until the stop condition is met.
-- **Stop condition:** Power draw drops below a lower threshold, or the TV reports it has stopped, for a couple of minutes.
-- **Manual override:** The physical light switch or app always works to change brightness directly.
-
-<div class="automation-example">IF TV power draw rises above the "on" threshold
-OR the TV/streaming device reports it is playing
-THEN save the current light brightness
-AND dim the living room lights to the preset level
-
-IF TV power draw has stayed below the "off" threshold for a couple of minutes
-OR the TV has reported "off" for the same period
-THEN restore the living room lights to the saved brightness</div>
 
 ## Setup notes
 
@@ -88,13 +91,6 @@ Add a condition that skips dimming if recent motion has been detected in the roo
 - **Lights do not restore when the TV turns off:** Confirm the "off" threshold or state check is set below actual standby power, and that the previous brightness was saved before dimming.
 - **Lights dim during the day unexpectedly:** Add or correct a time-of-day condition if daytime dimming is not wanted.
 - **TV state reported inaccurately:** Check the TV or streaming device's network connection and platform integration; power monitoring can serve as a fallback trigger.
-
-## Done when
-
-- [ ] Actual TV wattage has been tested in standby and while playing.
-- [ ] The lights dim reliably once real playback starts, not just when the menu is open.
-- [ ] The lights restore to their previous brightness after the TV turns off.
-- [ ] Daytime behavior matches what the household wants.
 
 ## FAQ
 

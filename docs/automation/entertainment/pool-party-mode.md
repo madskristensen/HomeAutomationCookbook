@@ -4,6 +4,7 @@ title: Set up one-tap pool party mode
 description: A platform-neutral recipe that starts music and lighting for a pool or backyard party with one button press, without touching safety alarms.
 keywords: pool party automation, backyard party mode, outdoor entertainment, party scene, one tap party mode
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Does party mode disable any safety alarms?
     answer: No. This recipe should never touch pool alarms, gate sensors, or other safety features. It only controls lighting, music, and non-critical notifications.
@@ -24,6 +25,29 @@ Turn on party lighting and music around a pool or backyard with a single button 
 ## Why this exists
 
 Turning on several outdoor devices individually is slow, and it is easy to forget one, or forget to turn everything off again afterward. A single trigger that sets lighting and music to a consistent state, and reverses itself automatically, is a better fit for something as informal as a pool gathering.
+
+## Logic
+
+<div class="automation-example">IF "pool party mode" is triggered
+AND the current time is within allowed hours
+THEN set outdoor lights to the party scene
+AND start the party playlist at the preset volume
+AND pause routine outdoor motion notifications
+
+IF four hours have passed since party mode started
+OR "end pool party" is triggered
+THEN restore normal outdoor lighting
+AND stop music
+AND resume routine outdoor motion notifications</div>
+
+- **Trigger:** A button press, voice command, or dashboard tile for "pool party mode."
+- **Conditions:** The current time falls within hours the household considers reasonable for outdoor music.
+- **Action:** Set outdoor lighting to a party scene, start the party playlist at a set volume, and pause only non-critical outdoor notifications, such as routine motion alerts.
+- **Wait / timeout:** Run for a fixed duration, such as four hours, unless ended manually first.
+- **Stop condition:** A separate "end party" trigger, or the automatic timeout, restores normal lighting and stops music.
+- **Manual override:** Any light, speaker, or notification setting can still be changed directly at any time.
+
+
 
 ## What I used
 
@@ -53,27 +77,6 @@ No personally verified recommendation yet. Any button, voice command, or dashboa
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-## Logic
-
-- **Trigger:** A button press, voice command, or dashboard tile for "pool party mode."
-- **Conditions:** The current time falls within hours the household considers reasonable for outdoor music.
-- **Action:** Set outdoor lighting to a party scene, start the party playlist at a set volume, and pause only non-critical outdoor notifications, such as routine motion alerts.
-- **Wait / timeout:** Run for a fixed duration, such as four hours, unless ended manually first.
-- **Stop condition:** A separate "end party" trigger, or the automatic timeout, restores normal lighting and stops music.
-- **Manual override:** Any light, speaker, or notification setting can still be changed directly at any time.
-
-<div class="automation-example">IF "pool party mode" is triggered
-AND the current time is within allowed hours
-THEN set outdoor lights to the party scene
-AND start the party playlist at the preset volume
-AND pause routine outdoor motion notifications
-
-IF four hours have passed since party mode started
-OR "end pool party" is triggered
-THEN restore normal outdoor lighting
-AND stop music
-AND resume routine outdoor motion notifications</div>
-
 ## Setup notes
 
 1. Confirm outdoor lighting and the speaker both respond reliably to platform commands before wiring them into a single scene.
@@ -99,14 +102,6 @@ Where the platform supports more than one saved scene, offer a quieter daytime v
 - **Party mode never ends:** Confirm the timeout action exists and is enabled; a scene should never rely on someone remembering to turn it off manually.
 - **Safety notifications get paused by mistake:** Review exactly which notification types the automation pauses and remove anything safety-related.
 - **Volume is too loud:** Lower the preset volume in the action itself rather than relying on someone adjusting it after the fact.
-
-## Done when
-
-- [ ] A single trigger reliably turns on both lighting and music together.
-- [ ] The scene never disables a safety alarm or sensor.
-- [ ] The automation ends itself automatically after a set duration.
-- [ ] Volume stays within a level the household is comfortable with.
-- [ ] A manual "end party" option exists and works.
 
 ## FAQ
 

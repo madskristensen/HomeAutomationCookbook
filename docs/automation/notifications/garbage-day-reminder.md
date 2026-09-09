@@ -4,6 +4,7 @@ title: Set up a garbage day reminder tile
 description: A platform-neutral recipe that turns a dashboard tile red before garbage day and green again once the task is marked done.
 keywords: garbage reminder, trash day, dashboard automation, virtual switch, weekly reminder
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: What happens if I forget to mark the tile as done?
     answer: The tile stays red until it is tapped or an auto-reset automation clears it the next morning. Either way, nothing is lost; the reminder simply persists until acknowledged.
@@ -25,6 +26,26 @@ Turn a dashboard tile red the evening before garbage day, and green again once t
 
 A phone notification about trash day is easy to dismiss and forget. A tile that stays a visible color until the task is actually done gives a persistent reminder instead of a one-time alert, without needing any new hardware.
 
+## Logic
+
+<div class="automation-example">IF it is the evening before collection day
+THEN turn on the "garbage out" virtual switch
+(tile turns red on the dashboard)
+
+IF the tile is tapped
+OR it is the morning after collection day
+THEN turn off the "garbage out" virtual switch
+(tile returns to its normal color)</div>
+
+- **Trigger:** A fixed time the evening before collection, such as 6:00 PM on the day before pickup.
+- **Conditions:** None required for the basic version; a calendar check can be added if the collection schedule varies.
+- **Action:** Turn on the virtual switch tied to the dashboard tile, which turns the tile red.
+- **Wait / timeout:** The tile stays red until manually cleared.
+- **Stop condition:** Tapping the tile, or an optional auto-reset the morning after collection, turns the virtual switch off again.
+- **Manual override:** The tile can always be tapped directly regardless of the schedule.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,24 +59,6 @@ No personally verified recommendation yet. This only needs a virtual switch or v
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** A fixed time the evening before collection, such as 6:00 PM on the day before pickup.
-- **Conditions:** None required for the basic version; a calendar check can be added if the collection schedule varies.
-- **Action:** Turn on the virtual switch tied to the dashboard tile, which turns the tile red.
-- **Wait / timeout:** The tile stays red until manually cleared.
-- **Stop condition:** Tapping the tile, or an optional auto-reset the morning after collection, turns the virtual switch off again.
-- **Manual override:** The tile can always be tapped directly regardless of the schedule.
-
-<div class="automation-example">IF it is the evening before collection day
-THEN turn on the "garbage out" virtual switch
-(tile turns red on the dashboard)
-
-IF the tile is tapped
-OR it is the morning after collection day
-THEN turn off the "garbage out" virtual switch
-(tile returns to its normal color)</div>
 
 ## Setup notes
 
@@ -81,13 +84,6 @@ Add a second automation that turns the switch off automatically the morning afte
 - **Tile does not change color:** Confirm the tile is linked to the correct virtual switch and refresh the dashboard if it is showing a cached view.
 - **Reminder is forgotten because the tile was never tapped:** Add the auto-reset automation so the tile clears itself the next morning regardless.
 - **Reminder fires on a week collection is skipped:** Add a calendar condition if the local service publishes a schedule.
-
-## Done when
-
-- [ ] The tile turns red at the correct time the evening before collection.
-- [ ] Tapping the tile clears the reminder.
-- [ ] An auto-reset exists in case the tile is never tapped.
-- [ ] The schedule matches the actual local collection day.
 
 ## FAQ
 

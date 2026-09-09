@@ -785,6 +785,97 @@ h1.has-article-meta {
   color: var(--color-text-muted);  
 }
 
+/* Focused recipe presentation for pages that prioritize the core path over card-heavy detail. */
+.automation-page--compact .article-meta {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.automation-page--compact h1 {
+  margin-bottom: 1rem;
+}
+
+.automation-page--compact h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.automation-page--compact .use-case-grid,
+.automation-page--compact .feature-grid,
+.automation-page--compact .troubleshooting-grid,
+.automation-page--compact .placement-grid {
+  display: block;
+  margin: 1.25rem 0 2rem;
+}
+
+.automation-page--compact .use-case-card,
+.automation-page--compact .feature-card,
+.automation-page--compact .placement-card,
+.automation-page--compact .issue-card,
+.automation-page--compact .best-practice-card {
+  padding: 1rem 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.automation-page--compact .use-case-card:last-child,
+.automation-page--compact .feature-card:last-child,
+.automation-page--compact .placement-card:last-child,
+.automation-page--compact .issue-card:last-child {
+  border-bottom: 0;
+}
+
+.automation-page--compact .use-case-card h4,
+.automation-page--compact .feature-card h3,
+.automation-page--compact .placement-card h3,
+.automation-page--compact .issue-header h3,
+.automation-page--compact .best-practice-card h3 {
+  padding: 0;
+  margin: 0 0 0.5rem;
+  border: 0;
+  color: var(--color-text-heading);
+}
+
+.automation-page--compact .issue-header,
+.automation-page--compact .issue-problem,
+.automation-page--compact .issue-solutions {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.automation-page--compact .issue-problem {
+  margin-bottom: 0.5rem;
+}
+
+.automation-page--compact .product-list {
+  gap: 0;
+  margin: 1rem 0 1.5rem;
+}
+
+.automation-page--compact .product-item {
+  padding: 1rem 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+.automation-page--compact .product-item:last-child {
+  border-bottom: 0;
+}
+
+.automation-page--compact .brightness-item {
+  border-left: 0;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
 .last-updated p {
   margin: 0;
   color: var(--color-text-muted);

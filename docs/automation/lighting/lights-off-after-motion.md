@@ -4,6 +4,7 @@ title: Turn lights off after motion stops (without leaving people in the dark)
 description: A conservative motion-lighting off recipe that respects still occupants, manual wall-switch choices, and local-first control.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: How long should motion lights stay on?
     answer: Start longer than you think, then reduce the timeout only after the household has used the room normally for several days.
@@ -25,6 +26,8 @@ Leave the room, lights off. Stay still, and they should not leave you in the dar
 
 The off half makes automatic lighting useful without making it hostile. It should wait long enough for real people, then turn the light off after the room is clear. It must not fight a guest who used the familiar wall switch.
 
+💡 For reliable coverage and testing, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html).
+
 ## Use cases
 
 <div class="use-case-grid">
@@ -44,6 +47,21 @@ The off half makes automatic lighting useful without making it hostile. It shoul
     </ul>
   </div>
 </div>
+
+## Logic
+
+<div class="automation-example">IF the room has been clear for the timeout
+AND no manual override is active
+THEN turn off the light</div>
+
+- **Trigger:** The room sensor reports no motion for the chosen timeout.
+- **Conditions:** The light was turned on by this automation, no other room sensor is active, and no manual override is active.
+- **Action:** Turn the light off.
+- **Wait / timeout:** Start at 5 to 10 minutes for a bathroom or quiet room. Reduce only after normal household testing.
+- **Stop condition:** New motion, another active sensor, or a manual wall-switch change cancels the shutoff.
+- **Manual override:** The wall switch still wins.
+
+
 
 ## What I used
 
@@ -75,25 +93,7 @@ For a bathroom that needs humidity, temperature, and light readings too, use the
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-<div class="info-box">
-  <strong>Outdoor tip</strong>
-  <ul>
-    <li>Use weather-rated sensors (IP65+) or protect from elements</li>
-  </ul>
-</div>
-
-## Logic
-
-- **Trigger:** The room sensor reports no motion for the chosen timeout.
-- **Conditions:** The light was turned on by this automation, no other room sensor is active, and no manual override is active.
-- **Action:** Turn the light off.
-- **Wait / timeout:** Start at 5 to 10 minutes for a bathroom or quiet room. Reduce only after normal household testing.
-- **Stop condition:** New motion, another active sensor, or a manual wall-switch change cancels the shutoff.
-- **Manual override:** The wall switch still wins.
-
-<div class="automation-example">IF the room has been clear for the timeout
-AND no manual override is active
-THEN turn off the light</div>
+💡 **For outdoor placement and weather protection**, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html).
 
 ## Setup notes
 
@@ -251,14 +251,6 @@ Start with a longer delay than you expect to need, then shorten it only after no
 - **The sensor sees motion outside the room:** Reposition it or narrow its view before shortening the timeout.
 - **The hub reboots or the internet is down:** The wall switch remains the fallback. A local automation may resume after the hub is ready, but do not rely on it for Level 1 control.
 - **The room is in use at night:** Use a longer timeout for quiet nighttime use, especially in bathrooms.
-
-## Done when
-
-- [ ] Leave the room and confirm the light turns off after the selected delay.
-- [ ] Sit or stand still in every normal part of the room for the same delay and confirm it does not turn off unexpectedly.
-- [ ] Toggle the wall switch manually and verify the automation does not fight the choice.
-- [ ] Test after a hub restart and, where local control is expected, with the internet disconnected.
-- [ ] Have a guest use the room without explaining the automation.
 
 ## FAQ
 

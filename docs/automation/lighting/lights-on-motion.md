@@ -4,6 +4,7 @@ title: Turn lights on when you walk in (and keep the wall switch)
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Why do motion lights turn on too slowly?
     answer: Put the sensor where it sees someone before they reach the switch, and keep the automation local where the platform supports it.
@@ -24,6 +25,20 @@ Walk in, lights on. If that fails at 2am, the wall switch still works.
 ## Why this exists
 
 Nobody should have to fumble for a switch with a basket of laundry or explain the light system to a guest. The first detection needs to happen before a hand reaches the wall control. Keep the switch useful so the room remains ordinary when the hub, sensor, or internet is not.
+
+## Logic
+
+<div class="automation-example">IF entry motion is detected AND the room is dark
+THEN turn on the light</div>
+
+
+
+- **Trigger:** The entry sensor changes from clear to motion detected.
+- **Conditions:** The room is dark enough, or it is within the hours you want automatic light.
+- **Action:** Turn on the light. Use a dim level at night if the light supports it.
+- **Wait / timeout:** None for turn-on. The paired [turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html) recipe owns the timeout.
+- **Stop condition:** A manual wall-switch change should prevent the off recipe from undoing the person's choice.
+- **Manual override:** The wall switch still wins.
 
 ## Use cases
 
@@ -76,26 +91,7 @@ For a bathroom that needs humidity, temperature, and light readings too, use the
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 
-<div class="info-box">
-  <strong>Outdoor motion sensing tip</strong>
-  <ul>
-    <li>Use sensors specifically rated for outdoor use (IP65 or higher)</li>
-    <li>OR protect indoor sensors with weatherproof enclosures</li>
-    <li>OR place sensors under eaves to avoid direct water exposure</li>
-  </ul>
-</div>
-
-## Logic
-
-- **Trigger:** The entry sensor changes from clear to motion detected.
-- **Conditions:** The room is dark enough, or it is within the hours you want automatic light.
-- **Action:** Turn on the light. Use a dim level at night if the light supports it.
-- **Wait / timeout:** None for turn-on. The paired [turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html) recipe owns the timeout.
-- **Stop condition:** A manual wall-switch change should prevent the off recipe from undoing the person's choice.
-- **Manual override:** The wall switch still wins.
-
-<div class="automation-example">IF entry motion is detected AND the room is dark
-THEN turn on the light</div>
+💡 For outdoor placement, weather protection, and false-trigger testing, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html).
 
 ## Setup notes
 
@@ -104,6 +100,8 @@ Start with only the trigger and light action. Once that is reliable, add the day
 - **Daytime:** Leave the light off when daylight is sufficient.
 - **Evening:** Use the brightness that makes the room useful.
 - **Deep night:** Start at 10 to 20 percent and raise it only enough for safe navigation.
+
+💡 For general guidance, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html).
 
 ## Advanced features
 
@@ -210,50 +208,6 @@ Start with only the trigger and light action. Once that is reliable, add the day
   </div>
 </div>
 
-## Sensor placement best practices
-
-<div class="placement-grid">
-  <div class="placement-card">
-    <h3>Height</h3>
-    <ul>
-      <li><strong>Optimal:</strong> 6-8 feet high for best coverage</li>
-      <li><strong>Corners:</strong> Good for monitoring entire room</li>
-      <li><strong>Entry points:</strong> Near doors for immediate detection</li>
-    </ul>
-  </div>
-  
-  <div class="placement-card">
-    <h3>Angle</h3>
-    <ul>
-      <li><strong>Ceiling mount:</strong> Wide coverage, detects all motion</li>
-      <li><strong>Wall mount:</strong> Directional, catches people entering</li>
-      <li><strong>Corner mount:</strong> 90° coverage, good for hallways</li>
-    </ul>
-  </div>
-</div>
-
-<div class="best-practice-card">
-  <h3>Coverage testing</h3>
-  <ol>
-    <li>Mount sensor temporarily with tape</li>
-    <li>Walk through room at different paths</li>
-    <li>Verify all entry points are covered</li>
-    <li>Check for dead zones</li>
-    <li>Adjust position or add additional sensors</li>
-    <li>Permanently mount once confirmed</li>
-  </ol>
-</div>
-
-<div class="warning-card">
-  <h3>What to avoid</h3>
-  <ul>
-    <li><strong>Near windows</strong> - Sunlight and outdoor motion cause false triggers</li>
-    <li><strong>Near heating/AC vents</strong> - Temperature changes trigger sensors</li>
-    <li><strong>Pointed at moving objects</strong> - Ceiling fans, curtains, pets</li>
-    <li><strong>Behind furniture</strong> - Blocks detection zone</li>
-  </ul>
-</div>
-
 ## Failure modes
 
 - **The light turns on after someone reaches the switch:** Move the sensor to see the entry path earlier and keep the path local.
@@ -261,14 +215,6 @@ Start with only the trigger and light action. Once that is reliable, add the day
 - **A guest stands still after the light turns on:** This recipe should be paired with a conservative off timeout. Use presence sensing where stillness is normal.
 - **The sensor is hidden or affected by steam:** Keep it clear of towels, furniture, vents, and the shower plume.
 - **The hub or internet is down:** The physical switch remains the fallback. Verify any Level 2 automation is local before depending on it.
-
-## Done when
-
-- [ ] Walk in from every usual entry path and the light is on before your hand reaches the switch.
-- [ ] During daytime, the light stays off when the room is already bright.
-- [ ] Turn the wall switch on or off and confirm the paired off recipe does not immediately reverse that choice.
-- [ ] Disconnect the internet, if your setup supports local control, and verify the automation still works.
-- [ ] Have someone who did not build it try the room without instructions.
 
 ## FAQ
 

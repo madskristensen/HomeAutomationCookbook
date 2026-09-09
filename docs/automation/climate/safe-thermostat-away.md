@@ -2,7 +2,8 @@
 layout: guide
 title: Safe thermostat auto-away for pets and pipes
 description: Use a modest thermostat setback when the home is empty without risking pets, frozen pipes, manual holds, or an unsafe recovery.
-last_modified_at: 2026-08-30
+last_modified_at: 2026-08-30
+compact: true
 ---
 
 # Safe thermostat auto-away for pets and pipes
@@ -117,17 +118,6 @@ Do not infer Vacation from elapsed time. Require an explicit selection so someon
 - **A sensor stops reporting:** Treat stale or unavailable data as unknown and use the safer setting.
 - **Recovery takes too long:** Make the setback smaller rather than forcing aggressive HVAC operation.
 - **The hub or internet fails:** Keep thermostat controls and safety limits operational at the wall.
-
-## Done when
-
-- [ ] False Away cannot change the thermostat while someone remains home.
-- [ ] Pet-safe heating and cooling boundaries are documented.
-- [ ] Freeze and overheat protection remain active in every house mode.
-- [ ] An unavailable sensor causes conservative behavior and a visible warning.
-- [ ] A manual thermostat change is never overwritten later.
-- [ ] Arrival restores only a state saved by this recipe.
-- [ ] Home, Away, Guest, and Vacation have distinct, understandable behavior.
-- [ ] The thermostat remains usable when the hub or internet is unavailable.
 
 ## FAQ
 

@@ -4,6 +4,7 @@ title: Turn outdoor lights on at dusk (and off when nobody needs them)
 description: A platform-neutral outdoor-lighting recipe that follows sunset, avoids unnecessary overnight runtime, and keeps physical control available.
 keywords: outdoor lights automation, sunset lights, dusk lighting, exterior lighting, holiday lights, smart outdoor lights
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Should outdoor lights use a sunset schedule or a light sensor?
     answer: Start with sunset because it is simple and predictable. Add a light sensor only when clouds, shade, or seasonal light make the schedule consistently wrong.
@@ -25,6 +26,22 @@ At dusk, the useful outdoor lights come on. Decorative lights turn off at bedtim
 
 A fixed clock schedule drifts away from daylight as the seasons change. A sunset trigger follows the useful part of the day without daily adjustment. Separate safety lighting from decorative lighting so each can turn off when its job is done.
 
+## Logic
+
+<div class="automation-example">IF sunset occurs AND the outdoor-lighting schedule is enabled
+THEN turn on the selected outdoor lights
+AT bedtime turn off decorative lights
+AT sunrise turn off any remaining lights</div>
+
+- **Trigger:** Sunset occurs, with an optional offset if the property becomes dark earlier or later.
+- **Conditions:** The outdoor-lighting schedule is enabled. Seasonal lights also require their seasonal toggle to be on.
+- **Action:** Turn on the selected outdoor lights.
+- **Wait / timeout:** Turn decorative lights off at a household bedtime. Keep only genuinely useful safety lighting on longer.
+- **Stop condition:** Sunrise or the chosen off time turns the lights off.
+- **Manual override:** The wall switch or plug still wins.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,20 +62,6 @@ A fixed clock schedule drifts away from daylight as the seasons change. A sunset
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** Sunset occurs, with an optional offset if the property becomes dark earlier or later.
-- **Conditions:** The outdoor-lighting schedule is enabled. Seasonal lights also require their seasonal toggle to be on.
-- **Action:** Turn on the selected outdoor lights.
-- **Wait / timeout:** Turn decorative lights off at a household bedtime. Keep only genuinely useful safety lighting on longer.
-- **Stop condition:** Sunrise or the chosen off time turns the lights off.
-- **Manual override:** The wall switch or plug still wins.
-
-<div class="automation-example">IF sunset occurs AND the outdoor-lighting schedule is enabled
-THEN turn on the selected outdoor lights
-AT bedtime turn off decorative lights
-AT sunrise turn off any remaining lights</div>
 
 ## Setup notes
 
@@ -90,15 +93,6 @@ Use a simple seasonal enable control. The normal outdoor-lighting schedule shoul
 - **The outdoor plug becomes unreachable:** Check the local mesh and move or add an appropriate repeater before relying on the schedule.
 - **Lights bother neighbors:** Aim fixtures downward, reduce brightness, and shorten the schedule.
 - **The hub or internet is down:** Use the physical control. Do not make a cloud-only path the only way to operate an exterior light.
-
-## Done when
-
-- [ ] The lights turn on at a useful point around dusk for seven consecutive evenings.
-- [ ] Decorative lights turn off at the household's chosen time.
-- [ ] Any remaining lights turn off at sunrise.
-- [ ] The physical switch or plug works without opening an app.
-- [ ] No fixture shines into a neighbor's window or unnecessarily into the sky.
-- [ ] Someone who did not configure the automation can operate the lights manually.
 
 ## FAQ
 

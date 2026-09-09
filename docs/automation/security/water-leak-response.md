@@ -4,6 +4,7 @@ title: Get an immediate alert when water is detected
 description: A platform-neutral leak recipe that identifies the wet sensor, alerts the household immediately, and adds automatic water shutoff only after verified testing.
 keywords: water leak alert, leak sensor notification, water detection automation, smart water shutoff, flood sensor, NEO water leak sensor
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Should one leak sensor automatically close the main water valve?
     answer: Start with immediate alerts. Add automatic shutoff only after the valve, manual bypass, sensor behavior, and safe reopen procedure have all been tested with the household.
@@ -26,6 +27,27 @@ Put a name on the exact sensor, alert the household at any hour, and require a p
 A generic "water detected" message wastes time. The useful alert says where water was found, reaches more than one responsible person, stays visible until acknowledged, and still leaves a clear manual response when the hub or internet is unavailable.
 
 Automatic shutoff can reduce damage, but a valve that cannot reopen, closes on a false report, or has no manual bypass creates a different emergency. Build and test the alert first.
+
+## Logic
+
+<div class="automation-example">IF any leak sensor reports wet
+THEN create a persistent incident with the sensor's location
+AND alert the responsible household members
+AND activate the local warning
+
+IF a verified automatic shutoff is enabled
+AND the wet report passes its tested confirmation rule
+THEN close the main-water valve
+AND report whether the valve actually reached closed</div>
+
+- **Trigger:** Any leak sensor reports wet.
+- **Conditions:** None for the first alert. Leak alerts run in Home, Away, Night, and guest modes.
+- **Action:** Send a persistent high-priority notification naming the sensor and location, alert at least two responsible people, and turn on a local indicator if it is safe and useful.
+- **Wait / timeout:** Repeat through a separate backup path only while the incident remains unacknowledged.
+- **Stop condition:** A person inspects the source, stops the water if necessary, and manually clears the incident.
+- **Manual override:** The main water supply and any automatic valve remain manually operable.
+
+
 
 ## What I used
 
@@ -54,25 +76,6 @@ Persistent phone notification to at least two adults. A local audible alert is u
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. I have used both leak sensors. No automatic shutoff product is recommended until I have verified one in this home.
-
-## Logic
-
-- **Trigger:** Any leak sensor reports wet.
-- **Conditions:** None for the first alert. Leak alerts run in Home, Away, Night, and guest modes.
-- **Action:** Send a persistent high-priority notification naming the sensor and location, alert at least two responsible people, and turn on a local indicator if it is safe and useful.
-- **Wait / timeout:** Repeat through a separate backup path only while the incident remains unacknowledged.
-- **Stop condition:** A person inspects the source, stops the water if necessary, and manually clears the incident.
-- **Manual override:** The main water supply and any automatic valve remain manually operable.
-
-<div class="automation-example">IF any leak sensor reports wet
-THEN create a persistent incident with the sensor's location
-AND alert the responsible household members
-AND activate the local warning
-
-IF a verified automatic shutoff is enabled
-AND the wet report passes its tested confirmation rule
-THEN close the main-water valve
-AND report whether the valve actually reached closed</div>
 
 ## Setup notes
 
@@ -138,17 +141,6 @@ Treat low battery, unavailable, and stale reports as maintenance problems. A sil
 - **Sensor becomes unavailable:** Create a separate health alert and inspect the device promptly.
 - **Automatic valve does not close:** Report the failure clearly and direct the household to the labeled manual shutoff.
 - **Automatic valve closes unexpectedly:** Keep manual bypass instructions at the valve and disable automation until the cause is understood.
-
-## Done when
-
-- [ ] Every sensor has a response-oriented location name.
-- [ ] A wet test creates one immediate persistent incident in every household mode.
-- [ ] At least two responsible people receive an alert naming the correct location.
-- [ ] The local warning works without relying on a phone.
-- [ ] Dry or unavailable never clears the incident automatically.
-- [ ] A person can find and operate the manual shutoff from the alert instructions.
-- [ ] If automatic shutoff is enabled, closure, failure, bypass, and manual reopen have all been tested.
-- [ ] The system remains useful when the internet is unavailable.
 
 ## FAQ
 

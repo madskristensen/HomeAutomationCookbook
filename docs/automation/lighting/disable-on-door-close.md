@@ -4,6 +4,7 @@ title: Turn a closet light off after the door closes
 description: A platform-neutral follow-up to door-triggered lighting that turns off only the light the automation turned on and cancels when the door reopens.
 keywords: closet light door close, pantry light automation, contact sensor light off, automatic closet lighting, door sensor lighting
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Should a closet light turn off the instant the door closes?
     answer: Use a short delay so a bouncing contact or quick return does not cycle the light. Cancel the pending off action if the door opens again.
@@ -26,6 +27,29 @@ Pair a reliable door-open light with a delayed door-close rule that turns off on
 A small cupboard or closet light should turn itself off after the door closes without undoing a manual choice or cycling when the contact bounces. That requires ownership and cancellation, while a walk-in space needs occupancy logic instead of relying on the door alone.
 
 This recipe is deliberately narrow. Door position is a good task signal for a small cupboard, but it is not a general occupancy sensor.
+
+## Logic
+
+<div class="automation-example">IF the closet door closes
+AND the paired door-open recipe owns the light
+THEN wait a short delay
+
+IF the door is still closed
+AND automation still owns the light
+THEN turn the light off
+AND clear automation ownership
+
+IF the door reopens or the wall switch changes
+THEN cancel the pending off action</div>
+
+- **Trigger:** The contact sensor changes from open to closed.
+- **Conditions:** The paired door-open recipe turned this light on, the sensor remains available, and no manual light change has canceled automation ownership.
+- **Action:** Start a short off delay, then turn off the light and clear the ownership marker.
+- **Wait / timeout:** Cancel the pending off action if the door opens again before the delay ends.
+- **Stop condition:** The light turns off, the door reopens, or a person changes the light manually.
+- **Manual override:** A wall-switch change clears automation ownership and wins immediately.
+
+
 
 ## What I used
 
@@ -54,27 +78,6 @@ This recipe is deliberately narrow. Door position is a good task signal for a sm
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The contact sensor changes from open to closed.
-- **Conditions:** The paired door-open recipe turned this light on, the sensor remains available, and no manual light change has canceled automation ownership.
-- **Action:** Start a short off delay, then turn off the light and clear the ownership marker.
-- **Wait / timeout:** Cancel the pending off action if the door opens again before the delay ends.
-- **Stop condition:** The light turns off, the door reopens, or a person changes the light manually.
-- **Manual override:** A wall-switch change clears automation ownership and wins immediately.
-
-<div class="automation-example">IF the closet door closes
-AND the paired door-open recipe owns the light
-THEN wait a short delay
-
-IF the door is still closed
-AND automation still owns the light
-THEN turn the light off
-AND clear automation ownership
-
-IF the door reopens or the wall switch changes
-THEN cancel the pending off action</div>
 
 ## Setup notes
 
@@ -122,16 +125,6 @@ Clear a stale ownership marker after a long, household-tested limit without forc
 - **The sensor becomes unavailable:** Treat the state as unknown and leave manual control in charge.
 - **Someone can remain inside:** Remove this recipe and use motion or presence sensing with a conservative timeout.
 - **The hub or internet is down:** The physical wall switch remains the fallback. Verify local behavior before depending on it.
-
-## Done when
-
-- [ ] Ten open-and-close tests report every transition correctly.
-- [ ] Closing the door turns off a light started by the paired automation.
-- [ ] Reopening during the delay cancels the pending off action.
-- [ ] A manual wall-switch change is never reversed.
-- [ ] An unavailable sensor does not count as closed.
-- [ ] A stale ownership marker cannot affect a later manual session.
-- [ ] Someone who did not build the recipe can use the space normally.
 
 ## FAQ
 

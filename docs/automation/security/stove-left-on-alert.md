@@ -4,6 +4,7 @@ title: Set a cooking reminder that stays visible until you clear it
 description: Keep a visible cooking reminder active until someone clears it, using a deliberate timer or an approved appliance status signal rather than an unsafe workaround.
 keywords: stove reminder, oven left on alert, cooking timer, appliance status notification, kitchen safety
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Can a normal smart plug monitor or shut off a stove or oven?
     answer: No general-purpose plug is recommended here. Ranges and ovens may be hard-wired or use high-current circuits, and gas appliances have additional hazards. Use only equipment approved for the exact appliance and installation.
@@ -26,6 +27,26 @@ Starting to cook also starts a reminder, and only a person or an appliance-appro
 A visible reminder that stays active until someone acknowledges it is more useful than a sensor guess about what is happening on the stove. It remains a reminder, not a claim that the smart home knows whether every burner is safe, because power, temperature, presence, and motion can all be ambiguous.
 
 Use a timer every time cooking starts. If the appliance exposes a supported status through its manufacturer, that status can improve the message, but it still does not replace checking the controls in person.
+
+## Logic
+
+<div class="automation-example">IF a person starts Cooking mode
+THEN start the chosen kitchen timer
+
+IF the timer expires
+THEN send a persistent reminder to check every control
+
+CLEAR only after a person checks the appliance
+DO NOT infer safe from no motion, low power, or cooling temperature</div>
+
+- **Trigger:** A person deliberately starts Cooking mode or an approved appliance signal reports active cooking.
+- **Conditions:** Record which signal started the reminder. Do not require missing motion or Away mode.
+- **Action:** Start a visible timer and send a persistent reminder when the chosen interval expires.
+- **Wait / timeout:** Use the cook's intended interval, with an earlier check for unfamiliar cooking.
+- **Stop condition:** A person checks the appliance controls and clears the reminder.
+- **Manual override:** The appliance's normal controls and a physical timer remain available.
+
+
 
 ## What I used
 
@@ -52,24 +73,6 @@ A person uses the appliance controls. No general-purpose smart plug or improvise
 
 </div>
 </div>
-
-## Logic
-
-- **Trigger:** A person deliberately starts Cooking mode or an approved appliance signal reports active cooking.
-- **Conditions:** Record which signal started the reminder. Do not require missing motion or Away mode.
-- **Action:** Start a visible timer and send a persistent reminder when the chosen interval expires.
-- **Wait / timeout:** Use the cook's intended interval, with an earlier check for unfamiliar cooking.
-- **Stop condition:** A person checks the appliance controls and clears the reminder.
-- **Manual override:** The appliance's normal controls and a physical timer remain available.
-
-<div class="automation-example">IF a person starts Cooking mode
-THEN start the chosen kitchen timer
-
-IF the timer expires
-THEN send a persistent reminder to check every control
-
-CLEAR only after a person checks the appliance
-DO NOT infer safe from no motion, low power, or cooling temperature</div>
 
 ## Setup notes
 
@@ -99,15 +102,6 @@ Send one follow-up to another responsible adult if the first reminder remains un
 - **Power appears low while a burner is hot:** Do not clear the reminder from power alone.
 - **Motion stops while cooking continues:** Do not treat missing motion as abandonment or safety.
 - **A reminder is acknowledged remotely:** Keep the wording focused on checking the physical controls, not merely tapping a notification.
-
-## Done when
-
-- [ ] Starting a cooking session also starts a visible timer or Cooking mode.
-- [ ] The reminder names the appliance and remains visible until acknowledged.
-- [ ] Away and Bedtime do not silently clear an active cooking reminder.
-- [ ] Missing or ambiguous data asks for an in-person check.
-- [ ] No general-purpose smart plug, improvised heat sensor, or inferred automatic shutoff is used.
-- [ ] Smoke and carbon-monoxide alarms operate independently.
 
 ## FAQ
 

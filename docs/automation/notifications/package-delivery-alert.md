@@ -4,6 +4,7 @@ title: Get a heads-up when there is movement near your front door
 description: Use an outdoor motion sensor to prompt a quick check when someone or something moves near the entrance, without claiming that every alert is a delivery.
 keywords: package delivery alert, delivery notification, outdoor motion sensor, front porch sensor, entrance activity detection
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Will this only trigger for actual deliveries?
     answer: No. It triggers on any motion near the front door, including people walking by, so it is a "something happened at the door" alert rather than a confirmed delivery alert.
@@ -25,6 +26,21 @@ Use a motion sensor near the front door to send a phone notification about entra
 
 Missing a delivery notification from a carrier, or not hearing a knock, can mean a package sits outside longer than it should. A motion sensor near the entrance gives a general heads up that something happened at the door, prompting a quick check.
 
+## Logic
+
+<div class="automation-example">IF the front entrance motion sensor detects movement
+AND no motion has been detected in the last 5 minutes
+THEN send a phone notification: "Motion detected at the front door"</div>
+
+- **Trigger:** The entrance motion sensor detects movement.
+- **Conditions:** No motion has already been detected within a short cooldown window, to avoid repeat notifications for the same visit.
+- **Action:** Send a phone notification, such as "Motion detected at the front door."
+- **Wait / timeout:** None; the notification is sent as soon as motion is detected.
+- **Stop condition:** Not applicable; each motion event is a separate notification, subject to any cooldown.
+- **Manual override:** None needed; this is a passive alert rather than a controllable device.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,19 +54,6 @@ Missing a delivery notification from a carrier, or not hearing a knock, can mean
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The entrance motion sensor detects movement.
-- **Conditions:** No motion has already been detected within a short cooldown window, to avoid repeat notifications for the same visit.
-- **Action:** Send a phone notification, such as "Motion detected at the front door."
-- **Wait / timeout:** None; the notification is sent as soon as motion is detected.
-- **Stop condition:** Not applicable; each motion event is a separate notification, subject to any cooldown.
-- **Manual override:** None needed; this is a passive alert rather than a controllable device.
-
-<div class="automation-example">IF the front entrance motion sensor detects movement
-AND no motion has been detected in the last 5 minutes
-THEN send a phone notification: "Motion detected at the front door"</div>
 
 ## Setup notes
 
@@ -75,13 +78,6 @@ If a camera already covers the entrance, attach a snapshot to the notification s
 - **Sensor misses a delivery:** Check its detection range and confirm it covers where packages are actually placed, not just the walkway.
 - **Repeated notifications for one visit:** Increase the cooldown period.
 - **Sensor fails outdoors after a period of use:** Confirm it is actually rated for the exposure level at its mounting location; an indoor-rated sensor will degrade faster outside.
-
-## Done when
-
-- [ ] The sensor reliably detects motion in the area packages are left.
-- [ ] A single visit produces one notification, not several.
-- [ ] The sensor does not trigger constantly from unrelated street activity.
-- [ ] The sensor is rated appropriately for its actual outdoor exposure.
 
 ## FAQ
 

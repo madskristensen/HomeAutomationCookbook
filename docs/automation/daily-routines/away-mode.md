@@ -4,6 +4,7 @@ title: Set away mode when everyone leaves (without locking someone inside)
 description: A conservative, platform-neutral away-mode recipe that verifies the home is empty before changing lights, climate, or security behavior.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: How long should away mode wait after everyone leaves?
     answer: Start with 10 to 15 minutes. A delayed away mode is less disruptive than a false activation while a child, guest, or person without a phone is still home.
@@ -26,6 +27,24 @@ When the house is confidently empty, it switches to Away, turns off what is safe
 The expensive failure is not forgetting to save a little energy. It is locking in a guest, arming an occupied house, or changing the temperature unsafely because a phone reported the wrong location. Away mode should be a shared state that other automations can use, not one giant routine with every possible action.
 
 Start with reversible actions and a notification. Add locks, alarms, or appliance control only after the empty-home decision has proved reliable.
+
+## Logic
+
+<div class="automation-example">IF every tracked person has been away for 15 minutes
+AND Guest or Staying Home mode is off
+AND recent indoor activity does not suggest someone is home
+THEN set the house to Away
+AND make only the reversible changes the household has approved
+AND send a summary notification</div>
+
+- **Trigger:** The last tracked household member leaves the home area.
+- **Conditions:** Everyone has remained away for 10 to 15 minutes, Guest or Staying Home mode is off, and no recent indoor activity suggests someone remains.
+- **Action:** Set the shared house state to Away, turn off nonessential lights, apply a safe thermostat setback, and notify the household.
+- **Wait / timeout:** Start with 15 minutes. Shorten it only after several weeks without a false activation.
+- **Stop condition:** Someone returns, indoor activity appears during the delay, or a person selects Home, Guest, or Staying Home.
+- **Manual override:** A visible Home or Guest control cancels Away immediately.
+
+
 
 ## What I used
 
@@ -61,22 +80,6 @@ Use your platform's built-in presence feature, usually driven by each family mem
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The last tracked household member leaves the home area.
-- **Conditions:** Everyone has remained away for 10 to 15 minutes, Guest or Staying Home mode is off, and no recent indoor activity suggests someone remains.
-- **Action:** Set the shared house state to Away, turn off nonessential lights, apply a safe thermostat setback, and notify the household.
-- **Wait / timeout:** Start with 15 minutes. Shorten it only after several weeks without a false activation.
-- **Stop condition:** Someone returns, indoor activity appears during the delay, or a person selects Home, Guest, or Staying Home.
-- **Manual override:** A visible Home or Guest control cancels Away immediately.
-
-<div class="automation-example">IF every tracked person has been away for 15 minutes
-AND Guest or Staying Home mode is off
-AND recent indoor activity does not suggest someone is home
-THEN set the house to Away
-AND make only the reversible changes the household has approved
-AND send a summary notification</div>
 
 ## Setup notes
 
@@ -129,16 +132,6 @@ Away mode can enable an [away-lighting recipe](/automation/security/away-lights.
 - **Someone returns just after activation:** Switch to Home immediately and reverse only the actions that are safe to reverse.
 - **The thermostat changes too far:** Enforce safe temperature limits on the thermostat itself, independent of Away mode.
 - **The hub or internet is down:** Physical switches, locks, alarm controls, and thermostat controls must remain usable.
-
-## Done when
-
-- [ ] Every household member can leave and return without another person's state becoming incorrect.
-- [ ] A child, guest, or person without a tracked phone can prevent Away mode.
-- [ ] Simulated location drift does not activate Away while indoor activity continues.
-- [ ] Returning during the delay cancels Pending Away.
-- [ ] The notification accurately lists every action that ran.
-- [ ] Home or Guest mode can be restored without opening an app.
-- [ ] Internet loss does not prevent manual control of lights, locks, alarms, or climate.
 
 ## FAQ
 

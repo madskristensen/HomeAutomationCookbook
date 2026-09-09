@@ -4,6 +4,7 @@ title: Use status tiles instead of notifications
 description: A platform-neutral recipe that replaces one-time push notifications with persistent dashboard tiles for household status information.
 keywords: status tiles, dashboard status, notification alternative, smart home dashboard, persistent status display
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Why use tiles instead of just sending more notifications?
     answer: Notifications are easy to dismiss without acting on them, and too many of them get ignored entirely. A tile stays visible until the underlying condition changes, so it does not rely on someone reacting the moment it fires.
@@ -25,6 +26,24 @@ Replace one-time push notifications with persistent dashboard tiles that stay vi
 
 A push notification is easy to dismiss with a swipe and then forget entirely. A dashboard tile that stays a visible color until the underlying condition changes works better for ongoing status information, such as garbage day or a pending maintenance task, where the goal is persistent visibility rather than a single alert.
 
+## Logic
+
+<div class="automation-example">IF the tracked condition for a tile becomes true
+THEN set that tile's virtual switch to its "needs attention" state
+
+IF the tracked condition is resolved
+OR the tile is tapped to mark it done
+THEN set that tile's virtual switch back to its normal state</div>
+
+- **Trigger:** The underlying condition for a given tile changes, such as a scheduled reminder becoming due.
+- **Conditions:** None beyond the specific condition each tile is tracking.
+- **Action:** Update the tile's virtual switch or variable to reflect the new state, changing its color or label on the dashboard.
+- **Wait / timeout:** The tile stays in its current state until the condition changes again.
+- **Stop condition:** The condition being tracked resolves, either automatically or by a household member marking it done.
+- **Manual override:** Any tile can be manually toggled if the automation misses an edge case.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,22 +57,6 @@ No personally verified recommendation yet. This only needs virtual switches or v
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The underlying condition for a given tile changes, such as a scheduled reminder becoming due.
-- **Conditions:** None beyond the specific condition each tile is tracking.
-- **Action:** Update the tile's virtual switch or variable to reflect the new state, changing its color or label on the dashboard.
-- **Wait / timeout:** The tile stays in its current state until the condition changes again.
-- **Stop condition:** The condition being tracked resolves, either automatically or by a household member marking it done.
-- **Manual override:** Any tile can be manually toggled if the automation misses an edge case.
-
-<div class="automation-example">IF the tracked condition for a tile becomes true
-THEN set that tile's virtual switch to its "needs attention" state
-
-IF the tracked condition is resolved
-OR the tile is tapped to mark it done
-THEN set that tile's virtual switch back to its normal state</div>
 
 ## Setup notes
 
@@ -79,13 +82,6 @@ If the platform supports it, log when each tile last changed state, to see how c
 - **A tile is stuck in the wrong state:** Manually toggle the tile's switch to reset it, and check whether its automation properly handles the reset case.
 - **Too many tiles make the dashboard cluttered:** Group related tiles into sections, or remove tiles for status information that is no longer useful.
 - **A genuinely urgent event only shows as a tile:** Reserve actual notifications for time-sensitive alerts and use tiles only for ongoing status.
-
-## Done when
-
-- [ ] Each tracked piece of status information has its own tile and clear visual states.
-- [ ] Each tile updates correctly based on its underlying condition.
-- [ ] Tiles can be cleared manually as a fallback.
-- [ ] Genuinely urgent alerts are still sent as actual notifications, not just tiles.
 
 ## FAQ
 

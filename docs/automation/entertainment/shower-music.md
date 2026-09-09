@@ -4,6 +4,7 @@ title: Play music when a shower starts
 description: A platform-neutral recipe that starts music or a podcast in the bathroom when a shower begins, using a light or door sensor as the trigger.
 keywords: shower music automation, bathroom speaker automation, automatic music, shower entertainment, bathroom audio control
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Which trigger works best, the light switch or a door sensor?
     answer: A light switch trigger is usually the most reliable since the light almost always goes on before the shower starts. A door sensor is a reasonable backup for a glass enclosure without a separate switch.
@@ -25,6 +26,25 @@ Start music or a podcast on a bathroom speaker automatically when the shower lig
 
 Remembering to start music before stepping into the shower, especially early in the morning, is easy to forget. Tying playback to a signal that already exists, like the light switch, removes the need to think about it and gives a consistent morning routine without extra steps.
 
+## Logic
+
+<div class="automation-example">IF the bathroom light turns on
+AND the current time is within waking hours
+AND the household is not in quiet hours
+THEN play music on the bathroom speaker at the preset volume
+
+IF the bathroom light has been off for a couple of minutes
+THEN stop or pause the bathroom speaker</div>
+
+- **Trigger:** The bathroom light turns on, or a door sensor reports the shower door opening.
+- **Conditions:** The current time is within normal waking hours, and the household is not in a sleeping or quiet-hours state.
+- **Action:** Start music or the last-used podcast on the bathroom speaker at a preset volume.
+- **Wait / timeout:** Keep playing until the stop condition is met.
+- **Stop condition:** The light stays off, or the door stays closed, for a couple of minutes.
+- **Manual override:** The speaker's own controls always work to pause, stop, or change volume directly.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -45,23 +65,6 @@ Any speaker the platform can control works, for example a Sonos speaker, which i
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The bathroom light turns on, or a door sensor reports the shower door opening.
-- **Conditions:** The current time is within normal waking hours, and the household is not in a sleeping or quiet-hours state.
-- **Action:** Start music or the last-used podcast on the bathroom speaker at a preset volume.
-- **Wait / timeout:** Keep playing until the stop condition is met.
-- **Stop condition:** The light stays off, or the door stays closed, for a couple of minutes.
-- **Manual override:** The speaker's own controls always work to pause, stop, or change volume directly.
-
-<div class="automation-example">IF the bathroom light turns on
-AND the current time is within waking hours
-AND the household is not in quiet hours
-THEN play music on the bathroom speaker at the preset volume
-
-IF the bathroom light has been off for a couple of minutes
-THEN stop or pause the bathroom speaker</div>
 
 ## Setup notes
 
@@ -88,13 +91,6 @@ Use a pause action rather than stop for podcast content so playback resumes from
 - **Music plays at night:** Check that the quiet-hours condition is present and correctly configured.
 - **Wrong content plays:** Confirm the playlist or podcast reference still matches what is expected, since streaming services occasionally change identifiers.
 - **Music does not stop after the shower:** Confirm the off-condition requires a sustained clear period and is not just checking a single instantaneous reading.
-
-## Done when
-
-- [ ] A real shower reliably starts music using the chosen trigger.
-- [ ] Playback does not start during quiet hours.
-- [ ] Music stops within a couple of minutes after the shower ends.
-- [ ] The speaker's own manual controls still work independently.
 
 ## FAQ
 

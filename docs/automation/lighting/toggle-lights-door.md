@@ -4,6 +4,7 @@ title: Turn lights on when a door opens (without losing the wall switch)
 description: A local-first contact-sensor lighting recipe for closets, pantries, and utility rooms that keeps the familiar wall switch usable.
 keywords: door sensor automation, contact sensor lights, automatic closet lights, door activated lighting, smart door sensor
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Should the light turn off as soon as the door closes?
     answer: Only for a small closet where the light is visible from outside. For a pantry or room, use a short delay and keep the wall switch as the immediate fallback.
@@ -24,6 +25,20 @@ Open the closet or pantry, and the light comes on. If the automation is unavaila
 ## Why this exists
 
 The pantry or utility-room light should be on before anyone has to reach for the switch. A contact sensor sees the action that starts the task - opening the door - more decisively than a motion sensor in a small enclosed space. The physical switch remains the Level 1 fallback for guests, maintenance, and every failure mode.
+
+## Logic
+
+<div class="automation-example">IF the closet door opens AND the closet is dark
+THEN turn on the closet light</div>
+
+- **Trigger:** The contact sensor changes from closed to open.
+- **Conditions:** The space is dark enough, or it is within the hours when automatic light makes sense.
+- **Action:** Turn on the light at the desired brightness.
+- **Wait / timeout:** None for turn-on. A separate close or timeout rule may turn it off later.
+- **Stop condition:** A manual wall-switch change is an explicit choice and should not be immediately reversed.
+- **Manual override:** The wall switch still wins.
+
+
 
 ## What I used
 
@@ -52,18 +67,6 @@ The pantry or utility-room light should be on before anyone has to reach for the
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The contact sensor changes from closed to open.
-- **Conditions:** The space is dark enough, or it is within the hours when automatic light makes sense.
-- **Action:** Turn on the light at the desired brightness.
-- **Wait / timeout:** None for turn-on. A separate close or timeout rule may turn it off later.
-- **Stop condition:** A manual wall-switch change is an explicit choice and should not be immediately reversed.
-- **Manual override:** The wall switch still wins.
-
-<div class="automation-example">IF the closet door opens AND the closet is dark
-THEN turn on the closet light</div>
 
 ## Setup notes
 
@@ -121,14 +124,6 @@ THEN turn on the closet light</div>
 - **The light turns on during the day:** Add a light-level condition or limit the automation to the hours when the space is normally dark.
 - **The light turns off while someone is using the space:** Increase the close delay. Do not use an instant off rule for a pantry or a space with more than one door.
 - **The hub or internet is down:** The physical wall switch remains the fallback. Verify local behavior before depending on it.
-
-## Done when
-
-- [ ] Opening the door ten times produces ten reliable open events in the hub.
-- [ ] The light turns on before anyone needs to reach for the wall switch.
-- [ ] The light does not turn on in daylight when the condition is enabled.
-- [ ] A manual wall-switch change is not immediately reversed by the automation.
-- [ ] Someone who did not build it can use the space without instructions.
 
 ## FAQ
 

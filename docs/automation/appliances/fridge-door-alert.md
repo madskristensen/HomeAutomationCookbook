@@ -4,6 +4,7 @@ title: Get an alert when the fridge or freezer door is left open
 description: A platform-neutral recipe that alerts when a refrigerator or freezer door has been open too long, with a shorter delay for the freezer and conservative handling of missing sensor data.
 keywords: fridge door alert, freezer door notification, refrigerator door left open, food spoilage prevention, door sensor fridge
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: Why does the freezer need a shorter delay than the fridge?
     answer: Frozen food starts to soften sooner than refrigerated food tolerates a temperature swing, so a shorter open-door delay is safer for the freezer.
@@ -25,6 +26,28 @@ Send one alert when a refrigerator or freezer door has stayed open past a safe d
 
 A door left open a few seconds while grabbing something is normal. A door left open for several minutes is a problem, and freezer contents tolerate far less warm-up time than refrigerator contents. Two separate delays, one per appliance, keep the alert useful without nagging over routine use.
 
+## Logic
+
+<div class="automation-example">IF fridge door sensor reports open
+AND remains open for the fridge delay
+THEN send one "Fridge door left open" notification
+
+IF freezer door sensor reports open
+AND remains open for the shorter freezer delay
+THEN send one "Freezer door left open" notification
+
+IF either sensor closes before its delay elapses
+THEN cancel that pending alert</div>
+
+- **Trigger:** The fridge or freezer door sensor reports open.
+- **Conditions:** The sensor is available and reporting current data.
+- **Action:** Start a timer specific to that appliance.
+- **Wait / timeout:** The freezer uses a shorter delay than the fridge because frozen food tolerates less warm-up time.
+- **Stop condition:** The door closes before the delay elapses, which cancels the alert.
+- **Manual override:** Anyone can close the door at any time. The automation only observes.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -38,26 +61,6 @@ A door left open a few seconds while grabbing something is normal. A door left o
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** The fridge or freezer door sensor reports open.
-- **Conditions:** The sensor is available and reporting current data.
-- **Action:** Start a timer specific to that appliance.
-- **Wait / timeout:** The freezer uses a shorter delay than the fridge because frozen food tolerates less warm-up time.
-- **Stop condition:** The door closes before the delay elapses, which cancels the alert.
-- **Manual override:** Anyone can close the door at any time. The automation only observes.
-
-<div class="automation-example">IF fridge door sensor reports open
-AND remains open for the fridge delay
-THEN send one "Fridge door left open" notification
-
-IF freezer door sensor reports open
-AND remains open for the shorter freezer delay
-THEN send one "Freezer door left open" notification
-
-IF either sensor closes before its delay elapses
-THEN cancel that pending alert</div>
 
 ## Setup notes
 
@@ -76,15 +79,6 @@ THEN cancel that pending alert</div>
 - **Sensor reports the wrong state:** Check the magnet-to-sensor gap and realign it; a gap larger than the manufacturer's spec will misreport.
 - **Repeated alerts for one open event:** Reset the pending alert only on a confirmed close, not on every sensor report.
 - **A stale or unavailable sensor:** Treat unavailable as unknown, not closed, and mention it in the notification rather than staying silent.
-
-## Done when
-
-- [ ] The fridge and freezer each have their own tested delay.
-- [ ] A normal grocery-loading session does not trigger an alert.
-- [ ] Propping the freezer door open triggers an alert sooner than propping the fridge door open.
-- [ ] Closing the door before the delay elapses cancels the pending alert.
-- [ ] Exactly one alert arrives per open event.
-- [ ] An unavailable sensor is reported as unknown rather than assumed closed.
 
 ## FAQ
 

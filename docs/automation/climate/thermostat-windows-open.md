@@ -4,6 +4,7 @@ title: Pause heating or cooling when a window stays open
 description: A platform-neutral climate recipe that pauses HVAC after a window remains open and resumes only when every monitored opening is closed.
 keywords: thermostat window sensor, stop HVAC windows open, smart thermostat control, window sensor thermostat, prevent heating outside
 last_modified_at: 2026-08-30
+compact: true
 faqs:
   - question: How long should a window stay open before HVAC pauses?
     answer: Start with two minutes for windows. Use a longer delay or exclude exterior doors that normally open for brief trips.
@@ -27,6 +28,27 @@ Pausing heating or cooling when a window stays open avoids using energy on air t
 
 Start with one frequently used window. Expand only after the full pause-and-resume cycle works reliably.
 
+## Logic
+
+<div class="automation-example">IF any monitored window remains open for two minutes
+AND heating or cooling is active
+THEN mark HVAC as paused by this recipe
+AND pause the thermostat
+
+IF every monitored opening remains closed
+AND this recipe still owns the pause
+THEN restore the saved thermostat mode
+AND clear the pause marker</div>
+
+- **Trigger:** Any monitored window or door remains open for two minutes.
+- **Conditions:** Heating or cooling is active, climate pause is enabled, and no safety condition requires HVAC to continue.
+- **Action:** Record that this recipe owns the pause, save the current thermostat mode if the system can do so reliably, pause HVAC, and identify the opening in a notification.
+- **Wait / timeout:** Ignore quick openings. Remind the household if an opening remains open long enough for indoor temperature to become a concern.
+- **Stop condition:** Every monitored opening has remained closed briefly.
+- **Manual override:** A thermostat change made during the pause cancels automatic restoration of the old state.
+
+
+
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -47,25 +69,6 @@ Start with one frequently used window. Expand only after the full pause-and-resu
 </div>
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
-
-## Logic
-
-- **Trigger:** Any monitored window or door remains open for two minutes.
-- **Conditions:** Heating or cooling is active, climate pause is enabled, and no safety condition requires HVAC to continue.
-- **Action:** Record that this recipe owns the pause, save the current thermostat mode if the system can do so reliably, pause HVAC, and identify the opening in a notification.
-- **Wait / timeout:** Ignore quick openings. Remind the household if an opening remains open long enough for indoor temperature to become a concern.
-- **Stop condition:** Every monitored opening has remained closed briefly.
-- **Manual override:** A thermostat change made during the pause cancels automatic restoration of the old state.
-
-<div class="automation-example">IF any monitored window remains open for two minutes
-AND heating or cooling is active
-THEN mark HVAC as paused by this recipe
-AND pause the thermostat
-
-IF every monitored opening remains closed
-AND this recipe still owns the pause
-THEN restore the saved thermostat mode
-AND clear the pause marker</div>
 
 ## Setup notes
 
@@ -111,16 +114,6 @@ A status tile can list the windows still open. This makes a failed resume unders
 - **A sensor battery dies while reporting open:** Alert on unavailable or stale sensors and require manual review instead of forcing a resume.
 - **Indoor temperature becomes unsafe:** Independent thermostat limits override the automation and notify the household.
 - **The hub or internet is down:** The thermostat remains usable at the wall and continues enforcing its own safety limits.
-
-## Done when
-
-- [ ] Ten quick window openings do not pause HVAC before the delay.
-- [ ] A sustained opening pauses HVAC once and identifies the correct window.
-- [ ] Closing only one of several open windows does not resume HVAC.
-- [ ] Closing every monitored opening resumes the exact prior mode.
-- [ ] A manual thermostat change during the pause is not overwritten.
-- [ ] An unavailable contact sensor produces a visible warning.
-- [ ] The thermostat remains fully controllable at the wall.
 
 ## FAQ
 
