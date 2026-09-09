@@ -3,7 +3,7 @@ layout: automation
 title: Get an alert before a cold room drifts outside its safe range
 description: Know when a cold room needs attention, then respond through heating controls approved for unattended thermostat operation rather than a general-purpose smart plug.
 keywords: cold room alert, room temperature monitoring, space heater safety, thermostat alert, supplemental heating
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: Can I control a portable space heater with a general smart plug?

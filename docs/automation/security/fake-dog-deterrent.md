@@ -3,7 +3,7 @@ layout: automation
 title: Play dog barking sounds as an intruder deterrent
 description: A platform-neutral recipe that plays a dog barking sound through a speaker when motion is detected while away, as a supplementary deterrent layer.
 keywords: fake dog deterrent, dog barking security, motion triggered sound, intruder deterrent, smart home security
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: Does this actually fool anyone into thinking there is a real dog?

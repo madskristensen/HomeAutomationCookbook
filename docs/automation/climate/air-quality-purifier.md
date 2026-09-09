@@ -3,7 +3,7 @@ layout: automation
 title: Run the air purifier when indoor air quality drops
 description: A platform-neutral recipe that runs a plug-controlled air purifier when an air quality sensor reports a sustained drop, and stops nagging once the air clears.
 keywords: air quality automation, air purifier control, AQI sensor automation, PM2.5 automation, indoor air quality
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: Why require a sustained reading instead of reacting to a single spike?

@@ -70,6 +70,7 @@ Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, cod
 - Articles use `layout: guide` and include a publication `date`. Add `last_modified_at` only after a later substantive update.
 - Hub, category, redirect, and navigation pages use `layout: default` and remain undated.
 - Legal pages may show an explicit date in their content when the wording requires it.
+- Whenever a markdown file's content is edited, update its `last_modified_at` frontmatter field to today's date (if the page's layout uses that field per the rules above). Add the field if it's missing and the layout calls for it. Skip this for pages that stay undated (hub, category, redirect, navigation, `layout: default` pages).
 
 # Navigation
 

@@ -3,7 +3,7 @@ layout: automation
 title: Turn lights on when you walk in (and keep the wall switch)
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: Why do motion lights turn on too slowly?

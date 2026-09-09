@@ -3,7 +3,7 @@ layout: automation
 title: Make the smart home predictable for guests
 description: A platform-neutral guest mode that keeps lights and physical controls simple, prevents false Away mode, and quiets only non-urgent personal automation.
 keywords: smart home guest mode, guest friendly automation, vacation guest mode, quiet notifications, smart home visitors
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: Should guest mode disable all automations?

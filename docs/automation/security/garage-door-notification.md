@@ -3,7 +3,7 @@ layout: automation
 title: Get notified when the garage door is left open
 description: A platform-neutral recipe that alerts when a garage door has been left open too long. Alerting only; closing stays manual or with equipment built for it.
 keywords: garage door notification, garage door left open, garage door sensor, garage door automation, garage door alert
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: How long should the garage door be open before I get a notification?

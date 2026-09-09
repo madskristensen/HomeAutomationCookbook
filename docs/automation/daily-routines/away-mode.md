@@ -3,7 +3,7 @@ layout: automation
 title: Set away mode when everyone leaves (without locking someone inside)
 description: A conservative, platform-neutral away-mode recipe that verifies the home is empty before changing lights, climate, or security behavior.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: How long should away mode wait after everyone leaves?

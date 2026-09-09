@@ -3,7 +3,7 @@ layout: automation
 title: Close a garage safely after an open-door alert
 description: Alert first, keep people in control, and allow unattended closing only through equipment designed for it with working entrapment protection and warnings.
 keywords: garage door left open, garage close alert, unattended garage closing, garage door safety, tilt sensor
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: Is a motion sensor enough to prove the garage is empty?

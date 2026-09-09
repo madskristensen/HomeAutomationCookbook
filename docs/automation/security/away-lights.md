@@ -3,7 +3,7 @@ layout: automation
 title: Turn on away lights to look occupied
 description: A platform-neutral recipe that turns on a few strategic lights while away to make the home look occupied, without an unnatural all-lights-on pattern.
 keywords: away lights, security lighting, home occupied simulation, break-in deterrent, smart home security
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: Will turning on a couple of lights actually deter a break-in?

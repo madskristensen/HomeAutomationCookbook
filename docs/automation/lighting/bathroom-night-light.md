@@ -3,7 +3,7 @@ layout: automation
 title: Turn on a dim bathroom light at night (without waking everyone)
 description: A local-first bathroom night-light recipe that uses motion, low brightness, and a reliable wall-switch fallback.
 keywords: bathroom night light, nighttime motion lighting, low brightness automation, smart bathroom lighting, motion sensor dimming, night mode lighting
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: What brightness should a bathroom night light use?

@@ -2,7 +2,7 @@
 layout: guide
 title: Choose smart-home devices and gear
 description: Choose compatible smart-home devices by job, then compare the sensors, switches, plugs, and climate gear I have personally used.
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 ---
 
 # Choose smart-home devices and gear

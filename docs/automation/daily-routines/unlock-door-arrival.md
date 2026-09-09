@@ -3,7 +3,7 @@ layout: automation
 title: Prepare the house when someone arrives (without automatic unlocking)
 description: Restore Home mode, light a safe path, and return the house to its normal comfort settings without treating phone location as proof that the right person is at the door.
 keywords: arrival home automation, welcome home automation, presence detection, entry lighting, home mode automation
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-09
 compact: true
 faqs:
   - question: Should arrival automation unlock the front door?
