@@ -36,7 +36,7 @@ You do not need to copy someone else's smart home. Every recipe uses the same bu
 1. **Notice the right moment.** Choose a trigger that represents something useful, such as entering a room or finishing a wash cycle.
 2. **Decide what should happen.** Add only the conditions, action, and timing needed to support the routine.
 3. **Keep people in control.** Plan the manual override and failure behavior before depending on the automation.
-4. **Test it in real life.** Use the Done when checklist, then let normal household behavior show you what to improve.
+4. **Test it in real life.** Try the automation during normal household use, then adjust it based on what you learn.
 
 If this is your first automation, [follow the beginner path](/getting-started/index.html). If you already have a system, [browse the recipe library](/automation/index.html) and adapt a useful idea.
 
