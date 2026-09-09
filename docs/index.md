@@ -1,20 +1,22 @@
 ---
 layout: default
-title: Home Automation Cookbook - practical recipes for a family home
-description: Learn to build home automations that reduce repeated tasks, support everyday routines, and keep familiar controls working.
+title: Home Automation Cookbook - ideas for your next smart-home automation
+description: Find practical home automation ideas for Alexa, Google, SmartThings, Homey, Philips Hue, Hubitat, Home Assistant, and more.
 ---
 
 <div class="hero">
-  <h1>Make everyday routines take care of themselves</h1>
-  <p class="hero-subtitle">Learn to build a home that quietly helps with the things you already do, while keeping switches, controls, and decisions in your hands.</p>
-  <p>Start with one repeated task or small frustration. The recipes here show you how to turn it into understandable logic, adapt it to your home, and test it with the people who live there.</p>
+  <h1>Find your next great home automation</h1>
+  <p class="hero-subtitle">Practical inspiration for making your smart home more useful, comfortable, and fun.</p>
+  <p>Home Automation Cookbook is for smart-home enthusiasts and anyone wondering what their connected home could do next. Browse real-world automation recipes, borrow the pattern behind an idea, and adapt it to your rooms, routines, and household.</p>
+  <p>Whether you use Alexa, Google, SmartThings, Homey, Philips Hue, Hubitat, Home Assistant, or a mix of systems, the goal is the same: fewer repeated checks, smoother routines, and more time to enjoy your home.</p>
+  <p><a href="/automation/index.html">Browse automation ideas</a> or <a href="/getting-started/index.html">start with one small win</a>.</p>
 </div>
 
-## What could your home take off your mind?
+## What can your smart home do for you?
 
-Maybe it is walking into a dark room with your hands full. Remembering wet laundry. Adjusting the thermostat after someone opens a window. Checking whether a battery, door, or maintenance task still needs attention.
+Start with a moment you repeat or a small annoyance you would love to remove: lights that should come on before you reach the switch, laundry that finishes while you are busy, music that should follow the mood, or a door, leak, or appliance that deserves your attention.
 
-A helpful automation handles that small moment without creating a new chore. It gives you:
+Each recipe helps you see:
 
 - **Less to remember** because repeated checks and tasks become visible or happen when needed.
 - **Fewer interruptions** because rooms respond without asking you to find a phone or open an app.
@@ -22,6 +24,10 @@ A helpful automation handles that small moment without creating a new chore. It 
 - **Confidence and control** because you understand the logic, can change it, and keep familiar controls.
 
 The goal is not more technology. It is a home that asks less of you during an ordinary day.
+
+## For any smart-home setup
+
+These are platform-neutral ideas, not instructions for one brand. The recipes focus on the useful logic behind an automation - the trigger, conditions, action, timing, and fallback - so you can build the same idea with the tools you already own or compare what a new platform could enable.
 
 ## Learn the pattern once
 
