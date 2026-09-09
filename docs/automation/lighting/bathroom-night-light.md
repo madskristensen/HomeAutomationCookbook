@@ -78,19 +78,19 @@ THEN turn on the light at 10%</div>
 
 **Detect bathroom motion, humidity, temperature, and light**
 
-[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2). Use the extra readings where they solve a real bathroom problem.
+[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20). Use the extra readings where they solve a real bathroom problem.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Dim a fixed light**
 
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Verify hub compatibility. The physical paddle must remain usable.
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. The physical paddle must remain usable.
 
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 

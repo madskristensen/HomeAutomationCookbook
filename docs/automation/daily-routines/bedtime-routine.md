@@ -64,26 +64,26 @@ A "Good night" phrase or manual scene control. The final trigger should be inten
 
 **Dim selected lights**
 
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Wall paddles remain normal controls before, during, and after the routine.
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Wall paddles remain normal controls before, during, and after the routine.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Apply an approved sleep setting**
 
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). Respect manual holds, safety limits, and the open-window pause recipe.
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Respect manual holds, safety limits, and the open-window pause recipe.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Report open doors or windows**
 
-[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL). Report status first; do not treat a contact sensor as proof that a door is locked.
+[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Report status first; do not treat a contact sensor as proof that a door is locked.
 
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 

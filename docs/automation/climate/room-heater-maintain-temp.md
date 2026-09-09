@@ -53,14 +53,14 @@ DO NOT switch a portable heater through a general-purpose smart plug</div>
 
 **Measure room temperature**
 
-[THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3). Compare the reading with a known thermometer before using it for alerts.
+[THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20). Compare the reading with a known thermometer before using it for alerts.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Control central heating**
 
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). I have used both. Keep safe limits and manual control at the thermostat.
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). I have used both. Keep safe limits and manual control at the thermostat.
 
 </div>
 <div class="product-item" markdown="1">

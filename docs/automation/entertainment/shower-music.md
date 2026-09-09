@@ -52,7 +52,7 @@ THEN stop or pause the bathroom speaker</div>
 
 **Trigger the automation**
 
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Use the existing shower light switch as the trigger where possible.
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Use the existing shower light switch as the trigger where possible.
 
 </div>
 <div class="product-item" markdown="1">

@@ -60,19 +60,19 @@ Use your platform's built-in presence feature (phone location or network connect
 
 **Light the entry path**
 
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Keep the physical paddle usable.
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Restore heating and cooling**
 
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). The thermostat's safe limits remain authoritative.
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). The thermostat's safe limits remain authoritative.
 
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 

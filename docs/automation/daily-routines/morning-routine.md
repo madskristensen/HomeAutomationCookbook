@@ -63,19 +63,19 @@ A "Good morning" voice phrase or manual scene control. The trigger should be int
 
 **Light the morning path**
 
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Verify hub compatibility. Keep every wall paddle working normally.
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep every wall paddle working normally.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Restore approved comfort**
 
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). Someone can always change the temperature at the thermostat.
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Someone can always change the temperature at the thermostat.
 
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 

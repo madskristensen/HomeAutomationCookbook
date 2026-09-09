@@ -6,9 +6,9 @@ description: How Home Automation Cookbook handles affiliate links, product recom
 
 # Disclosure
 
-Home Automation Cookbook may use affiliate links in the future. If you follow one and make a purchase, the site may earn a small commission at no additional cost to you.
+Home Automation Cookbook is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate I earn from qualifying purchases.
 
-Current product links are direct, non-affiliate links. The site does not currently earn a commission from them. If that changes, affiliate links and relationships will be identified near the relevant link.
+Amazon product links on this site are affiliate links. If you follow one and make a purchase, the site earns a small commission at no additional cost to you.
 
 ## How recommendations work
 
@@ -18,6 +18,6 @@ A product link does not change the advice: physical controls should still work, 
 
 ## Current status
 
-No affiliate program or paid product relationship is active on the site.
+The Amazon Associates program is the only affiliate relationship active on the site.
 
 Questions about this disclosure can be raised through the [project discussions](https://github.com/madskristensen/HomeAutomationCookbook/discussions).

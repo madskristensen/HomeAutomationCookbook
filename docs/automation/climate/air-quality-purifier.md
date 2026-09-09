@@ -53,7 +53,7 @@ THEN turn off the purifier</div>
 
 **Control a plug-in air purifier**
 
-[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2). Confirm the plug's current rating covers the purifier's startup draw, and keep the purifier's own physical switch usable.
+[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20). Confirm the plug's current rating covers the purifier's startup draw, and keep the purifier's own physical switch usable.
 
 </div>
 <div class="product-item" markdown="1">
@@ -65,7 +65,7 @@ No personally verified recommendation yet. I have not verified a specific air qu
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 

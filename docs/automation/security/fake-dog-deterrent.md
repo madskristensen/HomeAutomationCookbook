@@ -50,7 +50,7 @@ AND send a notification that motion was detected</div>
 
 **Detect fast entry motion**
 
-[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) for an indoor entry point, or the [Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I) or [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2) if mounted outside.
+[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20) for an indoor entry point, or the [Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20) or [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) if mounted outside.
 
 </div>
 <div class="product-item" markdown="1">

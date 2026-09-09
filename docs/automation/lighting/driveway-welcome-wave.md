@@ -57,21 +57,21 @@ BUT never unlock a door or move a garage</div>
 
 **Control plug-in exterior lighting**
 
-[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8). Use only with a suitable outdoor receptacle, enclosure, and lighting load.
+[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8/ref=nosim?tag=madsk0f-20). Use only with a suitable outdoor receptacle, enclosure, and lighting load.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Switch a fixed entry light**
 
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). The wall paddle remains the normal control.
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). The wall paddle remains the normal control.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Confirm entry-door activity**
 
-[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL). A door event confirms activity; it does not prove identity or unlock anything.
+[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). A door event confirms activity; it does not prove identity or unlock anything.
 
 </div>
 <div class="product-item" markdown="1">
@@ -83,7 +83,7 @@ Use your platform's built-in presence feature, driven by phone location, only to
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 

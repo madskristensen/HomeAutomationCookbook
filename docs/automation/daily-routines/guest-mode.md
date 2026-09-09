@@ -63,14 +63,14 @@ A clearly labeled dashboard control or voice phrase. A host should be able to ch
 
 **Keep fixed lights familiar**
 
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Normal wall paddles are the primary guest interface.
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Normal wall paddles are the primary guest interface.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Keep climate adjustable**
 
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). Guests can request or make normal adjustments at the thermostat.
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Guests can request or make normal adjustments at the thermostat.
 
 </div>
 </div>

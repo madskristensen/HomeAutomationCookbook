@@ -52,7 +52,7 @@ DO NOT close the door automatically from this recipe</div>
 
 **Know whether a garage door is open**
 
-[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF). Reports open and closed state without replacing the existing garage door opener. It reports door position only, not whether the doorway is clear.
+[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). Reports open and closed state without replacing the existing garage door opener. It reports door position only, not whether the doorway is clear.
 
 </div>
 </div>

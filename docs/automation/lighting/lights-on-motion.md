@@ -68,28 +68,28 @@ THEN turn on the light</div>
 
 **Detect fast entry motion**
 
-[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK). Mount it where it sees the approach to the doorway.
+[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20). Mount it where it sees the approach to the doorway.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Dim a fixed light**
 
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Verify hub compatibility. Keep the physical paddle usable.
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Switch a fixed light on or off**
 
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Keep the physical paddle usable.
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable.
 
 </div>
 </div>
 
-For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) instead. It is not my first choice when the fastest motion response is the job.
+For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY/ref=nosim?tag=madsk0f-20) instead. It is not my first choice when the fastest motion response is the job.
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 💡 For outdoor placement, weather protection, and false-trigger testing, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html).
 

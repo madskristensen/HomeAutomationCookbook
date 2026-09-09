@@ -54,7 +54,7 @@ THEN turn off the bathroom fan</div>
 
 **Detect bathroom motion with humidity, temperature, and light**
 
-[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2). Use this for the humidity-based trigger, not for the fastest motion response.
+[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20). Use this for the humidity-based trigger, not for the fastest motion response.
 
 </div>
 <div class="product-item" markdown="1">
@@ -66,7 +66,7 @@ No personally verified recommendation yet. Confirm any smart switch used here is
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 

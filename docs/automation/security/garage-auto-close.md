@@ -55,7 +55,7 @@ DO NOT use motion, location, a camera, or a tilt sensor as entrapment protection
 
 **Know door position**
 
-[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF). I have used both. They report position, not a clear doorway.
+[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). I have used both. They report position, not a clear doorway.
 
 </div>
 <div class="product-item" markdown="1">

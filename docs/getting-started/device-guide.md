@@ -59,16 +59,16 @@ Read [PIR vs mmWave presence](/articles/pir-vs-mmwave-presence.html) before choo
 
 ## Products I have used
 
-I have bought and used every product named below. Links go directly to Amazon product pages without affiliate tracking. If that changes, the [disclosure](/disclosure.html) will identify the relationship before the first affiliate link.
+I have bought and used every product named below. Amazon product links are affiliate links, and I earn from qualifying purchases. See the [disclosure](/disclosure.html) for details.
 
 ### Occupancy and motion
 
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
-| Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK) | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB) - my favorite for fast reactions. | Put it where it sees the doorway before someone reaches the switch. |
-| Detect a person who is still | [Besisglas Zigbee Human Presence Sensor](https://www.amazon.com/dp/B0GYJ3LQ5W) | [Aqara Presence Sensor FP300](https://www.amazon.com/dp/B0FG2MD3YP) | Use this for home offices, showers, reading, or other rooms where a PIR can time out while someone is still. |
-| Detect bathroom motion with humidity, temperature, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY) | Use it where the extra sensor readings are useful, not where the fastest motion response matters most. |
-| Detect outdoor motion | [Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I) | [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2) - Z-Wave Long Range with an 800-series radio for better range from a detached garage or driveway. | 💡 See [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html) before choosing the mounting location. |
+| Detect fast entry motion | [Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20) | [Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB/ref=nosim?tag=madsk0f-20) - my favorite for fast reactions. | Put it where it sees the doorway before someone reaches the switch. |
+| Detect a person who is still | [Besisglas Zigbee Human Presence Sensor](https://www.amazon.com/dp/B0GYJ3LQ5W/ref=nosim?tag=madsk0f-20) | [Aqara Presence Sensor FP300](https://www.amazon.com/dp/B0FG2MD3YP/ref=nosim?tag=madsk0f-20) | Use this for home offices, showers, reading, or other rooms where a PIR can time out while someone is still. |
+| Detect bathroom motion with humidity, temperature, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY/ref=nosim?tag=madsk0f-20) | Use it where the extra sensor readings are useful, not where the fastest motion response matters most. |
+| Detect outdoor motion | [Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20) | [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) - Z-Wave Long Range with an 800-series radio for better range from a detached garage or driveway. | 💡 See [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html) before choosing the mounting location. |
 
 ### Household presence
 
@@ -78,37 +78,37 @@ This one usually isn't a separate product. Most platforms already offer a presen
 
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
-| Dim a fixed light | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN) | The paddle remains a normal wall control. |
-| Switch a fixed light on or off | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2) | The paddle remains a normal wall control. |
-| Control a plug-in light or appliance | [Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2) | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | Keep the appliance's physical control usable. |
-| Control outdoor plug-in lighting | [Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8) | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC) | Use only where an outdoor-rated plug is appropriate. |
+| Dim a fixed light | [TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20) | [UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN/ref=nosim?tag=madsk0f-20) | The paddle remains a normal wall control. |
+| Switch a fixed light on or off | [Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20) | [UltraPro Z-Wave Long Range On/Off Switch](https://www.amazon.com/dp/B0FX3CTLW2/ref=nosim?tag=madsk0f-20) | The paddle remains a normal wall control. |
+| Control a plug-in light or appliance | [Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20) | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20) | Keep the appliance's physical control usable. |
+| Control outdoor plug-in lighting | [Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8/ref=nosim?tag=madsk0f-20) | [Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC/ref=nosim?tag=madsk0f-20) | Use only where an outdoor-rated plug is appropriate. |
 
 ### Climate
 
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
-| Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL) | Someone should be able to change the temperature at the thermostat. |
-| Measure room temperature and humidity | [THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3) | [Zooz ZSE44 800LR Temperature/Humidity XS Sensor](https://www.amazon.com/dp/B0B3G9Z4LJ) | Placement matters more than the sensor. Keep it away from vents, drafts, and direct sun. |
+| Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL/ref=nosim?tag=madsk0f-20) | Someone should be able to change the temperature at the thermostat. |
+| Measure room temperature and humidity | [THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20) | [Zooz ZSE44 800LR Temperature/Humidity XS Sensor](https://www.amazon.com/dp/B0B3G9Z4LJ/ref=nosim?tag=madsk0f-20) | Placement matters more than the sensor. Keep it away from vents, drafts, and direct sun. |
 
 ### Power monitoring
 
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
-| Detect whether a TV is on | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK) | [Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY) - a heavier-duty, hardwired-capable power-metering switch for a higher-draw load. | Use the power reading as a signal only. Keep the TV's remote and normal power controls unchanged. |
+| Detect whether a TV is on | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20) | [Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY/ref=nosim?tag=madsk0f-20) - a heavier-duty, hardwired-capable power-metering switch for a higher-draw load. | Use the power reading as a signal only. Keep the TV's remote and normal power controls unchanged. |
 
 ### Leaks and safety
 
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
-| Detect water where it should not be | [THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2) | [NEO Z-Wave Plus 700 water leak sensor](https://www.amazon.com/dp/B0FSKFCKTB) | Test the alert and make sure the source is obvious. |
-| Detect an open door or window | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW) | A contact sensor is easy for a guest to understand because the door itself is the trigger. |
-| Know whether a garage door is open | [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF) | [Ecolink Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT) | Use it for status and alerts before adding automatic closing. |
+| Detect water where it should not be | [THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2/ref=nosim?tag=madsk0f-20) | [NEO Z-Wave Plus 700 water leak sensor](https://www.amazon.com/dp/B0FSKFCKTB/ref=nosim?tag=madsk0f-20) | Test the alert and make sure the source is obvious. |
+| Detect an open door or window | [SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20) | [Zooz ZSE41 800LR Open/Close XS Sensor](https://www.amazon.com/dp/B09JKKLRLW/ref=nosim?tag=madsk0f-20) | A contact sensor is easy for a guest to understand because the door itself is the trigger. |
+| Know whether a garage door is open | [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20) | [Ecolink Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT/ref=nosim?tag=madsk0f-20) | Use it for status and alerts before adding automatic closing. |
 
 ### Vibration sensing
 
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
-| Detect appliance vibration (dryer, washer, garage door motor) | [THIRDREALITY Zigbee Smart Vibration Sensor](https://www.amazon.com/dp/B0C9DP249C) | [Aeotec SmartThings Multipurpose Sensor](https://www.amazon.com/dp/B095TPSQ3S) - a Zigbee door/window sensor with a built-in accelerometer for vibration and tilt, worth it if you also want the contact-sensor reading in the same spot. | Mount only on a cool, fixed exterior panel after testing surface temperature through a full cycle. Sensitivity usually needs adjusting to ignore normal household bumps. |
+| Detect appliance vibration (dryer, washer, garage door motor) | [THIRDREALITY Zigbee Smart Vibration Sensor](https://www.amazon.com/dp/B0C9DP249C/ref=nosim?tag=madsk0f-20) | [Aeotec SmartThings Multipurpose Sensor](https://www.amazon.com/dp/B095TPSQ3S/ref=nosim?tag=madsk0f-20) - a Zigbee door/window sensor with a built-in accelerometer for vibration and tilt, worth it if you also want the contact-sensor reading in the same spot. | Mount only on a cool, fixed exterior panel after testing surface temperature through a full cycle. Sensitivity usually needs adjusting to ignore normal household bumps. |
 
 ## Verify compatibility
 

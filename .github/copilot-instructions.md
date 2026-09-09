@@ -1,4 +1,5 @@
 # Writing style
+
 - Use sentence case for titles and headings instead of Title Case.
 - Don't use em-dashes when writing sentences; use hyphens surrounded by spaces instead.
 - Don't use emojis in the text, except for the lightbulb emoji (💡) when introducing a practical tip or reusable guidance.
@@ -7,6 +8,7 @@
 - Never publish TODO placeholders for unverified hardware. Use "No personally verified recommendation yet" or a specific variation that names the unverified job.
 
 # Editorial promise
+
 - Frame home automation as a way to quietly support routines the household already has.
 - Lead with the reader's benefit: less to remember, fewer repeated checks or adjustments, better comfort or coordination, and more confidence to build and adapt.
 - Help readers understand the reusable pattern rather than merely copy a finished rule.
@@ -14,6 +16,7 @@
 - Keep products, platforms, and technical features in supporting roles. Do not make the site feel like a sales funnel.
 
 # Site structure
+
 - This is a Jekyll static site for homeautomationcookbook.com
 - Main CSS: `docs/assets/css/style.css` (consolidated stylesheet, ~1200 lines)
 - Config: `docs/_config.yml` contains navigation structure
@@ -26,6 +29,7 @@
 - Each category has: `index.md` (overview) and individual automation pages
 
 # Design system
+
 - Color scheme: Slate gray (#2c3e50 primary, #1a252f hover)
 - All blue colors (#0066cc) were replaced with slate gray for subtlety
 - Cards use: border `#e0e0e0`, hover border `#2c3e50`, shadow `rgba(44,62,80,0.08-0.12)`
@@ -34,6 +38,7 @@
 - Never use bright or saturated colors
 
 # File editing approach
+
 - Always read files before editing them to understand context
 - Use `multi_replace_string_in_file` for multiple changes (never call `replace_string_in_file` multiple times)
 - Include 3-5 lines of context before and after target text for uniqueness
@@ -41,7 +46,9 @@
 - For site-wide changes: start with homepage, then category indexes, then detail pages
 
 # Automation page patterns
+
 When creating or updating an automation detail page, use this structure:
+
 - Title and one-sentence job
 - Best for and Not for
 - Why this exists
@@ -57,6 +64,7 @@ When creating or updating an automation detail page, use this structure:
 Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, code blocks, logos, or capability claims unless Mads has personally verified them and they materially change the recipe.
 
 # Content dates
+
 - Recipes use `layout: automation` and always include `last_modified_at`.
 - Substantive evergreen guides use `layout: guide` and include `last_modified_at`; the guide layout shows the date below the headline.
 - Articles use `layout: guide` and include a publication `date`. Add `last_modified_at` only after a later substantive update.
@@ -64,6 +72,7 @@ Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, cod
 - Legal pages may show an explicit date in their content when the wording requires it.
 
 # Navigation
+
 - Main nav in `docs/_includes/navigation.html`
 - Config in `docs/_config.yml` under `navigation:` key
 - All links use `.html` extension (converted from `/` endings)
@@ -71,12 +80,14 @@ Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, cod
 - Mobile uses hamburger menu with nested accordion
 
 # Common tasks
+
 - **Adding new automation**: Create markdown in appropriate category folder, add to `_config.yml` navigation
 - **Sentence case conversion**: Use `multi_replace_string_in_file` with heading patterns like "## Title Case" → "## Sentence case"
 - **CSS changes**: Edit consolidated `docs/assets/css/style.css` (do not split files)
 - **Color updates**: Search for hex values and replace consistently across entire stylesheet
 
 # What works well
+
 - Direct tool usage over scripts
 - Batch operations with multi_replace_string_in_file
 - Reading file structure with `get_projects_in_solution` and `get_files_in_project` first
@@ -84,6 +95,7 @@ Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, cod
 - Most automation pages already follow style guide - verify before assuming work needed
 
 # Local development - running Jekyll locally
+
 To run the Jekyll site locally for preview and testing:
 
 ```bash
@@ -105,14 +117,23 @@ bundle exec jekyll serve --source docs --port 4000 --host 0.0.0.0
 - If you see "Could not find gem" errors, make sure to run from repo root, not from `docs/`
 
 # Platform-specific content
+
 - Keep the core recipe platform-neutral.
 - Only add a platform-specific note when Mads has personally verified a limitation or workaround that materially changes the outcome.
 - Never create unverified platform code, UI steps, or capability claims.
 - Mads has personally used Amazon Echo with Alexa, SmartThings, and Hubitat. Hubitat is his current and preferred platform because daily management is user-friendly while detailed rules and coding remain available.
 - Mads has not personally used Home Assistant. Clearly label Home Assistant guidance as a technical-fit comparison rather than firsthand experience.
 
+# Amazon affiliate links
+
+- All Amazon product links must be affiliate links. Any new link to an Amazon product page must append `/ref=nosim?tag=madsk0f-20` to the `amazon.com/dp/ASIN` URL (e.g. `https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20`).
+- Any page that adds its first Amazon link needs an affiliate disclosure line near the link (see existing pattern in automation pages: "Amazon product links on this page are affiliate links, and I earn from qualifying purchases." linking to `/disclosure.html`).
+- `docs/disclosure.md` is the canonical page describing the Amazon Associates Program relationship; keep it in sync if the affiliate program status changes.
+
 # Automation categories
+
 There are 8 automation categories (not 6):
+
 - `docs/automation/lighting/` - Light automations
 - `docs/automation/climate/` - HVAC, fans, blinds
 - `docs/automation/security/` - Safety and security

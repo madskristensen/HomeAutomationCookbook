@@ -48,7 +48,7 @@ THEN send a phone notification: "Motion detected at the front door"</div>
 
 **Detect motion near the front entrance**
 
-[Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I), or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2) for Z-Wave Long Range. Confirm it is rated for the exposure it will face.
+[Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20), or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) for Z-Wave Long Range. Confirm it is rated for the exposure it will face.
 
 </div>
 </div>

@@ -60,26 +60,26 @@ Use your platform's built-in presence feature, usually driven by each family mem
 
 **Detect recent indoor activity**
 
-[Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB). Use activity as a reason to delay Away, not as proof that the home is empty.
+[Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB/ref=nosim?tag=madsk0f-20). Use activity as a reason to delay Away, not as proof that the home is empty.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Adjust heating and cooling**
 
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC). Keep safe minimum and maximum temperatures at the thermostat.
+[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Keep safe minimum and maximum temperatures at the thermostat.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Control fixed lights**
 
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Physical paddles must keep working.
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Physical paddles must keep working.
 
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product links on this page are direct, non-affiliate Amazon links. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 

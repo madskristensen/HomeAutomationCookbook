@@ -56,7 +56,7 @@ AND report whether the valve actually reached closed</div>
 
 **Detect water**
 
-[THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2). Name every sensor for the place a person should inspect.
+[THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2/ref=nosim?tag=madsk0f-20). Name every sensor for the place a person should inspect.
 
 </div>
 <div class="product-item" markdown="1">

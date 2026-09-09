@@ -52,21 +52,21 @@ THEN turn off the away lights scene</div>
 
 **Switch a fixed light on or off**
 
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6). Good for a wired fixture the household wants to keep as a simple on/off.
+[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Good for a wired fixture the household wants to keep as a simple on/off.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Dim a fixed light**
 
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W). Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch.
+[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch.
 
 </div>
 <div class="product-item" markdown="1">
 
 **Control a plug-in light or appliance**
 
-[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2). Works for a lamp plugged into an outlet rather than a wired fixture.
+[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20). Works for a lamp plugged into an outlet rather than a wired fixture.
 
 </div>
 </div>
