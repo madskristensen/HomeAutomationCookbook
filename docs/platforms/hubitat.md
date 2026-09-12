@@ -7,7 +7,7 @@ last_modified_at: 2026-09-12
 
 # Hubitat home automation guide
 
-Hubitat is my current platform because it provides approachable daily management while leaving room for detailed rules, custom apps, drivers, and code. The useful balance is not maximum complexity. It is having enough control to make routines dependable without turning every adjustment into a software project.
+Hubitat is my current platform because it is fast, compact, and managed while still leaving room for detailed rules, community drivers, custom drivers, and code. It gives me enough control to make routines dependable without turning every daily adjustment into a software project.
 
 **Best for:** Local rules with compatible devices, built-in Zigbee and Z-Wave radios, detailed automation logic, and people comfortable understanding triggers and state.
 
@@ -15,7 +15,13 @@ Hubitat is my current platform because it provides approachable daily management
 
 ## My experience boundary
 
-I currently use Hubitat and prefer it over the platforms I used previously. This guide reflects firsthand operation plus current Hubitat documentation. Exact hub model, firmware, screenshots, and per-recipe test records will only be added when they are captured and verified.
+I moved to Hubitat during a whole-house remodel, when I could rebuild the automation system from scratch instead of migrating it piecemeal. It has been an excellent fit for my needs: fast in daily use, supported by a large community-driver ecosystem, and open enough for me to write a driver when an unusual device needs one.
+
+AI coding tools have made writing my own Hubitat drivers easier, but generated code still needs the same review, device testing, failure handling, and maintenance as any other integration. In a few cases I have been able to create the Hubitat support I needed even when I could not find an existing implementation elsewhere.
+
+For rules, webCoRE is my preferred engine. It can express the conditional and stateful scenarios that I could not comfortably build on earlier platforms. I also use SharpTools.io dashboards on several wall-mounted tablets, just as I did with SmartThings, so useful controls and status remain visible around the house.
+
+This guide reflects firsthand operation plus current Hubitat documentation. Exact hub model, firmware, screenshots, and per-recipe test records will only be added when they are captured and verified.
 
 ## Where Hubitat fits
 
@@ -24,6 +30,7 @@ Hubitat offers several automation tools rather than requiring every job to use t
 - Use a purpose-built app when it matches the job.
 - Use Basic Rules for a clear event-and-action path.
 - Use Rule Machine when the automation genuinely needs conditions, branches, waits, or remembered state.
+- Use webCoRE when its piston model is the clearest way to express and maintain a more involved rule.
 - Use modes and virtual switches to make shared household state visible.
 
 The simplest tool that expresses the complete safe behavior is usually the easiest to maintain.
@@ -36,7 +43,7 @@ The simplest tool that expresses the complete safe behavior is usually the easie
 - [Mode Manager](https://docs2.hubitat.com/en/apps/mode-manager) changes household modes from schedules or presence.
 - The [Notifications app](https://docs2.hubitat.com/en/apps/notifications) can alert when a condition remains true, with limits and restrictions.
 
-Choose the app by the household job rather than by which tool has the most options.
+Choose the app by the household job rather than by which tool has the most options. Although webCoRE is my preference for advanced rules, I still use a simpler built-in app when it expresses the complete behavior more clearly.
 
 ## How the recipes map to Hubitat
 
@@ -44,9 +51,9 @@ Choose the app by the household job rather than by which tool has the most optio
 |---|---|---|
 | [Motion-triggered lights](/automation/lighting/lights-on-motion.html) | Room Lighting | Purpose-built activation, delayed off, conditions, and override handling. |
 | [Door-triggered closet lights](/automation/lighting/toggle-lights-door.html) | Room Lighting or Basic Rules | Contact activation is simple, while Room Lighting helps with off behavior. |
-| [Washer completion alert](/automation/appliances/washer-done-notification.html) | Rule Machine | Completion inferred from running then idle needs remembered state and delays. |
+| [Washer completion alert](/automation/appliances/washer-done-notification.html) | webCoRE or Rule Machine | Completion inferred from running then idle needs remembered state and delays. |
 | [Garage left-open alert](/automation/security/garage-door-notification.html) | Basic Rules or Notifications | Alert only after the open condition remains true. |
-| [Bathroom fan after a shower](/automation/climate/fan-shower.html) | Basic Rules or Rule Machine | Separate humidity thresholds are simple; rapid-rise inference needs deeper logic. |
+| [Bathroom fan after a shower](/automation/climate/fan-shower.html) | Basic Rules, webCoRE, or Rule Machine | Separate humidity thresholds are simple; rapid-rise inference needs deeper logic. |
 | [Away and arrival routines](/automation/daily-routines/away-mode.html) | Mode Manager plus focused rules | Shared mode can coordinate independent lighting, climate, and notification behavior. |
 
 ## Build and verify one rule
@@ -59,6 +66,8 @@ Choose the app by the household job rather than by which tool has the most optio
 6. Test hub restart, device unavailability, low battery, and manual control.
 7. Disconnect the internet to separate local automation from cloud notifications or integrations.
 8. Document complex Rule Machine logic so another person can understand why it acted.
+
+The same documentation rule applies to webCoRE pistons and custom drivers. Advanced capability is useful only when I can still understand and repair it later.
 
 ## Local and cloud behavior
 
@@ -94,6 +103,14 @@ Hubitat apps run on the hub, but cloud integrations and external notification se
 ### Why use Room Lighting instead of a custom rule?
 
 Room Lighting already models common lighting activation, delayed off, restrictions, and overrides. Reusing that behavior is usually easier to maintain than rebuilding it from individual actions.
+
+### Why is Hubitat my current preference?
+
+It checks the combination I care about: fast local behavior for compatible devices, a small managed hub, broad community-driver support, and enough openness to write my own drivers and advanced webCoRE rules. It lets me go deep when necessary without making routine household management feel like maintaining a server.
+
+### Can I use SharpTools with Hubitat?
+
+I use SharpTools.io with Hubitat to display controls and status on wall-mounted tablets around my house. The dashboards support visibility and convenient control, while physical switches remain the ordinary way to operate each room.
 
 ## Related guides
 

@@ -15,7 +15,11 @@ SmartThings can reduce repeated household checks through approachable routines w
 
 ## My experience boundary
 
-I used SmartThings after starting with Alexa and before moving to Hubitat. This page combines that firsthand context with current SmartThings documentation. Exact screenshots, hub versions, and current per-device test results are omitted until I record them from a current installation.
+I moved to SmartThings after outgrowing Alexa's routine limitations. SmartThings supported many more device types and protocols, including Z-Wave, and gave me room to build out my first large smart home. I enjoyed that period and found the platform much more capable than the system I had left.
+
+My installation eventually grew beyond 100 devices and became noticeably slower. I also reached limits in the routine tools for more advanced scenarios. Later, when SmartThings changed its driver model, drivers I depended on were not all available on the new path. Those are observations from my installation and migration period, not claims that every current SmartThings home will have the same performance or driver gaps.
+
+I used SharpTools.io dashboards with SmartThings on wall-mounted tablets around the house. That kept frequently used controls visible and approachable without making a phone app the only interface.
 
 ## Where SmartThings fits
 
@@ -27,6 +31,8 @@ The platform remains understandable when:
 - All and Any condition behavior is deliberate.
 - Advanced Rules are reserved for logic that truly needs memory, waits, or rechecks.
 - Manual switches, thermostat limits, and safety equipment remain authoritative.
+
+SmartThings was a meaningful step up for me because broader device and protocol support removed many of the compatibility limits I had encountered. Before building a large system today, I would still verify current drivers for every important device and test performance with representative routines rather than assuming my older experience predicts the current platform.
 
 ## Automation building blocks
 
@@ -65,6 +71,8 @@ SmartThings Rules run locally only when every involved device feature and servic
 ## Failure modes
 
 - **A device pairs but lacks the needed option:** Its profile does not expose the capability required by the recipe.
+- **A previously supported device loses a migration path:** Confirm that a maintained driver exists before changing hubs, drivers, or platform architecture.
+- **A large installation becomes less responsive:** Measure event and routine latency as the device count grows, and investigate before adding more dependent automations.
 - **A delayed alert fires after the condition cleared:** Recheck the state after waiting instead of delaying an unconditional action.
 - **Away mode activates while someone remains home:** Correct All and Any presence semantics and add a Guest override.
 - **A rule unexpectedly uses the cloud:** One device capability or service in the path does not support local execution.
@@ -91,6 +99,10 @@ No. Local execution depends on every device capability and service used by the a
 ### Can SmartThings tell when everyone has left?
 
 Phone presence can contribute to that decision, but it is not proof by itself. Track every resident, use the correct All and Any behavior, add delay, and provide a Guest or Staying Home override.
+
+### Why did I move from SmartThings to Hubitat?
+
+My SmartThings home had grown beyond 100 devices, performance had slowed, advanced routines still had limits, and the driver-model transition left gaps for devices I used. A whole-house remodel gave me a practical opportunity to rebuild from scratch, so I moved to Hubitat.
 
 ## Related guides
 

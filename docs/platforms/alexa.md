@@ -15,13 +15,17 @@ Alexa can remove small repeated interactions through voice control and straightf
 
 ## My experience boundary
 
-Alexa was my first home automation platform, and I have used it in my home. This guide reflects that firsthand context plus current Amazon interface documentation. It does not claim that every current device, region, or Alexa app exposes the same routine choices.
+Alexa was my first home automation platform. I started with smart light bulbs, then bought an Echo with a built-in Zigbee hub and expanded into smart light switches. That progression worked well for straightforward lighting and voice control.
+
+I eventually reached the limits of the routine builder. I could not express simple conditional logic I wanted, and several device types were not available to routines in the way I needed. That experience led me to SmartThings rather than away from Alexa entirely. Alexa remained useful as a voice layer, but it was no longer the system where I wanted to build the deeper household logic.
 
 Exact screenshots, app versions, and per-device test results are intentionally omitted until I record them from a current installation.
 
 ## Where Alexa fits
 
 Alexa is useful when saying what you want is easier than reaching for an app. A routine can also connect a supported event to an action, such as motion turning on a light. The important limitation is that each device integration decides which states and commands Alexa can use.
+
+My path from bulbs to Zigbee switches is a useful way to test Alexa without overcommitting. Start with one room and confirm that the routine options can express the whole job. Device discovery alone is not enough. A device can appear in Alexa without exposing the trigger, condition, or action the automation needs.
 
 Keep Alexa in a supporting role:
 
@@ -96,7 +100,7 @@ Do not assume they will. Test the exact sensor, integration, routine, and target
 
 ### Should Alexa be the main home automation hub?
 
-It can be enough for simple voice control and reversible routines. For detailed stateful rules or stronger local behavior, compare SmartThings and Hubitat as well.
+It can be enough for simple voice control and reversible routines. I outgrew it when I needed conditional logic and broader device-type support. For detailed stateful rules or stronger local behavior, compare SmartThings and Hubitat as well.
 
 ## Related guides
 

@@ -9,7 +9,7 @@ last_modified_at: 2026-09-12
 
 Choose for the person who will troubleshoot the house at night, not for the longest feature list.
 
-I have personally used Amazon Echo with Alexa, SmartThings, and Hubitat. I now prefer Hubitat because daily management is friendly while detailed rules and coding are available when I need them. I have not personally run Home Assistant, so I describe its technical fit rather than presenting a hands-on review.
+I started with Alexa smart bulbs, expanded into Zigbee switches through an Echo with a built-in hub, moved to SmartThings for broader device and Z-Wave support, and rebuilt on Hubitat during a whole-house remodel. I now prefer Hubitat because it is fast and managed while webCoRE, community drivers, and custom coding are available when I need them. I have not personally run Home Assistant, so I describe its technical fit rather than presenting a hands-on review.
 
 The platform is successful when it helps you build useful routines and then fades into the background. It should increase what you feel able to automate, not make the household dependent on one expert.
 
@@ -26,7 +26,7 @@ Read the detailed guides for [Amazon Alexa](/platforms/alexa.html), [SmartThings
 
 ## Amazon Alexa
 
-Alexa was my starting point. It is approachable for voice commands and simple routines.
+Alexa was my starting point. Smart bulbs made it easy to begin, and an Echo with a built-in Zigbee hub let me expand into light switches. It worked well until I needed simple conditional logic and support for device types its routines did not expose.
 
 Choose it when:
 
@@ -38,7 +38,7 @@ Do not make voice the only way to operate lights, locks, thermostats, or other o
 
 ## SmartThings
 
-SmartThings was my step up from Alexa. It fits people who want broader device support and more automation depth without managing a highly technical system.
+SmartThings was my step up from Alexa. Its broader device and protocol support, including Z-Wave, let me build my first large smart home. Once my installation grew beyond 100 devices, it became noticeably slower, and I still encountered limits in advanced routines. The later driver-model transition also left gaps for devices I depended on. Those were conditions in my installation at that time, so verify the current platform rather than assuming they apply universally.
 
 Choose it when:
 
@@ -50,7 +50,7 @@ Do not assume every supported device or routine has the same local behavior.
 
 ## Hubitat
 
-Hubitat is the balance I prefer. It is a dedicated hub that feels managed during normal use, but I can get into detailed rules, custom apps, drivers, and code when the house needs something unusual.
+Hubitat is the balance I prefer. It is a small dedicated hub that feels managed during normal use, stays fast in my home, and has extensive community-driver support. I use webCoRE for advanced rules and can write a custom driver when the house needs something unusual. AI coding tools have made that easier, though every driver still needs careful testing.
 
 Choose it when:
 
@@ -59,11 +59,11 @@ Choose it when:
 - You want built-in Zigbee and Z-Wave radios in a dedicated hub.
 - You value depth without wanting to assemble every part of the platform yourself.
 
-Complexity is still complexity. A detailed Rule Machine rule needs documentation and family testing.
+Complexity is still complexity. A detailed webCoRE piston, Rule Machine rule, or custom driver needs documentation and family testing.
 
 ## Home Assistant
 
-Home Assistant appears to fit technically confident people who want broad flexibility and are comfortable making more system decisions. I have not personally operated it, so verify current requirements and behavior in its official documentation and community.
+Home Assistant appears to fit technically confident people who want broad flexibility and are comfortable making more system decisions. Its broad device and integration support is what made me curious about it. I have not moved because Hubitat fully meets my needs, and my older impression of more manual setup and YAML work may no longer reflect the current experience. Verify current requirements and behavior in its official documentation and community.
 
 Consider it when:
 
@@ -77,7 +77,7 @@ Do not choose it only because it can do more. Choose it if you also want to own 
 
 Both can support serious local automations. The practical difference is how much of the system you want to assemble and maintain yourself.
 
-Hubitat is the middle ground I prefer. It is a purpose-built appliance with approachable built-in tools, while Rule Machine, custom apps, and drivers provide a path into detailed logic and code. Home Assistant offers a higher customization ceiling, but hardware choices, integrations, updates, backups, radios, dashboards, and remote access can all become part of maintaining the system.
+Hubitat is the middle ground I prefer. It is a purpose-built appliance with approachable built-in tools, while webCoRE, Rule Machine, custom apps, and drivers provide a path into detailed logic and code. Home Assistant offers a higher customization ceiling and exceptionally broad integrations, but hardware choices, integrations, updates, backups, radios, dashboards, and remote access can all become part of maintaining the system.
 
 If Hubitat provides the control you need, it is likely easier to live with day to day. If building and owning every layer is part of the appeal, Home Assistant may be the better technical fit. I have not personally operated Home Assistant, so verify its current requirements in the official documentation before deciding.
 
@@ -128,7 +128,7 @@ Treat Matter and Thread as compatibility details, not a substitute for platform 
 
 ## My decision
 
-Hubitat fits me because I am technical and like having coding available, but I do not want daily home management to feel like maintaining a custom software project. That balance matters more to me than winning a feature comparison.
+Hubitat fits me because I am technical and like having webCoRE, community drivers, and coding available, but I do not want daily home management to feel like maintaining a custom software project. SharpTools.io dashboards on wall-mounted tablets provide visible controls around the house without replacing physical switches. That balance matters more to me than winning a feature comparison.
 
 Your answer may differ. The right platform is the one your household can operate and you are willing to maintain.
 

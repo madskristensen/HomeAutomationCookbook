@@ -15,13 +15,17 @@ Home Assistant may fit people who want broad control over hardware, integrations
 
 ## Experience boundary
 
-I have not personally operated Home Assistant. This page is a technical-fit comparison based on its official documentation and the same household reliability standards applied to every recipe on this site.
+I have not personally operated Home Assistant because Hubitat currently meets my needs. The main reason I considered Home Assistant was its exceptionally broad integration catalog and the likelihood of finding support for unusual devices.
+
+My earlier impression was that Home Assistant required more manual setup, YAML editing, and ongoing technical attention than I wanted for the house. The platform has evolved, and that impression may no longer describe its current everyday experience. This page therefore uses current official documentation for technical fit rather than presenting my historical perception as a current product fact.
 
 It intentionally contains no claims about my own installation, screenshots, performance, preferred hardware, or tested integrations. Those would require firsthand use.
 
 ## Where Home Assistant may fit
 
 Home Assistant provides an automation system built around triggers, conditions, and actions. Its large integration surface and configurable deployment options can be valuable when choosing and maintaining those pieces is part of the appeal.
+
+I would put it on the shortlist for someone who has the time and technical interest to explore, customize, and maintain more of the system. Hubitat is the managed balance that works for me, while Home Assistant may better fit someone who wants broader control over the stack itself.
 
 Evaluate both sides of that flexibility:
 
@@ -108,7 +112,9 @@ These responsibilities may be welcome customization or unwanted maintenance. Tha
 
 ### Is Home Assistant better than Hubitat?
 
-They emphasize different maintenance experiences. Hubitat is the managed local hub I currently prefer. Home Assistant may fit someone who wants to choose and own more of the hardware, integrations, dashboards, and system architecture.
+They emphasize different maintenance experiences. Hubitat is the managed local hub I currently prefer, and its community drivers plus the ability to write my own have covered my needs. Home Assistant has a particularly broad integration catalog and may fit someone who wants to choose and own more of the hardware, integrations, dashboards, and system architecture.
+
+I have not used Home Assistant firsthand, so I would not treat this as a performance or ease-of-use verdict. Its current setup experience should be evaluated with a one-room trial.
 
 ### Is this a firsthand Home Assistant review?
 
