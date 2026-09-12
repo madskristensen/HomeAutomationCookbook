@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/dashboards/status-tiles.html
 date: 2025-11-29
 title: Smart home status tiles
 description: A platform-neutral recipe that replaces one-time push notifications with persistent dashboard tiles for household status information.

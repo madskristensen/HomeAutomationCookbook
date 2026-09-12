@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/motion/lights-on-motion.html
 date: 2025-11-28
 title: Turn lights on with motion sensors
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.

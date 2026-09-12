@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/dashboards/music-controls.html
 date: 2025-11-29
 title: Shared whole-home music controls
 description: Stop switching between manufacturer apps just to pause a speaker or change its volume in another room.

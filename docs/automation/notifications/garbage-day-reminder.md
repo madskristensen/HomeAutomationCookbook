@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/dashboards/garbage-day-reminder.html
 date: 2025-11-29
 title: Set up a garbage day reminder tile
 description: A platform-neutral recipe that turns a dashboard tile red before garbage day and green again once the task is marked done.

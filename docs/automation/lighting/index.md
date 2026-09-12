@@ -1,6 +1,9 @@
 ---
 layout: automation-category
 category_key: lighting
+redirect_from:
+  - /automation/contact/index.html
+  - /automation/motion/index.html
 title: Smart lighting automation recipes
 description: Browse lighting automation recipes for motion, doors, nighttime, outdoor lights, wake-up routines, and verified arrivals.
 permalink: /automation/lighting/index.html

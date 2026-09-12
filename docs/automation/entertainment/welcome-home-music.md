@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/media/welcome-home-music.html
 date: 2025-11-28
 title: Play music when arriving home
 description: A platform-neutral recipe that starts music on arrival, using a tested presence signal, to create a consistent welcome-home moment.

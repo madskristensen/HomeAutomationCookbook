@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/motion/lights-off-after-motion.html
 date: 2025-11-28
 title: Turn lights off after motion stops
 description: A conservative motion-lighting off recipe that respects still occupants, manual wall-switch choices, and local-first control.

@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/motion/bathroom-night-light.html
 date: 2025-11-28
 title: Bathroom night-light automation
 description: A local-first bathroom night-light recipe that uses motion, low brightness, and a reliable wall-switch fallback.

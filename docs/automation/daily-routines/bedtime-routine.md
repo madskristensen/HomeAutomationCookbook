@@ -1,5 +1,8 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/daily-routines/bedtime-wind-down.html
+  - /automation/presence/bedtime-routine.html
 date: 2025-11-28
 title: Build a family-safe bedtime routine
 description: Separate a gentle wind-down from an intentional good-night action while preserving occupied rooms, safety alerts, and manual control.

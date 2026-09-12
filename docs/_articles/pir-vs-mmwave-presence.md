@@ -1,5 +1,7 @@
 ---
 layout: guide
+redirect_from:
+  - /getting-started/pir-vs-mmwave-presence.html
 title: PIR vs mmWave presence sensors
 description: Choose between PIR motion, mmWave presence, or both for bathrooms, offices, halls, and other rooms without causing false turn-offs.
 date: 2026-08-30

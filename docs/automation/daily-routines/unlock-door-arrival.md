@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/presence/unlock-door-arrival.html
 date: 2025-11-28
 title: Prepare the house when someone arrives
 description: Restore Home mode, light a safe path, and resume normal comfort without treating phone location as proof of identity.

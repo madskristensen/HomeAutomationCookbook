@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/misc/doorbell-notification.html
 date: 2025-11-29
 title: Traditional doorbell phone alerts
 description: A platform-neutral recipe that wires a contact sensor in parallel with an existing wired doorbell chime so ringing it sends a phone notification.

@@ -1,6 +1,8 @@
 ---
 layout: automation-category
 category_key: entertainment
+redirect_from:
+  - /automation/media/index.html
 title: Entertainment automation recipes
 description: Browse home automation recipes for music, TV lighting, speaker volume, arrivals, and gatherings while keeping familiar controls.
 permalink: /automation/entertainment/index.html

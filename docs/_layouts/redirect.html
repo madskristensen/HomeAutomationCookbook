@@ -1,19 +1,26 @@
+{% if page.redirect %}
+    {% assign redirect_href = page.redirect.to %}
+    {% assign redirect_canonical = page.redirect.to %}
+{% else %}
+    {% assign redirect_href = page.redirect_to | relative_url %}
+    {% assign redirect_canonical = page.redirect_to | absolute_url %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <meta name="description" content="{{ page.description }}">
+    <title>{{ page.title | default: "Page moved" }} | {{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: "This page has moved." }}">
     <meta name="robots" content="noindex">
-    <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
-    <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+    <link rel="canonical" href="{{ redirect_canonical }}">
+    <meta http-equiv="refresh" content="0; url={{ redirect_href }}">
 </head>
 <body>
     <main>
-        <h1>{{ page.title }}</h1>
-        <p>This page has moved to <a href="{{ page.redirect_to | relative_url }}">{{ page.link_text }}</a>.</p>
+        <h1>{{ page.title | default: "Page moved" }}</h1>
+        <p>This page has moved to <a href="{{ redirect_href }}">{{ page.link_text | default: "the new location" }}</a>.</p>
     </main>
-    <script>window.location.replace({{ page.redirect_to | relative_url | jsonify }});</script>
+    <script>window.location.replace({{ redirect_href | jsonify }});</script>
 </body>
 </html>

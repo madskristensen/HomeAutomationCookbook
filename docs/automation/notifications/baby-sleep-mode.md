@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/misc/baby-sleep-mode.html
 date: 2025-11-29
 title: Set a nursery quiet mode
 description: Let a caregiver explicitly request nursery quiet mode while urgent safety alerts, manual controls, and normal emergency behavior remain active.

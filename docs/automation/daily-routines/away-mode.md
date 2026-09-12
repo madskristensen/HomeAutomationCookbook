@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/presence/away-mode.html
 date: 2025-11-28
 title: Set away mode when everyone leaves
 description: A conservative, platform-neutral away-mode recipe that verifies the home is empty before changing lights, climate, or security behavior.

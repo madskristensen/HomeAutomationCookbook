@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/media/shower-music.html
 date: 2025-11-28
 title: Play music when a shower starts
 description: A platform-neutral recipe that starts music or a podcast in the bathroom when a shower begins, using a light or door sensor as the trigger.

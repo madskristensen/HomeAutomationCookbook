@@ -1,6 +1,8 @@
 ---
 layout: automation-category
 category_key: daily-routines
+redirect_from:
+  - /automation/presence/index.html
 title: Daily routine automation recipes
 description: Browse home automation recipes for mornings, bedtimes, departures, arrivals, and guests with visible, reversible transitions.
 permalink: /automation/daily-routines/index.html

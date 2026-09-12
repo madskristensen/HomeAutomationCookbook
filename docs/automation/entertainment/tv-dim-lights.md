@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/media/tv-dim-lights.html
 date: 2025-11-28
 title: Dim lights when the TV turns on
 description: Dim living-room lights when the TV turns on, then restore them afterward using a tested power or device-status signal.

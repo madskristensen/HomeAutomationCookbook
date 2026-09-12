@@ -102,6 +102,8 @@ Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, cod
 - Use descriptive internal link text that names the household job. Avoid generic link text such as `Click here`.
 - Update the automation hub only when the recipe fills a featured household job or should become a recommended first recipe.
 - Update `docs/llms.txt` when adding or renaming a top-level guide, recipe category, or major site section. Do not list every individual recipe there.
+- When moving or renaming a page, add its former `.html` URL to `redirect_from` on the destination page. Keep the canonical URL and all internal links pointed directly at the destination.
+- Keep the custom `layout: redirect` only when the destination includes a fragment identifier, because `redirect_from` targets the destination page itself.
 
 # Common tasks
 

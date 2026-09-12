@@ -1,5 +1,7 @@
 ---
 layout: guide
+redirect_from:
+  - /tips/index.html
 title: Practical home automation tips
 description: Small patterns that make home automations easier for family and guests to understand, control, and recover when something fails.
 last_modified_at: 2026-09-12

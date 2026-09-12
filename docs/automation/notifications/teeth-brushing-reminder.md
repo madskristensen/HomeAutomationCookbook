@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/misc/teeth-brushing-reminder.html
 date: 2025-11-29
 title: Kids' teeth-brushing reminder
 description: A platform-neutral recipe that uses a power-monitoring smart plug on an electric toothbrush charger to confirm brushing happened, with a reminder if it did not.

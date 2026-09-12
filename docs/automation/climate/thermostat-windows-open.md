@@ -1,5 +1,8 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/climate/thermostat-windows-close.html
+  - /automation/climate/window-hvac-pause.html
 date: 2025-11-28
 title: Pause HVAC when a window stays open
 description: A platform-neutral climate recipe that pauses HVAC after a window remains open and resumes only when every monitored opening is closed.

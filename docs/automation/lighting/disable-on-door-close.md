@@ -1,5 +1,7 @@
 ---
 layout: automation
+redirect_from:
+  - /automation/contact/disable-on-door-close.html
 date: 2025-11-28
 title: Turn off closet lights on door close
 description: A platform-neutral follow-up to door-triggered lighting that turns off only the light the automation turned on and cancels when the door reopens.
