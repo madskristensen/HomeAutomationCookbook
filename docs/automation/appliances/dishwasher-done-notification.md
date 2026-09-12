@@ -4,6 +4,7 @@ title: Get notified when the dishwasher finishes
 description: Learn the dishwasher's power or vibration pattern and send one reliable completion alert without controlling appliance power.
 keywords: dishwasher finished alert, dishwasher notification, dishwasher power monitoring, kitchen appliance automation, dishwasher done notification
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/appliances/dishwasher-done-notification.png
 compact: true
 faqs:
   - question: What signal proves a dishwasher cycle is actually finished?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Get notified when the dishwasher finishes
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/appliances/dishwasher-done-notification.svg" alt="" width="1200" height="630">
+</figure>
 
 Learn the dishwasher's own running pattern, confirm a real cycle happened, and send one alert once it settles into its finished state.
 

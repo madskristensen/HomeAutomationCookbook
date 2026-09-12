@@ -3,7 +3,8 @@ layout: automation
 title: Set up a pet feeding reminder
 description: A platform-neutral recipe that uses a smart button or repurposed sensor to track and remind about pet feeding times.
 keywords: pet feeding reminder, pet feeding tracker, smart button pet care, feeding schedule automation
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/notifications/pet-feeding-reminder.png
 compact: true
 faqs:
   - question: What if more than one person feeds the pet?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Set up a pet feeding reminder
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/notifications/pet-feeding-reminder.svg" alt="" width="1200" height="630">
+</figure>
 
 Use a smart button or repurposed sensor to track when a pet was last fed and send a reminder if too much time passes without it being logged.
 

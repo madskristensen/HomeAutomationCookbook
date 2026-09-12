@@ -3,9 +3,14 @@ layout: guide
 title: Home Assistant technical-fit guide
 description: Evaluate Home Assistant by its automation flexibility, integration model, hardware choices, maintenance responsibilities, and household usability.
 last_modified_at: 2026-09-12
+image: /assets/img/social/platform-home-assistant.png
 ---
 
 # Home Assistant technical-fit guide
+
+<figure class="content-hero">
+  <img src="/assets/img/social/platform-home-assistant.svg" alt="Home Assistant connects configurable integrations in this technical-fit guide" width="1200" height="630">
+</figure>
 
 Home Assistant may fit people who want broad control over hardware, integrations, dashboards, automations, backups, and system design. That flexibility can support a capable home, but it also means more architectural and maintenance decisions belong to the person running it.
 

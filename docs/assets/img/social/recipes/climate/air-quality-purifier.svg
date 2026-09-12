@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Run the air purifier when indoor air quality drops</title>
+  <desc id="desc">A platform-neutral recipe that runs a plug-controlled air purifier when an air quality sensor reports a sustained drop, and stops nagging once the air clears.</desc>
+  <style>
+  @media (prefers-color-scheme: dark) {
+    rect[fill="#f8f9fa"] { fill: #14191c; }
+    rect[fill="#ffffff"], path[fill="#ffffff"] { fill: #1d2428; }
+    [fill="#eef2f3"] { fill: #293238; }
+    text[fill="#2c3e50"], circle[fill="#2c3e50"] { fill: #e7edef; }
+    text[fill="#5d6d75"], text[fill="#6b777c"] { fill: #b7c2c6; }
+    [stroke="#2c3e50"] { stroke: #d7e0e3; }
+    [stroke="#9db1b6"] { stroke: #72858c; }
+    [stroke="#e0e0e0"] { stroke: #3d494f; }
+  }
+</style>
+
+  <rect width="1200" height="630" fill="#f8f9fa"/>
+  <rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <rect x="108" y="88" width="130" height="43" rx="21" fill="#eef2f3"/>
+  <text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">CLIMATE</text>
+  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Run the air purifier when</text>
+  <text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">indoor air quality drops</text>
+  <text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">A platform-neutral recipe that runs a</text>
+  <text x="108" y="353" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">plug-controlled air purifier when an air</text>
+  <text x="108" y="384" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">quality sensor reports a sustained drop, and...</text>
+  <g transform="translate(108 469)" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600">
+    <rect width="105" height="39" rx="19" fill="#eef2f3"/><text x="23" y="25" fill="#2c3e50">TRIGGER</text>
+    <path d="M117 20h39" stroke="#9db1b6" stroke-width="4"/>
+    <rect x="168" width="96" height="39" rx="19" fill="#eef2f3"/><text x="190" y="25" fill="#2c3e50">CHECK</text>
+    <path d="M276 20h39" stroke="#9db1b6" stroke-width="4"/>
+    <rect x="327" width="102" height="39" rx="19" fill="#6f8f96"/><text x="346" y="25" fill="#ffffff">ACTION</text>
+  </g>
+  <g transform="translate(680 118)" fill="none" stroke="#2c3e50" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="77" y="38" width="220" height="360" rx="110" fill="#eef2f3"/>
+  <path d="M187 90v190"/>
+  <circle cx="187" cy="310" r="56" fill="#6f8f96" stroke="none"/>
+  <path d="M187 154h54M187 210h38" stroke="#6f8f96" stroke-width="7"/>
+  <circle cx="386" cy="170" r="70"/>
+  <path d="M386 170c-55-48-53-82-18-87 34-5 43 35 18 87zm0 0c55 48 53 82 18 87-34 5-43-35-18-87zm0 0c-48 55-82 53-87 18-5-34 35-43 87-18z" fill="#ffffff" stroke="#6f8f96" stroke-width="7"/>
+  <circle cx="386" cy="170" r="12" fill="#2c3e50" stroke="none"/>
+</g>
+
+  <text x="108" y="550" fill="#6b777c" font-family="Segoe UI, Arial, sans-serif" font-size="20">HOME AUTOMATION COOKBOOK</text>
+</svg>

@@ -4,6 +4,7 @@ title: Open and close blinds with sunrise and sunset
 description: Open motorized blinds near sunrise and close them near sunset while preserving privacy, bedtime limits, and physical control.
 keywords: smart blinds automation, automatic shades, sunset blinds, sunrise blinds, motorized blinds, privacy automation
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/climate/blinds-sunset-sunrise.png
 compact: true
 faqs:
   - question: Should blinds open exactly at sunrise?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Open and close blinds with sunrise and sunset
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/climate/blinds-sunset-sunrise.svg" alt="" width="1200" height="630">
+</figure>
 
 Blinds open a little after sunrise and close at sunset or a fixed bedtime, whichever is more useful for privacy, while the physical remote or wall control still works at any time.
 

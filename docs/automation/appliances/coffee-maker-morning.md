@@ -3,7 +3,8 @@ layout: automation
 title: Prepare morning coffee with a deliberate ready step
 description: Prepare the coffee maker the night before and get a clear morning result without wondering whether it was actually made ready.
 keywords: morning coffee reminder, delayed brew coffee, coffee ready mode, morning routine, coffee maker safety
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/appliances/coffee-maker-morning.png
 compact: true
 faqs:
   - question: Does an off smart plug prove that the coffee maker is loaded?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Prepare morning coffee with a deliberate ready step
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/appliances/coffee-maker-morning.svg" alt="" width="1200" height="630">
+</figure>
 
 A person loads the coffee maker and explicitly marks it ready, then the machine uses its own approved delayed-brew feature for the morning.
 

@@ -3,7 +3,8 @@ layout: automation
 title: Build a home maintenance reminder dashboard
 description: A platform-neutral recipe that tracks recurring home maintenance tasks, such as filter changes, on a shared dashboard instead of relying on memory.
 keywords: maintenance reminder, home maintenance dashboard, filter change reminder, recurring task tracker, smart home dashboard
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/notifications/maintenance-reminder-dashboard.png
 compact: true
 faqs:
   - question: How is this different from a phone calendar reminder?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Build a home maintenance reminder dashboard
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/notifications/maintenance-reminder-dashboard.svg" alt="" width="1200" height="630">
+</figure>
 
 Track recurring home maintenance tasks, such as HVAC filter changes, on a shared dashboard so they stay visible instead of relying on memory.
 

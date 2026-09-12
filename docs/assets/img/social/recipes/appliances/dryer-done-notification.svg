@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Get notified when the dryer finishes</title>
+  <desc id="desc">A platform-neutral laundry recipe that detects sustained dryer vibration and sends one completion alert without controlling appliance power.</desc>
+  <style>
+  @media (prefers-color-scheme: dark) {
+    rect[fill="#f8f9fa"] { fill: #14191c; }
+    rect[fill="#ffffff"], path[fill="#ffffff"] { fill: #1d2428; }
+    [fill="#eef2f3"] { fill: #293238; }
+    text[fill="#2c3e50"], circle[fill="#2c3e50"] { fill: #e7edef; }
+    text[fill="#5d6d75"], text[fill="#6b777c"] { fill: #b7c2c6; }
+    [stroke="#2c3e50"] { stroke: #d7e0e3; }
+    [stroke="#9db1b6"] { stroke: #72858c; }
+    [stroke="#e0e0e0"] { stroke: #3d494f; }
+  }
+</style>
+
+  <rect width="1200" height="630" fill="#f8f9fa"/>
+  <rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <rect x="108" y="88" width="166" height="43" rx="21" fill="#eef2f3"/>
+  <text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">APPLIANCES</text>
+  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Get notified when the</text>
+  <text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">dryer finishes</text>
+  <text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">A platform-neutral laundry recipe that detects</text>
+  <text x="108" y="353" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">sustained dryer vibration and sends one</text>
+  <text x="108" y="384" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">completion alert without controlling appliance...</text>
+  <g transform="translate(108 469)" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600">
+    <rect width="105" height="39" rx="19" fill="#eef2f3"/><text x="23" y="25" fill="#2c3e50">TRIGGER</text>
+    <path d="M117 20h39" stroke="#9db1b6" stroke-width="4"/>
+    <rect x="168" width="96" height="39" rx="19" fill="#eef2f3"/><text x="190" y="25" fill="#2c3e50">CHECK</text>
+    <path d="M276 20h39" stroke="#9db1b6" stroke-width="4"/>
+    <rect x="327" width="102" height="39" rx="19" fill="#907f72"/><text x="346" y="25" fill="#ffffff">ACTION</text>
+  </g>
+  <g transform="translate(700 112)" fill="none" stroke="#2c3e50" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="55" y="15" width="300" height="420" rx="25" fill="#eef2f3"/>
+  <path d="M55 112h300"/>
+  <circle cx="205" cy="270" r="102" fill="#ffffff"/>
+  <path d="M136 273c24-42 65-27 87-5 24 24 55 35 84 7" stroke="#907f72" stroke-width="12"/>
+  <circle cx="102" cy="64" r="13" fill="#907f72" stroke="none"/>
+  <circle cx="151" cy="64" r="13" fill="#907f72" stroke="none"/>
+  <rect x="218" y="45" width="92" height="37" rx="8" fill="#ffffff"/>
+  <path d="M410 155v176M380 185h60M380 301h60" stroke="#907f72"/>
+</g>
+
+  <text x="108" y="550" fill="#6b777c" font-family="Segoe UI, Arial, sans-serif" font-size="20">HOME AUTOMATION COOKBOOK</text>
+</svg>

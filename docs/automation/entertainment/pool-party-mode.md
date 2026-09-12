@@ -3,7 +3,8 @@ layout: automation
 title: Set up one-tap pool party mode
 description: A platform-neutral recipe that starts music and lighting for a pool or backyard party with one button press, without touching safety alarms.
 keywords: pool party automation, backyard party mode, outdoor entertainment, party scene, one tap party mode
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/entertainment/pool-party-mode.png
 compact: true
 faqs:
   - question: Does party mode disable any safety alarms?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Set up one-tap pool party mode
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/entertainment/pool-party-mode.svg" alt="" width="1200" height="630">
+</figure>
 
 Turn on party lighting and music around a pool or backyard with a single button press, and automatically end it after a set time.
 

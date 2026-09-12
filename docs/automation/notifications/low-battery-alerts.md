@@ -3,7 +3,8 @@ layout: automation
 title: Get low battery alerts for smart home devices
 description: A platform-neutral recipe that notifies when a battery-powered sensor, lock, or button drops below a set level, before it fails silently.
 keywords: low battery alert, smart home battery, device battery notification, battery monitoring, smart device maintenance
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/notifications/low-battery-alerts.png
 compact: true
 faqs:
   - question: What battery percentage should trigger a warning?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Get low battery alerts for smart home devices
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/notifications/low-battery-alerts.svg" alt="" width="1200" height="630">
+</figure>
 
 Get a notification when a battery-powered device drops below a set level, so it can be replaced before the device stops working silently.
 

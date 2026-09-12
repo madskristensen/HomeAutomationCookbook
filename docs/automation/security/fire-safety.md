@@ -3,7 +3,8 @@ layout: automation
 title: Support a fire evacuation without delaying the alarm
 description: A conservative fire-response recipe that treats listed smoke alarms as primary, turns on useful lighting immediately, and never infers that a fire is over.
 keywords: fire safety automation, smoke alarm notification, evacuation lighting, smart home fire alert, smoke alarm listener
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/security/fire-safety.png
 compact: true
 faqs:
   - question: Should a smart-home rule wait for a second smoke alarm before responding?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Support a fire evacuation without delaying the alarm
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/security/fire-safety.svg" alt="" width="1200" height="630">
+</figure>
 
 When a listed smoke or carbon-monoxide alarm activates, optional lighting and notifications run immediately without changing the alarm, delaying evacuation, or declaring an all-clear.
 

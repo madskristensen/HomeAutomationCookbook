@@ -3,7 +3,8 @@ layout: automation
 title: Light the path to your door after a confirmed arrival
 description: Make the final steps to the door easier after dark while leaving the lock and manually controlled lights alone.
 keywords: arrival lighting, welcome home lights, entry light automation, outdoor arrival lights, verified presence lighting
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/lighting/driveway-welcome-wave.png
 compact: true
 faqs:
   - question: Why not turn on the lights as soon as a phone enters the home area?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Light the entry after a verified arrival
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/lighting/driveway-welcome-wave.svg" alt="" width="1200" height="630">
+</figure>
 
 After dark, confirm that someone has reached the entry before turning on the porch or path light. Keep the lock, garage, alarm, and every manual light control separate.
 

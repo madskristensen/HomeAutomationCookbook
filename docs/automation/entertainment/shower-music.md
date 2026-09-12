@@ -3,7 +3,8 @@ layout: automation
 title: Play music when a shower starts
 description: A platform-neutral recipe that starts music or a podcast in the bathroom when a shower begins, using a light or door sensor as the trigger.
 keywords: shower music automation, bathroom speaker automation, automatic music, shower entertainment, bathroom audio control
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/entertainment/shower-music.png
 compact: true
 faqs:
   - question: Which trigger works best, the light switch or a door sensor?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Play music when a shower starts
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/entertainment/shower-music.svg" alt="" width="1200" height="630">
+</figure>
 
 Start music or a podcast on a bathroom speaker automatically when the shower light goes on, and stop it again once the shower ends.
 

@@ -3,9 +3,14 @@ layout: guide
 title: Hubitat home automation guide
 description: Use Hubitat built-in apps and local rules for reliable household automation while keeping physical controls and understandable overrides.
 last_modified_at: 2026-09-12
+image: /assets/img/social/platform-hubitat.png
 ---
 
 # Hubitat home automation guide
+
+<figure class="content-hero">
+  <img src="/assets/img/social/platform-hubitat.svg" alt="A small Hubitat hub connects local devices with conditional automation logic" width="1200" height="630">
+</figure>
 
 Hubitat is my current platform because it is fast, compact, and managed while still leaving room for detailed rules, community drivers, custom drivers, and code. It gives me enough control to make routines dependable without turning every daily adjustment into a software project.
 

@@ -4,6 +4,7 @@ title: Turn lights on automatically with a motion sensor
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/lighting/lights-on-motion.png
 compact: true
 faqs:
   - question: Why do motion lights turn on too slowly?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Turn lights on when you walk in
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="" width="1200" height="630">
+</figure>
 
 Walk in, lights on. If that fails at 2am, the wall switch still works.
 

@@ -18,7 +18,7 @@
 # Site structure
 
 - This is a Jekyll static site for homeautomationcookbook.com
-- Main CSS: `docs/assets/css/style.css` (consolidated stylesheet, ~1200 lines)
+- Main CSS: `docs/assets/css/site.css` (consolidated stylesheet)
 - Config: `docs/_config.yml` contains navigation structure
 - Layout: `docs/_layouts/default.html` is the main template
 - Homepage: `docs/index.md`
@@ -84,7 +84,7 @@ Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, cod
 
 - **Adding new automation**: Create markdown in appropriate category folder, add to `_config.yml` navigation
 - **Sentence case conversion**: Use `multi_replace_string_in_file` with heading patterns like "## Title Case" → "## Sentence case"
-- **CSS changes**: Edit consolidated `docs/assets/css/style.css` (do not split files)
+- **CSS changes**: Edit consolidated `docs/assets/css/site.css` (do not split files)
 - **Color updates**: Search for hex values and replace consistently across entire stylesheet
 
 # What works well

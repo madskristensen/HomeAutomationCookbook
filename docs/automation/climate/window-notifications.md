@@ -3,7 +3,8 @@ layout: automation
 title: Get notified when to open or close windows
 description: A platform-neutral recipe that compares indoor and outdoor temperature and notifies the household when opening or closing windows would save energy.
 keywords: window notification automation, energy saving alerts, when to open windows, temperature notification, natural ventilation
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/climate/window-notifications.png
 compact: true
 faqs:
   - question: How large should the temperature difference be before notifying?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Get notified when to open or close windows
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/climate/window-notifications.svg" alt="" width="1200" height="630">
+</figure>
 
 Compare indoor and outdoor temperature, and send one notification when opening or closing windows would take advantage of free heating or cooling.
 

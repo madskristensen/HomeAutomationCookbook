@@ -4,6 +4,7 @@ title: Turn lights on automatically when a door opens
 description: A local-first contact-sensor lighting recipe for closets, pantries, and utility rooms that keeps the familiar wall switch usable.
 keywords: door sensor automation, contact sensor lights, automatic closet lights, door activated lighting, smart door sensor
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/lighting/toggle-lights-door.png
 compact: true
 faqs:
   - question: Should the light turn off as soon as the door closes?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Turn lights on when a door opens
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/lighting/toggle-lights-door.svg" alt="" width="1200" height="630">
+</figure>
 
 Open the closet or pantry, and the light comes on. If the automation is unavailable, the familiar wall switch still works.
 

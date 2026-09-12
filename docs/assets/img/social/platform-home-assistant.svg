@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc"><title id="title">Home Assistant technical-fit guide</title><desc id="desc">Modular integration blocks connect to a configurable home automation system.</desc>
+<style>
+  @media (prefers-color-scheme: dark) {
+    rect[fill="#f8f9fa"] { fill: #14191c; }
+    rect[fill="#ffffff"], path[fill="#ffffff"] { fill: #1d2428; }
+    [fill="#eef2f3"] { fill: #293238; }
+    text[fill="#2c3e50"], circle[fill="#2c3e50"] { fill: #e7edef; }
+    text[fill="#5d6d75"], text[fill="#6b777c"] { fill: #b7c2c6; }
+    [stroke="#2c3e50"] { stroke: #d7e0e3; }
+    [stroke="#9db1b6"] { stroke: #72858c; }
+    [stroke="#e0e0e0"] { stroke: #3d494f; }
+  }
+</style>
+<rect width="1200" height="630" fill="#f8f9fa" /><rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2" /><text x="105" y="175" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="700">Home Assistant</text><text x="108" y="232" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="27">Broad integrations and configurable automation</text><rect x="108" y="295" width="194" height="48" rx="24" fill="#eef2f3" /><text x="132" y="326" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">NOT FIRSTHAND</text><text x="108" y="402" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="600">For people who want to own more of the stack</text><text x="108" y="447" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="23">Evaluate current setup, integrations, backups,</text><text x="108" y="481" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="23">and maintenance with a one-room trial.</text><g transform="translate(750 115)" fill="none" stroke="#2c3e50" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 190 188 48l174 142" /><path d="M54 170v238h268V170" /><rect x="105" y="190" width="166" height="166" rx="24" fill="#eef2f3" /><path d="M188 224v88M144 268h88" stroke="#6f8f96" stroke-width="12" /><rect x="-32" y="86" width="92" height="66" rx="14" fill="#ffffff" /><rect x="316" y="86" width="92" height="66" rx="14" fill="#ffffff" /><rect x="-32" y="356" width="92" height="66" rx="14" fill="#ffffff" /><rect x="316" y="356" width="92" height="66" rx="14" fill="#ffffff" /><path d="M60 119h66M250 119h66M60 389h66M250 389h66" stroke="#9db1b6" stroke-width="5" stroke-dasharray="8 9" /><circle cx="14" cy="119" r="10" fill="#6f8f96" stroke="none" /><circle cx="362" cy="119" r="10" fill="#6f8f96" stroke="none" /><circle cx="14" cy="389" r="10" fill="#6f8f96" stroke="none" /><circle cx="362" cy="389" r="10" fill="#6f8f96" stroke="none" /></g><text x="108" y="550" fill="#6b777c" font-family="Segoe UI, Arial, sans-serif" font-size="20">HOME AUTOMATION COOKBOOK</text> </svg>

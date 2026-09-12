@@ -4,6 +4,7 @@ title: Get notified when the washer finishes
 description: A platform-neutral laundry recipe that learns the washer's power pattern and sends one reliable completion alert without controlling appliance power.
 keywords: washer finished alert, laundry notification, washer power monitoring, washing machine automation, washer done notification
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/appliances/washer-done-notification.png
 compact: true
 faqs:
   - question: What wattage means that my washer is finished?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Get notified when the washer finishes
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/appliances/washer-done-notification.svg" alt="" width="1200" height="630">
+</figure>
 
 Learn the washer's own power pattern, remember when a real cycle starts, and send one alert after power stays at the finished level.
 

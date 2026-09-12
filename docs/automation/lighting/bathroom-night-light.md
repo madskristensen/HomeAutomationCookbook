@@ -4,6 +4,7 @@ title: Bathroom night-light automation
 description: A local-first bathroom night-light recipe that uses motion, low brightness, and a reliable wall-switch fallback.
 keywords: bathroom night light, nighttime motion lighting, low brightness automation, smart bathroom lighting, motion sensor dimming, night mode lighting
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/lighting/bathroom-night-light.png
 compact: true
 faqs:
   - question: What brightness should a bathroom night light use?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Turn on a dim bathroom light at night
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/lighting/bathroom-night-light.svg" alt="" width="1200" height="630">
+</figure>
 
 Walk in half asleep, get enough light to see, and do not wake the house. If it fails, the wall switch still works.
 

@@ -3,7 +3,8 @@ layout: automation
 title: Set up gradual wake-up lighting
 description: A platform-neutral recipe that gradually brightens a bedroom light before a set wake time, simulating a sunrise instead of a jarring alarm.
 keywords: wake up lights, sunrise alarm, gradual lighting, morning light automation, gentle wake up
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/lighting/wake-up-lights.png
 compact: true
 faqs:
   - question: How long should the wake-up transition last?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Set up gradual wake-up lighting
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/lighting/wake-up-lights.svg" alt="" width="1200" height="630">
+</figure>
 
 Gradually brighten a bedroom light before a set wake time, so the room fills with light like a sunrise instead of relying on a jarring alarm alone.
 

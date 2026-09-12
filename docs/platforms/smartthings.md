@@ -3,9 +3,14 @@ layout: guide
 title: SmartThings home automation guide
 description: Use SmartThings routines and rules for approachable automation while verifying device capabilities, local execution, and household overrides.
 last_modified_at: 2026-09-12
+image: /assets/img/social/platform-smartthings.png
 ---
 
 # SmartThings home automation guide
+
+<figure class="content-hero">
+  <img src="/assets/img/social/platform-smartthings.svg" alt="SmartThings connects lighting, sensors, climate controls, and other household devices" width="1200" height="630">
+</figure>
 
 SmartThings can reduce repeated household checks through approachable routines while still offering a path to more detailed rules. It fits people who want meaningful automation depth without making every family member maintain a technical system.
 

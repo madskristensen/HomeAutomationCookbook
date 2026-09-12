@@ -3,9 +3,14 @@ layout: guide
 title: Amazon Alexa home automation guide
 description: Use Alexa voice control and routines for compatible smart-home devices while preserving physical controls and verifying cloud dependencies.
 last_modified_at: 2026-09-12
+image: /assets/img/social/platform-alexa.png
 ---
 
 # Amazon Alexa home automation guide
+
+<figure class="content-hero">
+  <img src="/assets/img/social/platform-alexa.svg" alt="Alexa connects voice control with smart bulbs, a Zigbee hub, and smart switches" width="1200" height="630">
+</figure>
 
 Alexa can remove small repeated interactions through voice control and straightforward routines. It works best as an approachable layer over compatible devices, while physical controls and safety behavior remain independent.
 

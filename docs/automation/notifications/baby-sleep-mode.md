@@ -4,6 +4,7 @@ title: Set a nursery quiet mode
 description: Let a caregiver explicitly request nursery quiet mode while urgent safety alerts, manual controls, and normal emergency behavior remain active.
 keywords: nursery quiet mode, baby sleep automation, quiet lighting, nursery automation, caregiver control
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/notifications/baby-sleep-mode.png
 compact: true
 faqs:
   - question: Can white-noise power use prove that a baby is asleep?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Set a nursery quiet mode without guessing whether a baby is asleep
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/notifications/baby-sleep-mode.svg" alt="" width="1200" height="630">
+</figure>
 
 A caregiver explicitly selects Quiet, and the room uses dimmer, quieter convenience behavior without suppressing urgent alerts or manual controls.
 

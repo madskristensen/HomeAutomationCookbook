@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Play music when a shower starts</title>
+  <desc id="desc">A platform-neutral recipe that starts music or a podcast in the bathroom when a shower begins, using a light or door sensor as the trigger.</desc>
+  <style>
+  @media (prefers-color-scheme: dark) {
+    rect[fill="#f8f9fa"] { fill: #14191c; }
+    rect[fill="#ffffff"], path[fill="#ffffff"] { fill: #1d2428; }
+    [fill="#eef2f3"] { fill: #293238; }
+    text[fill="#2c3e50"], circle[fill="#2c3e50"] { fill: #e7edef; }
+    text[fill="#5d6d75"], text[fill="#6b777c"] { fill: #b7c2c6; }
+    [stroke="#2c3e50"] { stroke: #d7e0e3; }
+    [stroke="#9db1b6"] { stroke: #72858c; }
+    [stroke="#e0e0e0"] { stroke: #3d494f; }
+  }
+</style>
+
+  <rect width="1200" height="630" fill="#f8f9fa"/>
+  <rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <rect x="108" y="88" width="202" height="43" rx="21" fill="#eef2f3"/>
+  <text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">ENTERTAINMENT</text>
+  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Play music when a shower</text>
+  <text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">starts</text>
+  <text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">A platform-neutral recipe that starts music or</text>
+  <text x="108" y="353" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">a podcast in the bathroom when a shower</text>
+  <text x="108" y="384" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">begins, using a light or door sensor as the...</text>
+  <g transform="translate(108 469)" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600">
+    <rect width="105" height="39" rx="19" fill="#eef2f3"/><text x="23" y="25" fill="#2c3e50">TRIGGER</text>
+    <path d="M117 20h39" stroke="#9db1b6" stroke-width="4"/>
+    <rect x="168" width="96" height="39" rx="19" fill="#eef2f3"/><text x="190" y="25" fill="#2c3e50">CHECK</text>
+    <path d="M276 20h39" stroke="#9db1b6" stroke-width="4"/>
+    <rect x="327" width="102" height="39" rx="19" fill="#71818f"/><text x="346" y="25" fill="#ffffff">ACTION</text>
+  </g>
+  <g transform="translate(735 120) scale(.84)" fill="none" stroke="#2c3e50" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="25" y="45" width="330" height="230" rx="18" fill="#eef2f3"/>
+  <path d="M145 340h90M190 275v65"/>
+  <rect x="390" y="106" width="88" height="235" rx="25" fill="#ffffff"/>
+  <circle cx="434" cy="170" r="22" fill="#71818f" stroke="none"/>
+  <circle cx="434" cy="275" r="43"/>
+  <path d="M96 134v75c0 24-40 30-40 4 0-20 23-29 40-20M96 134l92-20v75c0 24-40 30-40 4 0-20 23-29 40-20" stroke="#71818f"/>
+</g>
+
+  <text x="108" y="550" fill="#6b777c" font-family="Segoe UI, Arial, sans-serif" font-size="20">HOME AUTOMATION COOKBOOK</text>
+</svg>

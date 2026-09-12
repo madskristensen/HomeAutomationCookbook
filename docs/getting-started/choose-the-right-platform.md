@@ -3,9 +3,14 @@ layout: guide
 title: Choose the platform you will actually maintain
 description: A candid platform chooser based on firsthand Alexa, SmartThings, and Hubitat experience, with Home Assistant clearly marked as a technical-fit comparison.
 last_modified_at: 2026-09-12
+image: /assets/img/social/platforms-overview.png
 ---
 
 # Choose the platform you will actually maintain
+
+<figure class="content-hero">
+  <img src="/assets/img/social/platforms-overview.svg" alt="Choose a home automation platform you will be comfortable maintaining" width="1200" height="630">
+</figure>
 
 Choose for the person who will troubleshoot the house at night, not for the longest feature list.
 

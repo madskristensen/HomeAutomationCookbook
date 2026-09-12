@@ -4,6 +4,7 @@ title: Turn on the bathroom fan when a shower starts
 description: Run the bathroom fan when a shower starts and turn it off once the steam clears, with nothing to remember and no fan left running all morning.
 keywords: bathroom fan automation, shower fan control, humidity sensor automation, automatic fan, bathroom ventilation
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/climate/fan-shower.png
 compact: true
 faqs:
   - question: Which trigger is more reliable, the light switch or humidity?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Turn on the bathroom fan when a shower starts
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/climate/fan-shower.svg" alt="" width="1200" height="630">
+</figure>
 
 Turn the bathroom fan on when the shower light goes on or humidity rises, and turn it off once the bathroom has stayed dry for a while.
 

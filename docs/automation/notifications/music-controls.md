@@ -3,7 +3,8 @@ layout: automation
 title: Control music in any room from one shared dashboard
 description: Stop switching between manufacturer apps just to pause a speaker or change its volume in another room.
 keywords: music dashboard, playback controls, whole home audio, dashboard tiles, music control automation
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/notifications/music-controls.png
 compact: true
 faqs:
   - question: Do I need whole-home audio for this to be useful?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Add dashboard tiles for music playback controls
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/notifications/music-controls.svg" alt="" width="1200" height="630">
+</figure>
 
 Put play, pause, and volume controls for whole-home audio on a shared dashboard instead of a separate speaker app.
 

@@ -3,7 +3,8 @@ layout: automation
 title: Run the vacuum only while the house stays empty
 description: A platform-neutral recipe that starts a robot vacuum only after confirming the home is empty and sends it back to the dock the moment anyone returns.
 keywords: robot vacuum automation, presence-based cleaning, robot vacuum when away, smart vacuum scheduling, vacuum return protection
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/appliances/vacuum-when-empty.png
 compact: true
 faqs:
   - question: How is this different from a simple auto-start recipe?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Run the vacuum only while the house stays empty
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/appliances/vacuum-when-empty.svg" alt="" width="1200" height="630">
+</figure>
 
 Start the robot vacuum only after the home is confirmed empty, limit it to once a day, and send it back to the dock immediately if anyone returns early.
 

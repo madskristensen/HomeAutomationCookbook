@@ -4,6 +4,7 @@ title: Cold-room temperature alerts
 description: Get an alert before a cold room leaves its safe temperature range without controlling a portable heater through a general smart plug.
 keywords: cold room alert, room temperature monitoring, space heater safety, thermostat alert, supplemental heating
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/climate/room-heater-maintain-temp.png
 compact: true
 faqs:
   - question: Can I control a portable space heater with a general smart plug?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Monitor a cold room without smart-plug heater control
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/climate/room-heater-maintain-temp.svg" alt="" width="1200" height="630">
+</figure>
 
 The house reports a room that is too cold or too warm, while any automatic heat control remains inside equipment designed and approved for thermostat operation.
 

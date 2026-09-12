@@ -3,7 +3,8 @@ layout: automation
 title: Play music when arriving home
 description: A platform-neutral recipe that starts music on arrival, using a tested presence signal, to create a consistent welcome-home moment.
 keywords: welcome home music, arrival music automation, automatic music greeting, presence detection music, greeting automation
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/entertainment/welcome-home-music.png
 compact: true
 faqs:
   - question: What presence signal should trigger this?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Play music when arriving home
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/entertainment/welcome-home-music.svg" alt="" width="1200" height="630">
+</figure>
 
 Start music automatically when the household arrives home, using a presence signal that has already been tested and trusted.
 

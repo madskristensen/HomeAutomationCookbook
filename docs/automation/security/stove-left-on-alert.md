@@ -4,6 +4,7 @@ title: Set a persistent cooking reminder
 description: Keep a cooking reminder visible until someone clears it, using a deliberate timer or approved appliance status signal.
 keywords: stove reminder, oven left on alert, cooking timer, appliance status notification, kitchen safety
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/security/stove-left-on-alert.png
 compact: true
 faqs:
   - question: Can a normal smart plug monitor or shut off a stove or oven?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Get a stove reminder without pretending it is a safety system
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/security/stove-left-on-alert.svg" alt="" width="1200" height="630">
+</figure>
 
 Starting to cook also starts a reminder, and only a person or an appliance-approved status signal clears it.
 

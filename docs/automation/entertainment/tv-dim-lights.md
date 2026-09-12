@@ -4,6 +4,7 @@ title: Dim lights when the TV turns on
 description: Dim living-room lights when the TV turns on, then restore them afterward using a tested power or device-status signal.
 keywords: TV lighting automation, dim lights TV, theater mode automation, movie lighting, automatic TV lights
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/entertainment/tv-dim-lights.png
 compact: true
 faqs:
   - question: Should I use power monitoring or a smart TV signal as the trigger?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Dim lights when the TV turns on
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/entertainment/tv-dim-lights.svg" alt="" width="1200" height="630">
+</figure>
 
 Automatically dim the living room lights when the TV turns on, and restore them to their previous level once the TV turns off.
 

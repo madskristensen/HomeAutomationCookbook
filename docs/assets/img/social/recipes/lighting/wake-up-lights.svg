@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Set up gradual wake-up lighting</title>
+  <desc id="desc">A platform-neutral recipe that gradually brightens a bedroom light before a set wake time, simulating a sunrise instead of a jarring alarm.</desc>
+  <style>
+  @media (prefers-color-scheme: dark) {
+    rect[fill="#f8f9fa"] { fill: #14191c; }
+    rect[fill="#ffffff"], path[fill="#ffffff"] { fill: #1d2428; }
+    [fill="#eef2f3"] { fill: #293238; }
+    text[fill="#2c3e50"], circle[fill="#2c3e50"] { fill: #e7edef; }
+    text[fill="#5d6d75"], text[fill="#6b777c"] { fill: #b7c2c6; }
+    [stroke="#2c3e50"] { stroke: #d7e0e3; }
+    [stroke="#9db1b6"] { stroke: #72858c; }
+    [stroke="#e0e0e0"] { stroke: #3d494f; }
+  }
+</style>
+
+  <rect width="1200" height="630" fill="#f8f9fa"/>
+  <rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <rect x="108" y="88" width="142" height="43" rx="21" fill="#eef2f3"/>
+  <text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">LIGHTING</text>
+  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Set up gradual wake-up</text>
+  <text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">lighting</text>
+  <text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">A platform-neutral recipe that gradually</text>
+  <text x="108" y="353" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">brightens a bedroom light before a set wake</text>
+  <text x="108" y="384" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">time, simulating a sunrise instead of a...</text>
+  <g transform="translate(108 469)" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600">
+    <rect width="105" height="39" rx="19" fill="#eef2f3"/><text x="23" y="25" fill="#2c3e50">TRIGGER</text>
+    <path d="M117 20h39" stroke="#9db1b6" stroke-width="4"/>
+    <rect x="168" width="96" height="39" rx="19" fill="#eef2f3"/><text x="190" y="25" fill="#2c3e50">CHECK</text>
+    <path d="M276 20h39" stroke="#9db1b6" stroke-width="4"/>
+    <rect x="327" width="102" height="39" rx="19" fill="#7f9072"/><text x="346" y="25" fill="#ffffff">ACTION</text>
+  </g>
+  <g transform="translate(730 125)" fill="none" stroke="#2c3e50" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M82 178c0-67 54-121 121-121s121 54 121 121c0 45-25 85-63 106v58H145v-58c-38-21-63-61-63-106z" fill="#eef2f3"/>
+  <path d="M145 385h116M158 425h90"/>
+  <circle cx="203" cy="178" r="28" fill="#7f9072" stroke="none"/>
+  <path d="M203 57V7M82 91 45 54M324 91l37-37M42 178H-8M414 178h-50" stroke="#7f9072"/>
+  <rect x="-12" y="305" width="95" height="125" rx="12" fill="#ffffff"/>
+  <path d="M14 343h43M14 372h43M14 401h43" stroke="#7f9072" stroke-width="6"/>
+</g>
+
+  <text x="108" y="550" fill="#6b777c" font-family="Segoe UI, Arial, sans-serif" font-size="20">HOME AUTOMATION COOKBOOK</text>
+</svg>

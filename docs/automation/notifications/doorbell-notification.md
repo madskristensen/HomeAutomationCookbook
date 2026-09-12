@@ -4,6 +4,7 @@ title: Get phone alerts from a traditional doorbell
 description: A platform-neutral recipe that wires a contact sensor in parallel with an existing wired doorbell chime so ringing it sends a phone notification.
 keywords: doorbell notification, traditional doorbell, dumb doorbell alert, doorbell sensor, contact sensor doorbell
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/notifications/doorbell-notification.png
 compact: true
 faqs:
   - question: Do I need to replace my doorbell with a smart doorbell?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Get a phone notification when a traditional doorbell rings
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/notifications/doorbell-notification.svg" alt="" width="1200" height="630">
+</figure>
 
 Wire a contact sensor in parallel with an existing wired doorbell chime so pressing the doorbell also sends a phone notification, without replacing the doorbell itself.
 

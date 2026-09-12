@@ -4,6 +4,7 @@ title: Fridge and freezer door left-open alerts
 description: Alert the household when a fridge or freezer door stays open, using a shorter delay for the freezer and safe handling of missing data.
 keywords: fridge door alert, freezer door notification, refrigerator door left open, food spoilage prevention, door sensor fridge
 last_modified_at: 2026-09-12
+image: /assets/img/social/recipes/appliances/fridge-door-alert.png
 compact: true
 faqs:
   - question: Why does the freezer need a shorter delay than the fridge?
@@ -15,6 +16,10 @@ faqs:
 ---
 
 # Get an alert when the fridge or freezer door is left open
+
+<figure class="content-hero">
+  <img src="/assets/img/social/recipes/appliances/fridge-door-alert.svg" alt="" width="1200" height="630">
+</figure>
 
 Send one alert when a refrigerator or freezer door has stayed open past a safe delay, with a shorter delay for the freezer.
 
