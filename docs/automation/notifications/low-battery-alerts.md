@@ -71,6 +71,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 4. Identify a small set of critical devices, such as locks and water leak sensors, and consider giving them a lower threshold or higher-priority notification.
 5. Keep a small stock of the common battery types used across devices so a replacement does not require an extra trip.
 
+## Platform notes
+
+Battery reporting depends on both the device integration and the platform. Confirm whether each device exposes a percentage, a simple low-battery state, or nothing before building a threshold rule. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+
+### Amazon Alexa
+
+I could not verify a universal Alexa routine trigger for battery percentage across connected sensors, locks, and buttons. Use the device manufacturer's battery notification when available, and do not assume a battery value visible in Alexa can also trigger a routine.
+
+### SmartThings
+
+Use a percentage threshold only when the device exposes the standard battery capability. Available Routine choices come from the device's [SmartThings capabilities](https://developer.smartthings.com/docs/devices/capabilities). For several devices, an advanced [SmartThings Rule](https://developer.smartthings.com/docs/automations/rules) can evaluate selected battery attributes, but every included device still needs to report useful data.
+
+### Hubitat
+
+Use Hubitat [Rule Machine](https://docs2.hubitat.com/en/apps/rule-machine/rule-5-1) to alert when selected devices report battery below their tested thresholds. Include only devices whose drivers expose a battery value, add repeat suppression, and create a separate stale or inactive-device check because a dead device may stop reporting before crossing the threshold.
+
+### Home Assistant
+
+Home Assistant is a technical fit for collecting battery entities and producing a consolidated report, but I have not personally run it. Verify which integrations expose battery data and distinguish missing or unavailable entities from healthy batteries.
+
 ## Advanced features
 
 ### Tiered alert levels

@@ -89,6 +89,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 6. During testing, notify without changing the thermostat.
 7. After notifications are reliable, test pause and resume while someone watches the thermostat.
 
+## Platform notes
+
+This recipe needs more than contact and thermostat control. The platform must track whether this recipe caused the pause, recognize a later manual thermostat change, and restore only a valid saved state. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+
+### Amazon Alexa
+
+I could not verify a universal Alexa routine path that safely owns, saves, and restores thermostat state across contact-sensor and thermostat integrations. Use an Alexa alert-only version unless the exact devices expose the required open-duration trigger and thermostat actions under **When** and **Alexa Will**. Do not use a second unconditional routine to resume HVAC when one window closes.
+
+### SmartThings
+
+A simple SmartThings Routine can notify when a contact remains open if the device exposes that condition. The complete pause-and-restore pattern is better suited to an advanced [SmartThings Rule](https://developer.smartthings.com/docs/automations/rules) that can evaluate every monitored contact and the current thermostat state. Confirm local execution for every feature in the rule and preserve manual thermostat changes.
+
+### Hubitat
+
+Use Hubitat [Rule Machine](https://docs2.hubitat.com/en/apps/rule-machine/rule-5-1) to combine delayed contact conditions, track whether the rule paused HVAC, and require every monitored opening to be closed before restoration. Keep independent thermostat safety limits active and clear rule ownership when the thermostat changes outside the rule.
+
+### Home Assistant
+
+Home Assistant is a technical fit for stateful pause-and-restore logic, but I have not personally run it. Verify the current contact and climate integrations, state restoration, manual-change detection, and unavailable-device behavior before allowing it to control HVAC.
+
 ## Safe restoration
 
 The resume half is more important than the pause:

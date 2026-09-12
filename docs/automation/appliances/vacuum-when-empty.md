@@ -84,6 +84,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 5. Add the return-to-dock action as its own rule so it fires immediately, independent of the start logic.
 6. Test by starting the vacuum manually and then simulating an early return to confirm it docks promptly.
 
+## Platform notes
+
+The platform must maintain a daily-run state while also giving the arrival rule an immediate path to dock the vacuum. Presence, vacuum commands, and vacuum status all need independent testing. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+
+### Amazon Alexa
+
+I could not verify a universal Alexa routine pattern for multi-person empty-house confirmation, a daily-run flag, and immediate dock-on-return behavior. Vacuum skill actions and location triggers vary. Prefer the vacuum's own controls unless the exact start and dock actions are exposed and every household arrival path has been tested.
+
+### SmartThings
+
+The vacuum's device profile must expose start, dock, and cleaning status before this recipe is possible. Use tested phone presence for Home and Away state. An advanced [SmartThings Rule](https://developer.smartthings.com/docs/automations/rules) is a better fit than disconnected routines when the daily flag and immediate arrival branch must share state.
+
+### Hubitat
+
+Use Hubitat [Mode Manager](https://docs2.hubitat.com/en/apps/mode-manager) for the household state and [Rule Machine](https://docs2.hubitat.com/en/apps/rule-machine/rule-5-1) for the daily flag and separate arrival action. The exact vacuum still needs a compatible integration or driver with start, dock, and status commands. Test docking from every cleaning state before enabling automatic starts.
+
+### Home Assistant
+
+Home Assistant is a technical fit for stateful vacuum automations, but I have not personally run it. Verify the current vacuum and presence integrations, then test that arrival always takes priority over the scheduled or delayed start path.
+
 ## Advanced features
 
 ### Skip a day intentionally

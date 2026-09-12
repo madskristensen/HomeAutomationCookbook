@@ -84,6 +84,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 6. Confirm the vacuum reports docked, cleaning, and error states before relying on any of them.
 7. Test manually with someone intentionally staying home, then with someone returning during a test run.
 
+## Platform notes
+
+This recipe requires two dependable integrations: whole-house presence and a vacuum command surface that exposes start, dock, and useful status. A vacuum visible in an app is not necessarily controllable from automation. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+
+### Amazon Alexa
+
+Vacuum actions and phone-location triggers vary by skill, device, account, and region. I could not verify a universal Alexa routine pattern that combines confirmed multi-person absence, once-per-day state, start, and dock-on-return. Use the vacuum's own schedule or app unless the exact routine triggers and actions are available and tested.
+
+### SmartThings
+
+Use phone presence only after testing every resident, as described in the [Away mode recipe](/automation/daily-routines/away-mode.html). The vacuum's device profile must expose the required start, dock, and status capabilities. Use an advanced [SmartThings Rule](https://developer.smartthings.com/docs/automations/rules) when the simple Routine builder cannot express the confirmation delay and once-per-day state.
+
+### Hubitat
+
+Use Hubitat [Mode Manager](https://docs2.hubitat.com/en/apps/mode-manager) for the tested household Away state and [Rule Machine](https://docs2.hubitat.com/en/apps/rule-machine/rule-5-1) for the daytime window, confirmation delay, and daily-run state. The vacuum still needs a compatible integration or driver that exposes start, dock, and status commands; do not assume app control provides them.
+
+### Home Assistant
+
+Home Assistant is a technical fit for presence-aware vacuum control, but I have not personally run it. Verify the current presence and vacuum integrations, especially return-to-dock and error states, before adapting this pattern.
+
 ## Advanced features
 
 ### Skip when maintenance is needed

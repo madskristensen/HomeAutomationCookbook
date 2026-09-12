@@ -94,6 +94,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 7. Test a local audible or visible warning that does not depend on a phone.
 8. Require manual incident clearing even after the sensor reports dry.
 
+## Platform notes
+
+The first requirement is an immediate alert that names the wet sensor. Persistent incident state, local warnings, acknowledgment, valve control, and final-position confirmation are separate capabilities that must each be verified. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+
+### Amazon Alexa
+
+I could not verify water detection as a universal Alexa routine trigger across leak-sensor integrations. Use Alexa only if the exact sensor appears under **When** and test the resulting alert with phones and speakers in their normal quiet states. Do not add automatic valve control merely because Alexa can issue a command to a connected device.
+
+### SmartThings
+
+Build the first version as a SmartThings Routine only when the sensor exposes water state and the alert identifies the device. An advanced [SmartThings Rule](https://developer.smartthings.com/docs/automations/rules) can add confirmation and follow-up checks when the required sensor, notification, and valve capabilities are available. Keep incident clearing manual and confirm valve position separately from the close command.
+
+### Hubitat
+
+Hubitat [Safety Monitor](https://docs2.hubitat.com/en/apps/hubitat-safety-monitor) is the natural starting point for monitoring leak sensors and issuing water alerts. Name every device for its physical location. Keep any valve action separate until the installed valve, driver, manual bypass, close confirmation, and reopen procedure have all been tested.
+
+### Home Assistant
+
+Home Assistant is a technical fit for combining leak entities, persistent notifications, local warnings, and valve feedback, but I have not personally run it. Verify each integration independently and keep the first implementation alert-only until the complete shutoff path is proven.
+
 ## Test the alert safely
 
 Follow the sensor's instructions for testing. Use a damp test surface or cloth on the sensing contacts rather than immersing a device unless its documentation explicitly permits that.
