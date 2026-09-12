@@ -98,7 +98,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-The reusable requirement is that the platform receives a reliable open or closed state and can command the light without disabling its physical control.
+The reusable requirement is that the platform receives a reliable open or closed state and can command the light without disabling its physical control. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 

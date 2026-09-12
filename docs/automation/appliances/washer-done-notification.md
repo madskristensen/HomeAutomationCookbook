@@ -85,7 +85,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-The platform must remember that a real cycle started before low power or stillness can mean finished. A single threshold rule is not enough.
+The platform must remember that a real cycle started before low power or stillness can mean finished. A single threshold rule is not enough. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 

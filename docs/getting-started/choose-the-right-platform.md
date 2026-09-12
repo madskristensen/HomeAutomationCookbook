@@ -2,7 +2,7 @@
 layout: guide
 title: Choose the platform you will actually maintain
 description: A candid platform chooser based on firsthand Alexa, SmartThings, and Hubitat experience, with Home Assistant clearly marked as a technical-fit comparison.
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
 ---
 
 # Choose the platform you will actually maintain
@@ -21,6 +21,8 @@ The platform is successful when it helps you build useful routines and then fade
 | SmartThings | You want broader device and routine support without becoming deeply technical. | Detailed control and local behavior vary by device and rule. | Personally used. |
 | Hubitat | You want a managed hub, local rules for supported devices, and room to write detailed logic or code. | The deeper tools still require careful setup and testing. | Current platform and my preference. |
 | Home Assistant | You are technically confident and want maximum flexibility over hardware, integrations, dashboards, and maintenance. | You own more architecture, update, backup, radio, and remote-access decisions. | Not personally used. Technical-fit comparison only. |
+
+Read the detailed guides for [Amazon Alexa](/platforms/alexa.html), [SmartThings](/platforms/smartthings.html), [Hubitat](/platforms/hubitat.html), and [Home Assistant](/platforms/home-assistant.html) after using this table to narrow the choice.
 
 ## Amazon Alexa
 

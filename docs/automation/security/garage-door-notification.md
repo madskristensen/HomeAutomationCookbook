@@ -71,7 +71,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-Keep this as an alert-only rule on every platform. An open-state notification does not prove the doorway is clear or make unattended closing safe.
+Keep this as an alert-only rule on every platform. An open-state notification does not prove the doorway is clear or make unattended closing safe. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 

@@ -81,7 +81,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-The important platform capability is not a generic "shower detected" event. It is a current humidity or light state, a fan command, and separate on and off thresholds.
+The important platform capability is not a generic "shower detected" event. It is a current humidity or light state, a fan command, and separate on and off thresholds. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 

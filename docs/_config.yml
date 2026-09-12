@@ -59,6 +59,17 @@ navigation:
         url: /getting-started/tips.html
       - title: Resources
         url: /getting-started/resources.html
+  - title: Platforms
+    url: /platforms/index.html
+    subitems:
+      - title: Amazon Alexa
+        url: /platforms/alexa.html
+      - title: SmartThings
+        url: /platforms/smartthings.html
+      - title: Hubitat
+        url: /platforms/hubitat.html
+      - title: Home Assistant
+        url: /platforms/home-assistant.html
   - title: Automations
     url: /automation/index.html
     subitems:

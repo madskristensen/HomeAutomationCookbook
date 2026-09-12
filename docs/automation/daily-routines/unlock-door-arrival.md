@@ -85,7 +85,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-Arrival should restore ordinary household behavior, not silently grant access. Phone presence can start reversible preparation, while locks, alarms, and garage doors remain separate deliberate actions.
+Arrival should restore ordinary household behavior, not silently grant access. Phone presence can start reversible preparation, while locks, alarms, and garage doors remain separate deliberate actions. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 

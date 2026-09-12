@@ -36,6 +36,11 @@
       {% assign ancestor_name = "Articles" %}
       {% assign ancestor_url = "/articles/index.html" %}
     {% endunless %}
+  {% when "platforms" %}
+    {% unless category_key == "index.html" %}
+      {% assign ancestor_name = "Platform guides" %}
+      {% assign ancestor_url = "/platforms/index.html" %}
+    {% endunless %}
 {% endcase %}
 
 <nav class="breadcrumb" aria-label="Breadcrumb">

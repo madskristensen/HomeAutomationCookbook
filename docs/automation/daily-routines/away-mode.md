@@ -93,7 +93,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-Presence is a reason to delay Away, not proof that the house is empty. Preserve a visible Guest or Staying Home override whichever platform runs the routine.
+Presence is a reason to delay Away, not proof that the house is empty. Preserve a visible Guest or Staying Home override whichever platform runs the routine. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 

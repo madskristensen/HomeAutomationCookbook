@@ -29,6 +29,8 @@ The goal is not more technology. It is a home that asks less of you during an or
 
 These are platform-neutral ideas, not instructions for one brand. The recipes focus on the useful logic behind an automation - the trigger, conditions, action, timing, and fallback - so you can build the same idea with the tools you already own or compare what a new platform could enable.
 
+Use the [platform guides](/platforms/index.html) to map that logic to Alexa, SmartThings, Hubitat, or a clearly labeled Home Assistant technical-fit comparison.
+
 ## Learn the pattern once
 
 You do not need to copy someone else's smart home. Every recipe uses the same building blocks so you can apply them to your own rooms and routines:
