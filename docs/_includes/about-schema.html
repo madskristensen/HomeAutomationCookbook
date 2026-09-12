@@ -6,11 +6,21 @@
   "url": {{ page.url | absolute_url | jsonify }},
   "name": {{ page.title | jsonify }},
   "description": {{ page.description | jsonify }},
+  "isPartOf": {
+    "@id": {{ "/#website" | absolute_url | jsonify }}
+  },
   "mainEntity": {
     "@type": "Person",
     "@id": {{ "/about.html#person" | absolute_url | jsonify }},
     "name": {{ site.author.name | jsonify }},
     "url": {{ "/about.html" | absolute_url | jsonify }},
+    "knowsAbout": [
+      "Home automation",
+      "Smart home reliability",
+      "Amazon Alexa",
+      "SmartThings",
+      "Hubitat"
+    ],
     "sameAs": [
       "https://github.com/madskristensen",
       "https://twitter.com/madskristensen"

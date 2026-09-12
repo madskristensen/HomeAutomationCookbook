@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-30
 title: Welcome arrivals with path lighting
 description: Make the final steps to the door easier after dark while leaving the lock and manually controlled lights alone.
 keywords: arrival lighting, welcome home lights, entry light automation, outdoor arrival lights, verified presence lighting

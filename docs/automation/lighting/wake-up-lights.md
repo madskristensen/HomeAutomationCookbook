@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-30
 title: Set up gradual wake-up lighting
 description: A platform-neutral recipe that gradually brightens a bedroom light before a set wake time, simulating a sunrise instead of a jarring alarm.
 keywords: wake up lights, sunrise alarm, gradual lighting, morning light automation, gentle wake up

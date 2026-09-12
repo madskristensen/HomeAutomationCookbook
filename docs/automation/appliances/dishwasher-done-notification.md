@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Dishwasher finished notification
 description: Learn the dishwasher's power or vibration pattern and send one reliable completion alert without controlling appliance power.
 keywords: dishwasher finished alert, dishwasher notification, dishwasher power monitoring, kitchen appliance automation, dishwasher done notification

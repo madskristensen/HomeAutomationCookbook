@@ -17,6 +17,11 @@ defaults:
       path: ""
     values:
       image: https://www.homeautomationcookbook.com/assets/img/hero.jpg
+  - scope:
+      path: "automation"
+    values:
+      seo:
+        type: WebPage
 
 twitter:
   username: madskristensen

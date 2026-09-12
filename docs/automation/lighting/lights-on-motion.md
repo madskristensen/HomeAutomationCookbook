@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Turn lights on with motion sensors
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights

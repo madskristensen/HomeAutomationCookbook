@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Control music with a physical switch
 description: A platform-neutral recipe that uses a wall switch or button to start, stop, or adjust music instead of relying on a voice assistant.
 keywords: music button control, physical music switch, smart home music control, button music automation, instant music playback

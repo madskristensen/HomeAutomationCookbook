@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-30
 title: Fridge and freezer door alerts
 description: Alert the household when a fridge or freezer door stays open, using a shorter delay for the freezer and safe handling of missing data.
 keywords: fridge door alert, freezer door notification, refrigerator door left open, food spoilage prevention, door sensor fridge

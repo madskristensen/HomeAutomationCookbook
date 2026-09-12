@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Prepare the house when someone arrives
 description: Restore Home mode, light a safe path, and resume normal comfort without treating phone location as proof of identity.
 keywords: arrival home automation, welcome home automation, presence detection, entry lighting, home mode automation

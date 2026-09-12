@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Automate a bathroom exhaust fan
 description: Run the bathroom fan when a shower starts and turn it off once the steam clears, with nothing to remember and no fan left running all morning.
 keywords: bathroom fan automation, shower fan control, humidity sensor automation, automatic fan, bathroom ventilation

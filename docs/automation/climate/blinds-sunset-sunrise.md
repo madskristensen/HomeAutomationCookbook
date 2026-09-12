@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-29
 title: Automate blinds at sunrise and sunset
 description: Open motorized blinds near sunrise and close them near sunset while preserving privacy, bedtime limits, and physical control.
 keywords: smart blinds automation, automatic shades, sunset blinds, sunrise blinds, motorized blinds, privacy automation

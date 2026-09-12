@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Build a family-safe bedtime routine
 description: Separate a gentle wind-down from an intentional good-night action while preserving occupied rooms, safety alerts, and manual control.
 keywords: bedtime routine automation, good night routine, night mode automation, family bedtime automation, smart home bedtime

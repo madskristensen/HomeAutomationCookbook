@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Set smart-speaker volume presets
 description: Choose a quiet, normal, or loud preset once instead of adjusting each speaker by hand whenever the household changes activities.
 keywords: speaker volume automation, audio presets, volume control scenes, smart speaker volume, consistent volume

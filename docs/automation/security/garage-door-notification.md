@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-29
 title: Garage door left-open alerts
 description: A platform-neutral recipe that alerts when a garage door has been left open too long. Alerting only; closing stays manual or with equipment built for it.
 keywords: garage door notification, garage door left open, garage door sensor, garage door automation, garage door alert

@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-30
 title: Vacuum while the house is empty
 description: A platform-neutral recipe that starts a robot vacuum only after confirming the home is empty and sends it back to the dock the moment anyone returns.
 keywords: robot vacuum automation, presence-based cleaning, robot vacuum when away, smart vacuum scheduling, vacuum return protection

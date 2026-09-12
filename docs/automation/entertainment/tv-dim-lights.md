@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Dim lights when the TV turns on
 description: Dim living-room lights when the TV turns on, then restore them afterward using a tested power or device-status signal.
 keywords: TV lighting automation, dim lights TV, theater mode automation, movie lighting, automatic TV lights

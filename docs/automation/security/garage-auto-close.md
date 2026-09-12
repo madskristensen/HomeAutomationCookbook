@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-30
 title: Safer automatic garage closing
 description: Alert first, keep people in control, and allow unattended closing only through equipment designed for it with working entrapment protection and warnings.
 keywords: garage door left open, garage close alert, unattended garage closing, garage door safety, tilt sensor

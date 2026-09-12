@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-29
 title: Automate outdoor lights at dusk
 description: A platform-neutral outdoor-lighting recipe that follows sunset, avoids unnecessary overnight runtime, and keeps physical control available.
 keywords: outdoor lights automation, sunset lights, dusk lighting, exterior lighting, holiday lights, smart outdoor lights

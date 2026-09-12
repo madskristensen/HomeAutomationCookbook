@@ -1,0 +1,53 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": {{ "/#website" | absolute_url | jsonify }},
+      "url": {{ "/" | absolute_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "publisher": {
+        "@id": {{ "/#organization" | absolute_url | jsonify }}
+      },
+      "author": {
+        "@id": {{ "/about.html#person" | absolute_url | jsonify }}
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": {{ "/#organization" | absolute_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "url": {{ "/" | absolute_url | jsonify }},
+      "logo": {
+        "@type": "ImageObject",
+        "@id": {{ "/#logo" | absolute_url | jsonify }},
+        "url": {{ "/assets/img/icon-512x512.png" | absolute_url | jsonify }},
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://github.com/madskristensen/HomeAutomationCookbook"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": {{ "/about.html#person" | absolute_url | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "url": {{ "/about.html" | absolute_url | jsonify }},
+      "knowsAbout": [
+        "Home automation",
+        "Smart home reliability",
+        "Amazon Alexa",
+        "SmartThings",
+        "Hubitat"
+      ],
+      "sameAs": [
+        "https://github.com/madskristensen",
+        "https://twitter.com/madskristensen"
+      ]
+    }
+  ]
+}
+</script>

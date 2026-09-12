@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Turn lights off after motion stops
 description: A conservative motion-lighting off recipe that respects still occupants, manual wall-switch choices, and local-first control.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically

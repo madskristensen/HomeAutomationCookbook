@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2026-08-30
 title: Guest-friendly smart home mode
 description: A platform-neutral guest mode that keeps lights and physical controls simple, prevents false Away mode, and quiets only non-urgent personal automation.
 keywords: smart home guest mode, guest friendly automation, vacation guest mode, quiet notifications, smart home visitors

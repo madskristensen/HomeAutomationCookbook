@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-30
 title: Home maintenance reminder dashboard
 description: A platform-neutral recipe that tracks recurring home maintenance tasks, such as filter changes, on a shared dashboard instead of relying on memory.
 keywords: maintenance reminder, home maintenance dashboard, filter change reminder, recurring task tracker, smart home dashboard

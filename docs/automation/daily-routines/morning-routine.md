@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Start a quiet good-morning routine
 description: A platform-neutral morning routine that starts from an intentional signal, lights only the needed path, and leaves sleeping household members undisturbed.
 keywords: good morning routine, morning lighting automation, quiet wake-up automation, smart home morning, family morning routine

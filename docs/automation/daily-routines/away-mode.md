@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Set away mode when everyone leaves
 description: A conservative, platform-neutral away-mode recipe that verifies the home is empty before changing lights, climate, or security behavior.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode

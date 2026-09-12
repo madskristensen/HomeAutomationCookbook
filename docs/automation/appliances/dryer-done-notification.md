@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Get notified when the dryer finishes
 description: A platform-neutral laundry recipe that detects sustained dryer vibration and sends one completion alert without controlling appliance power.
 keywords: dryer finished alert, dryer vibration sensor, laundry notification, dryer automation, dryer done notification

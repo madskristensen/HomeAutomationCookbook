@@ -1,5 +1,6 @@
 ---
 layout: automation
+date: 2025-11-28
 title: Play music when arriving home
 description: A platform-neutral recipe that starts music on arrival, using a tested presence signal, to create a consistent welcome-home moment.
 keywords: welcome home music, arrival music automation, automatic music greeting, presence detection music, greeting automation
