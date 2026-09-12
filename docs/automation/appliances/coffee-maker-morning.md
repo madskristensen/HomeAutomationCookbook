@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Prepare morning coffee with a deliberate ready step
+title: Automate morning coffee safely
 description: Prepare the coffee maker the night before and get a clear morning result without wondering whether it was actually made ready.
 keywords: morning coffee reminder, delayed brew coffee, coffee ready mode, morning routine, coffee maker safety
 last_modified_at: 2026-09-12

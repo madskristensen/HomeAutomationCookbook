@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Control music in any room from one shared dashboard
+title: Shared whole-home music controls
 description: Stop switching between manufacturer apps just to pause a speaker or change its volume in another room.
 keywords: music dashboard, playback controls, whole home audio, dashboard tiles, music control automation
 last_modified_at: 2026-09-12

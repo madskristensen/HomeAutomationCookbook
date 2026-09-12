@@ -6,14 +6,17 @@
   "headline": {{ page.title | jsonify }},
   "description": {{ page.description | jsonify }},
   "image": {{ article_image | jsonify }},
+  {% if page.date %}"datePublished": {{ page.date | date_to_xmlschema | jsonify }},{% endif %}
   "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
   "author": {
     "@type": "Person",
+    "@id": {{ "/about.html#person" | absolute_url | jsonify }},
     "name": {{ site.author.name | jsonify }},
     "url": {{ "/about.html" | absolute_url | jsonify }}
   },
   "publisher": {
     "@type": "Organization",
+    "@id": {{ "/#organization" | absolute_url | jsonify }},
     "name": {{ site.title | jsonify }},
     "logo": {
       "@type": "ImageObject",

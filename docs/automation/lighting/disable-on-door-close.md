@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Turn a closet light off after the door closes
+title: Turn off closet lights on door close
 description: A platform-neutral follow-up to door-triggered lighting that turns off only the light the automation turned on and cancels when the door reopens.
 keywords: closet light door close, pantry light automation, contact sensor light off, automatic closet lighting, door sensor lighting
 last_modified_at: 2026-09-12

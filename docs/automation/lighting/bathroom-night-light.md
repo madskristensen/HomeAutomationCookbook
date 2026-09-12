@@ -46,7 +46,7 @@ Bright bathroom light at 2am is miserable. This recipe uses only enough light to
 
 <div class="use-case-grid">
   <div class="use-case-card">
-    <h4>Nighttime Navigation</h4>
+    <h3>Nighttime navigation</h3>
     <ul>
       <li><strong>Middle of Night Bathroom Trips</strong> - Common for everyone</li>
       <li><strong>Nighttime Hallway Navigation</strong> - Safe path to bathroom</li>
@@ -54,7 +54,7 @@ Bright bathroom light at 2am is miserable. This recipe uses only enough light to
     </ul>
   </div>
   <div class="use-case-card">
-    <h4>Early Morning & Kitchen</h4>
+    <h3>Early morning and kitchen</h3>
     <ul>
       <li><strong>Getting Water from Kitchen</strong> - Any nighttime navigation</li>
       <li><strong>Early Morning Routine</strong> - Before sunrise gentle lighting</li>

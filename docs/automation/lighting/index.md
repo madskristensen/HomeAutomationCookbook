@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Smart lighting automation ideas and recipes
+title: Smart lighting automation recipes
 description: Make lights respond to movement, doors, and time of day while keeping every familiar wall switch useful.
 permalink: /automation/lighting/index.html
 canonical_url: https://www.homeautomationcookbook.com/automation/lighting/index.html
@@ -247,6 +247,6 @@ Create different behaviors for day and night:
 - [Verified entry welcome lights →](/automation/lighting/driveway-welcome-wave.html)
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
+  <a href="/automation/index.html">← Back to all automations</a>
   <a href="/automation/daily-routines/index.html">Next: daily routines</a>
 </div>

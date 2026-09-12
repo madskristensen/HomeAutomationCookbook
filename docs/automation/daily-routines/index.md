@@ -102,7 +102,7 @@ Keep physical controls and useful lighting normal, prevent false Away mode, and 
 <div class="use-case-grid">
 
 <div class="use-case-card">
-<h4>Home mode</h4>
+<h3>Home mode</h3>
 <ul>
 <li>Normal lighting automation</li>
 <li>Comfortable temperature</li>
@@ -112,7 +112,7 @@ Keep physical controls and useful lighting normal, prevent false Away mode, and 
 </div>
 
 <div class="use-case-card">
-<h4>Away mode</h4>
+<h3>Away mode</h3>
 <ul>
 <li>Lights off (or security pattern)</li>
 <li>Eco temperature settings</li>
@@ -122,7 +122,7 @@ Keep physical controls and useful lighting normal, prevent false Away mode, and 
 </div>
 
 <div class="use-case-card">
-<h4>Night mode</h4>
+<h3>Night mode</h3>
 <ul>
 <li>Low-brightness lighting only</li>
 <li>Lower temperature</li>
@@ -132,7 +132,7 @@ Keep physical controls and useful lighting normal, prevent false Away mode, and 
 </div>
 
 <div class="use-case-card">
-<h4>Custom modes</h4>
+<h3>Custom modes</h3>
 <ul>
 <li><strong>Guest:</strong> Modified automation for visitors</li>
 <li><strong>Vacation:</strong> Extended away with enhanced security</li>
@@ -231,6 +231,6 @@ Keep physical controls and useful lighting normal, prevent false Away mode, and 
 </div>
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
+  <a href="/automation/index.html">← Back to all automations</a>
   <a href="/automation/climate/index.html">Next: climate and comfort</a>
 </div>

@@ -45,7 +45,7 @@ THEN send one "Washer finished" notification
 AND mark laundry as waiting
 AND clear the running marker</div>
 
-![A real washer cycle is confirmed before sustained low activity produces one completion alert.](/assets/img/diagrams/washer-completion-flow.svg){: .automation-diagram }
+![A real washer cycle is confirmed before sustained low activity produces one completion alert.](/assets/img/diagrams/washer-completion-flow.svg){: .automation-diagram width="960" height="280" }
 
 - **Trigger:** Measured power stays above the washer's calibrated running threshold long enough to prove a cycle started.
 - **Conditions:** Monitoring data is current and the washer was not already marked as running.

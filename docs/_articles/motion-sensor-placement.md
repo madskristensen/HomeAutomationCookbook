@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: How to place motion sensors for reliable automations
+title: Motion sensor placement guide
 description: A practical guide to placing and testing PIR and presence sensors so automations respond at the right moment without false triggers.
 date: 2026-09-09
 last_modified_at: 2026-09-12

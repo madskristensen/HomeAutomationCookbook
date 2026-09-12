@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Use status tiles instead of notifications
+title: Smart home status tiles
 description: A platform-neutral recipe that replaces one-time push notifications with persistent dashboard tiles for household status information.
 keywords: status tiles, dashboard status, notification alternative, smart home dashboard, persistent status display
 last_modified_at: 2026-09-12

@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Support a fire evacuation without delaying the alarm
+title: Supplemental fire evacuation support
 description: A conservative fire-response recipe that treats listed smoke alarms as primary, turns on useful lighting immediately, and never infers that a fire is over.
 keywords: fire safety automation, smoke alarm notification, evacuation lighting, smart home fire alert, smoke alarm listener
 last_modified_at: 2026-09-12

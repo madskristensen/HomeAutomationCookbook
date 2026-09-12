@@ -1,0 +1,20 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": {{ page.url | absolute_url | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "@id": {{ "/about.html#person" | absolute_url | jsonify }},
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ "/about.html" | absolute_url | jsonify }},
+    "sameAs": [
+      "https://github.com/madskristensen",
+      "https://twitter.com/madskristensen"
+    ]
+  }
+}
+</script>

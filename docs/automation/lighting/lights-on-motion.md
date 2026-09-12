@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Turn lights on automatically with a motion sensor
+title: Turn lights on with motion sensors
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
 last_modified_at: 2026-09-12
@@ -36,7 +36,7 @@ Nobody should have to fumble for a switch with a basket of laundry or explain th
 <div class="automation-example">IF entry motion is detected AND the room is dark
 THEN turn on the light</div>
 
-![Motion is detected, darkness is checked, and the light turns on while the wall switch remains available.](/assets/img/diagrams/motion-lighting-flow.svg){: .automation-diagram }
+![Motion is detected, darkness is checked, and the light turns on while the wall switch remains available.](/assets/img/diagrams/motion-lighting-flow.svg){: .automation-diagram width="960" height="280" }
 
 
 
@@ -51,7 +51,7 @@ THEN turn on the light</div>
 
 <div class="use-case-grid">
   <div class="use-case-card">
-    <h4>Indoor automation</h4>
+    <h3>Indoor automation</h3>
     <ul>
       <li><strong>Nighttime navigation</strong> - Bathroom lights turn on at low brightness when you get up at night</li>
       <li><strong>Home office</strong> - Lights automatically turn on when you enter your workspace</li>
@@ -60,7 +60,7 @@ THEN turn on the light</div>
     </ul>
   </div>
   <div class="use-case-card">
-    <h4>Outdoor automation</h4>
+    <h3>Outdoor automation</h3>
     <ul>
       <li><strong>Garden shed</strong> - Motion sensor triggers light when you enter</li>
       <li><strong>Porch light</strong> - Automatically lights up for guests and delivery drivers</li>

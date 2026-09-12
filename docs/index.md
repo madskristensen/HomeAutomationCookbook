@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home automation ideas and practical recipes
+title: Practical home automation recipes
 description: Find practical home automation ideas for Alexa, Google, SmartThings, Homey, Philips Hue, Hubitat, Home Assistant, and more.
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Turn outdoor lights on automatically at dusk
+title: Automate outdoor lights at dusk
 description: A platform-neutral outdoor-lighting recipe that follows sunset, avoids unnecessary overnight runtime, and keeps physical control available.
 keywords: outdoor lights automation, sunset lights, dusk lighting, exterior lighting, holiday lights, smart outdoor lights
 last_modified_at: 2026-09-12

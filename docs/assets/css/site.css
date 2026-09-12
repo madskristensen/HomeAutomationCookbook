@@ -244,7 +244,9 @@ hr {
 
 a {
   color: var(--color-link);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
   transition: color 0.2s ease;
 }
 

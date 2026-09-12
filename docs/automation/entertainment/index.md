@@ -114,7 +114,7 @@ Start a tested lighting and music scene from one deliberate control. Keep pool s
 <div class="use-case-grid">
 
 <div class="use-case-card">
-<h4>Automatic music</h4>
+<h3>Automatic music</h3>
 <ul>
 <li>Shower music when bathroom lights on</li>
 <li>Welcome home music on arrival</li>
@@ -124,7 +124,7 @@ Start a tested lighting and music scene from one deliberate control. Keep pool s
 </div>
 
 <div class="use-case-card">
-<h4>Lighting integration</h4>
+<h3>Lighting integration</h3>
 <ul>
 <li>Dim lights when TV turns on</li>
 <li>Movie mode (lights + sound)</li>
@@ -134,7 +134,7 @@ Start a tested lighting and music scene from one deliberate control. Keep pool s
 </div>
 
 <div class="use-case-card">
-<h4>Physical controls</h4>
+<h3>Physical controls</h3>
 <ul>
 <li>Button to start favorite playlist</li>
 <li>Switch to play/pause current music</li>
@@ -144,7 +144,7 @@ Start a tested lighting and music scene from one deliberate control. Keep pool s
 </div>
 
 <div class="use-case-card">
-<h4>Volume management</h4>
+<h3>Volume management</h3>
 <ul>
 <li>Reset to default volumes daily</li>
 <li>Louder during day, quieter at night</li>
@@ -268,6 +268,6 @@ Start a tested lighting and music scene from one deliberate control. Keep pool s
 </div>
 
 <div class="page-navigation">
-  <a href="/automation/">← Back to All Automations</a>
+  <a href="/automation/index.html">← Back to all automations</a>
   <a href="/automation/appliances/index.html">Next: appliances</a>
 </div>

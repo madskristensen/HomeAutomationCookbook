@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Set up a teeth brushing reminder for kids
+title: Kids' teeth-brushing reminder
 description: A platform-neutral recipe that uses a power-monitoring smart plug on an electric toothbrush charger to confirm brushing happened, with a reminder if it did not.
 keywords: teeth brushing reminder, kids routine automation, smart plug power monitoring, toothbrush charger sensor
 last_modified_at: 2026-09-12

@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Turn lights off automatically after motion stops
+title: Turn lights off after motion stops
 description: A conservative motion-lighting off recipe that respects still occupants, manual wall-switch choices, and local-first control.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically
 last_modified_at: 2026-09-12
@@ -37,7 +37,7 @@ The off half makes automatic lighting useful without making it hostile. It shoul
 
 <div class="use-case-grid">
   <div class="use-case-card">
-    <h4>Quick Access Spaces</h4>
+    <h3>Quick access spaces</h3>
     <ul>
       <li><strong>Bathroom</strong> - Turn off lights 5 minutes after no motion detected</li>
       <li><strong>Closets</strong> - Turn off immediately after 1 minute (quick access areas)</li>
@@ -45,7 +45,7 @@ The off half makes automatic lighting useful without making it hostile. It shoul
     </ul>
   </div>
   <div class="use-case-card">
-    <h4>Living & Work Spaces</h4>
+    <h3>Living and work spaces</h3>
     <ul>
       <li><strong>Living Areas</strong> - Turn off lights 2 minutes after no motion at nighttime</li>
       <li><strong>Home Office</strong> - Longer delay (10 minutes) for stationary work</li>

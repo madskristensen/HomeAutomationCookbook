@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Pause heating or cooling when a window stays open
+title: Pause HVAC when a window stays open
 description: A platform-neutral climate recipe that pauses HVAC after a window remains open and resumes only when every monitored opening is closed.
 keywords: thermostat window sensor, stop HVAC windows open, smart thermostat control, window sensor thermostat, prevent heating outside
 last_modified_at: 2026-09-12

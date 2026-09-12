@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Turn lights on automatically when a door opens
+title: Turn lights on when a door opens
 description: A local-first contact-sensor lighting recipe for closets, pantries, and utility rooms that keeps the familiar wall switch usable.
 keywords: door sensor automation, contact sensor lights, automatic closet lights, door activated lighting, smart door sensor
 last_modified_at: 2026-09-12
@@ -36,7 +36,7 @@ The pantry or utility-room light should be on before anyone has to reach for the
 <div class="automation-example">IF the closet door opens AND the closet is dark
 THEN turn on the closet light</div>
 
-![The door opens, the lighting condition is checked, and the closet light turns on while manual control remains available.](/assets/img/diagrams/door-lighting-flow.svg){: .automation-diagram }
+![The door opens, the lighting condition is checked, and the closet light turns on while manual control remains available.](/assets/img/diagrams/door-lighting-flow.svg){: .automation-diagram width="960" height="280" }
 
 - **Trigger:** The contact sensor changes from closed to open.
 - **Conditions:** The space is dark enough, or it is within the hours when automatic light makes sense.
@@ -79,21 +79,21 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 <div class="setup-steps">
   <div class="setup-step">
-    <h4>Mount and test</h4>
+    <h3>Mount and test</h3>
     <ul>
       <li>Mount the magnet and sensor where the door closes consistently.</li>
       <li>Open and close the door ten times and confirm every state change appears in the hub.</li>
     </ul>
   </div>
   <div class="setup-step">
-    <h4>Start simply</h4>
+    <h3>Start simply</h3>
     <ul>
       <li>Turn the light on when the door opens.</li>
       <li>Add a light-level condition only after the basic trigger is reliable.</li>
     </ul>
   </div>
   <div class="setup-step">
-    <h4>Choose a safe off rule</h4>
+    <h3>Choose a safe off rule</h3>
     <ul>
       <li>For a closet, turn off after the door is closed for one minute.</li>
       <li>For a pantry, start with a longer delay so it does not turn off during a quick return trip.</li>

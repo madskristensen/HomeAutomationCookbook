@@ -1,6 +1,6 @@
 ---
 layout: automation
-title: Start the robot vacuum when everyone leaves
+title: Start the vacuum when everyone leaves
 description: A platform-neutral recipe that starts a robot vacuum only after a tested presence signal confirms the home is empty, and only during a daytime window.
 keywords: robot vacuum automation, auto start vacuum, vacuum when away, presence detection vacuum, away mode cleaning
 last_modified_at: 2026-09-12
