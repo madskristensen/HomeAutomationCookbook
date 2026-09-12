@@ -111,6 +111,26 @@ Start with a longer delay than you expect to need, then shorten it only after no
 - **Living spaces:** Start at three to five minutes.
 - **Bathrooms and quiet spaces:** Start at 10 minutes, or use a contact sensor, another motion sensor, or [mmWave presence sensing](/articles/pir-vs-mmwave-presence.html) before reducing the delay.
 
+## Platform notes
+
+The platform must distinguish motion from no motion, wait for a room-specific timeout, and cancel the pending shutoff when activity returns. Keep the physical switch available regardless of platform. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+
+### Amazon Alexa
+
+Use an Alexa routine only when the sensor offers a no-motion trigger with a suitable duration under **When** and the light appears as an action under **Alexa Will**. Available routine options vary by device and region even though Amazon defines the underlying [motion-sensor state model](https://developer.amazon.com/docs/alexaplus/device-apis/alexa-motionsensor.html). Confirm that new motion prevents an unwanted shutoff before relying on the routine.
+
+### SmartThings
+
+Create an automatic SmartThings Routine with no motion for the chosen duration as the IF condition and light off as the THEN action. Add switch-state, mode, or additional-sensor conditions only when those capabilities are exposed. SmartThings explains the [IF and THEN routine model](https://support.smartthings.com/hc/en-us/articles/360051931952-Routines-in-SmartThings); local execution still depends on every device feature and service used by the rule.
+
+### Hubitat
+
+Hubitat [Room Lighting](https://docs2.hubitat.com/en/apps/room-lighting) supports motion-based shutoff delays, conditions, and options for responding to physical changes. Start with one conservative inactivity timeout, then add other sensors or override behavior only after the basic off rule is dependable.
+
+### Home Assistant
+
+Home Assistant is a technical fit for delayed no-motion logic, but I have not personally run it. Adapt the same timeout, cancellation, and manual-override requirements only after verifying the current automation behavior for the exact sensor and light integrations.
+
 ## Advanced features
 
 <div class="feature-grid">

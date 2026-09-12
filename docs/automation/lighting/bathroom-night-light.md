@@ -115,6 +115,26 @@ Choose one understandable signal for nighttime behavior. A fixed night window is
 
 Do not infer Night mode only because someone entered a bedroom. Different schedules, illness, guests, and brief trips make that signal unreliable. See [daily routine automations](/automation/daily-routines/index.html) for deliberate night-mode patterns.
 
+## Platform notes
+
+The platform must combine a motion trigger with a dependable night condition and set a specific dimming level. Keep the physical wall switch available, and let the separate no-motion rule own shutoff timing. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+
+### Amazon Alexa
+
+Build this as an Alexa routine only when the sensor appears as a motion trigger under **When**, the schedule can limit the routine to nighttime, and the light exposes brightness under **Alexa Will**. Amazon documents the underlying [motion-sensor state model](https://developer.amazon.com/docs/alexaplus/device-apis/alexa-motionsensor.html), but trigger and dimming choices still vary by device and region. Test the routine in the dark and keep shutoff in a separate routine.
+
+### SmartThings
+
+Create an automatic SmartThings Routine with motion and a nighttime period as IF conditions, then set the dimmer level in the THEN action. Use location mode or illuminance instead of a fixed time only when that signal is already dependable. The available conditions and actions come from the device's exposed [SmartThings capabilities](https://developer.smartthings.com/docs/devices/capabilities).
+
+### Hubitat
+
+Use Hubitat [Room Lighting](https://docs2.hubitat.com/en/apps/room-lighting) to activate the bathroom light from motion and apply a low level by mode or time period. Keep the delayed shutoff and physical-change behavior explicit so shower activity and a wall-switch choice are not overridden.
+
+### Home Assistant
+
+Home Assistant is a technical fit for combining motion, time or house state, and a dimming action, but I have not personally run it. Verify the current sensor and light integrations, then preserve the same low-light default, separate shutoff, and physical-control requirements.
+
 ## Advanced features
 
 <div class="feature-grid">
