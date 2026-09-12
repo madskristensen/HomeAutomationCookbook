@@ -4,10 +4,15 @@ title: Getting started with home automation
 description: Start with one household problem, choose a maintainable platform, verify one device, and keep physical controls working.
 permalink: /getting-started/index.html
 canonical_url: https://www.homeautomationcookbook.com/getting-started/index.html
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/guides/getting-started.png
 ---
 
 # Getting started with home automation
+
+<figure class="content-hero">
+  <img src="/assets/img/social/guides/getting-started.svg" alt="" width="1200" height="630">
+</figure>
 
 Start with one repeated household problem. Do not start with a shopping list.
 

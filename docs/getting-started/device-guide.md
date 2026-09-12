@@ -2,10 +2,15 @@
 layout: guide
 title: Choose smart-home devices and gear
 description: Choose compatible smart-home devices by job, then compare the sensors, switches, plugs, and climate gear I have personally used.
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
+image: /assets/img/social/guides/choose-devices.png
 ---
 
 # Choose smart-home devices and gear
+
+<figure class="content-hero">
+  <img src="/assets/img/social/guides/choose-devices.svg" alt="" width="1200" height="630">
+</figure>
 
 Do not start with a brand or a box of discounted devices. Start with one household job, write the rule in plain English, and identify the capabilities that rule needs.
 

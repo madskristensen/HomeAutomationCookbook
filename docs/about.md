@@ -2,10 +2,15 @@
 layout: guide
 title: About Home Automation Cookbook
 description: Practical, family-first smart home recipes that keep physical controls working and automations local when possible.
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/guides/about.png
 ---
 
 # About Home Automation Cookbook
+
+<figure class="content-hero">
+  <img src="/assets/img/social/guides/about.svg" alt="" width="1200" height="630">
+</figure>
 
 Home Automation Cookbook is written by Mads Kristensen for people who want a home that works without a briefing for every guest.
 

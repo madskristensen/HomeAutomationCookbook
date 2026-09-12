@@ -3,9 +3,15 @@ layout: guide
 title: How to place motion sensors for reliable automations
 description: A practical guide to placing and testing PIR and presence sensors so automations respond at the right moment without false triggers.
 date: 2026-09-09
+last_modified_at: 2026-09-12
+image: /assets/img/social/guides/motion-sensor-placement.png
 ---
 
 # How to place motion sensors for reliable automations
+
+<figure class="content-hero">
+  <img src="/assets/img/social/guides/motion-sensor-placement.svg" alt="" width="1200" height="630">
+</figure>
 
 A good motion automation starts with where the sensor can see the useful event. The best device in the wrong place will still turn lights on too late, miss someone who is sitting still, or react to movement in the wrong room.
 

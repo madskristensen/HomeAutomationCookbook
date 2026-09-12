@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc"><title id="title">Home automation resources</title><desc id="desc">A short list of official documentation, support communities, and research checks for verifying devices and platform behavior.</desc><style>
+  @media (prefers-color-scheme: dark) {
+    rect[fill="#f8f9fa"] { fill: #14191c; }
+    rect[fill="#ffffff"], path[fill="#ffffff"] { fill: #1d2428; }
+    [fill="#eef2f3"] { fill: #293238; }
+    text[fill="#2c3e50"], circle[fill="#2c3e50"] { fill: #e7edef; }
+    text[fill="#5d6d75"], text[fill="#6b777c"] { fill: #b7c2c6; }
+    [stroke="#2c3e50"] { stroke: #d7e0e3; }
+    [stroke="#9db1b6"] { stroke: #72858c; }
+    [stroke="#e0e0e0"] { stroke: #3d494f; }
+  }
+</style><rect width="1200" height="630" fill="#f8f9fa" /><rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2" /><rect x="108" y="88" width="154" height="43" rx="21" fill="#eef2f3" /><text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">RESOURCES</text><text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Home automation resources</text><text x="108" y="260" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">A short list of official documentation,</text><text x="108" y="291" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">support communities, and research checks for</text><text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">verifying devices and platform behavior.</text><g transform="translate(755 118) scale(.85)" fill="none" stroke="#2c3e50" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><rect x="35" y="65" width="270" height="340" rx="20" fill="#eef2f3" /><path d="M95 65V30h270v340h-60M95 125h150M95 188h150M95 251h110" stroke="#6f8f96" /><circle cx="385" cy="110" r="45" fill="#ffffff" /><path d="M385 88v44M363 110h44" stroke="#9db1b6" /><circle cx="385" cy="260" r="45" fill="#ffffff" /><path d="M360 260h50" stroke="#9db1b6" /></g><text x="108" y="550" fill="#6b777c" font-family="Segoe UI, Arial, sans-serif" font-size="20">HOME AUTOMATION COOKBOOK</text> </svg>

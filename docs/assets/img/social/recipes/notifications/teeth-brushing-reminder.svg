@@ -1,7 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Set up a teeth brushing reminder for kids</title>
-  <desc id="desc">A platform-neutral recipe that uses a power-monitoring smart plug on an electric toothbrush charger to confirm brushing happened, with a reminder if it did not.</desc>
-  <style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc"><title id="title">Set up a teeth brushing reminder for kids</title><desc id="desc">A platform-neutral recipe that uses a power-monitoring smart plug on an electric toothbrush charger to confirm brushing happened, with a reminder if it did not.</desc><style>
   @media (prefers-color-scheme: dark) {
     rect[fill="#f8f9fa"] { fill: #14191c; }
     rect[fill="#ffffff"], path[fill="#ffffff"] { fill: #1d2428; }
@@ -12,32 +9,4 @@
     [stroke="#9db1b6"] { stroke: #72858c; }
     [stroke="#e0e0e0"] { stroke: #3d494f; }
   }
-</style>
-
-  <rect width="1200" height="630" fill="#f8f9fa"/>
-  <rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
-  <rect x="108" y="88" width="286" height="43" rx="21" fill="#eef2f3"/>
-  <text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">ALERTS AND REMINDERS</text>
-  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Set up a teeth brushing</text>
-  <text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">reminder for kids</text>
-  <text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">A platform-neutral recipe that uses a</text>
-  <text x="108" y="353" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">power-monitoring smart plug on an electric</text>
-  <text x="108" y="384" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">toothbrush charger to confirm brushing...</text>
-  <g transform="translate(108 469)" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600">
-    <rect width="105" height="39" rx="19" fill="#eef2f3"/><text x="23" y="25" fill="#2c3e50">TRIGGER</text>
-    <path d="M117 20h39" stroke="#9db1b6" stroke-width="4"/>
-    <rect x="168" width="96" height="39" rx="19" fill="#eef2f3"/><text x="190" y="25" fill="#2c3e50">CHECK</text>
-    <path d="M276 20h39" stroke="#9db1b6" stroke-width="4"/>
-    <rect x="327" width="102" height="39" rx="19" fill="#8b8291"/><text x="346" y="25" fill="#ffffff">ACTION</text>
-  </g>
-  <g transform="translate(700 118) scale(.9)" fill="none" stroke="#2c3e50" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M85 305h250c-35-35-48-77-48-145 0-62-37-108-77-122V15h-1v23c-40 14-77 60-77 122 0 68-12 110-47 145z" fill="#eef2f3"/>
-  <path d="M165 346c8 34 28 53 44 53s36-19 44-53"/>
-  <circle cx="209" cy="174" r="24" fill="#8b8291" stroke="none"/>
-  <path d="M367 91c50 43 50 123 0 166M408 51c75 66 75 190 0 256" stroke="#8b8291"/>
-  <rect x="8" y="116" width="72" height="116" rx="13" fill="#ffffff"/>
-  <circle cx="44" cy="204" r="7" fill="#8b8291" stroke="none"/>
-</g>
-
-  <text x="108" y="550" fill="#6b777c" font-family="Segoe UI, Arial, sans-serif" font-size="20">HOME AUTOMATION COOKBOOK</text>
-</svg>
+</style><rect width="1200" height="630" fill="#f8f9fa" /><rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2" /><rect x="108" y="88" width="286" height="43" rx="21" fill="#eef2f3" /><text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">ALERTS AND REMINDERS</text><text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Set up a teeth brushing</text><text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">reminder for kids</text><text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">A platform-neutral recipe that uses a</text><text x="108" y="353" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">power-monitoring smart plug on an electric</text><text x="108" y="384" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">toothbrush charger to confirm brushing...</text><g transform="translate(108 469)" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600"><rect width="105" height="39" rx="19" fill="#eef2f3" /><text x="23" y="25" fill="#2c3e50">TRIGGER</text><path d="M117 20h39" stroke="#9db1b6" stroke-width="4" /><rect x="168" width="96" height="39" rx="19" fill="#eef2f3" /><text x="190" y="25" fill="#2c3e50">CHECK</text><path d="M276 20h39" stroke="#9db1b6" stroke-width="4" /><rect x="327" width="102" height="39" rx="19" fill="#8b8291" /><text x="346" y="25" fill="#ffffff">ACTION</text></g><g transform="translate(700 118) scale(.9)" fill="none" stroke="#2c3e50" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M85 305h250c-35-35-48-77-48-145 0-62-37-108-77-122V15h-1v23c-40 14-77 60-77 122 0 68-12 110-47 145z" fill="#eef2f3" /><path d="M165 346c8 34 28 53 44 53s36-19 44-53" /><circle cx="209" cy="174" r="24" fill="#8b8291" stroke="none" /><path d="M367 91c50 43 50 123 0 166M408 51c75 66 75 190 0 256" stroke="#8b8291" /><rect x="8" y="116" width="72" height="116" rx="13" fill="#ffffff" /><circle cx="44" cy="204" r="7" fill="#8b8291" stroke="none" /></g><text x="108" y="550" fill="#6b777c" font-family="Segoe UI, Arial, sans-serif" font-size="20">HOME AUTOMATION COOKBOOK</text> </svg>

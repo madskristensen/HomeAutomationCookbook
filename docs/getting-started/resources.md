@@ -2,10 +2,15 @@
 layout: guide
 title: Home automation resources
 description: A short list of official documentation, support communities, and research checks for verifying devices and platform behavior.
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
+image: /assets/img/social/guides/automation-resources.png
 ---
 
 # Home automation resources
+
+<figure class="content-hero">
+  <img src="/assets/img/social/guides/automation-resources.svg" alt="" width="1200" height="630">
+</figure>
 
 Use official documentation for current requirements, then use community discussions to find edge cases. A forum post or video can reveal a problem, but it does not replace the current manual or compatibility list for the exact model.
 

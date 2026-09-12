@@ -2,11 +2,16 @@
 layout: default
 title: Home automation articles
 description: Explanations and comparisons that support the recipe library, listed with the newest article first.
+image: /assets/img/social/guides/articles.png
 permalink: /articles/index.html
 canonical_url: https://www.homeautomationcookbook.com/articles/index.html
 ---
 
 # Home automation articles
+
+<figure class="content-hero">
+  <img src="/assets/img/social/guides/articles.svg" alt="" width="1200" height="630">
+</figure>
 
 Articles explain a technology, tradeoff, or design decision that applies across several recipes. Use them to understand your options and make confident choices for your own rooms and routines. Unlike the recipe library, this section is chronological.
 
