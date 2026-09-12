@@ -1,9 +1,9 @@
 ---
 layout: automation
-title: Run a bedtime routine without surprising the household
-description: A platform-neutral bedtime routine that separates a gentle wind-down from an intentional good-night action and preserves occupied rooms, safety alerts, and manual control.
+title: Build a family-safe bedtime routine
+description: Separate a gentle wind-down from an intentional good-night action while preserving occupied rooms, safety alerts, and manual control.
 keywords: bedtime routine automation, good night routine, night mode automation, family bedtime automation, smart home bedtime
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: Should bedtime run automatically at a fixed time?

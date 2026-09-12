@@ -1,9 +1,9 @@
 ---
 layout: automation
-title: Turn lights on when a door opens (without losing the wall switch)
+title: Turn lights on automatically when a door opens
 description: A local-first contact-sensor lighting recipe for closets, pantries, and utility rooms that keeps the familiar wall switch usable.
 keywords: door sensor automation, contact sensor lights, automatic closet lights, door activated lighting, smart door sensor
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: Should the light turn off as soon as the door closes?
@@ -30,6 +30,8 @@ The pantry or utility-room light should be on before anyone has to reach for the
 
 <div class="automation-example">IF the closet door opens AND the closet is dark
 THEN turn on the closet light</div>
+
+![The door opens, the lighting condition is checked, and the closet light turns on while manual control remains available.](/assets/img/diagrams/door-lighting-flow.svg){: .automation-diagram }
 
 - **Trigger:** The contact sensor changes from closed to open.
 - **Conditions:** The space is dark enough, or it is within the hours when automatic light makes sense.
@@ -93,6 +95,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
     </ul>
   </div>
 </div>
+
+## Platform notes
+
+The reusable requirement is that the platform receives a reliable open or closed state and can command the light without disabling its physical control.
+
+### Amazon Alexa
+
+Use an Alexa routine only when the contact sensor appears as an open-state trigger under **When**. Amazon defines open and closed reporting through its [contact-sensor interface](https://developer.amazon.com/docs/alexaplus/device-apis/alexa-contactsensor.html), but an individual integration still decides whether that state is available to routines.
+
+### SmartThings
+
+Create an automatic SmartThings Routine with contact open as the IF condition and light on as the THEN action. Use a complementary close or delayed-off routine only after the open action is dependable. The available choices come from the device's exposed [SmartThings capabilities](https://developer.smartthings.com/docs/devices/capabilities).
+
+### Hubitat
+
+Use Hubitat [Room Lighting](https://docs2.hubitat.com/en/apps/room-lighting) for contact activation and override-aware off behavior. Basic Rules is sufficient when the job is simply open, turn on; closed for a delay, turn off.
+
+### Home Assistant
+
+I have not personally run Home Assistant. Treat it as a technical-fit option and adapt the same contact-state logic only after checking the current integration for the exact sensor and switch.
 
 ## Advanced features
 

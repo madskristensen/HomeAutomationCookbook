@@ -2,6 +2,8 @@
 layout: default
 title: Climate automations
 description: Practical recipes for HVAC, humidity, air quality, blinds, and cold-room monitoring with safe limits and manual control.
+permalink: /automation/climate/index.html
+canonical_url: https://www.homeautomationcookbook.com/automation/climate/index.html
 ---
 
 # Climate automations

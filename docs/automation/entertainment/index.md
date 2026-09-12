@@ -2,6 +2,8 @@
 layout: default
 title: Entertainment automations
 description: Remove the repeated setup around music, TV, and lighting while keeping familiar remotes, switches, and apps available.
+permalink: /automation/entertainment/index.html
+canonical_url: https://www.homeautomationcookbook.com/automation/entertainment/index.html
 keywords: entertainment automation, smart music, TV automation, media control, smart speakers, movie mode, home theater automation
 ---
 

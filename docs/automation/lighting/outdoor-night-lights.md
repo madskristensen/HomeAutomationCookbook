@@ -1,9 +1,9 @@
 ---
 layout: automation
-title: Turn outdoor lights on at dusk (and off when nobody needs them)
+title: Turn outdoor lights on automatically at dusk
 description: A platform-neutral outdoor-lighting recipe that follows sunset, avoids unnecessary overnight runtime, and keeps physical control available.
 keywords: outdoor lights automation, sunset lights, dusk lighting, exterior lighting, holiday lights, smart outdoor lights
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: Should outdoor lights use a sunset schedule or a light sensor?

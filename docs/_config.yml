@@ -19,6 +19,7 @@ defaults:
       image: https://www.homeautomationcookbook.com/assets/img/hero.jpg
 
 twitter:
+  username: madskristensen
   card: summary_large_image
 social:
   name: Home Automation Cookbook
@@ -28,7 +29,7 @@ social:
 # Author information (for schema.org)
 author:
   name: Mads Kristensen
-  twitter: mkristensen
+  twitter: madskristensen
 
 # Build settings
 markdown: kramdown

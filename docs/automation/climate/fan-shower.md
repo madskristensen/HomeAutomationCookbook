@@ -3,7 +3,7 @@ layout: automation
 title: Turn on the bathroom fan when a shower starts
 description: Run the bathroom fan when a shower starts and turn it off once the steam clears, with nothing to remember and no fan left running all morning.
 keywords: bathroom fan automation, shower fan control, humidity sensor automation, automatic fan, bathroom ventilation
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: Which trigger is more reliable, the light switch or humidity?
@@ -37,6 +37,8 @@ THEN turn on the bathroom fan
 IF the shower light has been off for several minutes
 AND humidity has returned to baseline for the same period
 THEN turn off the bathroom fan</div>
+
+![Humidity rises or the shower light turns on, the fan runs, and it stops after humidity returns to baseline.](/assets/img/diagrams/shower-fan-flow.svg){: .automation-diagram }
 
 - **Trigger:** The shower light turns on, or bathroom humidity rises above its calibrated baseline.
 - **Conditions:** The time falls within the household's normal waking hours, unless overnight ventilation is specifically wanted.
@@ -76,6 +78,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 4. Require the trigger to clear for several minutes before turning the fan off, so a brief pause in the shower does not shut it off early.
 5. Restrict the automation to normal waking hours unless the household wants it running overnight.
 6. Test with an actual shower, not just running the sink, before trusting the thresholds.
+
+## Platform notes
+
+The important platform capability is not a generic "shower detected" event. It is a current humidity or light state, a fan command, and separate on and off thresholds.
+
+### Amazon Alexa
+
+Alexa can control compatible fans, but humidity as a routine trigger depends on the device integration and was not verifiable as a universal option. Use this recipe in Alexa only if the exact humidity sensor appears under **When** and the fan control appears under **Alexa Will**.
+
+### SmartThings
+
+When the sensor exposes humidity, use a greater-than threshold to start the fan and a lower threshold to stop it after a confirmation delay. Device options depend on the exposed [SmartThings capabilities](https://developer.smartthings.com/docs/devices/capabilities); advanced [Rules](https://developer.smartthings.com/docs/automations/rules) can express the separate thresholds and waits more explicitly.
+
+### Hubitat
+
+Hubitat [Basic Rules](https://docs2.hubitat.com/en/apps/basic-rules) supports humidity thresholds and delays. Use separate on and off thresholds to prevent rapid cycling. A rapid-rise or multi-sensor shower inference belongs in Rule Machine rather than being treated as a built-in shower detector.
+
+### Home Assistant
+
+I have not personally run Home Assistant. Treat it as a technical-fit option and verify the current humidity sensor and fan integrations before adapting the thresholds.
 
 ## Advanced features
 

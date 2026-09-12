@@ -2,6 +2,8 @@
 layout: default
 title: Daily routine automations
 description: Take repeated steps out of mornings, bedtimes, departures, and arrivals while keeping each transition visible and easy to override.
+permalink: /automation/daily-routines/index.html
+canonical_url: https://www.homeautomationcookbook.com/automation/daily-routines/index.html
 keywords: daily routine automation, morning routine, bedtime automation, away mode, home arrival, presence automation, smart home routines
 ---
 

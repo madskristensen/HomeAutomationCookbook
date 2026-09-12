@@ -1,9 +1,9 @@
 ---
 layout: automation
-title: Turn lights off after motion stops (without leaving people in the dark)
+title: Turn lights off automatically after motion stops
 description: A conservative motion-lighting off recipe that respects still occupants, manual wall-switch choices, and local-first control.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: How long should motion lights stay on?

@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Lighting Automations - Smart Home Lighting Guide
+title: Smart lighting automation ideas and recipes
 description: Make lights respond to movement, doors, and time of day while keeping every familiar wall switch useful.
+permalink: /automation/lighting/index.html
+canonical_url: https://www.homeautomationcookbook.com/automation/lighting/index.html
 keywords: smart lighting automation, motion sensor lights, automatic lighting, door sensor lights, outdoor lights, night light automation
 ---
 

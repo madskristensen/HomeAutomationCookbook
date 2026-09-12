@@ -1,9 +1,9 @@
 ---
 layout: automation
-title: Set away mode when everyone leaves (without locking someone inside)
+title: Set away mode when everyone leaves
 description: A conservative, platform-neutral away-mode recipe that verifies the home is empty before changing lights, climate, or security behavior.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: How long should away mode wait after everyone leaves?
@@ -90,6 +90,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 5. After a week of correct notifications, allow reversible actions such as turning off nonessential lights.
 6. Add thermostat changes only with safe heating and cooling limits. Use the [safe thermostat auto-away guide](/automation/climate/safe-thermostat-away.html) to account for pets, pipes, unavailable sensors, and manual holds.
 7. Treat locks, garage doors, alarms, cooking appliances, and space heaters as separate safety automations with their own tests.
+
+## Platform notes
+
+Presence is a reason to delay Away, not proof that the house is empty. Preserve a visible Guest or Staying Home override whichever platform runs the routine.
+
+### Amazon Alexa
+
+I could not verify current geofence and multi-person presence behavior as universal Alexa routine capabilities. Use Alexa for this pattern only after confirming the exact arrival and departure triggers available in the household's app and region; never let an unverified presence rule control access or safety equipment.
+
+### SmartThings
+
+SmartThings calls phone presence **Get your location from this phone**. Use the correct All or Any behavior for multiple residents, and keep a [Manually run Routine](https://support.smartthings.com/hc/en-us/articles/360051931952-Routines-in-SmartThings) as the Guest or Staying Home override.
+
+### Hubitat
+
+Hubitat [Mode Manager](https://docs2.hubitat.com/en/apps/mode-manager) can change mode from presence sensors. A conservative pattern sets Away only after every tracked resident has departed and exits Away when any resident returns. Add delay and recent indoor activity as reasons not to leave Home mode.
+
+### Home Assistant
+
+Home Assistant may be a technical fit for combined presence signals, but I have not personally run it. Verify every tracker and retain the same delay, override, and safe-default requirements.
 
 ## Safe first actions
 

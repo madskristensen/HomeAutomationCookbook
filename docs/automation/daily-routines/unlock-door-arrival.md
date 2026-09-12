@@ -1,9 +1,9 @@
 ---
 layout: automation
-title: Prepare the house when someone arrives (without automatic unlocking)
-description: Restore Home mode, light a safe path, and return the house to its normal comfort settings without treating phone location as proof that the right person is at the door.
+title: Prepare the house when someone arrives
+description: Restore Home mode, light a safe path, and resume normal comfort without treating phone location as proof of identity.
 keywords: arrival home automation, welcome home automation, presence detection, entry lighting, home mode automation
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: Should arrival automation unlock the front door?
@@ -82,6 +82,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 4. Restore climate only within the thermostat's independent safe limits.
 5. Run whole-house actions only for the first arrival. Later arrivals should not restart music, change temperatures, or disturb people already home.
 6. Keep door access manual unless I have verified a separate lock feature with its own safeguards and audit trail.
+
+## Platform notes
+
+Arrival should restore ordinary household behavior, not silently grant access. Phone presence can start reversible preparation, while locks, alarms, and garage doors remain separate deliberate actions.
+
+### Amazon Alexa
+
+I could not verify current geofence behavior as a universal Alexa routine capability. If the household's Alexa app offers a suitable arrival trigger, begin with a notification or entry light and confirm false arrivals before adding other actions.
+
+### SmartThings
+
+SmartThings phone presence is labeled **Get your location from this phone**. Use it to restore Home state and reversible actions, and keep a [Manually run Routine](https://support.smartthings.com/hc/en-us/articles/360051931952-Routines-in-SmartThings) available when location is late or wrong.
+
+### Hubitat
+
+Hubitat [Mode Manager](https://docs2.hubitat.com/en/apps/mode-manager) can leave Away mode when a tracked presence sensor arrives. Keep first-arrival actions separate from later arrivals so normal household activity is not restarted for every person.
+
+### Home Assistant
+
+I have not personally run Home Assistant. Treat it as a technical-fit option and verify the current presence integration before adapting this arrival pattern.
 
 ## Safe first actions
 

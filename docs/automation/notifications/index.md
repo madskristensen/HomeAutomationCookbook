@@ -2,6 +2,8 @@
 layout: default
 title: Notifications and alerts
 description: Practical recipes for persistent status, maintenance reminders, doorbell alerts, household routines, and activity notifications.
+permalink: /automation/notifications/index.html
+canonical_url: https://www.homeautomationcookbook.com/automation/notifications/index.html
 ---
 
 # Notifications and alerts

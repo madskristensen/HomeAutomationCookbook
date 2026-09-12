@@ -3,7 +3,7 @@ layout: automation
 title: Get notified when the garage door is left open
 description: A platform-neutral recipe that alerts when a garage door has been left open too long. Alerting only; closing stays manual or with equipment built for it.
 keywords: garage door notification, garage door left open, garage door sensor, garage door automation, garage door alert
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: How long should the garage door be open before I get a notification?
@@ -36,6 +36,8 @@ THEN send a high-priority notification: "Garage door still open at bedtime"
 
 DO NOT close the door automatically from this recipe</div>
 
+![The garage door reports open, remains open through a delay, and triggers an alert without closing automatically.](/assets/img/diagrams/garage-left-open-flow.svg){: .automation-diagram }
+
 - **Trigger:** The garage door sensor reports "open" and stays in that state for a set duration, such as 10 minutes.
 - **Conditions:** The door is still open at the time the duration elapses.
 - **Action:** Send a notification stating how long the door has been open.
@@ -66,6 +68,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 3. Add a separate, shorter-delay check tied to a fixed nighttime cutoff, such as 10:00 PM, so an open door at bedtime gets flagged even if it was opened well before the standard delay.
 4. Test both automations by leaving the door open deliberately and confirming the timing and notification content are correct.
 5. If closing the door automatically is wanted, do not build it into this recipe; use [close a garage safely after an open-door alert](/automation/security/garage-auto-close.html) instead, which covers the required entrapment protection and warnings.
+
+## Platform notes
+
+Keep this as an alert-only rule on every platform. An open-state notification does not prove the doorway is clear or make unattended closing safe.
+
+### Amazon Alexa
+
+Some garage integrations report open and closed state to Alexa, but I could not verify a universal consumer-routine option for "remains open for 10 minutes." Confirm that the exact controller exposes both the state and required timing behavior before depending on Alexa for this alert.
+
+### SmartThings
+
+Use door open as the IF condition. For a dependable left-open alert, an advanced [SmartThings Rule](https://developer.smartthings.com/docs/automations/rules) can wait and then check that the door is still open instead of sending an unconditional delayed notification.
+
+### Hubitat
+
+Hubitat [Basic Rules](https://docs2.hubitat.com/en/apps/basic-rules) and the [Notifications app](https://docs2.hubitat.com/en/apps/notifications) support alerts after a condition remains true for a specified duration. Closing the door before the duration expires should cancel the pending alert.
+
+### Home Assistant
+
+I have not personally run Home Assistant. Adapt the same open-for-duration and recheck pattern only after verifying the exact garage-state integration.
 
 ## Advanced features
 

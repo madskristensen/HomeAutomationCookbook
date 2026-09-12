@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" role="img" aria-labelledby="title desc">
+  <title id="title">Bathroom fan automation flow</title>
+  <desc id="desc">Humidity rises or the shower light turns on, the fan runs, and it stops only after humidity returns to baseline.</desc>
+  <rect width="960" height="280" rx="16" fill="#fafafa"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#2c3e50">
+    <rect x="40" y="70" width="220" height="120" rx="12" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="2"/>
+    <text x="150" y="114" font-size="20" font-weight="600">Humidity rises</text>
+    <text x="150" y="145" font-size="16">or shower light turns on</text>
+    <rect x="370" y="70" width="220" height="120" rx="12" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="2"/>
+    <text x="480" y="120" font-size="22" font-weight="600">Fan turns on</text>
+    <text x="480" y="153" font-size="17">physical switch remains</text>
+    <rect x="700" y="70" width="220" height="120" rx="12" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="2"/>
+    <text x="810" y="114" font-size="20" font-weight="600">Humidity stays normal</text>
+    <text x="810" y="145" font-size="16">then fan turns off</text>
+  </g>
+  <g stroke="#2c3e50" stroke-width="4" fill="#2c3e50">
+    <line x1="275" y1="130" x2="345" y2="130"/><polygon points="345,130 329,120 329,140"/>
+    <line x1="605" y1="130" x2="675" y2="130"/><polygon points="675,130 659,120 659,140"/>
+  </g>
+</svg>

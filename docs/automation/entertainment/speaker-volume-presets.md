@@ -1,9 +1,9 @@
 ---
 layout: automation
-title: Set every speaker to the right volume with one command
+title: Set smart-speaker volume presets
 description: Choose a quiet, normal, or loud preset once instead of adjusting each speaker by hand whenever the household changes activities.
 keywords: speaker volume automation, audio presets, volume control scenes, smart speaker volume, consistent volume
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: Why use presets instead of just adjusting volume manually?

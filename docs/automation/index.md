@@ -2,6 +2,8 @@
 layout: default
 title: Automation recipes
 description: Browse platform-neutral home automation recipes with plain-English logic, physical controls, tested failure behavior, and clear acceptance checks.
+permalink: /automation/index.html
+canonical_url: https://www.homeautomationcookbook.com/automation/index.html
 recipe_directory: true
 ---
 

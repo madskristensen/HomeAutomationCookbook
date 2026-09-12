@@ -3,7 +3,7 @@ layout: automation
 title: Get notified when the washer finishes
 description: A platform-neutral laundry recipe that learns the washer's power pattern and sends one reliable completion alert without controlling appliance power.
 keywords: washer finished alert, laundry notification, washer power monitoring, washing machine automation, washer done notification
-last_modified_at: 2026-08-30
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: What wattage means that my washer is finished?
@@ -39,6 +39,8 @@ AND the low-power period is longer than any normal cycle pause
 THEN send one "Washer finished" notification
 AND mark laundry as waiting
 AND clear the running marker</div>
+
+![A real washer cycle is confirmed before sustained low activity produces one completion alert.](/assets/img/diagrams/washer-completion-flow.svg){: .automation-diagram }
 
 - **Trigger:** Measured power stays above the washer's calibrated running threshold long enough to prove a cycle started.
 - **Conditions:** Monitoring data is current and the washer was not already marked as running.
@@ -80,6 +82,26 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 6. Create separate running and waiting-laundry states.
 7. Test with silent logging before enabling notifications.
 8. Enable one completion alert, then add a quiet reminder only if it is useful.
+
+## Platform notes
+
+The platform must remember that a real cycle started before low power or stillness can mean finished. A single threshold rule is not enough.
+
+### Amazon Alexa
+
+Prefer a washer integration that exposes a manufacturer-provided cycle-complete state. I could not verify power or vibration as universal Alexa routine triggers, so do not assume an arbitrary monitor can build this recipe in Alexa.
+
+### SmartThings
+
+Use power or acceleration only when the device profile exposes that attribute. A simple Routine may cover a manufacturer-provided completion state; the two-stage running-then-idle inference is better suited to [SmartThings Rules](https://developer.smartthings.com/docs/automations/rules), where the state can be remembered, delayed, and checked again.
+
+### Hubitat
+
+Hubitat Basic Rules supports acceleration and vibration triggers. For power thresholds or a remembered running state, use [Rule Machine](https://docs2.hubitat.com/en/apps/rule-machine/rule-5-1) with a compatible driver that exposes current power. Keep the monitor observe-only and test several real cycles before enabling notifications.
+
+### Home Assistant
+
+Home Assistant may be a technical fit for stateful power analysis, but I have not personally run it. Verify the monitor integration, electrical suitability, and current automation behavior independently.
 
 ## Calibrate from evidence
 

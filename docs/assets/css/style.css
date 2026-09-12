@@ -556,6 +556,17 @@ th {
   margin: 0 0.5rem;
 }
 
+.breadcrumb .breadcrumb-current {
+  margin: 0;
+}
+
+.automation-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
 
 /* Card Components
    ========================================================================== */

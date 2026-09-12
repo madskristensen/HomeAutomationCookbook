@@ -1,0 +1,95 @@
+{% unless page.url == "/" %}
+{% assign path_parts = page.url | split: "/" %}
+{% assign section_key = path_parts[1] %}
+{% assign category_key = path_parts[2] %}
+{% assign page_file = path_parts[3] %}
+{% assign ancestor_name = nil %}
+{% assign ancestor_url = nil %}
+{% assign category_name = nil %}
+{% assign category_url = nil %}
+
+{% case section_key %}
+  {% when "automation" %}
+    {% unless category_key == "index.html" %}
+      {% assign ancestor_name = "Automation recipes" %}
+      {% assign ancestor_url = "/automation/index.html" %}
+    {% endunless %}
+    {% if page_file and page_file != "index.html" %}
+      {% case category_key %}
+        {% when "appliances" %}{% assign category_name = "Appliance automations" %}
+        {% when "climate" %}{% assign category_name = "Climate automations" %}
+        {% when "daily-routines" %}{% assign category_name = "Daily routine automations" %}
+        {% when "entertainment" %}{% assign category_name = "Entertainment automations" %}
+        {% when "lighting" %}{% assign category_name = "Lighting automations" %}
+        {% when "notifications" %}{% assign category_name = "Notifications and alerts" %}
+        {% when "security" %}{% assign category_name = "Safety and security automations" %}
+      {% endcase %}
+      {% assign category_url = "/automation/" | append: category_key | append: "/index.html" %}
+    {% endif %}
+  {% when "getting-started" %}
+    {% unless category_key == "index.html" %}
+      {% assign ancestor_name = "Getting started" %}
+      {% assign ancestor_url = "/getting-started/index.html" %}
+    {% endunless %}
+  {% when "articles" %}
+    {% unless category_key == "index.html" %}
+      {% assign ancestor_name = "Articles" %}
+      {% assign ancestor_url = "/articles/index.html" %}
+    {% endunless %}
+{% endcase %}
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Home</a>
+  {% if ancestor_name %}
+    <span aria-hidden="true">/</span>
+    <a href="{{ ancestor_url | relative_url }}">{{ ancestor_name }}</a>
+  {% endif %}
+  {% if category_name %}
+    <span aria-hidden="true">/</span>
+    <a href="{{ category_url | relative_url }}">{{ category_name }}</a>
+  {% endif %}
+  <span aria-hidden="true">/</span>
+  <span class="breadcrumb-current" aria-current="page">{{ page.title }}</span>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ "/" | absolute_url | jsonify }}
+    },
+    {% assign breadcrumb_position = 1 %}
+    {% if ancestor_name %}
+      {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
+    {
+      "@type": "ListItem",
+      "position": {{ breadcrumb_position }},
+      "name": {{ ancestor_name | jsonify }},
+      "item": {{ ancestor_url | absolute_url | jsonify }}
+    },
+    {% endif %}
+    {% if category_name %}
+      {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
+    {
+      "@type": "ListItem",
+      "position": {{ breadcrumb_position }},
+      "name": {{ category_name | jsonify }},
+      "item": {{ category_url | absolute_url | jsonify }}
+    },
+    {% endif %}
+    {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
+    {
+      "@type": "ListItem",
+      "position": {{ breadcrumb_position }},
+      "name": {{ page.title | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+  ]
+}
+</script>
+{% endunless %}

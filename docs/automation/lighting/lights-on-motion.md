@@ -1,9 +1,9 @@
 ---
 layout: automation
-title: Turn lights on when you walk in (and keep the wall switch)
+title: Turn lights on automatically with a motion sensor
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
-last_modified_at: 2026-09-09
+last_modified_at: 2026-09-12
 compact: true
 faqs:
   - question: Why do motion lights turn on too slowly?
@@ -30,6 +30,8 @@ Nobody should have to fumble for a switch with a basket of laundry or explain th
 
 <div class="automation-example">IF entry motion is detected AND the room is dark
 THEN turn on the light</div>
+
+![Motion is detected, darkness is checked, and the light turns on while the wall switch remains available.](/assets/img/diagrams/motion-lighting-flow.svg){: .automation-diagram }
 
 
 
@@ -102,6 +104,26 @@ Start with only the trigger and light action. Once that is reliable, add the day
 - **Deep night:** Start at 10 to 20 percent and raise it only enough for safe navigation.
 
 💡 For general guidance, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html).
+
+## Platform notes
+
+I have used Alexa, SmartThings, and Hubitat, but the exact sensor and light still have to expose the required trigger and command to that platform.
+
+### Amazon Alexa
+
+Build an Alexa motion-light routine only when the sensor appears as a motion trigger under **When** and the light appears as an action under **Alexa Will**. That path normally depends on the device integrations reporting state changes through Alexa's cloud, so keep the wall switch available and test internet loss. Amazon documents the underlying [motion-sensor state model](https://developer.amazon.com/docs/alexaplus/device-apis/alexa-motionsensor.html), but available routine options still vary by device and region.
+
+### SmartThings
+
+Use an automatic SmartThings Routine with motion as the IF condition and the light as the THEN action. Add time, illuminance, mode, or switch-state conditions only when the devices expose those capabilities. SmartThings explains the [IF and THEN routine model](https://support.smartthings.com/hc/en-us/articles/360051931952-Routines-in-SmartThings); local execution still depends on every device feature and service in the rule supporting it.
+
+### Hubitat
+
+Hubitat's [Room Lighting app](https://docs2.hubitat.com/en/apps/room-lighting) is the natural starting point for motion activation, delayed turn-off, conditions, and overrides. A Basic Rule also works for a simple motion-on action. Keep the turn-off behavior separate until entry detection is reliable.
+
+### Home Assistant
+
+Home Assistant is a technical fit for this pattern, but I have not personally run it. Use the platform-neutral trigger, darkness condition, action, and override described here, then verify the current implementation in official Home Assistant documentation rather than treating this as a tested walkthrough.
 
 ## Advanced features
 

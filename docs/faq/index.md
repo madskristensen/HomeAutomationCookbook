@@ -2,6 +2,8 @@
 layout: guide
 title: Frequently asked questions
 description: Direct answers about choosing a platform, buying compatible devices, building reliable automations, privacy, and troubleshooting.
+permalink: /faq/index.html
+canonical_url: https://www.homeautomationcookbook.com/faq/index.html
 last_modified_at: 2026-08-30
 ---
 

@@ -2,6 +2,8 @@
 layout: default
 title: Home automation articles
 description: Explanations and comparisons that support the recipe library, listed with the newest article first.
+permalink: /articles/index.html
+canonical_url: https://www.homeautomationcookbook.com/articles/index.html
 ---
 
 # Home automation articles

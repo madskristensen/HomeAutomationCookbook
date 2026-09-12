@@ -2,6 +2,8 @@
 layout: default
 title: Appliance automations
 description: Practical recipes for appliance completion alerts, deliberate coffee preparation, refrigerator doors, and robot vacuums.
+permalink: /automation/appliances/index.html
+canonical_url: https://www.homeautomationcookbook.com/automation/appliances/index.html
 ---
 
 # Appliance automations
