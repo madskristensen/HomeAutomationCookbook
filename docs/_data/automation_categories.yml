@@ -1,0 +1,409 @@
+appliances:
+  heading: Appliance automations
+  intro: >-
+    Stop walking back to the laundry room or kitchen just to check whether something finished.
+    These recipes observe, remind, and coordinate without putting unverified controls in charge
+    of high-current appliances.
+  recipes:
+    - title: Washer finished alert
+      url: /automation/appliances/washer-done-notification.html
+      description: Learn the washer's actual power pattern and send one alert when a real cycle finishes.
+      best_for: Laundry cycles with measurable power or vibration
+    - title: Dryer finished alert
+      url: /automation/appliances/dryer-done-notification.html
+      description: Use calibrated vibration timing without controlling dryer power.
+      best_for: Dryers that provide a reliable exterior vibration signal
+    - title: Dishwasher finished alert
+      url: /automation/appliances/dishwasher-done-notification.html
+      description: Detect sustained power or vibration and notify once after the complete cycle.
+      best_for: Dishwashers with a repeatable cycle signature
+    - title: Fridge or freezer door alert
+      url: /automation/appliances/fridge-door-alert.html
+      description: Use a contact sensor and a delay to catch a door that was left open.
+      best_for: Refrigerator and freezer doors
+    - title: Prepare morning coffee deliberately
+      url: /automation/appliances/coffee-maker-morning.html
+      description: Use an approved delayed-brew feature only after someone confirms the machine is ready.
+      best_for: Coffee makers with a manufacturer-supported timer
+    - title: Start the robot vacuum after everyone leaves
+      url: /automation/appliances/robot-vacuum-auto-start.html
+      description: Wait for a tested empty-home signal and a daytime window before starting.
+      best_for: Reversible cleaning after a confident departure
+    - title: Keep the vacuum running only while the house is empty
+      url: /automation/appliances/vacuum-when-empty.html
+      description: Add a return-home stop condition so the vacuum docks when someone arrives.
+      best_for: Homes where occupancy can change during cleaning
+  start_here_intro: Start with an alert before allowing an automation to control or start anything.
+  start_here:
+    - title: Washer finished alert
+      url: /automation/appliances/washer-done-notification.html
+      reason: it teaches observation, calibration, and one-time notification
+    - title: Fridge or freezer door alert
+      url: /automation/appliances/fridge-door-alert.html
+      reason: the contact state and delayed alert are easy to verify
+    - title: Robot vacuum after everyone leaves
+      url: /automation/appliances/robot-vacuum-auto-start.html
+      reason: it demonstrates a reversible empty-home action
+  controls:
+    - Keep every appliance usable when the smart-home system is unavailable.
+    - Require a deliberate ready step before unattended preparation.
+    - Check monitoring equipment against the appliance nameplate and manual.
+    - Never treat a weak or missing signal as proof that a cycle finished.
+  verify: >-
+    Observe several complete cycles before trusting a threshold. Test interrupted cycles, standby
+    power, sensor loss, and a hub restart. For robot vacuums, include guests, pets, closed doors,
+    cords, and an unexpected early return.
+  next_label: safety and security
+  next_url: /automation/security/index.html
+
+climate:
+  heading: Climate automations
+  intro: >-
+    Stay comfortable with fewer repeated adjustments while keeping the thermostat, fan switch,
+    and blind controls familiar. These recipes make modest, visible changes and treat missing
+    environmental data as unknown.
+  recipes:
+    - title: Use safe thermostat auto-away limits
+      url: /automation/climate/safe-thermostat-away.html
+      description: Apply a modest setback while protecting pets, plumbing, manual holds, and uncertain presence.
+      best_for: Establishing safe boundaries before automating Away mode
+      link_text: Open guide
+    - title: Pause HVAC when a window stays open
+      url: /automation/climate/thermostat-windows-open.html
+      description: Pause after a delay, then resume only when every monitored opening is closed.
+      best_for: Heating or cooling with monitored windows and doors
+    - title: Turn on the bathroom fan for a shower
+      url: /automation/climate/fan-shower.html
+      description: Start from a measured humidity rise or bathroom light, then stop after humidity settles.
+      best_for: Bathrooms where people forget the exhaust fan
+    - title: Open and close blinds with the sun
+      url: /automation/climate/blinds-sunset-sunrise.html
+      description: Use sunrise and sunset with a fixed privacy fallback and working physical controls.
+      best_for: Predictable daylight and privacy routines
+    - title: Run an air purifier when air quality drops
+      url: /automation/climate/air-quality-purifier.html
+      description: Respond to a sustained reading without cycling on every brief change.
+      best_for: Rooms with a representative air-quality sensor
+    - title: Monitor a cold room safely
+      url: /automation/climate/room-heater-maintain-temp.html
+      description: Alert when a room leaves its safe range without automating a portable heater.
+      best_for: Basements, utility rooms, and plumbing risk
+    - title: Suggest when to open or close windows
+      url: /automation/climate/window-notifications.html
+      description: Compare indoor and outdoor conditions, then notify instead of moving windows automatically.
+      best_for: Natural ventilation decisions
+  start_here_intro: Define safe boundaries first, then automate one reversible comfort adjustment.
+  start_here:
+    - title: Safe thermostat auto-away
+      url: /automation/climate/safe-thermostat-away.html
+      reason: it establishes limits that protect the household and building
+    - title: Bathroom fan after a shower
+      url: /automation/climate/fan-shower.html
+      reason: it removes a repeated task without changing central HVAC
+    - title: Blinds with sunrise and sunset
+      url: /automation/climate/blinds-sunset-sunrise.html
+      reason: the schedule is predictable and manually reversible
+  controls:
+    - Keep thermostat, fan, and blind controls usable by hand.
+    - Use limits that protect people, pets, plumbing, and the building.
+    - Use only equipment approved for the load and type of control.
+    - Make automatic changes visible and easy to reverse.
+  verify: >-
+    Test sensor loss, hub restart, manual changes, and the edge of every temperature or humidity
+    range. An unavailable sensor must produce a visible unknown state rather than a successful reading.
+  next_label: entertainment
+  next_url: /automation/entertainment/index.html
+
+daily-routines:
+  heading: Daily routine automations
+  intro: >-
+    Take repeatable steps out of leaving, arriving, waking, and winding down while keeping every
+    household transition visible. These recipes support different schedules, guests, and manual
+    choices instead of forcing everyone through one rigid routine.
+  recipes:
+    - title: Away mode when everyone leaves
+      url: /automation/daily-routines/away-mode.html
+      description: Make approved, reversible changes only after the home is confidently empty.
+      best_for: Lighting and climate changes after the last departure
+    - title: Quiet good-morning routine
+      url: /automation/daily-routines/morning-routine.html
+      description: Leave Night mode and light one person's route without disturbing sleepers.
+      best_for: Different schedules, children, and guests
+    - title: Family-safe bedtime routine
+      url: /automation/daily-routines/bedtime-routine.html
+      description: Offer a reversible wind-down before an intentional good-night transition.
+      best_for: Different bedtimes, late arrivals, and occupied rooms
+    - title: Prepare the house on arrival
+      url: /automation/daily-routines/unlock-door-arrival.html
+      description: Restore Home mode and approved comfort settings without unlocking from location alone.
+      best_for: Entry lighting and comfort recovery
+    - title: Predictable guest mode
+      url: /automation/daily-routines/guest-mode.html
+      description: Keep normal controls useful, prevent false Away mode, and quiet personal automation.
+      best_for: Visitors, house sitters, babysitters, and gatherings
+  start_here_intro: Choose a transition the household already recognizes and keep the first actions reversible.
+  start_here:
+    - title: Quiet good-morning routine
+      url: /automation/daily-routines/morning-routine.html
+      reason: it can begin from an intentional action and affect only one route
+    - title: Predictable guest mode
+      url: /automation/daily-routines/guest-mode.html
+      reason: it protects familiar controls before more automation is added
+    - title: Away mode
+      url: /automation/daily-routines/away-mode.html
+      reason: it teaches delay, uncertainty, and visible state changes
+  controls:
+    - Show whether the home is in Home, Away, Night, or Guest mode.
+    - When presence is uncertain, do not activate Away mode.
+    - Keep locks and security transitions separate from phone location alone.
+    - Give everyone an obvious way to cancel or override a routine.
+  verify: >-
+    Test different schedules, guests without phones, delayed presence updates, sleeping rooms,
+    hub restarts, and someone returning unexpectedly. No routine should strand a person in the
+    wrong mode or remove familiar controls.
+  next_label: climate and comfort
+  next_url: /automation/climate/index.html
+
+entertainment:
+  heading: Entertainment automations
+  intro: >-
+    Remove repeated setup around music, television, and lighting while keeping normal remotes,
+    switches, and apps available. These recipes should make shared entertainment easier to start
+    and just as easy to stop.
+  recipes:
+    - title: Dim lights when the TV turns on
+      url: /automation/entertainment/tv-dim-lights.html
+      description: Apply a tested scene while leaving every normal wall switch available.
+      best_for: Television viewing and movie nights
+    - title: Control music with a physical switch
+      url: /automation/entertainment/music-switch-control.html
+      description: Play or pause a familiar source without reaching for a phone or using voice.
+      best_for: Shared rooms and quick access
+    - title: Start shower music
+      url: /automation/entertainment/shower-music.html
+      description: Start a chosen source from a reliable bathroom signal and stop it predictably.
+      best_for: A repeatable morning or evening routine
+    - title: Use safe speaker volume presets
+      url: /automation/entertainment/speaker-volume-presets.html
+      description: Begin playback at an expected level instead of inheriting yesterday's volume.
+      best_for: Shared speakers and different times of day
+    - title: Play welcome-home music
+      url: /automation/entertainment/welcome-home-music.html
+      description: Start after a tested arrival without interrupting audio already playing.
+      best_for: A small, reversible first-arrival welcome
+    - title: Start pool party mode deliberately
+      url: /automation/entertainment/pool-party-mode.html
+      description: Apply a tested lighting and music scene from one intentional control.
+      best_for: Backyard entertaining without automating safety equipment
+  start_here_intro: Begin with one room, one source, and one physical way to stop playback.
+  start_here:
+    - title: Physical switch music control
+      url: /automation/entertainment/music-switch-control.html
+      reason: the trigger and fallback are obvious to everyone
+    - title: TV lighting
+      url: /automation/entertainment/tv-dim-lights.html
+      reason: the scene is reversible and easy to observe
+    - title: Speaker volume presets
+      url: /automation/entertainment/speaker-volume-presets.html
+      reason: safe startup volume benefits every other music routine
+  controls:
+    - Keep remotes, switches, buttons, and apps fully usable.
+    - Provide one immediate action that stops playback.
+    - Start at a tested volume appropriate for the room and time.
+    - Do not interrupt audio that someone deliberately started.
+  verify: >-
+    Test offline music services, unavailable speakers, active playback, manual volume changes,
+    quiet hours, and stopping from every familiar control. A failed start must not leave lights
+    or speaker groups in an unexpected state.
+  next_label: appliances
+  next_url: /automation/appliances/index.html
+
+lighting:
+  heading: Lighting automations
+  intro: >-
+    Move through the house without hunting for switches and stop checking whether empty rooms
+    were left lit. These recipes respond to motion, doors, schedules, and light levels while
+    keeping every familiar wall control useful.
+  recipes:
+    - title: Turn on lights when motion is detected
+      url: /automation/lighting/lights-on-motion.html
+      description: Light the room as someone enters while leaving the wall switch in control.
+      best_for: Hallways, bathrooms, closets, and entryways
+    - title: Turn off lights after motion stops
+      url: /automation/lighting/lights-off-after-motion.html
+      description: Finish the cycle with a forgiving timeout and respect manual choices.
+      best_for: Rooms with reliable occupancy or motion coverage
+    - title: Use a gentle bathroom night light
+      url: /automation/lighting/bathroom-night-light.html
+      description: Provide low brightness at night without disrupting sleep.
+      best_for: Nighttime bathroom and hallway navigation
+    - title: Turn on lights when a door opens
+      url: /automation/lighting/toggle-lights-door.html
+      description: Use the door state when it represents the room's actual lighting need.
+      best_for: Closets, pantries, cabinets, and garage entries
+    - title: Turn off a closet light after closing
+      url: /automation/lighting/disable-on-door-close.html
+      description: Complete the door-lighting cycle without reversing a manual switch choice.
+      best_for: Small single-door closets and shallow pantries
+    - title: Turn on outdoor lights at dusk
+      url: /automation/lighting/outdoor-night-lights.html
+      description: Light expected outdoor areas without someone remembering a daily switch.
+      best_for: Entrances, paths, and seasonal lighting
+    - title: Wake gradually with light
+      url: /automation/lighting/wake-up-lights.html
+      description: Raise brightness gradually while preserving normal bedside controls.
+      best_for: Dark mornings and predictable wake times
+    - title: Welcome a verified arrival with path lighting
+      url: /automation/lighting/driveway-welcome-wave.html
+      description: Confirm an after-dark arrival before lighting the route to the door.
+      best_for: Driveways and entries without automatic unlocking
+  start_here_intro: Motion lighting is an easy first win because success and failure are immediately visible.
+  start_here:
+    - title: Lights on with motion
+      url: /automation/lighting/lights-on-motion.html
+      reason: it removes a repeated action while the wall switch remains available
+    - title: Lights off after motion
+      url: /automation/lighting/lights-off-after-motion.html
+      reason: it adds a conservative completion rule to the same room
+    - title: Bathroom night light
+      url: /automation/lighting/bathroom-night-light.html
+      reason: it demonstrates time-based brightness without taking away control
+  controls:
+    - Keep every wall switch working normally.
+    - Use a long enough timeout for people who sit or stand still.
+    - Apply automatic brightness only when the room actually needs light.
+    - Let a manual change override the automation.
+  verify: >-
+    Test entry speed, seated occupancy, daylight, pets, guests, manual switching, sensor loss,
+    and hub restart. The light should respond before someone reaches for the switch and should
+    never trap a person in darkness.
+  next_label: daily routines
+  next_url: /automation/daily-routines/index.html
+
+notifications:
+  heading: Notifications and alerts
+  intro: >-
+    Know what happened, what remains uncertain, and whether anyone needs to act without training
+    the household to ignore repeated noise. These recipes use persistent status, targeted alerts,
+    and acknowledgment to replace unnecessary checking.
+  recipes:
+    - title: Get low-battery alerts
+      url: /automation/notifications/low-battery-alerts.html
+      description: Find devices that need attention before battery failure breaks an automation.
+      best_for: Battery-powered sensors and controls
+    - title: Use persistent status tiles
+      url: /automation/notifications/status-tiles.html
+      description: Keep a condition visible until it is resolved or acknowledged.
+      best_for: Doors, leaks, batteries, and other ongoing states
+    - title: Share a garbage day reminder
+      url: /automation/notifications/garbage-day-reminder.html
+      description: Show a household reminder until someone records completion.
+      best_for: Recurring tasks shared by several people
+    - title: Add alerts to a traditional doorbell
+      url: /automation/notifications/doorbell-notification.html
+      description: Observe an existing wired chime without replacing normal doorbell operation.
+      best_for: Extending an existing doorbell
+    - title: Enable nursery quiet mode
+      url: /automation/notifications/baby-sleep-mode.html
+      description: Let a caregiver request quiet behavior while urgent alerts remain active.
+      best_for: Naps, bedtime, and caregiver handoffs
+    - title: Create a teeth-brushing reminder
+      url: /automation/notifications/teeth-brushing-reminder.html
+      description: Use a measured charger pattern as a reminder, not proof of brushing quality.
+      best_for: A visible shared routine for children
+    - title: Report possible package activity
+      url: /automation/notifications/package-delivery-alert.html
+      description: Report entrance motion without claiming it proves a package arrived.
+      best_for: Front-door activity that deserves a quick look
+    - title: Track pet feeding
+      url: /automation/notifications/pet-feeding-reminder.html
+      description: Record a deliberate action so the household can see whether feeding was logged.
+      best_for: Shared pet-care responsibilities
+    - title: Build a maintenance reminder dashboard
+      url: /automation/notifications/maintenance-reminder-dashboard.html
+      description: Keep recurring dates and acknowledgments in one shared place.
+      best_for: Filters, inspections, and seasonal household work
+    - title: Share basic music controls
+      url: /automation/notifications/music-controls.html
+      description: Put playback and volume controls on a household dashboard.
+      best_for: Rooms where several people use the same speakers
+  start_here_intro: Match the message to the urgency before adding more places for it to appear.
+  start_here:
+    - title: Low-battery alerts
+      url: /automation/notifications/low-battery-alerts.html
+      reason: one maintenance summary can protect many existing automations
+    - title: Persistent status tiles
+      url: /automation/notifications/status-tiles.html
+      reason: ongoing conditions stay visible without repeated noise
+    - title: Garbage day reminder
+      url: /automation/notifications/garbage-day-reminder.html
+      reason: acknowledgment makes a shared routine measurable
+  controls:
+    - Reserve audible announcements for events needing household attention.
+    - Group duplicates and use cooldowns where repetition adds no value.
+    - Keep urgent safety alerts active during quiet modes.
+    - Never let a failed delivery or unavailable sensor look like success.
+  verify: >-
+    Test quiet hours, duplicate events, offline phones, acknowledgment, escalation, and sensor loss.
+    Status should distinguish normal, attention needed, pending, and unavailable without relying on
+    color alone.
+  next_label: tips and tricks
+  next_url: /getting-started/tips.html
+
+security:
+  heading: Safety and security automations
+  intro: >-
+    Notice leaks, open doors, stove concerns, and other important conditions sooner while keeping
+    approved alarms, safety controls, and human decisions in charge. These recipes provide
+    supplemental information and actions rather than claiming a sensor proves safety.
+  recipes:
+    - title: Use away lighting
+      url: /automation/security/away-lights.html
+      description: Make ordinary-looking lighting changes without claiming that lights secure a home.
+      best_for: A supplemental occupied-home appearance
+    - title: Add supplemental fire response
+      url: /automation/security/fire-safety.html
+      description: Support path lighting and alerts without delaying alarms or declaring an all-clear.
+      best_for: Supporting a code-compliant alarm and evacuation plan
+    - title: Send an immediate water leak alert
+      url: /automation/security/water-leak-response.html
+      description: Name the wet sensor and require inspection before clearing the incident.
+      best_for: Water heaters, appliance hoses, sinks, and water lines
+    - title: Report a garage door left open
+      url: /automation/security/garage-door-notification.html
+      description: Keep the condition visible without assuming motion proves the doorway is clear.
+      best_for: Persistent status and manual follow-up
+    - title: Create a stove reminder
+      url: /automation/security/stove-left-on-alert.html
+      description: Tie a reminder to an approved state or deliberate timer without improvised control.
+      best_for: A reminder that requires someone to inspect the controls
+    - title: Close a garage through approved equipment
+      url: /automation/security/garage-auto-close.html
+      description: Alert first and preserve entrapment protection, warnings, and confirmation.
+      best_for: Manufacturer-approved garage-door systems
+    - title: Add optional presence sound while away
+      url: /automation/security/fake-dog-deterrent.html
+      description: Use sound as a reversible deterrent without presenting it as a security system.
+      best_for: A supplemental occupied-home impression
+  start_here_intro: Begin with alert-only behavior and add control only when equipment is approved for it.
+  start_here:
+    - title: Water leak alert
+      url: /automation/security/water-leak-response.html
+      reason: the location, urgent message, and manual inspection are explicit
+    - title: Garage door left-open alert
+      url: /automation/security/garage-door-notification.html
+      reason: it improves awareness without moving the door
+    - title: Away lighting
+      url: /automation/security/away-lights.html
+      reason: the action is reversible and keeps normal switches available
+  controls:
+    - Never delay an alarm while waiting for automation confirmation.
+    - Never infer identity, permission, occupancy, or safety from one sensor.
+    - Keep locks, switches, appliance controls, and emergency equipment available.
+    - Confirm final state before reporting an automatic command as successful.
+  verify: >-
+    Test alert-only behavior, stale or conflicting data, low batteries, power loss, hub restart,
+    and the documented manual response. Use qualified review where electrical, fuel, plumbing,
+    alarm, or moving-door equipment requires it.
+  next_label: notifications
+  next_url: /automation/notifications/index.html

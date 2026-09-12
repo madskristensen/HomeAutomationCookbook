@@ -623,6 +623,12 @@ a.community-link:hover,
   height: 100%;
 }
 
+.automation-card:hover,
+.automation-card:focus-within {
+  border-color: var(--color-link);
+  box-shadow: var(--shadow-lg);
+}
+
 /* Shared card heading styles */
 .automation-card :is(h3, h4),
 .use-case-card h4,

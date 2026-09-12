@@ -114,6 +114,8 @@ jekyll-minifier:
   compress_javascript: true
   compress_json: true
   compress_html: true
+  uglifier_args:
+    harmony: true
   remove_comments: true
   remove_intertag_spaces: true
   remove_quotes: false

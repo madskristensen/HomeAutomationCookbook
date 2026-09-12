@@ -1,0 +1,31 @@
+# Home Automation Cookbook
+
+> Practical, platform-neutral home automation recipes that reduce repeated checks and adjustments while preserving familiar household controls.
+
+Home Automation Cookbook explains reusable automation patterns in plain English. Recipes cover triggers, conditions, actions, manual overrides, failure behavior, and acceptance checks. Product recommendations are limited to devices I have personally used.
+
+## Start here
+
+- [Home Automation Cookbook](https://www.homeautomationcookbook.com/): An introduction to the site's family-first approach.
+- [Automation recipes](https://www.homeautomationcookbook.com/automation/index.html): Search and browse the complete recipe directory.
+- [Getting started](https://www.homeautomationcookbook.com/getting-started/index.html): Learn how to plan a first automation.
+- [Philosophy](https://www.homeautomationcookbook.com/getting-started/philosophy.html): Principles for useful, reversible, and dependable automation.
+- [Tips and tricks](https://www.homeautomationcookbook.com/getting-started/tips.html): Practical guidance for building and testing automations.
+- [Choose devices and gear](https://www.homeautomationcookbook.com/getting-started/device-guide.html): Personally used products and device-selection guidance.
+
+## Recipe categories
+
+- [Lighting](https://www.homeautomationcookbook.com/automation/lighting/index.html): Motion, doors, nighttime, outdoor lighting, and wake-up routines.
+- [Daily routines](https://www.homeautomationcookbook.com/automation/daily-routines/index.html): Morning, bedtime, guest, arrival, and away behavior.
+- [Climate and comfort](https://www.homeautomationcookbook.com/automation/climate/index.html): HVAC, fans, blinds, air quality, windows, and temperature monitoring.
+- [Entertainment](https://www.homeautomationcookbook.com/automation/entertainment/index.html): Music, television lighting, volume, arrivals, and gatherings.
+- [Appliances](https://www.homeautomationcookbook.com/automation/appliances/index.html): Laundry, refrigerator doors, coffee preparation, and robot vacuums.
+- [Safety and security](https://www.homeautomationcookbook.com/automation/security/index.html): Alert-first leak, fire, garage, stove, and away recipes.
+- [Notifications and alerts](https://www.homeautomationcookbook.com/automation/notifications/index.html): Batteries, status, chores, doorbells, pets, and maintenance.
+
+## More
+
+- [Platform guidance](https://www.homeautomationcookbook.com/platforms/index.html): Firsthand platform experience and technical-fit comparisons.
+- [Articles](https://www.homeautomationcookbook.com/articles/index.html): Longer-form home automation lessons and observations.
+- [FAQ](https://www.homeautomationcookbook.com/faq/index.html): Answers to common questions.
+- [About](https://www.homeautomationcookbook.com/about.html): Author background and editorial approach.

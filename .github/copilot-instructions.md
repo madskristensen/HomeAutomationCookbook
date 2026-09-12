@@ -21,12 +21,14 @@
 - Main CSS: `docs/assets/css/site.css` (consolidated stylesheet)
 - Config: `docs/_config.yml` contains navigation structure
 - Layout: `docs/_layouts/default.html` is the main template
+- Automation category layout: `docs/_layouts/automation-category.html`
+- Automation category content: `docs/_data/automation_categories.yml`
 - Homepage: `docs/index.md`
 - Documentation pages: `docs/getting-started/philosophy.md`, `docs/getting-started/tips.md`, `docs/getting-started/resources.md`
 - Device selection and personally used products: `docs/getting-started/device-guide.md`
 - Chronological articles: `docs/_articles/`, listed at `docs/articles/index.md`
 - Automation categories: 7 directories under `docs/automation/`, plus the main automation hub page
-- Each category has: `index.md` (overview) and individual automation pages
+- Each category has a minimal `index.md` that selects the shared category layout, plus individual automation pages
 
 # Design system
 
@@ -63,12 +65,23 @@ When creating or updating an automation detail page, use this structure:
 
 Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, code blocks, logos, or capability claims unless Mads has personally verified them and they materially change the recipe.
 
+# Automation category pages
+
+- Category pages are recipe directories first. Keep the introductory copy short and place `Choose a recipe` before supporting guidance.
+- Do not add recipe-card markup directly to a category `index.md`.
+- Category indexes use `layout: automation-category` and a `category_key` that matches an entry in `docs/_data/automation_categories.yml`.
+- Edit headings, introductions, recipe cards, starting points, controls, verification guidance, and next-page links in `docs/_data/automation_categories.yml`.
+- Keep every category entry complete: `heading`, `intro`, `recipes`, `start_here_intro`, `start_here`, `controls`, `verify`, `next_label`, and `next_url`.
+- Every recipe card must include a benefit-led `title`, `.html` `url`, concise `description`, and `best_for`. The shared layout links both the card title and the `View recipe` call to action.
+- Add `link_text` only when the destination is not a recipe, such as `Open guide`.
+- Use `start_here` for a small number of genuinely approachable entry points, not as a duplicate list of every recipe.
+
 # Content dates
 
 - Recipes use `layout: automation` and always include `last_modified_at`.
 - Substantive evergreen guides use `layout: guide` and include `last_modified_at`; the guide layout shows the date below the headline.
 - Articles use `layout: guide` and include a publication `date`. Add `last_modified_at` only after a later substantive update.
-- Hub, category, redirect, and navigation pages use `layout: default` and remain undated.
+- Hub, category, redirect, and navigation pages inherit from `layout: default` and remain undated. Category indexes use `layout: automation-category`.
 - Legal pages may show an explicit date in their content when the wording requires it.
 - Whenever a markdown file's content is edited, update its `last_modified_at` frontmatter field to today's date (if the page's layout uses that field per the rules above). Add the field if it's missing and the layout calls for it. Skip this for pages that stay undated (hub, category, redirect, navigation, `layout: default` pages).
 
@@ -79,13 +92,24 @@ Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, cod
 - All links use `.html` extension (converted from `/` endings)
 - Three-level navigation: main menu → dropdown → flyout
 - Mobile uses hamburger menu with nested accordion
+- Individual recipes belong in their category directory and category data, not in the main navigation.
+
+# Recipe discoverability
+
+- Every new recipe must be added to the matching `recipes` collection in `docs/_data/automation_categories.yml`.
+- The main automation directory discovers pages with `layout: automation` automatically. Preserve that layout on every recipe.
+- Add the new recipe to `Related recipes` on at least one closely related existing recipe, and link back when that relationship helps readers continue naturally.
+- Use descriptive internal link text that names the household job. Avoid generic link text such as `Click here`.
+- Update the automation hub only when the recipe fills a featured household job or should become a recommended first recipe.
+- Update `docs/llms.txt` when adding or renaming a top-level guide, recipe category, or major site section. Do not list every individual recipe there.
 
 # Common tasks
 
-- **Adding new automation**: Create markdown in appropriate category folder, add to `_config.yml` navigation
+- **Adding new automation**: Create the recipe in the appropriate category folder, add it to `docs/_data/automation_categories.yml`, and add useful related-recipe links. Do not add individual recipes to `_config.yml`.
 - **Sentence case conversion**: Use `multi_replace_string_in_file` with heading patterns like "## Title Case" → "## Sentence case"
 - **CSS changes**: Edit consolidated `docs/assets/css/site.css` (do not split files)
 - **Color updates**: Search for hex values and replace consistently across entire stylesheet
+- **Production assets**: Keep source CSS and JavaScript readable. The GitHub Actions build sets `JEKYLL_ENV=production`, and `jekyll-minifier` produces the deployed minified assets.
 
 # What works well
 
