@@ -2,7 +2,7 @@
 layout: guide
 title: Hubitat home automation guide
 description: Use Hubitat built-in apps and local rules for reliable household automation while keeping physical controls and understandable overrides.
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-13
 image: /assets/img/social/platform-hubitat.png
 ---
 
@@ -119,6 +119,7 @@ I use SharpTools.io with Hubitat to display controls and status on wall-mounted 
 
 ## Related guides
 
+- [Hubitat vs SmartThings for a family house](/articles/hubitat-vs-smartthings-family-house.html)
 - [Compare home automation platforms](/getting-started/choose-the-right-platform.html)
 - [Amazon Alexa home automation guide](/platforms/alexa.html)
 - [SmartThings home automation guide](/platforms/smartthings.html)

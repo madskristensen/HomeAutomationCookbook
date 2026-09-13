@@ -2,7 +2,7 @@
 layout: guide
 title: SmartThings home automation guide
 description: Use SmartThings routines and rules for approachable automation while verifying device capabilities, local execution, and household overrides.
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-13
 image: /assets/img/social/platform-smartthings.png
 ---
 
@@ -111,6 +111,7 @@ My SmartThings home had grown beyond 100 devices, performance had slowed, advanc
 
 ## Related guides
 
+- [Hubitat vs SmartThings for a family house](/articles/hubitat-vs-smartthings-family-house.html)
 - [Compare home automation platforms](/getting-started/choose-the-right-platform.html)
 - [Amazon Alexa home automation guide](/platforms/alexa.html)
 - [Hubitat home automation guide](/platforms/hubitat.html)
