@@ -20,7 +20,11 @@ description: Discover practical automation ideas that help you get more from you
     </ul>
   </div>
   <div class="home-hero-visual">
-    <img src="/assets/img/hero.jpg" alt="Illustration of a connected living room with automated lighting, climate, and entertainment" width="1200" height="630">
+    <picture>
+      <source srcset="/assets/img/hero.avif" type="image/avif">
+      <source srcset="/assets/img/hero.webp" type="image/webp">
+      <img src="/assets/img/hero.jpg" alt="Illustration of a connected living room with automated lighting, climate, and entertainment" width="1200" height="630" fetchpriority="high">
+    </picture>
   </div>
 </section>
 

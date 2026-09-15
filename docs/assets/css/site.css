@@ -2699,6 +2699,12 @@ h1.has-article-meta {
   overflow: hidden;
 }
 
+.home-hero-visual picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .home-hero-visual img {
   width: 100%;
   height: 100%;
