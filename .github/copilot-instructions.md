@@ -59,7 +59,6 @@ When creating or updating an automation detail page, use this structure:
 - Setup notes
 - Advanced features, only when they are useful
 - Failure modes
-- Done when
 - FAQ
 - Related recipes
 

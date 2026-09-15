@@ -2,7 +2,7 @@
 layout: guide
 title: Home Assistant technical-fit guide
 description: Evaluate Home Assistant by its automation flexibility, integration model, hardware choices, maintenance responsibilities, and household usability.
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-14
 image: /assets/img/social/platform-home-assistant.png
 ---
 
@@ -103,15 +103,6 @@ These responsibilities may be welcome customization or unwanted maintenance. Tha
 - **A dashboard becomes the only control:** Restore physical controls for ordinary household functions.
 - **Presence reports the wrong state:** Delay broad mode changes and retain Guest and Staying Home overrides.
 - **Only one person understands the system:** Simplify naming, document recovery, and involve another household member in testing.
-
-## Done when
-
-- The chosen host and installation method are documented.
-- Backup and restore have been tested.
-- Local and cloud dependencies are known for the selected integrations.
-- Another household member can operate rooms without opening a dashboard.
-- Core controls survive internet loss.
-- The maintainer still wants to own the system after the one-room trial.
 
 ## FAQ
 

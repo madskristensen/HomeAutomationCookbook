@@ -2,7 +2,7 @@
 layout: guide
 title: SmartThings home automation guide
 description: Use SmartThings routines and rules for approachable automation while verifying device capabilities, local execution, and household overrides.
-last_modified_at: 2026-09-13
+last_modified_at: 2026-09-14
 image: /assets/img/social/platform-smartthings.png
 ---
 
@@ -82,14 +82,6 @@ SmartThings Rules run locally only when every involved device feature and servic
 - **Away mode activates while someone remains home:** Correct All and Any presence semantics and add a Guest override.
 - **A rule unexpectedly uses the cloud:** One device capability or service in the path does not support local execution.
 - **An app update changes available choices:** Revalidate the routine and update its recorded test date.
-
-## Done when
-
-- The routine names and states make sense to another household member.
-- Every involved device exposes the exact state or command required.
-- Local and cloud dependencies have been tested.
-- A manual routine or physical control can recover from bad presence or sensor data.
-- Delayed actions recheck their conditions before acting.
 
 ## FAQ
 

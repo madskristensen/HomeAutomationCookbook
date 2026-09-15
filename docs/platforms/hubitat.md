@@ -2,7 +2,7 @@
 layout: guide
 title: Hubitat home automation guide
 description: Use Hubitat built-in apps and local rules for reliable household automation while keeping physical controls and understandable overrides.
-last_modified_at: 2026-09-13
+last_modified_at: 2026-09-14
 image: /assets/img/social/platform-hubitat.png
 ---
 
@@ -85,15 +85,6 @@ Hubitat automation apps run on the hub, but that does not make every external se
 - **A manual change is reversed:** Add an explicit override or use Room Lighting's override-oriented behavior.
 - **Away mode acts on incomplete presence:** Require every tracked resident to leave, add delay, and retain a visible Guest mode.
 - **The hub runs the rule but no phone alert arrives:** Treat local rule execution and external notification delivery as separate paths.
-
-## Done when
-
-- The rule continues for compatible devices when the internet is disconnected.
-- Physical switches and essential controls remain usable.
-- Another household member can see and use the override.
-- The selected app is no more complex than the job requires.
-- Restart and unavailable-device behavior are known.
-- Complex rules have names and notes that explain their purpose.
 
 ## FAQ
 

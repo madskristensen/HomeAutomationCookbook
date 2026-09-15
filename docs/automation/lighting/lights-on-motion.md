@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights on with motion sensors
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-14
 image: /assets/img/social/recipes/lighting/lights-on-motion.png
 compact: true
 faqs:
@@ -50,27 +50,6 @@ THEN turn on the light</div>
 - **Stop condition:** A manual wall-switch change should prevent the off recipe from undoing the person's choice.
 - **Manual override:** The wall switch still wins.
 
-## Use cases
-
-<div class="use-case-grid">
-  <div class="use-case-card">
-    <h3>Indoor automation</h3>
-    <ul>
-      <li><strong>Nighttime navigation</strong> - Bathroom lights turn on at low brightness when you get up at night</li>
-      <li><strong>Home office</strong> - Lights automatically turn on when you enter your workspace</li>
-      <li><strong>Hallways</strong> - Lights turn on as you move through the house</li>
-      <li><strong>Closets</strong> - No more fumbling for switches in dark spaces</li>
-    </ul>
-  </div>
-  <div class="use-case-card">
-    <h3>Outdoor automation</h3>
-    <ul>
-      <li><strong>Garden shed</strong> - Motion sensor triggers light when you enter</li>
-      <li><strong>Porch light</strong> - Automatically lights up for guests and delivery drivers</li>
-    </ul>
-  </div>
-</div>
-
 ## What I used
 
 <div class="product-list" markdown="1">
@@ -101,8 +80,6 @@ For a bathroom that needs humidity, temperature, and light readings too, use the
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
-💡 For outdoor placement, weather protection, and false-trigger testing, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html).
-
 ## Setup notes
 
 Start with only the trigger and light action. Once that is reliable, add the daylight condition and any night brightness adjustment.
@@ -110,8 +87,6 @@ Start with only the trigger and light action. Once that is reliable, add the day
 - **Daytime:** Leave the light off when daylight is sufficient.
 - **Evening:** Use the brightness that makes the room useful.
 - **Deep night:** Start at 10 to 20 percent and raise it only enough for safe navigation.
-
-💡 For general guidance, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html).
 
 ## Platform notes
 
@@ -135,108 +110,7 @@ Home Assistant is a technical fit for this pattern, but I have not personally ru
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
-    <h3>Multiple brightness levels</h3>
-    <p>Create different levels throughout the night:</p>
-    <div class="brightness-schedule">
-      <div class="brightness-item">
-        <span class="time-badge">9 PM - 11 PM</span>
-        <span class="brightness-level">30%</span>
-        <span class="brightness-desc">Still awake, need moderate light</span>
-      </div>
-      <div class="brightness-item">
-        <span class="time-badge">11 PM - 5 AM</span>
-        <span class="brightness-level">10%</span>
-        <span class="brightness-desc">Minimal disturbance</span>
-      </div>
-      <div class="brightness-item">
-        <span class="time-badge">5 AM - 7 AM</span>
-        <span class="brightness-level">20%</span>
-        <span class="brightness-desc">Gentle wake-up</span>
-      </div>
-      <div class="brightness-item">
-        <span class="time-badge">7 AM - 9 PM</span>
-        <span class="brightness-level">100%</span>
-        <span class="brightness-desc">Full brightness</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Lux-based activation</h3>
-    <p>Only turn on lights if the room is actually dark:</p>
-    <ul>
-      <li>Add a condition that light level must be below a certain threshold (e.g., 100 lux)</li>
-      <li>This prevents lights from turning on during daytime when natural light is sufficient</li>
-    </ul>
-  </div>
-  
-  <div class="feature-card">
-    <h3>Zone-based motion</h3>
-    <p>For larger rooms, use multiple motion sensors to track which area someone is in and only light that zone.</p>
-  </div>
-</div>
-
-## Common issues and solutions
-
-<div class="troubleshooting-grid">
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Lights turn on too slowly</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Delay between motion detection and lights turning on causes you to reach for the switch.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check sensor placement - should detect motion before entering room</li>
-        <li>Reduce automation processing time - use local control instead of cloud</li>
-        <li>Use faster communication protocols (Zigbee/Z-Wave vs WiFi)</li>
-        <li>Optimize automation logic to minimize conditions</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Lights turn on when not needed</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Lights activate from pets, sunlight reflections, or other false triggers.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Adjust motion sensor sensitivity</li>
-        <li>Add lux sensor condition to prevent daytime activation</li>
-        <li>Use pet-immune motion sensors</li>
-        <li>Position sensor away from windows and heat sources</li>
-        <li>Add time-based conditions</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="issue-card">
-    <div class="issue-header">
-      <h3>Inconsistent performance</h3>
-    </div>
-    <div class="issue-problem">
-      <strong>Problem:</strong> Sometimes works, sometimes doesn't.
-    </div>
-    <div class="issue-solutions">
-      <strong>Solutions:</strong>
-      <ul>
-        <li>Check sensor battery levels</li>
-        <li>Verify wireless signal strength (Zigbee/Z-Wave mesh)</li>
-        <li>Replace batteries before completely dead</li>
-        <li>Add repeaters/extenders for distant sensors</li>
-        <li>Check for interference from other devices</li>
-      </ul>
-    </div>
-  </div>
-</div>
+Add one brightness adjustment only when normal use shows that a single level is uncomfortable. Use a light-level condition when fixed hours turn the light on unnecessarily during bright days. In a larger room, add another sensor only to cover a measured blind spot rather than trying to track people between zones.
 
 ## Failure modes
 

@@ -63,11 +63,6 @@ climate:
     and blind controls familiar. These recipes make modest, visible changes and treat missing
     environmental data as unknown.
   recipes:
-    - title: Use safe thermostat auto-away limits
-      url: /automation/climate/safe-thermostat-away.html
-      description: Apply a modest setback while protecting pets, plumbing, manual holds, and uncertain presence.
-      best_for: Establishing safe boundaries before automating Away mode
-      link_text: Open guide
     - title: Pause HVAC when a window stays open
       url: /automation/climate/thermostat-windows-open.html
       description: Pause after a delay, then resume only when every monitored opening is closed.
@@ -92,9 +87,9 @@ climate:
       url: /automation/climate/window-notifications.html
       description: Compare indoor and outdoor conditions, then notify instead of moving windows automatically.
       best_for: Natural ventilation decisions
-  start_here_intro: Define safe boundaries first, then automate one reversible comfort adjustment.
+  start_here_intro: Read the safety guidance first, then automate one reversible comfort adjustment.
   start_here:
-    - title: Safe thermostat auto-away
+    - title: Read the safe thermostat auto-away guide
       url: /automation/climate/safe-thermostat-away.html
       reason: it establishes limits that protect the household and building
     - title: Bathroom fan after a shower

@@ -215,11 +215,6 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
 <p>Recipes account for stale sensors, unavailable devices, hub restarts, internet loss, guests, and manual changes where they matter.</p>
 </div>
 
-<div class="placement-card">
-<h3>A finish line</h3>
-<p>The Done when checklist describes behavior the household can verify before depending on the automation.</p>
-</div>
-
 </div>
 
 ## Good first recipes

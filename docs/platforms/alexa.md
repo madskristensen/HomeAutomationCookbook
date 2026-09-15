@@ -2,7 +2,7 @@
 layout: guide
 title: Amazon Alexa home automation guide
 description: Use Alexa voice control and routines for compatible smart-home devices while preserving physical controls and verifying cloud dependencies.
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-14
 image: /assets/img/social/platform-alexa.png
 ---
 
@@ -84,14 +84,6 @@ Do not assume an Alexa routine is local because the devices use a local radio el
 - **A manual change is immediately reversed:** Simplify the routine and keep the physical control authoritative.
 - **The routine disappears or behaves differently after an update:** Recheck the current trigger and action choices before depending on it again.
 - **The internet is unavailable:** Physical switches and essential device controls must remain usable.
-
-## Done when
-
-- Another household member can use the device without knowing Alexa runs the routine.
-- The routine works repeatedly with the exact devices installed.
-- Internet loss and unavailable-device behavior are understood.
-- Voice is optional rather than the only control.
-- The routine does not operate locks, alarms, garage doors, or hazardous equipment from uncertain state.
 
 ## FAQ
 
