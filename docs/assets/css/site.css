@@ -66,6 +66,10 @@
   --color-btn-secondary-text: #2c3e50;
   --color-btn-secondary-border: #d0d0d0;
   --color-btn-secondary-hover-bg: #f8f9fa;
+
+  /* Recipe section colors */
+  --color-caution-bg: #f8f6f1;
+  --color-caution-accent: #806b45;
 }
 
 /* Dark mode variables */
@@ -127,6 +131,10 @@
     --color-btn-secondary-text: #7a9ab8;
     --color-btn-secondary-border: #4a4a4a;
     --color-btn-secondary-hover-bg: #2a2a2a;
+
+    /* Recipe section colors */
+    --color-caution-bg: #26231f;
+    --color-caution-accent: #c3aa7d;
   }
 }
 
@@ -822,6 +830,96 @@ h1.has-article-meta {
 .automation-page--compact h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+.automation-page--compact :is(#amazon-alexa, #smartthings, #hubitat, #home-assistant) {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.automation-page--compact :is(#amazon-alexa, #smartthings, #hubitat, #home-assistant)::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.automation-page--compact #amazon-alexa::before {
+  background-image: url("/assets/img/logos/alexa.png");
+}
+
+.automation-page--compact #smartthings::before {
+  background-image: url("/assets/img/logos/smartthings.png");
+}
+
+.automation-page--compact #hubitat::before {
+  background-image: url("/assets/img/logos/hubitat.png");
+}
+
+.automation-page--compact #home-assistant::before {
+  background-image: url("/assets/img/logos/homeassistant.png");
+}
+
+.automation-page--compact #faq ~ h3::before {
+  display: inline-grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  margin-right: 0.5rem;
+  border: 1px solid currentcolor;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.automation-page--compact #failure-modes + ul {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem 1rem 2.75rem;
+  background: var(--color-caution-bg);
+  border-radius: 8px;
+}
+
+.automation-page--compact #failure-modes + ul li::marker {
+  color: var(--color-caution-accent);
+}
+
+.automation-page--compact #faq ~ h3 {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.automation-page--compact #faq ~ h3::before {
+  content: "?";
+  flex: 0 0 1.45rem;
+  color: var(--color-text-secondary);
+}
+
+.automation-page--compact #faq ~ h3 + p {
+  margin-left: 1.95rem;
+}
+
+.automation-page--compact #related-recipes + ul {
+  margin-top: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.automation-page--compact #related-recipes + ul li {
+  padding: 0.65rem 0;
+}
+
+.automation-page--compact #related-recipes + ul li + li {
+  border-top: 1px solid var(--color-border);
 }
 
 .automation-page--compact .use-case-grid,

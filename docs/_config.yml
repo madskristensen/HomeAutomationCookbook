@@ -97,8 +97,6 @@ navigation:
     url: /articles/index.html
   - title: FAQ
     url: /faq/index.html
-  - title: About
-    url: /about.html
 
 # Plugins
 plugins:
