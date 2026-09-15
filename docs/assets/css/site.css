@@ -3479,3 +3479,13 @@ h1.has-article-meta {
         text-align: center;
     }
 }
+
+@media (max-width: 600px) {
+    .home-hero {
+        min-height: 0;
+    }
+
+    .home-hero-visual {
+        display: none;
+    }
+}
