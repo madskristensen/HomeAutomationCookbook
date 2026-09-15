@@ -1,127 +1,127 @@
 ---
 layout: default
 title: Practical home automation recipes
-description: Find practical home automation ideas for Alexa, Google, SmartThings, Homey, Philips Hue, Hubitat, Home Assistant, and more.
+description: Discover practical automation ideas that help you get more from your smart home while keeping your household in control.
 ---
 
-<div class="hero">
-  <h1>Find your next great home automation</h1>
-  <p class="hero-subtitle">Practical inspiration for making your smart home more useful, comfortable, and fun.</p>
-  <p>Home Automation Cookbook is for smart-home enthusiasts and anyone wondering what their connected home could do next. Browse real-world automation recipes, borrow the pattern behind an idea, and adapt it to your rooms, routines, and household.</p>
-  <p>Whether you use Alexa, Google, SmartThings, Homey, Philips Hue, Hubitat, Home Assistant, or a mix of systems, the goal is the same: fewer repeated checks, smoother routines, and more time to enjoy your home.</p>
-  <p><a href="/automation/index.html">Browse automation ideas</a> or <a href="/getting-started/index.html">start with one small win</a>.</p>
-</div>
+<section class="home-hero">
+  <div class="home-hero-copy">
+    <p class="home-eyebrow">Practical ideas for everyday homes</p>
+    <h1>Get more from your smart home</h1>
+    <p class="home-hero-subtitle">Find useful automations that remove repeated checks, improve comfort, and support the routines your household already has.</p>
+    <div class="home-hero-actions">
+      <a href="/automation/index.html" class="home-button home-button-primary">Explore automation ideas</a>
+      <a href="/getting-started/index.html" class="home-button home-button-secondary">Start with the basics</a>
+    </div>
+    <ul class="home-hero-signals" aria-label="What to expect">
+      <li>Platform-neutral patterns</li>
+      <li>Familiar controls kept working</li>
+      <li>Tested in a family home</li>
+    </ul>
+  </div>
+  <div class="home-hero-visual">
+    <img src="/assets/img/hero.jpg" alt="Illustration of a connected living room with automated lighting, climate, and entertainment" width="1200" height="630">
+  </div>
+</section>
 
-## What can your smart home do for you?
+<section class="home-section">
+  <div class="home-section-heading">
+    <div>
+      <p class="home-eyebrow">Choose your benefit</p>
+      <h2>What should your home help with?</h2>
+    </div>
+    <p>Start with the part of daily life you want to make easier. You can choose platforms and devices later.</p>
+  </div>
 
-Start with a moment you repeat or a small annoyance you would love to remove: lights that should come on before you reach the switch, laundry that finishes while you are busy, music that should follow the mood, or a door, leak, or appliance that deserves your attention.
+  <div class="home-explore-grid">
+    <a href="/automation/lighting/index.html" class="home-explore-card">
+      <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="" width="1200" height="630">
+      <div>
+        <p class="home-card-label">Lighting</p>
+        <h3>Make rooms respond naturally</h3>
+        <p>Support arrivals, activities, and departures without taking away the wall switch.</p>
+        <span>Explore lighting ideas</span>
+      </div>
+    </a>
 
-Each recipe helps you see:
+    <a href="/automation/daily-routines/index.html" class="home-explore-card">
+      <img src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="" width="1200" height="630">
+      <div>
+        <p class="home-card-label">Daily routines</p>
+        <h3>Remember fewer steps each day</h3>
+        <p>Help mornings, bedtimes, arrivals, and departures happen with less coordination.</p>
+        <span>Explore daily routines</span>
+      </div>
+    </a>
 
-- **Less to remember** because repeated checks and tasks become visible or happen when needed.
-- **Fewer interruptions** because rooms respond without asking you to find a phone or open an app.
-- **Shared routines** that work for kids, guests, and other household members.
-- **Confidence and control** because you understand the logic, can change it, and keep familiar controls.
+    <a href="/automation/climate/index.html" class="home-explore-card">
+      <img src="/assets/img/social/recipes/climate/fan-shower.svg" alt="" width="1200" height="630">
+      <div>
+        <p class="home-card-label">Climate and comfort</p>
+        <h3>Stay comfortable with fewer adjustments</h3>
+        <p>Respond to heat, humidity, sunlight, and open windows only when it is useful.</p>
+        <span>Explore comfort ideas</span>
+      </div>
+    </a>
 
-The goal is not more technology. It is a home that asks less of you during an ordinary day.
+    <a href="/automation/appliances/index.html" class="home-explore-card">
+      <img src="/assets/img/social/recipes/appliances/washer-done-notification.svg" alt="" width="1200" height="630">
+      <div>
+        <p class="home-card-label">Appliances</p>
+        <h3>Stop checking whether a job is done</h3>
+        <p>Know when laundry, dishes, cleaning, or another household task needs attention.</p>
+        <span>Explore appliance ideas</span>
+      </div>
+    </a>
+  </div>
 
-## For any smart-home setup
+  <p class="home-more-paths">More ways to get value: <a href="/automation/security/index.html">notice safety concerns</a>, <a href="/automation/notifications/index.html">receive useful reminders</a>, or <a href="/automation/entertainment/index.html">enjoy music and TV more easily</a>.</p>
+</section>
 
-These are platform-neutral ideas, not instructions for one brand. The recipes focus on the useful logic behind an automation - the trigger, conditions, action, timing, and fallback - so you can build the same idea with the tools you already own or compare what a new platform could enable.
+<section class="home-section">
+  <div class="home-section-heading">
+    <div>
+      <p class="home-eyebrow">Good first recipe</p>
+      <h2>Start with one small win</h2>
+    </div>
+    <p>Choose something easy to notice, easy to test, and easy to override.</p>
+  </div>
 
-Use the [platform guides](/platforms/index.html) to map that logic to Alexa, SmartThings, Hubitat, or a clearly labeled Home Assistant technical-fit comparison.
+  <div class="home-starter-showcase">
+    <a href="/automation/lighting/lights-on-motion.html" class="home-starter-feature">
+      <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="" width="1200" height="630">
+      <div>
+        <p class="home-card-label">Lighting recipe</p>
+        <h3>Move through the house without reaching for a switch</h3>
+        <p>Light a room when someone enters while leaving the familiar wall switch useful to everyone.</p>
+        <span>Open the motion-lighting recipe</span>
+      </div>
+    </a>
 
-## Learn the pattern once
+    <div class="home-starter-list">
+      <a href="/automation/appliances/washer-done-notification.html">
+        <span>Appliances</span>
+        <strong>Remember the laundry without watching the clock</strong>
+      </a>
+      <a href="/automation/climate/thermostat-windows-open.html">
+        <span>Climate</span>
+        <strong>Stop heating or cooling an open window</strong>
+      </a>
+      <a href="/automation/daily-routines/away-mode.html">
+        <span>Daily routines</span>
+        <strong>Let the house settle after everyone leaves</strong>
+      </a>
+    </div>
+  </div>
+</section>
 
-You do not need to copy someone else's smart home. Every recipe uses the same building blocks so you can apply them to your own rooms and routines:
-
-1. **Notice the right moment.** Choose a trigger that represents something useful, such as entering a room or finishing a wash cycle.
-2. **Decide what should happen.** Add only the conditions, action, and timing needed to support the routine.
-3. **Keep people in control.** Plan the manual override and failure behavior before depending on the automation.
-4. **Test it in real life.** Try the automation during normal household use, then adjust it based on what you learn.
-
-If this is your first automation, [follow the beginner path](/getting-started/index.html). If you already have a system, [browse the recipe library](/automation/index.html) and adapt a useful idea.
-
-## Start with one small win
-
-<div class="featured-automations">
-  <a href="/automation/lighting/lights-on-motion.html" class="featured-card">
-    <h3>Move through the house without reaching for a switch</h3>
-    <p>Light a room when someone enters while leaving the wall switch useful to everyone.</p>
-    <span class="card-arrow">Try the lighting recipe</span>
-  </a>
-
-  <a href="/automation/climate/thermostat-windows-open.html" class="featured-card">
-    <h3>Stop heating or cooling an open window</h3>
-    <p>Pause after a window stays open, then resume only when every monitored opening closes.</p>
-    <span class="card-arrow">Try the climate recipe</span>
-  </a>
-
-  <a href="/automation/daily-routines/away-mode.html" class="featured-card">
-    <h3>Let the house settle after everyone leaves</h3>
-    <p>Make approved, reversible changes only after the home is confidently empty.</p>
-    <span class="card-arrow">Try the away recipe</span>
-  </a>
-
-  <a href="/automation/appliances/washer-done-notification.html" class="featured-card">
-    <h3>Remember the laundry without watching the clock</h3>
-    <p>Learn the washer's real cycle pattern and send one useful completion reminder.</p>
-    <span class="card-arrow">Try the laundry recipe</span>
-  </a>
-</div>
-
-## Explore what your home could help with
-
-<div class="category-grid">
-  <a href="/automation/lighting/index.html" class="category-card">
-    <h3>Lighting</h3>
-    <p>Make rooms easier to enter, use, and leave.</p>
-    <span class="category-count">8 recipes</span>
-  </a>
-
-  <a href="/automation/daily-routines/index.html" class="category-card">
-    <h3>Daily routines</h3>
-    <p>Support the transitions that shape the day.</p>
-    <span class="category-count">5 recipes</span>
-  </a>
-
-  <a href="/automation/climate/index.html" class="category-card">
-    <h3>Climate and comfort</h3>
-    <p>Stay comfortable with fewer unnecessary adjustments.</p>
-    <span class="category-count">6 recipes + 1 guide</span>
-  </a>
-
-  <a href="/automation/entertainment/index.html" class="category-card">
-    <h3>Entertainment</h3>
-    <p>Make music and TV easier to enjoy together.</p>
-    <span class="category-count">6 recipes</span>
-  </a>
-
-  <a href="/automation/appliances/index.html" class="category-card">
-    <h3>Appliances</h3>
-    <p>Know when household machines finish or need attention.</p>
-    <span class="category-count">7 recipes</span>
-  </a>
-
-  <a href="/automation/security/index.html" class="category-card">
-    <h3>Safety and security</h3>
-    <p>Bring important conditions to someone's attention without pretending a sensor proves safety.</p>
-    <span class="category-count">7 recipes</span>
-  </a>
-
-  <a href="/automation/notifications/index.html" class="category-card">
-    <h3>Notifications and alerts</h3>
-    <p>Keep the household informed without creating more noise.</p>
-    <span class="category-count">10 recipes</span>
-  </a>
-</div>
-
-## Built from a real family home
-
-I am Mads Kristensen. I write from firsthand use of Alexa, SmartThings, Hubitat, and the devices named on this site. The goal is to help you build routines that feel ordinary, useful, and understandable.
-
-Read [how I test ideas with my family](/about.html), [learn how to choose devices without starting from a shopping list](/getting-started/device-guide.html), or [explore articles about automation choices](/articles/index.html).
-
-## Learn and share with others
-
-Ask a question in [GitHub Discussions](https://github.com/madskristensen/HomeAutomationCookbook/discussions), share how you adapted a recipe, or [help improve the cookbook](https://github.com/madskristensen/HomeAutomationCookbook).
+<section class="home-trust">
+  <div>
+    <p class="home-eyebrow">Understand it before you depend on it</p>
+    <h2>Ideas you can adapt and stay in control of</h2>
+  </div>
+  <div>
+    <p>Every recipe explains the trigger, checks, action, timing, manual control, and failure behavior. I write from firsthand use in my family home, including Alexa, SmartThings, and Hubitat.</p>
+    <p><a href="/about.html">Learn how I test ideas</a> or <a href="/platforms/index.html">compare platform guides</a>.</p>
+  </div>
+</section>
