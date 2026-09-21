@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Automate an indoor air purifier
 description: A platform-neutral recipe that runs a plug-controlled air purifier when an air quality sensor reports a sustained drop, and stops nagging once the air clears.
 keywords: air quality automation, air purifier control, AQI sensor automation, PM2.5 automation, indoor air quality
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/climate/air-quality-purifier.png
 compact: true
 faqs:
@@ -19,7 +19,7 @@ faqs:
 # Run the air purifier when indoor air quality drops
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/climate/air-quality-purifier.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/climate/air-quality-purifier.svg" alt="An air purifier responds to indoor air quality while manual control remains available" width="1200" height="630">
 </figure>
 
 Watch an air quality sensor for a sustained unhealthy reading, run the purifier, and turn it off again once the air has stayed clear for a while.

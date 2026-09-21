@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Prepare the house when someone arrives
 description: Restore Home mode, light a safe path, and resume normal comfort without treating phone location as proof of identity.
 keywords: arrival home automation, welcome home automation, presence detection, entry lighting, home mode automation
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/daily-routines/unlock-door-arrival.png
 compact: true
 faqs:
@@ -21,7 +21,7 @@ faqs:
 # Prepare the house when someone arrives
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/daily-routines/unlock-door-arrival.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/daily-routines/unlock-door-arrival.svg" alt="The house prepares lights and comfort when someone arrives without automatically unlocking the door" width="1200" height="630">
 </figure>
 
 When the first person returns, the house switches to Home, lights a safe path when needed, and restores the approved comfort settings. The door stays locked until someone deliberately unlocks it.

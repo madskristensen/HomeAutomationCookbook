@@ -4,7 +4,7 @@ date: 2026-08-30
 title: Guest-friendly smart home mode
 description: A platform-neutral guest mode that keeps lights and physical controls simple, prevents false Away mode, and quiets only non-urgent personal automation.
 keywords: smart home guest mode, guest friendly automation, vacation guest mode, quiet notifications, smart home visitors
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/daily-routines/guest-mode.png
 compact: true
 faqs:
@@ -19,7 +19,7 @@ faqs:
 # Make the smart home predictable for guests
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/daily-routines/guest-mode.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/daily-routines/guest-mode.svg" alt="Guest mode keeps familiar switches and simple controls working for visitors" width="1200" height="630">
 </figure>
 
 Use one visible Guest-mode control to keep wall switches normal, preserve useful lighting and safety behavior, and pause personal or surprising automation until a host confirms the visit has ended.

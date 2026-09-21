@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Automate a bathroom exhaust fan
 description: Run the bathroom fan when a shower starts and turn it off once the steam clears, with nothing to remember and no fan left running all morning.
 keywords: bathroom fan automation, shower fan control, humidity sensor automation, automatic fan, bathroom ventilation
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/climate/fan-shower.png
 compact: true
 faqs:
@@ -19,7 +19,7 @@ faqs:
 # Turn on the bathroom fan when a shower starts
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/climate/fan-shower.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/climate/fan-shower.svg" alt="A bathroom exhaust fan turns on for shower humidity and stops after the room dries" width="1200" height="630">
 </figure>
 
 Turn the bathroom fan on when the shower light goes on or humidity rises, and turn it off once the bathroom has stayed dry for a while.

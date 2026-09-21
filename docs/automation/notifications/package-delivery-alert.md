@@ -4,7 +4,7 @@ date: 2025-11-30
 title: Get front-door motion alerts
 description: Use an outdoor motion sensor to prompt a quick check when someone or something moves near the entrance, without claiming that every alert is a delivery.
 keywords: package delivery alert, delivery notification, outdoor motion sensor, front porch sensor, entrance activity detection
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/notifications/package-delivery-alert.png
 compact: true
 faqs:
@@ -19,7 +19,7 @@ faqs:
 # Get notified about entrance activity that may indicate a delivery
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/package-delivery-alert.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/notifications/package-delivery-alert.svg" alt="Front-door motion triggers a useful arrival alert without claiming a package was confirmed" width="1200" height="630">
 </figure>
 
 Use a motion sensor near the front door to send a phone notification about entrance activity that may indicate a delivery, without claiming to confirm one.

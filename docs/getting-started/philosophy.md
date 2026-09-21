@@ -2,14 +2,14 @@
 layout: guide
 title: Home automation philosophy
 description: Learn the core principles of home automation that work for everyone - reliability, natural behavior adaptation, and graceful failure modes.
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/guides/home-automation-philosophy.png
 ---
 
 # Home automation philosophy
 
 <figure class="content-hero">
-  <img src="/assets/img/social/guides/home-automation-philosophy.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/guides/home-automation-philosophy.svg" alt="A home where quiet automation supports daily routines without removing control" width="1200" height="630">
 </figure>
 
 A useful smart home gives time and attention back to the household. It works for everyone, requires little explanation, and continues functioning when something goes wrong. These principles help you build automations that support ordinary routines instead of creating new work.

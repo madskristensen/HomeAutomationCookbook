@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights off after motion stops
 description: A conservative motion-lighting off recipe that respects still occupants, manual wall-switch choices, and local-first control.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically
-last_modified_at: 2026-09-14
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/lighting/lights-off-after-motion.png
 compact: true
 faqs:
@@ -21,7 +21,7 @@ faqs:
 # Turn lights off after motion stops
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/lights-off-after-motion.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/lighting/lights-off-after-motion.svg" alt="Lights turn off after motion stops and a suitable vacancy delay passes" width="1200" height="630">
 </figure>
 
 Leave the room, lights off. Stay still, and they should not leave you in the dark. The wall switch still wins when someone wants a different answer.

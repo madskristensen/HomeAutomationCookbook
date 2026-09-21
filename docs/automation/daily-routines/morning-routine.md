@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Start a quiet good-morning routine
 description: A platform-neutral morning routine that starts from an intentional signal, lights only the needed path, and leaves sleeping household members undisturbed.
 keywords: good morning routine, morning lighting automation, quiet wake-up automation, smart home morning, family morning routine
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/daily-routines/morning-routine.png
 compact: true
 faqs:
@@ -21,7 +21,7 @@ faqs:
 # Start a quiet good-morning routine
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="A quiet morning routine gradually coordinates lighting, comfort, and reminders" width="1200" height="630">
 </figure>
 
 Use one intentional signal to leave Night mode, light the route someone needs, and prepare approved comfort settings without waking everyone else.

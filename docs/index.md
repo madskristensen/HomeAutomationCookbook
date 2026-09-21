@@ -39,7 +39,7 @@ description: Discover practical automation ideas that help you get more from you
 
   <div class="home-explore-grid">
     <a href="/automation/lighting/index.html" class="home-explore-card">
-      <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="" width="1200" height="630">
+      <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="Lighting that responds when someone enters a room" width="1200" height="630">
       <div>
         <p class="home-card-label">Lighting</p>
         <h3>Make rooms respond naturally</h3>
@@ -49,7 +49,7 @@ description: Discover practical automation ideas that help you get more from you
     </a>
 
     <a href="/automation/daily-routines/index.html" class="home-explore-card">
-      <img src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="" width="1200" height="630">
+      <img src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="A morning routine coordinating lights, comfort, and household reminders" width="1200" height="630">
       <div>
         <p class="home-card-label">Daily routines</p>
         <h3>Remember fewer steps each day</h3>
@@ -59,7 +59,7 @@ description: Discover practical automation ideas that help you get more from you
     </a>
 
     <a href="/automation/climate/index.html" class="home-explore-card">
-      <img src="/assets/img/social/recipes/climate/fan-shower.svg" alt="" width="1200" height="630">
+      <img src="/assets/img/social/recipes/climate/fan-shower.svg" alt="A bathroom fan responding to shower humidity" width="1200" height="630">
       <div>
         <p class="home-card-label">Climate and comfort</p>
         <h3>Stay comfortable with fewer adjustments</h3>
@@ -69,7 +69,7 @@ description: Discover practical automation ideas that help you get more from you
     </a>
 
     <a href="/automation/appliances/index.html" class="home-explore-card">
-      <img src="/assets/img/social/recipes/appliances/washer-done-notification.svg" alt="" width="1200" height="630">
+      <img src="/assets/img/social/recipes/appliances/washer-done-notification.svg" alt="A washer completion alert that removes repeated laundry checks" width="1200" height="630">
       <div>
         <p class="home-card-label">Appliances</p>
         <h3>Stop checking whether a job is done</h3>
@@ -93,7 +93,7 @@ description: Discover practical automation ideas that help you get more from you
 
   <div class="home-starter-showcase">
     <a href="/automation/lighting/lights-on-motion.html" class="home-starter-feature">
-      <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="" width="1200" height="630">
+      <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="Motion-triggered lighting with the wall switch still available" width="1200" height="630">
       <div>
         <p class="home-card-label">Lighting recipe</p>
         <h3>Move through the house without reaching for a switch</h3>

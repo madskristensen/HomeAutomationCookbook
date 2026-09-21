@@ -6,7 +6,7 @@ date: 2025-11-29
 title: Automate outdoor lights at dusk
 description: A platform-neutral outdoor-lighting recipe that follows sunset, avoids unnecessary overnight runtime, and keeps physical control available.
 keywords: outdoor lights automation, sunset lights, dusk lighting, exterior lighting, holiday lights, smart outdoor lights
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/lighting/outdoor-night-lights.png
 compact: true
 faqs:
@@ -21,7 +21,7 @@ faqs:
 # Turn outdoor lights on at dusk
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/outdoor-night-lights.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/lighting/outdoor-night-lights.svg" alt="Outdoor lights turn on at dusk and off on a predictable schedule" width="1200" height="630">
 </figure>
 
 At dusk, the useful outdoor lights come on. Decorative lights turn off at bedtime, and the physical switch or plug still works when automation does not.

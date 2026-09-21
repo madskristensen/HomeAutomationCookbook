@@ -4,7 +4,7 @@ date: 2025-11-30
 title: Set a persistent cooking reminder
 description: Keep a cooking reminder visible until someone clears it, using a deliberate timer or approved appliance status signal.
 keywords: stove reminder, oven left on alert, cooking timer, appliance status notification, kitchen safety
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/security/stove-left-on-alert.png
 compact: true
 faqs:
@@ -19,7 +19,7 @@ faqs:
 # Get a stove reminder without pretending it is a safety system
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/stove-left-on-alert.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/security/stove-left-on-alert.svg" alt="A persistent cooking reminder continues until someone confirms the stove is safe" width="1200" height="630">
 </figure>
 
 Starting to cook also starts a reminder, and only a person or an appliance-approved status signal clears it.

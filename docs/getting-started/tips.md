@@ -4,14 +4,14 @@ redirect_from:
   - /tips/index.html
 title: Practical home automation tips
 description: Small patterns that make home automations easier for family and guests to understand, control, and recover when something fails.
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/guides/automation-tips.png
 ---
 
 # Practical home automation tips
 
 <figure class="content-hero">
-  <img src="/assets/img/social/guides/automation-tips.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/guides/automation-tips.svg" alt="Practical home automation guidance for reliable routines and familiar controls" width="1200" height="630">
 </figure>
 
 Most improvements come from removing surprises, not adding features. These patterns help the house take on repeated work without taking control away from the people who live there.

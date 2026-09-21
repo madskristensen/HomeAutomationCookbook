@@ -5,14 +5,14 @@ redirect_from:
 title: PIR vs mmWave presence sensors
 description: Choose between PIR motion, mmWave presence, or both for bathrooms, offices, halls, and other rooms without causing false turn-offs.
 date: 2026-08-30
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/guides/pir-vs-mmwave-presence.png
 ---
 
 # PIR vs mmWave presence sensors
 
 <figure class="content-hero">
-  <img src="/assets/img/social/guides/pir-vs-mmwave-presence.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/guides/pir-vs-mmwave-presence.svg" alt="PIR motion and mmWave presence sensors compared for detecting entry and continued occupancy" width="1200" height="630">
 </figure>
 
 PIR is good at noticing someone walk into a room. mmWave is better at noticing that someone is still there. The right answer depends on whether the automation needs a fast trigger, reliable occupied state, or both.

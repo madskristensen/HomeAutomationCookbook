@@ -4,7 +4,7 @@ date: 2025-11-29
 title: Dog-bark intrusion deterrent
 description: A platform-neutral recipe that plays a dog barking sound through a speaker when motion is detected while away, as a supplementary deterrent layer.
 keywords: fake dog deterrent, dog barking security, motion triggered sound, intruder deterrent, smart home security
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/security/fake-dog-deterrent.png
 compact: true
 faqs:
@@ -19,7 +19,7 @@ faqs:
 # Play dog barking sounds as an intruder deterrent
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/fake-dog-deterrent.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/security/fake-dog-deterrent.svg" alt="A dog-bark sound plays after a credible intrusion trigger while the house is empty" width="1200" height="630">
 </figure>
 
 Play a dog barking sound through a speaker when motion is detected while the home is in Away mode, as a simple, supplementary deterrent layer.

@@ -7,7 +7,7 @@ date: 2025-11-28
 title: Build a family-safe bedtime routine
 description: Separate a gentle wind-down from an intentional good-night action while preserving occupied rooms, safety alerts, and manual control.
 keywords: bedtime routine automation, good night routine, night mode automation, family bedtime automation, smart home bedtime
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/daily-routines/bedtime-routine.png
 compact: true
 faqs:
@@ -22,7 +22,7 @@ faqs:
 # Run a bedtime routine without surprising the household
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/daily-routines/bedtime-routine.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/daily-routines/bedtime-routine.svg" alt="A bedtime routine coordinates lights, locks, and comfort while keeping manual control" width="1200" height="630">
 </figure>
 
 Offer a gentle wind-down, then use an intentional good-night signal to change Night mode and turn off only the lights that are safe to change.

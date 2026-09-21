@@ -6,7 +6,7 @@ date: 2025-11-29
 title: Traditional doorbell phone alerts
 description: A platform-neutral recipe that wires a contact sensor in parallel with an existing wired doorbell chime so ringing it sends a phone notification.
 keywords: doorbell notification, traditional doorbell, dumb doorbell alert, doorbell sensor, contact sensor doorbell
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/notifications/doorbell-notification.png
 compact: true
 faqs:
@@ -21,7 +21,7 @@ faqs:
 # Get a phone notification when a traditional doorbell rings
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/doorbell-notification.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/notifications/doorbell-notification.svg" alt="A traditional doorbell sends a phone alert while the existing chime continues to work" width="1200" height="630">
 </figure>
 
 Wire a contact sensor in parallel with an existing wired doorbell chime so pressing the doorbell also sends a phone notification, without replacing the doorbell itself.

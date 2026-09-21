@@ -6,7 +6,7 @@ date: 2025-11-29
 title: Kids' teeth-brushing reminder
 description: A platform-neutral recipe that uses a power-monitoring smart plug on an electric toothbrush charger to confirm brushing happened, with a reminder if it did not.
 keywords: teeth brushing reminder, kids routine automation, smart plug power monitoring, toothbrush charger sensor
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/notifications/teeth-brushing-reminder.png
 compact: true
 faqs:
@@ -21,7 +21,7 @@ faqs:
 # Set up a teeth brushing reminder for kids
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/teeth-brushing-reminder.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/notifications/teeth-brushing-reminder.svg" alt="A bathroom reminder helps children complete tooth brushing without repeated prompts" width="1200" height="630">
 </figure>
 
 Use a power-monitoring smart plug on an electric toothbrush charger to detect when the toothbrush is removed, as a proxy for brushing happening, with a reminder if it does not happen by a set time.

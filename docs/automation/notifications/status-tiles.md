@@ -7,7 +7,7 @@ date: 2025-11-29
 title: Smart home status tiles
 description: A platform-neutral recipe that replaces one-time push notifications with persistent dashboard tiles for household status information.
 keywords: status tiles, dashboard status, notification alternative, smart home dashboard, persistent status display
-last_modified_at: 2026-09-16
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/notifications/status-tiles.png
 compact: true
 faqs:
@@ -22,7 +22,7 @@ faqs:
 # Use status tiles instead of notifications
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/status-tiles.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/notifications/status-tiles.svg" alt="Status tiles summarize doors, windows, locks, and other conditions that need attention" width="1200" height="630">
 </figure>
 
 Replace one-time push notifications with persistent dashboard tiles that stay visible until the underlying condition is resolved.

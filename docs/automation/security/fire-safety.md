@@ -4,7 +4,7 @@ date: 2025-11-29
 title: Supplemental fire evacuation support
 description: A conservative fire-response recipe that treats listed smoke alarms as primary, turns on useful lighting immediately, and never infers that a fire is over.
 keywords: fire safety automation, smoke alarm notification, evacuation lighting, smart home fire alert, smoke alarm listener
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/security/fire-safety.png
 compact: true
 faqs:
@@ -19,7 +19,7 @@ faqs:
 # Support a fire evacuation without delaying the alarm
 
 <figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/fire-safety.svg" alt="" width="1200" height="630">
+  <img src="/assets/img/social/recipes/security/fire-safety.svg" alt="Supplemental fire automation turns on escape lighting and sends alerts without replacing alarms" width="1200" height="630">
 </figure>
 
 When a listed smoke or carbon-monoxide alarm activates, optional lighting and notifications run immediately without changing the alarm, delaying evacuation, or declaring an all-clear.
