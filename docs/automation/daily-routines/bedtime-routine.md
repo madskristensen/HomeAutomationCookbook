@@ -7,7 +7,7 @@ date: 2025-11-28
 title: Build a family-safe bedtime routine
 description: Separate a gentle wind-down from an intentional good-night action while preserving occupied rooms, safety alerts, and manual control.
 keywords: bedtime routine automation, good night routine, night mode automation, family bedtime automation, smart home bedtime
-last_modified_at: 2026-09-21
+last_modified_at: 2026-09-24
 image: /assets/img/social/recipes/daily-routines/bedtime-routine.png
 compact: true
 faqs:
@@ -161,6 +161,7 @@ Keep smoke, carbon-monoxide, water-leak, security, medical, and other urgent hou
 
 ## Related recipes
 
+- [Alert when an exterior door is left unlocked](/automation/security/door-unlocked-bedtime-check.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Bathroom night lighting](/automation/lighting/bathroom-night-light.html)
 - [Daily routines](/automation/daily-routines/index.html)

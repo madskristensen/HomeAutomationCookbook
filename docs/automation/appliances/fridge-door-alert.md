@@ -4,7 +4,7 @@ date: 2025-11-30
 title: Fridge and freezer door alerts
 description: Alert the household when a fridge or freezer door stays open, using a shorter delay for the freezer and safe handling of missing data.
 keywords: fridge door alert, freezer door notification, refrigerator door left open, food spoilage prevention, door sensor fridge
-last_modified_at: 2026-09-21
+last_modified_at: 2026-09-24
 image: /assets/img/social/recipes/appliances/fridge-door-alert.png
 compact: true
 faqs:
@@ -102,6 +102,7 @@ Only if its documented operating temperature range covers the freezer. Check the
 
 ## Related recipes
 
+- [Monitor freezer temperature and outbuilding power](/automation/notifications/freezer-temperature-power-loss.html)
 - [Low battery alerts](/automation/notifications/low-battery-alerts.html)
 - [Detect a water leak before it spreads](/automation/security/water-leak-response.html)
 - [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)

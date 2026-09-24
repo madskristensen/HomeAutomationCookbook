@@ -252,6 +252,10 @@ lighting:
       url: /automation/lighting/driveway-welcome-wave.html
       description: Confirm an after-dark arrival before lighting the route to the door.
       best_for: Driveways and entries without automatic unlocking
+    - title: Control several lights from one physical control
+      url: /automation/lighting/wireless-button-linked-lights.html
+      description: Use a wireless button, remote, or scene-capable switch while preserving local control.
+      best_for: Bedside controls, lamps, and coordinated nearby lights
   start_here_intro: Motion lighting is an easy first win because success and failure are immediately visible.
   start_here:
     - title: Lights on with motion
@@ -322,6 +326,10 @@ notifications:
       url: /automation/notifications/music-controls.html
       description: Put playback and volume controls on a household dashboard.
       best_for: Rooms where several people use the same speakers
+    - title: Monitor freezer temperature and outbuilding power
+      url: /automation/notifications/freezer-temperature-power-loss.html
+      description: Separate freezer warming, possible power loss, and stale sensor data into useful alerts.
+      best_for: Freezers in garages, sheds, basements, and workshops
   start_here_intro: Match the message to the urgency before adding more places for it to appear.
   start_here:
     - title: Low-battery alerts
@@ -380,6 +388,10 @@ security:
       url: /automation/security/fake-dog-deterrent.html
       description: Use sound as a reversible deterrent without presenting it as a security system.
       best_for: A supplemental occupied-home impression
+    - title: Check for an unlocked door
+      url: /automation/security/door-unlocked-bedtime-check.html
+      description: Keep unlocked status visible and name every unresolved lock during an intentional bedtime check.
+      best_for: Exterior doors with current smart-lock feedback
   start_here_intro: Begin with alert-only behavior and add control only when equipment is approved for it.
   start_here:
     - title: Water leak alert
