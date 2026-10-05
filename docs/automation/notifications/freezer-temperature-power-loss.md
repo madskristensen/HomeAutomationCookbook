@@ -4,7 +4,7 @@ date: 2026-09-24
 title: Monitor freezer temperature and outbuilding power
 description: Alert when a freezer warms unexpectedly or a garage or shed may have lost power, while distinguishing temperature, power, and communications failures.
 keywords: freezer temperature alert, freezer power outage alert, garage power monitor, shed power loss notification, freezer alarm
-last_modified_at: 2026-09-24
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/notifications/freezer-temperature-power-loss.png
 compact: true
 faqs:
@@ -47,7 +47,7 @@ The household gets less to check, but the automation does not pretend to know mo
 
 **Measure freezer temperature**
 
-No personally verified freezer-rated recommendation yet. Use a sensor or probe whose documented temperature range, moisture tolerance, battery chemistry, and radio behavior fit the exact location.
+[THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20). I use this for the freezer alert. Its published accuracy band is 5°F to 122°F, so compare it with the freezer's own thermometer before you trust a threshold.
 
 </div>
 <div class="product-item" markdown="1">
@@ -58,6 +58,8 @@ No personally verified recommendation yet. Use a mains-powered monitor that repo
 
 </div>
 </div>
+
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

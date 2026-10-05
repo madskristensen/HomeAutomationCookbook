@@ -4,7 +4,7 @@ date: 2026-09-24
 title: Alert when a door is left unlocked
 description: Keep an unlocked exterior door visible, check locks at bedtime, and add automatic locking only with current door and lock feedback.
 keywords: door left unlocked alert, bedtime lock check, smart lock notification, unlocked door reminder, night lock automation
-last_modified_at: 2026-09-24
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/security/door-unlocked-bedtime-check.png
 compact: true
 faqs:
@@ -41,7 +41,7 @@ The household keeps keys, thumb turns, and normal lock controls. The automation 
 
 **Report lock state**
 
-No personally verified smart-lock recommendation yet. Use a lock that reports locked, unlocked, jammed, battery, and unavailable state to the chosen platform.
+[Kwikset HomeConnect 620 Z-Wave Long Range keypad lock](https://www.amazon.com/dp/B0DWGF32GD/ref=nosim?tag=madsk0f-20). This is the lock I use, and it has been reliable here. Confirm the hub reports locked, unlocked, jammed, and battery. Keep a physical key.
 
 </div>
 <div class="product-item" markdown="1">
@@ -52,6 +52,8 @@ A compatible contact sensor can report open or closed when an automatic lock com
 
 </div>
 </div>
+
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

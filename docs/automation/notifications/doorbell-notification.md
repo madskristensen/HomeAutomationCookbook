@@ -6,7 +6,7 @@ date: 2025-11-29
 title: Traditional doorbell phone alerts
 description: A platform-neutral recipe that wires a contact sensor in parallel with an existing wired doorbell chime so ringing it sends a phone notification.
 keywords: doorbell notification, traditional doorbell, dumb doorbell alert, doorbell sensor, contact sensor doorbell
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/notifications/doorbell-notification.png
 compact: true
 faqs:
@@ -24,7 +24,7 @@ faqs:
   <img src="/assets/img/social/recipes/notifications/doorbell-notification.svg" alt="A traditional doorbell sends a phone alert while the existing chime continues to work" width="1200" height="630">
 </figure>
 
-Wire a contact sensor in parallel with an existing wired doorbell chime so pressing the doorbell also sends a phone notification, without replacing the doorbell itself.
+Close a contact sensor's dry terminals when the existing doorbell rings, so the press also sends a phone notification without replacing the doorbell.
 
 **Best for:** A household with an existing wired doorbell and chime, and someone comfortable doing simple low-voltage wiring or willing to have it done once.
 
@@ -40,7 +40,7 @@ Not everyone wants to replace a working doorbell with a smart one, especially if
 AND it has not changed state again within the last 10 seconds
 THEN send a phone notification: "Someone is at the front door"</div>
 
-- **Trigger:** The contact sensor changes state, wired in parallel with the doorbell chime circuit.
+- **Trigger:** The contact sensor changes state when the doorbell press closes its dry terminals.
 - **Conditions:** None; every press should notify.
 - **Action:** Send a phone notification, such as "Someone is at the front door."
 - **Wait / timeout:** None; the notification is sent immediately.
@@ -56,17 +56,17 @@ THEN send a phone notification: "Someone is at the front door"</div>
 
 **Detect the doorbell press**
 
-No personally verified recommendation yet. This job specifically needs a contact sensor with external wire terminals, which is a different requirement than a standard door or window contact sensor.
+[Ecolink Z-Wave Plus Door/Window Sensor (DWZWAVE2.5-ECO)](https://www.amazon.com/dp/B01N5HB4U5/ref=nosim?tag=madsk0f-20). The external screws are a non-powered dry contact, in parallel with the built-in magnet. Do not land the doorbell transformer's voltage on them. Use a relay so a press closes those terminals while the chime stays on its own wiring. Keep the magnet away from the sensor when the terminals are in use.
 
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 
 1. Turn off power to the doorbell transformer before doing any wiring.
-2. Connect the contact sensor's external wire terminals in parallel with the doorbell chime's existing wiring, so the original doorbell circuit is unaffected.
+2. Treat the sensor terminals as a dry contact. A press should close them through a relay. Do not connect the chime's low-voltage wires directly to the sensor. The original button and chime keep working on their own circuit.
 3. Restore power and test by pressing the doorbell button; confirm the sensor changes state in the platform's automation log.
 4. Add a short debounce delay, such as 10 seconds, so a single press that causes more than one signal does not send duplicate notifications.
 5. If unsure about any part of the wiring, consult an electrician; doorbell transformers are low voltage but the wiring should still be done carefully.
@@ -83,7 +83,7 @@ For a household member who is hard of hearing, add a light flash as part of the 
 
 ## Failure modes
 
-- **Sensor does not trigger on a press:** Verify the wiring connections at the chime and confirm which terminals were used; test with a multimeter during a press if available.
+- **Sensor does not trigger on a press:** Confirm the relay is closing the dry terminals, the magnet is not sitting on the sensor, and the hub saw the state change.
 - **Sensor triggers without anyone pressing the doorbell:** Check for loose connections or electrical interference near the wiring, and confirm the transformer voltage matches what the sensor expects.
 - **Multiple notifications for one press:** Add or lengthen the debounce delay in the automation.
 - **Notifications arrive with a noticeable delay:** Check the sensor's wireless connection to the hub and consider moving it closer or adding a repeater.
