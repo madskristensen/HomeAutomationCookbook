@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Set away mode when everyone leaves
 description: A conservative, platform-neutral away-mode recipe that verifies the home is empty before changing lights, climate, or security behavior.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/daily-routines/away-mode.png
 compact: true
 faqs:
@@ -29,6 +29,8 @@ When the house is confidently empty, it switches to Away, turns off what is safe
 **Best for:** Households with reliable presence signals, a manual Home or Guest override, and people willing to test false-away scenarios.
 
 **Not for:** A home where children, guests, caregivers, or anyone without a tracked device may remain inside without a dependable override.
+
+💡 If Away or Home fires when nobody came or left, read [why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html) before making the delay longer.
 
 ## Why this exists
 
@@ -177,6 +179,7 @@ Add security actions only after the household has tested presence detection and 
 
 ## Related recipes
 
+- [Why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html)
 - [Safe thermostat auto-away for pets and pipes](/automation/climate/safe-thermostat-away.html)
 - [Away lighting](/automation/security/away-lights.html)
 - [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)

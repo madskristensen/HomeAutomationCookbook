@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Practical home automation recipes
-description: Discover practical automation ideas that help you get more from your smart home while keeping your household in control.
+description: Practical recipes for a family house. The home should do the helpful thing, and the wall switch should still work when it does not.
 ---
 
 <section class="home-hero">
   <div class="home-hero-copy">
     <p class="home-eyebrow">Practical ideas for everyday homes</p>
-    <h1>Get more from your smart home</h1>
-    <p class="home-hero-subtitle">Find useful automations that remove repeated checks, improve comfort, and support the routines your household already has.</p>
+    <h1>The house should do the helpful thing</h1>
+    <p class="home-hero-subtitle">The wall switch should still work when it does not. These recipes cover repeated checks, comfort, and routines the household already has.</p>
     <div class="home-hero-actions">
-      <a href="/automation/index.html" class="home-button home-button-primary">Explore automation ideas</a>
+      <a href="/automation/index.html" class="home-button home-button-primary">Browse recipes</a>
       <a href="/getting-started/index.html" class="home-button home-button-secondary">Start with the basics</a>
     </div>
     <ul class="home-hero-signals" aria-label="What to expect">
@@ -31,7 +31,7 @@ description: Discover practical automation ideas that help you get more from you
 <section class="home-section">
   <div class="home-section-heading">
     <div>
-      <p class="home-eyebrow">Choose your benefit</p>
+      <p class="home-eyebrow">Start with a job</p>
       <h2>What should your home help with?</h2>
     </div>
     <p>Start with the part of daily life you want to make easier. You can choose platforms and devices later.</p>
@@ -42,9 +42,9 @@ description: Discover practical automation ideas that help you get more from you
       <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="Lighting that responds when someone enters a room" width="1200" height="630">
       <div>
         <p class="home-card-label">Lighting</p>
-        <h3>Make rooms respond naturally</h3>
+        <h3>Light the room, keep the switch</h3>
         <p>Support arrivals, activities, and departures without taking away the wall switch.</p>
-        <span>Explore lighting ideas</span>
+        <span>Open lighting recipes</span>
       </div>
     </a>
 
@@ -54,7 +54,7 @@ description: Discover practical automation ideas that help you get more from you
         <p class="home-card-label">Daily routines</p>
         <h3>Remember fewer steps each day</h3>
         <p>Help mornings, bedtimes, arrivals, and departures happen with less coordination.</p>
-        <span>Explore daily routines</span>
+        <span>Open daily routines</span>
       </div>
     </a>
 
@@ -64,7 +64,7 @@ description: Discover practical automation ideas that help you get more from you
         <p class="home-card-label">Climate and comfort</p>
         <h3>Stay comfortable with fewer adjustments</h3>
         <p>Respond to heat, humidity, sunlight, and open windows only when it is useful.</p>
-        <span>Explore comfort ideas</span>
+        <span>Open comfort recipes</span>
       </div>
     </a>
 
@@ -74,12 +74,12 @@ description: Discover practical automation ideas that help you get more from you
         <p class="home-card-label">Appliances</p>
         <h3>Stop checking whether a job is done</h3>
         <p>Know when laundry, dishes, cleaning, or another household task needs attention.</p>
-        <span>Explore appliance ideas</span>
+        <span>Open appliance recipes</span>
       </div>
     </a>
   </div>
 
-  <p class="home-more-paths">More ways to get value: <a href="/automation/security/index.html">notice safety concerns</a>, <a href="/automation/notifications/index.html">receive useful reminders</a>, or <a href="/automation/entertainment/index.html">enjoy music and TV more easily</a>.</p>
+  <p class="home-more-paths">Other jobs: <a href="/automation/security/index.html">notice safety concerns</a>, <a href="/automation/notifications/index.html">receive useful reminders</a>, or <a href="/automation/entertainment/index.html">run music and TV routines</a>.</p>
 </section>
 
 <section class="home-section">
@@ -122,7 +122,7 @@ description: Discover practical automation ideas that help you get more from you
 <section class="home-trust">
   <div>
     <p class="home-eyebrow">Understand it before you depend on it</p>
-    <h2>Ideas you can adapt and stay in control of</h2>
+    <h2>Recipes you can test and change</h2>
   </div>
   <div>
     <p>Every recipe explains the trigger, checks, action, timing, manual control, and failure behavior. I write from firsthand use in my family home, including Alexa, SmartThings, and Hubitat.</p>

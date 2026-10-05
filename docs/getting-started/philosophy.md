@@ -1,8 +1,8 @@
 ---
 layout: guide
 title: Home automation philosophy
-description: Learn the core principles of home automation that work for everyone - reliability, natural behavior adaptation, and graceful failure modes.
-last_modified_at: 2026-09-21
+description: Rules for automations that fit the household, need little explanation, and leave the wall switch working when something fails.
+last_modified_at: 2026-10-05
 image: /assets/img/social/guides/home-automation-philosophy.png
 ---
 

@@ -27,11 +27,11 @@ appliances:
       best_for: Coffee makers with a manufacturer-supported timer
     - title: Start the robot vacuum after everyone leaves
       url: /automation/appliances/robot-vacuum-auto-start.html
-      description: Wait for a tested empty-home signal and a daytime window before starting.
+      description: Start after a tested empty signal and a daytime window. Use the paired recipe when dock-on-return is the job.
       best_for: Reversible cleaning after a confident departure
     - title: Keep the vacuum running only while the house is empty
       url: /automation/appliances/vacuum-when-empty.html
-      description: Add a return-home stop condition so the vacuum docks when someone arrives.
+      description: Dock as soon as someone returns, and block a second run after today's cycle finishes.
       best_for: Homes where occupancy can change during cleaning
   start_here_intro: Start with an alert before allowing an automation to control or start anything.
   start_here:

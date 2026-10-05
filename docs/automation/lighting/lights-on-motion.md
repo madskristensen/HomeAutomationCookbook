@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights on with motion sensors
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
-last_modified_at: 2026-09-24
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/lighting/lights-on-motion.png
 compact: true
 faqs:
@@ -29,6 +29,8 @@ Walk in, lights on. If that fails at 2am, the wall switch still works.
 **Best for:** Hallways, closets, entryways, laundry rooms, and bathrooms with a sensor that sees the door.
 
 **Not for:** A room where people sit still for long periods, or a bathroom with a short PIR timer. A PIR is best for detecting entry motion. Use a longer timeout and the [PIR vs mmWave presence article](/articles/pir-vs-mmwave-presence.html) where the automation must know that someone is still in the room.
+
+💡 If the light turns on when nobody is there, walk through [lights turning on by themselves](/articles/lights-turning-on-by-themselves.html) before you add another sensor.
 
 ## Why this exists
 
@@ -136,6 +138,7 @@ A local hub and compatible devices can keep the automation running, but the phys
 
 ## Related recipes
 
+- [Lights turning on by themselves](/articles/lights-turning-on-by-themselves.html)
 - [Control several lights from one physical button or switch](/automation/lighting/wireless-button-linked-lights.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Bathroom night light](/automation/lighting/bathroom-night-light.html)

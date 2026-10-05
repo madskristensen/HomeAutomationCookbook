@@ -11,6 +11,8 @@ PAGES = [
   ["docs/articles/index.md", "articles", "Articles", "book", false],
   ["docs/_articles/pir-vs-mmwave-presence.md", "pir-vs-mmwave-presence", "Sensor guide", "sensors", true],
   ["docs/_articles/motion-sensor-placement.md", "motion-sensor-placement", "Sensor guide", "floorplan", true],
+  ["docs/_articles/why-arrive-leave-triggers-fail.md", "why-arrive-leave-triggers-fail", "Presence", "geofence", false],
+  ["docs/_articles/lights-turning-on-by-themselves.md", "lights-turning-on-by-themselves", "Checklist", "lamp", false],
   ["docs/getting-started/index.md", "getting-started", "Getting started", "path", true],
   ["docs/getting-started/philosophy.md", "home-automation-philosophy", "Design principles", "balance", true],
   ["docs/getting-started/device-guide.md", "choose-devices", "Device guide", "devices", true],
@@ -133,6 +135,28 @@ def illustration(name)
         <path d="M82 275v95M252 275v95M422 275v95M82 370h340" stroke="#9db1b6" stroke-dasharray="10 12"/>
       </g>
     SVG
+  when "geofence"
+    <<~SVG
+      <g transform="translate(760 130) scale(.82)" #{common}>
+        <path d="M70 250 210 130l140 120" /><path d="M112 232v150h196V232" fill="#eef2f3"/>
+        <path d="M188 382v-70h44v70"/>
+        <circle cx="210" cy="250" r="150" stroke="#9db1b6" stroke-dasharray="14 16"/>
+        <rect x="430" y="168" width="78" height="132" rx="14" fill="#ffffff"/>
+        <circle cx="469" cy="268" r="8" fill="#6f8f96" stroke="none"/>
+        <path d="M360 250h70" stroke="#6f8f96" stroke-dasharray="8 10"/>
+      </g>
+    SVG
+  when "lamp"
+    <<~SVG
+      <g transform="translate(760 120) scale(.8)" #{common}>
+        <path d="M150 40c-70 0-120 52-120 118 0 46 24 78 54 102 18 14 26 32 26 54h80c0-22 8-40 26-54 30-24 54-56 54-102 0-66-50-118-120-118z" fill="#eef2f3"/>
+        <path d="M118 340h64M128 372h44M150 40v-20"/>
+        <rect x="330" y="70" width="150" height="300" rx="16" fill="#ffffff"/>
+        <path d="M360 130h90M360 190h90M360 250h90" stroke="#9db1b6"/>
+        <path d="M368 118l16 16 28-36" stroke="#6f8f96"/>
+        <circle cx="150" cy="150" r="28" fill="#6f8f96" stroke="none"/>
+      </g>
+    SVG
   when "checklist"
     <<~SVG
       <g transform="translate(800 112) scale(.7)" #{common}>
@@ -223,7 +247,10 @@ end
 
 FileUtils.mkdir_p(OUTPUT)
 
-PAGES.each do |relative_path, slug, label, motif, dated|
+selected = ARGV.map(&:downcase)
+pages = selected.empty? ? PAGES : PAGES.select { |row| selected.include?(row[1]) }
+
+pages.each do |relative_path, slug, label, motif, dated|
   file = ROOT.join(relative_path)
   content = File.binread(file).force_encoding(Encoding::UTF_8)
   title = extract(content, "title")
@@ -236,4 +263,4 @@ PAGES.each do |relative_path, slug, label, motif, dated|
   File.binwrite(file, updated) unless updated == content
 end
 
-puts "Generated and wired #{PAGES.length} guide images."
+puts "Generated and wired #{pages.length} guide images."

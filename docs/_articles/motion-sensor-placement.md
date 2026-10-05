@@ -3,7 +3,7 @@ layout: guide
 title: Motion sensor placement guide
 description: A practical guide to placing and testing PIR and presence sensors so automations respond at the right moment without false triggers.
 date: 2026-09-09
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-05
 image: /assets/img/social/guides/motion-sensor-placement.png
 ---
 
@@ -102,6 +102,7 @@ Use a delay after the last motion event, not an immediate off action. A PIR repo
 
 ## Related recipes
 
+- [Lights turning on by themselves](/articles/lights-turning-on-by-themselves.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Turn on a dim bathroom light at night](/automation/lighting/bathroom-night-light.html)

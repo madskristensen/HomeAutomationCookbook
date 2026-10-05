@@ -4,7 +4,7 @@ date: 2026-08-30
 title: Guest-friendly smart home mode
 description: A platform-neutral guest mode that keeps lights and physical controls simple, prevents false Away mode, and quiets only non-urgent personal automation.
 keywords: smart home guest mode, guest friendly automation, vacation guest mode, quiet notifications, smart home visitors
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/daily-routines/guest-mode.png
 compact: true
 faqs:
@@ -152,6 +152,8 @@ Use an expiry reminder, not a silent forced end. A host should confirm that gues
 
 ## Related recipes
 
+- [Why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html)
+- [Lights turning on by themselves](/articles/lights-turning-on-by-themselves.html)
 - [Set Away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Run a family-safe bedtime routine](/automation/daily-routines/bedtime-routine.html)
 - [Daily routines](/automation/daily-routines/index.html)

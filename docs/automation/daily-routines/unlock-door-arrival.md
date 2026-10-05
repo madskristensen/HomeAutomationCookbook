@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Prepare the house when someone arrives
 description: Restore Home mode, light a safe path, and resume normal comfort without treating phone location as proof of identity.
 keywords: arrival home automation, welcome home automation, presence detection, entry lighting, home mode automation
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/daily-routines/unlock-door-arrival.png
 compact: true
 faqs:
@@ -29,6 +29,8 @@ When the first person returns, the house switches to Home, lights a safe path wh
 **Best for:** Households with a reliable Away state and simple arrival actions that are safe when phone location is briefly wrong.
 
 **Not for:** Automatically unlocking a door, opening a garage, disarming an alarm, or starting an appliance based only on a geofence.
+
+💡 If arrival fires while someone is only driving past, read [why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html) before you enlarge the home area.
 
 ## Why this exists
 
@@ -169,6 +171,7 @@ Usually very little. Reserve whole-house Home actions for the first arrival and 
 
 ## Related recipes
 
+- [Why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
