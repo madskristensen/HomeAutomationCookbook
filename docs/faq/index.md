@@ -4,7 +4,7 @@ title: Frequently asked questions
 description: Direct answers about choosing a platform, buying compatible devices, building reliable automations, privacy, and troubleshooting.
 permalink: /faq/index.html
 canonical_url: https://www.homeautomationcookbook.com/faq/index.html
-last_modified_at: 2026-08-30
+last_modified_at: 2026-10-05
 ---
 
 # Frequently asked questions
@@ -111,9 +111,17 @@ Do not immediately add more conditions. First find which assumption was wrong.
 </details>
 
 <details markdown="1">
+<summary>Why do lights turn on by themselves?</summary>
+
+A sensor may be seeing the hall, a pet, or the sun. Power may have come back. Two rules may be doing the same job. A smart bulb may have booted after the wall switch cut its power. Or the sensor may be linked straight to the light, past the hub rule you turned off.
+
+Check one cause at a time in [lights turning on by themselves](/articles/lights-turning-on-by-themselves.html).
+</details>
+
+<details markdown="1">
 <summary>Is one presence signal enough to know the house is empty?</summary>
 
-No. A phone can be left behind, lose power, or report the wrong location. Use delay, a visible Guest or Staying Home override, and recent indoor activity as reasons to avoid switching to Away.
+No. A phone can be left behind, lose power, or report the wrong location. Use delay, a visible Guest or Staying Home override, and recent indoor activity as reasons to avoid switching to Away. [Why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html) walks through geofences, battery saving, Wi-Fi hints, and what should wait for a second signal.
 </details>
 
 ## Safety and privacy

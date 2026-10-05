@@ -83,6 +83,10 @@ climate:
       url: /automation/climate/room-heater-maintain-temp.html
       description: Alert when a room leaves its safe range without automating a portable heater.
       best_for: Basements, utility rooms, and plumbing risk
+    - title: Limit an IR-controlled mini-split
+      url: /automation/climate/mini-split-ir-setpoint-limit.html
+      description: Send only a capped heat or cool command, never trust IR-only state, and keep the physical remote.
+      best_for: Mini-splits and window units with discrete IR setpoint codes
     - title: Suggest when to open or close windows
       url: /automation/climate/window-notifications.html
       description: Compare indoor and outdoor conditions, then notify instead of moving windows automatically.
@@ -100,12 +104,15 @@ climate:
       reason: the schedule is predictable and manually reversible
   controls:
     - Keep thermostat, fan, and blind controls usable by hand.
+    - Leave the manufacturer's remote in the room for any unit controlled only by infrared.
     - Use limits that protect people, pets, plumbing, and the building.
     - Use only equipment approved for the load and type of control.
     - Make automatic changes visible and easy to reverse.
   verify: >-
     Test sensor loss, hub restart, manual changes, and the edge of every temperature or humidity
     range. An unavailable sensor must produce a visible unknown state rather than a successful reading.
+    For an IR-controlled mini-split or window unit, treat every command as unconfirmed and keep
+    the physical remote in the room.
   next_label: entertainment
   next_url: /automation/entertainment/index.html
 
@@ -219,6 +226,11 @@ lighting:
     Move through the house without hunting for switches and stop checking whether empty rooms
     were left lit. These recipes respond to motion, doors, schedules, and light levels while
     keeping every familiar wall control useful.
+  callout: >-
+    Day and night brightness for motion lights is already in the
+    [Setup notes for lights on motion](/automation/lighting/lights-on-motion.html#setup-notes):
+    leave the light off when daylight is enough, use a useful level in the evening,
+    and start deep night around 10 to 20 percent.
   recipes:
     - title: Turn on lights when motion is detected
       url: /automation/lighting/lights-on-motion.html

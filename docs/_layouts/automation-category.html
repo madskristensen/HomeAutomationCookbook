@@ -7,6 +7,10 @@ layout: default
 
 <p>{{ category.intro }}</p>
 
+{% if category.callout %}
+{{ category.callout | markdownify }}
+{% endif %}
+
 <h2>Choose a recipe</h2>
 
 <div class="automation-cards">

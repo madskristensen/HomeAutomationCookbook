@@ -11,6 +11,8 @@ PAGES = [
   ["docs/articles/index.md", "articles", "Articles", "book", false],
   ["docs/_articles/pir-vs-mmwave-presence.md", "pir-vs-mmwave-presence", "Sensor guide", "sensors", true],
   ["docs/_articles/motion-sensor-placement.md", "motion-sensor-placement", "Sensor guide", "floorplan", true],
+  ["docs/_articles/why-arrive-leave-triggers-fail.md", "why-arrive-leave-triggers-fail", "Presence guide", "sensors", true],
+  ["docs/_articles/lights-turning-on-by-themselves.md", "lights-turning-on-by-themselves", "Lighting guide", "checklist", true],
   ["docs/getting-started/index.md", "getting-started", "Getting started", "path", true],
   ["docs/getting-started/philosophy.md", "home-automation-philosophy", "Design principles", "balance", true],
   ["docs/getting-started/device-guide.md", "choose-devices", "Device guide", "devices", true],
@@ -223,7 +225,11 @@ end
 
 FileUtils.mkdir_p(OUTPUT)
 
+only = ENV["GUIDE_ONLY"]&.split(",")&.map(&:strip)
+generated = 0
 PAGES.each do |relative_path, slug, label, motif, dated|
+  next if only && !only.include?(slug)
+  generated += 1
   file = ROOT.join(relative_path)
   content = File.binread(file).force_encoding(Encoding::UTF_8)
   title = extract(content, "title")
@@ -236,4 +242,4 @@ PAGES.each do |relative_path, slug, label, motif, dated|
   File.binwrite(file, updated) unless updated == content
 end
 
-puts "Generated and wired #{PAGES.length} guide images."
+puts "Generated and wired #{generated} guide images."

@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Practical home automation recipes
-description: Discover practical automation ideas that help you get more from your smart home while keeping your household in control.
+description: Helpful automations for an ordinary family house. The physical switch still works when the automation does not.
 ---
 
 <section class="home-hero">
   <div class="home-hero-copy">
     <p class="home-eyebrow">Practical ideas for everyday homes</p>
-    <h1>Get more from your smart home</h1>
-    <p class="home-hero-subtitle">Find useful automations that remove repeated checks, improve comfort, and support the routines your household already has.</p>
+    <h1>Helpful automations for an ordinary house</h1>
+    <p class="home-hero-subtitle">The house should do the small helpful thing. The physical switch still works when it does not.</p>
     <div class="home-hero-actions">
       <a href="/automation/index.html" class="home-button home-button-primary">Explore automation ideas</a>
       <a href="/getting-started/index.html" class="home-button home-button-secondary">Start with the basics</a>

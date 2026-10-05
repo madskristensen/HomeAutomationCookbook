@@ -88,7 +88,7 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
 <a href="/automation/climate/index.html" class="category-card">
 <h3>Climate and comfort</h3>
 <p>Reduce waste while preserving thermostat limits, manual holds, ventilation, and safe temperatures.</p>
-<span class="category-count">6 recipes + 1 guide</span>
+<span class="category-count">7 recipes + 1 guide</span>
 </a>
 
 <a href="/automation/entertainment/index.html" class="category-card">
