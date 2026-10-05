@@ -4,7 +4,7 @@ date: 2025-11-29
 title: Automate blinds at sunrise and sunset
 description: Open motorized blinds near sunrise and close them near sunset while preserving privacy, bedtime limits, and physical control.
 keywords: smart blinds automation, automatic shades, sunset blinds, sunrise blinds, motorized blinds, privacy automation
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/climate/blinds-sunset-sunrise.png
 compact: true
 faqs:
@@ -56,12 +56,12 @@ THEN close street-facing and bedroom blinds</div>
 
 **Motorize existing blinds or shades**
 
-No personally verified recommendation yet. I have not verified a specific motorized blind or retrofit motor. Confirm the household still has a physical remote, wand, or wall control after motorizing.
+I do not have automated blinds installed yet, so this is not a hands-on recommendation. If I were buying one, I would start with [SmartWings motorized roller shades](https://www.amazon.com/dp/B09M5R2PCB/ref=nosim?tag=madsk0f-20). That link is one configured listing, blackout Essential Grey in a specific size, not a window I have measured. Confirm the physical remote, wand, or wall control still works after it is installed.
 
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 

@@ -4,7 +4,7 @@ date: 2026-09-24
 title: Control lights with a wireless button or linked switch
 description: Let a physical button, remote, or smart switch control other lights while every room keeps an understandable manual fallback.
 keywords: wireless light button, smart light remote, one switch controls multiple lights, linked smart switches, scene controller
-last_modified_at: 2026-09-24
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/lighting/wireless-button-linked-lights.png
 compact: true
 faqs:
@@ -41,7 +41,9 @@ The reusable pattern is to separate the physical input from the lighting action.
 
 **Provide a physical input**
 
-No personally verified wireless button recommendation yet. Use a compatible button, remote, or scene-capable wall switch that reports distinct press events and battery or unavailable state.
+[SONOFF SNZB-01P Zigbee wireless button](https://www.amazon.com/dp/B0CL9JTMWF/ref=nosim?tag=madsk0f-20). One button, with single, double, and long press. Confirm the hub you already use reports the presses you plan to use.
+
+For several buttons on the wall, [Minoston MR40Z Z-Wave scene controller](https://www.amazon.com/dp/B09BQKD5FQ/ref=nosim?tag=madsk0f-20). Four buttons, battery powered, no new wiring. Confirm each press shows up before you build scenes on it.
 
 </div>
 <div class="product-item" markdown="1">
@@ -52,6 +54,8 @@ A smart wall switch or dimmer that keeps its paddle working locally. See [recomm
 
 </div>
 </div>
+
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Logic
 

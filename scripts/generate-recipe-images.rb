@@ -240,8 +240,10 @@ Dir[PLATFORM_IMAGES.join("platform*.svg")].sort.each do |path|
   File.write(path, themed, encoding: "UTF-8")
 end
 
+only_recipe = ENV["RECIPE_ONLY"]
 Dir[RECIPES.join("*", "*.md")].sort.each do |path|
   file = Pathname.new(path)
+  next if only_recipe && file.basename(".md").to_s != only_recipe
   content = File.binread(file).force_encoding(Encoding::UTF_8)
   next unless content.match?(/^layout:[ \t]*automation[ \t]*\r*$/)
 

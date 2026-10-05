@@ -4,7 +4,7 @@ redirect_from:
   - /getting-started/safe-thermostat-away.html
 title: Safe thermostat auto-away
 description: Use a modest thermostat setback when the home is empty without risking pets, frozen pipes, manual holds, or an unsafe recovery.
-last_modified_at: 2026-09-12
+last_modified_at: 2026-10-05
 compact: true
 ---
 
@@ -141,6 +141,8 @@ No. Select it explicitly after reviewing pets, plumbing, plants, water, deliveri
 
 ## Related guides
 
+- [Why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html)
+- [Limit an IR-controlled mini-split](/automation/climate/mini-split-ir-setpoint-limit.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Pause heating or cooling when a window stays open](/automation/climate/thermostat-windows-open.html)
 - [Recommended smart home gear](/getting-started/device-guide.html#products-i-have-used)
