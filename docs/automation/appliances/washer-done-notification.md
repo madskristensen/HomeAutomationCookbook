@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Get notified when the washer finishes
 description: A platform-neutral laundry recipe that learns the washer's power pattern and sends one reliable completion alert without controlling appliance power.
 keywords: washer finished alert, laundry notification, washer power monitoring, washing machine automation, washer done notification
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/appliances/washer-done-notification.png
 compact: true
 faqs:
@@ -64,7 +64,7 @@ AND clear the running marker</div>
 
 **Observe washer power**
 
-No personally verified monitor for the washer's nameplate load yet. I have not verified an inline power monitor for this load. Do not assume a general-purpose smart plug is suitable.
+[Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY/ref=nosim?tag=madsk0f-20). This is the monitor I use on the washer. Read power only, keep the relay on, and check the washer nameplate against the switch rating before connecting it.
 
 </div>
 <div class="product-item" markdown="1">
@@ -76,7 +76,7 @@ A manual dashboard or phone action. A manual reset is better than an unreliable 
 </div>
 </div>
 
-See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Do not buy an inline monitor until its voltage, continuous-current, startup-current, grounding, and appliance-load ratings have been checked against the washer and its manual.
+See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
 ## Setup notes
 
