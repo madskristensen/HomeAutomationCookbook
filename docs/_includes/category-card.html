@@ -1,0 +1,9 @@
+{% comment %}
+Shared linked category/platform card.
+Params: url, title, description, count (optional).
+{% endcomment %}
+<a href="{{ include.url | relative_url }}" class="category-card">
+  <h3>{{ include.title }}</h3>
+  {% if include.description %}<p>{{ include.description }}</p>{% endif %}
+  {% if include.count %}<span class="category-count">{{ include.count }}</span>{% endif %}
+</a>

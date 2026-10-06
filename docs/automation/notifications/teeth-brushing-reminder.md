@@ -20,9 +20,7 @@ faqs:
 
 # Set up a teeth brushing reminder for kids
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/teeth-brushing-reminder.svg" alt="A bathroom reminder helps children complete tooth brushing without repeated prompts" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/teeth-brushing-reminder.svg" alt="A bathroom reminder helps children complete tooth brushing without repeated prompts" %}
 
 Use a power-monitoring smart plug on an electric toothbrush charger to detect when the toothbrush is removed, as a proxy for brushing happening, with a reminder if it does not happen by a set time.
 
@@ -111,7 +109,9 @@ Yes, if the platform supports it, a successful morning and evening brushing dete
 - [Start the morning routine](/automation/daily-routines/morning-routine.html)
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notifications"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

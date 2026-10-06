@@ -18,9 +18,7 @@ faqs:
 
 # Alert when a door is left unlocked and check again at bedtime
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/door-unlocked-bedtime-check.svg" alt="An exterior door lock reports unlocked, prompting an alert and a separate bedtime status check" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/security/door-unlocked-bedtime-check.svg" alt="An exterior door lock reports unlocked, prompting an alert and a separate bedtime status check" %}
 
 Keep an exterior door's unlocked state visible after a useful delay, then run one intentional bedtime check that names every unlocked, jammed, or unknown lock.
 
@@ -178,7 +176,9 @@ Report the state as unknown and ask for a manual check. Never treat missing data
 - [Get low-battery alerts](/automation/notifications/low-battery-alerts.html)
 - [Report a garage door left open](/automation/security/garage-door-notification.html)
 
-<div class="page-navigation">
-  <a href="/automation/security/index.html">Back to safety and security automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/security/index.html"
+  left_label="Back to safety and security automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

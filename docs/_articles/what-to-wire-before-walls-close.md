@@ -8,9 +8,7 @@ image: /assets/img/social/guides/what-to-wire-before-walls-close.png
 
 # What to wire and plan before the walls close
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/what-to-wire-before-walls-close.svg" alt="Open wall framing with planned electrical boxes, low-voltage cable, conduit, and labeled routes" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/what-to-wire-before-walls-close.svg" alt="Open wall framing with planned electrical boxes, low-voltage cable, conduit, and labeled routes" %}
 
 Open walls are a brief chance to make future changes easier without deciding every automation today. The goal is not to fill the house with gadgets. It is to preserve familiar controls, reliable network paths, service access, and enough wiring flexibility to adapt later.
 

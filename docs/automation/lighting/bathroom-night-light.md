@@ -20,9 +20,7 @@ faqs:
 
 # Turn on a dim bathroom light at night
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/bathroom-night-light.svg" alt="A bathroom light turns on dimly for nighttime visits while the wall switch still works" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/lighting/bathroom-night-light.svg" alt="A bathroom light turns on dimly for nighttime visits while the wall switch still works" %}
 
 Walk in half asleep, get enough light to see, and do not wake the house. If it fails, the wall switch still works.
 
@@ -131,7 +129,9 @@ The physical wall switch still works independent of the automation, so the bathr
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Lighting automations](/automation/lighting/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/lighting/index.html">← Back to lighting automations</a>
-  <a href="/automation/index.html">View all automations →</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/lighting/index.html"
+  left_label="Back to lighting automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

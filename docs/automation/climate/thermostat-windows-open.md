@@ -21,9 +21,7 @@ faqs:
 
 # Pause heating or cooling when a window stays open
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/climate/thermostat-windows-open.svg" alt="Heating or cooling pauses when a window remains open" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/climate/thermostat-windows-open.svg" alt="Heating or cooling pauses when a window remains open" %}
 
 Open a window for fresh air, and heating or cooling pauses after a short delay. Close every monitored opening, and the system resumes only if this recipe paused it.
 
@@ -165,7 +163,9 @@ Treat the manual thermostat change as the new instruction. Do not restore an old
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Climate automations](/automation/climate/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/climate/index.html"
+  left_label="Back to climate automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

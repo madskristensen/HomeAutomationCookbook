@@ -58,6 +58,7 @@ If you have questions about this privacy policy, please open an issue on our [Gi
 
 We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date.
 
-<div class="page-navigation">
-  <a href="/">Back to home</a>
-</div>
+{% include page-navigation.html
+  left_url="/"
+  left_label="Back to home"
+%}

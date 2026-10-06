@@ -20,9 +20,7 @@ faqs:
 
 # Set up a garbage day reminder tile
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/garbage-day-reminder.svg" alt="A visible reminder shows when bins need to go out and clears after confirmation" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/garbage-day-reminder.svg" alt="A visible reminder shows when bins need to go out and clears after confirmation" %}
 
 Turn a dashboard tile red the evening before garbage day, and green again once the task is marked complete.
 
@@ -113,7 +111,9 @@ If the local collection service publishes a calendar, checking it as a condition
 - [Set up a maintenance reminder dashboard](/automation/notifications/maintenance-reminder-dashboard.html)
 - [Set up a pet feeding reminder](/automation/notifications/pet-feeding-reminder.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notifications"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

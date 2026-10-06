@@ -18,9 +18,7 @@ faqs:
 
 # Play dog barking sounds as an intruder deterrent
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/fake-dog-deterrent.svg" alt="A dog-bark sound plays after a credible intrusion trigger while the house is empty" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/security/fake-dog-deterrent.svg" alt="A dog-bark sound plays after a credible intrusion trigger while the house is empty" %}
 
 Play a dog barking sound through a speaker when motion is detected while the home is in Away mode, as a simple, supplementary deterrent layer.
 
@@ -116,7 +114,9 @@ Run it only in Away mode. You can further limit Away-mode playback to nighttime,
 - [Set up fire safety response](/automation/security/fire-safety.html)
 - [Set up away mode](/automation/daily-routines/away-mode.html)
 
-<div class="page-navigation">
-  <a href="/automation/security/index.html">Back to security</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/security/index.html"
+  left_label="Back to security"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

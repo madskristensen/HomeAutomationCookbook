@@ -18,9 +18,7 @@ faqs:
 
 # Start the robot vacuum when everyone leaves
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/appliances/robot-vacuum-auto-start.svg" alt="A robot vacuum starts after everyone has left the house" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/appliances/robot-vacuum-auto-start.svg" alt="A robot vacuum starts after everyone has left the house" %}
 
 **Use this if** you want the vacuum to start after a tested empty-home signal during the day. If it should dock the moment anyone comes home, and skip another run that same day, use [Run the vacuum only while the house stays empty](/automation/appliances/vacuum-when-empty.html).
 
@@ -144,7 +142,9 @@ Send it back to its dock immediately. See the companion recipe for returning-ear
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 
-<div class="page-navigation">
-  <a href="/automation/appliances/index.html">Back to appliance automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/appliances/index.html"
+  left_label="Back to appliance automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

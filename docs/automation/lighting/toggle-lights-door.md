@@ -20,9 +20,7 @@ faqs:
 
 # Turn lights on when a door opens
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/toggle-lights-door.svg" alt="Opening a door turns on the nearby light while manual control remains available" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/lighting/toggle-lights-door.svg" alt="Opening a door turns on the nearby light while manual control remains available" %}
 
 Open the closet or pantry, and the light comes on. If the automation is unavailable, the familiar wall switch still works.
 
@@ -126,8 +124,8 @@ I have not personally run Home Assistant. Treat it as a technical-fit option and
 
 ## Advanced features
 
-<div class="feature-grid">
-  <div class="feature-card">
+<div class="automation-cards">
+  <div class="automation-card">
     <h3>Day vs. night brightness</h3>
     <p>Adjust brightness based on time of day:</p>
     <ul>
@@ -136,7 +134,7 @@ I have not personally run Home Assistant. Treat it as a technical-fit option and
     </ul>
   </div>
   
-  <div class="feature-card">
+  <div class="automation-card">
     <h3>Auto turn-off when door closes</h3>
     <p>Turn off light 2 minutes after door closes:</p>
     <ul>
@@ -176,7 +174,9 @@ It can when the hub and devices support local automation. Regardless, the physic
 - [Disable automations when door is closed](/automation/lighting/disable-on-door-close.html)
 - [Lighting automations](/automation/lighting/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/lighting/index.html">Back to lighting automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/lighting/index.html"
+  left_label="Back to lighting automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

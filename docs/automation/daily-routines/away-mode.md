@@ -20,9 +20,7 @@ faqs:
 
 # Set away mode when everyone leaves
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/daily-routines/away-mode.svg" alt="Away mode activates after everyone leaves and coordinates the house without locking anyone out" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/daily-routines/away-mode.svg" alt="Away mode activates after everyone leaves and coordinates the house without locking anyone out" %}
 
 When the house is confidently empty, it switches to Away, turns off what is safe to turn off, and tells the household what changed.
 
@@ -184,7 +182,9 @@ Add security actions only after the household has tested presence detection and 
 - [Prepare the house when someone arrives](/automation/daily-routines/unlock-door-arrival.html)
 - [Daily routine automations](/automation/daily-routines/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/daily-routines/index.html">Back to daily routine automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/daily-routines/index.html"
+  left_label="Back to daily routine automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

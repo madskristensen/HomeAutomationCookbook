@@ -18,9 +18,7 @@ faqs:
 
 # Make the smart home predictable for guests
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/daily-routines/guest-mode.svg" alt="Guest mode keeps familiar switches and simple controls working for visitors" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/daily-routines/guest-mode.svg" alt="Guest mode keeps familiar switches and simple controls working for visitors" %}
 
 Use one visible Guest-mode control to keep wall switches normal, preserve useful lighting and safety behavior, and pause personal or surprising automation until a host confirms the visit has ended.
 
@@ -157,7 +155,9 @@ Use an expiry reminder, not a silent forced end. A host should confirm that gues
 - [Run a family-safe bedtime routine](/automation/daily-routines/bedtime-routine.html)
 - [Daily routines](/automation/daily-routines/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/daily-routines/index.html">Back to daily routines</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/daily-routines/index.html"
+  left_label="Back to daily routines"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

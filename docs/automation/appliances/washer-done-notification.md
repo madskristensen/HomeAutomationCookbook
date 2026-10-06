@@ -18,9 +18,7 @@ faqs:
 
 # Get notified when the washer finishes
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/appliances/washer-done-notification.svg" alt="A washer completion alert after power use confirms a real cycle has finished" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/appliances/washer-done-notification.svg" alt="A washer completion alert after power use confirms a real cycle has finished" %}
 
 Learn the washer's own power pattern, remember when a real cycle starts, and send one alert after power stays at the finished level.
 
@@ -167,7 +165,9 @@ No. Use the device only for monitoring and keep its relay on. Do not remotely in
 - [Appliance automations](/automation/appliances/index.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 
-<div class="page-navigation">
-  <a href="/automation/appliances/index.html">Back to appliance automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/appliances/index.html"
+  left_label="Back to appliance automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

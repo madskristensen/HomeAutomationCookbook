@@ -20,9 +20,7 @@ faqs:
 
 # Turn lights off after motion stops
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/lights-off-after-motion.svg" alt="Lights turn off after motion stops and a suitable vacancy delay passes" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/lighting/lights-off-after-motion.svg" alt="Lights turn off after motion stops and a suitable vacancy delay passes" %}
 
 Leave the room, lights off. Stay still, and they should not leave you in the dark. The wall switch still wins when someone wants a different answer.
 
@@ -144,7 +142,9 @@ It should. Treat a manual change as an explicit choice and avoid turning the lig
 - [Bathroom night light](/automation/lighting/bathroom-night-light.html)
 - [Lighting automations](/automation/lighting/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/lighting/index.html">← Back to lighting automations</a>
-  <a href="/automation/index.html">View all automations →</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/lighting/index.html"
+  left_label="Back to lighting automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

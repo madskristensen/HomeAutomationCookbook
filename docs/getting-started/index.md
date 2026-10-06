@@ -10,9 +10,7 @@ image: /assets/img/social/guides/getting-started.png
 
 # Getting started with home automation
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/getting-started.svg" alt="A path from one household problem to a small, maintainable home automation" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/getting-started.svg" alt="A path from one household problem to a small, maintainable home automation" %}
 
 Start with one repeated household problem. Do not start with a shopping list.
 
@@ -100,7 +98,9 @@ A second sensor, longer timeout, or additional mode should fix an observed probl
 - [Read practical setup tips](/getting-started/tips.html)
 - [Browse all recipes](/automation/index.html)
 
-<div class="page-navigation">
-  <a href="/">Back to home</a>
-  <a href="/getting-started/choose-the-right-platform.html">Choose a platform</a>
-</div>
+{% include page-navigation.html
+  left_url="/"
+  left_label="Back to home"
+  right_url="/getting-started/choose-the-right-platform.html"
+  right_label="Choose a platform"
+%}

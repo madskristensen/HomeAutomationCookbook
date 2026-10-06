@@ -11,9 +11,7 @@ image: /assets/img/social/guides/choose-devices.png
 
 # Choose smart-home devices and gear
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/choose-devices.svg" alt="Sensors, switches, plugs, and climate devices chosen for a specific household job" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/choose-devices.svg" alt="Sensors, switches, plugs, and climate devices chosen for a specific household job" %}
 
 Do not start with a brand or a box of discounted devices. Start with one household job, write the rule in plain English, and identify the capabilities that rule needs.
 
@@ -173,7 +171,9 @@ Choose one fast motion sensor and one wall-controlled light for a low-risk room.
 - [Read the philosophy](/getting-started/philosophy.html)
 - [Build the first lighting recipe](/automation/lighting/lights-on-motion.html)
 
-<div class="page-navigation">
-  <a href="/getting-started/index.html">Back to getting started</a>
-  <a href="/automation/index.html">Browse automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/getting-started/index.html"
+  left_label="Back to getting started"
+  right_url="/automation/index.html"
+  right_label="Browse automations"
+%}

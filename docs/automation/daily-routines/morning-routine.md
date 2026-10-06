@@ -20,9 +20,7 @@ faqs:
 
 # Start a quiet good-morning routine
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="A quiet morning routine gradually coordinates lighting, comfort, and reminders" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="A quiet morning routine gradually coordinates lighting, comfort, and reminders" %}
 
 Use one intentional signal to leave Night mode, light the route someone needs, and prepare approved comfort settings without waking everyone else.
 
@@ -153,7 +151,9 @@ Only if the appliance is designed to resume safely when power is applied and I h
 - [Bathroom night lighting](/automation/lighting/bathroom-night-light.html)
 - [Daily routines](/automation/daily-routines/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/daily-routines/index.html">Back to daily routines</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/daily-routines/index.html"
+  left_label="Back to daily routines"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

@@ -10,9 +10,7 @@ image: /assets/img/social/guides/automation-tips.png
 
 # Practical home automation tips
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/automation-tips.svg" alt="Practical home automation guidance for reliable routines and familiar controls" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/automation-tips.svg" alt="Practical home automation guidance for reliable routines and familiar controls" %}
 
 Most improvements come from removing surprises, not adding features. These patterns help the house take on repeated work without taking control away from the people who live there.
 
@@ -122,7 +120,9 @@ This can be a simple note. It is most valuable months later when the device stop
 - [Set reliable low-battery alerts](/automation/notifications/low-battery-alerts.html)
 - [Browse all recipes](/automation/index.html)
 
-<div class="page-navigation">
-  <a href="/getting-started/index.html">Back to getting started</a>
-  <a href="/getting-started/resources.html">View resources</a>
-</div>
+{% include page-navigation.html
+  left_url="/getting-started/index.html"
+  left_label="Back to getting started"
+  right_url="/getting-started/resources.html"
+  right_label="View resources"
+%}

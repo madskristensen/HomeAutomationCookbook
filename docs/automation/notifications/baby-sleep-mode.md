@@ -20,9 +20,7 @@ faqs:
 
 # Set a nursery quiet mode without guessing whether a baby is asleep
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/baby-sleep-mode.svg" alt="Nursery quiet mode reduces disruptive alerts and sounds during sleep" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/baby-sleep-mode.svg" alt="Nursery quiet mode reduces disruptive alerts and sounds during sleep" %}
 
 A caregiver explicitly selects Quiet, and the room uses dimmer, quieter convenience behavior without suppressing urgent alerts or manual controls.
 
@@ -138,7 +136,9 @@ Usually no. A very dim path light or manual-only behavior is safer for a caregiv
 - [Dim bathroom lighting at night](/automation/lighting/bathroom-night-light.html)
 - [Notification automations](/automation/notifications/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notification automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notification automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

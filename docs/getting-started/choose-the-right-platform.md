@@ -10,9 +10,7 @@ image: /assets/img/social/platforms-overview.png
 
 # Choose the platform you will actually maintain
 
-<figure class="content-hero">
-  <img src="/assets/img/social/platforms-overview.svg" alt="Choose a home automation platform you will be comfortable maintaining" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/platforms-overview.svg" alt="Choose a home automation platform you will be comfortable maintaining" %}
 
 Choose for the person who will troubleshoot the house at night, not for the longest feature list.
 
@@ -144,7 +142,9 @@ Your answer may differ. The right platform is the one your household can operate
 - [Choose devices and see products I have used](/getting-started/device-guide.html)
 - [Browse platform-neutral recipes](/automation/index.html)
 
-<div class="page-navigation">
-  <a href="/getting-started/index.html">Back to getting started</a>
-  <a href="/getting-started/device-guide.html">Choose devices</a>
-</div>
+{% include page-navigation.html
+  left_url="/getting-started/index.html"
+  left_label="Back to getting started"
+  right_url="/getting-started/device-guide.html"
+  right_label="Choose devices"
+%}

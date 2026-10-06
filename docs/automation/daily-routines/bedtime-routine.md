@@ -21,9 +21,7 @@ faqs:
 
 # Run a bedtime routine without surprising the household
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/daily-routines/bedtime-routine.svg" alt="A bedtime routine coordinates lights, locks, and comfort while keeping manual control" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/daily-routines/bedtime-routine.svg" alt="A bedtime routine coordinates lights, locks, and comfort while keeping manual control" %}
 
 Offer a gentle wind-down, then use an intentional good-night signal to change Night mode and turn off only the lights that are safe to change.
 
@@ -166,7 +164,9 @@ Keep smoke, carbon-monoxide, water-leak, security, medical, and other urgent hou
 - [Bathroom night lighting](/automation/lighting/bathroom-night-light.html)
 - [Daily routines](/automation/daily-routines/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/daily-routines/index.html">Back to daily routines</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/daily-routines/index.html"
+  left_label="Back to daily routines"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

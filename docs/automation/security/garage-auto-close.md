@@ -18,9 +18,7 @@ faqs:
 
 # Close a garage safely after an open-door alert
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/garage-auto-close.svg" alt="A garage door closes only after presence, obstruction, and timing safety checks" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/security/garage-auto-close.svg" alt="A garage door closes only after presence, obstruction, and timing safety checks" %}
 
 The house reports a garage door left open, and closing remains manual unless the installed opener and controller explicitly support safe unattended operation.
 
@@ -141,7 +139,9 @@ No. It reports door position only. The opener's approved obstruction and entrapm
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
 
-<div class="page-navigation">
-  <a href="/automation/security/index.html">Back to safety and security automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/security/index.html"
+  left_label="Back to safety and security automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

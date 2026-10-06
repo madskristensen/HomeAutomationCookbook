@@ -18,9 +18,7 @@ faqs:
 
 # Build a home maintenance reminder dashboard
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/maintenance-reminder-dashboard.svg" alt="A maintenance dashboard shows household tasks that are due or completed" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/maintenance-reminder-dashboard.svg" alt="A maintenance dashboard shows household tasks that are due or completed" %}
 
 Track recurring home maintenance tasks, such as HVAC filter changes, on a shared dashboard so they stay visible instead of relying on memory.
 
@@ -108,7 +106,9 @@ No. A shared dashboard on a phone, a tablet, or even a wall-mounted display all 
 - [Set up a garbage day reminder tile](/automation/notifications/garbage-day-reminder.html)
 - [Get low battery alerts for smart home devices](/automation/notifications/low-battery-alerts.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notifications"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

@@ -20,9 +20,7 @@ faqs:
 
 # Turn a closet light off after the door closes
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/disable-on-door-close.svg" alt="A closet light turns off when the door closes" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/lighting/disable-on-door-close.svg" alt="A closet light turns off when the door closes" %}
 
 Pair a reliable door-open light with a delayed door-close rule that turns off only the light that automation started.
 
@@ -154,7 +152,9 @@ No. Door position alone cannot reliably prove occupancy. Use motion with a longe
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Lighting automations](/automation/lighting/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/lighting/index.html">Back to lighting automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/lighting/index.html"
+  left_label="Back to lighting automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

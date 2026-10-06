@@ -18,9 +18,7 @@ faqs:
 
 # Alert when a freezer warms up or an outbuilding loses power
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/freezer-temperature-power-loss.svg" alt="A freezer temperature sensor and separate power monitor report warming or a possible garage or shed outage" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/freezer-temperature-power-loss.svg" alt="A freezer temperature sensor and separate power monitor report warming or a possible garage or shed outage" %}
 
 Send a useful alert when freezer temperature rises for too long, and a separate alert when power or communications may have failed in a garage or shed.
 
@@ -177,7 +175,9 @@ Only if the sensing, hub, network, internet path, and notification route still h
 - [Get low-battery alerts](/automation/notifications/low-battery-alerts.html)
 - [What to wire before the walls close](/articles/what-to-wire-before-walls-close.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notifications and alerts</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notifications and alerts"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

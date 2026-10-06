@@ -73,50 +73,56 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
 
 <div class="category-grid">
 
-<a href="/automation/lighting/index.html" class="category-card">
-<h3>Lighting</h3>
-<p>Use motion, doors, schedules, and light levels without taking away the wall switch.</p>
-<span class="category-count">8 recipes</span>
-</a>
+{% include category-card.html
+  url="/automation/lighting/index.html"
+  title="Lighting"
+  description="Use motion, doors, schedules, and light levels without taking away the wall switch."
+  count="8 recipes"
+%}
 
-<a href="/automation/daily-routines/index.html" class="category-card">
-<h3>Daily routines</h3>
-<p>Coordinate morning, bedtime, guest, arrival, and away behavior without guessing who is home.</p>
-<span class="category-count">5 recipes</span>
-</a>
+{% include category-card.html
+  url="/automation/daily-routines/index.html"
+  title="Daily routines"
+  description="Coordinate morning, bedtime, guest, arrival, and away behavior without guessing who is home."
+  count="5 recipes"
+%}
 
-<a href="/automation/climate/index.html" class="category-card">
-<h3>Climate and comfort</h3>
-<p>Reduce waste while preserving thermostat limits, manual holds, ventilation, and safe temperatures.</p>
-<span class="category-count">7 recipes + 1 guide</span>
-</a>
+{% include category-card.html
+  url="/automation/climate/index.html"
+  title="Climate and comfort"
+  description="Reduce waste while preserving thermostat limits, manual holds, ventilation, and safe temperatures."
+  count="7 recipes + 1 guide"
+%}
 
-<a href="/automation/entertainment/index.html" class="category-card">
-<h3>Entertainment</h3>
-<p>Make music and TV behavior easier to start, stop, and adjust with familiar controls.</p>
-<span class="category-count">6 recipes</span>
-</a>
+{% include category-card.html
+  url="/automation/entertainment/index.html"
+  title="Entertainment"
+  description="Make music and TV behavior easier to start, stop, and adjust with familiar controls."
+  count="6 recipes"
+%}
 
-<a href="/automation/appliances/index.html" class="category-card">
-<h3>Appliances</h3>
-<p>Observe appliance cycles, send useful reminders, and avoid unsafe power control.</p>
-<span class="category-count">7 recipes</span>
-</a>
+{% include category-card.html
+  url="/automation/appliances/index.html"
+  title="Appliances"
+  description="Observe appliance cycles, send useful reminders, and avoid unsafe power control."
+  count="7 recipes"
+%}
 
-<a href="/automation/security/index.html" class="category-card">
-<h3>Safety and security</h3>
-<p>Use alerts and approved equipment without treating weak sensor signals as proof of safety.</p>
-<span class="category-count">7 recipes</span>
-</a>
+{% include category-card.html
+  url="/automation/security/index.html"
+  title="Safety and security"
+  description="Use alerts and approved equipment without treating weak sensor signals as proof of safety."
+  count="7 recipes"
+%}
 
-<a href="/automation/notifications/index.html" class="category-card">
-<h3>Notifications and alerts</h3>
-<p>Keep important conditions visible while limiting duplicates and unnecessary interruptions.</p>
-<span class="category-count">10 recipes</span>
-</a>
+{% include category-card.html
+  url="/automation/notifications/index.html"
+  title="Notifications and alerts"
+  description="Keep important conditions visible while limiting duplicates and unnecessary interruptions."
+  count="10 recipes"
+%}
 
 </div>
-
 ## Search all recipes
 
 <div class="recipe-search" role="search">
@@ -198,19 +204,19 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
 
 ## What every recipe includes
 
-<div class="placement-grid">
+<div class="automation-cards">
 
-<div class="placement-card">
+<div class="automation-card">
 <h3>Plain-English logic</h3>
 <p>The trigger, conditions, action, delay, stop condition, and manual override are stated before setup details.</p>
 </div>
 
-<div class="placement-card">
+<div class="automation-card">
 <h3>Honest hardware guidance</h3>
 <p>Named products are limited to devices I have used. Missing recommendations remain clearly identified.</p>
 </div>
 
-<div class="placement-card">
+<div class="automation-card">
 <h3>Failure behavior</h3>
 <p>Recipes account for stale sensors, unavailable devices, hub restarts, internet loss, guests, and manual changes where they matter.</p>
 </div>
@@ -226,7 +232,9 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
 
 Build one, observe it for a week, and add complexity only when normal household use exposes a specific failure.
 
-<div class="page-navigation">
-  <a href="/">Back to home</a>
-  <a href="/getting-started/index.html">Getting started</a>
-</div>
+{% include page-navigation.html
+  left_url="/"
+  left_label="Back to home"
+  right_url="/getting-started/index.html"
+  right_label="Getting started"
+%}

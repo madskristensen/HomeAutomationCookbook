@@ -21,9 +21,7 @@ faqs:
 
 # Use status tiles instead of notifications
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/status-tiles.svg" alt="Status tiles summarize doors, windows, locks, and other conditions that need attention" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/status-tiles.svg" alt="Status tiles summarize doors, windows, locks, and other conditions that need attention" %}
 
 Replace one-time push notifications with persistent dashboard tiles that stay visible until the underlying condition is resolved.
 
@@ -112,7 +110,9 @@ Anything with a clear "needs attention" versus "fine" state, such as garbage day
 - [Add dashboard tiles for music playback controls](/automation/notifications/music-controls.html)
 - [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notifications"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

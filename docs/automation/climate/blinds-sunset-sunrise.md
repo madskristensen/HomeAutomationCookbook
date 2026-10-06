@@ -18,9 +18,7 @@ faqs:
 
 # Open and close blinds with sunrise and sunset
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/climate/blinds-sunset-sunrise.svg" alt="Window blinds opening at sunrise and closing at sunset" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/climate/blinds-sunset-sunrise.svg" alt="Window blinds opening at sunrise and closing at sunset" %}
 
 Blinds open a little after sunrise and close at sunset or a fixed bedtime, whichever is more useful for privacy, while the physical remote or wall control still works at any time.
 
@@ -109,7 +107,9 @@ The blinds' own remote, wall switch, or app pairing must still open and close th
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Run a bedtime routine without surprising the household](/automation/daily-routines/bedtime-routine.html)
 
-<div class="page-navigation">
-  <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/climate/index.html"
+  left_label="Back to climate automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

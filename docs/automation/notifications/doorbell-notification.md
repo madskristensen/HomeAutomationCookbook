@@ -20,9 +20,7 @@ faqs:
 
 # Get a phone notification when a traditional doorbell rings
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/doorbell-notification.svg" alt="A traditional doorbell sends a phone alert while the existing chime continues to work" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/doorbell-notification.svg" alt="A traditional doorbell sends a phone alert while the existing chime continues to work" %}
 
 Close a contact sensor's dry terminals when the existing doorbell rings, so the press also sends a phone notification without replacing the doorbell.
 
@@ -108,7 +106,9 @@ A doorbell button can send more than one signal for a single press. A short debo
 - [Set up away mode](/automation/daily-routines/away-mode.html)
 - [Use status tiles instead of notifications](/automation/notifications/status-tiles.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notifications"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

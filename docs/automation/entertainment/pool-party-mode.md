@@ -18,9 +18,7 @@ faqs:
 
 # Set up one-tap pool party mode
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/entertainment/pool-party-mode.svg" alt="One control prepares outdoor lighting and music for a pool gathering" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/entertainment/pool-party-mode.svg" alt="One control prepares outdoor lighting and music for a pool gathering" %}
 
 Turn on party lighting and music around a pool or backyard with a single button press, and automatically end it after a set time.
 
@@ -129,7 +127,9 @@ Yes, a voice command, a physical button, and a dashboard tile can all point at t
 - [Dim lights when the TV turns on](/automation/entertainment/tv-dim-lights.html)
 - [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
-<div class="page-navigation">
-  <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/entertainment/index.html"
+  left_label="Back to entertainment"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

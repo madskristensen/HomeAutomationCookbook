@@ -18,9 +18,7 @@ faqs:
 
 # Set up gradual wake-up lighting
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/wake-up-lights.svg" alt="Bedroom lights brighten gradually before the household wake-up time" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/lighting/wake-up-lights.svg" alt="Bedroom lights brighten gradually before the household wake-up time" %}
 
 Gradually brighten a bedroom light before a set wake time, so the room fills with light like a sunrise instead of relying on a jarring alarm alone.
 
@@ -109,7 +107,9 @@ Yes, using a single bedside lamp facing away from the partner's side of the bed,
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 - [Adjust blinds at sunset and sunrise](/automation/climate/blinds-sunset-sunrise.html)
 
-<div class="page-navigation">
-  <a href="/automation/lighting/index.html">Back to lighting automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/lighting/index.html"
+  left_label="Back to lighting automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

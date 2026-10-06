@@ -20,9 +20,7 @@ faqs:
 
 # Get low battery alerts for smart home devices
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/low-battery-alerts.svg" alt="Low-battery alerts collect smart-home devices that need attention" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/low-battery-alerts.svg" alt="Low-battery alerts collect smart-home devices that need attention" %}
 
 Get a notification when a battery-powered device drops below a set level, so it can be replaced before the device stops working silently.
 
@@ -128,7 +126,9 @@ No. A water leak sensor or smart lock losing power is more urgent than a motion 
 - [Set up away mode](/automation/daily-routines/away-mode.html)
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notifications"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

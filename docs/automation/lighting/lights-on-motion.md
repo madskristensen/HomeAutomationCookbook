@@ -20,9 +20,7 @@ faqs:
 
 # Turn lights on when you walk in
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="Motion turns on a room light when needed while the wall switch remains available" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="Motion turns on a room light when needed while the wall switch remains available" %}
 
 Walk in, lights on. If that fails at 2am, the wall switch still works.
 
@@ -142,7 +140,9 @@ A local hub and compatible devices can keep the automation running, but the phys
 - [Bathroom night light](/automation/lighting/bathroom-night-light.html)
 - [Lighting automations](/automation/lighting/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/lighting/index.html">← Back to lighting automations</a>
-  <a href="/automation/index.html">View all automations →</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/lighting/index.html"
+  left_label="Back to lighting automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

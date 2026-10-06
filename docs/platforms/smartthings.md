@@ -8,9 +8,7 @@ image: /assets/img/social/platform-smartthings.png
 
 # SmartThings home automation guide
 
-<figure class="content-hero">
-  <img src="/assets/img/social/platform-smartthings.svg" alt="SmartThings connects lighting, sensors, climate controls, and other household devices" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/platform-smartthings.svg" alt="SmartThings connects lighting, sensors, climate controls, and other household devices" %}
 
 SmartThings can reduce repeated household checks through approachable routines while still offering a path to more detailed rules. It fits people who want meaningful automation depth without making every family member maintain a technical system.
 

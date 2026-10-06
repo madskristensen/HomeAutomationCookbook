@@ -8,9 +8,7 @@ image: /assets/img/social/guides/home-automation-philosophy.png
 
 # Home automation philosophy
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/home-automation-philosophy.svg" alt="A home where quiet automation supports daily routines without removing control" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/home-automation-philosophy.svg" alt="A home where quiet automation supports daily routines without removing control" %}
 
 A useful smart home gives time and attention back to the household. It works for everyone, requires little explanation, and continues functioning when something goes wrong. These principles help you build automations that support ordinary routines instead of creating new work.
 

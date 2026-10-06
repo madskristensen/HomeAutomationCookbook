@@ -18,9 +18,7 @@ faqs:
 
 # Turn on away lights to look occupied
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/away-lights.svg" alt="Selected lights vary while the house is empty to suggest normal occupancy" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/security/away-lights.svg" alt="Selected lights vary while the house is empty to suggest normal occupancy" %}
 
 Turn on a couple of strategic lights while away, on a schedule that mimics normal evening use, so the home does not look obviously empty.
 
@@ -124,7 +122,9 @@ Arriving home and disarming Away mode, however the platform signals that, should
 - [Set up fire safety response](/automation/security/fire-safety.html)
 - [Set up outdoor night lights](/automation/lighting/outdoor-night-lights.html)
 
-<div class="page-navigation">
-  <a href="/automation/security/index.html">Back to security</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/security/index.html"
+  left_label="Back to security"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

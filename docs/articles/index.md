@@ -9,9 +9,7 @@ canonical_url: https://www.homeautomationcookbook.com/articles/index.html
 
 # Home automation articles
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/articles.svg" alt="Home automation articles explaining technologies, tradeoffs, and design choices" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/articles.svg" alt="Home automation articles explaining technologies, tradeoffs, and design choices" %}
 
 Articles explain a technology, tradeoff, or design decision that applies across several recipes. Use them to understand your options and make confident choices for your own rooms and routines. Unlike the recipe library, this section is chronological.
 
@@ -33,7 +31,9 @@ Articles explain a technology, tradeoff, or design decision that applies across 
 {% endfor %}
 </div>
 
-<div class="page-navigation">
-  <a href="/">Back to home</a>
-  <a href="/automation/index.html">Browse automation recipes</a>
-</div>
+{% include page-navigation.html
+  left_url="/"
+  left_label="Back to home"
+  right_url="/automation/index.html"
+  right_label="Browse automation recipes"
+%}

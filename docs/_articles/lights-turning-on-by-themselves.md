@@ -9,9 +9,7 @@ image: /assets/img/social/guides/lights-turning-on-by-themselves.png
 
 # Lights turning on by themselves
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/lights-turning-on-by-themselves.svg" alt="A checklist for a light that turned on when nobody asked" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/lights-turning-on-by-themselves.svg" alt="A checklist for a light that turned on when nobody asked" %}
 
 A light that comes on when nobody asked is usually obeying a sensor, a second rule, or a power-on setting. Find which one. Another automation piled on top makes the next surprise harder to see.
 

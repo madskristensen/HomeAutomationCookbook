@@ -18,9 +18,7 @@ faqs:
 
 # Get notified when the garage door is left open
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/garage-door-notification.svg" alt="An alert reports when the garage door remains open beyond a useful delay" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/security/garage-door-notification.svg" alt="An alert reports when the garage door remains open beyond a useful delay" %}
 
 Send a notification when the garage door has been open longer than expected. This recipe alerts only; it does not close the door.
 
@@ -128,7 +126,9 @@ Set up a separate automation per door, since each can have its own sensor, its o
 - [Set up away mode](/automation/daily-routines/away-mode.html)
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
-<div class="page-navigation">
-  <a href="/automation/security/index.html">Back to security</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/security/index.html"
+  left_label="Back to security"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

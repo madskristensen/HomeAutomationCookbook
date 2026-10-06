@@ -15,12 +15,16 @@ layout: default
 
 <div class="automation-cards">
 {% for recipe in category.recipes %}
-  <div class="automation-card">
-    <h3><a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a></h3>
-    <p>{{ recipe.description }}</p>
-    <p class="card-meta"><strong>Best for:</strong> {{ recipe.best_for }}</p>
-    <p><a href="{{ recipe.url | relative_url }}" class="card-link">{{ recipe.link_text | default: "View recipe" }}</a></p>
-  </div>
+  {% assign recipe_url = recipe.url | relative_url %}
+  {% assign card_link = recipe.link_text | default: "View recipe" %}
+  {% include automation-card.html
+    url=recipe_url
+    title=recipe.title
+    description=recipe.description
+    meta_label="Best for"
+    meta_value=recipe.best_for
+    link_text=card_link
+  %}
 {% endfor %}
 </div>
 
@@ -47,7 +51,10 @@ layout: default
 
 <p>{{ category.verify }}</p>
 
-<div class="page-navigation">
-  <a href="{{ '/automation/index.html' | relative_url }}">Back to all automations</a>
-  <a href="{{ category.next_url | relative_url }}">Next: {{ category.next_label }}</a>
-</div>
+{% capture next_label %}Next: {{ category.next_label }}{% endcapture %}
+{% include page-navigation.html
+  left_url="/automation/index.html"
+  left_label="Back to all automations"
+  right_url=category.next_url
+  right_label=next_label
+%}

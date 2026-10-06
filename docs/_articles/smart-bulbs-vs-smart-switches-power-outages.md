@@ -9,9 +9,7 @@ image: /assets/img/social/guides/smart-bulbs-vs-smart-switches-power-outages.png
 
 # Smart bulbs vs. smart switches after a power outage
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/smart-bulbs-vs-smart-switches-power-outages.svg" alt="Smart bulbs and smart wall controls compared for normal use and power restoration" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/smart-bulbs-vs-smart-switches-power-outages.svg" alt="Smart bulbs and smart wall controls compared for normal use and power restoration" %}
 
 The useful question is not only whether a bulb or switch can be automated. It is whether everyone can still control the light normally, and whether an outage will leave the room dark, brightly lit, or flashing when power returns.
 
