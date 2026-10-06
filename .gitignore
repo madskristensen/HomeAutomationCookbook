@@ -41,3 +41,9 @@ docs/assets/img/**/*-800.avif
 docs/assets/img/**/*-1200.avif
 docs/assets/img/**/*-1600.avif
 docs/assets/img/**/*-640.jpg
+
+# Fingerprinted CSS/JS written before Jekyll reads files
+docs/assets/css/*.css
+docs/assets/js/*.*.js
+docs/_data/css.yml
+docs/_data/js.yml
