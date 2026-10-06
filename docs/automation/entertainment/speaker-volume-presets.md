@@ -20,9 +20,7 @@ faqs:
 
 # Use speaker volume presets
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/entertainment/speaker-volume-presets.svg" alt="Smart-speaker volume changes to predictable levels for different times and activities" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/entertainment/speaker-volume-presets.svg" alt="Smart-speaker volume changes to predictable levels for different times and activities" %}
 
 Set every speaker to a defined low, medium, or loud level with a single command instead of adjusting each one by hand.
 
@@ -119,7 +117,9 @@ Yes, a preset can hold a different percentage for each room or speaker, since a 
 - [Play music when arriving home](/automation/entertainment/welcome-home-music.html)
 - [Play or pause music with a physical switch](/automation/entertainment/music-switch-control.html)
 
-<div class="page-navigation">
-  <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/entertainment/index.html"
+  left_label="Back to entertainment"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

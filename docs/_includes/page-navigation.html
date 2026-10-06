@@ -1,0 +1,8 @@
+{% comment %}
+Shared prev/next style footer links.
+Params: left_url, left_label, right_url, right_label (right optional).
+{% endcomment %}
+<div class="page-navigation">
+  {% if include.left_url %}<a href="{{ include.left_url | relative_url }}">{{ include.left_label }}</a>{% endif %}
+  {% if include.right_url %}<a href="{{ include.right_url | relative_url }}">{{ include.right_label }}</a>{% endif %}
+</div>

@@ -20,9 +20,7 @@ faqs:
 
 # Play music when a shower starts
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/entertainment/shower-music.svg" alt="Music starts at a comfortable volume when a shower begins" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/entertainment/shower-music.svg" alt="Music starts at a comfortable volume when a shower begins" %}
 
 Start music or a podcast on a bathroom speaker automatically when the shower light goes on, and stop it again once the shower ends.
 
@@ -120,7 +118,9 @@ Yes, if a matching "lights off" or "door closed for a while" condition is set up
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
-<div class="page-navigation">
-  <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/entertainment/index.html"
+  left_label="Back to entertainment"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

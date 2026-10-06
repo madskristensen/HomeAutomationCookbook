@@ -18,9 +18,7 @@ faqs:
 
 # Get notified about entrance activity that may indicate a delivery
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/package-delivery-alert.svg" alt="Front-door motion triggers a useful arrival alert without claiming a package was confirmed" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/package-delivery-alert.svg" alt="Front-door motion triggers a useful arrival alert without claiming a package was confirmed" %}
 
 Use a motion sensor near the front door to send a phone notification about entrance activity that may indicate a delivery, without claiming to confirm one.
 
@@ -105,7 +103,9 @@ Yes, if it is mounted outside a covered porch or in an area exposed to weather. 
 - [Set up away mode](/automation/daily-routines/away-mode.html)
 - [Turn on lights when motion is detected](/automation/lighting/lights-on-motion.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notifications"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

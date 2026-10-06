@@ -18,9 +18,7 @@ faqs:
 
 # Get notified when to open or close windows
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/climate/window-notifications.svg" alt="A window ventilation reminder responds to indoor and outdoor conditions" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/climate/window-notifications.svg" alt="A window ventilation reminder responds to indoor and outdoor conditions" %}
 
 Compare indoor and outdoor temperature, and send one notification when opening or closing windows would take advantage of free heating or cooling.
 
@@ -123,7 +121,9 @@ No. This recipe only notifies. Closing or opening a window is a manual action so
 - [Run the air purifier when indoor air quality drops](/automation/climate/air-quality-purifier.html)
 - [Monitor a cold room without smart-plug heater control](/automation/climate/room-heater-maintain-temp.html)
 
-<div class="page-navigation">
-  <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/climate/index.html"
+  left_label="Back to climate automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

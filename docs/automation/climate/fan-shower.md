@@ -18,9 +18,7 @@ faqs:
 
 # Turn on the bathroom fan when a shower starts
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/climate/fan-shower.svg" alt="A bathroom exhaust fan turns on for shower humidity and stops after the room dries" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/climate/fan-shower.svg" alt="A bathroom exhaust fan turns on for shower humidity and stops after the room dries" %}
 
 Turn the bathroom fan on when the shower light goes on or humidity rises, and turn it off once the bathroom has stayed dry for a while.
 
@@ -143,7 +141,9 @@ Restrict it to normal waking hours unless the household specifically wants venti
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Monitor a cold room without smart-plug heater control](/automation/climate/room-heater-maintain-temp.html)
 
-<div class="page-navigation">
-  <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/climate/index.html"
+  left_label="Back to climate automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

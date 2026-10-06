@@ -18,9 +18,7 @@ faqs:
 
 # Set up a pet feeding reminder
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/notifications/pet-feeding-reminder.svg" alt="A shared pet-feeding reminder records when the task is completed" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/notifications/pet-feeding-reminder.svg" alt="A shared pet-feeding reminder records when the task is completed" %}
 
 Use a smart button or repurposed sensor to track when a pet was last fed and send a reminder if too much time passes without it being logged.
 
@@ -109,7 +107,9 @@ Yes, use a separate button and tracked state for each pet, since they may have d
 - [Use status tiles instead of notifications](/automation/notifications/status-tiles.html)
 - [Get low battery alerts for smart home devices](/automation/notifications/low-battery-alerts.html)
 
-<div class="page-navigation">
-  <a href="/automation/notifications/index.html">Back to notifications</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/notifications/index.html"
+  left_label="Back to notifications"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

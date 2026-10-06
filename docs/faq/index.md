@@ -151,7 +151,9 @@ Collect only the data the automation needs. Be especially careful with cameras, 
 - [Choose devices by job](/getting-started/device-guide.html)
 - [Browse automation recipes](/automation/index.html)
 
-<div class="page-navigation">
-  <a href="/">Back to home</a>
-  <a href="/automation/index.html">Browse automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/"
+  left_label="Back to home"
+  right_url="/automation/index.html"
+  right_label="Browse automations"
+%}

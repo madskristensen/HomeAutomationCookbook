@@ -18,9 +18,7 @@ faqs:
 
 # Get notified when the dryer finishes
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/appliances/dryer-done-notification.svg" alt="A dryer completion alert after sustained low power confirms the cycle has ended" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/appliances/dryer-done-notification.svg" alt="A dryer completion alert after sustained low power confirms the cycle has ended" %}
 
 Detect a real drying cycle, wait through normal pauses, and send one alert when sustained vibration stops.
 
@@ -146,7 +144,9 @@ Reposition the sensor, require sustained vibration before marking the dryer as r
 - [Appliance automations](/automation/appliances/index.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 
-<div class="page-navigation">
-  <a href="/automation/appliances/index.html">Back to appliance automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/appliances/index.html"
+  left_label="Back to appliance automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

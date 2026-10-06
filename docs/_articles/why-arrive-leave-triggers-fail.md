@@ -9,9 +9,7 @@ image: /assets/img/social/guides/why-arrive-leave-triggers-fail.png
 
 # Why arrive and leave triggers fail
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/why-arrive-leave-triggers-fail.svg" alt="A phone location hint set beside the people who are actually home" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/why-arrive-leave-triggers-fail.svg" alt="A phone location hint set beside the people who are actually home" %}
 
 A phone crossing a circle on a map is a hint. It is not a headcount. Away and Home go wrong when the house treats that hint as everyone who might still be inside.
 

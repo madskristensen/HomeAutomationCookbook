@@ -20,9 +20,7 @@ faqs:
 
 # Prepare the house when someone arrives
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/daily-routines/unlock-door-arrival.svg" alt="The house prepares lights and comfort when someone arrives without automatically unlocking the door" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/daily-routines/unlock-door-arrival.svg" alt="The house prepares lights and comfort when someone arrives without automatically unlocking the door" %}
 
 When the first person returns, the house switches to Home, lights a safe path when needed, and restores the approved comfort settings. The door stays locked until someone deliberately unlocks it.
 
@@ -175,7 +173,9 @@ Usually very little. Reserve whole-house Home actions for the first arrival and 
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Daily routine automations](/automation/daily-routines/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/daily-routines/index.html">Back to daily routine automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/daily-routines/index.html"
+  left_label="Back to daily routine automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

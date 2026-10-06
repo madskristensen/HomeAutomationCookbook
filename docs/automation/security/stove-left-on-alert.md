@@ -18,9 +18,7 @@ faqs:
 
 # Get a stove reminder without pretending it is a safety system
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/stove-left-on-alert.svg" alt="A persistent cooking reminder continues until someone confirms the stove is safe" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/security/stove-left-on-alert.svg" alt="A persistent cooking reminder continues until someone confirms the stove is safe" %}
 
 Starting to cook also starts a reminder, and only a person or an appliance-approved status signal clears it.
 
@@ -129,7 +127,9 @@ It is not a dependable safety signal. Placement, steam, sunlight, another burner
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Run a bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
-<div class="page-navigation">
-  <a href="/automation/security/index.html">Back to safety and security automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/security/index.html"
+  left_label="Back to safety and security automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

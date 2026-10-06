@@ -18,9 +18,7 @@ faqs:
 
 # Control lights with a wireless button or linked switch
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/wireless-button-linked-lights.svg" alt="A wireless button or wall switch sends predictable on and off commands to several lights" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/lighting/wireless-button-linked-lights.svg" alt="A wireless button or wall switch sends predictable on and off commands to several lights" %}
 
 Put a physical control where it is useful, then let it operate one light, a group of lights, or a tested scene without taking away the controls already in each room.
 
@@ -152,7 +150,9 @@ Each light should still have a familiar local control. A linked control adds con
 - [Get low-battery alerts](/automation/notifications/low-battery-alerts.html)
 - [Smart bulbs vs. smart switches after a power outage](/articles/smart-bulbs-vs-smart-switches-power-outages.html)
 
-<div class="page-navigation">
-  <a href="/automation/lighting/index.html">Back to lighting automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/lighting/index.html"
+  left_label="Back to lighting automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

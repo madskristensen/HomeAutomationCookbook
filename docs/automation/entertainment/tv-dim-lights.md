@@ -20,9 +20,7 @@ faqs:
 
 # Dim lights when the TV turns on
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/entertainment/tv-dim-lights.svg" alt="Room lights dim when the TV starts and remain manually adjustable" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/entertainment/tv-dim-lights.svg" alt="Room lights dim when the TV starts and remain manually adjustable" %}
 
 Automatically dim the living room lights when the TV turns on, and restore them to their previous level once the TV turns off.
 
@@ -120,7 +118,9 @@ Yes, if the previous brightness is saved before dimming and restored once the TV
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 - [Set every speaker to the right volume with one command](/automation/entertainment/speaker-volume-presets.html)
 
-<div class="page-navigation">
-  <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/entertainment/index.html"
+  left_label="Back to entertainment"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

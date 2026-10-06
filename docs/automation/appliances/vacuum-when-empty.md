@@ -18,9 +18,7 @@ faqs:
 
 # Run the vacuum only while the house stays empty
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/appliances/vacuum-when-empty.svg" alt="Vacuuming scheduled while the house is empty to avoid interrupting anyone" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/appliances/vacuum-when-empty.svg" alt="Vacuuming scheduled while the house is empty to avoid interrupting anyone" %}
 
 **Use this if** the vacuum should run only while the house stays empty: start after a confirmed departure, dock immediately when anyone returns, and skip a second run the same day. If you only need the daytime start, use [Start the robot vacuum when everyone leaves](/automation/appliances/robot-vacuum-auto-start.html).
 
@@ -144,7 +142,9 @@ No. A per-day flag prevents a second run once the vacuum has completed a cycle t
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 
-<div class="page-navigation">
-  <a href="/automation/appliances/index.html">Back to appliance automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/appliances/index.html"
+  left_label="Back to appliance automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

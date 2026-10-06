@@ -8,9 +8,7 @@ image: /assets/img/social/smartthings-vs-hubitat-comparison.png
 
 # Hubitat vs SmartThings for a family house
 
-<figure class="content-hero">
-  <img src="/assets/img/social/smartthings-vs-hubitat-comparison.svg" alt="SmartThings and Hubitat connect to the same family house, comparing approachable routines with deeper local control" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/smartthings-vs-hubitat-comparison.svg" alt="SmartThings and Hubitat connect to the same family house, comparing approachable routines with deeper local control" %}
 
 SmartThings gave me the freedom to build my first large smart home after I reached the limits of Alexa. Hubitat became the better fit when that home grew beyond 100 devices and I wanted faster automations, more advanced routines, better driver choices, and tools for diagnosing problems.
 

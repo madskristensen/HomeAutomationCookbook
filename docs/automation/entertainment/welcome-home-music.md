@@ -20,9 +20,7 @@ faqs:
 
 # Play music when arriving home
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/entertainment/welcome-home-music.svg" alt="Welcome-home music starts after a confirmed arrival at an appropriate time" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/entertainment/welcome-home-music.svg" alt="Welcome-home music starts after a confirmed arrival at an appropriate time" %}
 
 Start music automatically when the household arrives home, using a presence signal that has already been tested and trusted.
 
@@ -117,7 +115,9 @@ Add a cooldown period, so the automation only plays music once per arrival windo
 - [Play or pause music with a physical switch](/automation/entertainment/music-switch-control.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 
-<div class="page-navigation">
-  <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/entertainment/index.html"
+  left_label="Back to entertainment"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

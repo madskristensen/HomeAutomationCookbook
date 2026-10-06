@@ -10,9 +10,7 @@ image: /assets/img/social/guides/automation-resources.png
 
 # Home automation resources
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/automation-resources.svg" alt="Resources for planning, building, and maintaining useful home automations" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/automation-resources.svg" alt="Resources for planning, building, and maintaining useful home automations" %}
 
 Use official documentation for current requirements, then use community discussions to find edge cases. A forum post or video can reveal a problem, but it does not replace the current manual or compatibility list for the exact model.
 
@@ -70,7 +68,9 @@ Home Automation Cookbook is open source:
 - [Choose devices and see products I have used](/getting-started/device-guide.html)
 - [Read the disclosure](/disclosure.html)
 
-<div class="page-navigation">
-  <a href="/getting-started/index.html">Back to getting started</a>
-  <a href="/">Back to home</a>
-</div>
+{% include page-navigation.html
+  left_url="/getting-started/index.html"
+  left_label="Back to getting started"
+  right_url="/"
+  right_label="Back to home"
+%}

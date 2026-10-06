@@ -18,9 +18,7 @@ faqs:
 
 # Keep a mini-split or window unit inside a hard setpoint limit
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/climate/mini-split-ir-setpoint-limit.svg" alt="An infrared blaster sends a capped setpoint while the physical remote stays in the room" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/climate/mini-split-ir-setpoint-limit.svg" alt="An infrared blaster sends a capped setpoint while the physical remote stays in the room" %}
 
 An IR blaster can press buttons. It cannot tell you whether the mini-split or window unit heard them, which mode it is in, or what setpoint it is holding. Send only a temperature inside a hard cap. The manufacturer's remote stays in the room and wins.
 
@@ -161,7 +159,9 @@ Only inside limits you would already leave set on the unit itself, and only if s
 - [Why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html)
 - [Climate automations](/automation/climate/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/climate/index.html"
+  left_label="Back to climate automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

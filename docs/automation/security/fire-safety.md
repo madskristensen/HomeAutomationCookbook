@@ -18,9 +18,7 @@ faqs:
 
 # Support a fire evacuation without delaying the alarm
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/fire-safety.svg" alt="Supplemental fire automation turns on escape lighting and sends alerts without replacing alarms" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/security/fire-safety.svg" alt="Supplemental fire automation turns on escape lighting and sends alerts without replacing alarms" %}
 
 When a listed smoke or carbon-monoxide alarm activates, optional lighting and notifications run immediately without changing the alarm, delaying evacuation, or declaring an all-clear.
 
@@ -150,7 +148,9 @@ No. A clear sensor or stopped alarm is not an all-clear. Only emergency services
 - [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
 - [Safety and security automations](/automation/security/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/security/index.html">Back to safety and security automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/security/index.html"
+  left_label="Back to safety and security automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

@@ -8,9 +8,7 @@ image: /assets/img/social/platform-hubitat.png
 
 # Hubitat home automation guide
 
-<figure class="content-hero">
-  <img src="/assets/img/social/platform-hubitat.svg" alt="A small Hubitat hub connects local devices with conditional automation logic" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/platform-hubitat.svg" alt="A small Hubitat hub connects local devices with conditional automation logic" %}
 
 Hubitat is my current platform because it is fast, compact, and managed while still leaving room for detailed rules, community drivers, custom drivers, and code. It gives me enough control to make routines dependable without turning every daily adjustment into a software project.
 

@@ -1,0 +1,6 @@
+{% comment %}
+Shared content hero image. Params: src, alt, width (default 1200), height (default 630).
+{% endcomment %}
+<figure class="content-hero">
+  <img src="{{ include.src }}" alt="{{ include.alt }}" width="{{ include.width | default: 1200 }}" height="{{ include.height | default: 630 }}">
+</figure>

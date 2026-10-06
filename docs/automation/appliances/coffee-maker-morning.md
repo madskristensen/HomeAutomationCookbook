@@ -18,9 +18,7 @@ faqs:
 
 # Prepare morning coffee with a deliberate ready step
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/appliances/coffee-maker-morning.svg" alt="A coffee maker starts during the morning routine only after a safe readiness check" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/appliances/coffee-maker-morning.svg" alt="A coffee maker starts during the morning routine only after a safe readiness check" %}
 
 A person loads the coffee maker and explicitly marks it ready, then the machine uses its own approved delayed-brew feature for the morning.
 
@@ -141,7 +139,9 @@ It does not brew automatically. Send a preparation reminder if useful, then let 
 - [Run a bedtime routine](/automation/daily-routines/bedtime-routine.html)
 - [Appliance automations](/automation/appliances/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/appliances/index.html">Back to appliance automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/appliances/index.html"
+  left_label="Back to appliance automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

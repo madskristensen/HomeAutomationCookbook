@@ -18,9 +18,7 @@ faqs:
 
 # Get an immediate alert when water is detected
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/security/water-leak-response.svg" alt="Leak sensors trigger urgent alerts and a controlled household response" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/security/water-leak-response.svg" alt="Leak sensors trigger urgent alerts and a controlled household response" %}
 
 Put a name on the exact sensor, alert the household at any hour, and require a person to inspect the source before clearing the incident.
 
@@ -188,7 +186,9 @@ Start where a hidden or pressurized leak would cause damage quickly, such as the
 - [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
 - [Safety and security automations](/automation/security/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/security/index.html">Back to safety and security automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/security/index.html"
+  left_label="Back to safety and security automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

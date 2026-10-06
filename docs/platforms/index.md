@@ -9,9 +9,7 @@ image: /assets/img/social/platforms-overview.png
 
 # Home automation platform guides
 
-<figure class="content-hero">
-  <img src="/assets/img/social/platforms-overview.svg" alt="Choose a home automation platform you will be comfortable maintaining" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/platforms-overview.svg" alt="Choose a home automation platform you will be comfortable maintaining" %}
 
 Choose a platform by how comfortably you can build, test, and maintain useful household routines. The best platform is not the one with the longest feature list. It is the one that removes repeated work without making normal lights, climate controls, or family routines harder to understand.
 
@@ -21,28 +19,31 @@ The core [automation recipes](/automation/index.html) remain platform-neutral. T
 
 <div class="category-grid">
 
-<a href="/platforms/alexa.html" class="category-card">
-<h3>Amazon Alexa</h3>
-<p>Voice control and approachable routines when compatible devices expose the required triggers and actions.</p>
-</a>
+{% include category-card.html
+  url="/platforms/alexa.html"
+  title="Amazon Alexa"
+  description="Voice control and approachable routines when compatible devices expose the required triggers and actions."
+%}
 
-<a href="/platforms/smartthings.html" class="category-card">
-<h3>SmartThings</h3>
-<p>Approachable routines with a path to more detailed rules and broader device state.</p>
-</a>
+{% include category-card.html
+  url="/platforms/smartthings.html"
+  title="SmartThings"
+  description="Approachable routines with a path to more detailed rules and broader device state."
+%}
 
-<a href="/platforms/hubitat.html" class="category-card">
-<h3>Hubitat</h3>
-<p>A managed local hub with built-in automation apps and deeper rule tools when needed.</p>
-</a>
+{% include category-card.html
+  url="/platforms/hubitat.html"
+  title="Hubitat"
+  description="A managed local hub with built-in automation apps and deeper rule tools when needed."
+%}
 
-<a href="/platforms/home-assistant.html" class="category-card">
-<h3>Home Assistant</h3>
-<p>A technical-fit guide for people who want to own more of the hardware, integrations, dashboards, and maintenance.</p>
-</a>
+{% include category-card.html
+  url="/platforms/home-assistant.html"
+  title="Home Assistant"
+  description="A technical-fit guide for people who want to own more of the hardware, integrations, dashboards, and maintenance."
+%}
 
 </div>
-
 ## How experience is labeled
 
 - **Personally used:** I have operated the platform in my own home.
@@ -75,7 +76,9 @@ Use the [platform chooser](/getting-started/choose-the-right-platform.html) for 
 - Failure modes.
 - A practical finish line.
 
-<div class="page-navigation">
-  <a href="/getting-started/choose-the-right-platform.html">Compare platforms</a>
-  <a href="/automation/index.html">Browse automation recipes</a>
-</div>
+{% include page-navigation.html
+  left_url="/getting-started/choose-the-right-platform.html"
+  left_label="Compare platforms"
+  right_url="/automation/index.html"
+  right_label="Browse automation recipes"
+%}

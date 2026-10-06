@@ -20,9 +20,7 @@ faqs:
 
 # Play or pause music with a physical switch
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/entertainment/music-switch-control.svg" alt="A physical switch provides simple play, pause, and music control" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/entertainment/music-switch-control.svg" alt="A physical switch provides simple play, pause, and music control" %}
 
 Press a button or flip a switch to start, stop, or adjust music, instead of asking a voice assistant for the same station every day.
 
@@ -115,7 +113,9 @@ Yes, if the switch or remote has more than one button or press pattern, each can
 - [Play music when arriving home](/automation/entertainment/welcome-home-music.html)
 - [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
-<div class="page-navigation">
-  <a href="/automation/entertainment/index.html">Back to entertainment</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/entertainment/index.html"
+  left_label="Back to entertainment"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

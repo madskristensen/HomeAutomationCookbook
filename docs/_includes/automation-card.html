@@ -1,0 +1,14 @@
+{% comment %}
+Shared recipe/listing card.
+Params: url, title, description, meta_label, meta_value, link_text (default View recipe), link_url (defaults to url).
+{% endcomment %}
+<div class="automation-card">
+  <h3><a href="{{ include.url }}">{{ include.title }}</a></h3>
+  {% if include.description %}<p>{{ include.description }}</p>{% endif %}
+  {% if include.meta_label %}
+  <p class="card-meta"><strong>{{ include.meta_label }}:</strong> {{ include.meta_value }}</p>
+  {% endif %}
+  {% if include.link_text != false %}
+  <p><a href="{{ include.link_url | default: include.url }}" class="card-link">{{ include.link_text | default: "View recipe" }}</a></p>
+  {% endif %}
+</div>

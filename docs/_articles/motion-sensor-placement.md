@@ -9,9 +9,7 @@ image: /assets/img/social/guides/motion-sensor-placement.png
 
 # How to place motion sensors for reliable automations
 
-<figure class="content-hero">
-  <img src="/assets/img/social/guides/motion-sensor-placement.svg" alt="Motion sensors positioned to detect entry before someone reaches the wall switch" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/guides/motion-sensor-placement.svg" alt="Motion sensors positioned to detect entry before someone reaches the wall switch" %}
 
 A good motion automation starts with where the sensor can see the useful event. The best device in the wrong place will still turn lights on too late, miss someone who is sitting still, or react to movement in the wrong room.
 

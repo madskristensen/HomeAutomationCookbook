@@ -20,9 +20,7 @@ faqs:
 
 # Turn outdoor lights on at dusk
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/lighting/outdoor-night-lights.svg" alt="Outdoor lights turn on at dusk and off on a predictable schedule" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/lighting/outdoor-night-lights.svg" alt="Outdoor lights turn on at dusk and off on a predictable schedule" %}
 
 At dusk, the useful outdoor lights come on. Decorative lights turn off at bedtime, and the physical switch or plug still works when automation does not.
 
@@ -122,7 +120,9 @@ A local hub may continue running the schedule, but the outdoor switch or plug mu
 - [Away lighting](/automation/security/away-lights.html)
 - [Lighting automations](/automation/lighting/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/lighting/index.html">Back to lighting automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/lighting/index.html"
+  left_label="Back to lighting automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

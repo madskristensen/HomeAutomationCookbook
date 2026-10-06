@@ -18,9 +18,7 @@ faqs:
 
 # Monitor a cold room without smart-plug heater control
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/climate/room-heater-maintain-temp.svg" alt="A cold-room temperature alert helps maintain comfort without unsafe heater control" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/climate/room-heater-maintain-temp.svg" alt="A cold-room temperature alert helps maintain comfort without unsafe heater control" %}
 
 The house reports a room that is too cold or too warm, while any automatic heat control remains inside equipment designed and approved for thermostat operation.
 
@@ -138,7 +136,9 @@ No. Use appropriate building heat, freeze protection, supervision, and professio
 - [Safe thermostat auto-away](/automation/climate/safe-thermostat-away.html)
 - [Climate automations](/automation/climate/index.html)
 
-<div class="page-navigation">
-  <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/climate/index.html"
+  left_label="Back to climate automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

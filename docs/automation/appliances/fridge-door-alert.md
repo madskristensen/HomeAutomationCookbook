@@ -18,9 +18,7 @@ faqs:
 
 # Get an alert when the fridge or freezer door is left open
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/appliances/fridge-door-alert.svg" alt="A fridge or freezer door left open long enough to trigger an alert" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/appliances/fridge-door-alert.svg" alt="A fridge or freezer door left open long enough to trigger an alert" %}
 
 Send one alert when a refrigerator or freezer door has stayed open past a safe delay, with a shorter delay for the freezer.
 
@@ -107,7 +105,9 @@ Only if its documented operating temperature range covers the freezer. Check the
 - [Detect a water leak before it spreads](/automation/security/water-leak-response.html)
 - [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
 
-<div class="page-navigation">
-  <a href="/automation/appliances/index.html">Back to appliance automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/appliances/index.html"
+  left_label="Back to appliance automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}

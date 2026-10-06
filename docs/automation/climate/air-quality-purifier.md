@@ -18,9 +18,7 @@ faqs:
 
 # Run the air purifier when indoor air quality drops
 
-<figure class="content-hero">
-  <img src="/assets/img/social/recipes/climate/air-quality-purifier.svg" alt="An air purifier responds to indoor air quality while manual control remains available" width="1200" height="630">
-</figure>
+{% include content-hero.html src="/assets/img/social/recipes/climate/air-quality-purifier.svg" alt="An air purifier responds to indoor air quality while manual control remains available" %}
 
 Watch an air quality sensor for a sustained unhealthy reading, run the purifier, and turn it off again once the air has stayed clear for a while.
 
@@ -120,7 +118,9 @@ Only when the sensor is available and reporting a clearly unhealthy reading. Tre
 - [Pause heating or cooling when a window stays open](/automation/climate/thermostat-windows-open.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 
-<div class="page-navigation">
-  <a href="/automation/climate/index.html">Back to climate automations</a>
-  <a href="/automation/index.html">View all automations</a>
-</div>
+{% include page-navigation.html
+  left_url="/automation/climate/index.html"
+  left_label="Back to climate automations"
+  right_url="/automation/index.html"
+  right_label="View all automations"
+%}
