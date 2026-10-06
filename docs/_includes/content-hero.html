@@ -1,6 +1,8 @@
 {% comment %}
 Shared content hero image. Params: src, alt, width (default 1200), height (default 630).
+It is the LCP element on pages that use it, so it loads eagerly with high priority.
+Use it at most once per page so there is only one high-priority image.
 {% endcomment %}
 <figure class="content-hero">
-  <img src="{{ include.src }}" alt="{{ include.alt }}" width="{{ include.width | default: 1200 }}" height="{{ include.height | default: 630 }}">
+  <img src="{{ include.src }}" alt="{{ include.alt }}" width="{{ include.width | default: 1200 }}" height="{{ include.height | default: 630 }}" loading="eager" fetchpriority="high">
 </figure>

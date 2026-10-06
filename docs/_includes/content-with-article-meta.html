@@ -1,0 +1,15 @@
+{%- comment -%}
+Renders page content with the article meta (date line + share button)
+directly after the first h1, and marks that h1 with has-article-meta.
+This is done at build time so nothing moves after load (no layout shift).
+Pages without an h1 get the meta above the content.
+Params: content (rendered page HTML), meta (rendered article-meta.html).
+{%- endcomment -%}
+{%- if include.content contains '</h1>' -%}
+{%- capture h1_close_with_meta -%}</h1>
+{{ include.meta }}{%- endcapture -%}
+{{ include.content | replace_first: '<h1', '<h1 class="has-article-meta"' | replace_first: '</h1>', h1_close_with_meta }}
+{%- else -%}
+{{ include.meta }}
+{{ include.content }}
+{%- endif -%}

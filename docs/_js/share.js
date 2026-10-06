@@ -97,23 +97,6 @@
   }
 
   /**
-   * Move article meta section after the page title
-   */
-  function moveArticleMetaAfterH1() {
-    var articleMeta = document.querySelector('.article-meta');
-    if (!articleMeta) return;
-
-    var mainContent = document.querySelector('.main-content');
-    if (!mainContent) return;
-
-    var h1 = mainContent.querySelector('h1');
-    if (h1) {
-      h1.classList.add('has-article-meta');
-      h1.parentNode.insertBefore(articleMeta, h1.nextSibling);
-    }
-  }
-
-  /**
    * Initialize share buttons in the article meta section
    */
   function initArticleShareButtons() {
@@ -129,7 +112,6 @@
    */
   function init() {
     initArticleShareButtons();
-    moveArticleMetaAfterH1();
   }
 
   // Run on DOMContentLoaded

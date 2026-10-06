@@ -134,3 +134,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  # Placeholder READMEs that keep the fingerprinted asset folders in git.
+  # Without this, github-pages publishes them as /assets/css/ and /assets/js/
+  # index pages and they end up in sitemap.xml.
+  - assets/css/README.md
+  - assets/js/README.md
