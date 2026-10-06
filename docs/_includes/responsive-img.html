@@ -1,0 +1,40 @@
+{%- comment -%}
+  Fixed names, no manifest. A card is name-400.avif, name-640.avif,
+  and name-640.jpg. Pass hero=1 for the home LCP image, which adds
+  name-800.avif, name-1200.avif, and name-1600.avif.
+  The Pages build writes these files. They are not committed.
+  Pass preload=true to emit a head preload link instead of a picture.
+{%- endcomment -%}
+{%- assign img_file = include.src | split: "/" | last -%}
+{%- assign img_stem = img_file | split: "." | first -%}
+{%- assign img_base = include.src | split: img_file | first -%}
+{%- assign img_sizes = include.sizes | default: "(min-width: 900px) 50vw, 100vw" -%}
+{%- assign img_w = include.width | append: "" | strip -%}
+{%- assign img_h = include.height | append: "" | strip -%}
+{%- if img_w.size == 0 -%}{%- assign img_w = "1200" -%}{%- endif -%}
+{%- if img_h.size == 0 -%}{%- assign img_h = "630" -%}{%- endif -%}
+{%- assign img_loading = include.loading | append: "" -%}
+{%- assign img_priority = include.priority | append: "" -%}
+{%- assign img_400 = img_base | append: img_stem | append: "-400.avif" | relative_url -%}
+{%- assign img_640 = img_base | append: img_stem | append: "-640.avif" | relative_url -%}
+{%- assign img_jpg = img_base | append: img_stem | append: "-640.jpg" | relative_url -%}
+{%- if include.hero == "1" or include.hero == 1 -%}
+{%- capture img_srcset -%}{{ img_400 }} 400w, {{ img_640 }} 640w, {{ img_base | append: img_stem | append: "-800.avif" | relative_url }} 800w, {{ img_base | append: img_stem | append: "-1200.avif" | relative_url }} 1200w, {{ img_base | append: img_stem | append: "-1600.avif" | relative_url }} 1600w{%- endcapture -%}
+{%- else -%}
+{%- capture img_srcset -%}{{ img_400 }} 400w, {{ img_640 }} 640w{%- endcapture -%}
+{%- endif -%}
+{%- if include.preload -%}
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesizes="{{ img_sizes }}" imagesrcset="{{ img_srcset }}">
+{%- else -%}
+<picture>
+  <source type="image/avif" srcset="{{ img_srcset }}" sizes="{{ img_sizes }}">
+  <img
+    src="{{ img_jpg }}"
+    alt="{{ include.alt | escape }}"
+    width="{{ img_w }}"
+    height="{{ img_h }}"
+    {%- if img_loading.size > 0 %} loading="{{ img_loading }}"{% endif %}
+    {%- if img_priority.size > 0 %} fetchpriority="{{ img_priority }}"{% elsif img_loading == "lazy" %} fetchpriority="low"{% endif %}
+    {%- if img_priority != "high" %} decoding="async"{% endif %}>
+</picture>
+{%- endif -%}

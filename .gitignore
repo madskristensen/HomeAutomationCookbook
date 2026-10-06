@@ -32,3 +32,12 @@ docs/.jekyll-cache/
 *.tmp
 *.bak
 /plan.md
+
+# Image variant cache and build outputs (not committed)
+.image-cache/
+docs/assets/img/**/*-400.avif
+docs/assets/img/**/*-640.avif
+docs/assets/img/**/*-800.avif
+docs/assets/img/**/*-1200.avif
+docs/assets/img/**/*-1600.avif
+docs/assets/img/**/*-640.jpg

@@ -35,6 +35,9 @@
     <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" />
 
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+    {% if page.url == "/" %}
+    {% include responsive-img.html src="/assets/img/hero.jpg" alt="" width="1200" height="630" sizes="(min-width: 900px) 50vw, 100vw" hero=1 preload=true %}
+    {% endif %}
 
 </head>
 <body>
@@ -68,6 +71,7 @@
   {% if page.recipe_directory %}
   <script src="{{ '/assets/js/recipe-search.js' | relative_url }}" defer></script>
   {% endif %}
+  <script src="{{ '/assets/js/page.js' | relative_url }}" data-print="{{ '/assets/css/print.css' | relative_url }}" defer></script>
   {% include analytics.html %}
 </body>
 </html>

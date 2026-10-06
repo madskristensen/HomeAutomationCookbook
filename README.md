@@ -136,3 +136,21 @@ Questions? Open an issue or start a discussion!
 ---
 
 Built by the home automation community
+
+## Responsive images (Pages build)
+
+Masters stay in git under `docs/assets/img/` (currently `hero.jpg`). Generated
+AVIF/JPEG sizes are produced at deploy time and are not committed.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install pillow pillow-avif-plugin
+python3 script/render-image-variants.py
+```
+
+Card masters get `name-400.avif`, `name-640.avif`, and `name-640.jpg`. The home
+hero also gets `name-800.avif`, `name-1200.avif`, and `name-1600.avif`. Use
+`docs/_includes/responsive-img.html` in templates. Skip `logos/`, `social/`,
+and icon files; those stay as committed assets.
+
