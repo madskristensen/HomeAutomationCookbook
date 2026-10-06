@@ -1,8 +1,7 @@
 ---
 layout: default
 ---
+{% capture article_meta %}{% include article-meta.html %}{% endcapture %}
 <article class="automation-page{% if page.compact %} automation-page--compact{% endif %}">
-    {% include article-meta.html %}
-
-    {{ content }}
+    {% include content-with-article-meta.html content=content meta=article_meta %}
 </article>

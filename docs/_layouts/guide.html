@@ -1,7 +1,5 @@
 ---
 layout: default
 ---
-
-{% include article-meta.html mode="guide" %}
-
-{{ content }}
+{% capture article_meta %}{% include article-meta.html mode="guide" %}{% endcapture %}
+{% include content-with-article-meta.html content=content meta=article_meta %}
