@@ -17,7 +17,7 @@ Home Automation Cookbook is committed to protecting your privacy. This policy ex
 
 Home Automation Cookbook uses [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) to understand how visitors use the site and to improve its content, navigation, accessibility, and performance. This may include aggregated measures such as pages viewed, referrers, and basic browser or device information.
 
-Cloudflare's free Web Analytics beacon is designed to work without using client-side cookies for analytics. The information is used for site optimization and troubleshooting, not for advertising on Home Automation Cookbook.
+Cloudflare Web Analytics is used for site optimization and troubleshooting only. Home Automation Cookbook does not run ad networks, and we never collect kids' data. Cloudflare's free Web Analytics beacon is designed to work without client-side cookies for analytics.
 
 Cloudflare processes this data under its own privacy terms. Read the [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/) for more information about collection, use, protection, and retention.
 
