@@ -20,12 +20,6 @@
     {% else %}
     <meta property="og:image:type" content="image/jpeg">
     {% endif %}
-    {% if page.url == "/about.html" %}
-    {% include about-schema.html %}
-    {% endif %}
-    {% if page.url == "/" %}
-    {% include site-schema.html %}
-    {% endif %}
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/img/icon-48x48.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ '/favicon.ico' | relative_url }}" />
@@ -102,5 +96,16 @@
   {% endif %}
   <script src="{{ js_page | relative_url }}" data-print="{{ css_print | relative_url }}" data-sw="{{ '/sw.js' | relative_url }}" defer fetchpriority="low"></script>
   {% include analytics.html %}
+  {% if page.url == "/about.html" %}
+  {% include about-schema.html %}
+  {% endif %}
+  {% if page.url == "/" %}
+  {% include site-schema.html %}
+  {% endif %}
+  {% if page.layout == "automation" %}
+  {% include recipe-schema.html %}
+  {% include article-schema.html %}
+  {% endif %}
+  {% include breadcrumbs-schema.html %}
 </body>
 </html>
