@@ -30,6 +30,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image encoder
+        working-directory: ${{ github.workspace }}
+        run: pip install pillow pillow-avif-plugin
+      - name: Fingerprint image masters
+        id: images
+        working-directory: ${{ github.workspace }}
+        run: echo "fingerprint=$(python3 script/render-image-variants.py --fingerprint)" >> "$GITHUB_OUTPUT"
+      - name: Cache image variants
+        uses: actions/cache@v4
+        id: image-cache
+        with:
+          path: .image-cache
+          key: image-variants-${{ steps.images.outputs.fingerprint }}
+      - name: Restore image variants from cache
+        if: steps.image-cache.outputs.cache-hit == 'true'
+        working-directory: ${{ github.workspace }}
+        run: python3 script/render-image-variants.py --from-cache
+      - name: Render image variants
+        if: steps.image-cache.outputs.cache-hit != 'true'
+        working-directory: ${{ github.workspace }}
+        run: python3 script/render-image-variants.py
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -44,6 +69,9 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Publish capped image masters
+        working-directory: ${{ github.workspace }}
+        run: python3 script/render-image-variants.py --publish-site
       - name: Add IndexNow verification key
         env:
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}

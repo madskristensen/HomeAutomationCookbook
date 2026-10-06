@@ -20,11 +20,15 @@ description: Helpful automations for an ordinary family house. The physical swit
     </ul>
   </div>
   <div class="home-hero-visual">
-    <picture>
-      <source srcset="/assets/img/hero.avif" type="image/avif">
-      <source srcset="/assets/img/hero.webp" type="image/webp">
-      <img src="/assets/img/hero.jpg" alt="Illustration of a connected living room with automated lighting, climate, and entertainment" width="1200" height="630" fetchpriority="high">
-    </picture>
+    {% include responsive-img.html
+      src="/assets/img/hero.jpg"
+      alt="Illustration of a connected living room with automated lighting, climate, and entertainment"
+      width="1200"
+      height="630"
+      sizes="(min-width: 900px) 50vw, 100vw"
+      hero=1
+      loading="eager"
+      priority="high" %}
   </div>
 </section>
 
