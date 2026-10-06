@@ -1,0 +1,17 @@
+{% comment %}
+  Cloudflare Web Analytics. Inject after window load (Eastside pattern)
+  so Lighthouse mobile stays at 100 and the beacon stays off the critical path.
+{% endcomment %}
+<script>
+(function () {
+  function addBeacon() {
+    if (document.querySelector("script[data-cf-beacon]")) return;
+    var script = document.createElement("script");
+    script.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    script.type = "module";
+    script.setAttribute("data-cf-beacon", JSON.stringify({ token: "59a97c6948ea4dc1b571e8117551d9bd" }));
+    document.head.appendChild(script);
+  }
+  window.addEventListener("load", addBeacon);
+})();
+</script>

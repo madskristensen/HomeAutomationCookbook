@@ -36,13 +36,6 @@
 
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 
-    <script type="text/javascript">
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "yg96xlojrn");
-    </script>
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
@@ -75,5 +68,6 @@
   {% if page.recipe_directory %}
   <script src="{{ '/assets/js/recipe-search.js' | relative_url }}" defer></script>
   {% endif %}
+  {% include analytics.html %}
 </body>
 </html>
