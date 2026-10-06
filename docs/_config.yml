@@ -107,10 +107,11 @@ plugins:
   - jekyll-minifier
 
 # Minification settings
-# Automatically minifies HTML, CSS, and JavaScript during build
+# CSS and JS are minified and fingerprinted in script/fingerprint-assets.py
+# before Jekyll runs. Keep HTML minify here for markup and inline scripts.
 jekyll-minifier:
-  compress_css: true
-  compress_javascript: true
+  compress_css: false
+  compress_javascript: false
   compress_json: true
   compress_html: true
   uglifier_args:

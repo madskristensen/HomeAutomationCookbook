@@ -18,7 +18,7 @@
 # Site structure
 
 - This is a Jekyll static site for homeautomationcookbook.com
-- Main CSS: `docs/assets/css/site.css` (consolidated stylesheet)
+- Main CSS source: `docs/_css/site.css` (fingerprinted to `assets/css/site.<hash>.css` at build)
 - Config: `docs/_config.yml` contains navigation structure
 - Layout: `docs/_layouts/default.html` is the main template
 - Automation category layout: `docs/_layouts/automation-category.html`
@@ -108,9 +108,9 @@ Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, cod
 
 - **Adding new automation**: Create the recipe in the appropriate category folder, add it to `docs/_data/automation_categories.yml`, and add useful related-recipe links. Do not add individual recipes to `_config.yml`.
 - **Sentence case conversion**: Use `multi_replace_string_in_file` with heading patterns like "## Title Case" → "## Sentence case"
-- **CSS changes**: Edit consolidated `docs/assets/css/site.css` (do not split files)
+- **CSS changes**: Edit `docs/_css/site.css` (do not split files; fingerprint plugin publishes the hashed copy)
 - **Color updates**: Search for hex values and replace consistently across entire stylesheet
-- **Production assets**: Keep source CSS and JavaScript readable. The GitHub Actions build sets `JEKYLL_ENV=production`, and `jekyll-minifier` produces the deployed minified assets.
+- **Production assets**: Keep source CSS/JS readable under `docs/_css/` and `docs/_js/`. The build fingerprints them (`script/fingerprint-assets.py`) and `jekyll-minifier` minifies HTML in production.
 
 # What works well
 

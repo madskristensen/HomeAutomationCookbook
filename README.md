@@ -40,12 +40,17 @@ The Home Automation Cookbook is a community-driven documentation project that he
    bundle install
    ```
 
-3. Run the local server:
+3. Install the CSS minifier used by the fingerprint plugin:
+   ```bash
+   python3 -m pip install rcssmin
+   ```
+
+4. Run the local server:
    ```bash
    bundle exec jekyll serve --source docs --port 4001 --host 0.0.0.0
    ```
 
-4. Open your browser to `http://localhost:4001`
+5. Open your browser to `http://localhost:4001`
 
 ### Quick Run Script
 
@@ -136,6 +141,29 @@ Questions? Open an issue or start a discussion!
 ---
 
 Built by the home automation community
+
+## Fingerprinted CSS and JS
+
+Source stylesheets live in `docs/_css/` and scripts in `docs/_js/`. The Pages
+build (and local `jekyll serve`, via `docs/_plugins/fingerprint_assets.rb`)
+minifies CSS with rcssmin and publishes fingerprinted files:
+
+- `docs/assets/css/site.<hash>.css`
+- `docs/assets/css/print.<hash>.css` (injected on `beforeprint` only)
+- `docs/assets/js/<name>.<hash>.js`
+
+Layouts read paths from `_data/css.yml` and `_data/js.yml` (generated, not
+committed). Install the minifier once:
+
+```bash
+pip install rcssmin
+# or: python3 -m pip install rcssmin
+```
+
+HTML (and JSON) minify stays with `jekyll-minifier` in production builds.
+A small service worker at `/sw.js` precaches the home shell, fingerprinted
+assets, the web manifest, and icons. Image responses use a durable cache
+name that survives deploys.
 
 ## Responsive images (Pages build)
 
