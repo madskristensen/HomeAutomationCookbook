@@ -42,8 +42,10 @@ docs/assets/img/**/*-1200.avif
 docs/assets/img/**/*-1600.avif
 docs/assets/img/**/*-640.jpg
 
-# Fingerprinted CSS/JS written before Jekyll reads files
+# Fingerprinted CSS/JS and SW shell data written before Jekyll reads files
+# (CI runs script/fingerprint-assets.py; github-pages safe mode skips _plugins)
 docs/assets/css/*.css
-docs/assets/js/*.*.js
+docs/assets/js/*.js
 docs/_data/css.yml
 docs/_data/js.yml
+docs/_data/shell.yml

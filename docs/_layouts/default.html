@@ -39,7 +39,11 @@
     <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" />
     <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
 
-    <link rel="stylesheet" href="{{ site.data.css.site | relative_url }}">
+    {% assign css_site = site.data.css.site %}
+    {% if css_site == nil or css_site == "" %}
+    {% assign css_site = "/assets/css/site.css" %}
+    {% endif %}
+    <link rel="stylesheet" href="{{ css_site | relative_url }}">
     {% if page.url == "/" %}
     {% include responsive-img.html src="/assets/img/hero.jpg" alt="" width="1200" height="630" sizes="(min-width: 900px) 50vw, 100vw" hero=1 preload=true %}
     {% endif %}
@@ -71,12 +75,32 @@
     </div>
   </footer>
   
-  <script src="{{ site.data.js.navigation | relative_url }}" defer fetchpriority="low"></script>
-  <script src="{{ site.data.js.share | relative_url }}" defer fetchpriority="low"></script>
-  {% if page.recipe_directory %}
-  <script src="{{ site.data.js.recipe_search | relative_url }}" defer fetchpriority="low"></script>
+  {% assign js_navigation = site.data.js.navigation %}
+  {% if js_navigation == nil or js_navigation == "" %}
+  {% assign js_navigation = "/assets/js/navigation.js" %}
   {% endif %}
-  <script src="{{ site.data.js.page | relative_url }}" data-print="{{ site.data.css.print | relative_url }}" data-sw="{{ '/sw.js' | relative_url }}" defer fetchpriority="low"></script>
+  {% assign js_share = site.data.js.share %}
+  {% if js_share == nil or js_share == "" %}
+  {% assign js_share = "/assets/js/share.js" %}
+  {% endif %}
+  {% assign js_recipe_search = site.data.js.recipe_search %}
+  {% if js_recipe_search == nil or js_recipe_search == "" %}
+  {% assign js_recipe_search = "/assets/js/recipe-search.js" %}
+  {% endif %}
+  {% assign js_page = site.data.js.page %}
+  {% if js_page == nil or js_page == "" %}
+  {% assign js_page = "/assets/js/page.js" %}
+  {% endif %}
+  {% assign css_print = site.data.css.print %}
+  {% if css_print == nil or css_print == "" %}
+  {% assign css_print = "/assets/css/print.css" %}
+  {% endif %}
+  <script src="{{ js_navigation | relative_url }}" defer fetchpriority="low"></script>
+  <script src="{{ js_share | relative_url }}" defer fetchpriority="low"></script>
+  {% if page.recipe_directory %}
+  <script src="{{ js_recipe_search | relative_url }}" defer fetchpriority="low"></script>
+  {% endif %}
+  <script src="{{ js_page | relative_url }}" data-print="{{ css_print | relative_url }}" data-sw="{{ '/sw.js' | relative_url }}" defer fetchpriority="low"></script>
   {% include analytics.html %}
 </body>
 </html>

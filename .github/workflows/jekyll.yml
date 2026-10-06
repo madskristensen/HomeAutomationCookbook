@@ -68,9 +68,12 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
-      # fingerprint_assets.rb minifies _css/_js into assets/*.<hash>.* and
-      # writes _data/css.yml + _data/js.yml before Jekyll reads static files.
-      # service_worker.rb builds site.data.shell for sw.js precache.
+      # github-pages runs Jekyll in safe mode and skips docs/_plugins, so
+      # fingerprinting and SW shell data must run here (same pattern as
+      # render-image-variants.py), not in fingerprint_assets.rb / service_worker.rb.
+      - name: Fingerprint CSS/JS and write SW shell data
+        working-directory: ${{ github.workspace }}
+        run: python3 script/fingerprint-assets.py
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
