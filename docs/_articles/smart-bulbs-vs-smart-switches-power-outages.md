@@ -145,3 +145,5 @@ If the electrical design permits it, providing a neutral and adequate box space 
 - [Control lights with a wireless button or linked switch](/automation/lighting/wireless-button-linked-lights.html)
 - [Choose smart-home devices and gear](/getting-started/device-guide.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
+- [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
+- [Set up gradual wake-up lighting](/automation/lighting/wake-up-lights.html)

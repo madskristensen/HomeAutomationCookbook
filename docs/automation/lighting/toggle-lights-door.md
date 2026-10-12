@@ -173,6 +173,8 @@ It can when the hub and devices support local automation. Regardless, the physic
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Disable automations when door is closed](/automation/lighting/disable-on-door-close.html)
 - [Lighting automations](/automation/lighting/index.html)
+- [Motion sensor placement guide](/articles/motion-sensor-placement.html)
+- [PIR vs mmWave presence sensors](/articles/pir-vs-mmwave-presence.html)
 
 {% include page-navigation.html
   left_url="/automation/lighting/index.html"

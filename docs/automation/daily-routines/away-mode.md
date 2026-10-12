@@ -181,6 +181,7 @@ Add security actions only after the household has tested presence detection and 
 - [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
 - [Prepare the house when someone arrives](/automation/daily-routines/unlock-door-arrival.html)
 - [Daily routine automations](/automation/daily-routines/index.html)
+- [Dog-bark intrusion deterrent](/automation/security/fake-dog-deterrent.html)
 
 {% include page-navigation.html
   left_url="/automation/daily-routines/index.html"

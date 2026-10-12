@@ -139,6 +139,10 @@ A local hub and compatible devices can keep the automation running, but the phys
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Bathroom night light](/automation/lighting/bathroom-night-light.html)
 - [Lighting automations](/automation/lighting/index.html)
+- [Turn lights on when a door opens](/automation/lighting/toggle-lights-door.html)
+- [Motion sensor placement guide](/articles/motion-sensor-placement.html)
+- [Smart bulbs vs. smart switches after a power outage](/articles/smart-bulbs-vs-smart-switches-power-outages.html)
+- [Set up gradual wake-up lighting](/automation/lighting/wake-up-lights.html)
 
 {% include page-navigation.html
   left_url="/automation/lighting/index.html"

@@ -136,3 +136,5 @@ No. Presence is not identity, and a clear room is not proof that everyone left. 
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Dim the bathroom light at night](/automation/lighting/bathroom-night-light.html)
 - [Home automation philosophy](/getting-started/philosophy.html)
+- [Motion sensor placement guide](/articles/motion-sensor-placement.html)
+- [Turn lights on when a door opens](/automation/lighting/toggle-lights-door.html)
