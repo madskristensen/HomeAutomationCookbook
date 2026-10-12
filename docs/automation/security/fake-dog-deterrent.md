@@ -113,6 +113,7 @@ Run it only in Away mode. You can further limit Away-mode playback to nighttime,
 - [Turn on away lights to look occupied](/automation/security/away-lights.html)
 - [Set up fire safety response](/automation/security/fire-safety.html)
 - [Set up away mode](/automation/daily-routines/away-mode.html)
+- [Motion sensor placement guide](/articles/motion-sensor-placement.html)
 
 {% include page-navigation.html
   left_url="/automation/security/index.html"

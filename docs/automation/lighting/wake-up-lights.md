@@ -106,6 +106,8 @@ Yes, using a single bedside lamp facing away from the partner's side of the bed,
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 - [Adjust blinds at sunset and sunrise](/automation/climate/blinds-sunset-sunrise.html)
+- [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
+- [Smart bulbs vs. smart switches after a power outage](/articles/smart-bulbs-vs-smart-switches-power-outages.html)
 
 {% include page-navigation.html
   left_url="/automation/lighting/index.html"

@@ -141,6 +141,9 @@ It should. Treat a manual change as an explicit choice and avoid turning the lig
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Bathroom night light](/automation/lighting/bathroom-night-light.html)
 - [Lighting automations](/automation/lighting/index.html)
+- [Turn lights on when a door opens](/automation/lighting/toggle-lights-door.html)
+- [PIR vs mmWave presence sensors](/articles/pir-vs-mmwave-presence.html)
+- [Smart bulbs vs. smart switches after a power outage](/articles/smart-bulbs-vs-smart-switches-power-outages.html)
 
 {% include page-navigation.html
   left_url="/automation/lighting/index.html"

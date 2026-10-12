@@ -105,6 +105,7 @@ A doorbell button can send more than one signal for a single press. A short debo
 - [Turn on lights when motion is detected](/automation/lighting/lights-on-motion.html)
 - [Set up away mode](/automation/daily-routines/away-mode.html)
 - [Use status tiles instead of notifications](/automation/notifications/status-tiles.html)
+- [Dog-bark intrusion deterrent](/automation/security/fake-dog-deterrent.html)
 
 {% include page-navigation.html
   left_url="/automation/notifications/index.html"

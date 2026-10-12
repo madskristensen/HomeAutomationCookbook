@@ -105,3 +105,5 @@ Use a delay after the last motion event, not an immediate off action. A PIR repo
 - [Turn on a dim bathroom light at night](/automation/lighting/bathroom-night-light.html)
 - [Turn on the bathroom fan when a shower starts](/automation/climate/fan-shower.html)
 - [PIR vs mmWave presence sensors](/articles/pir-vs-mmwave-presence.html)
+- [Turn lights on when a door opens](/automation/lighting/toggle-lights-door.html)
+- [Dog-bark intrusion deterrent](/automation/security/fake-dog-deterrent.html)

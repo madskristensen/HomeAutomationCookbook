@@ -121,6 +121,7 @@ Arriving home and disarming Away mode, however the platform signals that, should
 - [Set up away mode](/automation/daily-routines/away-mode.html)
 - [Set up fire safety response](/automation/security/fire-safety.html)
 - [Set up outdoor night lights](/automation/lighting/outdoor-night-lights.html)
+- [Dog-bark intrusion deterrent](/automation/security/fake-dog-deterrent.html)
 
 {% include page-navigation.html
   left_url="/automation/security/index.html"
