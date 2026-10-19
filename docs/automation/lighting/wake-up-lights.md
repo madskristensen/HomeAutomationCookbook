@@ -4,7 +4,7 @@ date: 2025-11-30
 title: Set up gradual wake-up lighting
 description: A platform-neutral recipe that gradually brightens a bedroom light before a set wake time, simulating a sunrise instead of a jarring alarm.
 keywords: wake up lights, sunrise alarm, gradual lighting, morning light automation, gentle wake up
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-19
 image: /assets/img/social/recipes/lighting/wake-up-lights.png
 compact: true
 faqs:
@@ -21,6 +21,8 @@ faqs:
 {% include content-hero.html src="/assets/img/social/recipes/lighting/wake-up-lights.svg" alt="Bedroom lights brighten gradually before the household wake-up time" %}
 
 Gradually brighten a bedroom light before a set wake time, so the room fills with light like a sunrise instead of relying on a jarring alarm alone.
+
+**Pairs well with:** [Adjust blinds at sunset and sunrise](/automation/climate/blinds-sunset-sunrise.html)
 
 **Best for:** A bedroom with a smart bulb or light strip that supports a wide dimming range and a fixed wake time worth planning around.
 

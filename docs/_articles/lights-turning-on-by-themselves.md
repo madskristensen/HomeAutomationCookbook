@@ -3,7 +3,7 @@ layout: guide
 title: Lights turning on by themselves
 description: A checklist when a light turns on by itself. Check the sensor view, power restore, duplicate rules, or a direct device link.
 date: 2026-10-05
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-19
 image: /assets/img/social/guides/lights-turning-on-by-themselves.png
 ---
 
@@ -107,6 +107,7 @@ Look for a direct sensor-to-light link, or a power-on setting. A hub rule cannot
 
 ## Related guides and recipes
 
+- [Why motion lights turn off while you are still there](/articles/why-motion-lights-turn-off.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Dim the bathroom light at night](/automation/lighting/bathroom-night-light.html)

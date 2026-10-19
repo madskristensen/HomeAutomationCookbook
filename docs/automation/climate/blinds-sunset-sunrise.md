@@ -4,7 +4,7 @@ date: 2025-11-29
 title: Automate blinds at sunrise and sunset
 description: Open motorized blinds near sunrise and close them near sunset while preserving privacy, bedtime limits, and physical control.
 keywords: smart blinds automation, automatic shades, sunset blinds, sunrise blinds, motorized blinds, privacy automation
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-19
 image: /assets/img/social/recipes/climate/blinds-sunset-sunrise.png
 compact: true
 faqs:
@@ -21,6 +21,8 @@ faqs:
 {% include content-hero.html src="/assets/img/social/recipes/climate/blinds-sunset-sunrise.svg" alt="Window blinds opening at sunrise and closing at sunset" %}
 
 Blinds open a little after sunrise and close at sunset or a fixed bedtime, whichever is more useful for privacy, while the physical remote or wall control still works at any time.
+
+**Pairs well with:** [Set up gradual wake-up lighting](/automation/lighting/wake-up-lights.html)
 
 **Best for:** Motorized blinds or shades with their own reliable open and close commands and a household that wants a predictable daily rhythm without daily manual adjustment.
 
@@ -71,6 +73,12 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Advanced features
 
+### Open before the morning alarm
+
+Open the bedroom blinds or curtains a few minutes before the alarm so the room is already light. Ten to twenty minutes is a practical start. Use the household wake time, not sunrise, so an early summer morning does not open the room while people are still asleep.
+
+The blinds can do this on their own when the window gives enough daylight. If the window is shaded, faces another building, or stays dark in winter, pair them with [gradual wake-up lighting](/automation/lighting/wake-up-lights.html) and let the lamp brighten first. The physical remote or wall control still closes them when someone wants the room dark.
+
 ### Add a light sensor only when it solves a problem
 
 A sunset trigger is predictable and needs no outdoor sensor. Add a light sensor only if heavy shade, unusual overcast weather, or a specific room consistently needs a different trigger.
@@ -103,6 +111,7 @@ The blinds' own remote, wall switch, or app pairing must still open and close th
 
 ## Related recipes
 
+- [Set up gradual wake-up lighting](/automation/lighting/wake-up-lights.html)
 - [Away lighting](/automation/security/away-lights.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Run a bedtime routine without surprising the household](/automation/daily-routines/bedtime-routine.html)

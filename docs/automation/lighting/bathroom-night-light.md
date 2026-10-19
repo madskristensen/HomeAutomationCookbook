@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Bathroom night-light automation
 description: A local-first bathroom night-light recipe that uses motion, low brightness, and a reliable wall-switch fallback.
 keywords: bathroom night light, nighttime motion lighting, low brightness automation, smart bathroom lighting, motion sensor dimming, night mode lighting
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-19
 image: /assets/img/social/recipes/lighting/bathroom-night-light.png
 compact: true
 faqs:
@@ -125,6 +125,7 @@ The physical wall switch still works independent of the automation, so the bathr
 
 ## Related recipes
 
+- [Why motion lights turn off while you are still there](/articles/why-motion-lights-turn-off.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Lighting automations](/automation/lighting/index.html)

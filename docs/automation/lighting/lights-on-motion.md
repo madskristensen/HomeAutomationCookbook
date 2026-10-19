@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights on with motion sensors
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-19
 image: /assets/img/social/recipes/lighting/lights-on-motion.png
 compact: true
 faqs:
@@ -134,6 +134,7 @@ A local hub and compatible devices can keep the automation running, but the phys
 
 ## Related recipes
 
+- [Why motion lights turn off while you are still there](/articles/why-motion-lights-turn-off.html)
 - [Lights turning on by themselves](/articles/lights-turning-on-by-themselves.html)
 - [Control several lights from one physical button or switch](/automation/lighting/wireless-button-linked-lights.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
