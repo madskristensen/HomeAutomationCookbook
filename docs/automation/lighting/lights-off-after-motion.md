@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights off after motion stops
 description: A conservative motion-lighting off recipe that respects still occupants, manual wall-switch choices, and local-first control.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-19
 image: /assets/img/social/recipes/lighting/lights-off-after-motion.png
 compact: true
 faqs:
@@ -137,6 +137,7 @@ It should. Treat a manual change as an explicit choice and avoid turning the lig
 
 ## Related recipes
 
+- [Why motion lights turn off while you are still there](/articles/why-motion-lights-turn-off.html)
 - [Lights turning on by themselves](/articles/lights-turning-on-by-themselves.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Bathroom night light](/automation/lighting/bathroom-night-light.html)

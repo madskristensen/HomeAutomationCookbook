@@ -5,7 +5,7 @@ redirect_from:
 title: PIR vs mmWave presence sensors
 description: Choose between PIR motion, mmWave presence, or both for bathrooms, offices, halls, and other rooms without causing false turn-offs.
 date: 2026-08-30
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-19
 image: /assets/img/social/guides/pir-vs-mmwave-presence.png
 ---
 
@@ -132,6 +132,7 @@ No. Presence is not identity, and a clear room is not proof that everyone left. 
 
 ## Related guides
 
+- [Why motion lights turn off while you are still there](/articles/why-motion-lights-turn-off.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Dim the bathroom light at night](/automation/lighting/bathroom-night-light.html)
