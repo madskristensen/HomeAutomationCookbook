@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Get notified when the dryer finishes
 description: A platform-neutral laundry recipe that detects sustained dryer vibration and sends one completion alert without controlling appliance power.
 keywords: dryer finished alert, dryer vibration sensor, laundry notification, dryer automation, dryer done notification
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/appliances/dryer-done-notification.png
 compact: true
 faqs:
@@ -84,6 +84,8 @@ See the full [gear guide](/getting-started/device-guide.html#products-i-have-use
 6. Create separate running and waiting-laundry states.
 7. Test with silent logging before enabling notifications.
 8. Add one completion notification, not repeated announcements.
+
+On Hubitat? I wrote an app for this: [Appliance Cycle Monitor](https://github.com/madskristensen/hubitat-drivers/tree/main/apps/appliance-cycle-monitor). It works with a vibration sensor and handles the running and finished states.
 
 ## Calibrate from evidence
 

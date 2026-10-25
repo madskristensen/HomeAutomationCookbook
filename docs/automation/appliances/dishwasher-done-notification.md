@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Dishwasher finished notification
 description: Learn the dishwasher's power or vibration pattern and send one reliable completion alert without controlling appliance power.
 keywords: dishwasher finished alert, dishwasher notification, dishwasher power monitoring, kitchen appliance automation, dishwasher done notification
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/appliances/dishwasher-done-notification.png
 compact: true
 faqs:
@@ -84,6 +84,8 @@ See the full [gear guide](/getting-started/device-guide.html#products-i-have-use
 6. Create separate running and waiting-dishes states.
 7. Test with silent logging before enabling notifications.
 8. Enable one completion alert, then add a quiet reminder only if it proves useful.
+
+On Hubitat? I wrote an app for this: [Appliance Cycle Monitor](https://github.com/madskristensen/hubitat-drivers/tree/main/apps/appliance-cycle-monitor). It works with a power meter or vibration sensor.
 
 ## Advanced features
 

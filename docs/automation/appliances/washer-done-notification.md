@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Get notified when the washer finishes
 description: A platform-neutral laundry recipe that learns the washer's power pattern and sends one reliable completion alert without controlling appliance power.
 keywords: washer finished alert, laundry notification, washer power monitoring, washing machine automation, washer done notification
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/appliances/washer-done-notification.png
 compact: true
 faqs:
@@ -102,6 +102,8 @@ Use power or acceleration only when the device profile exposes that attribute. A
 ### Hubitat
 
 Hubitat Basic Rules supports acceleration and vibration triggers. For power thresholds or a remembered running state, use [Rule Machine](https://docs2.hubitat.com/en/apps/rule-machine/rule-5-1) with a compatible driver that exposes current power. Keep the monitor observe-only and test several real cycles before enabling notifications.
+
+On Hubitat? I wrote an app for this: [Appliance Cycle Monitor](https://github.com/madskristensen/hubitat-drivers/tree/main/apps/appliance-cycle-monitor). It turns a power meter or vibration sensor into a running and finished status.
 
 ### Home Assistant
 

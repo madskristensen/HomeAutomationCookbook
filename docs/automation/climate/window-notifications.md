@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Window ventilation notifications
 description: A platform-neutral recipe that compares indoor and outdoor temperature and notifies the household when opening or closing windows would save energy.
 keywords: window notification automation, energy saving alerts, when to open windows, temperature notification, natural ventilation
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/climate/window-notifications.png
 compact: true
 faqs:
@@ -82,6 +82,8 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 4. Add a cooldown between notifications so a temperature hovering near the threshold does not send repeated alerts.
 5. If window sensors are available, skip the notification for windows already open.
 6. Restrict notifications to hours when someone is likely to see and act on them.
+
+On Hubitat? I wrote an app for this: [Climate Advisor](https://github.com/madskristensen/hubitat-drivers/tree/main/apps/climate-advisor). It gives open or close the windows advice from indoor and outdoor temperatures and never controls anything.
 
 ## Advanced features
 
