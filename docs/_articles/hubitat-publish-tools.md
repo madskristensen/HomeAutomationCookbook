@@ -31,11 +31,27 @@ This is for people who write their own Hubitat drivers, apps, or libraries and a
 - **Publish on save.** Optional. Turn it on from that marker's context menu and every save goes to the hub.
 - **Connection check.** It verifies that it can reach the hub before it publishes.
 
+The marker in the corner of the editor shows the publish state for your hub.
+
+![Editor status marker reading v7, 2 devices, today, in sync](/assets/img/screenshots/hubitat-publish-tools/adornment.png){: .article-screenshot width="280" height="79" loading="lazy" decoding="async" }
+
+Compare with the hub opens your local file and the hub version side by side.
+
+![Visual Studio diff view comparing a local away-lights.groovy file with the hub version, with one changed VERSION line highlighted](/assets/img/screenshots/hubitat-publish-tools/compare.png){: .article-screenshot width="1223" height="705" loading="lazy" decoding="async" }
+
 ## Getting started
 
 1. Install [Hubitat Publish Tools from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.HubitatVS).
 2. Open **Tools > Hubitat > Hub Connections** and add your hub's IP address and credentials.
 3. Open a Hubitat `.groovy` file, right-click it, and publish.
+
+The Hubitat Connections window lists each hub with its status and host, and has fields for name, host, username, and password.
+
+![Hubitat Connections tool window listing three hubs as Connected, Testing, and Not connected, with a form for name, host, username, and password](/assets/img/screenshots/hubitat-publish-tools/tool-window.png){: .article-screenshot width="1018" height="257" loading="lazy" decoding="async" }
+
+With more than one hub set up, it asks which one to publish to.
+
+![Select Hubitat Connection dialog asking which hub to publish to, with three hubs listed and a Don't ask me again this session checkbox](/assets/img/screenshots/hubitat-publish-tools/connection-selector.png){: .article-screenshot width="318" height="278" loading="lazy" decoding="async" }
 
 The source code and issue tracker are on [GitHub](https://github.com/madskristensen/HubitatVS), in a repo called HubitatVS. Bug reports and pull requests are welcome.
 
