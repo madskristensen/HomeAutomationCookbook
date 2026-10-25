@@ -4,7 +4,7 @@ date: 2025-11-29
 title: Turn on away lights to look occupied
 description: A platform-neutral recipe that turns on a few strategic lights while away to make the home look occupied, without an unnatural all-lights-on pattern.
 keywords: away lights, security lighting, home occupied simulation, break-in deterrent, smart home security
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/security/away-lights.png
 compact: true
 faqs:
@@ -84,6 +84,8 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 3. Set the trigger to turn the scene on at sunset only while Away mode is active, and off again at a fixed cutoff time such as 11:00 PM.
 4. Confirm returning home and leaving Away mode correctly stops the pattern and returns lights to their normal schedule.
 5. Test the full cycle once with Away mode manually enabled, rather than waiting for an actual absence to find a problem.
+
+On Hubitat? I wrote an app for this: [Away Lights](https://github.com/madskristensen/hubitat-drivers/tree/main/apps/away-lights). It turns a set of lights on and off during a time window while the hub is in Away mode.
 
 ## Advanced features
 

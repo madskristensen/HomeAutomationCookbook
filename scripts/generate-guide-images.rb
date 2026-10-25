@@ -14,6 +14,7 @@ PAGES = [
   ["docs/_articles/why-arrive-leave-triggers-fail.md", "why-arrive-leave-triggers-fail", "Presence guide", "sensors", true],
   ["docs/_articles/lights-turning-on-by-themselves.md", "lights-turning-on-by-themselves", "Lighting guide", "checklist", true],
   ["docs/_articles/why-motion-lights-turn-off.md", "why-motion-lights-turn-off", "Lighting guide", "checklist", true],
+  ["docs/_articles/hubitatvs-visual-studio-extension.md", "hubitatvs-visual-studio-extension", "Hubitat guide", "devices", true],
   ["docs/getting-started/index.md", "getting-started", "Getting started", "path", true],
   ["docs/getting-started/philosophy.md", "home-automation-philosophy", "Design principles", "balance", true],
   ["docs/getting-started/device-guide.md", "choose-devices", "Device guide", "devices", true],

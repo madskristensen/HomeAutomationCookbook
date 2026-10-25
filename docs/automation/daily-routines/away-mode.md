@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Set away mode when everyone leaves
 description: A conservative, platform-neutral away-mode recipe that verifies the home is empty before changing lights, climate, or security behavior.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/daily-routines/away-mode.png
 compact: true
 faqs:
@@ -112,6 +112,8 @@ SmartThings calls phone presence **Get your location from this phone**. Use the 
 ### Hubitat
 
 Hubitat [Mode Manager](https://docs2.hubitat.com/en/apps/mode-manager) can change mode from presence sensors. A conservative pattern sets Away only after every tracked resident has departed and exits Away when any resident returns. Add delay and recent indoor activity as reasons not to leave Home mode.
+
+On Hubitat? I wrote an app for this: [Auto Away Mode](https://github.com/madskristensen/hubitat-drivers/tree/main/apps/auto-away-mode). It combines presence, motion, and contact sensors to set Home or Away.
 
 ### Home Assistant
 
