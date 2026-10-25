@@ -32,7 +32,7 @@ CACHE_ROOT = ".image-cache"
 CACHE_OUT = os.path.join(CACHE_ROOT, "out")
 CACHE_META = os.path.join(CACHE_ROOT, "meta")
 CACHE_MASTERS = os.path.join(CACHE_ROOT, "masters")
-SKIP_TOP = {"logos", "social", "diagrams"}
+SKIP_TOP = {"logos", "social", "diagrams", "screenshots"}
 SKIP_NAMES = {
     "apple-touch-icon.png",
     "favicon-96x96.png",

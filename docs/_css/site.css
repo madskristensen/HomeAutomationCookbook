@@ -2066,3 +2066,12 @@ h1.has-article-meta {
         display: none;
     }
 }
+/* Inline UI screenshots in articles, published as lossless PNG */
+.article-screenshot {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
