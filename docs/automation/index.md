@@ -77,14 +77,14 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
   url="/automation/lighting/index.html"
   title="Lighting"
   description="Use motion, doors, schedules, and light levels without taking away the wall switch."
-  count="8 recipes"
+  count="10 recipes"
 %}
 
 {% include category-card.html
   url="/automation/daily-routines/index.html"
   title="Daily routines"
   description="Coordinate morning, bedtime, guest, arrival, and away behavior without guessing who is home."
-  count="5 recipes"
+  count="6 recipes"
 %}
 
 {% include category-card.html
@@ -98,7 +98,7 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
   url="/automation/entertainment/index.html"
   title="Entertainment"
   description="Make music and TV behavior easier to start, stop, and adjust with familiar controls."
-  count="6 recipes"
+  count="7 recipes"
 %}
 
 {% include category-card.html
@@ -119,7 +119,7 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
   url="/automation/notifications/index.html"
   title="Notifications and alerts"
   description="Keep important conditions visible while limiting duplicates and unnecessary interruptions."
-  count="10 recipes"
+  count="11 recipes"
 %}
 
 </div>

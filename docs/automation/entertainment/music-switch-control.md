@@ -109,6 +109,7 @@ Yes, if the switch or remote has more than one button or press pattern, each can
 
 ## Related recipes
 
+- [Whole-home music with favorite station switches](/automation/entertainment/sonos-favorite-switches.html)
 - [Play music when a shower starts](/automation/entertainment/shower-music.html)
 - [Play music when arriving home](/automation/entertainment/welcome-home-music.html)
 - [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)

@@ -114,6 +114,7 @@ Yes, if the previous brightness is saved before dimming and restored once the TV
 
 ## Related recipes
 
+- [Garage lights that follow doors, motion, and the TV](/automation/lighting/garage-lights-doors-motion-tv.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 - [Set every speaker to the right volume with one command](/automation/entertainment/speaker-volume-presets.html)
