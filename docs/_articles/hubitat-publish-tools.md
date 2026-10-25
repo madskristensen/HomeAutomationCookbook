@@ -1,18 +1,20 @@
 ---
 layout: guide
-title: Write Hubitat drivers and apps in Visual Studio
-description: HubitatVS is my Visual Studio extension for people who write their own Hubitat drivers and apps. It publishes Groovy files to your hub and compares them with what is already there.
+title: Hubitat Publish Tools for Visual Studio
+description: Hubitat Publish Tools is my Visual Studio extension for people who write their own Hubitat drivers and apps. It publishes Groovy files to your hub and compares them with what is already there.
 date: 2026-10-25
-image: /assets/img/social/guides/hubitatvs-visual-studio-extension.png
+redirect_from:
+  - /articles/hubitatvs-visual-studio-extension.html
+image: /assets/img/social/guides/hubitat-publish-tools.png
 ---
 
-# Write Hubitat drivers and apps in Visual Studio
+# Hubitat Publish Tools for Visual Studio
 
-{% include content-hero.html src="/assets/img/social/guides/hubitatvs-visual-studio-extension.svg" alt="HubitatVS, a Visual Studio extension for publishing Hubitat drivers and apps" %}
+{% include content-hero.html src="/assets/img/social/guides/hubitat-publish-tools.svg" alt="Hubitat Publish Tools, a Visual Studio extension for publishing Hubitat drivers and apps" %}
 
 Most recipes on this site use the apps that come with Hubitat. Sometimes a device has no good driver, or I want an app that does one job my way. Then I write my own in Groovy.
 
-Hubitat's built-in code editor works, but I spend my days in Visual Studio. So I built an extension that lets me write the code there and send it to my hub. It is called Hubitat Publish Tools, or HubitatVS for short.
+Hubitat's built-in code editor works, but I spend my days in Visual Studio. So I built an extension that lets me write the code there and send it to my hub. It is called [Hubitat Publish Tools](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.HubitatVS) and it is on the Visual Studio Marketplace.
 
 ## Who it is for
 
@@ -31,15 +33,15 @@ This is for people who write their own Hubitat drivers, apps, or libraries and a
 
 ## Getting started
 
-1. Install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.HubitatVS).
+1. Install [Hubitat Publish Tools from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.HubitatVS).
 2. Open **Tools > Hubitat > Hub Connections** and add your hub's IP address and credentials.
 3. Open a Hubitat `.groovy` file, right-click it, and publish.
 
-The source code and issue tracker are on [GitHub](https://github.com/madskristensen/HubitatVS). Bug reports and pull requests are welcome.
+The source code and issue tracker are on [GitHub](https://github.com/madskristensen/HubitatVS), in a repo called HubitatVS. Bug reports and pull requests are welcome.
 
 ## Examples to look at
 
-All of my own Hubitat code lives in my [hubitat-drivers repository](https://github.com/madskristensen/hubitat-drivers). It has drivers for devices like a Daikin WiFi thermostat, a Touchstone fireplace, and Fully Kiosk Browser tablets. It also has apps like Appliance Cycle Monitor, Away Lights, and Auto Away Mode. I build and publish all of them with HubitatVS, so they are a good starting point if you want to see how a real driver or app is put together.
+All of my own Hubitat code lives in my [hubitat-drivers repository](https://github.com/madskristensen/hubitat-drivers). It has drivers for devices like a Daikin WiFi thermostat, a Touchstone fireplace, and Fully Kiosk Browser tablets. It also has apps like Appliance Cycle Monitor, Away Lights, and Auto Away Mode. I build and publish all of them with Hubitat Publish Tools, so they are a good starting point if you want to see how a real driver or app is put together.
 
 ## Related guides and recipes
 
