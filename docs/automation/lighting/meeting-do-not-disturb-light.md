@@ -22,7 +22,7 @@ faqs:
 
 Press one button before a video call. The office lights dim to a level that works on camera and the music pauses. Press it again after the call and the lights and music go back to how they were.
 
-The same button setup also works as a do-not-disturb light. In my office, the button also turns on a light outside the door, so the family can see that a call is in progress.
+The same button setup also works as a do-not-disturb light. For that use, the light goes outside the office door, not behind you on the wall, so the family can see from the hallway that a call is in progress.
 
 **Best for:** A home office with a door, a dimmable light inside, a speaker the hub can control, and a small light or lamp just outside.
 
