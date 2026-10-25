@@ -7,7 +7,7 @@ date: 2025-11-28
 title: Pause HVAC when a window stays open
 description: A platform-neutral climate recipe that pauses HVAC after a window remains open and resumes only when every monitored opening is closed.
 keywords: thermostat window sensor, stop HVAC windows open, smart thermostat control, window sensor thermostat, prevent heating outside
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/climate/thermostat-windows-open.png
 compact: true
 faqs:
@@ -117,6 +117,19 @@ The resume half is more important than the pause:
 - If the saved state is missing or invalid, notify instead of guessing.
 - If someone manually changed the thermostat, clear recipe ownership and leave their choice alone.
 - Keep independent freeze and overheat protection active.
+
+## How I do it in webCoRE
+
+This is a real piston I run on Hubitat. I have two thermostats, one per floor.
+
+1. I made two device groups of contact sensors. Downstairs has the front door and the living room windows. Upstairs has the bedroom windows.
+2. The piston has two constants. `locationDelay` is 30 seconds and `sensorDebounce` is 60 seconds.
+3. When the mode changes, the piston waits until the mode has stayed the same for 30 seconds. Sending a burst of thermostat commands right after a mode change can jam the Z-Wave network, so the delay spreads things out.
+4. Then, for each floor, if all of that floor's contacts are closed, it runs that floor's thermostat preset for the current mode. The Away, Home, and Night presets live in separate Rule Machine rules, and the piston just runs the right one.
+5. While the mode is Home or Night, the piston also watches each floor's contacts. When they have stayed unchanged for 60 seconds, it checks them. If all are closed and that floor's thermostat is off, it runs the Home or Night preset to turn it back on. If any are open and the thermostat is not off, it turns that thermostat off.
+6. Each step writes an info line to the log, so I can see later why a thermostat turned off or on.
+
+The 60 second debounce means opening a door to carry in groceries does not shut off the heat.
 
 ## Advanced features
 

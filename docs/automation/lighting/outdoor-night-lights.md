@@ -6,7 +6,7 @@ date: 2025-11-29
 title: Automate outdoor lights at dusk
 description: A platform-neutral outdoor-lighting recipe that follows sunset, avoids unnecessary overnight runtime, and keeps physical control available.
 keywords: outdoor lights automation, sunset lights, dusk lighting, exterior lighting, holiday lights, smart outdoor lights
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/lighting/outdoor-night-lights.png
 compact: true
 faqs:
@@ -76,6 +76,25 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 3. Give decorative lights a fixed off time instead of leaving everything on until sunrise.
 4. Add a sunrise off action as a failsafe, even when another rule should turn the lights off earlier.
 5. Test the physical switch or plug after the automation is enabled.
+
+## How I do it in webCoRE
+
+This is a real piston I run on Hubitat. The outdoor lights are a group of smart switches. I also have permanent outdoor lights from Gemstone, controlled with [a driver I wrote](https://github.com/madskristensen/hubitat-drivers/tree/main/drivers/gemstone-lights).
+
+Turning on:
+
+1. A double tap up on the porch switch or the backyard switch turns on the whole group.
+2. The group also turns on when the front yard light sensor drops below 17 lux between 2 PM and 11 PM.
+3. When the outdoor lights turn on, the Gemstone lights play their "50% Warm White" effect if they are off.
+
+Turning off:
+
+1. A double tap down on the porch or backyard switch turns off the group.
+2. The group turns off when the front yard light level rises above 61 lux between 5 AM and 10 AM.
+3. As a backstop, the group turns off at 8 AM every day.
+4. The Gemstone lights turn off when the mode changes to Night, or at 10 PM if the house is in Away mode.
+
+Using a light sensor instead of sunset means the lights come on early on a dark, cloudy afternoon. The gap between 17 and 61 lux keeps them from flickering on and off at dusk.
 
 ## Advanced features
 

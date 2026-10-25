@@ -284,6 +284,10 @@ lighting:
       url: /automation/lighting/garage-lights-doors-motion-tv.html
       description: Turn on with a door or motion and turn off only when every sign says the garage is empty.
       best_for: Garages people spend time in
+    - title: Office lights that stay on while you work
+      url: /automation/lighting/office-motion-lights.html
+      description: Use the monitor's power draw to keep the lights on while someone sits still at the desk.
+      best_for: Home offices with a desktop monitor
   start_here_intro: Motion lighting is an easy first win because success and failure are immediately visible.
   start_here:
     - title: Lights on with motion
@@ -362,6 +366,10 @@ notifications:
       url: /automation/notifications/school-morning-reminders.html
       description: Announce teeth and shoes on school mornings, then resume the music.
       best_for: Families with a fixed school departure time
+    - title: House status check on demand
+      url: /automation/notifications/house-status-on-demand.html
+      description: Press a button and get one message listing only what needs attention.
+      best_for: A quick check before bed or before leaving
   start_here_intro: Match the message to the urgency before adding more places for it to appear.
   start_here:
     - title: Low-battery alerts

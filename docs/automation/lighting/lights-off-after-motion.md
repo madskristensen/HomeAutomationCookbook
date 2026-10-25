@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights off after motion stops
 description: A conservative motion-lighting off recipe that respects still occupants, manual wall-switch choices, and local-first control.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically
-last_modified_at: 2026-10-19
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/lighting/lights-off-after-motion.png
 compact: true
 faqs:
@@ -108,6 +108,23 @@ Hubitat [Room Lighting](https://docs2.hubitat.com/en/apps/room-lighting) support
 ### Home Assistant
 
 Home Assistant is a technical fit for delayed no-motion logic, but I have not personally run it. Adapt the same timeout, cancellation, and manual-override requirements only after verifying the current automation behavior for the exact sensor and light integrations.
+
+## How I do it in webCoRE
+
+This is a real piston I run on Hubitat for a bathroom. It handles both on and off.
+
+Turning on:
+
+1. When the mode is Home and the bathroom lights are off, bathroom motion with a light level under 100 lux sets the bathroom and vanity lights to 60%.
+2. When the light level is under 60 lux and the mode is Home, motion in the bedroom next door pre-lights the bathroom to 60%, so it is already lit when someone walks in.
+
+Turning off:
+
+1. When both the bathroom and closet motion sensors have been inactive for 15 minutes, the fan, the bathroom lights, and the vanity lights turn off.
+2. They do not turn off while the upstairs Sonos is playing. Music playing is a good sign someone is still in there.
+3. They also do not turn off this way in Night mode.
+
+Watching the closet sensor too means motion in either room keeps the lights on.
 
 ## Advanced features
 
