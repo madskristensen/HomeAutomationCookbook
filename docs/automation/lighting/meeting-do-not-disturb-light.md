@@ -20,7 +20,9 @@ faqs:
 
 {% include content-hero.html src="/assets/img/social/recipes/lighting/meeting-do-not-disturb-light.svg" alt="A light outside the office shows a meeting is in progress" %}
 
-Press one button before a call. A light outside the office turns on so the family knows not to barge in. The office lights dim and the music pauses. Press it again after the call and the room goes back to normal.
+Press one button before a video call. The office lights dim to a level that works on camera and the music pauses. Press it again after the call and the lights and music go back to how they were.
+
+The same button setup also works as a do-not-disturb light. In my office, the button also turns on a light outside the door, so the family can see that a call is in progress.
 
 **Best for:** A home office with a door, a dimmable light inside, a speaker the hub can control, and a small light or lamp just outside.
 
