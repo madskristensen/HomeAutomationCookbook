@@ -143,6 +143,10 @@ daily-routines:
       url: /automation/daily-routines/guest-mode.html
       description: Keep normal controls useful, prevent false Away mode, and quiet personal automation.
       best_for: Visitors, house sitters, babysitters, and gatherings
+    - title: Manage wall tablets with home modes
+      url: /automation/daily-routines/wall-tablet-modes.html
+      description: Wake, dim, mute, and turn off dashboard tablets as the home mode changes.
+      best_for: Wall-mounted dashboard tablets
   start_here_intro: Choose a transition the household already recognizes and keep the first actions reversible.
   start_here:
     - title: Quiet good-morning routine
@@ -197,6 +201,10 @@ entertainment:
       url: /automation/entertainment/pool-party-mode.html
       description: Apply a tested lighting and music scene from one intentional control.
       best_for: Backyard entertaining without automating safety equipment
+    - title: Whole-home music with favorite station switches
+      url: /automation/entertainment/sonos-favorite-switches.html
+      description: Group speakers and start a favorite from one switch, then reset them every night.
+      best_for: Several speakers in connected rooms
   start_here_intro: Begin with one room, one source, and one physical way to stop playback.
   start_here:
     - title: Physical switch music control
@@ -268,6 +276,14 @@ lighting:
       url: /automation/lighting/wireless-button-linked-lights.html
       description: Use a wireless button, remote, or scene-capable switch while preserving local control.
       best_for: Bedside controls, lamps, and coordinated nearby lights
+    - title: Meeting button with a do-not-disturb light
+      url: /automation/lighting/meeting-do-not-disturb-light.html
+      description: Show a light outside the office, dim the room, and pause music with one press.
+      best_for: Home offices and video calls
+    - title: Garage lights that follow doors, motion, and the TV
+      url: /automation/lighting/garage-lights-doors-motion-tv.html
+      description: Turn on with a door or motion and turn off only when every sign says the garage is empty.
+      best_for: Garages people spend time in
   start_here_intro: Motion lighting is an easy first win because success and failure are immediately visible.
   start_here:
     - title: Lights on with motion
@@ -342,6 +358,10 @@ notifications:
       url: /automation/notifications/freezer-temperature-power-loss.html
       description: Separate freezer warming, possible power loss, and stale sensor data into useful alerts.
       best_for: Freezers in garages, sheds, basements, and workshops
+    - title: Spoken school morning reminders
+      url: /automation/notifications/school-morning-reminders.html
+      description: Announce teeth and shoes on school mornings, then resume the music.
+      best_for: Families with a fixed school departure time
   start_here_intro: Match the message to the urgency before adding more places for it to appear.
   start_here:
     - title: Low-battery alerts

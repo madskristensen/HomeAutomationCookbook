@@ -105,6 +105,7 @@ Yes, if the platform supports it, a successful morning and evening brushing dete
 
 ## Related recipes
 
+- [Spoken school morning reminders](/automation/notifications/school-morning-reminders.html)
 - [Set up baby sleep mode](/automation/notifications/baby-sleep-mode.html)
 - [Start the morning routine](/automation/daily-routines/morning-routine.html)
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
