@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Automate a bathroom exhaust fan
 description: Run the bathroom fan when a shower starts and turn it off once the steam clears, with nothing to remember and no fan left running all morning.
 keywords: bathroom fan automation, shower fan control, humidity sensor automation, automatic fan, bathroom ventilation
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/climate/fan-shower.png
 compact: true
 faqs:
@@ -102,6 +102,16 @@ Hubitat [Basic Rules](https://docs2.hubitat.com/en/apps/basic-rules) supports hu
 ### Home Assistant
 
 I have not personally run Home Assistant. Treat it as a technical-fit option and verify the current humidity sensor and fan integrations before adapting the thresholds.
+
+## How I do it in webCoRE
+
+This is a real piston I run on Hubitat. It compares the bathroom humidity to a baseline from another room instead of using a fixed number.
+
+1. The baseline is the humidity reported by the upstairs thermostat, in another room.
+2. The upper threshold is the higher of the baseline and 60%, plus 12. The fan turns on when the bathroom humidity rises above it.
+3. The lower threshold is the higher of the baseline plus 10 and 60%. When the bathroom humidity drops below it and the fan is on, the fan turns off.
+
+A fixed threshold works in one season and fails in another. In a humid summer the whole house may sit near 60%, so a fixed trigger runs the fan all day. In a dry winter a shower may never reach it. Using the rest of the house as the baseline makes the fan react to the shower, not the weather. The 60% floor keeps the fan from chasing tiny changes on very dry days.
 
 ## Advanced features
 

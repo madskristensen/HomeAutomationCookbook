@@ -7,7 +7,7 @@ date: 2025-11-28
 title: Build a family-safe bedtime routine
 description: Separate a gentle wind-down from an intentional good-night action while preserving occupied rooms, safety alerts, and manual control.
 keywords: bedtime routine automation, good night routine, night mode automation, family bedtime automation, smart home bedtime
-last_modified_at: 2026-09-24
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/daily-routines/bedtime-routine.png
 compact: true
 faqs:
@@ -117,6 +117,26 @@ Status is safer than control for the first version:
 | Urgent incident active | Cancel bedtime changes that could hide or hinder the response |
 
 Add control later only when feedback, obstruction behavior, manual fallback, and household expectations have been verified for that exact device.
+
+## How I do it in webCoRE
+
+I run two real pistons on Hubitat that set Night mode. One is automatic and one is manual.
+
+Automatic night mode:
+
+1. Every day at 10:00 PM, if the mode is Home, the piston starts a loop that runs up to 12 times.
+2. Each pass first checks the mode. If it is no longer Home, the loop stops.
+3. If every downstairs motion sensor (garage, kitchen, living room, and sunroom) has been inactive for at least 15 minutes, it sets the mode to Night and stops.
+4. Otherwise it waits 10 minutes and checks again.
+
+Twelve passes of 10 minutes means it keeps checking for about two hours after 10 PM. If people are still up after that, the house stays in Home mode until someone sets Night by hand.
+
+Manual night mode:
+
+1. A double tap down on the stair light switch sets the mode to Night.
+2. It only works between 8 PM and 11:59 PM, and only when the mode is Home.
+
+The double tap is the intentional good-night action. The automatic piston catches the nights when everyone just goes to bed without it.
 
 ## Advanced features
 

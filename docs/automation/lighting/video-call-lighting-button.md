@@ -134,6 +134,7 @@ The rest of the routine follows the backlight, not the button. Turning it on or 
 
 ## Related recipes
 
+- [Office lights that stay on while you work](/automation/lighting/office-motion-lights.html)
 - [Control lights with a wireless button or linked switch](/automation/lighting/wireless-button-linked-lights.html)
 - [Control music with a physical switch](/automation/entertainment/music-switch-control.html)
 - [Smart home status tiles](/automation/notifications/status-tiles.html)

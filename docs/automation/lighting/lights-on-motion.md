@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights on with motion sensors
 description: A local-first motion-lighting recipe for turning lights on when someone enters, while keeping the familiar wall switch in control.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
-last_modified_at: 2026-10-19
+last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/lighting/lights-on-motion.png
 compact: true
 faqs:
@@ -105,6 +105,17 @@ Hubitat's [Room Lighting app](https://docs2.hubitat.com/en/apps/room-lighting) i
 ### Home Assistant
 
 Home Assistant is a technical fit for this pattern, but I have not personally run it. Use the platform-neutral trigger, darkness condition, action, and override described here, then verify the current implementation in official Home Assistant documentation rather than treating this as a tested walkthrough.
+
+## How I do it in webCoRE
+
+This is a real piston I run on Hubitat for a closet.
+
+1. The piston only acts when the closet light is off, so it never overrides a level someone picked.
+2. When the closet motion sensor detects motion, it picks a brightness. If the mode is Home, or any bathroom light is on, or the room's light level is above 80 lux, the light goes to 60%.
+3. Otherwise it is night, and the light goes to 10% so it does not wake anyone.
+4. After 5 minutes with no motion, the light turns off.
+
+The "any bathroom light is on" check matters at night. If someone already turned on the bathroom light, a dim closet would just be annoying.
 
 ## Advanced features
 

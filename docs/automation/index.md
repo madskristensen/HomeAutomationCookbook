@@ -77,7 +77,7 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
   url="/automation/lighting/index.html"
   title="Lighting"
   description="Use motion, doors, schedules, and light levels without taking away the wall switch."
-  count="10 recipes"
+  count="11 recipes"
 %}
 
 {% include category-card.html
@@ -119,7 +119,7 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
   url="/automation/notifications/index.html"
   title="Notifications and alerts"
   description="Keep important conditions visible while limiting duplicates and unnecessary interruptions."
-  count="11 recipes"
+  count="12 recipes"
 %}
 
 </div>
