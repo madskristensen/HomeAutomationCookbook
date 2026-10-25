@@ -276,10 +276,10 @@ lighting:
       url: /automation/lighting/wireless-button-linked-lights.html
       description: Use a wireless button, remote, or scene-capable switch while preserving local control.
       best_for: Bedside controls, lamps, and coordinated nearby lights
-    - title: Meeting button with a do-not-disturb light
-      url: /automation/lighting/meeting-do-not-disturb-light.html
-      description: Show a light outside the office, dim the room, and pause music with one press.
-      best_for: Home offices and video calls
+    - title: Video call lighting button
+      url: /automation/lighting/video-call-lighting-button.html
+      description: Turn on a warm backlight, dim the ceiling lights, and pause music with one press.
+      best_for: Home offices and webcam calls
     - title: Garage lights that follow doors, motion, and the TV
       url: /automation/lighting/garage-lights-doors-motion-tv.html
       description: Turn on with a door or motion and turn off only when every sign says the garage is empty.

@@ -20,7 +20,7 @@ faqs:
 
 {% include content-hero.html src="/assets/img/social/recipes/lighting/garage-lights-doors-motion-tv.svg" alt="Garage lights stay on while doors, motion, or the TV show the space is in use" %}
 
-Our garage has a loft and a TV, so people spend real time out there. The lights need to come on the moment a garage door opens, stay on while anyone is out there, and dim when a movie starts. They should only turn off when the doors are closed, nobody is moving, and the TV is off.
+Our garage has a loft and a TV. The lights need to come on the moment a garage door opens, stay on while anyone is out there, and dim when a movie starts. They should only turn off when the doors are closed, nobody is moving, and the TV is off.
 
 **Best for:** A garage with smart dimmable lights, door sensors on the garage doors, a motion sensor or two, and maybe a TV.
 

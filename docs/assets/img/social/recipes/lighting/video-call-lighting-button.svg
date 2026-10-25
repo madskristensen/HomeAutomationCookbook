@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Meeting button with a do-not-disturb light</title>
-  <desc id="desc">One button press turns on a light outside the office, dims the office lights, and pauses the music, then puts everything back when the meeting ends.</desc>
+  <title id="title">Video call lighting button</title>
+  <desc id="desc">One button press turns on a warm backlight behind you, dims the overhead lights, and pauses the music for a video call, then puts everything back when the call ends.</desc>
   <style>
   @media (prefers-color-scheme: dark) {
     rect[fill="#f8f9fa"] { fill: #14191c; }
@@ -18,11 +18,11 @@
   <rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
   <rect x="108" y="88" width="142" height="43" rx="21" fill="#eef2f3"/>
   <text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">LIGHTING</text>
-  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Meeting button with a</text>
-  <text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">do-not-disturb light</text>
-  <text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">One button press turns on a light outside the</text>
-  <text x="108" y="353" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">office, dims the office lights, and pauses the</text>
-  <text x="108" y="384" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">music, then puts everything back when the...</text>
+  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Video call lighting</text>
+  <text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">button</text>
+  <text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">One button press turns on a warm backlight</text>
+  <text x="108" y="353" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">behind you, dims the overhead lights, and</text>
+  <text x="108" y="384" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">pauses the music for a video call, then puts...</text>
   <g transform="translate(108 469)" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600">
     <rect width="105" height="39" rx="19" fill="#eef2f3"/><text x="23" y="25" fill="#2c3e50">TRIGGER</text>
     <path d="M117 20h39" stroke="#9db1b6" stroke-width="4"/>

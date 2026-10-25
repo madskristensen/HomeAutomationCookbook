@@ -99,7 +99,7 @@ This is a real piston I run on Hubitat with the Sonos Advanced driver.
 
 1. The piston subscribes to the station switches, the stop switch, and the location mode.
 2. When a station switch turns on, it groups the downstairs speakers to the coordinator and loads the matching favorite with repeat on and replace queue.
-3. When the mode changes to Home, it does the same with our default station, so music starts when the house wakes up.
+3. When the mode changes to Home, it does the same with the "mainstream" favorite, so music starts when the house wakes up.
 4. When the stop switch turns on, it pauses the group.
 5. When the mode changes to Night or Away, or the reset runs, it turns the speakers off and ungroups them. Then it sets each speaker to its own default volume, waits 5 seconds, and regroups them so the next start is clean.
 
