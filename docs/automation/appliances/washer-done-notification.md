@@ -163,6 +163,7 @@ No. Use the device only for monitoring and keep its relay on. Do not remotely in
 
 ## Related recipes
 
+- [Best power-monitoring plugs for washer, dishwasher, and TV alerts](/articles/best-power-monitoring-plugs-appliance-alerts.html)
 - [Get notified when the dryer finishes](/automation/appliances/dryer-done-notification.html)
 - [Appliance automations](/automation/appliances/index.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)

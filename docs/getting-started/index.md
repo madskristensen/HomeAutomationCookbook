@@ -91,8 +91,11 @@ A second sensor, longer timeout, or additional mode should fix an observed probl
 5. Add [lights off after motion](/automation/lighting/lights-off-after-motion.html) only after the first rule feels ordinary.
 6. Let the household use it for a week before expanding.
 
+Want a concrete shopping list and order of work? Use the [starter house setup guide](/getting-started/starter-house-setup.html).
+
 ## Next steps
 
+- [Follow the starter house setup plan](/getting-started/starter-house-setup.html)
 - [Choose a platform](/getting-started/choose-the-right-platform.html)
 - [Choose devices and gear](/getting-started/device-guide.html)
 - [Read practical setup tips](/getting-started/tips.html)

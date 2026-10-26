@@ -96,7 +96,11 @@ This one usually isn't a separate product. Most platforms already offer a presen
 | Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL/ref=nosim?tag=madsk0f-20) | Someone should be able to change the temperature at the thermostat. |
 | Measure room temperature and humidity | [THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20) | [Zooz ZSE44 800LR Temperature/Humidity XS Sensor](https://www.amazon.com/dp/B0B3G9Z4LJ/ref=nosim?tag=madsk0f-20) | Placement matters more than the sensor. Keep it away from vents, drafts, and direct sun. |
 
+For a bathroom fan, reporting speed matters most. See [best humidity sensors for shower fan automation](/articles/best-humidity-sensors-shower-fan.html).
+
 ### Power monitoring
+
+For which device fits which appliance, see [best power-monitoring plugs for washer, dishwasher, and TV alerts](/articles/best-power-monitoring-plugs-appliance-alerts.html).
 
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
@@ -167,6 +171,7 @@ Choose one fast motion sensor and one wall-controlled light for a low-risk room.
 
 ## Next steps
 
+- [Follow the starter house setup plan](/getting-started/starter-house-setup.html)
 - [Choose a platform](/getting-started/choose-the-right-platform.html)
 - [Read the philosophy](/getting-started/philosophy.html)
 - [Build the first lighting recipe](/automation/lighting/lights-on-motion.html)

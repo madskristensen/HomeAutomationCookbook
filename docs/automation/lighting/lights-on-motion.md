@@ -145,6 +145,7 @@ A local hub and compatible devices can keep the automation running, but the phys
 
 ## Related recipes
 
+- [Starter house setup guide](/getting-started/starter-house-setup.html)
 - [Why motion lights turn off while you are still there](/articles/why-motion-lights-turn-off.html)
 - [Lights turning on by themselves](/articles/lights-turning-on-by-themselves.html)
 - [Control several lights from one physical button or switch](/automation/lighting/wireless-button-linked-lights.html)

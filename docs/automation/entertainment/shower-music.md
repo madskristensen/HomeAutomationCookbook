@@ -114,6 +114,7 @@ Yes, if a matching "lights off" or "door closed for a while" condition is set up
 
 ## Related recipes
 
+- [Best humidity sensors for shower fan automation](/articles/best-humidity-sensors-shower-fan.html)
 - [Turn on the bathroom fan when a shower starts](/automation/climate/fan-shower.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)

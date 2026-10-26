@@ -142,6 +142,7 @@ Reposition the sensor, require sustained vibration before marking the dryer as r
 
 ## Related recipes
 
+- [Best power-monitoring plugs for washer, dishwasher, and TV alerts](/articles/best-power-monitoring-plugs-appliance-alerts.html)
 - [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
 - [Appliance automations](/automation/appliances/index.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)

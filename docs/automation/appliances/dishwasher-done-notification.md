@@ -127,6 +127,7 @@ No. Use any monitoring device only to observe, and keep its relay on. Do not rem
 
 ## Related recipes
 
+- [Best power-monitoring plugs for washer, dishwasher, and TV alerts](/articles/best-power-monitoring-plugs-appliance-alerts.html)
 - [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
 - [Get notified when the dryer finishes](/automation/appliances/dryer-done-notification.html)
 - [Appliance automations](/automation/appliances/index.html)

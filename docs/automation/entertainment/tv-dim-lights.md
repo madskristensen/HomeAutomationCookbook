@@ -114,6 +114,7 @@ Yes, if the previous brightness is saved before dimming and restored once the TV
 
 ## Related recipes
 
+- [Best power-monitoring plugs for washer, dishwasher, and TV alerts](/articles/best-power-monitoring-plugs-appliance-alerts.html)
 - [Garage lights that follow doors, motion, and the TV](/automation/lighting/garage-lights-doors-motion-tv.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)

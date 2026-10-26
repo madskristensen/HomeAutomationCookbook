@@ -147,6 +147,7 @@ Restrict it to normal waking hours unless the household specifically wants venti
 
 ## Related recipes
 
+- [Best humidity sensors for shower fan automation](/articles/best-humidity-sensors-shower-fan.html)
 - [Play music when a shower starts](/automation/entertainment/shower-music.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Monitor a cold room without smart-plug heater control](/automation/climate/room-heater-maintain-temp.html)

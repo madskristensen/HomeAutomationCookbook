@@ -125,6 +125,7 @@ The physical wall switch still works independent of the automation, so the bathr
 
 ## Related recipes
 
+- [Best humidity sensors for shower fan automation](/articles/best-humidity-sensors-shower-fan.html)
 - [Manage wall tablets with home modes](/automation/daily-routines/wall-tablet-modes.html)
 - [Why motion lights turn off while you are still there](/articles/why-motion-lights-turn-off.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
