@@ -4,7 +4,7 @@ date: 2025-11-29
 title: Turn on away lights to look occupied
 description: A platform-neutral recipe that turns on a few strategic lights while away to make the home look occupied, without an unnatural all-lights-on pattern.
 keywords: away lights, security lighting, home occupied simulation, break-in deterrent, smart home security
-last_modified_at: 2026-10-25
+last_modified_at: 2026-10-26
 image: /assets/img/social/recipes/security/away-lights.png
 compact: true
 faqs:
@@ -32,6 +32,8 @@ Turn on a couple of strategic lights while away, on a schedule that mimics norma
 **Best for:** A household that already uses an away or vacation mode and wants a lighting pattern that looks natural from the street.
 
 **Not for:** A home with no away mode concept at all; this recipe assumes the platform can distinguish "away" from "home" as a starting condition.
+
+Leaving for a holiday trip? Pair this with the recipes below, or read [leaving home for the holidays](/articles/leaving-home-for-the-holidays.html) for the full checklist.
 
 ## Why this exists
 
@@ -109,6 +111,9 @@ Arriving home and disarming Away mode, however the platform signals that, should
 - [Set up fire safety response](/automation/security/fire-safety.html)
 - [Set up outdoor night lights](/automation/lighting/outdoor-night-lights.html)
 - [Dog-bark intrusion deterrent](/automation/security/fake-dog-deterrent.html)
+- [Safe thermostat auto-away](/automation/climate/safe-thermostat-away.html)
+- [Water leak detection alerts](/automation/security/water-leak-response.html)
+- [Alert when a door is left unlocked](/automation/security/door-unlocked-bedtime-check.html)
 
 {% include page-navigation.html
   left_url="/automation/security/"
