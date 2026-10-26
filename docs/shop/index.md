@@ -14,15 +14,15 @@ Everything on this site stays free to read. These PDFs are for people who want t
 {% include responsive-img.html src="/assets/img/guides/starter-pdf-cover.jpg" alt="Cover of the Starter House Setup Guide PDF" width="640" height="829" sizes="220px" loading="lazy" %}
 <h2>Starter House Setup Guide</h2>
 <p>A plan for your first month: one hub, about ten devices, room-by-room checklists, a shopping list, and step-by-step walkthroughs for 11 starter recipes.</p>
-<p class="shop-meta">PDF, 13 pages, US Letter</p>
+<p class="shop-meta">PDF, 14 pages, US Letter</p>
 <p class="shop-price">$12</p>
 <a class="home-button-primary" href="https://buy.stripe.com/00w14o94T6c2fGf1tggrS00">Buy for $12</a>
 </div>
 <div class="shop-item">
 {% include responsive-img.html src="/assets/img/guides/recipe-pdf-cover.jpg" alt="Cover of the Recipe Cards PDF" width="640" height="829" sizes="220px" loading="lazy" %}
 <h2>Recipe Cards</h2>
-<p>Every recipe on the site, condensed to a printable card: what it does, devices, trigger, conditions, and actions, one tip, and a QR code to the full recipe. Grouped by category, with contents and an index.</p>
-<p class="shop-meta">PDF, 32 pages, 61 recipes, US Letter</p>
+<p>Every recipe on the site, condensed to one printable page: what it does, devices, trigger, conditions, and actions, one tip, and a QR code to the full recipe. Grouped by category, with contents and an index.</p>
+<p class="shop-meta">PDF, 64 pages, 61 recipes, one per page, US Letter</p>
 <p class="shop-price">$12</p>
 <a class="home-button-primary" href="https://buy.stripe.com/14AcN63Kz2ZQeCb9ZMgrS01">Buy for $12</a>
 </div>
@@ -31,7 +31,7 @@ Everything on this site stays free to read. These PDFs are for people who want t
 <span class="shop-tag">Best value</span>
 <h2>Both guides</h2>
 <p>The Starter House Setup Guide and the Recipe Cards together. Start with the plan, then keep the cards for everything you add later.</p>
-<p class="shop-meta">2 PDFs, 45 pages total</p>
+<p class="shop-meta">2 PDFs, 78 pages total</p>
 <p class="shop-price">$20 <span class="shop-meta">instead of $24</span></p>
 <a class="home-button-primary" href="https://buy.stripe.com/3cIcN66WL57Y1Ppb3QgrS02">Buy both for $20</a>
 </div>

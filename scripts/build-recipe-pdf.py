@@ -6,6 +6,7 @@ Requires: PyYAML, qrcode, google-chrome (headless) for PDF output.
 """
 import argparse, base64, html, io, pathlib, re, subprocess, sys
 import yaml, qrcode
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent / "recipe-pdf"))
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -70,14 +71,15 @@ def cat_title(cat):
     t = yaml.safe_load((DOCS / "automation" / cat / "index.md").read_text(encoding="utf-8").split("---")[1])["title"]
     return re.sub(r"\s*automation recipes$", "", t, flags=re.I)
 
-def card(n, r):
+def card(n, r, cat, page):
     logic = "".join(f'<div class="lg"><b>{k}</b><span>{v}</span></div>' for k, v in r["logic"].items())
     devs = "".join(f"<li>{j}{': ' + p if p else ''}</li>" for j, p in r["devices"]) or "<li>See the full recipe for device options.</li>"
     tip = f'<p class="tip"><b>Tip:</b> {r["tip"]}</p>' if r["tip"] else ""
-    return f'''<article class="card" id="r{n}"><div class="hd"><span class="num">{n}</span><h3>{r["title"]}</h3></div>
+    return f'''<article class="card" id="r{n}"><span class="pill">{cat}</span><div class="hd"><span class="num">{n}</span><h3>{r["title"]}</h3></div>
 <p class="desc">{r["desc"]}</p><div class="cols"><div class="main">
 <h4>Devices</h4><ul>{devs}</ul><h4>Logic</h4>{logic}{tip}</div>
-<div class="qr"><img src="{qr(SITE + r["url"])}"><span>{SHORT}{r["url"]}</span></div></div></article>'''
+<div class="qr"><img src="{qr(SITE + r["url"])}"><span>Scan for the full recipe</span><span class="url">{SHORT}{r["url"]}</span></div></div>
+<div class="pf"><span>HOME AUTOMATION COOKBOOK</span><span>Recipe {n} &middot; Page {page}</span></div></article>'''
 
 def build():
     recipes = []
@@ -88,23 +90,27 @@ def build():
         rs = sorted((parse(p) for p in files), key=lambda r: r["title"].lower())
         if rs:
             groups.append((c, rs))
+    # Page 1 is the cover, page 2 the contents, then exactly one recipe per page.
+    FIRST = 3
     n = 0; body = []; toc = []; index = []
     for c, rs in groups:
         start = n + 1
-        body.append(f'<section class="cat"><h2>{cat_title(c)}</h2>')
         for r in rs:
             n += 1
-            body.append(card(n, r)); index.append((r["title"], n))
-        body.append("</section>")
-        toc.append(f"<li><span>{cat_title(c)}</span><span>Recipes {start} to {n}</span></li>")
+            body.append(card(n, r, cat_title(c), n + FIRST - 1)); index.append((r["title"], n + FIRST - 1))
+        toc.append(f"<li><span>{cat_title(c)} <small>({n - start + 1} recipes)</small></span><span>{start + FIRST - 1}</span></li>")
+    idx_page = n + FIRST
+    toc.append(f"<li><span>Index</span><span>{idx_page}</span></li>")
     idx = "".join(f"<li><span>{t}</span><span>{k}</span></li>" for t, k in sorted(index, key=lambda x: x[0].lower()))
     tpl = (HERE / "template.html").read_text(encoding="utf-8")
     out = (tpl.replace("{{COUNT}}", str(n)).replace("{{TOC}}", "".join(toc))
-              .replace("{{BODY}}", "".join(body)).replace("{{INDEX}}", idx))
+              .replace("{{BODY}}", "".join(body)).replace("{{INDEX}}", idx).replace("{{IDXPAGE}}", str(idx_page)))
     assert "\u2014" not in out, "em dash found"
     return out, n
 
 def main():
+    import covers  # noqa: regenerate covers first
+    covers.main()
     ap = argparse.ArgumentParser(); ap.add_argument("--out", default=str(DEFAULT_OUT)); ap.add_argument("--html-only", action="store_true")
     a = ap.parse_args()
     doc, n = build()
@@ -118,6 +124,11 @@ def main():
                     f"--print-to-pdf={a.out}", tmp.as_uri()], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=180)
     tmp.unlink()
     print("PDF ->", a.out)
+    info = subprocess.run(["pdfinfo", a.out], capture_output=True, text=True).stdout
+    pages = int(re.search(r"Pages:\s+(\d+)", info).group(1))
+    print(f"{pages} pages (expected {n + 3}: cover, contents, {n} recipes, index)")
+    if pages != n + 3:
+        sys.exit("Page count mismatch: a card or the index overflowed, so printed page numbers are wrong.")
 
 if __name__ == "__main__":
     main()
