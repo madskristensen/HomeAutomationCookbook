@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Best humidity sensors for shower fan automation
-description: Pick a humidity sensor that reacts fast enough to run a bathroom exhaust fan when the shower starts, works locally with Hubitat or SmartThings, and lets the fan stop once the room dries.
+description: Pick a humidity sensor that reacts fast enough to run a bathroom exhaust fan when the shower starts, works locally with your hub, and lets the fan stop once the room dries.
 date: 2026-10-25
 last_modified_at: 2026-10-25
 image: /assets/img/social/guides/best-humidity-sensors-shower-fan.png
@@ -38,7 +38,7 @@ Check the driver on your hub too. The sensor may support fast reporting while th
 
 ### 2. Local pairing with your hub
 
-Zigbee and Z-Wave sensors pair directly to Hubitat or SmartThings. The fan then reacts even if the internet is down. Wi-Fi sensors with a cloud app can add delay and a dependency you do not need.
+Zigbee and Z-Wave sensors pair directly to a local hub such as Home Assistant, Hubitat, SmartThings, or Homey. The fan then reacts even if the internet is down. Wi-Fi sensors with a cloud app can add delay and a dependency you do not need.
 
 ### 3. A mounting spot it can survive
 
@@ -113,7 +113,7 @@ High on a wall near the shower, out of direct spray, and away from the fan intak
 
 ### Do these sensors need the cloud?
 
-No. The Zigbee and Z-Wave sensors here pair directly to Hubitat or SmartThings and report locally.
+No. The Zigbee and Z-Wave sensors here pair directly to a local hub such as Home Assistant, Hubitat, SmartThings, or Homey and report locally.
 
 {% include pdf-guide-promo.html %}
 

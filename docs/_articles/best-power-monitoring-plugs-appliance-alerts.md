@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Best power-monitoring plugs for washer, dishwasher, and TV alerts
-description: How to pick a power-metering plug or switch for appliance done alerts and TV-on detection that works locally with Hubitat or SmartThings, plus what to use for a 240V dryer.
+description: How to pick a power-metering plug or switch for appliance done alerts and TV-on detection that works locally with your hub, plus what to use for a 240V dryer.
 date: 2026-10-25
 last_modified_at: 2026-10-25
 image: /assets/img/social/guides/best-power-monitoring-plugs-appliance-alerts.png
@@ -39,7 +39,7 @@ A washer is a motor load with a startup surge. Many small plugs are rated for la
 
 ### 3. It works locally with your hub
 
-Z-Wave and Zigbee metering plugs pair straight to Hubitat or SmartThings, so the alert does not depend on a cloud service. Wi-Fi plugs often need polling or a cloud integration. Polling can work, but it adds delay and hub load.
+Z-Wave and Zigbee metering plugs pair straight to a local hub such as Home Assistant, Hubitat, SmartThings, or Homey, so the alert does not depend on a cloud service. Wi-Fi plugs often need polling or a cloud integration. Polling can work, but it adds delay and hub load.
 
 ### 4. The relay can be left alone
 
@@ -115,7 +115,7 @@ Only if it is rated for the washer's motor load. Many small plugs are not. A hea
 
 ### Do these work without the cloud?
 
-Z-Wave and Zigbee metering plugs pair directly to Hubitat or SmartThings and report locally. Check that your hub's driver exposes power readings before buying several.
+Z-Wave and Zigbee metering plugs pair directly to a local hub such as Home Assistant, Hubitat, SmartThings, or Homey and report locally. Check that your hub's driver exposes power readings before buying several.
 
 ### How do I monitor a 240V dryer?
 
