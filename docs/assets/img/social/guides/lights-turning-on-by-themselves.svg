@@ -18,8 +18,8 @@
   <rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
   <rect x="108" y="88" width="214" height="43" rx="21" fill="#eef2f3"/>
   <text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">LIGHTING GUIDE</text>
-  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Lights turning on by</text>
-  <text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">themselves</text>
+  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">Lights turning on</text>
+  <text x="108" y="233" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">by themselves</text>
   <text x="108" y="322" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">A checklist when a light turns on by itself.</text>
   <text x="108" y="353" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">Check the sensor view, power restore,</text>
   <text x="108" y="384" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">duplicate rules, or a direct device link.</text>

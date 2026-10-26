@@ -5,6 +5,7 @@ description: Pick a humidity sensor that reacts fast enough to run a bathroom ex
 date: 2026-10-25
 last_modified_at: 2026-10-25
 image: /assets/img/social/guides/best-humidity-sensors-shower-fan.png
+pdf_promo_card: true
 ---
 
 # Best humidity sensors for shower fan automation
@@ -113,6 +114,8 @@ High on a wall near the shower, out of direct spray, and away from the fan intak
 ### Do these sensors need the cloud?
 
 No. The Zigbee and Z-Wave sensors here pair directly to Hubitat or SmartThings and report locally.
+
+{% include pdf-guide-promo.html %}
 
 ## Related
 

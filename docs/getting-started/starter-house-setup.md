@@ -97,9 +97,7 @@ Modes make every later recipe simpler, because rules can check one mode instead 
 - [ ] Leak and low-battery alerts tested with a real wet towel and a weak battery
 - [ ] Someone else in the house knows how the lights work without the app
 
-## Want the printable version?
-
-> **Want the printable version?** The Starter House Setup Guide PDF expands this page into 13 printable pages: room-by-room checklists, a shopping list, and step-by-step walkthroughs for 11 starter recipes. It costs $12. [Buy the PDF for $12](https://buy.stripe.com/00w14o94T6c2fGf1tggrS00)
+{% include pdf-guide-promo.html variant="buy" %}
 
 ## Next steps
 

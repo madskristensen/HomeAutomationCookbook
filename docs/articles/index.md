@@ -17,17 +17,16 @@ Articles explain a technology, tradeoff, or design decision that applies across 
 
 <div class="automation-cards">
 {% for article in sorted_articles %}
-
-<div class="automation-card" markdown="1">
-
-<time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%B %d, %Y" }}</time>
-
-## [{{ article.title }}]({{ article.url }})
-
-{{ article.description }}
-
-</div>
-
+  {% assign article_url = article.url | relative_url %}
+  {% assign article_date = article.date | date: "%B %-d, %Y" %}
+  {% include automation-card.html
+    url=article_url
+    title=article.title
+    description=article.description
+    meta_label="Published"
+    meta_value=article_date
+    link_text="Read article"
+  %}
 {% endfor %}
 </div>
 

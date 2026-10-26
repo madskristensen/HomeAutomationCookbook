@@ -53,14 +53,9 @@ Ask:
 
 If the last two answers are yes, do not copy the automation.
 
-## This site's source and corrections
+## Questions and corrections
 
-Home Automation Cookbook is open source:
-
-- [View the repository](https://github.com/madskristensen/HomeAutomationCookbook)
-- [Ask a question or share an idea](https://github.com/madskristensen/HomeAutomationCookbook/discussions)
-- [Report a problem](https://github.com/madskristensen/HomeAutomationCookbook/issues/new?template=report-issue.md)
-- [Suggest an automation](https://github.com/madskristensen/HomeAutomationCookbook/issues/new?template=suggest-automation.md)
+Spotted a mistake or have a question? Email [mads@homeautomationcookbook.com](mailto:mads@homeautomationcookbook.com).
 
 ## Next steps
 

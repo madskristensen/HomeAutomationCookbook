@@ -20,4 +20,4 @@ A product link does not change the advice: physical controls should still work, 
 
 The Amazon Associates program is the only affiliate relationship active on the site.
 
-Questions about this disclosure can be raised through the [project discussions](https://github.com/madskristensen/HomeAutomationCookbook/discussions).
+Questions about this disclosure can be sent to [mads@homeautomationcookbook.com](mailto:mads@homeautomationcookbook.com).
