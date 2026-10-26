@@ -16,4 +16,4 @@ Save the file to your computer, and print the cards you need. Each card has a QR
 
 Please do not share this page or the file. Trouble with the download? Email [mads@homeautomationcookbook.com](mailto:mads@homeautomationcookbook.com).
 
-[Browse the recipes](/automation/index.html)
+[Browse the recipes](/automation/)

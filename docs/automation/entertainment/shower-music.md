@@ -110,8 +110,8 @@ Yes, if a matching "lights off" or "door closed for a while" condition is set up
 - [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 {% include page-navigation.html
-  left_url="/automation/entertainment/index.html"
+  left_url="/automation/entertainment/"
   left_label="Back to entertainment"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

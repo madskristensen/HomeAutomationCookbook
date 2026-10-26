@@ -5,7 +5,7 @@ redirect_from:
   - /automation/media/index.html
 title: Entertainment automation recipes
 description: Browse home automation recipes for music, TV lighting, speaker volume, arrivals, and gatherings while keeping familiar controls.
-permalink: /automation/entertainment/index.html
-canonical_url: https://www.homeautomationcookbook.com/automation/entertainment/index.html
+permalink: /automation/entertainment/
+canonical_url: https://www.homeautomationcookbook.com/automation/entertainment/
 keywords: entertainment automation, smart music, TV automation, media control, smart speakers, movie mode, home theater automation
 ---

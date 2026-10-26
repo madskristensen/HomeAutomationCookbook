@@ -124,4 +124,4 @@ No. Test one room, one sensor, one reversible action, backup and restore, intern
 - [Hubitat home automation guide](/platforms/hubitat.html)
 - [Amazon Alexa home automation guide](/platforms/alexa.html)
 - [SmartThings home automation guide](/platforms/smartthings.html)
-- [Browse platform-neutral recipes](/automation/index.html)
+- [Browse platform-neutral recipes](/automation/)

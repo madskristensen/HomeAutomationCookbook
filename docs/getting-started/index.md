@@ -2,8 +2,8 @@
 layout: guide
 title: Getting started with home automation
 description: Start with one household problem, choose a maintainable platform, verify one device, and keep physical controls working.
-permalink: /getting-started/index.html
-canonical_url: https://www.homeautomationcookbook.com/getting-started/index.html
+permalink: /getting-started/
+canonical_url: https://www.homeautomationcookbook.com/getting-started/
 last_modified_at: 2026-09-21
 image: /assets/img/social/guides/getting-started.png
 pdf_promo_card: true
@@ -102,7 +102,7 @@ Want a concrete shopping list and order of work? Use the [starter house setup gu
 - [Choose a platform](/getting-started/choose-the-right-platform.html)
 - [Choose devices and gear](/getting-started/device-guide.html)
 - [Read practical setup tips](/getting-started/tips.html)
-- [Browse all recipes](/automation/index.html)
+- [Browse all recipes](/automation/)
 
 {% include page-navigation.html
   left_url="/"

@@ -118,10 +118,10 @@ This can be a simple note. It is most valuable months later when the device stop
 - [Read the philosophy](/getting-started/philosophy.html)
 - [Choose devices by job](/getting-started/device-guide.html)
 - [Set reliable low-battery alerts](/automation/notifications/low-battery-alerts.html)
-- [Browse all recipes](/automation/index.html)
+- [Browse all recipes](/automation/)
 
 {% include page-navigation.html
-  left_url="/getting-started/index.html"
+  left_url="/getting-started/"
   left_label="Back to getting started"
   right_url="/getting-started/resources.html"
   right_label="View resources"

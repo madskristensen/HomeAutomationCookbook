@@ -2,8 +2,8 @@
 layout: guide
 title: Frequently asked questions
 description: Direct answers about choosing a platform, buying compatible devices, building reliable automations, privacy, and troubleshooting.
-permalink: /faq/index.html
-canonical_url: https://www.homeautomationcookbook.com/faq/index.html
+permalink: /faq/
+canonical_url: https://www.homeautomationcookbook.com/faq/
 last_modified_at: 2026-10-05
 ---
 
@@ -149,11 +149,11 @@ Collect only the data the automation needs. Be especially careful with cameras, 
 - [Read the home automation philosophy](/getting-started/philosophy.html)
 - [Choose a platform](/getting-started/choose-the-right-platform.html)
 - [Choose devices by job](/getting-started/device-guide.html)
-- [Browse automation recipes](/automation/index.html)
+- [Browse automation recipes](/automation/)
 
 {% include page-navigation.html
   left_url="/"
   left_label="Back to home"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="Browse automations"
 %}

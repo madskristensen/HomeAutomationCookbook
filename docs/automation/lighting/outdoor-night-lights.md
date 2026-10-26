@@ -127,12 +127,12 @@ A local hub may continue running the schedule, but the outdoor switch or plug mu
 
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Away lighting](/automation/security/away-lights.html)
-- [Lighting automations](/automation/lighting/index.html)
+- [Lighting automations](/automation/lighting/)
 - [Dog-bark intrusion deterrent](/automation/security/fake-dog-deterrent.html)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

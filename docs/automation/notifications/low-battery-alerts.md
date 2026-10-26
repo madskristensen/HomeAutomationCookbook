@@ -66,7 +66,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-Battery reporting depends on both the device integration and the platform. Confirm whether each device exposes a percentage, a simple low-battery state, or nothing before building a threshold rule. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+Battery reporting depends on both the device integration and the platform. Confirm whether each device exposes a percentage, a simple low-battery state, or nothing before building a threshold rule. See the [platform guides](/platforms/) for broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -122,8 +122,8 @@ No. A water leak sensor or smart lock losing power is more urgent than a motion 
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

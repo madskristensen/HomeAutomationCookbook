@@ -122,11 +122,11 @@ It does not brew automatically. Send a preparation reminder if useful, then let 
 
 - [Run a good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Run a bedtime routine](/automation/daily-routines/bedtime-routine.html)
-- [Appliance automations](/automation/appliances/index.html)
+- [Appliance automations](/automation/appliances/)
 
 {% include page-navigation.html
-  left_url="/automation/appliances/index.html"
+  left_url="/automation/appliances/"
   left_label="Back to appliance automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

@@ -76,7 +76,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-Arrival should restore ordinary household behavior, not silently grant access. Phone presence can start reversible preparation, while locks, alarms, and garage doors remain separate deliberate actions. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
+Arrival should restore ordinary household behavior, not silently grant access. Phone presence can start reversible preparation, while locks, alarms, and garage doors remain separate deliberate actions. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -156,11 +156,11 @@ Usually very little. Reserve whole-house Home actions for the first arrival and 
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
-- [Daily routine automations](/automation/daily-routines/index.html)
+- [Daily routine automations](/automation/daily-routines/)
 
 {% include page-navigation.html
-  left_url="/automation/daily-routines/index.html"
+  left_url="/automation/daily-routines/"
   left_label="Back to daily routine automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

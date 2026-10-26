@@ -75,7 +75,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-The important platform capability is not a generic "shower detected" event. It is a current humidity or light state, a fan command, and separate on and off thresholds. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
+The important platform capability is not a generic "shower detected" event. It is a current humidity or light state, a fan command, and separate on and off thresholds. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -143,8 +143,8 @@ Restrict it to normal waking hours unless the household specifically wants venti
 - [Monitor a cold room without smart-plug heater control](/automation/climate/room-heater-maintain-temp.html)
 
 {% include page-navigation.html
-  left_url="/automation/climate/index.html"
+  left_url="/automation/climate/"
   left_label="Back to climate automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

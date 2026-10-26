@@ -177,8 +177,8 @@ Choose one fast motion sensor and one wall-controlled light for a low-risk room.
 - [Build the first lighting recipe](/automation/lighting/lights-on-motion.html)
 
 {% include page-navigation.html
-  left_url="/getting-started/index.html"
+  left_url="/getting-started/"
   left_label="Back to getting started"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="Browse automations"
 %}

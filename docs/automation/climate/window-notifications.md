@@ -114,8 +114,8 @@ No. This recipe only notifies. Closing or opening a window is a manual action so
 - [Monitor a cold room without smart-plug heater control](/automation/climate/room-heater-maintain-temp.html)
 
 {% include page-navigation.html
-  left_url="/automation/climate/index.html"
+  left_url="/automation/climate/"
   left_label="Back to climate automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

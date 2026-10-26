@@ -83,7 +83,7 @@ Some mini-splits have a real integration that reports mode, setpoint, and on or 
 
 ## Platform notes
 
-The platform has to send a specific infrared code and read a separate thermometer. The blaster's own on or off tile is not the air conditioner. See the [platform guides](/platforms/index.html) for the broader fit.
+The platform has to send a specific infrared code and read a separate thermometer. The blaster's own on or off tile is not the air conditioner. See the [platform guides](/platforms/) for the broader fit.
 
 ### Amazon Alexa
 
@@ -142,11 +142,11 @@ Only inside limits you would already leave set on the unit itself, and only if s
 - [Pause HVAC when a window stays open](/automation/climate/thermostat-windows-open.html)
 - [Monitor a cold room without smart-plug heater control](/automation/climate/room-heater-maintain-temp.html)
 - [Why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html)
-- [Climate automations](/automation/climate/index.html)
+- [Climate automations](/automation/climate/)
 
 {% include page-navigation.html
-  left_url="/automation/climate/index.html"
+  left_url="/automation/climate/"
   left_label="Back to climate automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

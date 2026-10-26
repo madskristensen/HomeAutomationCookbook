@@ -54,7 +54,7 @@ appliances:
     power, sensor loss, and a hub restart. For robot vacuums, include guests, pets, closed doors,
     cords, and an unexpected early return.
   next_label: safety and security
-  next_url: /automation/security/index.html
+  next_url: /automation/security/
 
 climate:
   heading: Climate automations
@@ -114,7 +114,7 @@ climate:
     For an IR-controlled mini-split or window unit, treat every command as unconfirmed and keep
     the physical remote in the room.
   next_label: entertainment
-  next_url: /automation/entertainment/index.html
+  next_url: /automation/entertainment/
 
 daily-routines:
   heading: Daily routine automations
@@ -168,7 +168,7 @@ daily-routines:
     hub restarts, and someone returning unexpectedly. No routine should strand a person in the
     wrong mode or remove familiar controls.
   next_label: climate and comfort
-  next_url: /automation/climate/index.html
+  next_url: /automation/climate/
 
 entertainment:
   heading: Entertainment automations
@@ -226,7 +226,7 @@ entertainment:
     quiet hours, and stopping from every familiar control. A failed start must not leave lights
     or speaker groups in an unexpected state.
   next_label: appliances
-  next_url: /automation/appliances/index.html
+  next_url: /automation/appliances/
 
 lighting:
   heading: Lighting automations
@@ -309,7 +309,7 @@ lighting:
     and hub restart. The light should respond before someone reaches for the switch and should
     never trap a person in darkness.
   next_label: daily routines
-  next_url: /automation/daily-routines/index.html
+  next_url: /automation/daily-routines/
 
 notifications:
   heading: Notifications and alerts
@@ -453,4 +453,4 @@ security:
     and the documented manual response. Use qualified review where electrical, fuel, plumbing,
     alarm, or moving-door equipment requires it.
   next_label: notifications
-  next_url: /automation/notifications/index.html
+  next_url: /automation/notifications/

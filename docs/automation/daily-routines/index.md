@@ -5,7 +5,7 @@ redirect_from:
   - /automation/presence/index.html
 title: Daily routine automation recipes
 description: Browse home automation recipes for mornings, bedtimes, departures, arrivals, and guests with visible, reversible transitions.
-permalink: /automation/daily-routines/index.html
-canonical_url: https://www.homeautomationcookbook.com/automation/daily-routines/index.html
+permalink: /automation/daily-routines/
+canonical_url: https://www.homeautomationcookbook.com/automation/daily-routines/
 keywords: daily routine automation, morning routine, bedtime automation, away mode, home arrival, presence automation, smart home routines
 ---

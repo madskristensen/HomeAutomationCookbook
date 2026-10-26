@@ -63,11 +63,11 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 Choose one understandable signal for nighttime behavior. A fixed night window is simplest. If the household already uses a reliable Night mode, the lighting rule can check that instead.
 
-Do not infer Night mode only because someone entered a bedroom. Different schedules, illness, guests, and brief trips make that signal unreliable. If Night mode is not already dependable, use a fixed time window. See [daily routine automations](/automation/daily-routines/index.html) for deliberate night-mode patterns.
+Do not infer Night mode only because someone entered a bedroom. Different schedules, illness, guests, and brief trips make that signal unreliable. If Night mode is not already dependable, use a fixed time window. See [daily routine automations](/automation/daily-routines/) for deliberate night-mode patterns.
 
 ## Platform notes
 
-The platform must combine a motion trigger with a dependable night condition and set a specific dimming level. Keep the physical wall switch available, and let the separate no-motion rule own shutoff timing. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+The platform must combine a motion trigger with a dependable night condition and set a specific dimming level. Keep the physical wall switch available, and let the separate no-motion rule own shutoff timing. See the [platform guides](/platforms/) for broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -120,11 +120,11 @@ The physical wall switch still works independent of the automation, so the bathr
 - [Why motion lights turn off while you are still there](/articles/why-motion-lights-turn-off.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
-- [Lighting automations](/automation/lighting/index.html)
+- [Lighting automations](/automation/lighting/)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

@@ -140,10 +140,10 @@ Your answer may differ. The right platform is the one your household can operate
 ## Next steps
 
 - [Choose devices and see products I have used](/getting-started/device-guide.html)
-- [Browse platform-neutral recipes](/automation/index.html)
+- [Browse platform-neutral recipes](/automation/)
 
 {% include page-navigation.html
-  left_url="/getting-started/index.html"
+  left_url="/getting-started/"
   left_label="Back to getting started"
   right_url="/getting-started/device-guide.html"
   right_label="Choose devices"

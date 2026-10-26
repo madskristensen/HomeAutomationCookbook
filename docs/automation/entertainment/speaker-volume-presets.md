@@ -108,8 +108,8 @@ Yes, a preset can hold a different percentage for each room or speaker, since a 
 - [Play or pause music with a physical switch](/automation/entertainment/music-switch-control.html)
 
 {% include page-navigation.html
-  left_url="/automation/entertainment/index.html"
+  left_url="/automation/entertainment/"
   left_label="Back to entertainment"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

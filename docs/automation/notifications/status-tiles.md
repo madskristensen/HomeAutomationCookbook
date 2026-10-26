@@ -106,8 +106,8 @@ Anything with a clear "needs attention" versus "fine" state, such as garbage day
 - [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

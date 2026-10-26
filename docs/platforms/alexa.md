@@ -102,4 +102,4 @@ It can be enough for simple voice control and reversible routines. I outgrew it 
 - [Compare home automation platforms](/getting-started/choose-the-right-platform.html)
 - [SmartThings home automation guide](/platforms/smartthings.html)
 - [Hubitat home automation guide](/platforms/hubitat.html)
-- [Browse platform-neutral recipes](/automation/index.html)
+- [Browse platform-neutral recipes](/automation/)

@@ -106,8 +106,8 @@ Run it only in Away mode. You can further limit Away-mode playback to nighttime,
 - [Motion sensor placement guide](/articles/motion-sensor-placement.html)
 
 {% include page-navigation.html
-  left_url="/automation/security/index.html"
+  left_url="/automation/security/"
   left_label="Back to security"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

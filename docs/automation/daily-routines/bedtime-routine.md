@@ -162,11 +162,11 @@ Keep smoke, carbon-monoxide, water-leak, security, medical, and other urgent hou
 - [Alert when an exterior door is left unlocked](/automation/security/door-unlocked-bedtime-check.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Bathroom night lighting](/automation/lighting/bathroom-night-light.html)
-- [Daily routines](/automation/daily-routines/index.html)
+- [Daily routines](/automation/daily-routines/)
 
 {% include page-navigation.html
-  left_url="/automation/daily-routines/index.html"
+  left_url="/automation/daily-routines/"
   left_label="Back to daily routines"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

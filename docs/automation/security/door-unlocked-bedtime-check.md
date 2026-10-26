@@ -167,8 +167,8 @@ Report the state as unknown and ask for a manual check. Never treat missing data
 - [Report a garage door left open](/automation/security/garage-door-notification.html)
 
 {% include page-navigation.html
-  left_url="/automation/security/index.html"
+  left_url="/automation/security/"
   left_label="Back to safety and security automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

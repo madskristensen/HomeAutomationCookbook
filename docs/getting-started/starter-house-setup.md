@@ -13,7 +13,7 @@ image: /assets/img/social/guides/starter-house-setup.png
 
 This is a concrete plan for the first few weekends of a smart home. One hub, about 10 devices, and one working recipe per room.
 
-It builds on [getting started](/getting-started/index.html), which explains the mindset, and the [device guide](/getting-started/device-guide.html), which lists the products I have used. This page turns both into an order of work.
+It builds on [getting started](/getting-started/), which explains the mindset, and the [device guide](/getting-started/device-guide.html), which lists the products I have used. This page turns both into an order of work.
 
 ## The rules for a starter house
 
@@ -103,10 +103,10 @@ Modes make every later recipe simpler, because rules can check one mode instead 
 
 - [Practical home automation tips](/getting-started/tips.html)
 - [Choose smart-home devices and gear](/getting-started/device-guide.html)
-- [Browse all recipes](/automation/index.html)
+- [Browse all recipes](/automation/)
 
 {% include page-navigation.html
-  left_url="/getting-started/index.html"
+  left_url="/getting-started/"
   left_label="Back to getting started"
   right_url="/getting-started/device-guide.html"
   right_label="Choose devices and gear"

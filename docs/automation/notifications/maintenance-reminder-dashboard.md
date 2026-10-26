@@ -102,8 +102,8 @@ No. A shared dashboard on a phone, a tablet, or even a wall-mounted display all 
 - [Get low battery alerts for smart home devices](/automation/notifications/low-battery-alerts.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

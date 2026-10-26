@@ -79,7 +79,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-The first requirement is an immediate alert that names the wet sensor. Persistent incident state, local warnings, acknowledgment, valve control, and final-position confirmation are separate capabilities that must each be verified. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+The first requirement is an immediate alert that names the wet sensor. Persistent incident state, local warnings, acknowledgment, valve control, and final-position confirmation are separate capabilities that must each be verified. See the [platform guides](/platforms/) for broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -169,11 +169,11 @@ Start where a hidden or pressurized leak would cause damage quickly, such as the
 
 - [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
 - [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
-- [Safety and security automations](/automation/security/index.html)
+- [Safety and security automations](/automation/security/)
 
 {% include page-navigation.html
-  left_url="/automation/security/index.html"
+  left_url="/automation/security/"
   left_label="Back to safety and security automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

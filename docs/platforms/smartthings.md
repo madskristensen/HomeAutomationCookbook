@@ -105,4 +105,4 @@ My SmartThings home had grown beyond 100 devices, performance had slowed, advanc
 - [Compare home automation platforms](/getting-started/choose-the-right-platform.html)
 - [Amazon Alexa home automation guide](/platforms/alexa.html)
 - [Hubitat home automation guide](/platforms/hubitat.html)
-- [Browse platform-neutral recipes](/automation/index.html)
+- [Browse platform-neutral recipes](/automation/)

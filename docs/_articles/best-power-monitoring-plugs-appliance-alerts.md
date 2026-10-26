@@ -128,11 +128,11 @@ Use a vibration sensor on the cabinet, a metering plug on a 120V vent booster fa
 - [Choose smart-home devices and gear](/getting-started/device-guide.html)
 - [Best humidity sensors for shower fan automation](/articles/best-humidity-sensors-shower-fan.html)
 - [Starter house setup guide](/getting-started/starter-house-setup.html)
-- [Appliance automations](/automation/appliances/index.html)
+- [Appliance automations](/automation/appliances/)
 
 {% include page-navigation.html
-  left_url="/articles/index.html"
+  left_url="/articles/"
   left_label="Back to articles"
-  right_url="/automation/appliances/index.html"
+  right_url="/automation/appliances/"
   right_label="Appliance automations"
 %}

@@ -111,8 +111,8 @@ Yes, if the previous brightness is saved before dimming and restored once the TV
 - [Set every speaker to the right volume with one command](/automation/entertainment/speaker-volume-presets.html)
 
 {% include page-navigation.html
-  left_url="/automation/entertainment/index.html"
+  left_url="/automation/entertainment/"
   left_label="Back to entertainment"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

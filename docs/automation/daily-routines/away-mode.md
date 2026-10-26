@@ -79,7 +79,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-Presence is a reason to delay Away, not proof that the house is empty. Preserve a visible Guest or Staying Home override whichever platform runs the routine. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
+Presence is a reason to delay Away, not proof that the house is empty. Preserve a visible Guest or Staying Home override whichever platform runs the routine. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -162,12 +162,12 @@ Add security actions only after the household has tested presence detection and 
 - [Away lighting](/automation/security/away-lights.html)
 - [Outdoor night lights](/automation/lighting/outdoor-night-lights.html)
 - [Prepare the house when someone arrives](/automation/daily-routines/unlock-door-arrival.html)
-- [Daily routine automations](/automation/daily-routines/index.html)
+- [Daily routine automations](/automation/daily-routines/)
 - [Dog-bark intrusion deterrent](/automation/security/fake-dog-deterrent.html)
 
 {% include page-navigation.html
-  left_url="/automation/daily-routines/index.html"
+  left_url="/automation/daily-routines/"
   left_label="Back to daily routine automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

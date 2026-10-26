@@ -9,10 +9,10 @@
 
 {% case section_key %}
   {% when "automation" %}
-    {% unless category_key == "index.html" %}
+    {% if category_key and category_key != "index.html" %}
       {% assign ancestor_name = "Automation recipes" %}
-      {% assign ancestor_url = "/automation/index.html" %}
-    {% endunless %}
+      {% assign ancestor_url = "/automation/" %}
+    {% endif %}
     {% if page_file and page_file != "index.html" %}
       {% case category_key %}
         {% when "appliances" %}{% assign category_name = "Appliance automations" %}
@@ -23,21 +23,21 @@
         {% when "notifications" %}{% assign category_name = "Notifications and alerts" %}
         {% when "security" %}{% assign category_name = "Safety and security automations" %}
       {% endcase %}
-      {% assign category_url = "/automation/" | append: category_key | append: "/index.html" %}
+      {% assign category_url = "/automation/" | append: category_key | append: "/" %}
     {% endif %}
   {% when "getting-started" %}
-    {% unless category_key == "index.html" %}
+    {% if category_key and category_key != "index.html" %}
       {% assign ancestor_name = "Getting started" %}
-      {% assign ancestor_url = "/getting-started/index.html" %}
-    {% endunless %}
+      {% assign ancestor_url = "/getting-started/" %}
+    {% endif %}
   {% when "articles" %}
-    {% unless category_key == "index.html" %}
+    {% if category_key and category_key != "index.html" %}
       {% assign ancestor_name = "Articles" %}
-      {% assign ancestor_url = "/articles/index.html" %}
-    {% endunless %}
+      {% assign ancestor_url = "/articles/" %}
+    {% endif %}
   {% when "platforms" %}
-    {% unless category_key == "index.html" %}
+    {% if category_key and category_key != "index.html" %}
       {% assign ancestor_name = "Platform guides" %}
-      {% assign ancestor_url = "/platforms/index.html" %}
-    {% endunless %}
+      {% assign ancestor_url = "/platforms/" %}
+    {% endif %}
 {% endcase %}

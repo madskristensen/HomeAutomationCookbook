@@ -125,8 +125,8 @@ No. It reports door position only. The opener's approved obstruction and entrapm
 - [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
 
 {% include page-navigation.html
-  left_url="/automation/security/index.html"
+  left_url="/automation/security/"
   left_label="Back to safety and security automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

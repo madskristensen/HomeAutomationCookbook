@@ -130,8 +130,8 @@ Dashboards sometimes get left on a different page or freeze overnight. Loading t
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 
 {% include page-navigation.html
-  left_url="/automation/daily-routines/index.html"
+  left_url="/automation/daily-routines/"
   left_label="Back to daily routines"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}
