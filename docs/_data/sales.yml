@@ -1,19 +1,22 @@
 # Seasonal bundle sales. Dates are inclusive, in America/Los_Angeles.
 # During a window, /shop/ swaps the bundle card to the sale price and link,
-# and the footer strip shows one quiet line. Outside windows nothing changes.
+# and the top sale banner shows on every page. accent/accent_end are the
+# banner gradient, text is its text color (chosen for WCAG AA contrast). Outside windows nothing changes.
 sale_price: 17
 regular_price: 20
 list_price: 24
+# Used in the top sale banner copy.
+recipe_card_count: 61
 sale_link: https://buy.stripe.com/5kQ00k94TcAq79J4FsgrS03
 windows:
-  - { name: halloween-2026, label: Halloween special, emoji: "🎃", start: "2026-10-25", end: "2026-11-01" }
-  - { name: black-friday-2026, label: Black Friday special, emoji: "🦃", start: "2026-11-24", end: "2026-12-01" }
-  - { name: holiday-2026, label: Holiday special, emoji: "🎄", start: "2026-12-15", end: "2026-12-26" }
-  - { name: new-year-2027, label: New Year special, emoji: "🎉", start: "2026-12-31", end: "2027-01-04" }
-  - { name: presidents-day-2027, label: Presidents Day special, emoji: "🇺🇸", start: "2027-02-12", end: "2027-02-16" }
-  - { name: easter-2027, label: Easter special, emoji: "🐣", start: "2027-03-25", end: "2027-03-29" }
-  - { name: memorial-day-2027, label: Memorial Day special, emoji: "🇺🇸", start: "2027-05-28", end: "2027-06-01" }
-  - { name: fathers-day-2027, label: "Father's Day special", emoji: "👔", start: "2027-06-17", end: "2027-06-21" }
-  - { name: july-4-2027, label: 4th of July special, emoji: "🎆", start: "2027-07-01", end: "2027-07-05" }
-  - { name: labor-day-2027, label: Labor Day special, emoji: "🛠️", start: "2027-09-03", end: "2027-09-07" }
-  - { name: halloween-2027, label: Halloween special, emoji: "🎃", start: "2027-10-27", end: "2027-11-01" }
+  - { name: halloween-2026, label: Halloween special, emoji: "🎃", start: "2026-10-25", end: "2026-11-01", accent: "#fb923c", accent_end: "#ea580c", text: "#1a1a1a" }
+  - { name: black-friday-2026, label: Black Friday special, emoji: "🦃", start: "2026-11-24", end: "2026-12-01", accent: "#f59e0b", accent_end: "#d97706", text: "#1a1a1a" }
+  - { name: holiday-2026, label: Holiday special, emoji: "🎄", start: "2026-12-15", end: "2026-12-26", accent: "#b91c1c", accent_end: "#166534", text: "#ffffff" }
+  - { name: new-year-2027, label: New Year special, emoji: "🎉", start: "2026-12-31", end: "2027-01-04", accent: "#fde68a", accent_end: "#eab308", text: "#1a1a1a" }
+  - { name: presidents-day-2027, label: Presidents Day special, emoji: "🇺🇸", start: "2027-02-12", end: "2027-02-16", accent: "#1e3a8a", accent_end: "#b91c1c", text: "#ffffff" }
+  - { name: easter-2027, label: Easter special, emoji: "🐣", start: "2027-03-25", end: "2027-03-29", accent: "#fbcfe8", accent_end: "#c4b5fd", text: "#1a1a1a" }
+  - { name: memorial-day-2027, label: Memorial Day special, emoji: "🇺🇸", start: "2027-05-28", end: "2027-06-01", accent: "#1e3a8a", accent_end: "#b91c1c", text: "#ffffff" }
+  - { name: fathers-day-2027, label: "Father's Day special", emoji: "👔", start: "2027-06-17", end: "2027-06-21", accent: "#93c5fd", accent_end: "#60a5fa", text: "#1a1a1a" }
+  - { name: july-4-2027, label: 4th of July special, emoji: "🎆", start: "2027-07-01", end: "2027-07-05", accent: "#b91c1c", accent_end: "#1e3a8a", text: "#ffffff" }
+  - { name: labor-day-2027, label: Labor Day special, emoji: "🛠️", start: "2027-09-03", end: "2027-09-07", accent: "#5eead4", accent_end: "#2dd4bf", text: "#1a1a1a" }
+  - { name: halloween-2027, label: Halloween special, emoji: "🎃", start: "2027-10-27", end: "2027-11-01", accent: "#fb923c", accent_end: "#ea580c", text: "#1a1a1a" }
