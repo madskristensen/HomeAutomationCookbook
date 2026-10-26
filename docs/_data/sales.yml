@@ -6,14 +6,14 @@ regular_price: 20
 list_price: 24
 sale_link: https://buy.stripe.com/5kQ00k94TcAq79J4FsgrS03
 windows:
-  - { name: halloween-2026, label: Halloween special, start: "2026-10-25", end: "2026-11-01" }
-  - { name: black-friday-2026, label: Black Friday special, start: "2026-11-24", end: "2026-12-01" }
-  - { name: holiday-2026, label: Holiday special, start: "2026-12-15", end: "2026-12-26" }
-  - { name: new-year-2027, label: New Year special, start: "2026-12-31", end: "2027-01-04" }
-  - { name: presidents-day-2027, label: Presidents Day special, start: "2027-02-12", end: "2027-02-16" }
-  - { name: easter-2027, label: Easter special, start: "2027-03-25", end: "2027-03-29" }
-  - { name: memorial-day-2027, label: Memorial Day special, start: "2027-05-28", end: "2027-06-01" }
-  - { name: fathers-day-2027, label: "Father's Day special", start: "2027-06-17", end: "2027-06-21" }
-  - { name: july-4-2027, label: 4th of July special, start: "2027-07-01", end: "2027-07-05" }
-  - { name: labor-day-2027, label: Labor Day special, start: "2027-09-03", end: "2027-09-07" }
-  - { name: halloween-2027, label: Halloween special, start: "2027-10-27", end: "2027-11-01" }
+  - { name: halloween-2026, label: Halloween special, emoji: "🎃", start: "2026-10-25", end: "2026-11-01" }
+  - { name: black-friday-2026, label: Black Friday special, emoji: "🦃", start: "2026-11-24", end: "2026-12-01" }
+  - { name: holiday-2026, label: Holiday special, emoji: "🎄", start: "2026-12-15", end: "2026-12-26" }
+  - { name: new-year-2027, label: New Year special, emoji: "🎉", start: "2026-12-31", end: "2027-01-04" }
+  - { name: presidents-day-2027, label: Presidents Day special, emoji: "🇺🇸", start: "2027-02-12", end: "2027-02-16" }
+  - { name: easter-2027, label: Easter special, emoji: "🐣", start: "2027-03-25", end: "2027-03-29" }
+  - { name: memorial-day-2027, label: Memorial Day special, emoji: "🇺🇸", start: "2027-05-28", end: "2027-06-01" }
+  - { name: fathers-day-2027, label: "Father's Day special", emoji: "👔", start: "2027-06-17", end: "2027-06-21" }
+  - { name: july-4-2027, label: 4th of July special, emoji: "🎆", start: "2027-07-01", end: "2027-07-05" }
+  - { name: labor-day-2027, label: Labor Day special, emoji: "🛠️", start: "2027-09-03", end: "2027-09-07" }
+  - { name: halloween-2027, label: Halloween special, emoji: "🎃", start: "2027-10-27", end: "2027-11-01" }
