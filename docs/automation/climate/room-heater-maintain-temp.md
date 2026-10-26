@@ -2,7 +2,7 @@
 layout: automation
 date: 2025-11-28
 title: Cold-room temperature alerts
-description: Get an alert before a cold room leaves its safe temperature range without controlling a portable heater through a general smart plug.
+description: Get warned before a cold room drops out of its safe temperature range, without running a portable heater from a general smart plug.
 keywords: cold room alert, room temperature monitoring, space heater safety, thermostat alert, supplemental heating
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/climate/room-heater-maintain-temp.png

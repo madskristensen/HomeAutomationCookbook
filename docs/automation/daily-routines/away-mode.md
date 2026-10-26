@@ -4,7 +4,7 @@ redirect_from:
   - /automation/presence/away-mode.html
 date: 2025-11-28
 title: Set away mode when everyone leaves
-description: A conservative, platform-neutral away-mode recipe that verifies the home is empty before changing lights, climate, or security behavior.
+description: Leave without running through a checklist. Switch the home to Away once it is confirmed empty, then adjust lights, climate, and security for you.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/daily-routines/away-mode.png

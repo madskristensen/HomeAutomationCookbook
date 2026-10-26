@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home automation articles
-description: Explanations and comparisons that support the recipe library, listed with the newest article first.
+description: Read explainers, comparisons, and troubleshooting guides that help you pick devices and fix automations, with the newest article listed first.
 image: /assets/img/social/guides/articles.png
 permalink: /articles/
 canonical_url: https://www.homeautomationcookbook.com/articles/

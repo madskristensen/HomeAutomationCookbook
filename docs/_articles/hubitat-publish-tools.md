@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Hubitat Publish Tools for Visual Studio
-description: Hubitat Publish Tools is my Visual Studio extension for people who write their own Hubitat drivers and apps. It publishes Groovy files to your hub and compares them with what is already there.
+description: Publish your own Hubitat Groovy drivers and apps straight from Visual Studio, and compare them with what is already on the hub, using my extension.
 date: 2026-10-25
 redirect_from:
   - /articles/hubitatvs-visual-studio-extension.html

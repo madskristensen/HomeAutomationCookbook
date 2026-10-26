@@ -4,7 +4,7 @@ redirect_from:
   - /automation/presence/unlock-door-arrival.html
 date: 2025-11-28
 title: Prepare the house when someone arrives
-description: Restore Home mode, light a safe path, and resume normal comfort without treating phone location as proof of identity.
+description: Come home to a lit path and normal comfort settings. Switch back to Home mode on arrival without treating phone location as proof of who it is.
 keywords: arrival home automation, welcome home automation, presence detection, entry lighting, home mode automation
 last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/daily-routines/unlock-door-arrival.png

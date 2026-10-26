@@ -4,7 +4,7 @@ redirect_from:
   - /automation/presence/morning-routine.html
 date: 2025-11-28
 title: Start a quiet good-morning routine
-description: A platform-neutral morning routine that starts from an intentional signal, lights only the needed path, and leaves sleeping household members undisturbed.
+description: Start the day with lights only where you need them. A morning routine begins when you choose and leaves everyone still sleeping undisturbed.
 keywords: good morning routine, morning lighting automation, quiet wake-up automation, smart home morning, family morning routine
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/daily-routines/morning-routine.png

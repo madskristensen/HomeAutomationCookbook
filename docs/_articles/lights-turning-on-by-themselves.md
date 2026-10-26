@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Lights turning on by themselves
-description: A checklist when a light turns on by itself. Check the sensor view, power restore, duplicate rules, or a direct device link.
+description: Stop a light from turning on by itself. Check what the sensor sees, power restore settings, duplicate rules, and direct device links, step by step.
 date: 2026-10-05
 last_modified_at: 2026-10-19
 image: /assets/img/social/guides/lights-turning-on-by-themselves.png

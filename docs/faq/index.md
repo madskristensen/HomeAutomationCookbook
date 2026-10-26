@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Frequently asked questions
-description: Direct answers about choosing a platform, buying compatible devices, building reliable automations, privacy, and troubleshooting.
+description: Get straight answers about choosing a platform, buying devices that work together, building reliable automations, privacy, and troubleshooting.
 permalink: /faq/
 canonical_url: https://www.homeautomationcookbook.com/faq/
 last_modified_at: 2026-10-05

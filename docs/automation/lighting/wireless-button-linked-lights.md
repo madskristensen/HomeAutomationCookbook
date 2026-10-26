@@ -2,7 +2,7 @@
 layout: automation
 date: 2026-09-24
 title: Control lights with a wireless button or linked switch
-description: Let a physical button, remote, or smart switch control other lights while every room keeps an understandable manual fallback.
+description: Control several lights from one button, remote, or smart switch, while every room keeps a manual control that guests and family understand.
 keywords: wireless light button, smart light remote, one switch controls multiple lights, linked smart switches, scene controller
 last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/lighting/wireless-button-linked-lights.png

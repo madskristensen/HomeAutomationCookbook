@@ -4,7 +4,7 @@ redirect_from:
   - /automation/media/music-switch-control.html
 date: 2025-11-28
 title: Control music with a physical switch
-description: A platform-neutral recipe that uses a wall switch or button to start, stop, or adjust music instead of relying on a voice assistant.
+description: Start, stop, or adjust music with a wall switch or button instead of shouting at a voice assistant. Simple music control anyone in the house can use.
 keywords: music button control, physical music switch, smart home music control, button music automation, instant music playback
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/entertainment/music-switch-control.png

@@ -2,7 +2,7 @@
 layout: automation
 date: 2026-10-25
 title: Manage wall tablets with home modes
-description: Wake, dim, mute, and turn off wall-mounted dashboard tablets when the home mode changes, and let one tablet double as a night guide to the bathroom.
+description: Wake, dim, mute, and turn off wall-mounted dashboard tablets when the home mode changes, and let one tablet light the way to the bathroom at night.
 keywords: wall tablet automation, Fully Kiosk Browser Hubitat, dashboard tablet brightness, Fire tablet night light, webCoRE tablet piston
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/daily-routines/wall-tablet-modes.png

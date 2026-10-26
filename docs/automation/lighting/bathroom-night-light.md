@@ -4,7 +4,7 @@ redirect_from:
   - /automation/motion/bathroom-night-light.html
 date: 2025-11-28
 title: Bathroom night-light automation
-description: A local-first bathroom night-light recipe that uses motion, low brightness, and a reliable wall-switch fallback.
+description: Find the bathroom at night without a blinding light. Motion turns on a dim night light, and the wall switch still works if anything fails.
 keywords: bathroom night light, nighttime motion lighting, low brightness automation, smart bathroom lighting, motion sensor dimming, night mode lighting
 last_modified_at: 2026-10-19
 image: /assets/img/social/recipes/lighting/bathroom-night-light.png

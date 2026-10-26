@@ -2,7 +2,7 @@
 layout: automation
 date: 2025-11-28
 title: Get notified when the washer finishes
-description: A platform-neutral laundry recipe that learns the washer's power pattern and sends one reliable completion alert without controlling appliance power.
+description: Never forget wet laundry in the washer. Get one reliable alert when the cycle ends, based on the washer's power pattern, without cutting its power.
 keywords: washer finished alert, laundry notification, washer power monitoring, washing machine automation, washer done notification
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/appliances/washer-done-notification.png

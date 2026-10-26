@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Printable guides
-description: Printable PDF guides from Home Automation Cookbook. A starter house setup guide, condensed recipe cards for every recipe, or both together.
+description: "Get printable PDF guides for your smart home: a starter house setup guide, condensed recipe cards for every recipe, or both together."
 permalink: /shop/
 ---
 

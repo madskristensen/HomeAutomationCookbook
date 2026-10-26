@@ -5,7 +5,7 @@ redirect_from:
   - /automation/presence/bedtime-routine.html
 date: 2025-11-28
 title: Build a family-safe bedtime routine
-description: Separate a gentle wind-down from an intentional good-night action while preserving occupied rooms, safety alerts, and manual control.
+description: Wind down the house at night with a gentle dimming step and a clear good-night action, while occupied rooms and safety alerts stay untouched.
 keywords: bedtime routine automation, good night routine, night mode automation, family bedtime automation, smart home bedtime
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/daily-routines/bedtime-routine.png

@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: About Home Automation Cookbook
-description: Practical, family-first smart home recipes that keep physical controls working and automations local when possible.
+description: Learn why Home Automation Cookbook exists and why every recipe keeps physical switches working and runs automations locally whenever it can.
 last_modified_at: 2026-09-21
 image: /assets/img/social/guides/about.png
 ---

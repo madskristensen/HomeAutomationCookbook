@@ -2,7 +2,7 @@
 layout: automation
 date: 2026-10-25
 title: Office lights that stay on while you work
-description: Office lights turn on with motion at a level that fits the time of day, and stay on while you sit still because the monitor's power draw shows someone is at the desk.
+description: Office lights that turn on with motion at the right level for the time of day and stay on while you sit still, using the monitor's power draw.
 keywords: office motion lights, lights turn off while sitting still, monitor power monitoring, smart plug desk occupancy, webCoRE office piston
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/lighting/office-motion-lights.png

@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Why smart devices go offline
-description: A checklist when a sensor, plug, or bulb stops responding. Check power, batteries, signal, and the hub before you replace anything.
+description: Get a sensor, plug, or bulb responding again. Check power, batteries, signal, and the hub in order before you replace anything.
 date: 2026-10-26
 last_modified_at: 2026-10-26
 image: /assets/img/social/guides/why-smart-devices-go-offline.png

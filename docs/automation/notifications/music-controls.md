@@ -4,7 +4,7 @@ redirect_from:
   - /automation/dashboards/music-controls.html
 date: 2025-11-29
 title: Shared whole-home music controls
-description: Stop switching between manufacturer apps just to pause a speaker or change its volume in another room.
+description: Pause a speaker or change its volume in another room from one shared dashboard, without switching between manufacturer apps.
 keywords: music dashboard, playback controls, whole home audio, dashboard tiles, music control automation
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/notifications/music-controls.png

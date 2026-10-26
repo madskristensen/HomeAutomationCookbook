@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Why arrive and leave triggers fail
-description: Phone geofences, battery saving, and Wi-Fi hints often disagree with who is home. Confirm Away and Home before the house acts.
+description: Fix arrive and leave automations that fire at the wrong time. See why phone geofences and Wi-Fi disagree, and how to confirm who is really home.
 date: 2026-10-05
 last_modified_at: 2026-10-05
 image: /assets/img/social/guides/why-arrive-leave-triggers-fail.png

@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign category = site.data.automation_categories[page.category_key] %}
 
-<h1>{{ category.heading }}</h1>
+<h1>{{ page.heading | default: category.heading }}</h1>
 
 <p>{{ category.intro }}</p>
 
@@ -50,6 +50,10 @@ layout: default
 <h2>What to verify</h2>
 
 <p>{{ category.verify }}</p>
+
+{% if content != "" %}
+{{ content }}
+{% endif %}
 
 {% capture next_label %}Next: {{ category.next_label }}{% endcapture %}
 {% include page-navigation.html

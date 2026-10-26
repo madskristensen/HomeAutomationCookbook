@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: What to wire and plan before the walls close
-description: Preserve ordinary controls and future options by planning power, neutrals, low-voltage cable, conduit, sensors, and documentation before drywall.
+description: Building or remodeling? Plan power, neutrals, low-voltage cable, conduit, and sensor spots before drywall so you keep normal controls and future options.
 date: 2026-09-24
 image: /assets/img/social/guides/what-to-wire-before-walls-close.png
 ---

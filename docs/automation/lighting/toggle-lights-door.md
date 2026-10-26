@@ -4,7 +4,7 @@ redirect_from:
   - /automation/contact/toggle-lights-door.html
 date: 2025-11-28
 title: Turn lights on when a door opens
-description: A local-first contact-sensor lighting recipe for closets, pantries, and utility rooms that keeps the familiar wall switch usable.
+description: Light closets, pantries, and utility rooms the moment the door opens, using a door sensor, while the regular wall switch still works.
 keywords: door sensor automation, contact sensor lights, automatic closet lights, door activated lighting, smart door sensor
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/lighting/toggle-lights-door.png

@@ -4,7 +4,7 @@ redirect_from:
   - /automation/dashboards/garbage-day-reminder.html
 date: 2025-11-29
 title: Set up a garbage day reminder tile
-description: A platform-neutral recipe that turns a dashboard tile red before garbage day and green again once the task is marked done.
+description: Never miss garbage day. A dashboard tile turns red the day before pickup and goes green once someone marks the bins as done.
 keywords: garbage reminder, trash day, dashboard automation, virtual switch, weekly reminder
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/notifications/garbage-day-reminder.png

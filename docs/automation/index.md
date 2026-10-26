@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Automation recipes
-description: Browse platform-neutral home automation recipes with plain-English logic, physical controls, tested failure behavior, and clear acceptance checks.
+description: Find a home automation recipe for lights, alerts, climate, appliances, and routines, each in plain English with tested steps and switches that still work.
 permalink: /automation/
 canonical_url: https://www.homeautomationcookbook.com/automation/
 recipe_directory: true

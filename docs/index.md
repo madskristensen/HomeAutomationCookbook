@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Practical home automation recipes
-description: Helpful automations for an ordinary family house. The physical switch still works when the automation does not.
+description: Practical home automation recipes for an ordinary family house. Get lights, alerts, and routines that help, while the physical switch still works.
 ---
 
 <section class="home-hero">

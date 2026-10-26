@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Leaving home for the holidays
-description: A smart home checklist for a holiday trip. Set away mode, lights, heat, leak alerts, and locks, then test them before you go.
+description: Leave for the holidays with peace of mind. Set away mode, lights, heat, leak alerts, and locks, then test each one before you walk out the door.
 date: 2026-10-26
 last_modified_at: 2026-10-26
 image: /assets/img/social/guides/leaving-home-for-the-holidays.png
