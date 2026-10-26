@@ -1092,8 +1092,9 @@ h1.has-article-meta {
 .pdf-promo-row { margin-top: 3rem; }
 .pdf-promo--strip { justify-content: center; margin: 0; padding: 0 0 1.25rem; border: 0; background: none; font-size: 0.875rem; color: var(--color-text-secondary); }
 .pdf-promo--strip { align-items: flex-start; }
-.pdf-promo--strip .pdf-promo-thumb img { width: 32px; }
-.pdf-promo--strip .pdf-promo-thumb { margin-top: 0.2rem; }
+.pdf-promo--strip .pdf-promo-thumb img { width: 68px; }
+@media (max-width: 600px) { .pdf-promo--strip .pdf-promo-thumb img { width: 80px; } }
+.pdf-promo--strip .pdf-promo-thumb { margin-top: 0.15rem; }
 .pdf-promo--strip .pdf-promo-body { max-width: 40rem; }
 .pdf-promo--strip .pdf-promo-cta { min-height: 0; padding: 0.3rem 0.75rem; font-size: 0.8125rem; font-weight: 600; line-height: 1.3; border-radius: 6px; }
 .pdf-promo-row + .site-footer { margin-top: 0; }
