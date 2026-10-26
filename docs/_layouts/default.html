@@ -55,13 +55,14 @@
     </div>
   </main>
   
-  {% unless page.url == "/getting-started/starter-house-setup.html" or page.noindex or page.pdf_promo_card or page.url == "/404.html" %}
+  {% unless page.url == "/getting-started/starter-house-setup.html" or page.url == "/shop/" or page.noindex or page.pdf_promo_card or page.url == "/404.html" %}
   <div class="container pdf-promo-row">{% include pdf-guide-promo.html variant="strip" %}</div>
   {% endunless %}
   <footer class="site-footer">
     <div class="container">
       <p class="footer-copyright">Built by Mads Kristensen for practical family homes.</p>
       <nav class="footer-links" aria-label="Footer">
+        <a href="{{ '/shop/' | relative_url }}">Shop</a>
         <a href="{{ '/about.html' | relative_url }}">About</a>
         <a href="{{ '/disclosure.html' | relative_url }}">Disclosure</a>
         <a href="{{ '/privacy-policy.html' | relative_url }}">Privacy policy</a>

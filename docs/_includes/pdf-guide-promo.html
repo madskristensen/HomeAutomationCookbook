@@ -1,23 +1,24 @@
 {%- comment -%}
-Quiet promo for the paid Starter House Setup Guide PDF.
+Quiet promo for the printable guides. Every variant links to /shop/, the only page with Stripe buy buttons.
 Params: variant = "strip" (above the footer, every page), "card" (in content),
-or "buy" (starter guide buy box, links straight to Stripe).
-Non-buy variants link to the starter guide so people read before buying.
+or "buy" (starter guide buy box).
 {%- endcomment -%}
 {%- assign promo_variant = include.variant | default: "card" -%}
-{%- assign promo_url = "/getting-started/starter-house-setup.html" | relative_url -%}
-<aside class="pdf-promo pdf-promo--{{ promo_variant }}" aria-label="Printable starter guide">
-  <a class="pdf-promo-thumb" href="{% if promo_variant == 'buy' %}https://buy.stripe.com/00w14o94T6c2fGf1tggrS00{% else %}{{ promo_url }}{% endif %}" tabindex="-1" aria-hidden="true">
+{%- assign promo_url = "/shop/" | relative_url -%}
+<aside class="pdf-promo pdf-promo--{{ promo_variant }}" aria-label="Printable guides">
+  <a class="pdf-promo-thumb" href="{{ promo_url }}" tabindex="-1" aria-hidden="true">
     {%- include responsive-img.html src="/assets/img/guides/starter-pdf-cover.jpg" alt="" width="640" height="829" sizes="96px" loading="lazy" -%}
   </a>
   <div class="pdf-promo-body">
   {%- if promo_variant == "buy" -%}
-    <p><strong>Want the printable version?</strong> The PDF expands this page into 13 printable pages: room-by-room checklists, a shopping list, and step-by-step walkthroughs for 11 starter recipes.</p>
-    <p><a class="pdf-promo-link" href="https://buy.stripe.com/00w14o94T6c2fGf1tggrS00">Buy the PDF for $12</a></p>
+    <p><strong>Want the printable version?</strong> The PDF expands this page into 14 printable pages: room-by-room checklists, a shopping list, and step-by-step walkthroughs for 11 starter recipes.</p>
+    <p><a class="home-button-primary pdf-promo-button" href="{{ promo_url }}">Get the PDF for $12</a></p>
+    <p class="pdf-promo-note">Or get both printable guides, this one and the recipe cards, for $20 in the <a href="{{ promo_url }}">shop</a>.</p>
   {%- elsif promo_variant == "strip" -%}
-    <p>New to smart homes? Plan your first month with checklists you can print. <a class="pdf-promo-link" href="{{ promo_url }}">$12 printable guide</a></p>
+    <p>Printable checklists and recipe cards for your smart home. <a class="pdf-promo-link" href="{{ promo_url }}">Printable guides from $12</a></p>
   {%- else -%}
-    <p><strong>Starter House Setup Guide (PDF).</strong> Room-by-room checklists, a shopping list, and step-by-step rule walkthroughs. <a class="pdf-promo-link" href="{{ promo_url }}">$12 printable guide</a></p>
+    <p><strong>Printable guides (PDF).</strong> A starter house setup guide with room-by-room checklists, and condensed cards for every recipe on the site.</p>
+    <p><a class="home-button-primary pdf-promo-button" href="{{ promo_url }}">See the guides, from $12</a></p>
   {%- endif -%}
   </div>
 </aside>
