@@ -1077,6 +1077,19 @@ h1.has-article-meta {
 .pdf-promo--strip { justify-content: center; margin: 0; padding: 0 0 1.25rem; border: 0; background: none; font-size: 0.875rem; color: var(--color-text-secondary); }
 .pdf-promo--strip .pdf-promo-thumb img { width: 32px; }
 .pdf-promo-row + .site-footer { margin-top: 0; }
+.pdf-promo-button { display: inline-block; margin-top: 0.25rem; }
+.pdf-promo-note { font-size: 0.875rem; color: var(--color-text-secondary); }
+.shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
+.shop-item { display: flex; flex-direction: column; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg-subtle); }
+.shop-item--best { border-color: var(--color-text-secondary); }
+.shop-item img { width: 100%; max-width: 220px; height: auto; margin: 0 auto 1rem; border-radius: 4px; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18); }
+.shop-item h2 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+.shop-item p { margin: 0 0 0.75rem; max-width: none; }
+.shop-meta { font-size: 0.875rem; color: var(--color-text-secondary); }
+.shop-price { font-size: 1.35rem; font-weight: 700; margin-top: auto !important; }
+.shop-tag { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-secondary); margin-bottom: 0.35rem; }
+.shop-item .home-button-primary { text-align: center; }
+.shop-item .home-button-primary, .pdf-promo .home-button-primary { text-decoration: none; color: #fff; }
 
 /* Homepage Components
    ========================================================================== */
