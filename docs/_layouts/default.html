@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
 
     {% seo %}
-    {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+    {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="max-image-preview:large">{% endif %}
     <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
     <meta name="twitter:image:alt" content="{{ page.image_alt | default: page.title | default: site.title | escape }}">
     <meta property="og:image:alt" content="{{ page.image_alt | default: page.title | default: site.title | escape }}">
@@ -68,6 +68,7 @@
         <a href="{{ '/disclosure.html' | relative_url }}">Disclosure</a>
         <a href="{{ '/privacy-policy.html' | relative_url }}">Privacy policy</a>
         <a href="https://afterpickup.com/">After Pickup</a>
+        <a href="https://www.eastsidecalendar.com/">Eastside Calendar</a>
       </nav>
     </div>
   </footer>
