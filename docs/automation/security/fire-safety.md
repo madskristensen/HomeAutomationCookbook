@@ -14,6 +14,15 @@ faqs:
     answer: No. Automatic unlocking can create security and fire-separation problems. Make sure everyone can operate the normal locks and exits without relying on the hub.
   - question: Can the automation announce that the house is safe again?
     answer: No. A clear sensor or stopped alarm is not an all-clear. Only emergency services or a qualified person at the scene should make that decision.
+products:
+  - job: "Detect smoke and carbon monoxide"
+    body: "Listed alarms installed and maintained for the home. Follow local requirements and the alarm manufacturer's placement, interconnection, testing, and replacement instructions."
+  - job: "Expose an alarm event to the hub"
+    body: "Manufacturer-supported integration or a listed listener approved for the installed alarm type. Failure of the integration must not affect the alarms."
+  - job: "Light an exit path"
+    body: "Existing fixed lights with working wall controls. Lighting is supplemental. People must know the exits in darkness."
+  - job: "Reach the household"
+    body: "Alarm sound and practiced evacuation plan. A phone notification is not the primary warning."
 ---
 
 # Support a fire evacuation without delaying the alarm
@@ -53,36 +62,7 @@ DO NOT declare an all-clear automatically</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect smoke and carbon monoxide**
-
-Listed alarms installed and maintained for the home. Follow local requirements and the alarm manufacturer's placement, interconnection, testing, and replacement instructions.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Expose an alarm event to the hub**
-
-Manufacturer-supported integration or a listed listener approved for the installed alarm type. Failure of the integration must not affect the alarms.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Light an exit path**
-
-Existing fixed lights with working wall controls. Lighting is supplemental. People must know the exits in darkness.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Reach the household**
-
-Alarm sound and practiced evacuation plan. A phone notification is not the primary warning.
-
-</div>
-</div>
+{% include product-list.html %}
 
 Do not add an unlisted relay, microphone, or modification to alarm wiring. Use only equipment and installation methods approved for the installed alarm system.
 

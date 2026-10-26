@@ -16,6 +16,9 @@ faqs:
     answer: Yes, create a separate virtual switch and tile for each collection type, such as trash, recycling, and yard waste, since they often run on different schedules.
   - question: Should this account for holiday schedule changes?
     answer: If the local collection service publishes a calendar, checking it as a condition avoids a false reminder on a week when collection is skipped. Otherwise, the reminder runs on a fixed weekly schedule.
+products:
+  - job: "Track and display the reminder"
+    body: "No personally verified recommendation yet. This only needs a virtual switch or variable and a dashboard tile; no physical hardware is required."
 ---
 
 # Set up a garbage day reminder tile
@@ -54,15 +57,7 @@ THEN turn off the "garbage out" virtual switch
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Track and display the reminder**
-
-No personally verified recommendation yet. This only needs a virtual switch or variable and a dashboard tile; no physical hardware is required.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

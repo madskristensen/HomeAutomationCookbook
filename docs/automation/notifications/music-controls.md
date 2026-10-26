@@ -16,6 +16,9 @@ faqs:
     answer: A shared dashboard keeps music controls next to other household controls, such as lights and locks, so anyone in the house can adjust playback without switching apps or needing a specific phone.
   - question: Can this control speakers from different brands together?
     answer: Only if the platform already integrates with each speaker brand individually. This recipe describes the dashboard layer on top of that integration, not a way to unify incompatible speaker ecosystems.
+products:
+  - job: "Control connected speakers from a dashboard"
+    body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. This depends on the platform's existing integration with each speaker brand; no additional hardware is needed beyond the speakers themselves."
 ---
 
 # Add dashboard tiles for music playback controls
@@ -51,15 +54,7 @@ THEN set the kitchen speaker's volume to the selected level</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Control connected speakers from a dashboard**
-
-Any speaker the platform can control works, for example a Sonos speaker, which is what I use. This depends on the platform's existing integration with each speaker brand; no additional hardware is needed beyond the speakers themselves.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

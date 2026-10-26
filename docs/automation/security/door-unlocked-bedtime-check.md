@@ -14,6 +14,11 @@ faqs:
     answer: Start with a status check and alert. Add a lock command only after door position, lock feedback, jam handling, battery state, manual keys, and household expectations are tested.
   - question: What should happen when a lock is unavailable?
     answer: Report the state as unknown and ask for a manual check. Never treat missing data or an old locked event as confirmation that the door is secure.
+products:
+  - job: "Report lock state"
+    body: "[Kwikset HomeConnect 620 Z-Wave Long Range keypad lock](https://www.amazon.com/dp/B0DWGF32GD/ref=nosim?tag=madsk0f-20). This is the lock I use, and it has been reliable here. Confirm the hub reports locked, unlocked, jammed, and battery. Keep a physical key."
+  - job: "Report door position"
+    body: "A compatible contact sensor can report open or closed when an automatic lock command is being considered. It does not prove the lock is engaged."
 ---
 
 # Alert when a door is left unlocked and check again at bedtime
@@ -34,22 +39,7 @@ The household keeps keys, thumb turns, and normal lock controls. The automation 
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Report lock state**
-
-[Kwikset HomeConnect 620 Z-Wave Long Range keypad lock](https://www.amazon.com/dp/B0DWGF32GD/ref=nosim?tag=madsk0f-20). This is the lock I use, and it has been reliable here. Confirm the hub reports locked, unlocked, jammed, and battery. Keep a physical key.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Report door position**
-
-A compatible contact sensor can report open or closed when an automatic lock command is being considered. It does not prove the lock is engaged.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

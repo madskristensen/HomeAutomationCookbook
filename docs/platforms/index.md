@@ -17,7 +17,7 @@ The core [automation recipes](/automation/index.html) remain platform-neutral. T
 
 ## Choose by the experience you want
 
-<div class="category-grid">
+<div class="card-grid card-grid--compact">
 
 {% include category-card.html
   url="/platforms/alexa.html"

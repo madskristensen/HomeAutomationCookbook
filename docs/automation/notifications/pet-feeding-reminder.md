@@ -14,6 +14,9 @@ faqs:
     answer: A double press simply resets the "last fed" timestamp again with no harmful effect; the next reminder timing is based on whichever press was most recent.
   - question: Can this track more than one pet?
     answer: Yes, use a separate button and tracked state for each pet, since they may have different feeding schedules or need separate confirmation.
+products:
+  - job: "Log a feeding event"
+    body: "No personally verified recommendation yet. A smart button or a contact sensor repurposed for this job works, but this specific use case is not directly matched by the door and window sensor jobs already covered."
 ---
 
 # Set up a pet feeding reminder
@@ -50,15 +53,7 @@ AND repeat every 30 minutes until the button is pressed</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Log a feeding event**
-
-No personally verified recommendation yet. A smart button or a contact sensor repurposed for this job works, but this specific use case is not directly matched by the door and window sensor jobs already covered.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

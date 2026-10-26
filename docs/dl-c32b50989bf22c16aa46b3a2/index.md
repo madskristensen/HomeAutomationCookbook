@@ -10,7 +10,7 @@ noindex: true
 
 Your purchase went through. Here is your copy of the Starter House Setup Guide.
 
-<p><a class="home-button-primary" href="/dl-c32b50989bf22c16aa46b3a2/hac-starter-house-setup-guide.pdf" download>Download the PDF</a></p>
+<p><a class="btn btn-primary" href="/dl-c32b50989bf22c16aa46b3a2/hac-starter-house-setup-guide.pdf" download>Download the PDF</a></p>
 
 Save the file to your computer, and print the checklists you need.
 

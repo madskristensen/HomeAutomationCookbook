@@ -17,6 +17,9 @@ faqs:
     answer: Not necessarily. Time-sensitive alerts, such as a water leak, are still worth an actual notification. Tiles work best for ongoing status rather than urgent one-time events.
   - question: What kind of information works well as a tile?
     answer: Anything with a clear "needs attention" versus "fine" state, such as garbage day, a maintenance task, a door left open, or a load of laundry waiting to be moved to the dryer.
+products:
+  - job: "Display persistent status information"
+    body: "No personally verified recommendation yet. This only needs virtual switches or variables and a dashboard; no physical hardware is required."
 ---
 
 # Use status tiles instead of notifications
@@ -53,15 +56,7 @@ THEN set that tile's virtual switch back to its normal state</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Display persistent status information**
-
-No personally verified recommendation yet. This only needs virtual switches or variables and a dashboard; no physical hardware is required.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

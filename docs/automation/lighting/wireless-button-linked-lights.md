@@ -14,6 +14,11 @@ faqs:
     answer: Yes when the switch exposes button or scene events, or when compatible devices support a direct association or binding. Keep the local load and remote behavior understandable if the hub is unavailable.
   - question: What if the remote or hub stops working?
     answer: Each light should still have a familiar local control. A linked control adds convenience; it should not become the only way to use a room.
+products:
+  - job: "Provide a physical input"
+    body: "[SONOFF SNZB-01P Zigbee wireless button](https://www.amazon.com/dp/B0CL9JTMWF/ref=nosim?tag=madsk0f-20). One button, with single, double, and long press. Confirm the hub you already use reports the presses you plan to use.\n\nFor several buttons on the wall, [Minoston MR40Z Z-Wave scene controller](https://www.amazon.com/dp/B09BQKD5FQ/ref=nosim?tag=madsk0f-20). Four buttons, battery powered, no new wiring. Confirm each press shows up before you build scenes on it."
+  - job: "Control fixed lighting"
+    body: "A smart wall switch or dimmer that keeps its paddle working locally. See [recommended gear](/getting-started/device-guide.html#lighting-control) for switches I have used."
 ---
 
 # Control lights with a wireless button or linked switch
@@ -34,24 +39,7 @@ The reusable pattern is to separate the physical input from the lighting action.
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Provide a physical input**
-
-[SONOFF SNZB-01P Zigbee wireless button](https://www.amazon.com/dp/B0CL9JTMWF/ref=nosim?tag=madsk0f-20). One button, with single, double, and long press. Confirm the hub you already use reports the presses you plan to use.
-
-For several buttons on the wall, [Minoston MR40Z Z-Wave scene controller](https://www.amazon.com/dp/B09BQKD5FQ/ref=nosim?tag=madsk0f-20). Four buttons, battery powered, no new wiring. Confirm each press shows up before you build scenes on it.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Control fixed lighting**
-
-A smart wall switch or dimmer that keeps its paddle working locally. See [recommended gear](/getting-started/device-guide.html#lighting-control) for switches I have used.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

@@ -14,6 +14,11 @@ faqs:
     answer: A daytime window avoids starting the vacuum during sleeping hours if a presence signal is briefly wrong, and matches when the house is normally empty.
   - question: What should happen if someone comes home while the vacuum is running?
     answer: Send it back to its dock immediately. See the companion recipe for returning-early handling.
+products:
+  - job: "Confirm the whole household has left"
+    body: "Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Test whatever signal is available against real daily patterns before trusting it, since not every phone or platform behaves the same way."
+  - job: "Robot vacuum with app control"
+    body: "No personally verified recommendation yet. Confirm the vacuum supports remote start, reports errors, and can be sent back to its dock from automation before relying on this recipe."
 ---
 
 # Start the robot vacuum when everyone leaves
@@ -55,22 +60,7 @@ THEN send the vacuum back to its dock</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Confirm the whole household has left**
-
-Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Test whatever signal is available against real daily patterns before trusting it, since not every phone or platform behaves the same way.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Robot vacuum with app control**
-
-No personally verified recommendation yet. Confirm the vacuum supports remote start, reports errors, and can be sent back to its dock from automation before relying on this recipe.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 

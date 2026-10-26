@@ -14,6 +14,13 @@ faqs:
     answer: One short message is quick to read. A pile of separate alerts is easy to ignore.
   - question: What does the message say when everything is fine?
     answer: It only says which mode the house is in. Every other line is added only when something needs attention.
+products:
+  - job: "Know what is open"
+    body: "Contact sensors on the windows and doors, grouped by floor."
+  - job: "Know the outside conditions"
+    body: "An outdoor air quality sensor and a weather service. I wrote [Hubitat drivers](https://github.com/madskristensen/hubitat-drivers) for PurpleAir air quality and Open-Meteo weather."
+  - job: "Know the appliance status"
+    body: "A way to report whether the dishwasher, dryer, and washer are running or ready. I use a generic appliance driver from the same repo."
 ---
 
 # House status check on demand
@@ -52,29 +59,7 @@ THEN send the message as one push notification</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Know what is open**
-
-Contact sensors on the windows and doors, grouped by floor.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Know the outside conditions**
-
-An outdoor air quality sensor and a weather service. I wrote [Hubitat drivers](https://github.com/madskristensen/hubitat-drivers) for PurpleAir air quality and Open-Meteo weather.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Know the appliance status**
-
-A way to report whether the dishwasher, dryer, and washer are running or ready. I use a generic appliance driver from the same repo.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

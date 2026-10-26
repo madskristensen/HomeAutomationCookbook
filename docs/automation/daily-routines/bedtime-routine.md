@@ -17,6 +17,15 @@ faqs:
     answer: Start by reporting their status. Add a command only after each lock or door has separate position feedback, obstruction handling, and a tested manual fallback.
   - question: What should quiet mode never silence?
     answer: Keep smoke, carbon-monoxide, water-leak, security, medical, and other urgent household alerts outside routine notification muting.
+products:
+  - job: "Start bedtime"
+    body: "A \"Good night\" phrase or manual scene control. The final trigger should be intentional and available without an app."
+  - job: "Dim selected lights"
+    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Wall paddles remain normal controls before, during, and after the routine."
+  - job: "Apply an approved sleep setting"
+    body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Respect manual holds, safety limits, and the open-window pause recipe."
+  - job: "Report open doors or windows"
+    body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Report status first; do not treat a contact sensor as proof that a door is locked."
 ---
 
 # Run a bedtime routine without surprising the household
@@ -59,36 +68,7 @@ AND report anything that still needs a person</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Start bedtime**
-
-A "Good night" phrase or manual scene control. The final trigger should be intentional and available without an app.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Dim selected lights**
-
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Wall paddles remain normal controls before, during, and after the routine.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Apply an approved sleep setting**
-
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Respect manual holds, safety limits, and the open-window pause recipe.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Report open doors or windows**
-
-[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Report status first; do not treat a contact sensor as proof that a door is locked.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

@@ -14,6 +14,13 @@ faqs:
     answer: Leave that unit on the physical remote. A toggle can turn the unit the wrong way, and repeated up or down presses walk the setpoint because the hub cannot see the starting point.
   - question: Should this change the unit when nobody is home?
     answer: Only inside limits you would already leave set on the unit itself, and only if someone can notice a missed command. A weak away signal is the wrong reason to send infrared.
+products:
+  - job: "Send infrared commands"
+    body: "No personally verified recommendation yet. Confirm the blaster can send the exact discrete code you intend. A successful send in the app is not proof the unit changed."
+  - job: "Read the room"
+    body: "No personally verified recommendation on this page. Use a thermometer or sensor you have compared with a known reading, placed where people actually are. For a room sensor I have used on its own, see the [cold-room alert](/automation/climate/room-heater-maintain-temp.html). That does not mean it was tested here with an infrared blaster."
+  - job: "Control the unit by hand"
+    body: "The remote that came with the mini-split or window unit. Keep it in the room. If the unit itself has a limit or lock, set that too, so the hub is not the only place the cap exists."
 ---
 
 # Keep a mini-split or window unit inside a hard setpoint limit
@@ -56,29 +63,7 @@ DO NOT treat the last infrared command as the unit's state</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Send infrared commands**
-
-No personally verified recommendation yet. Confirm the blaster can send the exact discrete code you intend. A successful send in the app is not proof the unit changed.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Read the room**
-
-No personally verified recommendation on this page. Use a thermometer or sensor you have compared with a known reading, placed where people actually are. For a room sensor I have used on its own, see the [cold-room alert](/automation/climate/room-heater-maintain-temp.html). That does not mean it was tested here with an infrared blaster.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Control the unit by hand**
-
-The remote that came with the mini-split or window unit. Keep it in the room. If the unit itself has a limit or lock, set that too, so the hub is not the only place the cap exists.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 

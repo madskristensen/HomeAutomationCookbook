@@ -20,7 +20,7 @@ or "buy" (starter guide buy box).
   <div class="pdf-promo-body">
   {%- if promo_variant == "buy" -%}
     <p><strong>Get to a working setup faster.</strong> The printable guide turns this page into a plan you can follow. Know what to buy, check off each room, and build 11 starter rules step by step. Then grow from there.</p>
-    <p><a class="home-button-primary pdf-promo-button" href="{{ promo_url }}">Get the PDF for $12</a></p>
+    <p><a class="btn-primary pdf-promo-button" href="{{ promo_url }}">Get the PDF for $12</a></p>
     <p class="pdf-promo-note">Or add the recipe cards for your next automations. Both for $20 in the <a href="{{ promo_url }}">shop</a>.</p>
   {%- elsif promo_variant == "strip" -%}
     {%- if promo_recipes -%}
@@ -33,7 +33,7 @@ or "buy" (starter guide buy box).
     <script>(function(){var s=window.hacSale&&window.hacSale();if(!s)return;var p=document.currentScript.parentNode.querySelector(".pdf-promo-sale");p.firstChild.textContent=(s.emoji?s.emoji+" ":"")+s.label.replace(/ special$/i,"")+": setup guide + recipe cards, ${{ site.data.sales.sale_price }} for both";p.hidden=false;})();</script>
   {%- else -%}
     <p><strong>Skip the guesswork.</strong> Get a printable plan for your first smart home setup, plus one-page cards for proven automations you can set up quickly.</p>
-    <p><a class="home-button-primary pdf-promo-button" href="{{ promo_url }}">See the guides, from $12</a></p>
+    <p><a class="btn-primary pdf-promo-button" href="{{ promo_url }}">See the guides, from $12</a></p>
   {%- endif -%}
   </div>
 </aside>

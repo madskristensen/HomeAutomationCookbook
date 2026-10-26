@@ -14,6 +14,11 @@ faqs:
     answer: The running marker prevents a completion alert every time an idle washer reports low power or reconnects after an outage.
   - question: Should the automation turn off the smart plug?
     answer: No. Use the device only for monitoring and keep its relay on. Do not remotely interrupt a washer cycle.
+products:
+  - job: "Observe washer power"
+    body: "[Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY/ref=nosim?tag=madsk0f-20). This is the monitor I use on the washer. Read power only, keep the relay on, and check the washer nameplate against the switch rating before connecting it."
+  - job: "Clear the waiting-laundry state"
+    body: "A manual dashboard or phone action. A manual reset is better than an unreliable door sensor."
 ---
 
 # Get notified when the washer finishes
@@ -57,22 +62,7 @@ AND clear the running marker</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Observe washer power**
-
-[Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY/ref=nosim?tag=madsk0f-20). This is the monitor I use on the washer. Read power only, keep the relay on, and check the washer nameplate against the switch rating before connecting it.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Clear the waiting-laundry state**
-
-A manual dashboard or phone action. A manual reset is better than an unreliable door sensor.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

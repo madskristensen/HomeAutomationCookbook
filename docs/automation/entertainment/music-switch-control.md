@@ -16,6 +16,11 @@ faqs:
     answer: The automation simply will not fire. Music can still be started manually from the speaker's own app or control, so nothing is lost, only the shortcut.
   - question: Can one button control more than one playlist?
     answer: Yes, if the switch or remote has more than one button or press pattern, each can be mapped to a different playlist, room, or action.
+products:
+  - job: "Trigger the automation"
+    body: "No personally verified recommendation yet. Any smart button, wall switch, or remote that can trigger a platform automation will work."
+  - job: "Play the music"
+    body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use."
 ---
 
 # Play or pause music with a physical switch
@@ -49,22 +54,7 @@ AND set volume to the preset level</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Trigger the automation**
-
-No personally verified recommendation yet. Any smart button, wall switch, or remote that can trigger a platform automation will work.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Play the music**
-
-Any speaker the platform can control works, for example a Sonos speaker, which is what I use.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

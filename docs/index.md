@@ -10,8 +10,8 @@ description: Helpful automations for an ordinary family house. The physical swit
     <h1>Helpful automations for an ordinary house</h1>
     <p class="home-hero-subtitle">The house should do the small helpful thing. The physical switch still works when it does not.</p>
     <div class="home-hero-actions">
-      <a href="/automation/index.html" class="home-button home-button-primary">Explore automation ideas</a>
-      <a href="/getting-started/index.html" class="home-button home-button-secondary">Start with the basics</a>
+      <a href="/automation/index.html" class="btn btn-primary">Explore automation ideas</a>
+      <a href="/getting-started/index.html" class="btn btn-secondary">Start with the basics</a>
     </div>
     <ul class="home-hero-signals" aria-label="What to expect">
       <li>Platform-neutral patterns</li>
@@ -41,8 +41,8 @@ description: Helpful automations for an ordinary family house. The physical swit
     <p>Start with the part of daily life you want to make easier. You can choose platforms and devices later.</p>
   </div>
 
-  <div class="home-explore-grid">
-    <a href="/automation/lighting/index.html" class="home-explore-card">
+  <div class="card-grid card-grid--two">
+    <a href="/automation/lighting/index.html" class="card card--hover home-explore-card">
       <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="Lighting that responds when someone enters a room" width="1200" height="630">
       <div>
         <p class="home-card-label">Lighting</p>
@@ -52,7 +52,7 @@ description: Helpful automations for an ordinary family house. The physical swit
       </div>
     </a>
 
-    <a href="/automation/daily-routines/index.html" class="home-explore-card">
+    <a href="/automation/daily-routines/index.html" class="card card--hover home-explore-card">
       <img src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="A morning routine coordinating lights, comfort, and household reminders" width="1200" height="630">
       <div>
         <p class="home-card-label">Daily routines</p>
@@ -62,7 +62,7 @@ description: Helpful automations for an ordinary family house. The physical swit
       </div>
     </a>
 
-    <a href="/automation/climate/index.html" class="home-explore-card">
+    <a href="/automation/climate/index.html" class="card card--hover home-explore-card">
       <img src="/assets/img/social/recipes/climate/fan-shower.svg" alt="A bathroom fan responding to shower humidity" width="1200" height="630">
       <div>
         <p class="home-card-label">Climate and comfort</p>
@@ -72,7 +72,7 @@ description: Helpful automations for an ordinary family house. The physical swit
       </div>
     </a>
 
-    <a href="/automation/appliances/index.html" class="home-explore-card">
+    <a href="/automation/appliances/index.html" class="card card--hover home-explore-card">
       <img src="/assets/img/social/recipes/appliances/washer-done-notification.svg" alt="A washer completion alert that removes repeated laundry checks" width="1200" height="630">
       <div>
         <p class="home-card-label">Appliances</p>

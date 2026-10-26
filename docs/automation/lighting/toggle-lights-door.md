@@ -16,6 +16,13 @@ faqs:
     answer: Check magnet alignment and make sure the sensor reports closed reliably. A loose sensor or a door that flexes can create false open events.
   - question: Can this work when the internet is down?
     answer: It can when the hub and devices support local automation. Regardless, the physical wall switch should always work normally.
+products:
+  - job: "Detect an open door"
+    body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Test the closed state before relying on it."
+  - job: "Dim a fixed light"
+    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable."
+  - job: "Switch a fixed light on or off"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable."
 ---
 
 # Turn lights on when a door opens
@@ -50,29 +57,7 @@ THEN turn on the closet light</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect an open door**
-
-[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Test the closed state before relying on it.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Dim a fixed light**
-
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Switch a fixed light on or off**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
@@ -124,25 +109,23 @@ I have not personally run Home Assistant. Treat it as a technical-fit option and
 
 ## Advanced features
 
-<div class="automation-cards">
-  <div class="automation-card">
-    <h3>Day vs. night brightness</h3>
-    <p>Adjust brightness based on time of day:</p>
-    <ul>
-      <li><strong>Nighttime (10 PM - 6 AM):</strong> 30% brightness, warm white (2200K)</li>
-      <li><strong>Daytime:</strong> 100% brightness</li>
-    </ul>
-  </div>
+<div class="card-grid">
+{% capture card_list %}
+<ul>
+  <li><strong>Nighttime (10 PM - 6 AM):</strong> 30% brightness, warm white (2200K)</li>
+  <li><strong>Daytime:</strong> 100% brightness</li>
+</ul>
+{% endcapture %}
+{% include automation-card.html title="Day vs. night brightness" description="Adjust brightness based on time of day:" body=card_list %}
   
-  <div class="automation-card">
-    <h3>Auto turn-off when door closes</h3>
-    <p>Turn off light 2 minutes after door closes:</p>
-    <ul>
-      <li>Prevents lights turning off while door swings closed</li>
-      <li>Avoids rapid on/off cycles during multiple trips</li>
-      <li>Still energy efficient</li>
-    </ul>
-  </div>
+{% capture card_list %}
+<ul>
+  <li>Prevents lights turning off while door swings closed</li>
+  <li>Avoids rapid on/off cycles during multiple trips</li>
+  <li>Still energy efficient</li>
+</ul>
+{% endcapture %}
+{% include automation-card.html title="Auto turn-off when door closes" description="Turn off light 2 minutes after door closes:" body=card_list %}
 </div>
 
 ## Failure modes

@@ -14,7 +14,7 @@ A useful smart home gives time and attention back to the household. It works for
 
 <div class="philosophy-grid">
 
-<div class="philosophy-card">
+<div class="card card--hover philosophy-card">
   <div class="philosophy-header">
     <span class="philosophy-icon" aria-hidden="true">1</span>
     <h2>Works for everybody</h2>
@@ -38,7 +38,7 @@ A useful smart home gives time and attention back to the household. It works for
   </div>
 </div>
 
-<div class="philosophy-card">
+<div class="card card--hover philosophy-card">
   <div class="philosophy-header">
     <span class="philosophy-icon" aria-hidden="true">2</span>
     <h2>Adapts to natural behavior</h2>
@@ -63,7 +63,7 @@ A useful smart home gives time and attention back to the household. It works for
   </div>
 </div>
 
-<div class="philosophy-card">
+<div class="card card--hover philosophy-card">
   <div class="philosophy-header">
     <span class="philosophy-icon" aria-hidden="true">3</span>
     <h2>No further explanation needed</h2>
@@ -87,7 +87,7 @@ A useful smart home gives time and attention back to the household. It works for
   </div>
 </div>
 
-<div class="philosophy-card">
+<div class="card card--hover philosophy-card">
   <div class="philosophy-header">
     <span class="philosophy-icon" aria-hidden="true">4</span>
     <h2>Resiliency built in</h2>
@@ -117,7 +117,7 @@ A useful smart home gives time and attention back to the household. It works for
   </div>
 </div>
 
-<div class="philosophy-card">
+<div class="card card--hover philosophy-card">
   <div class="philosophy-header">
     <span class="philosophy-icon" aria-hidden="true">5</span>
     <h2>The automation pyramid</h2>
@@ -168,7 +168,7 @@ A useful smart home gives time and attention back to the household. It works for
   </div>
 </div>
 
-<div class="philosophy-card">
+<div class="card card--hover philosophy-card">
   <div class="philosophy-header">
     <span class="philosophy-icon" aria-hidden="true">6</span>
     <h2>Putting philosophy into practice</h2>

@@ -1,14 +1,23 @@
 {% comment %}
-Shared recipe/listing card.
-Params: url, title, description, meta_label, meta_value, link_text (default View recipe), link_url (defaults to url).
+Shared card (recipes, articles, job lists, static feature cards, recipe directory).
+Params:
+  title (required); url (optional, links the title); description (optional paragraph)
+  eyebrow (optional small label above the title)
+  body (optional raw HTML after the description, e.g. a list; build it with capture)
+  meta_label, meta_value (optional "Label: value" line)
+  link_text (default "View recipe" when url is set; false to hide), link_url (defaults to url)
+  hover (false to skip the hover highlight), class (extra classes, e.g. "card--compact"), tag (default div), attrs (raw extra attributes)
 {% endcomment %}
-<div class="automation-card">
-  <h3><a href="{{ include.url }}">{{ include.title }}</a></h3>
+{%- assign card_tag = include.tag | default: "div" -%}
+<{{ card_tag }} class="card{% unless include.hover == false %} card--hover{% endunless %} automation-card{% if include.class %} {{ include.class }}{% endif %}"{% if include.attrs %} {{ include.attrs }}{% endif %}>
+  {% if include.eyebrow %}<span class="card-meta">{{ include.eyebrow }}</span>{% endif %}
+  <h3>{% if include.url %}<a href="{{ include.url }}">{{ include.title }}</a>{% else %}{{ include.title }}{% endif %}</h3>
   {% if include.description %}<p>{{ include.description }}</p>{% endif %}
+  {% if include.body %}{{ include.body }}{% endif %}
   {% if include.meta_label %}
   <p class="card-meta"><strong>{{ include.meta_label }}:</strong> {{ include.meta_value }}</p>
   {% endif %}
-  {% if include.link_text != false %}
+  {% if include.url and include.link_text != false %}
   <p><a href="{{ include.link_url | default: include.url }}" class="card-link">{{ include.link_text | default: "View recipe" }}</a></p>
   {% endif %}
-</div>
+</{{ card_tag }}>

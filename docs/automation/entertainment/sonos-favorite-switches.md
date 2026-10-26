@@ -14,6 +14,13 @@ faqs:
     answer: Over a day, people pull speakers out of the group and change volumes. A reset at night or when leaving puts every speaker back in a known state for the next day.
   - question: Can I still use the Sonos app?
     answer: Yes. The app keeps working normally. The automation only acts when a station switch or a mode change asks it to.
+products:
+  - job: "Play the music"
+    body: "Sonos speakers downstairs, with one chosen as the group coordinator."
+  - job: "Control groups and favorites from the hub"
+    body: "On Hubitat, I use the community [Sonos Advanced Controller](https://community.hubitat.com/t/release-sonos-advanced-controller/130296). It can load Sonos favorites and manage groups locally."
+  - job: "Pick a station"
+    body: "Virtual switches on the hub, one per station, plus a stop switch."
 ---
 
 # Whole-home music with favorite station switches
@@ -58,29 +65,7 @@ AND group the speakers again</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Play the music**
-
-Sonos speakers downstairs, with one chosen as the group coordinator.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Control groups and favorites from the hub**
-
-On Hubitat, I use the community [Sonos Advanced Controller](https://community.hubitat.com/t/release-sonos-advanced-controller/130296). It can load Sonos favorites and manage groups locally.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Pick a station**
-
-Virtual switches on the hub, one per station, plus a stop switch.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

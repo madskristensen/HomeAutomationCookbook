@@ -14,6 +14,11 @@ faqs:
     answer: It runs the dashboard full screen and lets the hub control the screen, brightness, volume, and start page over the local network.
   - question: Why reload the start page in the morning?
     answer: Dashboards sometimes get left on a different page or freeze overnight. Loading the start URL when the house wakes up puts every tablet back on the right screen.
+products:
+  - job: "Show the dashboard"
+    body: "Wall-mounted tablets. I use an Amazon Fire tablet in the hallway and a second tablet in the kitchen."
+  - job: "Control the screen from the hub"
+    body: "[Fully Kiosk Browser](https://www.fully-kiosk.com/en/) on each tablet, with its Remote Admin feature turned on. On Hubitat, I wrote [a small Fully Kiosk driver](https://github.com/madskristensen/hubitat-drivers/tree/main/drivers/fully-kiosk) for this, but other community drivers exist too."
 ---
 
 # Manage wall tablets with home modes
@@ -62,22 +67,7 @@ THEN turn each tablet screen off</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Show the dashboard**
-
-Wall-mounted tablets. I use an Amazon Fire tablet in the hallway and a second tablet in the kitchen.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Control the screen from the hub**
-
-[Fully Kiosk Browser](https://www.fully-kiosk.com/en/) on each tablet, with its Remote Admin feature turned on. On Hubitat, I wrote [a small Fully Kiosk driver](https://github.com/madskristensen/hubitat-drivers/tree/main/drivers/fully-kiosk) for this, but other community drivers exist too.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

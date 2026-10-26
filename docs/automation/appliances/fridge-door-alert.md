@@ -14,6 +14,9 @@ faqs:
     answer: A door open for a minute or two while unloading groceries should not reach the delay. If it does, lengthen the delay slightly rather than removing it.
   - question: Can the same contact sensor go in both the fridge and the freezer?
     answer: Only if its documented operating temperature range covers the freezer. Check the manufacturer's rating before relying on it below freezing.
+products:
+  - job: "Detect an open refrigerator or freezer door"
+    body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Confirm the manufacturer's operating temperature range before using one inside a freezer rather than a refrigerator."
 ---
 
 # Get an alert when the fridge or freezer door is left open
@@ -54,15 +57,7 @@ THEN cancel that pending alert</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect an open refrigerator or freezer door**
-
-[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Confirm the manufacturer's operating temperature range before using one inside a freezer rather than a refrigerator.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

@@ -14,6 +14,15 @@ faqs:
     answer: The gap keeps the lights from flickering between modes when the TV's draw moves around. Above 70 W means a movie is on. Under 30 W means the TV is off or in standby.
   - question: Why only turn the lights on if they were off?
     answer: If someone already set the lights to a different level, opening a door should not override that choice.
+products:
+  - job: "Know when a garage door opens"
+    body: "A sensor on each garage door. See the [device guide](/getting-started/device-guide.html#products-i-have-used) for garage door tilt sensors."
+  - job: "Know someone is in the garage"
+    body: "Motion sensors in the garage and in the loft."
+  - job: "Know the TV is on"
+    body: "A smart plug with power metering on the TV. The [device guide](/getting-started/device-guide.html#products-i-have-used) lists the plugs I use to detect a TV."
+  - job: "Light the garage"
+    body: "Dimmable smart lights or a smart dimmer for the garage lights."
 ---
 
 # Garage lights that follow doors, motion, and the TV
@@ -60,36 +69,7 @@ AND clear movie mode</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Know when a garage door opens**
-
-A sensor on each garage door. See the [device guide](/getting-started/device-guide.html#products-i-have-used) for garage door tilt sensors.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Know someone is in the garage**
-
-Motion sensors in the garage and in the loft.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Know the TV is on**
-
-A smart plug with power metering on the TV. The [device guide](/getting-started/device-guide.html#products-i-have-used) lists the plugs I use to detect a TV.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Light the garage**
-
-Dimmable smart lights or a smart dimmer for the garage lights.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

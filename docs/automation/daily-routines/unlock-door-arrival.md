@@ -16,6 +16,13 @@ faqs:
     answer: The home area may be too large or the phone location may drift. Require a real Away-to-Home transition and delay nonessential actions until arrival remains stable.
   - question: What should happen for the second person arriving home?
     answer: Usually very little. Reserve whole-house Home actions for the first arrival and use only entry lighting or a notification for later arrivals.
+products:
+  - job: "Detect the first return home"
+    body: "Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Require a real Away-to-Home transition."
+  - job: "Light the entry path"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable."
+  - job: "Restore heating and cooling"
+    body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). The thermostat's safe limits remain authoritative."
 ---
 
 # Prepare the house when someone arrives
@@ -54,29 +61,7 @@ BUT do not unlock a door from phone location alone</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect the first return home**
-
-Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Require a real Away-to-Home transition.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Light the entry path**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Restore heating and cooling**
-
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). The thermostat's safe limits remain authoritative.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

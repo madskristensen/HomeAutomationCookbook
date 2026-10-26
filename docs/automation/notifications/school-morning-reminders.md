@@ -14,6 +14,9 @@ faqs:
     answer: The announcement uses a high-priority text-to-speech command that briefly interrupts the speaker, then resumes what was playing.
   - question: Does this run on holidays and vacations?
     answer: It only runs on weekdays when the home is in Home mode. On school holidays, you either accept it or add a virtual switch that turns it off.
+products:
+  - job: "Speak the reminder"
+    body: "A Sonos speaker in the kitchen. On Hubitat, I use the community [Sonos Advanced Controller](https://community.hubitat.com/t/release-sonos-advanced-controller/130296), which adds the high-priority text-to-speech command."
 ---
 
 # Spoken school morning reminders
@@ -51,15 +54,7 @@ THEN announce "It's time to put on your shoes" on the kitchen speaker at volume 
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Speak the reminder**
-
-A Sonos speaker in the kitchen. On Hubitat, I use the community [Sonos Advanced Controller](https://community.hubitat.com/t/release-sonos-advanced-controller/130296), which adds the high-priority text-to-speech command.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

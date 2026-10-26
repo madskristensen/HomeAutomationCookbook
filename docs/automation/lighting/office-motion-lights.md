@@ -14,6 +14,15 @@ faqs:
     answer: The monitor turns off after the Windows timeout, and once motion has also been quiet for 15 minutes the lights turn off. Move a little or tap a key.
   - question: Why does the music pause when the lights turn off?
     answer: If the lights are off, nobody is working in the office, so the music has no reason to keep playing.
+products:
+  - job: "Know someone is at the desk"
+    body: "A smart plug with power metering on the monitor. The [device guide](/getting-started/device-guide.html#products-i-have-used) lists power-metering plugs."
+  - job: "Know someone walked in"
+    body: "A motion sensor in the office, and an outdoor light sensor in the front yard for the dark check."
+  - job: "Know I am home"
+    body: "Phone presence from the UniFi network."
+  - job: "Play the music"
+    body: "A Sonos speaker in the office."
 ---
 
 # Office lights that stay on while you work
@@ -60,36 +69,7 @@ THEN pause the office speaker</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Know someone is at the desk**
-
-A smart plug with power metering on the monitor. The [device guide](/getting-started/device-guide.html#products-i-have-used) lists power-metering plugs.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Know someone walked in**
-
-A motion sensor in the office, and an outdoor light sensor in the front yard for the dark check.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Know I am home**
-
-Phone presence from the UniFi network.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Play the music**
-
-A Sonos speaker in the office.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

@@ -14,6 +14,13 @@ faqs:
     answer: A party scene left running after everyone has gone home wastes electricity and can annoy neighbors with music or bright colored lights running unattended.
   - question: Can more than one button trigger the same scene?
     answer: Yes, a voice command, a physical button, and a dashboard tile can all point at the same automation, which keeps behavior consistent regardless of how it is started.
+products:
+  - job: "Outdoor party lighting"
+    body: "No personally verified recommendation yet. Needs to be rated for outdoor use and support color or scene control from the platform."
+  - job: "Outdoor music playback"
+    body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. Choose a weatherproof or otherwise suitable model for the location."
+  - job: "Trigger the scene"
+    body: "No personally verified recommendation yet. Any button, voice command, or dashboard tile the platform can use to start an automation."
 ---
 
 # Set up one-tap pool party mode
@@ -55,29 +62,7 @@ AND resume routine outdoor motion notifications</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Outdoor party lighting**
-
-No personally verified recommendation yet. Needs to be rated for outdoor use and support color or scene control from the platform.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Outdoor music playback**
-
-Any speaker the platform can control works, for example a Sonos speaker, which is what I use. Choose a weatherproof or otherwise suitable model for the location.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Trigger the scene**
-
-No personally verified recommendation yet. Any button, voice command, or dashboard tile the platform can use to start an automation.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

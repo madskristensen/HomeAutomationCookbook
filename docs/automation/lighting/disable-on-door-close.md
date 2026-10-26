@@ -16,6 +16,13 @@ faqs:
     answer: Ownership prevents the close event from undoing a person's manual choice, such as leaving the light on while cleaning or changing a shelf.
   - question: Can a closed door prove that a bathroom is occupied?
     answer: No. Door position alone cannot reliably prove occupancy. Use motion with a longer delay or mmWave presence sensing for bathrooms and quiet workspaces.
+products:
+  - job: "Detect the door closing"
+    body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Align the magnet so closed reports remain stable."
+  - job: "Dim a fixed light"
+    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable."
+  - job: "Switch a fixed light on or off"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable."
 ---
 
 # Turn a closet light off after the door closes
@@ -59,29 +66,7 @@ THEN cancel the pending off action</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect the door closing**
-
-[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Align the magnet so closed reports remain stable.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Dim a fixed light**
-
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Switch a fixed light on or off**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

@@ -16,6 +16,13 @@ faqs:
     answer: Only optional nuisance sounds and bright convenience lighting chosen by the caregiver. Smoke, carbon-monoxide, leak, security, medical, and other urgent alerts must still run.
   - question: Should quiet mode turn off motion lighting completely?
     answer: Usually no. A very dim path light or manual-only behavior is safer for a caregiver entering the room at night.
+products:
+  - job: "Request quiet mode"
+    body: "A physical control or deliberate app button. The label should say Quiet, not Baby sleeping."
+  - job: "Provide low light"
+    body: "Existing dimmable room or hallway light. Keep the normal switch usable."
+  - job: "End quiet mode"
+    body: "The same visible control. Automatic expiry may remind, but must not claim anyone woke up."
 ---
 
 # Set a nursery quiet mode without guessing whether a baby is asleep
@@ -56,29 +63,7 @@ THEN restore normal convenience behavior</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Request quiet mode**
-
-A physical control or deliberate app button. The label should say Quiet, not Baby sleeping.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Provide low light**
-
-Existing dimmable room or hallway light. Keep the normal switch usable.
-
-</div>
-<div class="product-item" markdown="1">
-
-**End quiet mode**
-
-The same visible control. Automatic expiry may remind, but must not claim anyone woke up.
-
-</div>
-</div>
+{% include product-list.html %}
 
 ## Setup notes
 

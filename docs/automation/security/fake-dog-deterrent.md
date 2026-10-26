@@ -14,6 +14,11 @@ faqs:
     answer: It can, if the volume is too high or it triggers too often. A moderate volume, a reasonable clip length, and a cooldown between triggers help keep this from becoming a nuisance.
   - question: Should this run all the time or only while away?
     answer: Run it only in Away mode. You can further limit Away-mode playback to nighttime, but nighttime alone must never enable it while people are home.
+products:
+  - job: "Detect fast entry motion"
+    body: "[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20) for an indoor entry point, or the [Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20) or [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) if mounted outside."
+  - job: "Play the barking sound on a speaker"
+    body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. No specific model is required as long as it can play an audio file on command."
 ---
 
 # Play dog barking sounds as an intruder deterrent
@@ -49,22 +54,7 @@ AND send a notification that motion was detected</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect fast entry motion**
-
-[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20) for an indoor entry point, or the [Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20) or [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) if mounted outside.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Play the barking sound on a speaker**
-
-Any speaker the platform can control works, for example a Sonos speaker, which is what I use. No specific model is required as long as it can play an audio file on command.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

@@ -16,6 +16,9 @@ faqs:
     answer: Doorbell transformers are typically low voltage, around 16 to 24 volts AC, but power should still be turned off before any wiring work, and anyone unsure should consult an electrician.
   - question: Why do I need a debounce delay in the automation?
     answer: A doorbell button can send more than one signal for a single press. A short debounce window after the first trigger prevents multiple notifications for the same ring.
+products:
+  - job: "Detect the doorbell press"
+    body: "[Ecolink Z-Wave Plus Door/Window Sensor (DWZWAVE2.5-ECO)](https://www.amazon.com/dp/B01N5HB4U5/ref=nosim?tag=madsk0f-20). The external screws are a non-powered dry contact, in parallel with the built-in magnet. Do not land the doorbell transformer's voltage on them. Use a relay so a press closes those terminals while the chime stays on its own wiring. Keep the magnet away from the sensor when the terminals are in use."
 ---
 
 # Get a phone notification when a traditional doorbell rings
@@ -49,15 +52,7 @@ THEN send a phone notification: "Someone is at the front door"</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect the doorbell press**
-
-[Ecolink Z-Wave Plus Door/Window Sensor (DWZWAVE2.5-ECO)](https://www.amazon.com/dp/B01N5HB4U5/ref=nosim?tag=madsk0f-20). The external screws are a non-powered dry contact, in parallel with the built-in magnet. Do not land the doorbell transformer's voltage on them. Use a relay so a press closes those terminals while the chime stays on its own wiring. Keep the magnet away from the sensor when the terminals are in use.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
