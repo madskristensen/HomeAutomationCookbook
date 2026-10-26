@@ -4,6 +4,10 @@
 {% endcomment %}
 <script>
 (function () {
+  try {
+    if (/[?&]notrack=1\b/.test(location.search)) localStorage.setItem("notrack", "1");
+    if (localStorage.getItem("notrack") === "1") return;
+  } catch (e) {}
   function addBeacon() {
     if (document.querySelector("script[data-cf-beacon]")) return;
     var script = document.createElement("script");
