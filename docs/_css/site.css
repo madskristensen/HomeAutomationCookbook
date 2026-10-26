@@ -2092,7 +2092,16 @@ h1.has-article-meta {
   font-variant-numeric: tabular-nums;
 }
 
+.sale-banner-emoji {
+  margin-right: 0.3em;
+}
+
+.sale-banner-msg s {
+  opacity: 0.8;
+}
+
 .sale-banner-link {
+  margin-left: 0.25em;
   white-space: nowrap;
   font-weight: 600;
 }
@@ -2122,19 +2131,7 @@ h1.has-article-meta {
   outline-offset: 2px;
 }
 
-.sale-banner-msg-short {
-  display: none;
-}
-
 @media (max-width: 600px) {
-  .sale-banner-msg-long {
-    display: none;
-  }
-
-  .sale-banner-msg-short {
-    display: inline;
-  }
-
   .sale-banner-inner {
     padding: 0.45rem 2.5rem 0.45rem 0.75rem;
     font-size: 0.85rem;
@@ -2171,4 +2168,16 @@ h1.has-article-meta {
   color: var(--sale-text);
   font-weight: 800;
   text-decoration-thickness: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }

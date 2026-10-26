@@ -6,7 +6,7 @@ Dismiss stores the sale name in localStorage, so it stays hidden for the rest of
 {% include sale-window.html %}
 <aside class="sale-banner sale-banner--{{ include.variant | default: 'quiet' }}" aria-label="Sale" hidden>
   <div class="sale-banner-inner">
-    <p class="sale-banner-text"><span class="sale-banner-emoji" aria-hidden="true"></span> <span class="sale-banner-msg"><span class="sale-banner-msg-long"></span><span class="sale-banner-msg-short"></span></span> <span class="sale-banner-chip"><span class="sale-banner-chip-label">Ends in&nbsp;</span><time class="sale-banner-count"></time></span> <a class="sale-banner-link" href="/shop/">{{ include.link_label | default: "Shop" }}</a></p>
+    <p class="sale-banner-text"><span class="sale-banner-emoji" aria-hidden="true"></span> <span class="sale-banner-msg"></span> <span class="sale-banner-chip"><span class="sale-banner-chip-label">Ends in&nbsp;</span><time class="sale-banner-count"></time></span> <a class="sale-banner-link" href="/shop/">{{ include.link_label | default: "Shop" }}</a></p>
     <button type="button" class="sale-banner-close" aria-label="Dismiss sale banner">✕</button>
   </div>
 </aside>
@@ -15,9 +15,9 @@ function ptMidnight(y,m,d){var g=Date.UTC(y,m-1,d,12),p=new Intl.DateTimeFormat(
 var e=s.end.split("-"),end=ptMidnight(+e[0],+e[1],+e[2]+1),c=b.querySelector(".sale-banner-count");
 if(s.accent)b.style.setProperty("--sale-accent",s.accent);if(s.accent_end)b.style.setProperty("--sale-accent-end",s.accent_end);if(s.text)b.style.setProperty("--sale-text",s.text);
 b.querySelector(".sale-banner-emoji").textContent=s.emoji||"";
-var n=s.label.replace(/ special$/i,"")+" deal: ",pr=", ${{ site.data.sales.sale_price }} (save ${{ site.data.sales.list_price | minus: site.data.sales.sale_price }})";
-b.querySelector(".sale-banner-msg-long").textContent=n+"the smart home setup guide + all {{ site.data.sales.recipe_card_count }} recipe cards"+pr;
-b.querySelector(".sale-banner-msg-short").textContent=n+"setup guide + {{ site.data.sales.recipe_card_count }} recipe cards"+pr;
+var m=b.querySelector(".sale-banner-msg"),del=document.createElement("s"),sr=document.createElement("span");
+m.textContent=s.label.replace(/ special$/i,"")+" deal: setup guide + {{ site.data.sales.recipe_card_count }} recipe cards, ${{ site.data.sales.sale_price }}\u00a0";
+sr.className="visually-hidden";sr.textContent="regular price ";del.appendChild(sr);del.appendChild(document.createTextNode("${{ site.data.sales.regular_price }}"));m.appendChild(del);
 c.setAttribute("datetime",new Date(end).toISOString());
 function tick(){var ms=end-Date.now();if(ms<=0){b.hidden=true;return;}var h=Math.floor(ms/36e5),d=Math.floor(h/24);c.textContent=d>=1?d+"d "+(h%24)+"h":h+"h "+Math.floor(ms%36e5/6e4)+"m";}
 tick();b.hidden=false;document.documentElement.classList.add("has-sale-banner");setInterval(tick,6e4);
