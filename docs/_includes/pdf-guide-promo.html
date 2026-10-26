@@ -5,9 +5,17 @@ or "buy" (starter guide buy box).
 {%- endcomment -%}
 {%- assign promo_variant = include.variant | default: "card" -%}
 {%- assign promo_url = "/shop/" | relative_url -%}
+{%- assign promo_cover = "/assets/img/guides/starter-pdf-cover.jpg" -%}
+{%- assign promo_url_head = page.url | slice: 0, 12 -%}
+{%- if promo_variant == "strip" -%}
+  {%- if promo_url_head == "/automation/" or page.layout == "automation" or page.layout == "automation-category" -%}
+    {%- assign promo_cover = "/assets/img/guides/recipe-pdf-cover.jpg" -%}
+    {%- assign promo_recipes = true -%}
+  {%- endif -%}
+{%- endif -%}
 <aside class="pdf-promo pdf-promo--{{ promo_variant }}" aria-label="Printable guides">
   <a class="pdf-promo-thumb" href="{{ promo_url }}" tabindex="-1" aria-hidden="true">
-    {%- include responsive-img.html src="/assets/img/guides/starter-pdf-cover.jpg" alt="" width="640" height="829" sizes="96px" loading="lazy" -%}
+    {%- include responsive-img.html src=promo_cover alt="" width="640" height="829" sizes="96px" loading="lazy" -%}
   </a>
   <div class="pdf-promo-body">
   {%- if promo_variant == "buy" -%}
@@ -15,10 +23,14 @@ or "buy" (starter guide buy box).
     <p><a class="home-button-primary pdf-promo-button" href="{{ promo_url }}">Get the PDF for $12</a></p>
     <p class="pdf-promo-note">Or add the recipe cards for your next automations. Both for $20 in the <a href="{{ promo_url }}">shop</a>.</p>
   {%- elsif promo_variant == "strip" -%}
-    <p>Get your smart home working sooner, with a printable plan and recipe cards. <a class="pdf-promo-link" href="{{ promo_url }}">Printable guides from $12</a></p>
+    {%- if promo_recipes -%}
+    <p>Every recipe on one printable page, ready to set up. <a class="pdf-promo-link" href="{{ promo_url }}">Recipe cards PDF, $12</a></p>
+    {%- else -%}
+    <p>Get your smart home working sooner with a printable step-by-step plan. <a class="pdf-promo-link" href="{{ promo_url }}">Setup guide PDF, $12</a></p>
+    {%- endif -%}
     <p class="pdf-promo-sale" hidden><a href="{{ promo_url }}"></a></p>
     {% include sale-window.html %}
-    <script>(function(){var s=window.hacSale&&window.hacSale();if(!s)return;var p=document.currentScript.parentNode.querySelector(".pdf-promo-sale");p.firstChild.textContent=(s.emoji?s.emoji+" ":"")+s.label+": both guides for ${{ site.data.sales.sale_price }}, from first setup to everyday wins";p.hidden=false;})();</script>
+    <script>(function(){var s=window.hacSale&&window.hacSale();if(!s)return;var p=document.currentScript.parentNode.querySelector(".pdf-promo-sale");p.firstChild.textContent=(s.emoji?s.emoji+" ":"")+s.label.replace(/ special$/i,"")+": setup guide + recipe cards, ${{ site.data.sales.sale_price }} for both";p.hidden=false;})();</script>
   {%- else -%}
     <p><strong>Skip the guesswork.</strong> Get a printable plan for your first smart home setup, plus one-page cards for proven automations you can set up quickly.</p>
     <p><a class="home-button-primary pdf-promo-button" href="{{ promo_url }}">See the guides, from $12</a></p>

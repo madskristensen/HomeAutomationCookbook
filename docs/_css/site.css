@@ -1075,7 +1075,9 @@ h1.has-article-meta {
 .pdf-promo--buy .pdf-promo-thumb img { width: 96px; }
 .pdf-promo-row { margin-top: 3rem; }
 .pdf-promo--strip { justify-content: center; margin: 0; padding: 0 0 1.25rem; border: 0; background: none; font-size: 0.875rem; color: var(--color-text-secondary); }
+.pdf-promo--strip { align-items: flex-start; }
 .pdf-promo--strip .pdf-promo-thumb img { width: 32px; }
+.pdf-promo--strip .pdf-promo-thumb { margin-top: 0.2rem; }
 .pdf-promo-row + .site-footer { margin-top: 0; }
 .pdf-promo-button { display: inline-block; margin-top: 0.25rem; }
 .pdf-promo-note { font-size: 0.875rem; color: var(--color-text-secondary); }
