@@ -3,7 +3,7 @@ layout: guide
 redirect_from:
   - /getting-started/safe-thermostat-away.html
 title: Safe thermostat auto-away
-description: Use a modest thermostat setback when the home is empty without risking pets, frozen pipes, manual holds, or an unsafe recovery.
+description: Save energy while the house is empty with a modest thermostat setback that still protects pets and pipes and respects manual holds.
 last_modified_at: 2026-10-05
 compact: true
 ---

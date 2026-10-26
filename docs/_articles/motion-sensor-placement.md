@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Motion sensor placement guide
-description: A practical guide to placing and testing PIR and presence sensors so automations respond at the right moment without false triggers.
+description: Place motion and presence sensors so lights react the moment you walk in and stop false triggers. Practical tips for mounting, aiming, and testing.
 date: 2026-09-09
 last_modified_at: 2026-10-19
 image: /assets/img/social/guides/motion-sensor-placement.png

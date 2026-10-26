@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Starter house setup guide
-description: A practical plan for a first smart home. Pick one hub, buy about 10 devices, and set them up room by room with recipes that keep switches working for everyone.
+description: Set up your first smart home with a clear plan. Pick one hub, buy about 10 devices, and go room by room with recipes that keep switches working.
 date: 2026-10-25
 last_modified_at: 2026-10-25
 image: /assets/img/social/guides/starter-house-setup.png

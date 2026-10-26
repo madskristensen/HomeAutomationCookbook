@@ -2,7 +2,7 @@
 layout: automation
 date: 2026-10-25
 title: Whole-home music with favorite station switches
-description: Virtual switches for favorite stations group the downstairs speakers and start a Sonos favorite, and a nightly reset ungroups them and puts every speaker back at a sensible volume.
+description: Start a Sonos favorite on grouped speakers by flipping a virtual switch, then let a nightly reset ungroup them and set every volume back to normal.
 keywords: Sonos favorites virtual switch, Sonos group automation Hubitat, whole home music automation, Sonos Advanced Controller, webCoRE music piston
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/entertainment/sonos-favorite-switches.png

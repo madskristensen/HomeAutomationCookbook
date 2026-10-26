@@ -4,7 +4,7 @@ redirect_from:
   - /automation/misc/low-battery-alerts.html
 date: 2025-11-29
 title: Smart home low-battery alerts
-description: A platform-neutral recipe that notifies when a battery-powered sensor, lock, or button drops below a set level, before it fails silently.
+description: Replace batteries before automations quietly stop working. Get notified when a sensor, lock, or button drops below the level you choose.
 keywords: low battery alert, smart home battery, device battery notification, battery monitoring, smart device maintenance
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/notifications/low-battery-alerts.png

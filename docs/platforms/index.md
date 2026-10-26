@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home automation platform guides
-description: Compare Alexa, SmartThings, Hubitat, and Home Assistant by maintenance burden, automation depth, local behavior, and household control.
+description: Compare Alexa, SmartThings, Hubitat, and Home Assistant by upkeep, how deep the automations go, what runs locally, and how easy they are to control.
 permalink: /platforms/
 canonical_url: https://www.homeautomationcookbook.com/platforms/
 image: /assets/img/social/platforms-overview.png

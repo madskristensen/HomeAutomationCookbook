@@ -3,7 +3,7 @@ layout: guide
 redirect_from:
   - /getting-started/platforms/index.html
 title: Choose a smart-home platform
-description: A candid platform chooser based on firsthand Alexa, SmartThings, and Hubitat experience, with Home Assistant clearly marked as a technical-fit comparison.
+description: Pick the smart home platform that fits your family, with honest notes from years of Alexa, SmartThings, and Hubitat, plus how Home Assistant compares.
 last_modified_at: 2026-09-12
 image: /assets/img/social/platforms-overview.png
 ---

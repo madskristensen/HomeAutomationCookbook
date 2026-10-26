@@ -3,7 +3,7 @@ layout: guide
 redirect_from:
   - /resources/index.html
 title: Home automation resources
-description: A short list of official documentation, support communities, and research checks for verifying devices and platform behavior.
+description: Check how a device or platform really behaves with this short list of official documentation, helpful communities, and research tips.
 last_modified_at: 2026-09-21
 image: /assets/img/social/guides/automation-resources.png
 ---

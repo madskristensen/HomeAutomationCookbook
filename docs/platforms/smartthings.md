@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: SmartThings home automation guide
-description: Use SmartThings routines and rules for approachable automation while verifying device capabilities, local execution, and household overrides.
+description: Get started with SmartThings routines and rules. Check what your devices can do, what runs locally, and how the household can override them.
 last_modified_at: 2026-09-14
 image: /assets/img/social/platform-smartthings.png
 ---

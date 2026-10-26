@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Hubitat vs SmartThings for a family house
-description: A firsthand comparison of Hubitat and SmartThings for a large family home, including daily controls, advanced routines, drivers, reliability, and migration effort.
+description: Hubitat vs SmartThings from someone who ran both in a large family home. Compare daily control, advanced rules, drivers, reliability, and switching.
 date: 2026-09-13
 image: /assets/img/social/smartthings-vs-hubitat-comparison.png
 ---

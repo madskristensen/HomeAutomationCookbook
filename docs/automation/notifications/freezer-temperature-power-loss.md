@@ -2,7 +2,7 @@
 layout: automation
 date: 2026-09-24
 title: Monitor freezer temperature and outbuilding power
-description: Alert when a freezer warms unexpectedly or a garage or shed may have lost power, while distinguishing temperature, power, and communications failures.
+description: Save the food in a garage or shed freezer. Get alerts when it warms up or power may be out, and tell real problems apart from a dropped sensor.
 keywords: freezer temperature alert, freezer power outage alert, garage power monitor, shed power loss notification, freezer alarm
 last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/notifications/freezer-temperature-power-loss.png

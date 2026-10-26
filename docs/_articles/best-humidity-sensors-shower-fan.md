@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Best humidity sensors for shower fan automation
-description: Pick a humidity sensor that reacts fast enough to run a bathroom exhaust fan when the shower starts, works locally with your hub, and lets the fan stop once the room dries.
+description: Find a humidity sensor fast enough to start the bathroom fan when the shower runs and stop it once the room dries, working locally with your hub.
 date: 2026-10-25
 last_modified_at: 2026-10-25
 image: /assets/img/social/guides/best-humidity-sensors-shower-fan.png

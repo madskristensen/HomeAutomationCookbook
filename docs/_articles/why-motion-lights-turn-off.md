@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Why motion lights turn off while you are still there
-description: A checklist when a motion light turns off while someone is still in the room. Check timeout, sensor aim, and presence sensing.
+description: Stop motion lights from turning off while you are still in the room. Check the timeout, sensor aim, and when to add a presence sensor.
 date: 2026-10-19
 last_modified_at: 2026-10-19
 image: /assets/img/social/guides/why-motion-lights-turn-off.png

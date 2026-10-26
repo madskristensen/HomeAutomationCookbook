@@ -4,7 +4,7 @@ redirect_from:
   - /automation/lighting/meeting-do-not-disturb-light.html
 date: 2026-10-25
 title: Video call lighting button
-description: One button press turns on a warm backlight behind you, dims the overhead lights, and pauses the music for a video call, then puts everything back when the call ends.
+description: Look good on video calls with one press. Turn on a warm backlight, dim the overhead lights, and pause music, then put it all back after the call.
 keywords: video call lighting, webcam lighting automation, office meeting button, pause Sonos meeting, webCoRE meeting piston
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/lighting/video-call-lighting-button.png

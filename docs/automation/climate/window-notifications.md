@@ -2,7 +2,7 @@
 layout: automation
 date: 2025-11-28
 title: Window ventilation notifications
-description: A platform-neutral recipe that compares indoor and outdoor temperature and notifies the household when opening or closing windows would save energy.
+description: Know when to open or close the windows to save energy. Compare indoor and outdoor temperature and get a nudge when fresh air would help.
 keywords: window notification automation, energy saving alerts, when to open windows, temperature notification, natural ventilation
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/climate/window-notifications.png

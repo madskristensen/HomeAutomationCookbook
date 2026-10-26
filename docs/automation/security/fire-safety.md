@@ -2,7 +2,7 @@
 layout: automation
 date: 2025-11-29
 title: Supplemental fire evacuation support
-description: A conservative fire-response recipe that treats listed smoke alarms as primary, turns on useful lighting immediately, and never infers that a fire is over.
+description: Help everyone get out faster in a fire. Turn on useful lights the moment listed smoke alarms sound, while those alarms stay the primary warning.
 keywords: fire safety automation, smoke alarm notification, evacuation lighting, smart home fire alert, smoke alarm listener
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/security/fire-safety.png

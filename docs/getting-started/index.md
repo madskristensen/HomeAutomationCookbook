@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Getting started with home automation
-description: Start with one household problem, choose a maintainable platform, verify one device, and keep physical controls working.
+description: Start your smart home the easy way. Solve one household problem, pick a platform you can maintain, test one device, and keep the switches working.
 permalink: /getting-started/
 canonical_url: https://www.homeautomationcookbook.com/getting-started/
 last_modified_at: 2026-09-21

@@ -4,7 +4,7 @@ redirect_from:
   - /automation/media/speaker-volume-presets.html
 date: 2025-11-28
 title: Set smart-speaker volume presets
-description: Choose a quiet, normal, or loud preset once instead of adjusting each speaker by hand whenever the household changes activities.
+description: Set every speaker to quiet, normal, or loud with one choice instead of adjusting each one by hand whenever the household changes activities.
 keywords: speaker volume automation, audio presets, volume control scenes, smart speaker volume, consistent volume
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/entertainment/speaker-volume-presets.png

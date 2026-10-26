@@ -2,7 +2,7 @@
 layout: automation
 date: 2025-11-29
 title: Water leak detection alerts
-description: A platform-neutral leak recipe that identifies the wet sensor, alerts the household immediately, and adds automatic water shutoff only after verified testing.
+description: Catch water leaks early. Know which sensor got wet, alert the household right away, and add automatic water shutoff only after careful testing.
 keywords: water leak alert, leak sensor notification, water detection automation, smart water shutoff, flood sensor, NEO water leak sensor
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/security/water-leak-response.png

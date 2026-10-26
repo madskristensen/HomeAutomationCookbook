@@ -2,7 +2,7 @@
 layout: automation
 date: 2026-10-25
 title: Garage lights that follow doors, motion, and the TV
-description: Garage lights turn on when a garage door opens or someone moves, stay on while the space is in use, dim for movies on the garage TV, and turn off only when the garage is really empty.
+description: Garage lights that turn on with the door or motion, stay on while you work, dim for the garage TV, and turn off only once the garage is empty.
 keywords: garage lights automation, garage door lights on, garage motion lights, TV power monitoring dim lights, webCoRE garage piston
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/lighting/garage-lights-doors-motion-tv.png

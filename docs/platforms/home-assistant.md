@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Home Assistant technical-fit guide
-description: Evaluate Home Assistant by its automation flexibility, integration model, hardware choices, maintenance responsibilities, and household usability.
+description: See if Home Assistant fits your home. Weigh its automation power, integrations, and hardware choices against the upkeep it asks of you.
 last_modified_at: 2026-09-14
 image: /assets/img/social/platform-home-assistant.png
 ---

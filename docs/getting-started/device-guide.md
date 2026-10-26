@@ -4,7 +4,7 @@ redirect_from:
   - /devices/index.html
   - /getting-started/devices/index.html
 title: Choose smart-home devices and gear
-description: Choose compatible smart-home devices by job, then compare the sensors, switches, plugs, and climate gear I have personally used.
+description: Buy smart home devices that work together. Choose by the job they do, then compare the sensors, switches, plugs, and climate gear I have used.
 last_modified_at: 2026-09-21
 image: /assets/img/social/guides/choose-devices.png
 ---

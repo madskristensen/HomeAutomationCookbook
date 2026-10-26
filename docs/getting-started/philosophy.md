@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Home automation philosophy
-description: Rules of thumb for a family house. The automation should fit how people already live, and the physical switch should still work.
+description: Build a smart home your family actually likes. Simple rules for automations that fit how people live, where the physical switch always works.
 last_modified_at: 2026-10-05
 image: /assets/img/social/guides/home-automation-philosophy.png
 ---

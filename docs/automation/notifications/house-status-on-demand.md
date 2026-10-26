@@ -2,7 +2,7 @@
 layout: automation
 date: 2026-10-25
 title: House status check on demand
-description: Press a button and get one push message that sums up the house, with the mode, open windows and doors, the front door lock, air quality, rain, and appliances that are still running.
+description: "Press one button and get a single message about the house: mode, open windows and doors, the front lock, air quality, rain, and running appliances."
 keywords: house status check, smart home health check, on demand status notification, Hubitat status push, webCoRE status piston
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/notifications/house-status-on-demand.png

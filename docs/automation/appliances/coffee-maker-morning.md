@@ -2,7 +2,7 @@
 layout: automation
 date: 2025-11-28
 title: Automate morning coffee safely
-description: Prepare the coffee maker the night before and get a clear morning result without wondering whether it was actually made ready.
+description: Wake up to coffee you know is ready. Set up the coffee maker the night before and get a clear morning result, with no guessing about whether it brewed.
 keywords: morning coffee reminder, delayed brew coffee, coffee ready mode, morning routine, coffee maker safety
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/appliances/coffee-maker-morning.png

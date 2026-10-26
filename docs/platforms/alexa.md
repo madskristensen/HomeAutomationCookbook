@@ -1,16 +1,16 @@
 ---
 layout: guide
-title: Amazon Alexa home automation guide
-description: Use Alexa voice control and routines for compatible smart-home devices while preserving physical controls and verifying cloud dependencies.
-last_modified_at: 2026-09-14
+title: "Alexa automation: routines, limits, and recipes that work"
+description: Learn what Alexa automation can do. Set up routines for lights and sensors, see the honest local and cloud limits, and find recipes that work with Alexa.
+last_modified_at: 2026-10-26
 image: /assets/img/social/platform-alexa.png
 ---
 
-# Amazon Alexa home automation guide
+# Alexa automation
 
 {% include content-hero.html src="/assets/img/social/platform-alexa.svg" alt="Alexa connects voice control with smart bulbs, a Zigbee hub, and smart switches" %}
 
-Alexa can remove small repeated interactions through voice control and straightforward routines. It works best as an approachable layer over compatible devices, while physical controls and safety behavior remain independent.
+Alexa automation means using Alexa routines to run your smart home for you, from a voice command, a schedule, or a sensor. It can remove small repeated interactions through voice control and straightforward routines. It works best as an approachable layer over compatible devices, while physical controls and safety behavior remain independent.
 
 **Best for:** Voice control, simple reversible routines, announcements, and households already comfortable with Amazon Echo devices.
 
@@ -37,6 +37,18 @@ Keep Alexa in a supporting role:
 - A garage door alert does not become permission to close the door unattended.
 - An unavailable sensor is treated as unknown rather than safe or empty.
 
+## What Alexa routines can do
+
+An Alexa routine starts from one event and then runs one or more actions. In practice that covers jobs like these:
+
+- **Start from your voice.** Say a phrase and run several actions at once, such as a good-night routine.
+- **Start on a schedule.** Run at a set time, for example turning on a lamp before you get home.
+- **Start from a device.** Run when a supported motion or contact sensor reports a change, such as a closet door opening.
+- **Act on devices.** Turn compatible lights, plugs, and switches on or off, or set a brightness level.
+- **Speak or notify.** Have an Echo speaker say something as part of the routine.
+
+What a routine cannot do well is the part I missed most: real conditional logic and remembering state. If a job needs "only if this is still true after 10 minutes" or "put things back the way they were," plan to check carefully or use a hub such as SmartThings or Hubitat for that part.
+
 ## Automation building blocks
 
 Alexa routines are organized around a **When** event and one or more **Alexa Will** actions. Before planning a recipe, confirm that the exact sensor appears under **When** and the target device exposes the required action.
@@ -49,16 +61,37 @@ Amazon documents standard device-state interfaces including:
 
 Those interfaces describe what an integration can report. They do not guarantee that every reported state is available as a consumer routine trigger.
 
-## How the recipes map to Alexa
+## Recipes that work with Alexa
 
-| Household job | Alexa fit | What to verify |
-|---|---|---|
-| [Motion-triggered lights](/automation/lighting/lights-on-motion.html) | Good when motion is available under **When**. | Sensor trigger, light action, response time, and internet-loss behavior. |
-| [Door-triggered closet lights](/automation/lighting/toggle-lights-door.html) | Good when open state is exposed. | Contact state, light command, and a dependable off path. |
-| [Washer completion alert](/automation/appliances/washer-done-notification.html) | Prefer a manufacturer-provided cycle-complete state. | Do not assume power or vibration is a routine trigger. |
-| [Garage left-open alert](/automation/security/garage-door-notification.html) | Integration-dependent. | Open state plus a verified remains-open delay and notification action. |
-| [Bathroom fan after a shower](/automation/climate/fan-shower.html) | Integration-dependent. | Whether humidity is available as a trigger and the fan as an action. |
-| [Away and arrival routines](/automation/daily-routines/away-mode.html) | Verify in the current app and region. | Multi-person behavior, delay, Guest override, and false location changes. |
+I checked the Alexa notes in each recipe. These are grouped by how well the recipe fits an Alexa routine. Even the good fits depend on your exact sensor showing up under **When** and your light showing up under **Alexa Will**.
+
+### Good fit when your devices expose the right trigger
+
+| Recipe | What to verify |
+|---|---|
+| [Turn on lights with motion](/automation/lighting/lights-on-motion.html) | Motion is offered under **When** and the light is an action under **Alexa Will**. |
+| [Turn off lights after motion stops](/automation/lighting/lights-off-after-motion.html) | The sensor offers a no-motion trigger with a duration long enough for people sitting still. |
+| [Bathroom night light](/automation/lighting/bathroom-night-light.html) | Motion trigger, a nighttime schedule limit, and brightness control for the light. |
+| [Turn on lights when a door opens](/automation/lighting/toggle-lights-door.html) | The contact sensor offers an open trigger, plus a dependable way to turn the light off. |
+| [Sonos favorite switches](/automation/entertainment/sonos-favorite-switches.html) | Built on Hubitat. The station switches then show up in Alexa, so you can turn them on by voice. |
+
+### Depends on the integration
+
+| Recipe | What to verify |
+|---|---|
+| [Garage door left open alert](/automation/security/garage-door-notification.html) | The controller reports open state and Alexa can wait for a remains-open delay before notifying. |
+| [Bathroom fan after a shower](/automation/climate/fan-shower.html) | Humidity is offered as a trigger and the fan as an action. |
+| [Washer done alert](/automation/appliances/washer-done-notification.html) | Prefer a washer that reports a cycle-complete state. Do not assume power or vibration can be a trigger. |
+| [Water leak alerts](/automation/security/water-leak-response.html) | The leak sensor appears under **When**, and the alert reaches phones and speakers in testing. |
+
+### Better on another platform
+
+I could not verify a dependable Alexa routine for these, because they need presence for several people, saved state, or hard limits. Use a hub, or keep only an alert-only version in Alexa:
+
+- [Away mode](/automation/daily-routines/away-mode.html) and [arrival routines](/automation/daily-routines/unlock-door-arrival.html)
+- [Pause HVAC when a window stays open](/automation/climate/thermostat-windows-open.html)
+- [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
+- [Robot vacuum when the house is empty](/automation/appliances/vacuum-when-empty.html)
 
 ## Build and verify one routine
 
@@ -73,7 +106,9 @@ Those interfaces describe what an integration can report. They do not guarantee 
 
 ## Local and cloud behavior
 
-Do not assume an Alexa routine is local because the devices use a local radio elsewhere in the system. Alexa integrations commonly report events and receive commands through cloud services. Test the complete path with the internet disconnected instead of relying on a protocol logo.
+Here is the honest version. Many Alexa routines depend on the internet, even when the devices themselves talk over Zigbee or another local radio. Alexa integrations commonly report events and receive commands through cloud services, so a routine can stop or slow down when the internet or a manufacturer's service is down.
+
+Do not assume an Alexa routine is local because the devices use a local radio elsewhere in the system. Test the complete path with the internet disconnected instead of relying on a protocol logo. Whatever happens in that test, the wall switches and essential device controls should keep working on their own.
 
 ## Failure modes
 

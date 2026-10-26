@@ -2,7 +2,7 @@
 layout: automation
 date: 2026-10-25
 title: Spoken school morning reminders
-description: On school days, a kitchen speaker announces when it is time to brush teeth and put on shoes, then goes back to the music that was playing.
+description: Keep school mornings on time. A kitchen speaker says when to brush teeth and put on shoes, then goes back to the music that was playing.
 keywords: school morning reminder, spoken reminder Sonos, kids morning routine automation, Sonos text to speech Hubitat, webCoRE school reminder
 last_modified_at: 2026-10-25
 image: /assets/img/social/recipes/notifications/school-morning-reminders.png

@@ -2,7 +2,7 @@
 layout: automation
 date: 2025-11-30
 title: Get front-door motion alerts
-description: Use an outdoor motion sensor to prompt a quick check when someone or something moves near the entrance, without claiming that every alert is a delivery.
+description: Get a quick heads-up when someone or something moves near the front door, using an outdoor motion sensor, so you can check for a package.
 keywords: package delivery alert, delivery notification, outdoor motion sensor, front porch sensor, entrance activity detection
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/notifications/package-delivery-alert.png

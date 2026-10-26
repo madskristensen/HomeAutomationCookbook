@@ -2,7 +2,7 @@
 layout: automation
 date: 2026-10-05
 title: Limit an IR-controlled mini-split
-description: Send only a capped infrared setpoint. Never trust blaster state, and keep the physical remote.
+description: Keep an IR-controlled mini-split from being set too hot or too cold. Send only capped setpoints, never trust blaster state, and keep the remote.
 keywords: mini split automation, IR blaster air conditioner, window AC setpoint limit, infrared climate control, hard temperature limit
 last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/climate/mini-split-ir-setpoint-limit.png

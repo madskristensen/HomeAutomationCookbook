@@ -1,9 +1,9 @@
 ---
 layout: automation
 date: 2025-11-29
-title: Garage door left-open alerts
-description: A platform-neutral recipe that alerts when a garage door has been left open too long. Alerting only; closing stays manual or with equipment built for it.
-keywords: garage door notification, garage door left open, garage door sensor, garage door automation, garage door alert
+title: Garage door left open alarm and alerts
+description: Get a phone alert when the garage door is left open too long, plus a bedtime check. A simple open-door alarm that alerts only; closing stays manual.
+keywords: garage door open alert, garage door left open alarm, garage door notification, garage door left open, garage door sensor, garage door automation, garage door alert
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/security/garage-door-notification.png
 compact: true
@@ -19,11 +19,11 @@ products:
     body: "[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). Reports open and closed state without replacing the existing garage door opener. It reports door position only, not whether the doorway is clear."
 ---
 
-# Get notified when the garage door is left open
+# Garage door left open alarm: get an alert on your phone
 
 {% include content-hero.html src="/assets/img/social/recipes/security/garage-door-notification.svg" alt="An alert reports when the garage door remains open beyond a useful delay" %}
 
-Send a notification when the garage door has been open longer than expected. This recipe alerts only; it does not close the door.
+Get an alert when the garage door has been open longer than expected, plus a check at bedtime. Think of it as a garage door open alarm on your phone. It only alerts. You still close the door yourself.
 
 **Best for:** A garage door with a sensor or smart controller that reports open and closed status to the platform.
 
