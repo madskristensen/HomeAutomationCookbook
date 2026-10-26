@@ -24,13 +24,15 @@ or "buy" (starter guide buy box).
     <p class="pdf-promo-note">Or add the recipe cards for your next automations. Both for $20 in the <a href="{{ promo_url }}">shop</a>.</p>
   {%- elsif promo_variant == "strip" -%}
     {%- if promo_recipes -%}
-    <p>Every recipe on one printable page, ready to set up. <a class="pdf-promo-link" href="{{ promo_url }}">Recipe cards PDF, $12</a></p>
+    <p>Liked this recipe? Get all 61 as one-page printable cards. Keep them by the hub and set up your next one without hunting through the site.</p>
+    <p><a class="btn-primary pdf-promo-cta" href="{{ promo_url }}">Recipe cards PDF, $12</a></p>
     {%- else -%}
-    <p>Get your smart home working sooner with a printable step-by-step plan. <a class="pdf-promo-link" href="{{ promo_url }}">Setup guide PDF, $12</a></p>
+    <p>New to smart homes? Get your first room working this weekend, on a foundation you won't have to redo later.</p>
+    <p><a class="btn-primary pdf-promo-cta" href="{{ promo_url }}">Setup guide PDF, $12</a></p>
     {%- endif -%}
     <p class="pdf-promo-sale" hidden><a href="{{ promo_url }}"></a></p>
     {% include sale-window.html %}
-    <script>(function(){var s=window.hacSale&&window.hacSale();if(!s)return;var p=document.currentScript.parentNode.querySelector(".pdf-promo-sale");p.firstChild.textContent=(s.emoji?s.emoji+" ":"")+s.label.replace(/ special$/i,"")+": setup guide + recipe cards, ${{ site.data.sales.sale_price }} for both";p.hidden=false;})();</script>
+    <script>(function(){var s=window.hacSale&&window.hacSale();if(!s)return;var p=document.currentScript.parentNode.querySelector(".pdf-promo-sale");p.firstChild.textContent=(s.emoji?s.emoji+" ":"")+s.label.replace(/ special$/i,"")+" deal: both PDFs for ${{ site.data.sales.sale_price }} (save ${{ site.data.sales.list_price | minus: site.data.sales.sale_price }})";p.hidden=false;})();</script>
   {%- else -%}
     <p><strong>Skip the guesswork.</strong> Get a printable plan for your first smart home setup, plus one-page cards for proven automations you can set up quickly.</p>
     <p><a class="btn-primary pdf-promo-button" href="{{ promo_url }}">See the guides, from $12</a></p>
