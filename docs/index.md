@@ -129,7 +129,7 @@ description: Helpful automations for an ordinary family house. The physical swit
     <h2>Ideas you can adapt and stay in control of</h2>
   </div>
   <div>
-    <p>Every recipe explains the trigger, checks, action, timing, manual control, and failure behavior. I write from firsthand use in my family home, including Alexa, SmartThings, and Hubitat.</p>
+    <p>Every recipe explains the trigger, checks, action, timing, manual control, and failure behavior. The ideas work with whatever hub you use, from Home Assistant and Hubitat to SmartThings, Homey, Google Home, or Alexa. I test them in my own family home.</p>
     <p><a href="/about.html">Learn how I test ideas</a> or <a href="/platforms/">compare platform guides</a>.</p>
   </div>
 </section>

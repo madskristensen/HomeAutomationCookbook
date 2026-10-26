@@ -45,6 +45,8 @@ If the rule cannot be explained in a few lines, make the first version smaller.
 
 ## 3. Choose a platform you will maintain
 
+The recipes work on any hub you are happy to maintain. Home Assistant, Hubitat, SmartThings, Homey, HomeSeer, Apple Home, Google Home, and Alexa all handle the basics. Pick one that runs your rules locally where it can.
+
 I have personally used Alexa, SmartThings, and Hubitat. I prefer Hubitat because it feels managed in daily use but still lets me build detailed rules or code when needed.
 
 Home Assistant appears to fit more technically confident users who want maximum control. I have not personally run it, so I treat that as a technical-fit comparison rather than a hands-on review.

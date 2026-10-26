@@ -18,20 +18,22 @@ It builds on [getting started](/getting-started/), which explains the mindset, a
 ## The rules for a starter house
 
 - **One hub.** Do not mix three apps on day one.
-- **Local first.** Prefer Z-Wave and Zigbee devices that keep working when the internet is down.
+- **Local first.** Choose devices and a hub that run locally, so they keep working when the internet is down. Z-Wave, Zigbee, Matter over Thread, and HomeKit are all good examples.
 - **Switches still work.** Every light keeps a normal wall control.
 - **One room at a time.** Finish a room, live with it for a week, then move on.
 - **No risky jobs yet.** Leave locks, heaters, and garage door control for later.
 
 ## Step 1: Pick the hub
 
-I run Hubitat. It runs automations on the hub itself, supports Z-Wave and Zigbee, and lets me build simple rules or detailed ones later. SmartThings is a reasonable alternative, especially if you already own Samsung devices. Read [choose the right platform](/getting-started/choose-the-right-platform.html) and [Hubitat vs SmartThings for a family house](/articles/hubitat-vs-smartthings-family-house.html) before buying.
+Pick one hub or platform you will keep. Home Assistant, Hubitat, SmartThings, Homey, HomeSeer, Apple Home, Google Home, and Alexa can all run this plan. The best pick is one that runs your rules locally and supports the devices you want. If you already own one, start there.
+
+I run Hubitat at home, so a few tips mention it by name. The steps themselves work on any hub. Read [choose the right platform](/getting-started/choose-the-right-platform.html) if you are still deciding.
 
 Set up the hub, give it a fixed IP address on your router, and turn on its backups.
 
 ## Step 2: The first 10 devices
 
-This list covers four rooms and the whole-house basics. Every product here is one I have used. Pick the "good enough" option or the step up from the [device guide](/getting-started/device-guide.html#products-i-have-used).
+This list covers four rooms and the whole-house basics. Every product here is one I have used. They are examples, not requirements. Any device that does the same job and works with your hub is fine. Pick the "good enough" option or the step up from the [device guide](/getting-started/device-guide.html#products-i-have-used).
 
 | # | Device | Room | First recipe |
 |---|---|---|---|
@@ -48,7 +50,7 @@ This list covers four rooms and the whole-house basics. Every product here is on
 
 Amazon product links on this page are affiliate links, and I earn from qualifying purchases. See the [disclosure](/disclosure.html) for details.
 
-Mixing Zigbee and Z-Wave is fine. Mains-powered switches and plugs act as repeaters and make the mesh stronger, so install those before the battery sensors in far rooms.
+Mixing radio types is fine if your hub supports them. Mains-powered switches and plugs usually act as repeaters and make the mesh stronger, so install those before the battery sensors in far rooms.
 
 ## Step 3: Room by room
 
