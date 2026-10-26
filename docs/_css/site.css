@@ -1095,9 +1095,9 @@ h1.has-article-meta {
 .pdf-promo--strip .pdf-promo-thumb img { width: 32px; }
 .pdf-promo--strip .pdf-promo-thumb { margin-top: 0.2rem; }
 .pdf-promo--strip .pdf-promo-body { max-width: 40rem; }
-.pdf-promo--strip .pdf-promo-cta { display: inline-block; padding: 0.3rem 0.75rem; font-size: 0.8125rem; font-weight: 600; line-height: 1.3; border-radius: 6px; }
+.pdf-promo--strip .pdf-promo-cta { min-height: 0; padding: 0.3rem 0.75rem; font-size: 0.8125rem; font-weight: 600; line-height: 1.3; border-radius: 6px; }
 .pdf-promo-row + .site-footer { margin-top: 0; }
-.pdf-promo-button { display: inline-block; margin-top: 0.25rem; }
+.pdf-promo-button { margin-top: 0.25rem; }
 .pdf-promo-note { font-size: 0.875rem; color: var(--color-text-secondary); }
 .shop-item { display: flex; flex-direction: column; padding: 1.25rem; }
 .shop-item--best { border-color: var(--color-text-secondary); }
@@ -1107,7 +1107,7 @@ h1.has-article-meta {
 .shop-meta { font-size: 0.875rem; color: var(--color-text-secondary); }
 .shop-price { font-size: 1.35rem; font-weight: 700; margin-top: auto !important; }
 .shop-tag { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-secondary); margin-bottom: 0.35rem; }
-.pdf-promo .btn-primary { text-decoration: none; color: #fff; }
+.pdf-promo .btn-primary { text-decoration: none; color: var(--color-btn-primary-text); }
 
 /* Homepage Components
    ========================================================================== */
