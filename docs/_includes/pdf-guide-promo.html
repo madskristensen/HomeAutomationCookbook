@@ -16,6 +16,9 @@ or "buy" (starter guide buy box).
     <p class="pdf-promo-note">Or get both printable guides, this one and the recipe cards, for $20 in the <a href="{{ promo_url }}">shop</a>.</p>
   {%- elsif promo_variant == "strip" -%}
     <p>Printable checklists and recipe cards for your smart home. <a class="pdf-promo-link" href="{{ promo_url }}">Printable guides from $12</a></p>
+    <p class="pdf-promo-sale" hidden><a href="{{ promo_url }}"></a></p>
+    {% include sale-window.html %}
+    <script>(function(){var s=window.hacSale&&window.hacSale();if(!s)return;var p=document.currentScript.parentNode.querySelector(".pdf-promo-sale");p.firstChild.textContent=s.label+": both guides for ${{ site.data.sales.sale_price }}";p.hidden=false;})();</script>
   {%- else -%}
     <p><strong>Printable guides (PDF).</strong> A starter house setup guide with room-by-room checklists, and condensed cards for every recipe on the site.</p>
     <p><a class="home-button-primary pdf-promo-button" href="{{ promo_url }}">See the guides, from $12</a></p>
