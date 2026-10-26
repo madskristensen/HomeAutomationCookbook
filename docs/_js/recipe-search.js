@@ -11,6 +11,9 @@
     return;
   }
 
+  var directory = document.getElementById('recipe-directory');
+  var idleClass = 'recipe-directory--idle';
+
   function normalize(value) {
     return value.toLowerCase().trim();
   }
@@ -34,6 +37,17 @@
         visibleCount++;
       }
     });
+
+    var isIdle = !terms.length && !category;
+    if (directory) {
+      directory.classList.toggle(idleClass, isIdle);
+    }
+
+    if (isIdle) {
+      status.textContent = 'Start typing to search all ' + cards.length + ' recipes.';
+      noResults.hidden = true;
+      return;
+    }
 
     status.textContent = visibleCount + (visibleCount === 1 ? ' recipe' : ' recipes') + ' shown';
     noResults.hidden = visibleCount !== 0;

@@ -10,8 +10,8 @@ description: Helpful automations for an ordinary family house. The physical swit
     <h1>Helpful automations for an ordinary house</h1>
     <p class="home-hero-subtitle">The house should do the small helpful thing. The physical switch still works when it does not.</p>
     <div class="home-hero-actions">
-      <a href="/automation/index.html" class="btn btn-primary">Explore automation ideas</a>
-      <a href="/getting-started/index.html" class="btn btn-secondary">Start with the basics</a>
+      <a href="/automation/" class="btn btn-primary">Explore automation ideas</a>
+      <a href="/getting-started/" class="btn btn-secondary">Start with the basics</a>
     </div>
     <ul class="home-hero-signals" aria-label="What to expect">
       <li>Platform-neutral patterns</li>
@@ -42,7 +42,7 @@ description: Helpful automations for an ordinary family house. The physical swit
   </div>
 
   <div class="card-grid card-grid--two">
-    <a href="/automation/lighting/index.html" class="card card--hover home-explore-card">
+    <a href="/automation/lighting/" class="card card--hover home-explore-card">
       <img src="/assets/img/social/recipes/lighting/lights-on-motion.svg" alt="Lighting that responds when someone enters a room" width="1200" height="630">
       <div>
         <p class="home-card-label">Lighting</p>
@@ -52,7 +52,7 @@ description: Helpful automations for an ordinary family house. The physical swit
       </div>
     </a>
 
-    <a href="/automation/daily-routines/index.html" class="card card--hover home-explore-card">
+    <a href="/automation/daily-routines/" class="card card--hover home-explore-card">
       <img src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="A morning routine coordinating lights, comfort, and household reminders" width="1200" height="630">
       <div>
         <p class="home-card-label">Daily routines</p>
@@ -62,7 +62,7 @@ description: Helpful automations for an ordinary family house. The physical swit
       </div>
     </a>
 
-    <a href="/automation/climate/index.html" class="card card--hover home-explore-card">
+    <a href="/automation/climate/" class="card card--hover home-explore-card">
       <img src="/assets/img/social/recipes/climate/fan-shower.svg" alt="A bathroom fan responding to shower humidity" width="1200" height="630">
       <div>
         <p class="home-card-label">Climate and comfort</p>
@@ -72,7 +72,7 @@ description: Helpful automations for an ordinary family house. The physical swit
       </div>
     </a>
 
-    <a href="/automation/appliances/index.html" class="card card--hover home-explore-card">
+    <a href="/automation/appliances/" class="card card--hover home-explore-card">
       <img src="/assets/img/social/recipes/appliances/washer-done-notification.svg" alt="A washer completion alert that removes repeated laundry checks" width="1200" height="630">
       <div>
         <p class="home-card-label">Appliances</p>
@@ -83,7 +83,7 @@ description: Helpful automations for an ordinary family house. The physical swit
     </a>
   </div>
 
-  <p class="home-more-paths">More ways to get value: <a href="/automation/security/index.html">notice safety concerns</a>, <a href="/automation/notifications/index.html">receive useful reminders</a>, or <a href="/automation/entertainment/index.html">enjoy music and TV more easily</a>.</p>
+  <p class="home-more-paths">More ways to get value: <a href="/automation/security/">notice safety concerns</a>, <a href="/automation/notifications/">receive useful reminders</a>, or <a href="/automation/entertainment/">enjoy music and TV more easily</a>.</p>
 </section>
 
 <section class="home-section">
@@ -130,6 +130,6 @@ description: Helpful automations for an ordinary family house. The physical swit
   </div>
   <div>
     <p>Every recipe explains the trigger, checks, action, timing, manual control, and failure behavior. I write from firsthand use in my family home, including Alexa, SmartThings, and Hubitat.</p>
-    <p><a href="/about.html">Learn how I test ideas</a> or <a href="/platforms/index.html">compare platform guides</a>.</p>
+    <p><a href="/about.html">Learn how I test ideas</a> or <a href="/platforms/">compare platform guides</a>.</p>
   </div>
 </section>

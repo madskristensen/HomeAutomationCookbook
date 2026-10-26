@@ -125,8 +125,8 @@ If the lights are off, nobody is working in the office, so the music has no reas
 - [Set smart-speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

@@ -76,7 +76,7 @@ Test every normal path through the room and leave the timeout unchanged for seve
 
 ## Platform notes
 
-The platform must distinguish motion from no motion, wait for a room-specific timeout, and cancel the pending shutoff when activity returns. Keep the physical switch available regardless of platform. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+The platform must distinguish motion from no motion, wait for a room-specific timeout, and cancel the pending shutoff when activity returns. Keep the physical switch available regardless of platform. See the [platform guides](/platforms/) for broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -143,14 +143,14 @@ It should. Treat a manual change as an explicit choice and avoid turning the lig
 - [Lights turning on by themselves](/articles/lights-turning-on-by-themselves.html)
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Bathroom night light](/automation/lighting/bathroom-night-light.html)
-- [Lighting automations](/automation/lighting/index.html)
+- [Lighting automations](/automation/lighting/)
 - [Turn lights on when a door opens](/automation/lighting/toggle-lights-door.html)
 - [PIR vs mmWave presence sensors](/articles/pir-vs-mmwave-presence.html)
 - [Smart bulbs vs. smart switches after a power outage](/articles/smart-bulbs-vs-smart-switches-power-outages.html)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

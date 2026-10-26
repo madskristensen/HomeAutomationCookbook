@@ -106,8 +106,8 @@ Yes, if the platform supports it, a successful morning and evening brushing dete
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

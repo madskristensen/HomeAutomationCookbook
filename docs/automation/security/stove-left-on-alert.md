@@ -113,8 +113,8 @@ It is not a dependable safety signal. Placement, steam, sunlight, another burner
 - [Run a bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 {% include page-navigation.html
-  left_url="/automation/security/index.html"
+  left_url="/automation/security/"
   left_label="Back to safety and security automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

@@ -64,7 +64,7 @@ Spotted a mistake or have a question? Email [mads@homeautomationcookbook.com](ma
 - [Read the disclosure](/disclosure.html)
 
 {% include page-navigation.html
-  left_url="/getting-started/index.html"
+  left_url="/getting-started/"
   left_label="Back to getting started"
   right_url="/"
   right_label="Back to home"

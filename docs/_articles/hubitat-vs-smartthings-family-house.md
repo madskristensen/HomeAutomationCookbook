@@ -150,4 +150,4 @@ No. Hubitat automation apps run on the hub, but cloud integrations and external 
 - [Choose the smart-home platform you will actually maintain](/getting-started/choose-the-right-platform.html)
 - [Use Hubitat for local and advanced household automation](/platforms/hubitat.html)
 - [Build approachable household routines with SmartThings](/platforms/smartthings.html)
-- [Browse platform-neutral automation recipes](/automation/index.html)
+- [Browse platform-neutral automation recipes](/automation/)

@@ -104,8 +104,8 @@ Only if the platform already integrates with each speaker brand individually. Th
 - [Set volume presets for a speaker](/automation/entertainment/speaker-volume-presets.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

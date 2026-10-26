@@ -105,8 +105,8 @@ Yes, if the switch or remote has more than one button or press pattern, each can
 - [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 {% include page-navigation.html
-  left_url="/automation/entertainment/index.html"
+  left_url="/automation/entertainment/"
   left_label="Back to entertainment"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

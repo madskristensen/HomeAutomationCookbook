@@ -101,8 +101,8 @@ Only if its documented operating temperature range covers the freezer. Check the
 - [Get notified when the washer finishes](/automation/appliances/washer-done-notification.html)
 
 {% include page-navigation.html
-  left_url="/automation/appliances/index.html"
+  left_url="/automation/appliances/"
   left_label="Back to appliance automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

@@ -2,8 +2,8 @@
 layout: default
 title: Home automation platform guides
 description: Compare Alexa, SmartThings, Hubitat, and Home Assistant by maintenance burden, automation depth, local behavior, and household control.
-permalink: /platforms/index.html
-canonical_url: https://www.homeautomationcookbook.com/platforms/index.html
+permalink: /platforms/
+canonical_url: https://www.homeautomationcookbook.com/platforms/
 image: /assets/img/social/platforms-overview.png
 ---
 
@@ -13,7 +13,7 @@ image: /assets/img/social/platforms-overview.png
 
 Choose a platform by how comfortably you can build, test, and maintain useful household routines. The best platform is not the one with the longest feature list. It is the one that removes repeated work without making normal lights, climate controls, or family routines harder to understand.
 
-The core [automation recipes](/automation/index.html) remain platform-neutral. These guides explain how each platform approaches the same triggers, conditions, actions, delays, overrides, and failure behavior.
+The core [automation recipes](/automation/) remain platform-neutral. These guides explain how each platform approaches the same triggers, conditions, actions, delays, overrides, and failure behavior.
 
 ## Choose by the experience you want
 
@@ -79,6 +79,6 @@ Use the [platform chooser](/getting-started/choose-the-right-platform.html) for 
 {% include page-navigation.html
   left_url="/getting-started/choose-the-right-platform.html"
   left_label="Compare platforms"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="Browse automation recipes"
 %}

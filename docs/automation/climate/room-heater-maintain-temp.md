@@ -119,11 +119,11 @@ No. Use appropriate building heat, freeze protection, supervision, and professio
 
 - [Pause HVAC when windows stay open](/automation/climate/thermostat-windows-open.html)
 - [Safe thermostat auto-away](/automation/climate/safe-thermostat-away.html)
-- [Climate automations](/automation/climate/index.html)
+- [Climate automations](/automation/climate/)
 
 {% include page-navigation.html
-  left_url="/automation/climate/index.html"
+  left_url="/automation/climate/"
   left_label="Back to climate automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

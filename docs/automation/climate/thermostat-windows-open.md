@@ -79,7 +79,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-This recipe needs more than contact and thermostat control. The platform must track whether this recipe caused the pause, recognize a later manual thermostat change, and restore only a valid saved state. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+This recipe needs more than contact and thermostat control. The platform must track whether this recipe caused the pause, recognize a later manual thermostat change, and restore only a valid saved state. See the [platform guides](/platforms/) for broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -164,11 +164,11 @@ Treat the manual thermostat change as the new instruction. Do not restore an old
 - [Safe thermostat auto-away for pets and pipes](/automation/climate/safe-thermostat-away.html)
 - [Window open and close notifications](/automation/climate/window-notifications.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
-- [Climate automations](/automation/climate/index.html)
+- [Climate automations](/automation/climate/)
 
 {% include page-navigation.html
-  left_url="/automation/climate/index.html"
+  left_url="/automation/climate/"
   left_label="Back to climate automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

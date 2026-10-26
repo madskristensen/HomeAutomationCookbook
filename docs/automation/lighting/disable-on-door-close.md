@@ -136,11 +136,11 @@ No. Door position alone cannot reliably prove occupancy. Use motion with a longe
 - [Why motion lights turn off while you are still there](/articles/why-motion-lights-turn-off.html)
 - [Turn lights on when a door opens](/automation/lighting/toggle-lights-door.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
-- [Lighting automations](/automation/lighting/index.html)
+- [Lighting automations](/automation/lighting/)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

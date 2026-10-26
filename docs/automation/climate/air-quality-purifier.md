@@ -109,8 +109,8 @@ Only when the sensor is available and reporting a clearly unhealthy reading. Tre
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 
 {% include page-navigation.html
-  left_url="/automation/climate/index.html"
+  left_url="/automation/climate/"
   left_label="Back to climate automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

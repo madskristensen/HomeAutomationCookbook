@@ -126,8 +126,8 @@ No. The Zigbee and Z-Wave sensors here pair directly to Hubitat or SmartThings a
 - [Choose smart-home devices and gear](/getting-started/device-guide.html)
 
 {% include page-navigation.html
-  left_url="/articles/index.html"
+  left_url="/articles/"
   left_label="Back to articles"
-  right_url="/automation/climate/index.html"
+  right_url="/automation/climate/"
   right_label="Climate automations"
 %}

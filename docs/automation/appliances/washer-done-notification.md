@@ -79,7 +79,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-The platform must remember that a real cycle started before low power or stillness can mean finished. A single threshold rule is not enough. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
+The platform must remember that a real cycle started before low power or stillness can mean finished. A single threshold rule is not enough. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -155,12 +155,12 @@ No. Use the device only for monitoring and keep its relay on. Do not remotely in
 
 - [Best power-monitoring plugs for washer, dishwasher, and TV alerts](/articles/best-power-monitoring-plugs-appliance-alerts.html)
 - [Get notified when the dryer finishes](/automation/appliances/dryer-done-notification.html)
-- [Appliance automations](/automation/appliances/index.html)
+- [Appliance automations](/automation/appliances/)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 
 {% include page-navigation.html
-  left_url="/automation/appliances/index.html"
+  left_url="/automation/appliances/"
   left_label="Back to appliance automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

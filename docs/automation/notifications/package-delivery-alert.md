@@ -99,8 +99,8 @@ Yes, if it is mounted outside a covered porch or in an area exposed to weather. 
 - [Turn on lights when motion is detected](/automation/lighting/lights-on-motion.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

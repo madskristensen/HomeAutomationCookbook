@@ -125,8 +125,8 @@ The rest of the routine follows the backlight, not the button. Turning it on or 
 - [Smart home status tiles](/automation/notifications/status-tiles.html)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

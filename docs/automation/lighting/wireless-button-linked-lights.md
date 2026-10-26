@@ -139,8 +139,8 @@ Each light should still have a familiar local control. A linked control adds con
 - [Smart bulbs vs. smart switches after a power outage](/articles/smart-bulbs-vs-smart-switches-power-outages.html)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

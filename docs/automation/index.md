@@ -2,8 +2,8 @@
 layout: default
 title: Automation recipes
 description: Browse platform-neutral home automation recipes with plain-English logic, physical controls, tested failure behavior, and clear acceptance checks.
-permalink: /automation/index.html
-canonical_url: https://www.homeautomationcookbook.com/automation/index.html
+permalink: /automation/
+canonical_url: https://www.homeautomationcookbook.com/automation/
 recipe_directory: true
 ---
 
@@ -13,117 +13,9 @@ Start with the household job, not the app. Choose something you want to stop rem
 
 You can copy a recipe, change it to fit your household, or use its logic as a starting point for a routine that is entirely your own.
 
-## Find a recipe by what you need
-
-<div class="card-grid card-grid--compact">
-{% capture job_list %}
-<ul>
-    <li><a href="/automation/appliances/washer-done-notification.html">Know when the washer finishes</a></li>
-    <li><a href="/automation/security/garage-door-notification.html">Notice a garage door left open</a></li>
-    <li><a href="/automation/appliances/fridge-door-alert.html">Catch an open fridge or freezer</a></li>
-    <li><a href="/automation/notifications/low-battery-alerts.html">Find batteries before devices fail</a></li>
-  </ul>
-{% endcapture %}
-{% include automation-card.html title="Stop remembering and checking" body=job_list class="card--compact job-card" hover=false %}
-
-{% capture job_list %}
-<ul>
-    <li><a href="/automation/lighting/lights-on-motion.html">Turn lights on when entering</a></li>
-    <li><a href="/automation/lighting/lights-off-after-motion.html">Turn lights off after leaving</a></li>
-    <li><a href="/automation/lighting/bathroom-night-light.html">Use gentle bathroom light at night</a></li>
-    <li><a href="/automation/lighting/toggle-lights-door.html">Light a closet or pantry</a></li>
-  </ul>
-{% endcapture %}
-{% include automation-card.html title="Move through the house more easily" body=job_list class="card--compact job-card" hover=false %}
-
-{% capture job_list %}
-<ul>
-    <li><a href="/automation/climate/thermostat-windows-open.html">Pause HVAC for an open window</a></li>
-    <li><a href="/automation/climate/safe-thermostat-away.html">Use a safe away temperature</a></li>
-    <li><a href="/automation/climate/fan-shower.html">Run the fan after a shower</a></li>
-    <li><a href="/automation/climate/blinds-sunset-sunrise.html">Move blinds with sunrise and sunset</a></li>
-  </ul>
-{% endcapture %}
-{% include automation-card.html title="Reduce repeated adjustments" body=job_list class="card--compact job-card" hover=false %}
-
-{% capture job_list %}
-<ul>
-    <li><a href="/automation/daily-routines/away-mode.html">Settle the house after everyone leaves</a></li>
-    <li><a href="/automation/daily-routines/unlock-door-arrival.html">Prepare the house on arrival</a></li>
-    <li><a href="/automation/daily-routines/guest-mode.html">Keep the house predictable for guests</a></li>
-    <li><a href="/automation/daily-routines/bedtime-routine.html">Wind down without disturbing others</a></li>
-  </ul>
-{% endcapture %}
-{% include automation-card.html title="Coordinate household transitions" body=job_list class="card--compact job-card" hover=false %}
-
-{% capture job_list %}
-<ul>
-    <li><a href="/automation/security/water-leak-response.html">Respond to detected water</a></li>
-    <li><a href="/automation/security/garage-door-notification.html">Keep an open garage visible</a></li>
-    <li><a href="/automation/security/fire-safety.html">Add supplemental fire response</a></li>
-    <li><a href="/automation/security/stove-left-on-alert.html">Create a stove reminder</a></li>
-  </ul>
-{% endcapture %}
-{% include automation-card.html title="Notice safety-related conditions" body=job_list class="card--compact job-card" hover=false %}
-</div>
-
-Not sure where an idea belongs? Search by a room, device, or burden such as "laundry," "bathroom," "guest," or "window."
-
-## Choose a category
-
-<div class="card-grid card-grid--compact">
-
-{% include category-card.html
-  url="/automation/lighting/index.html"
-  title="Lighting"
-  description="Use motion, doors, schedules, and light levels without taking away the wall switch."
-  count="11 recipes"
-%}
-
-{% include category-card.html
-  url="/automation/daily-routines/index.html"
-  title="Daily routines"
-  description="Coordinate morning, bedtime, guest, arrival, and away behavior without guessing who is home."
-  count="6 recipes"
-%}
-
-{% include category-card.html
-  url="/automation/climate/index.html"
-  title="Climate and comfort"
-  description="Reduce waste while preserving thermostat limits, manual holds, ventilation, and safe temperatures."
-  count="7 recipes + 1 guide"
-%}
-
-{% include category-card.html
-  url="/automation/entertainment/index.html"
-  title="Entertainment"
-  description="Make music and TV behavior easier to start, stop, and adjust with familiar controls."
-  count="7 recipes"
-%}
-
-{% include category-card.html
-  url="/automation/appliances/index.html"
-  title="Appliances"
-  description="Observe appliance cycles, send useful reminders, and avoid unsafe power control."
-  count="7 recipes"
-%}
-
-{% include category-card.html
-  url="/automation/security/index.html"
-  title="Safety and security"
-  description="Use alerts and approved equipment without treating weak sensor signals as proof of safety."
-  count="7 recipes"
-%}
-
-{% include category-card.html
-  url="/automation/notifications/index.html"
-  title="Notifications and alerts"
-  description="Keep important conditions visible while limiting duplicates and unnecessary interruptions."
-  count="12 recipes"
-%}
-
-</div>
 ## Search all recipes
+
+Search by a room, device, or burden such as "laundry," "bathroom," "guest," or "window." Matching recipes appear as you type.
 
 <div class="recipe-search" role="search">
   <div class="recipe-search-controls">
@@ -196,6 +88,114 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
 
 <p id="recipe-no-results" class="recipe-no-results" hidden>No recipes match that search. Try a room, task, or broader category.</p>
 
+## Find a recipe by what you need
+
+<div class="card-grid card-grid--compact">
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/appliances/washer-done-notification.html">Know when the washer finishes</a></li>
+    <li><a href="/automation/security/garage-door-notification.html">Notice a garage door left open</a></li>
+    <li><a href="/automation/appliances/fridge-door-alert.html">Catch an open fridge or freezer</a></li>
+    <li><a href="/automation/notifications/low-battery-alerts.html">Find batteries before devices fail</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Stop remembering and checking" body=job_list class="card--compact job-card" hover=false %}
+
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/lighting/lights-on-motion.html">Turn lights on when entering</a></li>
+    <li><a href="/automation/lighting/lights-off-after-motion.html">Turn lights off after leaving</a></li>
+    <li><a href="/automation/lighting/bathroom-night-light.html">Use gentle bathroom light at night</a></li>
+    <li><a href="/automation/lighting/toggle-lights-door.html">Light a closet or pantry</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Move through the house more easily" body=job_list class="card--compact job-card" hover=false %}
+
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/climate/thermostat-windows-open.html">Pause HVAC for an open window</a></li>
+    <li><a href="/automation/climate/safe-thermostat-away.html">Use a safe away temperature</a></li>
+    <li><a href="/automation/climate/fan-shower.html">Run the fan after a shower</a></li>
+    <li><a href="/automation/climate/blinds-sunset-sunrise.html">Move blinds with sunrise and sunset</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Reduce repeated adjustments" body=job_list class="card--compact job-card" hover=false %}
+
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/daily-routines/away-mode.html">Settle the house after everyone leaves</a></li>
+    <li><a href="/automation/daily-routines/unlock-door-arrival.html">Prepare the house on arrival</a></li>
+    <li><a href="/automation/daily-routines/guest-mode.html">Keep the house predictable for guests</a></li>
+    <li><a href="/automation/daily-routines/bedtime-routine.html">Wind down without disturbing others</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Coordinate household transitions" body=job_list class="card--compact job-card" hover=false %}
+
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/security/water-leak-response.html">Respond to detected water</a></li>
+    <li><a href="/automation/security/garage-door-notification.html">Keep an open garage visible</a></li>
+    <li><a href="/automation/security/fire-safety.html">Add supplemental fire response</a></li>
+    <li><a href="/automation/security/stove-left-on-alert.html">Create a stove reminder</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Notice safety-related conditions" body=job_list class="card--compact job-card" hover=false %}
+</div>
+
+## Choose a category
+
+<div class="card-grid card-grid--compact">
+
+{% include category-card.html
+  url="/automation/lighting/"
+  title="Lighting"
+  description="Use motion, doors, schedules, and light levels without taking away the wall switch."
+  count="11 recipes"
+%}
+
+{% include category-card.html
+  url="/automation/daily-routines/"
+  title="Daily routines"
+  description="Coordinate morning, bedtime, guest, arrival, and away behavior without guessing who is home."
+  count="6 recipes"
+%}
+
+{% include category-card.html
+  url="/automation/climate/"
+  title="Climate and comfort"
+  description="Reduce waste while preserving thermostat limits, manual holds, ventilation, and safe temperatures."
+  count="7 recipes + 1 guide"
+%}
+
+{% include category-card.html
+  url="/automation/entertainment/"
+  title="Entertainment"
+  description="Make music and TV behavior easier to start, stop, and adjust with familiar controls."
+  count="7 recipes"
+%}
+
+{% include category-card.html
+  url="/automation/appliances/"
+  title="Appliances"
+  description="Observe appliance cycles, send useful reminders, and avoid unsafe power control."
+  count="7 recipes"
+%}
+
+{% include category-card.html
+  url="/automation/security/"
+  title="Safety and security"
+  description="Use alerts and approved equipment without treating weak sensor signals as proof of safety."
+  count="7 recipes"
+%}
+
+{% include category-card.html
+  url="/automation/notifications/"
+  title="Notifications and alerts"
+  description="Keep important conditions visible while limiting duplicates and unnecessary interruptions."
+  count="12 recipes"
+%}
+
+</div>
 ## What every recipe includes
 
 <div class="card-grid">
@@ -220,6 +220,6 @@ Build one, observe it for a week, and add complexity only when normal household 
 {% include page-navigation.html
   left_url="/"
   left_label="Back to home"
-  right_url="/getting-started/index.html"
+  right_url="/getting-started/"
   right_label="Getting started"
 %}

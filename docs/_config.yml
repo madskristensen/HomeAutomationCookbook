@@ -50,7 +50,7 @@ kramdown:
 # Navigation
 navigation:
   - title: Getting started
-    url: /getting-started/index.html
+    url: /getting-started/
     subitems:
       - title: Philosophy
         url: /getting-started/philosophy.html
@@ -65,7 +65,7 @@ navigation:
       - title: Resources
         url: /getting-started/resources.html
   - title: Platforms
-    url: /platforms/index.html
+    url: /platforms/
     subitems:
       - title: Amazon Alexa
         url: /platforms/alexa.html
@@ -76,26 +76,26 @@ navigation:
       - title: Home Assistant
         url: /platforms/home-assistant.html
   - title: Automations
-    url: /automation/index.html
+    url: /automation/
     subitems:
       - title: Lighting
-        url: /automation/lighting/index.html
+        url: /automation/lighting/
       - title: Daily routines
-        url: /automation/daily-routines/index.html
+        url: /automation/daily-routines/
       - title: Climate and comfort
-        url: /automation/climate/index.html
+        url: /automation/climate/
       - title: Entertainment
-        url: /automation/entertainment/index.html
+        url: /automation/entertainment/
       - title: Appliances
-        url: /automation/appliances/index.html
+        url: /automation/appliances/
       - title: Safety and security
-        url: /automation/security/index.html
+        url: /automation/security/
       - title: Notifications and alerts
-        url: /automation/notifications/index.html
+        url: /automation/notifications/
   - title: Articles
-    url: /articles/index.html
+    url: /articles/
   - title: FAQ
-    url: /faq/index.html
+    url: /faq/
 
 # Plugins
 plugins:

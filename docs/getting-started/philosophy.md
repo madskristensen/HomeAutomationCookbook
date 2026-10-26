@@ -209,4 +209,4 @@ A useful smart home gives time and attention back to the household. It works for
 
 ---
 
-[Ready to build automations?](/automation/index.html)
+[Ready to build automations?](/automation/)

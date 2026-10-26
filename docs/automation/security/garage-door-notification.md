@@ -70,7 +70,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-Keep this as an alert-only rule on every platform. An open-state notification does not prove the doorway is clear or make unattended closing safe. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
+Keep this as an alert-only rule on every platform. An open-state notification does not prove the doorway is clear or make unattended closing safe. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -122,8 +122,8 @@ Set up a separate automation per door, since each can have its own sensor, its o
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)
 
 {% include page-navigation.html
-  left_url="/automation/security/index.html"
+  left_url="/automation/security/"
   left_label="Back to security"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

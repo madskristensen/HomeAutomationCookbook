@@ -1774,6 +1774,7 @@ h1.has-article-meta {
   color: var(--color-text-secondary);
 }
 
+.recipe-directory.recipe-directory--idle,
 .recipe-directory-card[hidden],
 .recipe-no-results[hidden] {
   display: none;

@@ -3,8 +3,8 @@ layout: default
 title: Home automation articles
 description: Explanations and comparisons that support the recipe library, listed with the newest article first.
 image: /assets/img/social/guides/articles.png
-permalink: /articles/index.html
-canonical_url: https://www.homeautomationcookbook.com/articles/index.html
+permalink: /articles/
+canonical_url: https://www.homeautomationcookbook.com/articles/
 ---
 
 # Home automation articles
@@ -33,6 +33,6 @@ Articles explain a technology, tradeoff, or design decision that applies across 
 {% include page-navigation.html
   left_url="/"
   left_label="Back to home"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="Browse automation recipes"
 %}

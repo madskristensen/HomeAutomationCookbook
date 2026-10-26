@@ -122,8 +122,8 @@ It only says which mode the house is in. Every other line is added only when som
 - [Pause HVAC when a window stays open](/automation/climate/thermostat-windows-open.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

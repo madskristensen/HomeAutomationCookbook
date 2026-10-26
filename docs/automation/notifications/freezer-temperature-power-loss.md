@@ -166,8 +166,8 @@ Only if the sensing, hub, network, internet path, and notification route still h
 - [What to wire before the walls close](/articles/what-to-wire-before-walls-close.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications and alerts"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

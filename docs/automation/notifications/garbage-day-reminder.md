@@ -107,8 +107,8 @@ If the local collection service publishes a calendar, checking it as a condition
 - [Set up a pet feeding reminder](/automation/notifications/pet-feeding-reminder.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

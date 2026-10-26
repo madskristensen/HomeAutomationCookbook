@@ -89,7 +89,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-The reusable requirement is that the platform receives a reliable open or closed state and can command the light without disabling its physical control. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
+The reusable requirement is that the platform receives a reliable open or closed state and can command the light without disabling its physical control. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -155,13 +155,13 @@ It can when the hub and devices support local automation. Regardless, the physic
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Disable automations when door is closed](/automation/lighting/disable-on-door-close.html)
-- [Lighting automations](/automation/lighting/index.html)
+- [Lighting automations](/automation/lighting/)
 - [Motion sensor placement guide](/articles/motion-sensor-placement.html)
 - [PIR vs mmWave presence sensors](/articles/pir-vs-mmwave-presence.html)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

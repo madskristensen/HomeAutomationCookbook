@@ -126,11 +126,11 @@ No. A clear sensor or stopped alarm is not an all-clear. Only emergency services
 
 - [Get an immediate alert when water is detected](/automation/security/water-leak-response.html)
 - [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
-- [Safety and security automations](/automation/security/index.html)
+- [Safety and security automations](/automation/security/)
 
 {% include page-navigation.html
-  left_url="/automation/security/index.html"
+  left_url="/automation/security/"
   left_label="Back to safety and security automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

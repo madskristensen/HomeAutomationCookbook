@@ -76,7 +76,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-This recipe requires two dependable integrations: whole-house presence and a vacuum command surface that exposes start, dock, and useful status. A vacuum visible in an app is not necessarily controllable from automation. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+This recipe requires two dependable integrations: whole-house presence and a vacuum command surface that exposes start, dock, and useful status. A vacuum visible in an app is not necessarily controllable from automation. See the [platform guides](/platforms/) for broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -133,8 +133,8 @@ Send it back to its dock immediately. See the companion recipe for returning-ear
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 
 {% include page-navigation.html
-  left_url="/automation/appliances/index.html"
+  left_url="/automation/appliances/"
   left_label="Back to appliance automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

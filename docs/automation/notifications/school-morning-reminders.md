@@ -115,8 +115,8 @@ It only runs on weekdays when the home is in Home mode. On school holidays, you 
 - [Set smart-speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 {% include page-navigation.html
-  left_url="/automation/notifications/index.html"
+  left_url="/automation/notifications/"
   left_label="Back to notifications"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

@@ -73,7 +73,7 @@ Start with only the trigger and light action. Once that is reliable, add the day
 
 ## Platform notes
 
-I have used Alexa, SmartThings, and Hubitat, but the exact sensor and light still have to expose the required trigger and command to that platform. See the [platform guides](/platforms/index.html) for the broader fit and maintenance tradeoffs.
+I have used Alexa, SmartThings, and Hubitat, but the exact sensor and light still have to expose the required trigger and command to that platform. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -136,15 +136,15 @@ A local hub and compatible devices can keep the automation running, but the phys
 - [Control several lights from one physical button or switch](/automation/lighting/wireless-button-linked-lights.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Bathroom night light](/automation/lighting/bathroom-night-light.html)
-- [Lighting automations](/automation/lighting/index.html)
+- [Lighting automations](/automation/lighting/)
 - [Turn lights on when a door opens](/automation/lighting/toggle-lights-door.html)
 - [Motion sensor placement guide](/articles/motion-sensor-placement.html)
 - [Smart bulbs vs. smart switches after a power outage](/articles/smart-bulbs-vs-smart-switches-power-outages.html)
 - [Set up gradual wake-up lighting](/automation/lighting/wake-up-lights.html)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

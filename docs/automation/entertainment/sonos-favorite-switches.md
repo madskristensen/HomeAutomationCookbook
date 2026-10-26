@@ -129,8 +129,8 @@ Yes. The app keeps working normally. The automation only acts when a station swi
 - [Play music when arriving home](/automation/entertainment/welcome-home-music.html)
 
 {% include page-navigation.html
-  left_url="/automation/entertainment/index.html"
+  left_url="/automation/entertainment/"
   left_label="Back to entertainment"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

@@ -76,7 +76,7 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 ## Platform notes
 
-The platform must maintain a daily-run state while also giving the arrival rule an immediate path to dock the vacuum. Presence, vacuum commands, and vacuum status all need independent testing. See the [platform guides](/platforms/index.html) for broader fit and maintenance tradeoffs.
+The platform must maintain a daily-run state while also giving the arrival rule an immediate path to dock the vacuum. Presence, vacuum commands, and vacuum status all need independent testing. See the [platform guides](/platforms/) for broader fit and maintenance tradeoffs.
 
 ### Amazon Alexa
 
@@ -133,8 +133,8 @@ No. A per-day flag prevents a second run once the vacuum has completed a cycle t
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 
 {% include page-navigation.html
-  left_url="/automation/appliances/index.html"
+  left_url="/automation/appliances/"
   left_label="Back to appliance automations"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

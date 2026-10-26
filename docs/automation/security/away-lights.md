@@ -111,8 +111,8 @@ Arriving home and disarming Away mode, however the platform signals that, should
 - [Dog-bark intrusion deterrent](/automation/security/fake-dog-deterrent.html)
 
 {% include page-navigation.html
-  left_url="/automation/security/index.html"
+  left_url="/automation/security/"
   left_label="Back to security"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

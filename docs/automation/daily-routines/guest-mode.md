@@ -138,11 +138,11 @@ Use an expiry reminder, not a silent forced end. A host should confirm that gues
 - [Why arrive and leave triggers fail](/articles/why-arrive-leave-triggers-fail.html)
 - [Set Away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Run a family-safe bedtime routine](/automation/daily-routines/bedtime-routine.html)
-- [Daily routines](/automation/daily-routines/index.html)
+- [Daily routines](/automation/daily-routines/)
 
 {% include page-navigation.html
-  left_url="/automation/daily-routines/index.html"
+  left_url="/automation/daily-routines/"
   left_label="Back to daily routines"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

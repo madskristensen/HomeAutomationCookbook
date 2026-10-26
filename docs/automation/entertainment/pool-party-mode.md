@@ -113,8 +113,8 @@ Yes, a voice command, a physical button, and a dashboard tile can all point at t
 - [Use speaker volume presets](/automation/entertainment/speaker-volume-presets.html)
 
 {% include page-navigation.html
-  left_url="/automation/entertainment/index.html"
+  left_url="/automation/entertainment/"
   left_label="Back to entertainment"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}

@@ -130,8 +130,8 @@ If someone already set the lights to a different level, opening a door should no
 - [Garage door left-open alerts](/automation/security/garage-door-notification.html)
 
 {% include page-navigation.html
-  left_url="/automation/lighting/index.html"
+  left_url="/automation/lighting/"
   left_label="Back to lighting"
-  right_url="/automation/index.html"
+  right_url="/automation/"
   right_label="View all automations"
 %}
