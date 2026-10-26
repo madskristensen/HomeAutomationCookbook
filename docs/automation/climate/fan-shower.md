@@ -30,7 +30,7 @@ Turn the bathroom fan on when the shower light goes on or humidity rises, and tu
 
 A fan that only runs when someone remembers to flip the switch does not help with mirror fog or lingering humidity. Tying the fan to an existing shower signal, whether the light or a humidity reading, removes the need to remember, and turning it off automatically once humidity settles avoids a fan running long after the shower ends.
 
-?? If motion is part of the trigger, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html) before mounting the sensor.
+If motion is part of the trigger, see [how to place motion sensors for reliable automations](/articles/motion-sensor-placement.html) before mounting the sensor.
 
 ## Logic
 
