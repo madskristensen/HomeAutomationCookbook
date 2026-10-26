@@ -14,6 +14,13 @@ faqs:
     answer: No. A dry report can mean water moved away from the contacts or the sensor was picked up. Require a person to inspect the area and clear the alert manually.
   - question: Where should leak sensors go first?
     answer: Start where a hidden or pressurized leak would cause damage quickly, such as the water heater, washing-machine supply hoses, under sinks, and near a dishwasher or refrigerator water line.
+products:
+  - job: "Detect water"
+    body: "[THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2/ref=nosim?tag=madsk0f-20). Name every sensor for the place a person should inspect."
+  - job: "Stop incoming water"
+    body: "Manual main-water shutoff. Everyone responsible for the home should know the manual valve location."
+  - job: "Reach the household"
+    body: "Persistent phone notification to at least two adults. A local audible alert is useful when phones are muted or away."
 ---
 
 # Get an immediate alert when water is detected
@@ -55,29 +62,7 @@ AND report whether the valve actually reached closed</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect water**
-
-[THIRDREALITY WL2 Zigbee water leak sensor](https://www.amazon.com/dp/B0GK19F6Z2/ref=nosim?tag=madsk0f-20). Name every sensor for the place a person should inspect.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Stop incoming water**
-
-Manual main-water shutoff. Everyone responsible for the home should know the manual valve location.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Reach the household**
-
-Persistent phone notification to at least two adults. A local audible alert is useful when phones are muted or away.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. I have used both leak sensors. No automatic shutoff product is recommended until I have verified one in this home.
 

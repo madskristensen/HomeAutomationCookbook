@@ -10,7 +10,7 @@ noindex: true
 
 Your purchase went through. Here is your copy of the Recipe Cards.
 
-<p><a class="home-button-primary" href="/dl-01fdb25a61905a87613407cf/hac-recipe-cards.pdf" download>Download the PDF</a></p>
+<p><a class="btn btn-primary" href="/dl-01fdb25a61905a87613407cf/hac-recipe-cards.pdf" download>Download the PDF</a></p>
 
 Save the file to your computer, and print the cards you need. Each card has a QR code that opens the full recipe.
 

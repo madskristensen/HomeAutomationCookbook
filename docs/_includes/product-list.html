@@ -1,0 +1,13 @@
+{%- comment -%}
+Buyer boxes ("What I used"). Reads page.products: a list of { job, body } where
+job is the bold heading and body is Markdown (links keep their affiliate tags).
+{%- endcomment -%}
+<div class="product-list">
+{%- for product in page.products %}
+<div class="product-item">
+{%- capture product_md %}**{{ product.job }}**
+
+{{ product.body }}{% endcapture %}
+{{ product_md | markdownify }}</div>
+{%- endfor %}
+</div>

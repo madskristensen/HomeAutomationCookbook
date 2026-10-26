@@ -16,6 +16,11 @@ faqs:
     answer: A PIR sensor can miss someone who is still or hidden by steam and a shower curtain. Use a longer timeout or a presence sensor.
   - question: What happens if the hub or internet connection goes down?
     answer: The physical wall switch still works independent of the automation, so the bathroom light can always be turned on manually.
+products:
+  - job: "Detect bathroom motion, humidity, temperature, and light"
+    body: "[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20). Use the extra readings where they solve a real bathroom problem."
+  - job: "Dim a fixed light"
+    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. The physical paddle must remain usable."
 ---
 
 # Turn on a dim bathroom light at night
@@ -50,22 +55,7 @@ THEN turn on the light at 10%</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect bathroom motion, humidity, temperature, and light**
-
-[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20). Use the extra readings where they solve a real bathroom problem.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Dim a fixed light**
-
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. The physical paddle must remain usable.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

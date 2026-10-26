@@ -16,6 +16,13 @@ faqs:
     answer: No. The automation remembers whether music was playing when the backlight turned on, and only resumes it if it was.
   - question: What if someone turns the backlight on or off by hand?
     answer: The rest of the routine follows the backlight, not the button. Turning it on or off any way you like runs the same steps.
+products:
+  - job: "Start and end the call"
+    body: "Any smart button the hub can see. A single press is all this needs."
+  - job: "Light you from behind"
+    body: "Any warm smart light, or a lamp on a smart plug, on the wall behind your chair."
+  - job: "Pause the music"
+    body: "A speaker the hub can pause and resume. I use a Sonos speaker in the office."
 ---
 
 # Video call lighting button
@@ -57,29 +64,7 @@ AND resume the office speaker only if it was playing before</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Start and end the call**
-
-Any smart button the hub can see. A single press is all this needs.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Light you from behind**
-
-Any warm smart light, or a lamp on a smart plug, on the wall behind your chair.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Pause the music**
-
-A speaker the hub can pause and resume. I use a Sonos speaker in the office.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

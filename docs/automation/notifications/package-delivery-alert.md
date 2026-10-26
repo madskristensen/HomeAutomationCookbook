@@ -14,6 +14,9 @@ faqs:
     answer: A video doorbell with package recognition is more specific, but this recipe describes a plain motion sensor approach, which is simpler and works without a camera.
   - question: Does the sensor need to be rated for outdoor use?
     answer: Yes, if it is mounted outside a covered porch or in an area exposed to weather. Standard indoor motion sensors are not designed for that exposure.
+products:
+  - job: "Detect motion near the front entrance"
+    body: "[Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20), or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) for Z-Wave Long Range. Confirm it is rated for the exposure it will face."
 ---
 
 # Get notified about entrance activity that may indicate a delivery
@@ -47,15 +50,7 @@ THEN send a phone notification: "Motion detected at the front door"</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect motion near the front entrance**
-
-[Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20), or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) for Z-Wave Long Range. Confirm it is rated for the exposure it will face.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

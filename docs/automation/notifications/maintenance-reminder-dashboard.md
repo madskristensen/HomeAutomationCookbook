@@ -14,6 +14,9 @@ faqs:
     answer: Recurring tasks with a rough interval rather than an exact date work best, such as changing an HVAC filter every 60 to 90 days, replacing a water filter, or checking smoke detector batteries twice a year.
   - question: Do I need a wall-mounted tablet for this to work?
     answer: No. A shared dashboard on a phone, a tablet, or even a wall-mounted display all work the same way; the important part is that it is somewhere the household actually looks.
+products:
+  - job: "Track and display maintenance tasks"
+    body: "No personally verified recommendation yet. This only needs virtual switches or variables and a dashboard; no physical hardware is required."
 ---
 
 # Build a home maintenance reminder dashboard
@@ -49,15 +52,7 @@ THEN reset its overdue state and restart the 75 day interval</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Track and display maintenance tasks**
-
-No personally verified recommendation yet. This only needs virtual switches or variables and a dashboard; no physical hardware is required.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

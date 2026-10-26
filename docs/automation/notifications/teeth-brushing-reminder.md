@@ -16,6 +16,9 @@ faqs:
     answer: The automation only detects that the toothbrush was removed from the charger, not that it was actually used or returned. It is a reasonable proxy, not a certainty, and should be treated that way.
   - question: Can this be tied to a reward or chore system?
     answer: Yes, if the platform supports it, a successful morning and evening brushing detection can update a tracked count or virtual switch used elsewhere in a rewards routine.
+products:
+  - job: "Detect the toothbrush being removed from its charger"
+    body: "No personally verified recommendation yet. This specifically needs a smart plug with power or wattage monitoring, which is a different capability than the basic on/off plug jobs already covered."
 ---
 
 # Set up a teeth brushing reminder for kids
@@ -52,15 +55,7 @@ THEN send a reminder notification: "Time to brush teeth"</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect the toothbrush being removed from its charger**
-
-No personally verified recommendation yet. This specifically needs a smart plug with power or wattage monitoring, which is a different capability than the basic on/off plug jobs already covered.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

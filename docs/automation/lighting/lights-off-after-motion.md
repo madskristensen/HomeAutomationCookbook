@@ -16,6 +16,13 @@ faqs:
     answer: A PIR sensor can miss someone who is still or behind a shower curtain. Use a longer timeout, another sensor, or presence detection.
   - question: Can a wall switch override the automatic shutoff?
     answer: It should. Treat a manual change as an explicit choice and avoid turning the light back off immediately.
+products:
+  - job: "Detect fast entry motion"
+    body: "[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20). A PIR needs a conservative timer for people who sit still."
+  - job: "Dim a fixed light"
+    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable."
+  - job: "Switch a fixed light on or off"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable."
 ---
 
 # Turn lights off after motion stops
@@ -51,29 +58,7 @@ THEN turn off the light</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect fast entry motion**
-
-[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20). A PIR needs a conservative timer for people who sit still.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Dim a fixed light**
-
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Switch a fixed light on or off**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable.
-
-</div>
-</div>
+{% include product-list.html %}
 
 For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY/ref=nosim?tag=madsk0f-20) instead. It is not my first choice when the fastest motion response is the job.
 

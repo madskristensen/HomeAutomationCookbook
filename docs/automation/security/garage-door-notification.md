@@ -14,6 +14,9 @@ faqs:
     answer: No. This recipe only alerts. Closing stays with the normal wall control and remote, or with a complete opener and controller system explicitly designed and approved for unattended closing, as described in the paired garage-auto-close recipe.
   - question: What if I have more than one garage door?
     answer: Set up a separate automation per door, since each can have its own sensor, its own typical usage pattern, and its own appropriate delay before alerting.
+products:
+  - job: "Know whether a garage door is open"
+    body: "[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). Reports open and closed state without replacing the existing garage door opener. It reports door position only, not whether the doorway is clear."
 ---
 
 # Get notified when the garage door is left open
@@ -53,15 +56,7 @@ DO NOT close the door automatically from this recipe</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Know whether a garage door is open**
-
-[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). Reports open and closed state without replacing the existing garage door opener. It reports door position only, not whether the doorway is clear.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

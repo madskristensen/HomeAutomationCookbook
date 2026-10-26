@@ -16,6 +16,9 @@ faqs:
     answer: Some devices only report a simple "ok" or "low" state instead of a percentage, or their battery chemistry drops voltage quickly near the end of its life. Where only a state is available, treat "low" as the trigger instead of a percentage threshold.
   - question: Should every device get the same alert priority?
     answer: No. A water leak sensor or smart lock losing power is more urgent than a motion sensor, so it is worth treating a small set of critical devices as higher priority than the rest.
+products:
+  - job: "Detect low battery levels"
+    body: "No personally verified recommendation yet. This depends on the platform reporting battery data for each device, not on any single piece of hardware."
 ---
 
 # Get low battery alerts for smart home devices
@@ -49,15 +52,7 @@ THEN send a notification: "[Device name] battery is at [level]"</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect low battery levels**
-
-No personally verified recommendation yet. This depends on the platform reporting battery data for each device, not on any single piece of hardware.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

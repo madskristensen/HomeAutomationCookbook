@@ -14,6 +14,11 @@ faqs:
     answer: Without a running marker, an idle dishwasher, or a monitoring device that just reconnected, can look finished and send a false alert.
   - question: Should the automation turn off power to the dishwasher?
     answer: No. Use any monitoring device only to observe, and keep its relay on. Do not remotely interrupt a wash or dry cycle.
+products:
+  - job: "Observe dishwasher power or vibration"
+    body: "No personally verified recommendation yet. I have not verified a monitoring device rated for this appliance's load and startup current. Do not assume a general-purpose smart plug is suitable; a [vibration sensor](/getting-started/device-guide.html#vibration-sensing) may be a safer non-invasive alternative."
+  - job: "Clear the waiting-dishes state"
+    body: "A manual dashboard or phone action. A manual reset is simpler and more reliable than an unverified door sensor."
 ---
 
 # Get notified when the dishwasher finishes
@@ -55,22 +60,7 @@ AND clear the running marker</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Observe dishwasher power or vibration**
-
-No personally verified recommendation yet. I have not verified a monitoring device rated for this appliance's load and startup current. Do not assume a general-purpose smart plug is suitable; a [vibration sensor](/getting-started/device-guide.html#vibration-sensing) may be a safer non-invasive alternative.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Clear the waiting-dishes state**
-
-A manual dashboard or phone action. A manual reset is simpler and more reliable than an unverified door sensor.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See the full [gear guide](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Do not buy an inline monitor until its voltage, continuous-current, startup-current, grounding, and appliance-load ratings have been checked against the dishwasher and its manual.
 

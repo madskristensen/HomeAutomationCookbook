@@ -14,6 +14,9 @@ faqs:
     answer: Privacy matters most after dark regardless of the season. A fixed bedtime close keeps street-facing rooms private on long summer evenings when sunset is very late.
   - question: What happens when the hub or internet is down?
     answer: The blinds' own remote, wall switch, or app pairing must still open and close them manually while the automation is unavailable.
+products:
+  - job: "Motorize existing blinds or shades"
+    body: "I do not have automated blinds installed yet, so this is not a hands-on recommendation. If I were buying one, I would start with [SmartWings motorized roller shades](https://www.amazon.com/dp/B09M5R2PCB/ref=nosim?tag=madsk0f-20). That link is one configured listing, blackout Essential Grey in a specific size, not a window I have measured. Confirm the physical remote, wand, or wall control still works after it is installed."
 ---
 
 # Open and close blinds with sunrise and sunset
@@ -51,15 +54,7 @@ THEN close street-facing and bedroom blinds</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Motorize existing blinds or shades**
-
-I do not have automated blinds installed yet, so this is not a hands-on recommendation. If I were buying one, I would start with [SmartWings motorized roller shades](https://www.amazon.com/dp/B09M5R2PCB/ref=nosim?tag=madsk0f-20). That link is one configured listing, blackout Essential Grey in a specific size, not a window I have measured. Confirm the physical remote, wand, or wall control still works after it is installed.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

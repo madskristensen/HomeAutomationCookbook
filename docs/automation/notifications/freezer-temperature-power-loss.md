@@ -14,6 +14,11 @@ faqs:
     answer: No for this recipe. Use monitoring that cannot accidentally interrupt compressor power, and follow the appliance and monitoring-device ratings.
   - question: Will the alert work during a whole-home outage?
     answer: Only if the sensing, hub, network, internet path, and notification route still have power or an independent communications path. Test the complete chain instead of assuming a battery sensor is enough.
+products:
+  - job: "Measure freezer temperature"
+    body: "[THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20). I use this for the freezer alert. Its published accuracy band is 5°F to 122°F, so compare it with the freezer's own thermometer before you trust a threshold."
+  - job: "Detect possible outbuilding power loss"
+    body: "No personally verified recommendation yet. Use a mains-powered monitor that reports independently of the freezer load and cannot switch the freezer off."
 ---
 
 # Alert when a freezer warms up or an outbuilding loses power
@@ -40,22 +45,7 @@ The household gets less to check, but the automation does not pretend to know mo
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Measure freezer temperature**
-
-[THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20). I use this for the freezer alert. Its published accuracy band is 5°F to 122°F, so compare it with the freezer's own thermometer before you trust a threshold.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Detect possible outbuilding power loss**
-
-No personally verified recommendation yet. Use a mains-powered monitor that reports independently of the freezer load and cannot switch the freezer off.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

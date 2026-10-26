@@ -14,6 +14,13 @@ faqs:
     answer: No. Turning on every light at once tends to look unnatural. A couple of rooms that a person home alone would realistically use, such as a living room and one bedroom, reads as more convincing.
   - question: What if I forget to turn Away mode off when I get home?
     answer: Arriving home and disarming Away mode, however the platform signals that, should turn the lights back to their normal schedule. It is worth confirming this transition works before relying on it.
+products:
+  - job: "Switch a fixed light on or off"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Good for a wired fixture the household wants to keep as a simple on/off."
+  - job: "Dim a fixed light"
+    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch."
+  - job: "Control a plug-in light or appliance"
+    body: "[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20). Works for a lamp plugged into an outlet rather than a wired fixture."
 ---
 
 # Turn on away lights to look occupied
@@ -51,29 +58,7 @@ THEN turn off the away lights scene</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Switch a fixed light on or off**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Good for a wired fixture the household wants to keep as a simple on/off.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Dim a fixed light**
-
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Control a plug-in light or appliance**
-
-[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20). Works for a lamp plugged into an outlet rather than a wired fixture.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

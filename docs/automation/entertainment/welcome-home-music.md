@@ -16,6 +16,11 @@ faqs:
     answer: Not if it is built around a change from away to home, rather than the door itself. A door can open and close many times while everyone is already home, and only the arrival transition should start music.
   - question: What if multiple people arrive separately?
     answer: Add a cooldown period, so the automation only plays music once per arrival window rather than restarting every time a different household member gets home shortly after the first.
+products:
+  - job: "Detect arrival"
+    body: "Use your platform's built-in presence feature (phone location or network connection), a smart lock, or a garage door sensor; use whichever the household has already tested."
+  - job: "Play the music"
+    body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use."
 ---
 
 # Play music when arriving home
@@ -50,22 +55,7 @@ THEN play the welcome playlist on the main speaker at the preset volume</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect arrival**
-
-Use your platform's built-in presence feature (phone location or network connection), a smart lock, or a garage door sensor; use whichever the household has already tested.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Play the music**
-
-Any speaker the platform can control works, for example a Sonos speaker, which is what I use.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

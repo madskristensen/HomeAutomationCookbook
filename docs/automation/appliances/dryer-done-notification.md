@@ -14,6 +14,11 @@ faqs:
     answer: Measure the dryer's longest normal pause and cooldown behavior, then use a delay comfortably longer than that observation.
   - question: What if the washer makes the dryer sensor vibrate?
     answer: Reposition the sensor, require sustained vibration before marking the dryer as running, and test washer-only cycles before trusting the alert.
+products:
+  - job: "Detect dryer vibration"
+    body: "A battery vibration sensor mounted on a cool, fixed exterior panel. See [vibration sensing gear](/getting-started/device-guide.html#vibration-sensing) for options."
+  - job: "Clear the waiting-laundry state"
+    body: "A manual dashboard or phone action. Do not assume one sensor can reliably detect both vibration and door position."
 ---
 
 # Get notified when the dryer finishes
@@ -55,22 +60,7 @@ AND clear the running marker</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect dryer vibration**
-
-A battery vibration sensor mounted on a cool, fixed exterior panel. See [vibration sensing gear](/getting-started/device-guide.html#vibration-sensing) for options.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Clear the waiting-laundry state**
-
-A manual dashboard or phone action. Do not assume one sensor can reliably detect both vibration and door position.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See the full [gear guide](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 

@@ -14,6 +14,13 @@ faqs:
     answer: Send a maintenance alert and stop making automatic heating decisions from that sensor. Missing data must not be treated as a comfortable room.
   - question: Can this protect pipes or vulnerable people by itself?
     answer: No. Use appropriate building heat, freeze protection, supervision, and professional advice. A hobby sensor and hub are supplemental.
+products:
+  - job: "Measure room temperature"
+    body: "[THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20). Compare the reading with a known thermometer before using it for alerts."
+  - job: "Control central heating"
+    body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). I have used both. Keep safe limits and manual control at the thermostat."
+  - job: "Add supplemental heat"
+    body: "Manually operated equipment used exactly as instructed. Have wiring and equipment evaluated by a qualified professional where appropriate."
 ---
 
 # Monitor a cold room without smart-plug heater control
@@ -52,29 +59,7 @@ DO NOT switch a portable heater through a general-purpose smart plug</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Measure room temperature**
-
-[THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20). Compare the reading with a known thermometer before using it for alerts.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Control central heating**
-
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). I have used both. Keep safe limits and manual control at the thermostat.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Add supplemental heat**
-
-Manually operated equipment used exactly as instructed. Have wiring and equipment evaluated by a qualified professional where appropriate.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the products I have used. This page does not recommend a smart plug for a portable heater.
 

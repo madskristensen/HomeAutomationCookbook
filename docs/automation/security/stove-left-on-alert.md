@@ -14,6 +14,13 @@ faqs:
     answer: No. Someone may be in another room while food cooks, and a motion sensor can miss a person who is still. Motion can add context but must not decide that a burner is safe.
   - question: Can a temperature sensor near a burner detect whether the stove is on?
     answer: It is not a dependable safety signal. Placement, steam, sunlight, another burner, and residual heat can all produce misleading readings.
+products:
+  - job: "Start a cooking reminder"
+    body: "A physical kitchen timer or deliberate phone timer. Starting the timer must be part of starting the appliance."
+  - job: "Read appliance status"
+    body: "Manufacturer-supported status for the exact appliance. Verify what each state means. Do not infer individual burner state from whole-appliance power."
+  - job: "Shut off cooking equipment"
+    body: "A person uses the appliance controls. No general-purpose smart plug or improvised relay is recommended."
 ---
 
 # Get a stove reminder without pretending it is a safety system
@@ -54,29 +61,7 @@ DO NOT infer safe from no motion, low power, or cooling temperature</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Start a cooking reminder**
-
-A physical kitchen timer or deliberate phone timer. Starting the timer must be part of starting the appliance.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Read appliance status**
-
-Manufacturer-supported status for the exact appliance. Verify what each state means. Do not infer individual burner state from whole-appliance power.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Shut off cooking equipment**
-
-A person uses the appliance controls. No general-purpose smart plug or improvised relay is recommended.
-
-</div>
-</div>
+{% include product-list.html %}
 
 ## Setup notes
 

@@ -14,6 +14,11 @@ faqs:
     answer: Outdoor temperature can swing briefly with wind, clouds, or a passing shower. Requiring the difference to hold for several minutes avoids notifying on a reading that will not last.
   - question: Should the automation close windows automatically?
     answer: No. This recipe only notifies. Closing or opening a window is a manual action so a person can also check weather, security, and whether the window can be reached safely.
+products:
+  - job: "Track whether a window is open"
+    body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Optional. Useful for skipping a notification about a window that is already open."
+  - job: "Compare indoor and outdoor temperature"
+    body: "Many platforms already provide an outdoor reading through an existing weather integration, so a dedicated outdoor purchase may not be needed. For the indoor reading, see [temperature and humidity sensor gear](/getting-started/device-guide.html#climate) if the platform does not already have one placed well."
 ---
 
 # Get notified when to open or close windows
@@ -55,22 +60,7 @@ THEN send one notification: "Outside is cooler than inside. Consider opening a w
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Track whether a window is open**
-
-[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Optional. Useful for skipping a notification about a window that is already open.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Compare indoor and outdoor temperature**
-
-Many platforms already provide an outdoor reading through an existing weather integration, so a dedicated outdoor purchase may not be needed. For the indoor reading, see [temperature and humidity sensor gear](/getting-started/device-guide.html#climate) if the platform does not already have one placed well.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

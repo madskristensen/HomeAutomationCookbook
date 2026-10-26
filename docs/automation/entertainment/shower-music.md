@@ -16,6 +16,11 @@ faqs:
     answer: Not if a night-mode or quiet-hours condition is included. Restrict playback to normal waking hours, or add a condition that skips playback when the household is in a sleeping state.
   - question: Does the music stop automatically when the shower ends?
     answer: Yes, if a matching "lights off" or "door closed for a while" condition is set up to stop or pause playback a couple of minutes after the shower trigger clears.
+products:
+  - job: "Trigger the automation"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Use the existing shower light switch as the trigger where possible."
+  - job: "Play the music"
+    body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. A waterproof or water-resistant model is worth considering for a bathroom, but no specific rating is required."
 ---
 
 # Play music when a shower starts
@@ -53,22 +58,7 @@ THEN stop or pause the bathroom speaker</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Trigger the automation**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Use the existing shower light switch as the trigger where possible.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Play the music**
-
-Any speaker the platform can control works, for example a Sonos speaker, which is what I use. A waterproof or water-resistant model is worth considering for a bathroom, but no specific rating is required.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

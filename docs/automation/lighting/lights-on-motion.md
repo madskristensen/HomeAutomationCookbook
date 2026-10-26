@@ -16,6 +16,13 @@ faqs:
     answer: Usually no. Add a light-level condition or restrict the recipe to the times when the room is normally dark.
   - question: What happens when the internet is down?
     answer: A local hub and compatible devices can keep the automation running, but the physical wall switch must work either way.
+products:
+  - job: "Detect fast entry motion"
+    body: "[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20). Mount it where it sees the approach to the doorway."
+  - job: "Dim a fixed light"
+    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable."
+  - job: "Switch a fixed light on or off"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable."
 ---
 
 # Turn lights on when you walk in
@@ -50,29 +57,7 @@ THEN turn on the light</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect fast entry motion**
-
-[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20). Mount it where it sees the approach to the doorway.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Dim a fixed light**
-
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Switch a fixed light on or off**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable.
-
-</div>
-</div>
+{% include product-list.html %}
 
 For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY/ref=nosim?tag=madsk0f-20) instead. It is not my first choice when the fastest motion response is the job.
 

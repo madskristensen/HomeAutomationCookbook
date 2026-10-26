@@ -16,6 +16,11 @@ faqs:
     answer: Yes, running a preset sets an explicit level regardless of the current volume. Reserve automatic time-based presets for hours where that tradeoff is acceptable.
   - question: Can different rooms use different volume levels for the same preset?
     answer: Yes, a preset can hold a different percentage for each room or speaker, since a comfortable volume in a small bedroom is not the same as in an open living room.
+products:
+  - job: "Store and apply the preset"
+    body: "No personally verified recommendation yet. Any platform that supports scenes or scripts can store a set of volume levels and apply them together."
+  - job: "Play and adjust audio"
+    body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use."
 ---
 
 # Use speaker volume presets
@@ -54,22 +59,7 @@ THEN set all grouped speakers to their loud-volume level</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Store and apply the preset**
-
-No personally verified recommendation yet. Any platform that supports scenes or scripts can store a set of volume levels and apply them together.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Play and adjust audio**
-
-Any speaker the platform can control works, for example a Sonos speaker, which is what I use.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Product recommendations and any future affiliate relationships are explained in the [disclosure](/disclosure.html).
 

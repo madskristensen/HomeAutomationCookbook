@@ -14,6 +14,15 @@ faqs:
     answer: Only lights it turned on. Track automation ownership, cancel the timeout after a manual change, and leave dusk lighting or already-on lights alone.
   - question: Can the same arrival signal unlock the door?
     answer: No. Lighting is easy to reverse; access control is not. Keep keys, keypads, or a deliberate lock action separate from this recipe.
+products:
+  - job: "Control plug-in exterior lighting"
+    body: "[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8/ref=nosim?tag=madsk0f-20). Use only with a suitable outdoor receptacle, enclosure, and lighting load."
+  - job: "Switch a fixed entry light"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). The wall paddle remains the normal control."
+  - job: "Confirm entry-door activity"
+    body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). A door event confirms activity; it does not prove identity or unlock anything."
+  - job: "Suggest that someone is approaching"
+    body: "Use your platform's built-in presence feature, driven by phone location, only to open a short pending-arrival window."
 ---
 
 # Light the entry after a verified arrival
@@ -56,36 +65,7 @@ BUT never unlock a door or move a garage</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Control plug-in exterior lighting**
-
-[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8/ref=nosim?tag=madsk0f-20). Use only with a suitable outdoor receptacle, enclosure, and lighting load.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Switch a fixed entry light**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). The wall paddle remains the normal control.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Confirm entry-door activity**
-
-[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). A door event confirms activity; it does not prove identity or unlock anything.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Suggest that someone is approaching**
-
-Use your platform's built-in presence feature, driven by phone location, only to open a short pending-arrival window.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

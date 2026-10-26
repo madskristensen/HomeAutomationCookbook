@@ -14,6 +14,11 @@ faqs:
     answer: A fixed timer either wastes electricity by running too long or shuts off too early on a long shower. Tying the fan to the actual trigger and humidity level fits real use better.
   - question: Should the fan run overnight?
     answer: Restrict it to normal waking hours unless the household specifically wants ventilation overnight, since a fan running unexpectedly at night can be startling.
+products:
+  - job: "Detect bathroom motion with humidity, temperature, and light"
+    body: "[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20). Use this for the humidity-based trigger, not for the fastest motion response."
+  - job: "Switch the bathroom fan independently"
+    body: "No personally verified recommendation yet. Confirm any smart switch used here is rated for the fan motor's load and that the physical wall switch keeps working."
 ---
 
 # Turn on the bathroom fan when a shower starts
@@ -55,22 +60,7 @@ THEN turn off the bathroom fan</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect bathroom motion with humidity, temperature, and light**
-
-[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20). Use this for the humidity-based trigger, not for the fastest motion response.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Switch the bathroom fan independently**
-
-No personally verified recommendation yet. Confirm any smart switch used here is rated for the fan motor's load and that the physical wall switch keeps working.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

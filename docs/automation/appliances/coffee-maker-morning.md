@@ -14,6 +14,13 @@ faqs:
     answer: This recipe does not recommend that. Use the coffee maker's documented delayed-brew feature or another manufacturer-supported start method.
   - question: What happens if nobody marks the coffee maker ready?
     answer: It does not brew automatically. Send a preparation reminder if useful, then let a person prepare and start it normally.
+products:
+  - job: "Brew on a schedule"
+    body: "Coffee maker with a documented delayed-brew feature. Follow the appliance instructions, including cleaning and auto-off guidance."
+  - job: "Record readiness"
+    body: "A visible note or physical checklist. Only the person who loaded the machine sets it ready."
+  - job: "Remind the household"
+    body: "Evening phone reminder. The reminder never starts the appliance."
 ---
 
 # Prepare morning coffee with a deliberate ready step
@@ -55,29 +62,7 @@ THEN do not brew automatically</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Brew on a schedule**
-
-Coffee maker with a documented delayed-brew feature. Follow the appliance instructions, including cleaning and auto-off guidance.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Record readiness**
-
-A visible note or physical checklist. Only the person who loaded the machine sets it ready.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Remind the household**
-
-Evening phone reminder. The reminder never starts the appliance.
-
-</div>
-</div>
+{% include product-list.html %}
 
 No coffee maker or remote-start accessory is recommended until I have verified it.
 

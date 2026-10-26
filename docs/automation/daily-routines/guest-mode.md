@@ -14,6 +14,13 @@ faqs:
     answer: Treat the explicit guest-present state as occupancy even when every tracked resident phone leaves. Away mode must wait until a host ends guest mode or otherwise confirms the home is empty.
   - question: Should guest mode end automatically?
     answer: Use an expiry reminder, not a silent forced end. A host should confirm that guests have left before normal presence and notification behavior resumes.
+products:
+  - job: "Start and end Guest mode"
+    body: "A clearly labeled dashboard control or voice phrase. A host should be able to change the mode without editing automation."
+  - job: "Keep fixed lights familiar"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Normal wall paddles are the primary guest interface."
+  - job: "Keep climate adjustable"
+    body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Guests can request or make normal adjustments at the thermostat."
 ---
 
 # Make the smart home predictable for guests
@@ -55,29 +62,7 @@ AND do not end it silently</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Start and end Guest mode**
-
-A clearly labeled dashboard control or voice phrase. A host should be able to change the mode without editing automation.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Keep fixed lights familiar**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Normal wall paddles are the primary guest interface.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Keep climate adjustable**
-
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Guests can request or make normal adjustments at the thermostat.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Guest mode should not require a guest to install an app, join an account, or learn special tap patterns.
 

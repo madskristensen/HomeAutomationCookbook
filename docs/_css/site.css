@@ -477,11 +477,6 @@ th {
   font-size: 0.95rem;
 }
 
-.dropdown-item a:hover {
-  background: var(--color-bg-inset);
-  color: var(--color-link);
-}
-
 .flyout-arrow {
   float: right;
   margin-left: 0.5rem;
@@ -553,6 +548,7 @@ th {
   font-size: 0.9rem;
 }
 
+.dropdown-item a:hover,
 .flyout-item a:hover {
   background: var(--color-bg-inset);
   color: var(--color-link);
@@ -584,28 +580,49 @@ th {
 /* Card Components
    ========================================================================== */
 
-/* Apply base styles to card components */
-.automation-card,
-.category-card,
-.philosophy-card {
+/* Shared card base: every card-like box uses .card plus optional modifiers.
+   .card--hover   highlights interactive cards
+   .card--compact smaller padding and subtle background (job, category, shop) */
+.card {
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
   border-radius: 12px;
   transition: all 0.2s ease;
 }
 
-/* Hover effects for interactive cards */
-a.category-card:hover,
-.philosophy-card:hover {
+.card--hover:hover,
+.card--hover:focus-within {
   border-color: var(--color-link);
   box-shadow: var(--shadow-lg);
 }
 
-.automation-cards {
+/* Shared card grid. Modifiers tune column width, gap and margin. */
+.card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min, 280px), 1fr));
+  gap: var(--card-gap, 2rem);
+  margin: var(--card-margin, 3rem 0);
+}
+
+.card-grid > * {
+  min-width: 0;
+}
+
+.card-grid--compact {
+  --card-min: 240px;
+  --card-gap: 1.5rem;
+}
+
+.card-grid--shop {
+  --card-min: 220px;
+  --card-gap: 1.25rem;
+  --card-margin: 1.5rem 0 2rem;
+}
+
+.card-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  --card-gap: 1.5rem;
+  --card-margin: 0;
 }
 
 /* Automation card specific styles */
@@ -614,12 +631,6 @@ a.category-card:hover,
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.automation-card:hover,
-.automation-card:focus-within {
-  border-color: var(--color-link);
-  box-shadow: var(--shadow-lg);
 }
 
 /* Shared card heading styles */
@@ -649,6 +660,16 @@ a.category-card:hover,
 
 .automation-card p:last-child {
   margin-block: auto 0;
+}
+
+.card--compact {
+  padding: 1.5rem;
+  background: var(--color-bg-subtle);
+}
+
+.card--compact h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
 }
 
 .card-meta {
@@ -758,11 +779,6 @@ h1.has-article-meta {
 
 .article-share-btn:hover {
   color: var(--color-link);
-}
-
-.article-share-btn:focus {
-  outline: 2px solid var(--color-link);
-  outline-offset: 2px;
 }
 
 .article-share-btn .share-icon {
@@ -1081,8 +1097,7 @@ h1.has-article-meta {
 .pdf-promo-row + .site-footer { margin-top: 0; }
 .pdf-promo-button { display: inline-block; margin-top: 0.25rem; }
 .pdf-promo-note { font-size: 0.875rem; color: var(--color-text-secondary); }
-.shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
-.shop-item { display: flex; flex-direction: column; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg-subtle); }
+.shop-item { display: flex; flex-direction: column; padding: 1.25rem; }
 .shop-item--best { border-color: var(--color-text-secondary); }
 .shop-item img { width: 100%; max-width: 220px; height: auto; margin: 0 auto 1rem; border-radius: 4px; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18); }
 .shop-item h2 { font-size: 1.15rem; margin: 0 0 0.5rem; }
@@ -1090,8 +1105,7 @@ h1.has-article-meta {
 .shop-meta { font-size: 0.875rem; color: var(--color-text-secondary); }
 .shop-price { font-size: 1.35rem; font-weight: 700; margin-top: auto !important; }
 .shop-tag { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-secondary); margin-bottom: 0.35rem; }
-.shop-item .home-button-primary { text-align: center; }
-.shop-item .home-button-primary, .pdf-promo .home-button-primary { text-decoration: none; color: #fff; }
+.pdf-promo .btn-primary { text-decoration: none; color: #fff; }
 
 /* Homepage Components
    ========================================================================== */
@@ -1114,9 +1128,6 @@ h1.has-article-meta {
   padding: 2rem;
   background: var(--color-bg-muted);
   border-bottom: 2px solid var(--color-border);
-}
-
-.philosophy-header {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -1146,12 +1157,6 @@ h1.has-article-meta {
   margin: 0;
 }
 
-/* Shared section styles */
-.philosophy-section {
-  padding: 1.5rem 2rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
 .philosophy-section:last-child {
   border-bottom: none;
 }
@@ -1169,9 +1174,6 @@ h1.has-article-meta {
 /* Benefits section and checklist items */
 .philosophy-checklist {
   padding: 2rem;
-}
-
-.philosophy-checklist {
   background: var(--color-bg-muted);
 }
 
@@ -1216,6 +1218,7 @@ h1.has-article-meta {
 
 /* Philosophy page styles */
 
+.philosophy-section,
 .philosophy-example,
 .philosophy-fix,
 .philosophy-takeaway {
@@ -1249,7 +1252,7 @@ h1.has-article-meta {
   font-weight: 600;
 }
 
-:is(.philosophy-example, .philosophy-fix) p {
+:is(.philosophy-example, .philosophy-fix, .pyramid-level) p {
   margin: 0 0 1rem;
   line-height: 1.7;
 }
@@ -1291,11 +1294,6 @@ h1.has-article-meta {
   margin: 0 0 0.75rem;
   font-size: 1.2rem;
   color: var(--color-text-heading);
-}
-
-.pyramid-level p {
-  margin: 0 0 1rem;
-  line-height: 1.7;
 }
 
 .pyramid-level ul {
@@ -1364,7 +1362,6 @@ h1.has-article-meta {
 
 .home-hero > *,
 .home-section-heading > *,
-.home-explore-grid > *,
 .home-starter-showcase > *,
 .home-trust > * {
   min-width: 0;
@@ -1411,7 +1408,7 @@ h1.has-article-meta {
   margin: 2rem 0;
 }
 
-.home-button {
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1425,23 +1422,23 @@ h1.has-article-meta {
   text-decoration: none;
 }
 
-.home-button-primary {
+.btn-primary {
   color: var(--color-btn-primary-text);
   background: var(--color-btn-primary-bg);
 }
 
-.home-button-primary:hover {
+.btn-primary:hover {
   color: var(--color-btn-primary-text);
   background: var(--color-btn-primary-hover-bg);
 }
 
-.home-button-secondary {
+.btn-secondary {
   color: var(--color-btn-secondary-text);
   background: var(--color-bg-elevated);
   border-color: var(--color-btn-secondary-border);
 }
 
-.home-button-secondary:hover {
+.btn-secondary:hover {
   color: var(--color-link-hover);
   background: var(--color-btn-secondary-hover-bg);
 }
@@ -1506,27 +1503,14 @@ h1.has-article-meta {
   line-height: 1.6;
 }
 
-.home-explore-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
 .home-explore-card {
-  min-width: 0;
   overflow: hidden;
   color: var(--color-text);
-  background: var(--color-bg-elevated);
-  border: 1px solid var(--color-border);
-  border-radius: 14px;
   text-decoration: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .home-explore-card:hover {
   color: var(--color-text);
-  border-color: var(--color-link);
-  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
@@ -1684,28 +1668,16 @@ h1.has-article-meta {
   border-radius: 12px;
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin: 3rem 0;
-}
-
 .category-card {
   display: block;
-  padding: 1.5rem;
-  background: var(--color-bg-subtle);
   text-decoration: none;
 }
 
 .category-card:hover {
   background: var(--color-bg-elevated);
-  box-shadow: var(--shadow-md);
 }
 
 .category-card h3 {
-  margin: 0 0 0.75rem;
-  font-size: 1.15rem;
   color: var(--color-text-heading);
 }
 
@@ -1723,25 +1695,6 @@ h1.has-article-meta {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
-
-.job-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.job-card {
-  padding: 1.5rem;
-  background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-}
-
-.job-card h3 {
-  margin: 0 0 1rem;
-  font-size: 1.15rem;
 }
 
 .job-card ul {
@@ -1891,7 +1844,7 @@ h1.has-article-meta {
     }
 
     .home-section-heading,
-.home-explore-grid,
+.card-grid--two,
 .home-starter-showcase,
 .home-starter-feature,
 .home-trust {
@@ -1913,7 +1866,7 @@ h1.has-article-meta {
 
     
 
-    .category-grid {
+    .card-grid--compact {
         grid-template-columns: 1fr;
     }
 
@@ -2074,8 +2027,7 @@ h1.has-article-meta {
         float: right;
     }
 
-    /* Cards mobile */
-    .automation-cards {
+    .card-grid {
         grid-template-columns: 1fr;
     }
 

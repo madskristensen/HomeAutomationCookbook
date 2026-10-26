@@ -14,6 +14,11 @@ faqs:
     answer: The vacuum is sent back to its dock as soon as the tested presence signal reports anyone home, rather than finishing the room it is in.
   - question: Can this run more than once if someone leaves and returns several times in a day?
     answer: No. A per-day flag prevents a second run once the vacuum has completed a cycle that day.
+products:
+  - job: "Confirm the whole household has left and returned"
+    body: "Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Test it against both departure and arrival for every household member before trusting it."
+  - job: "Robot vacuum with remote dock command"
+    body: "No personally verified recommendation yet. Confirm the vacuum accepts a return-to-dock command from automation, not only a manual app tap."
 ---
 
 # Run the vacuum only while the house stays empty
@@ -56,22 +61,7 @@ THEN send the vacuum back to its dock immediately</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Confirm the whole household has left and returned**
-
-Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Test it against both departure and arrival for every household member before trusting it.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Robot vacuum with remote dock command**
-
-No personally verified recommendation yet. Confirm the vacuum accepts a return-to-dock command from automation, not only a manual app tap.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist.
 

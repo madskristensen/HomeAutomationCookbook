@@ -15,63 +15,63 @@ You can copy a recipe, change it to fit your household, or use its logic as a st
 
 ## Find a recipe by what you need
 
-<div class="job-grid">
-  <div class="job-card">
-    <h3>Stop remembering and checking</h3>
-    <ul>
-      <li><a href="/automation/appliances/washer-done-notification.html">Know when the washer finishes</a></li>
-      <li><a href="/automation/security/garage-door-notification.html">Notice a garage door left open</a></li>
-      <li><a href="/automation/appliances/fridge-door-alert.html">Catch an open fridge or freezer</a></li>
-      <li><a href="/automation/notifications/low-battery-alerts.html">Find batteries before devices fail</a></li>
-    </ul>
-  </div>
+<div class="card-grid card-grid--compact">
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/appliances/washer-done-notification.html">Know when the washer finishes</a></li>
+    <li><a href="/automation/security/garage-door-notification.html">Notice a garage door left open</a></li>
+    <li><a href="/automation/appliances/fridge-door-alert.html">Catch an open fridge or freezer</a></li>
+    <li><a href="/automation/notifications/low-battery-alerts.html">Find batteries before devices fail</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Stop remembering and checking" body=job_list class="card--compact job-card" hover=false %}
 
-  <div class="job-card">
-    <h3>Move through the house more easily</h3>
-    <ul>
-      <li><a href="/automation/lighting/lights-on-motion.html">Turn lights on when entering</a></li>
-      <li><a href="/automation/lighting/lights-off-after-motion.html">Turn lights off after leaving</a></li>
-      <li><a href="/automation/lighting/bathroom-night-light.html">Use gentle bathroom light at night</a></li>
-      <li><a href="/automation/lighting/toggle-lights-door.html">Light a closet or pantry</a></li>
-    </ul>
-  </div>
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/lighting/lights-on-motion.html">Turn lights on when entering</a></li>
+    <li><a href="/automation/lighting/lights-off-after-motion.html">Turn lights off after leaving</a></li>
+    <li><a href="/automation/lighting/bathroom-night-light.html">Use gentle bathroom light at night</a></li>
+    <li><a href="/automation/lighting/toggle-lights-door.html">Light a closet or pantry</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Move through the house more easily" body=job_list class="card--compact job-card" hover=false %}
 
-  <div class="job-card">
-    <h3>Reduce repeated adjustments</h3>
-    <ul>
-      <li><a href="/automation/climate/thermostat-windows-open.html">Pause HVAC for an open window</a></li>
-      <li><a href="/automation/climate/safe-thermostat-away.html">Use a safe away temperature</a></li>
-      <li><a href="/automation/climate/fan-shower.html">Run the fan after a shower</a></li>
-      <li><a href="/automation/climate/blinds-sunset-sunrise.html">Move blinds with sunrise and sunset</a></li>
-    </ul>
-  </div>
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/climate/thermostat-windows-open.html">Pause HVAC for an open window</a></li>
+    <li><a href="/automation/climate/safe-thermostat-away.html">Use a safe away temperature</a></li>
+    <li><a href="/automation/climate/fan-shower.html">Run the fan after a shower</a></li>
+    <li><a href="/automation/climate/blinds-sunset-sunrise.html">Move blinds with sunrise and sunset</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Reduce repeated adjustments" body=job_list class="card--compact job-card" hover=false %}
 
-  <div class="job-card">
-    <h3>Coordinate household transitions</h3>
-    <ul>
-      <li><a href="/automation/daily-routines/away-mode.html">Settle the house after everyone leaves</a></li>
-      <li><a href="/automation/daily-routines/unlock-door-arrival.html">Prepare the house on arrival</a></li>
-      <li><a href="/automation/daily-routines/guest-mode.html">Keep the house predictable for guests</a></li>
-      <li><a href="/automation/daily-routines/bedtime-routine.html">Wind down without disturbing others</a></li>
-    </ul>
-  </div>
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/daily-routines/away-mode.html">Settle the house after everyone leaves</a></li>
+    <li><a href="/automation/daily-routines/unlock-door-arrival.html">Prepare the house on arrival</a></li>
+    <li><a href="/automation/daily-routines/guest-mode.html">Keep the house predictable for guests</a></li>
+    <li><a href="/automation/daily-routines/bedtime-routine.html">Wind down without disturbing others</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Coordinate household transitions" body=job_list class="card--compact job-card" hover=false %}
 
-  <div class="job-card">
-    <h3>Notice safety-related conditions</h3>
-    <ul>
-      <li><a href="/automation/security/water-leak-response.html">Respond to detected water</a></li>
-      <li><a href="/automation/security/garage-door-notification.html">Keep an open garage visible</a></li>
-      <li><a href="/automation/security/fire-safety.html">Add supplemental fire response</a></li>
-      <li><a href="/automation/security/stove-left-on-alert.html">Create a stove reminder</a></li>
-    </ul>
-  </div>
+{% capture job_list %}
+<ul>
+    <li><a href="/automation/security/water-leak-response.html">Respond to detected water</a></li>
+    <li><a href="/automation/security/garage-door-notification.html">Keep an open garage visible</a></li>
+    <li><a href="/automation/security/fire-safety.html">Add supplemental fire response</a></li>
+    <li><a href="/automation/security/stove-left-on-alert.html">Create a stove reminder</a></li>
+  </ul>
+{% endcapture %}
+{% include automation-card.html title="Notice safety-related conditions" body=job_list class="card--compact job-card" hover=false %}
 </div>
 
 Not sure where an idea belongs? Search by a room, device, or burden such as "laundry," "bathroom," "guest," or "window."
 
 ## Choose a category
 
-<div class="category-grid">
+<div class="card-grid card-grid--compact">
 
 {% include category-card.html
   url="/automation/lighting/index.html"
@@ -149,7 +149,7 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
 </div>
 
 {% assign recipes = site.pages | where: "layout", "automation" | sort: "title" %}
-<div id="recipe-directory" class="automation-cards recipe-directory">
+<div id="recipe-directory" class="card-grid recipe-directory">
 {% for recipe in recipes %}
   {% assign path_parts = recipe.url | split: "/" %}
   {% assign category_key = path_parts[2] %}
@@ -184,19 +184,13 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
       {% assign recipe_needs = "A source signal plus shared status or notifications" %}
   {% endcase %}
   {% assign starter_urls = "/automation/lighting/lights-on-motion.html|/automation/lighting/lights-off-after-motion.html|/automation/appliances/washer-done-notification.html|/automation/notifications/low-battery-alerts.html" %}
-  <article class="automation-card recipe-directory-card"
-    data-category="{{ category_key }}"
-    data-search="{{ recipe.title | append: ' ' | append: recipe.description | append: ' ' | append: recipe.keywords | append: ' ' | append: category_name | append: ' ' | append: recipe_type | append: ' ' | append: recipe_needs | downcase | escape }}">
-    <span class="card-meta">{{ category_name }}</span>
-    <h3><a href="{{ recipe.url }}">{{ recipe.title }}</a></h3>
-    <p>{{ recipe.description }}</p>
-    <dl class="recipe-card-details">
+  {% capture card_attrs %}data-category="{{ category_key }}" data-search="{{ recipe.title | append: ' ' | append: recipe.description | append: ' ' | append: recipe.keywords | append: ' ' | append: category_name | append: ' ' | append: recipe_type | append: ' ' | append: recipe_needs | downcase | escape }}"{% endcapture %}
+  {% capture card_details %}<dl class="recipe-card-details">
       <div><dt>Type</dt><dd>{{ recipe_type }}</dd></div>
       <div><dt>Needs</dt><dd>{{ recipe_needs }}</dd></div>
       <div><dt>Starting point</dt><dd>{% if starter_urls contains recipe.url %}Good first automation{% else %}Review setup and failure modes first{% endif %}</dd></div>
-    </dl>
-    <p><a href="{{ recipe.url }}" class="card-link">View recipe</a></p>
-  </article>
+    </dl>{% endcapture %}
+  {% include automation-card.html tag="article" class="recipe-directory-card" attrs=card_attrs eyebrow=category_name url=recipe.url title=recipe.title description=recipe.description body=card_details %}
 {% endfor %}
 </div>
 
@@ -204,22 +198,13 @@ Not sure where an idea belongs? Search by a room, device, or burden such as "lau
 
 ## What every recipe includes
 
-<div class="automation-cards">
+<div class="card-grid">
 
-<div class="automation-card">
-<h3>Plain-English logic</h3>
-<p>The trigger, conditions, action, delay, stop condition, and manual override are stated before setup details.</p>
-</div>
+{% include automation-card.html title="Plain-English logic" description="The trigger, conditions, action, delay, stop condition, and manual override are stated before setup details." %}
 
-<div class="automation-card">
-<h3>Honest hardware guidance</h3>
-<p>Named products are limited to devices I have used. Missing recommendations remain clearly identified.</p>
-</div>
+{% include automation-card.html title="Honest hardware guidance" description="Named products are limited to devices I have used. Missing recommendations remain clearly identified." %}
 
-<div class="automation-card">
-<h3>Failure behavior</h3>
-<p>Recipes account for stale sensors, unavailable devices, hub restarts, internet loss, guests, and manual changes where they matter.</p>
-</div>
+{% include automation-card.html title="Failure behavior" description="Recipes account for stale sensors, unavailable devices, hub restarts, internet loss, guests, and manual changes where they matter." %}
 
 </div>
 

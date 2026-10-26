@@ -17,6 +17,11 @@ faqs:
     answer: Resume only after every monitored window and door has remained closed briefly, and only if this automation was responsible for the pause.
   - question: What if someone changes the thermostat while a window is open?
     answer: Treat the manual thermostat change as the new instruction. Do not restore an older saved mode over it when the window closes.
+products:
+  - job: "Control heating and cooling"
+    body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Keep safe limits and manual control at the thermostat."
+  - job: "Detect an open window or door"
+    body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Test every open and closed report before enabling HVAC control."
 ---
 
 # Pause heating or cooling when a window stays open
@@ -58,22 +63,7 @@ AND clear the pause marker</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Control heating and cooling**
-
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Keep safe limits and manual control at the thermostat.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Detect an open window or door**
-
-[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Test every open and closed report before enabling HVAC control.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

@@ -16,6 +16,13 @@ faqs:
     answer: Give each person or schedule its own trigger and room scope. Shared actions should wait until the household agrees the day has started.
   - question: Should the routine start a coffee maker automatically?
     answer: Only if the appliance is designed to resume safely when power is applied and I have verified that exact use. Otherwise leave brewing manual.
+products:
+  - job: "Start the routine"
+    body: "A \"Good morning\" voice phrase or manual scene control. The trigger should be intentional and easy to cancel."
+  - job: "Light the morning path"
+    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep every wall paddle working normally."
+  - job: "Restore approved comfort"
+    body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Someone can always change the temperature at the thermostat."
 ---
 
 # Start a quiet good-morning routine
@@ -57,29 +64,7 @@ THEN leave its lights, blinds, and audio unchanged</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Start the routine**
-
-A "Good morning" voice phrase or manual scene control. The trigger should be intentional and easy to cancel.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Light the morning path**
-
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep every wall paddle working normally.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Restore approved comfort**
-
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Someone can always change the temperature at the thermostat.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

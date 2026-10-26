@@ -16,6 +16,15 @@ faqs:
     answer: No. Phones can be left behind, run out of battery, or report the wrong location. Use a delay, recent motion or door activity, and a guest override.
   - question: Should away mode automatically lock doors and arm an alarm?
     answer: Add security actions only after the household has tested presence detection and the security system's own entry, exit, and emergency behavior.
+products:
+  - job: "Decide who is home"
+    body: "Use your platform's built-in presence feature, usually driven by each family member's phone location or its connection to the home network, rather than a dedicated product. Every person and guest still needs a safe path through the logic."
+  - job: "Detect recent indoor activity"
+    body: "[Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB/ref=nosim?tag=madsk0f-20). Use activity as a reason to delay Away, not as proof that the home is empty."
+  - job: "Adjust heating and cooling"
+    body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Keep safe minimum and maximum temperatures at the thermostat."
+  - job: "Control fixed lights"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Physical paddles must keep working."
 ---
 
 # Set away mode when everyone leaves
@@ -54,36 +63,7 @@ AND send a summary notification</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Decide who is home**
-
-Use your platform's built-in presence feature, usually driven by each family member's phone location or its connection to the home network, rather than a dedicated product. Every person and guest still needs a safe path through the logic.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Detect recent indoor activity**
-
-[Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB/ref=nosim?tag=madsk0f-20). Use activity as a reason to delay Away, not as proof that the home is empty.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Adjust heating and cooling**
-
-[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Keep safe minimum and maximum temperatures at the thermostat.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Control fixed lights**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Physical paddles must keep working.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

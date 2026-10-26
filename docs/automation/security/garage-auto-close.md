@@ -14,6 +14,13 @@ faqs:
     answer: No. Use unattended closing only when the opener and controller are designed, installed, and configured for it according to their instructions, including required warnings and entrapment protection.
   - question: Does a closed tilt sensor prove the doorway is clear?
     answer: No. It reports door position only. The opener's approved obstruction and entrapment protections must make the closing decision.
+products:
+  - job: "Know door position"
+    body: "[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). I have used both. They report position, not a clear doorway."
+  - job: "Close the door"
+    body: "Existing wall control and opener remote. Use only equipment approved for the opener and unattended operation."
+  - job: "Detect an obstruction"
+    body: "The opener's required, tested entrapment protection. Never replace or bypass it with hobby sensors."
 ---
 
 # Close a garage safely after an open-door alert
@@ -54,29 +61,7 @@ DO NOT use motion, location, a camera, or a tilt sensor as entrapment protection
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Know door position**
-
-[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). I have used both. They report position, not a clear doorway.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Close the door**
-
-Existing wall control and opener remote. Use only equipment approved for the opener and unattended operation.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Detect an obstruction**
-
-The opener's required, tested entrapment protection. Never replace or bypass it with hobby sensors.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the tilt sensors I have used. No unattended-closing controller is recommended until I have verified one.
 

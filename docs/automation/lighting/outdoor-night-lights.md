@@ -16,6 +16,11 @@ faqs:
     answer: Keep safety lighting on only where it is useful. Decorative and holiday lights can usually turn off at a fixed bedtime.
   - question: What happens when the hub or internet is down?
     answer: A local hub may continue running the schedule, but the outdoor switch or plug must remain easy to control manually.
+products:
+  - job: "Control outdoor plug-in lighting"
+    body: "[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8/ref=nosim?tag=madsk0f-20). Use only with an outdoor-rated fixture and receptacle."
+  - job: "Switch a fixed outdoor circuit"
+    body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable. Confirm the switch and installation suit the circuit."
 ---
 
 # Turn outdoor lights on at dusk
@@ -50,22 +55,7 @@ AT sunrise turn off any remaining lights</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Control outdoor plug-in lighting**
-
-[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8/ref=nosim?tag=madsk0f-20). Use only with an outdoor-rated fixture and receptacle.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Switch a fixed outdoor circuit**
-
-[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable. Confirm the switch and installation suit the circuit.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

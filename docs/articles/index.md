@@ -15,7 +15,7 @@ Articles explain a technology, tradeoff, or design decision that applies across 
 
 {% assign sorted_articles = site.articles | sort: "date" | reverse %}
 
-<div class="automation-cards">
+<div class="card-grid">
 {% for article in sorted_articles %}
   {% assign article_url = article.url | relative_url %}
   {% assign article_date = article.date | date: "%B %-d, %Y" %}

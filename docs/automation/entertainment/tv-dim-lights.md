@@ -16,6 +16,11 @@ faqs:
     answer: A power-based trigger cannot always tell a menu screen from active playback, since both can draw similar wattage. Raising the power threshold or adding a short delay before dimming reduces this.
   - question: Will the lights go back to their previous brightness after the TV turns off?
     answer: Yes, if the previous brightness is saved before dimming and restored once the TV has been off for a couple of minutes, rather than always returning to one fixed level.
+products:
+  - job: "Detect the TV turning on"
+    body: "Zooz ZEN15 Power Switch. I use the ZEN15's power readings to distinguish standby from the TV being on. Measure the TV's actual draw before setting thresholds."
+  - job: "Dim the living room lights"
+    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Requires a dimmable fixture and a switch rated for the load."
 ---
 
 # Dim lights when the TV turns on
@@ -54,22 +59,7 @@ THEN restore the living room lights to the saved brightness</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Detect the TV turning on**
-
-Zooz ZEN15 Power Switch. I use the ZEN15's power readings to distinguish standby from the TV being on. Measure the TV's actual draw before setting thresholds.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Dim the living room lights**
-
-[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Requires a dimmable fixture and a switch rated for the load.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

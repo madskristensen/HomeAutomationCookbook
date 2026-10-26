@@ -14,6 +14,11 @@ faqs:
     answer: Send a notification suggesting ventilation instead of guessing. Do not run the purifier on a fixed schedule with no sensor to justify it.
   - question: Should the purifier ever run at maximum speed automatically?
     answer: Only when the sensor is available and reporting a clearly unhealthy reading. Treat a missing or unavailable reading as unknown, not as a reason to run at maximum.
+products:
+  - job: "Control a plug-in air purifier"
+    body: "[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20). Confirm the plug's current rating covers the purifier's startup draw, and keep the purifier's own physical switch usable."
+  - job: "Measure indoor air quality"
+    body: "No personally verified recommendation yet. I have not verified a specific air quality or PM2.5 sensor. Any sensor used here should report a stable, current reading before it drives the purifier."
 ---
 
 # Run the air purifier when indoor air quality drops
@@ -52,22 +57,7 @@ THEN turn off the purifier</div>
 
 ## What I used
 
-<div class="product-list" markdown="1">
-<div class="product-item" markdown="1">
-
-**Control a plug-in air purifier**
-
-[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20). Confirm the plug's current rating covers the purifier's startup draw, and keep the purifier's own physical switch usable.
-
-</div>
-<div class="product-item" markdown="1">
-
-**Measure indoor air quality**
-
-No personally verified recommendation yet. I have not verified a specific air quality or PM2.5 sensor. Any sensor used here should report a stable, current reading before it drives the purifier.
-
-</div>
-</div>
+{% include product-list.html %}
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
