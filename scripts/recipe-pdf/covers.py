@@ -12,7 +12,7 @@ ART = {
   <path d="M205 25v155h240M25 275h180v170M310 180v265"/>
   <path d="M78 112a120 120 0 0 1 120 120H78z" fill="#ffffff" stroke="#6f8f96"/>
   <circle cx="78" cy="112" r="15" fill="#6f8f96" stroke="none"/>
-  <path d="M310 320h74M347 283v74" stroke="#9db1b6"/></g>''',
+  <path d="M341 313h74M378 276v74" stroke="#9db1b6"/></g>''',
 "cards": '''<g transform="translate(168 480)" fill="none" stroke="#2c3e50" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
   <rect x="60" y="20" width="330" height="390" rx="26" fill="#eef2f3" transform="rotate(-8 225 215)"/>
   <rect x="90" y="40" width="330" height="390" rx="26" fill="#ffffff"/>

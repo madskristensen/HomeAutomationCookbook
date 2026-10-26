@@ -116,7 +116,7 @@ def illustration(name)
         <path d="M205 25v155h240M25 275h180v170M310 180v265"/>
         <path d="M78 112a120 120 0 0 1 120 120H78z" fill="#ffffff" stroke="#6f8f96"/>
         <circle cx="78" cy="112" r="15" fill="#6f8f96" stroke="none"/>
-        <path d="M310 320h74M347 283v74" stroke="#9db1b6"/>
+        <path d="M341 313h74M378 276v74" stroke="#9db1b6"/>
       </g>
     SVG
   when "path"
