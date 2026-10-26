@@ -5,6 +5,7 @@ description: How to pick a power-metering plug or switch for appliance done aler
 date: 2026-10-25
 last_modified_at: 2026-10-25
 image: /assets/img/social/guides/best-power-monitoring-plugs-appliance-alerts.png
+pdf_promo_card: true
 ---
 
 # Best power-monitoring plugs for washer, dishwasher, and TV alerts
@@ -119,6 +120,8 @@ Z-Wave and Zigbee metering plugs pair directly to Hubitat or SmartThings and rep
 ### How do I monitor a 240V dryer?
 
 Use a vibration sensor on the cabinet, a metering plug on a 120V vent booster fan if you have one, or professionally installed circuit-level monitoring. Do not use an adapter to put a normal plug on a 240V outlet.
+
+{% include pdf-guide-promo.html %}
 
 ## Related
 

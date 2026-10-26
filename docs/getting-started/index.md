@@ -6,6 +6,7 @@ permalink: /getting-started/index.html
 canonical_url: https://www.homeautomationcookbook.com/getting-started/index.html
 last_modified_at: 2026-09-21
 image: /assets/img/social/guides/getting-started.png
+pdf_promo_card: true
 ---
 
 # Getting started with home automation
@@ -92,6 +93,8 @@ A second sensor, longer timeout, or additional mode should fix an observed probl
 6. Let the household use it for a week before expanding.
 
 Want a concrete shopping list and order of work? Use the [starter house setup guide](/getting-started/starter-house-setup.html).
+
+{% include pdf-guide-promo.html %}
 
 ## Next steps
 

@@ -14,6 +14,6 @@ Your purchase went through. Here is your copy of the Starter House Setup Guide.
 
 Save the file to your computer, and print the checklists you need.
 
-Please do not share this page or the file. If the download does not start, try another browser.
+Please do not share this page or the file. Trouble with the download? Email [mads@homeautomationcookbook.com](mailto:mads@homeautomationcookbook.com).
 
 [Back to the starter house setup guide](/getting-started/starter-house-setup.html)

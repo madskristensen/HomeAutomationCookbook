@@ -8,7 +8,6 @@ description: >-
   working physical controls, and honest notes about firsthand experience.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.homeautomationcookbook.com" # the base hostname & protocol for your site
-repository: madskristensen/HomeAutomationCookbook
 
 # Open Graph / Social Sharing (used by jekyll-seo-tag)
 # Default image for social sharing when pages don't specify their own
@@ -28,8 +27,6 @@ twitter:
   card: summary_large_image
 social:
   name: Home Automation Cookbook
-  links:
-    - https://github.com/madskristensen/HomeAutomationCookbook
 
 # Author information (for schema.org)
 author:

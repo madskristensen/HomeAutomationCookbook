@@ -1064,6 +1064,20 @@ h1.has-article-meta {
   color: var(--color-link);
 }
 
+/* Starter guide PDF promo (strip above footer, in-content card, buy box)
+   ========================================================================== */
+.pdf-promo { display: flex; align-items: center; gap: 1rem; margin: 2rem 0; padding: 1rem 1.25rem; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-bg-subtle); }
+.pdf-promo p { margin: 0; max-width: none; }
+.pdf-promo p + p { margin-top: 0.5rem; }
+.pdf-promo-thumb { flex: 0 0 auto; line-height: 0; }
+.pdf-promo-thumb img { width: 64px; height: auto; border-radius: 3px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18); }
+.pdf-promo-link { font-weight: 600; white-space: nowrap; }
+.pdf-promo--buy .pdf-promo-thumb img { width: 96px; }
+.pdf-promo-row { margin-top: 3rem; }
+.pdf-promo--strip { justify-content: center; margin: 0; padding: 0 0 1.25rem; border: 0; background: none; font-size: 0.875rem; color: var(--color-text-secondary); }
+.pdf-promo--strip .pdf-promo-thumb img { width: 32px; }
+.pdf-promo-row + .site-footer { margin-top: 0; }
+
 /* Homepage Components
    ========================================================================== */
 

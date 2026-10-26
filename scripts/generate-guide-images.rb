@@ -25,6 +25,13 @@ PAGES = [
   ["docs/getting-started/resources.md", "automation-resources", "Resources", "library", true]
 ].freeze
 
+TITLE_X = 108
+# Left edge of each illustration (its translate x), so titles never run under it.
+ART_LEFT = {
+  "house" => 780, "book" => 735, "sensors" => 720, "floorplan" => 720,
+  "path" => 720, "balance" => 710, "devices" => 805, "checklist" => 800, "library" => 755
+}.freeze
+
 def wrap_text(text, limit, maximum_lines)
   lines = []
   current = ""
@@ -169,8 +176,16 @@ def extract(content, field)
 end
 
 def build_svg(title, description, label, motif)
-  title_lines = wrap_text(title, 25, 3)
-  title_size = title_lines.length == 3 ? 46 : 54
+  # Fit the title in the space left of the illustration. Estimate bold glyph
+  # width conservatively and step the size down until it wraps in 3 lines.
+  available = ART_LEFT.fetch(motif, 700) - TITLE_X - 32
+  title_size = nil
+  title_lines = nil
+  [54, 50, 46, 42, 38].each do |size|
+    title_size = size
+    title_lines = wrap_text(title, (available / (size * 0.62)).floor, 3)
+    break unless title_lines.last.end_with?("...")
+  end
   title_step = title_size + 8
   description_start = 171 + (title_lines.length * title_step) + 27
 

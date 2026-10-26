@@ -52,7 +52,7 @@ Some guides discuss smart-home platforms and link to product pages, communities,
 
 ## Contact
 
-If you have questions about this privacy policy, please open an issue on our [GitHub repository](https://github.com/madskristensen/HomeAutomationCookbook/issues).
+If you have questions about this privacy policy, email [mads@homeautomationcookbook.com](mailto:mads@homeautomationcookbook.com).
 
 ## Changes to this policy
 
