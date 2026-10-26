@@ -6,7 +6,7 @@ Dismiss stores the sale name in localStorage, so it stays hidden for the rest of
 {% include sale-window.html %}
 <aside class="sale-banner sale-banner--{{ include.variant | default: 'quiet' }}" aria-label="Sale" hidden>
   <div class="sale-banner-inner">
-    <p class="sale-banner-text"><span class="sale-banner-emoji" aria-hidden="true"></span> <span class="sale-banner-msg"><span class="sale-banner-msg-long"></span><span class="sale-banner-msg-short"></span></span> <span class="sale-banner-chip"><span class="sale-banner-chip-label">Ends in</span> <time class="sale-banner-count"></time></span> <a class="sale-banner-link" href="/shop/">{{ include.link_label | default: "Shop" }}</a></p>
+    <p class="sale-banner-text"><span class="sale-banner-emoji" aria-hidden="true"></span> <span class="sale-banner-msg"><span class="sale-banner-msg-long"></span><span class="sale-banner-msg-short"></span></span> <span class="sale-banner-chip"><span class="sale-banner-chip-label">Ends in&nbsp;</span><time class="sale-banner-count"></time></span> <a class="sale-banner-link" href="/shop/">{{ include.link_label | default: "Shop" }}</a></p>
     <button type="button" class="sale-banner-close" aria-label="Dismiss sale banner">✕</button>
   </div>
 </aside>
