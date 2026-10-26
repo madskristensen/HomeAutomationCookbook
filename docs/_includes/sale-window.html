@@ -1,0 +1,7 @@
+{%- comment -%}
+Defines window.hacSale() -> the active sale window (Pacific time) or null. Data: _data/sales.yml.
+No sale link here, so only /shop/ carries Stripe URLs.
+{%- endcomment -%}
+{%- assign sale_windows = "" | split: "" -%}
+{%- for w in site.data.sales.windows -%}{%- assign sale_windows = sale_windows | push: w -%}{%- endfor -%}
+<script>window.hacSale=function(){try{var t=new Intl.DateTimeFormat("en-CA",{timeZone:"America/Los_Angeles",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),w={{ sale_windows | jsonify }};for(var i=0;i<w.length;i++){if(t>=w[i].start&&t<=w[i].end){var e=w[i].end.split("-");w[i].endLabel=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+e[1]-1]+" "+(+e[2]);return w[i];}}}catch(x){}return null;};</script>
