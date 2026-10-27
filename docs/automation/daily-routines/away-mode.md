@@ -3,7 +3,7 @@ layout: automation
 redirect_from:
   - /automation/presence/away-mode.html
 date: 2025-11-28
-title: Set away mode when everyone leaves
+title: Away mode automation for security and energy
 description: Leave without running through a checklist. Switch the home to Away once it is confirmed empty, then adjust lights, climate, and security for you.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
 last_modified_at: 2026-10-25
@@ -31,7 +31,7 @@ products:
 
 {% include content-hero.html src="/assets/img/social/recipes/daily-routines/away-mode.svg" alt="Away mode activates after everyone leaves and coordinates the house without locking anyone out" %}
 
-When the house is confidently empty, it switches to Away, turns off what is safe to turn off, and tells the household what changed.
+Away mode switches the house to Away once everyone has left, turns off what is safe to turn off, and tells the household what changed.
 
 **Best for:** Households with reliable presence signals, a manual Home or Guest override, and people willing to test false-away scenarios.
 

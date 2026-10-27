@@ -1,7 +1,7 @@
 ---
 layout: automation
 date: 2025-11-30
-title: Safer automatic garage closing
+title: Auto close a garage door safely after an alert
 description: Close the garage door safely. Get an alert first, keep people in control, and close unattended only with equipment built for it and entrapment protection.
 keywords: garage door left open, garage close alert, unattended garage closing, garage door safety, tilt sensor
 last_modified_at: 2026-09-21
@@ -27,7 +27,7 @@ products:
 
 {% include content-hero.html src="/assets/img/social/recipes/security/garage-auto-close.svg" alt="A garage door closes only after presence, obstruction, and timing safety checks" %}
 
-The house reports a garage door left open, and closing remains manual unless the installed opener and controller explicitly support safe unattended operation.
+Get an alert when the garage door is left open, then close it yourself. Close it automatically only if your opener and controller are built and approved for unattended closing.
 
 **Best for:** Open-door reminders, clear status, and manufacturer-approved closing equipment with working photo-eyes, warnings, and normal wall controls.
 
@@ -37,7 +37,6 @@ The house reports a garage door left open, and closing remains manual unless the
 
 An open garage door is easy to forget, but an unattended close moves a large door where people, pets, vehicles, and objects may be present. Presence and motion signals are useful for deciding who should receive an alert. They are not safety devices.
 
-Start with an alert. Add unattended closing only through equipment designed for that operation, installed and maintained exactly as required.
 
 ## Logic
 
