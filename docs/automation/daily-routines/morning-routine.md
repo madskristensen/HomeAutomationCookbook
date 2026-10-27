@@ -3,7 +3,7 @@ layout: automation
 redirect_from:
   - /automation/presence/morning-routine.html
 date: 2025-11-28
-title: Start a quiet good-morning routine
+title: Smart home morning routine and scenes
 description: Start the day with lights only where you need them. A morning routine begins when you choose and leaves everyone still sleeping undisturbed.
 keywords: good morning routine, morning lighting automation, quiet wake-up automation, smart home morning, family morning routine
 last_modified_at: 2026-09-21
@@ -29,7 +29,7 @@ products:
 
 {% include content-hero.html src="/assets/img/social/recipes/daily-routines/morning-routine.svg" alt="A quiet morning routine gradually coordinates lighting, comfort, and reminders" %}
 
-Use one intentional signal to leave Night mode, light the route someone needs, and prepare approved comfort settings without waking everyone else.
+A good smart home morning routine starts from one deliberate signal. It leaves Night mode, lights the path someone needs, and readies comfort settings without waking everyone else.
 
 **Best for:** Households that want a repeatable morning start but have different schedules, children, guests, or occasional early wake-ups.
 
