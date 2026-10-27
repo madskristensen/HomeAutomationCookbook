@@ -2,6 +2,7 @@
 """Build the Starter House Setup Guide v2 (review copy). Usage: python3 build_guide.py"""
 import pathlib, subprocess, sys
 from rp import recipe_page
+from covers import STARTER
 HERE = pathlib.Path(__file__).resolve().parent
 OUT = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else HERE.parent / "hac-starter-house-setup-guide-v2.pdf"
 W = "www.homeautomationcookbook.com"
@@ -19,12 +20,14 @@ MT = "Matter over Wi-Fi. Works with most hubs that support Matter, including App
 ALT_PLUG = ("Alternative for Apple Home, Google Home or Alexa: any Matter or Zigbee smart plug with energy monitoring that your hub supports. "
             "Check that it is rated for your washer's motor load. Many small plugs are not.")
 
-def step_recipe(n, cat, title, lede, steps, test, tipt, path, extra=""):
+def step_recipe(n, cat, title, lede, steps, test, tipt, path, extra="", split=False):
+    tail = (f'<div class="callout"><b class="lbl">Test it</b><p>{test}</p></div>' + tip(tipt) +
+            '<p class="small">You have got this. If the test fails, change one setting at a time and try again.</p>')
+    if split: tail, extra = extra + tail, ""
     body = ('<h4>Why this matters</h4><p>' + lede[1] + '</p>' + extra +
             '<h4>Steps</h4><ol class="steps">' + "".join(f"<li>{s}</li>" for s in steps) + "</ol>" +
-            f'<div class="callout win"><b class="lbl">Test it</b><p>{test}</p></div>' + tip(tipt) +
-            '<p class="small">You have got this. If the test fails, change one setting at a time and try again.</p>')
-    return recipe_page(cat, f"Walkthrough {n} of 11", title, lede[0], body, path, f"w{n}")
+            ("" if split else tail))
+    return recipe_page(cat, f"Walkthrough {n} of 11", title, lede[0], body, path, f"w{n}", tail if split else None)
 
 R = []
 R.append(step_recipe(1, "Lighting", "Lights on motion",
@@ -81,7 +84,7 @@ R.append(step_recipe(4, "Appliances", "Washer done alert",
  "Run a normal load and watch your phone. You should get exactly one alert, a few minutes after the washer stops.",
  "Some hubs have an app that tracks running and finished states for you. Appliance Cycle Monitor on Hubitat is one example.",
  "/automation/appliances/washer-done-notification.html",
- warn("The Zooz ZEN15 is Z-Wave. It needs a hub with a Z-Wave radio and will not work with Apple Home, Google Home or Alexa. " + ALT_PLUG, "Check your hub")))
+ warn("The Zooz ZEN15 is Z-Wave. It needs a hub with a Z-Wave radio and will not work with Apple Home, Google Home or Alexa. " + ALT_PLUG, "Check your hub"), split=True))
 R.append(step_recipe(5, "Appliances", "Dryer done alert",
  ("One alert when the dryer stops shaking for good.",
   "Dryers pause and tumble during cooldown. Measuring one load first is what keeps this to a single, useful alert."),
@@ -183,7 +186,7 @@ shop = "".join(f"<tr><td><b>{a}</b></td><td>{b}</td><td>{c}</td><td class='n'>{d
 
 H = f'''<!doctype html><html><head><meta charset="utf-8"><title>Starter house setup guide</title>
 <link rel="stylesheet" href="hac-print.css"></head><body>
-<section class="cover"><img src="cover-starter.svg"></section>
+{STARTER}
 
 <section class="chapter">{head("Before you start", "Welcome")}
 <p class="lede">You're starting this the right way.</p>
@@ -222,7 +225,7 @@ H = f'''<!doctype html><html><head><meta charset="utf-8"><title>Starter house se
 </section>
 
 <section class="chapter">{head("Chapter 4", "The four-weekend plan", "One small project per weekend. Each one ends with something that works, so you build confidence as you go.")}
-<table><thead><tr><th>When</th><th>Room</th><th>Devices</th><th>Recipes</th></tr></thead><tbody>
+<table class="plan"><thead><tr><th>When</th><th>Room</th><th>Devices</th><th>Recipes</th></tr></thead><tbody>
 <tr><td><b>Weekend 1</b></td><td>Hallway or laundry lights</td><td>Switch, motion sensor</td><td>Lights on motion. A week later, lights off after motion.</td></tr>
 <tr><td><b>Weekend 2</b></td><td>Laundry</td><td>Washer power-monitoring plug (Zooz ZEN15), vibration sensor</td><td>Washer done, dryer done. Log three loads first.</td></tr>
 <tr><td><b>Weekend 3</b></td><td>Bathroom</td><td>Multisensor, dimmer</td><td>Bathroom night-light</td></tr>
@@ -251,7 +254,7 @@ H = f'''<!doctype html><html><head><meta charset="utf-8"><title>Starter house se
 <div class="box"><h3>Kitchen and water</h3>{chk("Leak sensor under the water heater","Leak sensor behind the washer or dishwasher","Optional: leak sensor under the kitchen sink","Wet towel test done for every sensor","Two people received the alert")}</div>
 <div class="box"><h3>Closet, pantry, and garage</h3>{chk("Contact sensor parts lined up","Door tested ten times in a row","Tilt sensor on the top garage panel","10 minute open alert tested","Bedtime garage check tested")}</div>
 </div>
-<div class="box" style="margin-top:16px"><h3>Before you call it done</h3>{chk("Low-battery alert tested with a weak battery","Away mode tested with everyone gone and with one person home","Night mode tested by hand and by the backup rule","Someone else in the house can work the lights without the app","Device names and thresholds written on the notes page")}</div>
+<div class="box box-wide"><h3>Before you call it done</h3>{chk("Low-battery alert tested with a weak battery","Away mode tested with everyone gone and with one person home","Night mode tested by hand and by the backup rule","Someone else in the house can work the lights without the app","Device names and thresholds written on the notes page")}</div>
 </section>
 
 <section class="chapter">{head("Chapter 7", "Step-by-step walkthroughs", "Eleven recipes, one per page. Each one has the same shape: a trigger, conditions, and actions.")}
@@ -266,7 +269,7 @@ H = f'''<!doctype html><html><head><meta charset="utf-8"><title>Starter house se
 <p>Modes make every later recipe simpler. A rule can check one mode instead of five conditions.</p>
 <p>Build Away mode and the bedtime routine (walkthroughs 10 and 11) only after the room recipes have run well for a few weeks.</p>
 {win("Four modes that every rule can lean on, and a house that knows when you are home, away or asleep.")}
-<p class="kicker" style="margin-top:40px">Chapter 9</p><h2>What to skip in the first month</h2><div class="rule"></div>
+</section><section class="chapter"><p class="kicker">Chapter 9</p><h2>What to skip in the first month</h2><div class="rule"></div>
 <p class="lede">These are great later. Skipping them now keeps your first month safe and stress-free.</p>
 <ol class="rules">
 <li><b>Smart locks and auto-closing garage doors.</b>Get alerts working first.</li>
