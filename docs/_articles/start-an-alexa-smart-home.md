@@ -63,7 +63,7 @@ In the Alexa app, go to **More**, then **Routines**, then the plus button. Choos
 - **A smart home device**, such as a motion sensor detecting motion or a door sensor opening.
 - **Your location**, when your phone arrives at or leaves a place. This uses the location of the phone with the Alexa app, so it follows one person, not the whole family.
 
-You can also add a **Wait** step between actions, for example turning a hallway light on and then off again a few minutes later.
+You can also pause between actions. Tap **Add action**, then **Wait**, and choose how long, up to 4 hours. For example, turn a hallway light on, wait a few minutes, then turn it off again.
 
 A good first routine is a schedule that turns on a lamp before you usually get home. It runs at a time you choose, so it is easy to check.
 
