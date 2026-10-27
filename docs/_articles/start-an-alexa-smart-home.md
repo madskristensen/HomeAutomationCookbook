@@ -37,7 +37,7 @@ According to Amazon's developer documentation, these Echo models have a built-in
 
 A regular Echo Dot or Echo Pop can still add Matter devices over Wi-Fi, but it is not a Zigbee hub. Some eero Wi-Fi routers, which Amazon also makes, have the same hub features.
 
-**Watch out for Z-Wave.** Z-Wave is another common smart home radio. No Echo is a Z-Wave hub, and Amazon does not list Z-Wave on its supported device pages. A Z-Wave switch or sensor will not pair with an Echo on its own. It needs a separate hub, such as Hubitat or SmartThings, that then connects to Alexa.
+**Watch out for Z-Wave.** Z-Wave is another common smart home radio. Amazon lists Zigbee, Matter, and Thread as the built-in options, not Z-Wave, so Z-Wave devices need a hub like Hubitat or SmartThings that then connects to Alexa.
 
 **What will be working:** you will know whether your Echo can be your hub, or whether to shop for devices that connect over Wi-Fi or Matter instead.
 
@@ -56,12 +56,12 @@ Before you buy, check the box for "Works with Alexa," Zigbee, or Matter, and mat
 
 A routine is how Alexa automates things for you. Each routine has a **When** part, the event that starts it, and one or more actions that Alexa then runs.
 
-In the Alexa app, go to **More**, then **Routines**, then the plus button. Choose what starts the routine, add an action, and save. Common starting events are:
+In the Alexa app, go to **More**, then **Routines**, then the plus button. Menu names can differ slightly depending on your app version. Choose what starts the routine, add an action, and save. Common starting events are:
 
 - **A phrase you say**, such as "Alexa, good night."
 - **A schedule**, such as every weekday at 6:30 in the evening.
 - **A smart home device**, such as a motion sensor detecting motion or a door sensor opening.
-- **Your location**, when your phone arrives at or leaves a place. This uses the location of the phone with the Alexa app, so it follows one person, not the whole family.
+- **Your location**, when your phone arrives at or leaves a place. Location triggers use the phone with the Alexa app and location turned on. Check how it works for other people in your household.
 
 You can also pause between actions. Tap **Add action**, then **Wait**, and choose how long, up to 4 hours. For example, turn a hallway light on, wait a few minutes, then turn it off again.
 
