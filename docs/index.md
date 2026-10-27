@@ -133,3 +133,5 @@ description: Practical home automation recipes for an ordinary family house. Get
     <p><a href="/about.html">Learn how I test ideas</a> or <a href="/platforms/">compare platform guides</a>.</p>
   </div>
 </section>
+
+<div class="home-newsletter">{% include newsletter-signup.html %}</div>

@@ -2,12 +2,12 @@
 layout: default
 title: Privacy policy
 description: Learn how Home Automation Cookbook uses Cloudflare Web Analytics and handles visitor and contribution data.
-last_modified_at: 2026-10-06
+last_modified_at: 2026-10-27
 ---
 
 # Privacy policy
 
-**Last updated:** October 6, 2026
+**Last updated:** October 27, 2026
 
 Home Automation Cookbook is committed to protecting your privacy. This policy explains how the site handles visitor data.
 
@@ -41,6 +41,10 @@ If you contribute to this project on GitHub:
 - Your GitHub username and contributions are publicly visible
 - GitHub's privacy policy applies to your use of their platform
 - You can review GitHub's privacy policy at [github.com/privacy](https://github.com/site/privacy)
+
+## Newsletter
+
+If you subscribe to the newsletter, your email address is handled by [Buttondown](https://buttondown.com/legal/privacy), our newsletter provider. It is used only to send the newsletter, and you can unsubscribe from any email.
 
 ## Third-party links
 

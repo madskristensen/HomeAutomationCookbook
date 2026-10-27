@@ -1,0 +1,15 @@
+{%- comment -%}
+Quiet newsletter signup (Buttondown embed form). Plain HTML form post, no JS.
+Buttondown redirects to /newsletter/thanks/ (newsletter setting subscription_redirect_url).
+Signups are tagged "website"; Buttondown also stores the referring page URL.
+{%- endcomment -%}
+<aside class="newsletter-signup" aria-labelledby="newsletter-signup-heading">
+  <h2 id="newsletter-signup-heading" class="newsletter-signup-heading">One useful automation a month</h2>
+  <p class="newsletter-signup-text">A seasonal recipe, a real reader question, and one device explained. No spam, unsubscribe anytime.</p>
+  <form class="newsletter-signup-form" action="https://buttondown.com/api/emails/embed-subscribe/home-automation-cookbook" method="post">
+    <label for="newsletter-email" class="visually-hidden">Email address</label>
+    <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" autocomplete="email" required>
+    <input type="hidden" name="tag" value="website">
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+  </form>
+</aside>
