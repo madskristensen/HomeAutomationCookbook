@@ -82,6 +82,8 @@ navigation:
         url: /automation/lighting/
       - title: Daily routines
         url: /automation/daily-routines/
+      - title: Smart home routines
+        url: /automation/smart-home-routines/
       - title: Climate and comfort
         url: /automation/climate/
       - title: Entertainment
