@@ -16,6 +16,8 @@ Alexa automation means using Alexa routines to run your smart home for you, from
 
 **Not for:** Treating every integration as local, building safety-critical rules around uncertain device state, or making voice the only way to use an ordinary household control.
 
+New to Alexa? Start with the beginner steps in [Start an Alexa smart home](/articles/start-an-alexa-smart-home.html).
+
 ## My experience boundary
 
 Alexa was my first home automation platform. I started with smart light bulbs, then bought an Echo with a built-in Zigbee hub and expanded into smart light switches. That progression worked well for straightforward lighting and voice control.
