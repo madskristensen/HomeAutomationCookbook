@@ -3,7 +3,7 @@ layout: automation
 redirect_from:
   - /automation/presence/away-mode.html
 date: 2025-11-28
-title: Away mode automation for security and energy
+title: Away mode automation for security
 description: Leave without running through a checklist. Switch the home to Away once it is confirmed empty, then adjust lights, climate, and security for you.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
 last_modified_at: 2026-10-25
