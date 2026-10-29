@@ -101,3 +101,5 @@ Alexa Guard, the old built-in "away" listening feature, was discontinued in Janu
 ## Where to go next
 
 When the basics feel easy, the [Alexa automation guide](/platforms/alexa.html) covers what routines can and cannot do, the local and cloud limits, and more recipes that fit Alexa.
+
+Once your first routines run smoothly, [Get the most out of your Alexa smart home](/articles/get-the-most-out-of-your-alexa-smart-home.html) covers room groups, alarm-started mornings, Away Lighting, and when to add a hub.
