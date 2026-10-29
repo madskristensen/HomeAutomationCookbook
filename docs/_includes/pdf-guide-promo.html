@@ -6,16 +6,18 @@ or "buy" (starter guide buy box).
 {%- assign promo_variant = include.variant | default: "card" -%}
 {%- assign promo_url = "/shop/" | relative_url -%}
 {%- assign promo_cover = "/assets/img/guides/starter-pdf-cover.jpg" -%}
+{%- assign promo_alt = "Cover of the printable smart home setup guide PDF" -%}
 {%- assign promo_url_head = page.url | slice: 0, 12 -%}
 {%- if promo_variant == "strip" -%}
   {%- if promo_url_head == "/automation/" or page.layout == "automation" or page.layout == "automation-category" -%}
     {%- assign promo_cover = "/assets/img/guides/recipe-pdf-cover.jpg" -%}
+    {%- assign promo_alt = "Cover of the printable home automation recipe cards PDF" -%}
     {%- assign promo_recipes = true -%}
   {%- endif -%}
 {%- endif -%}
 <aside class="pdf-promo pdf-promo--{{ promo_variant }}" aria-label="Printable guides">
   <a class="pdf-promo-thumb" href="{{ promo_url }}" tabindex="-1" aria-hidden="true">
-    {%- include responsive-img.html src=promo_cover alt="" width="640" height="829" sizes="96px" loading="lazy" -%}
+    {%- include responsive-img.html src=promo_cover alt=promo_alt width="640" height="829" sizes="96px" loading="lazy" -%}
   </a>
   <div class="pdf-promo-body">
   {%- if promo_variant == "buy" -%}

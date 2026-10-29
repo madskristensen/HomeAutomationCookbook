@@ -8,7 +8,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
 
-    {% seo %}
+{%- comment -%} Drop the site name suffix when the full title would pass 70 characters. {%- endcomment -%}
+    {%- capture seo_tags -%}{% seo %}{%- endcapture -%}
+    {%- assign seo_title = seo_tags | split: "<title>" | last | split: "</title>" | first -%}
+    {%- if seo_title.size > 70 and page.title -%}
+      {%- capture short_title -%}{{ page.title | escape }}{%- endcapture -%}
+      {%- assign seo_tags = seo_tags | replace: seo_title, short_title -%}
+    {%- endif %}
+    {{ seo_tags }}
     {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="max-image-preview:large">{% endif %}
     <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
     <meta name="twitter:image:alt" content="{{ page.image_alt | default: page.title | default: site.title | escape }}">
