@@ -78,6 +78,9 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Check alt text and title length
+        working-directory: ${{ github.workspace }}
+        run: python3 script/check-seo.py docs/_site
       - name: Publish capped image masters
         working-directory: ${{ github.workspace }}
         run: python3 script/render-image-variants.py --publish-site
