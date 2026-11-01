@@ -1,7 +1,7 @@
 ---
 layout: guide
-title: "Alexa automation: routines, limits, and recipes that work"
-description: Learn what Alexa automation can do. Set up routines for lights and sensors, see the honest local and cloud limits, and find recipes that work with Alexa.
+title: Alexa home automation: routines, limits, and recipes
+description: Alexa home automation explained. Set up Amazon Echo routines for lights and sensors, see the honest local and cloud limits, and find recipes that work with Alexa.
 last_modified_at: 2026-10-26
 image: /assets/img/social/platform-alexa.png
 ---
