@@ -16,7 +16,7 @@ faqs:
     answer: Reposition the sensor, require sustained vibration before marking the dryer as running, and test washer-only cycles before trusting the alert.
 products:
   - job: "Detect dryer vibration"
-    body: "A battery vibration sensor mounted on a cool, fixed exterior panel."
+    body: "A battery vibration sensor mounted on a cool, fixed exterior panel. See [vibration sensing gear](/getting-started/device-guide.html#vibration-sensing) for options."
   - job: "Clear the waiting-laundry state"
     body: "A manual dashboard or phone action. Do not assume one sensor can reliably detect both vibration and door position."
 tags: [appliances, laundry, notifications]
