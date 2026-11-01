@@ -8,13 +8,21 @@ Signups are tagged "website"; Buttondown also stores the referring page URL.
 {%- if page.cta_category -%}{%- assign nl_cat = page.cta_category -%}{%- elsif nl_head != "/automation/" -%}{%- assign nl_cat = nil -%}{%- endif -%}
 {%- assign nl_copy = site.data.cta[nl_cat] -%}
 <aside class="newsletter-signup" aria-labelledby="newsletter-signup-heading">
-  <h2 id="newsletter-signup-heading" class="newsletter-signup-heading">Get one new recipe a month</h2>
-  <p class="newsletter-signup-text">{% if page.cta_newsletter %}{{ page.cta_newsletter }}{% elsif nl_copy %}{{ nl_copy.newsletter }} No spam.{% else %}One short email a month with a seasonal recipe you can set up in an evening, a real reader question answered, and one device explained. No spam.{% endif %}</p>
-  {% if site.data.cta.freebie %}<p class="newsletter-signup-text"><strong>{{ site.data.cta.freebie }}</strong></p>
-  {% endif %}<form class="newsletter-signup-form" action="https://buttondown.com/api/emails/embed-subscribe/home-automation-cookbook" method="post">
+  <div class="newsletter-signup-intro">
+    <picture class="newsletter-signup-cover">
+      <source type="image/webp" srcset="/assets/img/guides/free-pdf-cover-192.webp">
+      <img src="/assets/img/guides/free-pdf-cover-192.jpg" alt="Cover of the free 10 starter recipes printable PDF from Home Automation Cookbook" width="96" height="125" loading="lazy">
+    </picture>
+    <div>
+      <h2 id="newsletter-signup-heading" class="newsletter-signup-heading">Get 10 starter recipes free</h2>
+      <p class="newsletter-signup-text">A printable PDF of the 10 most popular recipes, one page each.{% if page.cta_newsletter %} {{ page.cta_newsletter }}{% elsif nl_copy.pdf_note %} {{ nl_copy.pdf_note }}{% endif %}</p>
+      <p class="newsletter-signup-text newsletter-signup-small">Then one new recipe a month by email. No spam.</p>
+    </div>
+  </div>
+  <form class="newsletter-signup-form" action="https://buttondown.com/api/emails/embed-subscribe/home-automation-cookbook" method="post">
     <label for="newsletter-email" class="visually-hidden">Email address</label>
     <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" autocomplete="email" required>
     <input type="hidden" name="tag" value="website">
-    <button type="submit" class="btn btn-primary">Send me the monthly recipe</button>
+    <button type="submit" class="btn btn-primary">Send me the free PDF</button>
   </form>
 </aside>

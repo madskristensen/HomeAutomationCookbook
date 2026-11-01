@@ -1,5 +1,5 @@
 ---
-cta_newsletter: "Sensors placed? Put them to work. Get one short email a month with a seasonal recipe you can set up in an evening, plus a reader question answered and one device explained. No spam."
+cta_newsletter: "Includes lights on with motion and lights off after motion, so your sensors have something to do."
 cta_category: lighting
 layout: guide
 title: Motion sensor placement guide

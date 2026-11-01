@@ -1,5 +1,5 @@
 ---
-cta_newsletter: "Never wonder about the garage again, then fix the next nagging thing. Get one short email a month with a seasonal recipe you can set up in an evening, plus a reader question answered and one device explained. No spam."
+cta_newsletter: "This recipe is one of the 10, along with the fake dog deterrent and the stove left on alert."
 layout: automation
 date: 2025-11-29
 title: "Garage door left open alarm: get a phone alert"
