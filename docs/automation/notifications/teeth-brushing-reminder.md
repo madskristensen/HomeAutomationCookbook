@@ -124,6 +124,7 @@ The Ezlo 800 plug picks up the charger draw in our house. Chargers differ, thoug
 
 ## Related recipes
 
+- [All kids and family routines](/articles/smart-home-automations-for-kids.html)
 - [Bedtime countdown for kids on any smart speaker](/automation/notifications/bedtime-countdown.html), which asks kids to brush first
 - [School morning countdown on any smart speaker](/automation/notifications/school-morning-countdown.html)
 - [Build a family-safe bedtime routine](/automation/daily-routines/bedtime-routine.html)

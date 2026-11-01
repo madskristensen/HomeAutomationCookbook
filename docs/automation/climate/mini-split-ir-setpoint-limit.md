@@ -21,7 +21,7 @@ products:
     body: "No personally verified recommendation on this page. Use a thermometer or sensor you have compared with a known reading, placed where people actually are. For a room sensor I have used on its own, see the [cold-room alert](/automation/climate/room-heater-maintain-temp.html). That does not mean it was tested here with an infrared blaster."
   - job: "Control the unit by hand"
     body: "The remote that came with the mini-split or window unit. Keep it in the room. If the unit itself has a limit or lock, set that too, so the hub is not the only place the cap exists."
-tags: [climate, kids]
+tags: [climate]
 ---
 
 # Keep a mini-split or window unit inside a hard setpoint limit
