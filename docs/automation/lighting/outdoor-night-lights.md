@@ -18,7 +18,7 @@ faqs:
     answer: A local hub may continue running the schedule, but the outdoor switch or plug must remain easy to control manually.
 products:
   - job: "Control outdoor plug-in lighting"
-    body: "[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8/ref=nosim?tag=madsk0f-20). Use only with an outdoor-rated fixture and receptacle."
+    body: "[Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC/ref=nosim?tag=madsk0f-20). Use only with an outdoor-rated fixture and receptacle."
   - job: "Switch a fixed outdoor circuit"
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable. Confirm the switch and installation suit the circuit."
 tags: [lighting, outdoor]

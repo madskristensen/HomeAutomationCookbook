@@ -21,7 +21,7 @@ products:
   - job: "Start bedtime"
     body: "A \"Good night\" phrase or manual scene control. The final trigger should be intentional and available without an app."
   - job: "Dim selected lights"
-    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Wall paddles remain normal controls before, during, and after the routine."
+    body: "[UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN/ref=nosim?tag=madsk0f-20). Wall paddles remain normal controls before, during, and after the routine."
   - job: "Apply an approved sleep setting"
     body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Respect manual holds, safety limits, and the open-window pause recipe."
   - job: "Report open doors or windows"

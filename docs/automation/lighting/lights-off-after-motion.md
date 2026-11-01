@@ -18,9 +18,9 @@ faqs:
     answer: It should. Treat a manual change as an explicit choice and avoid turning the light back off immediately.
 products:
   - job: "Detect fast entry motion"
-    body: "[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20). A PIR needs a conservative timer for people who sit still."
+    body: "[Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB/ref=nosim?tag=madsk0f-20). A PIR needs a conservative timer for people who sit still."
   - job: "Dim a fixed light"
-    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable."
+    body: "[UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable."
   - job: "Switch a fixed light on or off"
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable."
 tags: [lighting, motion]

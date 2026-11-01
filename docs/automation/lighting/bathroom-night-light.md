@@ -20,7 +20,7 @@ products:
   - job: "Detect bathroom motion, humidity, temperature, and light"
     body: "[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20). Use the extra readings where they solve a real bathroom problem."
   - job: "Dim a fixed light"
-    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. The physical paddle must remain usable."
+    body: "[UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN/ref=nosim?tag=madsk0f-20). Verify hub compatibility. The physical paddle must remain usable."
 tags: [lighting, bathroom, bedtime, motion]
 ---
 

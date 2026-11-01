@@ -17,7 +17,7 @@ faqs:
     answer: Yes, using a single bedside lamp facing away from the partner's side of the bed, and keeping the maximum brightness lower, reduces the effect on someone who is not meant to wake up yet.
 products:
   - job: "Gradually brighten the light"
-    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Confirm the switch or bulb supports a low enough minimum brightness and a smooth transition, not just stepped levels."
+    body: "[UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN/ref=nosim?tag=madsk0f-20). Confirm the switch or bulb supports a low enough minimum brightness and a smooth transition, not just stepped levels."
 tags: [lighting, morning]
 ---
 

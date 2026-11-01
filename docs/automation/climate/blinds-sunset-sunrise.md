@@ -16,7 +16,7 @@ faqs:
     answer: The blinds' own remote, wall switch, or app pairing must still open and close them manually while the automation is unavailable.
 products:
   - job: "Motorize existing blinds or shades"
-    body: "I do not have automated blinds installed yet, so this is not a hands-on recommendation. If I were buying one, I would start with [SmartWings motorized roller shades](https://www.amazon.com/dp/B09M5R2PCB/ref=nosim?tag=madsk0f-20). That link is one configured listing, blackout Essential Grey in a specific size, not a window I have measured. Confirm the physical remote, wand, or wall control still works after it is installed."
+    body: "I do not have automated blinds installed yet, so this is not a hands-on recommendation. Pick motorized shades that your hub supports and that fit your measured window. Confirm the physical remote, wand, or wall control still works after it is installed."
 tags: [climate, blinds]
 ---
 

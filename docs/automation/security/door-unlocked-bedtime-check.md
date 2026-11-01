@@ -16,7 +16,7 @@ faqs:
     answer: Report the state as unknown and ask for a manual check. Never treat missing data or an old locked event as confirmation that the door is secure.
 products:
   - job: "Report lock state"
-    body: "[Kwikset HomeConnect 620 Z-Wave Long Range keypad lock](https://www.amazon.com/dp/B0DWGF32GD/ref=nosim?tag=madsk0f-20). This is the lock I use, and it has been reliable here. Confirm the hub reports locked, unlocked, jammed, and battery. Keep a physical key."
+    body: "A Z-Wave or Zigbee smart lock that your hub supports. Confirm the hub reports locked, unlocked, jammed, and battery. Keep a physical key."
   - job: "Report door position"
     body: "A compatible contact sensor can report open or closed when an automatic lock command is being considered. It does not prove the lock is engaged."
 tags: [security, bedtime, notifications]
