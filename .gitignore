@@ -49,3 +49,4 @@ docs/assets/js/*.js
 docs/_data/css.yml
 docs/_data/js.yml
 docs/_data/shell.yml
+__pycache__/
