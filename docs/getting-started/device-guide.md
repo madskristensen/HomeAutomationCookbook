@@ -48,7 +48,7 @@ Amazon product links are affiliate links, and I earn from qualifying purchases. 
 .dm-legend caption{text-align:left;font-weight:600;padding-bottom:.25rem}
 .dm-legend th,.dm-legend td{border:1px solid #e0e0e0;padding:.3rem .5rem;text-align:left;vertical-align:top}
 .dm-legend .y{color:#1d6b33;font-weight:600}.dm-legend .n{color:#8a3b12}.dm-legend .b{color:#7a5a00;font-weight:600}
-.dm-job{border-top:1px solid #e0e0e0;padding:.75rem 0}.dm-job h2{margin:.25rem 0}.dm-use{color:#5d6d75;margin:0 0 .5rem}
+.dm-job{padding:.75rem 0}.dm-job h2{margin:.25rem 0}.dm-use{color:#5d6d75;margin:0 0 .5rem}
 .dm-pair{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
 .dm-opt{border:1px solid #e6e9ea;border-radius:8px;padding:.5rem .75rem;overflow-wrap:anywhere}
 .dm-opt p{margin:.2rem 0}.dm-tag{font-size:.8rem;font-weight:600;text-transform:uppercase;color:#5d6d75}
