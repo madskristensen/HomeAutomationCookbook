@@ -105,6 +105,7 @@ For which device fits which appliance, see [best power-monitoring plugs for wash
 | Job | Good enough | Never think about it | Guest-proof note |
 |---|---|---|---|
 | Detect whether a TV is on | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20) | [Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY/ref=nosim?tag=madsk0f-20) - a heavier-duty, hardwired-capable power-metering switch for a higher-draw load. | Use the power reading as a signal only. Keep the TV's remote and normal power controls unchanged. |
+| Detect whether a small appliance is on, on a Zigbee hub | [THIRDREALITY Zigbee Smart Plug with power monitoring](https://www.amazon.com/dp/B0BPY2KRHH/ref=nosim?tag=madsk0f-20). A cheaper Zigbee pick. It works with Homey, Home Assistant, Hubitat, SmartThings, and Echo models with a built-in Zigbee hub. | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20) for a Z-Wave hub. | Check that your hub shows watts for the plug before you build on it. |
 
 ### Leaks and safety
 
