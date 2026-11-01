@@ -15,10 +15,10 @@ faqs:
   - question: Does charging prove the kids brushed well?
     answer: No. It only shows the brush went back on the base. It is a good sign that brushing happened, not proof of how well.
   - question: What if my plug never sees the charger draw power?
-    answer: Some chargers draw very little power, and some plugs cannot report that small amount. Test your own charger first. If the plug shows no change, try another plug or use a Wi-Fi smart toothbrush instead.
+    answer: The Ezlo 800 plug picks up the charger draw in our house. Chargers differ, though, and some draw very little power. Test your own charger first. If the plug shows no change, try another plug or use a Wi-Fi smart toothbrush instead.
 products:
   - job: "Measure when the toothbrush starts charging"
-    body: "[Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20). It is the power-monitoring plug on the [device guide](/getting-started/device-guide.html#power-monitoring). Test it with your own charger first."
+    body: "[Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20). It is the power-monitoring plug on the [device guide](/getting-started/device-guide.html#power-monitoring), and it picks up the charger draw in our house. Test it with your own charger first."
 tags: [kids, bedtime, reminders, power-monitoring]
 ---
 
@@ -120,7 +120,7 @@ No. It only shows the brush went back on the base. It is a good sign that brushi
 
 ### What if my plug never sees the charger draw power?
 
-Some chargers draw very little power, and some plugs cannot report that small amount. Test your own charger first. If the plug shows no change, try another plug or use a Wi-Fi smart toothbrush instead.
+The Ezlo 800 plug picks up the charger draw in our house. Chargers differ, though, and some draw very little power. Test your own charger first. If the plug shows no change, try another plug or use a Wi-Fi smart toothbrush instead.
 
 ## Related recipes
 

@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "Get the most out of your Alexa smart home"
-description: Make Alexa house control easier. Put each Echo in a room group, start routines from alarms and modes, use Away Lighting, and add a hub when routines run out.
+description: Make Alexa house control easier. Put each Echo in a room group, start routines on a schedule and from modes, use Away Lighting, and add a hub when routines run out.
 date: 2026-10-29
 last_modified_at: 2026-10-29
 image: /assets/img/social/platform-alexa.png
@@ -11,7 +11,7 @@ image: /assets/img/social/platform-alexa.png
 
 {% include content-hero.html src="/assets/img/social/platform-alexa.svg" alt="Alexa connects voice control with smart bulbs, a Zigbee hub, and smart switches" %}
 
-To get more out of Alexa, put each Echo in a room group so "Alexa, lights on" just works, start routines from alarms, sensors, and Home and Away modes instead of only your voice, and add a hub like Hubitat or SmartThings when you need logic Alexa routines cannot express. Each idea below is small, and you can try them one at a time.
+To get more out of Alexa, put each Echo in a room group so "Alexa, lights on" just works, start routines from a schedule, sensors, and Home and Away modes instead of only your voice, and add a hub like Hubitat or SmartThings when you need logic Alexa routines cannot express. Each idea below is small, and you can try them one at a time.
 
 This guide is for when the basics already work. If you are just starting, begin with [Start an Alexa smart home](/articles/start-an-alexa-smart-home.html) first.
 
@@ -28,13 +28,13 @@ Two things to know, from Amazon's help pages:
 
 **What will be working:** in each room, "Alexa, lights on" and "Alexa, lights off" control the lights in that room and nowhere else.
 
-## 2. Let your alarm start the morning
+## 2. Start the morning on a schedule
 
-Alexa routines can start when an alarm is dismissed. In the Alexa app, go to **More**, then **Routines**, tap the plus button, and choose **Alarms** under **When this happens**. You can limit it to certain days and times, so it only runs on weekday mornings.
+Alexa routines can start at a set time. In the Alexa app, go to **More**, then **Routines**, tap the plus button, and choose **Schedule** under **When this happens**. Pick the time and the days, so it only runs on weekday mornings.
 
-Dismissing the alarm with "Alexa, stop" or the button on the Echo starts the routine. Snoozing does not. A good first version turns on one bedroom or hallway light at a soft level and leaves the rest of the house alone.
+A good first version turns on one bedroom or hallway light at a soft level and leaves the rest of the house alone.
 
-For a gentler wake-up, the [gradual wake-up lighting](/automation/lighting/wake-up-lights.html) recipe brightens a light slowly before the alarm instead of after it. The [morning routine](/automation/daily-routines/morning-routine.html) recipe shows how to light only the path someone needs while others sleep.
+For a gentler wake-up, the [gradual wake-up lighting](/automation/lighting/wake-up-lights.html) recipe brightens a light slowly before you wake. The [morning routine](/automation/daily-routines/morning-routine.html) recipe shows how to light only the path someone needs while others sleep.
 
 ## 3. Use Home and Away modes and Away Lighting
 

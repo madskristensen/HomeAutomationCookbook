@@ -18,7 +18,7 @@ To know when the garage door is left open, add a sensor that reports open and cl
 
 | Your setup | Good fit | Mount it |
 |---|---|---|
-| Sectional door that rolls up | Tilt sensor | On the inside of the top panel |
+| Sectional door that rolls up | Tilt sensor | On the inside of the door, top panel or lower |
 | Door that swings up in one piece | Tilt sensor | On the door, where it tips past level when open |
 | You want app control too | Smart garage controller | Wired to the opener, as its instructions say |
 | Side door or other hinged door | Contact sensor | On the frame, magnet on the door |
@@ -29,7 +29,7 @@ Pick one that works with your hub or app. Check the listing for the radio type y
 
 ### Tilt sensor
 
-A tilt sensor reports open when it tips past a set angle. On a sectional door, the top panel goes from upright to flat as the door opens, so that panel is where it belongs. It does not touch the opener. It runs on a battery.
+A tilt sensor reports open when it tips past a set angle. It works anywhere on the door, on the top panel or halfway down. Height only changes how far the door opens before it reports open. Mounted higher, it reports sooner. Mounted lower, the door must be nearly fully open. It does not touch the opener. It runs on a battery.
 
 ### Contact sensor
 
@@ -41,7 +41,7 @@ A controller connects to the opener. It reports the door state and can also open
 
 ## Where to mount it
 
-- **Tilt sensor:** the top door panel, on the inside, in the middle. Follow the arrow or orientation mark on the sensor.
+- **Tilt sensor:** anywhere on the inside of the door, from the top panel to halfway down. Higher reports open sooner. Lower reports open only when the door is nearly fully open. Follow the arrow or orientation mark on the sensor.
 - **Away from the rails and rollers:** nothing should hit it as the door moves.
 - **Within range of the hub:** a detached or far garage may need a repeater, such as a plugged-in device on the same radio type.
 - **Easy to reach:** you will change the battery someday.
@@ -50,7 +50,7 @@ A controller connects to the opener. It reports the door state and can also open
 
 1. Open the door all the way and check the state in your app.
 2. Close it and check again.
-3. Stop the door halfway. Note what it reports. A tilt sensor may say open or closed depending on the angle.
+3. Stop the door partway. Note when it starts to report open. That point depends on how high you mounted the sensor.
 4. Repeat a few times over a day, including in cold weather if you can.
 
 ## Then set the alert
@@ -74,7 +74,7 @@ No. A battery tilt sensor on the door is enough for an open-door alert. A smart 
 
 ### Where should a garage door tilt sensor go?
 
-On the inside of the top panel of a sectional door. That panel moves from upright to flat, so the sensor sees a clear change between open and closed.
+Anywhere on the inside of the door, from the top panel to halfway down. Height only changes how far the door opens before it reports open. Higher reports sooner. Lower needs the door nearly fully open.
 
 ### Can the sensor close the door for me?
 
