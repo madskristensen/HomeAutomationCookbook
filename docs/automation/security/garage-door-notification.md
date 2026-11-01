@@ -118,6 +118,7 @@ Set up a separate automation per door, since each can have its own sensor, its o
 
 ## Related recipes
 
+- [Garage door left open sensor: what to buy and where to mount it](/articles/garage-door-left-open-sensor.html)
 - [Close a garage safely after an open-door alert](/automation/security/garage-auto-close.html)
 - [Set up away mode](/automation/daily-routines/away-mode.html)
 - [Start a wind-down bedtime routine](/automation/daily-routines/bedtime-routine.html)

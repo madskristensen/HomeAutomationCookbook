@@ -101,6 +101,7 @@ Run it only in Away mode. You can further limit Away-mode playback to nighttime,
 
 ## Related recipes
 
+- [Do fake barking dog alarms work?](/articles/do-fake-barking-dog-alarms-work.html)
 - [Turn on away lights to look occupied](/automation/security/away-lights.html)
 - [Set up fire safety response](/automation/security/fire-safety.html)
 - [Set up away mode](/automation/daily-routines/away-mode.html)
