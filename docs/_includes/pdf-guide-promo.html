@@ -35,9 +35,9 @@ or "buy" (starter guide buy box).
     {%- if page.cta_shop -%}
     <p>{{ page.cta_shop }}</p>
     {%- elsif promo_copy -%}
-    <p>{{ promo_copy.shop_card | default: "The printable recipe cards cover all 61 recipes on the site, one page each." }} Keep them by the hub.</p>
+    <p>{{ promo_copy.shop_card | default: "The printable recipe cards cover 61 recipes from the site, one page each." }} Keep them by the hub.</p>
     {%- else -%}
-    <p>Liked this recipe? Get all 61 as one-page printable cards. Keep them by the hub and set up your next one without hunting through the site.</p>
+    <p>Liked this recipe? Get 61 of them as one-page printable cards. Keep them by the hub and set up your next one without hunting through the site.</p>
     {%- endif -%}
     <p><a class="btn btn-primary pdf-promo-cta" href="{{ promo_url }}">Recipe cards PDF, $12</a></p>
     {%- else -%}
@@ -48,7 +48,7 @@ or "buy" (starter guide buy box).
     {%- if page.cta_shop -%}
     <p>{{ page.cta_shop }}</p>
     {%- elsif promo_copy -%}
-    <p>{{ promo_copy.shop_card | default: "The printable recipe cards cover all 61 recipes on the site, one page each." }} New to this? There is a starter setup guide too.</p>
+    <p>{{ promo_copy.shop_card | default: "The printable recipe cards cover 61 recipes from the site, one page each." }} New to this? There is a starter setup guide too.</p>
     {%- else -%}
     <p><strong>Skip the guesswork.</strong> Get a printable plan for your first smart home setup, plus one-page cards for proven automations you can set up quickly.</p>
     {%- endif -%}

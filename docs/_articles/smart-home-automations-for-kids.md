@@ -16,6 +16,7 @@ Each one works with common gear and keeps a manual way to skip or override it.
 
 ## School mornings
 
+- [Wake kids up to their own music with a smart speaker](/automation/daily-routines/kids-music-wake-up.html). A speaker alarm in their room plays music they picked, so they wake up on their own.
 - [School morning countdown on any smart speaker](/automation/notifications/school-morning-countdown.html). A speaker calls out brush teeth and shoes at set times on school days.
 - [Spoken school morning reminders with Sonos](/automation/notifications/school-morning-reminders.html). The same idea on a Sonos speaker, and the music picks back up after each reminder.
 

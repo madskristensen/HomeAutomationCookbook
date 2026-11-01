@@ -150,14 +150,14 @@ Search by a room, device, or burden such as "laundry," "bathroom," "guest," or "
   url="/automation/lighting/"
   title="Lighting"
   description="Use motion, doors, schedules, and light levels without taking away the wall switch."
-  count="11 recipes"
+  count="12 recipes"
 %}
 
 {% include category-card.html
   url="/automation/daily-routines/"
   title="Daily routines"
   description="Coordinate morning, bedtime, guest, arrival, and away behavior without guessing who is home."
-  count="6 recipes"
+  count="7 recipes"
 %}
 
 {% include category-card.html
@@ -185,14 +185,14 @@ Search by a room, device, or burden such as "laundry," "bathroom," "guest," or "
   url="/automation/security/"
   title="Safety and security"
   description="Use alerts and approved equipment without treating weak sensor signals as proof of safety."
-  count="7 recipes"
+  count="8 recipes"
 %}
 
 {% include category-card.html
   url="/automation/notifications/"
   title="Notifications and alerts"
   description="Keep important conditions visible while limiting duplicates and unnecessary interruptions."
-  count="12 recipes"
+  count="15 recipes"
 %}
 
 </div>
