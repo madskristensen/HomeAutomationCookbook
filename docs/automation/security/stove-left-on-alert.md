@@ -73,6 +73,8 @@ DO NOT infer safe from no motion, low power, or cooling temperature</div>
 6. Treat unavailable or ambiguous status as "check the appliance," not "off."
 7. Keep working smoke and carbon-monoxide alarms independent of this reminder.
 
+Want this on your fridge? This recipe is in the [free 10 starter recipes PDF](#newsletter-signup-heading), one printable page with a QR code back here.
+
 ## Advanced features
 
 ### Add a leaving-home check

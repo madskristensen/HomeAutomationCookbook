@@ -83,6 +83,8 @@ Automatic-on is the point of some rooms. If the light comes on when someone actu
 
 If those recipes are already in use, read their conditions before you assume the light is misbehaving. Daytime-on usually means the darkness check is missing. Full brightness in the middle of the night usually means the night level was never set.
 
+If you want your motion rules on paper next to the hub, the [printable recipe cards](/shop/) have one page per recipe.
+
 ## Failure modes
 
 - **Hall traffic lights the room:** Aim the sensor across the entry you care about, not out the door.

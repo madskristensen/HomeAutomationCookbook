@@ -57,6 +57,8 @@ A controller connects to the opener. It reports the door state and can also open
 
 Once the sensor reports reliably, add the rule. Send an alert when the door has been open for about 10 to 15 minutes, plus a check at bedtime. Keep it alert-only. The [garage door left open alert recipe](/automation/security/garage-door-notification.html) walks through it.
 
+The alert recipe is in the [free 10 starter recipes PDF](#newsletter-signup-heading), so you can keep it next to the opener while you test.
+
 ## Failure modes
 
 - **Wrong state:** Recheck the mounting angle or the magnet gap, then the battery.

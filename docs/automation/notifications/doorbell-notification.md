@@ -64,6 +64,8 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 4. Add a short debounce delay, such as 10 seconds, so a single press that causes more than one signal does not send duplicate notifications.
 5. If unsure about any part of the wiring, consult an electrician; doorbell transformers are low voltage but the wiring should still be done carefully.
 
+Want this by the hub? It is one page in the [printable recipe cards](/shop/), along with every other recipe on the site.
+
 ## Advanced features
 
 ### Quiet hours behavior

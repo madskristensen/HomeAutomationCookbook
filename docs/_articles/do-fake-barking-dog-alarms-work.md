@@ -46,6 +46,8 @@ Use a motion sensor or camera you already own, plus a smart speaker. The rule pl
 - **Sensors that see the street.** Aim at the doorstep or path, not the sidewalk. The [motion sensor placement guide](/articles/motion-sensor-placement.html) helps.
 - **Endless barking.** Use a cooldown, so the neighbors do not learn to ignore it.
 
+The smart home version is in the [free 10 starter recipes PDF](#newsletter-signup-heading), as the fake dog deterrent recipe on one printable page.
+
 ## Failure modes
 
 - **Plays too often:** Narrow the sensor's view, or lengthen the cooldown.
