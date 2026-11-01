@@ -1,5 +1,5 @@
 ---
-cta_category: notifications
+cta_category: family
 layout: guide
 title: Smart home automations for kids and family routines
 description: Hand-picked recipes that help kids through school mornings and bedtime, from a speaker countdown to a toothbrushing check.
