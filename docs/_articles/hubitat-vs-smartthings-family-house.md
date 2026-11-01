@@ -151,3 +151,10 @@ No. Hubitat automation apps run on the hub, but cloud integrations and external 
 - [Use Hubitat for local and advanced household automation](/platforms/hubitat.html)
 - [Build approachable household routines with SmartThings](/platforms/smartthings.html)
 - [Browse platform-neutral automation recipes](/automation/)
+
+## Related recipes
+
+- [Turn lights on with motion sensors](/automation/lighting/lights-on-motion.html)
+- [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
+- [Manage wall tablets with home modes](/automation/daily-routines/wall-tablet-modes.html)
+- [Away mode automation for security](/automation/daily-routines/away-mode.html)

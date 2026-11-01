@@ -1,4 +1,5 @@
 ---
+cta_newsletter: "Got motion lights working? Get one short email a month with the next seasonal recipe to set up in an evening, plus a reader question answered and one device explained. No spam."
 layout: automation
 redirect_from:
   - /automation/motion/lights-on-motion.html

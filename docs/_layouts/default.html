@@ -63,7 +63,7 @@
     </div>
   </main>
   
-  {% unless page.url == "/getting-started/starter-house-setup.html" or page.url == "/shop/" or page.noindex or page.pdf_promo_card or page.url == "/404.html" %}
+  {% unless page.url == "/getting-started/starter-house-setup.html" or page.url == "/shop/" or page.noindex or page.pdf_promo_card or page.url == "/404.html" or page.layout == "automation" or page.layout == "guide" %}
   <div class="container pdf-promo-row">{% include pdf-guide-promo.html variant="strip" %}</div>
   {% endunless %}
   <footer class="site-footer">

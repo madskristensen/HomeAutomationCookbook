@@ -1,4 +1,5 @@
 ---
+cta_category: appliances
 layout: guide
 title: Best power-monitoring plugs for washer, dishwasher, and TV alerts
 description: Pick a power-monitoring plug or switch for washer, dishwasher, and TV alerts that works locally with your hub, plus what to use for a 240V dryer.

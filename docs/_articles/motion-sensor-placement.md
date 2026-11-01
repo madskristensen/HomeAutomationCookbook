@@ -1,4 +1,6 @@
 ---
+cta_newsletter: "Sensors placed? Put them to work. Get one short email a month with a seasonal recipe you can set up in an evening, plus a reader question answered and one device explained. No spam."
+cta_category: lighting
 layout: guide
 title: Motion sensor placement guide
 description: Place motion and presence sensors so lights react the moment you walk in and stop false triggers. Practical tips for mounting, aiming, and testing.

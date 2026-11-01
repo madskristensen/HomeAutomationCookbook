@@ -3,13 +3,17 @@ Quiet newsletter signup (Buttondown embed form). Plain HTML form post, no JS.
 Buttondown redirects to /newsletter/thanks/ (newsletter setting subscription_redirect_url).
 Signups are tagged "website"; Buttondown also stores the referring page URL.
 {%- endcomment -%}
+{%- assign nl_cat = page.url | split: "/" | slice: 2, 1 | first -%}
+{%- assign nl_head = page.url | slice: 0, 12 -%}
+{%- if page.cta_category -%}{%- assign nl_cat = page.cta_category -%}{%- elsif nl_head != "/automation/" -%}{%- assign nl_cat = nil -%}{%- endif -%}
+{%- assign nl_copy = site.data.cta[nl_cat] -%}
 <aside class="newsletter-signup" aria-labelledby="newsletter-signup-heading">
-  <h2 id="newsletter-signup-heading" class="newsletter-signup-heading">Get more out of your smart home</h2>
-  <p class="newsletter-signup-text">Automation ideas worth stealing, fixes for real problems, and the devices worth adding next. One email a month. No spam.</p>
+  <h2 id="newsletter-signup-heading" class="newsletter-signup-heading">Get one new recipe a month</h2>
+  <p class="newsletter-signup-text">{% if page.cta_newsletter %}{{ page.cta_newsletter }}{% elsif nl_copy %}{{ nl_copy.newsletter }} No spam.{% else %}One short email a month with a seasonal recipe you can set up in an evening, a real reader question answered, and one device explained. No spam.{% endif %}</p>
   <form class="newsletter-signup-form" action="https://buttondown.com/api/emails/embed-subscribe/home-automation-cookbook" method="post">
     <label for="newsletter-email" class="visually-hidden">Email address</label>
     <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" autocomplete="email" required>
     <input type="hidden" name="tag" value="website">
-    <button type="submit" class="btn btn-primary">Send me ideas</button>
+    <button type="submit" class="btn btn-primary">Send me the monthly recipe</button>
   </form>
 </aside>

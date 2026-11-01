@@ -1,4 +1,5 @@
 ---
+cta_category: lighting
 layout: guide
 redirect_from:
   - /getting-started/pir-vs-mmwave-presence.html

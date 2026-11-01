@@ -1,4 +1,5 @@
 ---
+cta_category: daily-routines
 layout: guide
 title: Why arrive and leave triggers fail
 description: Fix arrive and leave automations that fire at the wrong time. See why phone geofences and Wi-Fi disagree, and how to confirm who is really home.

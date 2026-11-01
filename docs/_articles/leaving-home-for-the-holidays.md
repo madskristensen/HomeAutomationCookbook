@@ -1,4 +1,5 @@
 ---
+cta_category: security
 layout: guide
 title: Leaving home for the holidays
 description: Leave for the holidays with peace of mind. Set away mode, lights, heat, leak alerts, and locks, then test each one before you walk out the door.

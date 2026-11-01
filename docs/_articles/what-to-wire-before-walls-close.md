@@ -192,3 +192,7 @@ Document everything. Accurate photos, labels, measurements, test results, and a 
 - [Choose smart-home devices and gear](/getting-started/device-guide.html)
 - [How to place motion sensors](/articles/motion-sensor-placement.html)
 - [Monitor freezer temperature and outbuilding power](/automation/notifications/freezer-temperature-power-loss.html)
+- [Turn lights on with motion sensors](/automation/lighting/lights-on-motion.html)
+- [Garage door left open alarm and alerts](/automation/security/garage-door-notification.html)
+- [Water leak detection alerts](/automation/security/water-leak-response.html)
+- [Automate a bathroom exhaust fan](/automation/climate/fan-shower.html)

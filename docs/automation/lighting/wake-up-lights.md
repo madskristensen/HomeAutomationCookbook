@@ -1,4 +1,5 @@
 ---
+cta_newsletter: "Like waking up to light instead of an alarm? Get one short email a month with a seasonal recipe you can set up in an evening, plus a reader question answered and one device explained. No spam."
 layout: automation
 date: 2025-11-30
 title: Set up gradual wake-up lighting

@@ -1,4 +1,5 @@
 ---
+cta_newsletter: "Want more ways to make an empty house look lived in? Get one short email a month with a seasonal recipe you can set up in an evening, plus a reader question answered and one device explained. No spam."
 layout: automation
 date: 2025-11-29
 title: Dog-bark intrusion deterrent
