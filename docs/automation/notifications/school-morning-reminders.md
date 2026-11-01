@@ -111,6 +111,7 @@ It only runs on weekdays when the home is in Home mode. On school holidays, you 
 
 ## Related recipes
 
+- [All kids and family routines](/articles/smart-home-automations-for-kids.html)
 - [Kids' teeth-brushing reminder](/automation/notifications/teeth-brushing-reminder.html)
 - [Start a quiet good-morning routine](/automation/daily-routines/morning-routine.html)
 - [Set smart-speaker volume presets](/automation/entertainment/speaker-volume-presets.html)

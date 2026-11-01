@@ -99,6 +99,7 @@ Limit the schedule to school days. Add a manual "no school" switch for holidays 
 
 ## Related recipes
 
+- [All kids and family routines](/articles/smart-home-automations-for-kids.html)
 - [Check that kids brushed their teeth at bedtime](/automation/notifications/teeth-brushing-reminder.html)
 - [Spoken school morning reminders with Sonos](/automation/notifications/school-morning-reminders.html)
 - [Bedtime countdown for kids on any smart speaker](/automation/notifications/bedtime-countdown.html)

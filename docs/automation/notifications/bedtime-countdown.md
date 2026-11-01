@@ -100,6 +100,7 @@ Yes. Make a second schedule for nights with a later bedtime, or add a "late nigh
 
 ## Related recipes
 
+- [All kids and family routines](/articles/smart-home-automations-for-kids.html)
 - [Check that kids brushed their teeth at bedtime](/automation/notifications/teeth-brushing-reminder.html)
 - [School morning countdown on any smart speaker](/automation/notifications/school-morning-countdown.html)
 - [Build a family-safe bedtime routine](/automation/daily-routines/bedtime-routine.html)
