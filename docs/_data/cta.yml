@@ -1,25 +1,23 @@
-# Per-category CTA copy. Page front matter can override with cta_shop / cta_newsletter.
-# Articles can set cta_category to pick a cluster.
-# freebie: shown under every newsletter signup. The PDF is linked on /newsletter/thanks/.
-freebie: "Subscribe and get a free printable PDF of the 10 most popular recipes."
+# Per-category newsletter CTA copy. The free PDF (10 starter recipes) is the hook.
+# pdf_note: one line on what the 10 include for this category. Only list recipes that are really in the PDF:
+# wake-up-lights, lights-on-motion, lights-off-after-motion, toggle-lights-door, fake-dog-deterrent,
+# garage-door-notification, stove-left-on-alert, fridge-door-alert, away-mode, morning-routine.
+# Page front matter can override with cta_newsletter. Articles can set cta_category.
 lighting:
   label: lighting
-  newsletter: "One short email a month with a seasonal recipe you can set up in an evening. Expect lighting ideas like this one, a reader question answered, and one device explained."
+  pdf_note: "Includes 4 lighting picks, like wake-up lights and lights on with motion."
 security:
   label: security
-  newsletter: "One short email a month with a seasonal recipe you can set up in an evening. Expect security ideas like door, garage, and away alerts, a reader question answered, and one device explained."
+  pdf_note: "Includes 3 security picks: the garage door alert, the fake dog deterrent, and the stove left on alert."
 climate:
   label: climate
-  newsletter: "One short email a month with a seasonal recipe you can set up in an evening. Expect climate ideas like fans, heaters, and window alerts, a reader question answered, and one device explained."
 appliances:
   label: appliance
-  newsletter: "One short email a month with a seasonal recipe you can set up in an evening. Expect appliance alerts like this one, a reader question answered, and one device explained."
+  pdf_note: "Includes the fridge door left open alert."
 notifications:
   label: notification
-  newsletter: "One short email a month with a seasonal recipe you can set up in an evening. Expect useful alerts and reminders, a reader question answered, and one device explained."
 daily-routines:
   label: routine
-  newsletter: "One short email a month with a seasonal recipe you can set up in an evening. Expect morning, bedtime, and away routines, a reader question answered, and one device explained."
+  pdf_note: "Includes the away mode and morning routine recipes."
 entertainment:
   label: music and TV
-  newsletter: "One short email a month with a seasonal recipe you can set up in an evening. Expect music and TV ideas, a reader question answered, and one device explained."
