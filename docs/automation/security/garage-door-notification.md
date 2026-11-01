@@ -44,7 +44,7 @@ THEN send a high-priority notification: "Garage door still open at bedtime"
 
 DO NOT close the door automatically from this recipe</div>
 
-![The garage door reports open, remains open through a delay, and triggers an alert without closing automatically.](/assets/img/diagrams/garage-left-open-flow.svg){: .automation-diagram width="960" height="280" }
+<picture class="automation-diagram"><source media="(max-width: 600px)" srcset="/assets/img/diagrams/garage-left-open-flow-stacked.svg"><img src="/assets/img/diagrams/garage-left-open-flow.svg" alt="The garage door reports open, remains open through a delay, and triggers an alert without closing automatically." width="960" height="280" loading="lazy"></picture>
 
 - **Trigger:** The garage door sensor reports "open" and stays in that state for a set duration, such as 10 minutes.
 - **Conditions:** The door is still open at the time the duration elapses.

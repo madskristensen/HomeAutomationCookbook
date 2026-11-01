@@ -44,7 +44,7 @@ The pantry or utility-room light should be on before anyone has to reach for the
 <div class="automation-example">IF the closet door opens AND the closet is dark
 THEN turn on the closet light</div>
 
-![The door opens, the lighting condition is checked, and the closet light turns on while manual control remains available.](/assets/img/diagrams/door-lighting-flow.svg){: .automation-diagram width="960" height="280" }
+<picture class="automation-diagram"><source media="(max-width: 600px)" srcset="/assets/img/diagrams/door-lighting-flow-stacked.svg"><img src="/assets/img/diagrams/door-lighting-flow.svg" alt="The door opens, the lighting condition is checked, and the closet light turns on while manual control remains available." width="960" height="280" loading="lazy"></picture>
 
 - **Trigger:** The contact sensor changes from closed to open.
 - **Conditions:** The space is dark enough, or it is within the hours when automatic light makes sense.
