@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% assign tag = site.data.tags[page.tag] %}
+{% assign tagged = site.pages | where_exp: "p", "p.tags contains page.tag" | sort: "title" %}
+<h1>{{ tag.heading }}</h1>
+
+<p>{{ tag.intro }}</p>
+
+<p>Browse by category on the <a href="{{ '/automation/' | relative_url }}">automation recipes</a> page. This page collects {{ tagged.size }} recipes tagged {{ page.tag }} from every category.</p>
+
+<div class="card-grid">
+{% for p in tagged %}
+  {% include automation-card.html url=p.url title=p.title description=p.description %}
+{% endfor %}
+</div>
+
+{{ content }}

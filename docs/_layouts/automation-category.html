@@ -11,32 +11,44 @@ layout: default
 {{ category.callout | markdownify }}
 {% endif %}
 
-<h2>Choose a recipe</h2>
+{% assign cat_prefix = "/automation/" | append: page.category_key | append: "/" %}
+{% assign cat_pages = site.pages | where_exp: "p", "p.url contains cat_prefix" | where_exp: "p", "p.name != 'index.md'" | where_exp: "p", "p.layout != 'redirect'" | sort: "title" %}
 
-<div class="card-grid">
-{% for recipe in category.recipes %}
-  {% assign recipe_url = recipe.url | relative_url %}
-  {% assign card_link = recipe.link_text | default: "View recipe" %}
-  {% include automation-card.html
-    url=recipe_url
-    title=recipe.title
-    description=recipe.description
-    meta_label="Best for"
-    meta_value=recipe.best_for
-    link_text=card_link
-  %}
-{% endfor %}
-</div>
-
-<h2>Start here</h2>
+<h2>Featured recipes</h2>
 
 <p>{{ category.start_here_intro }}</p>
 
+<div class="card-grid">
+{% for item in category.start_here limit: 3 %}
+  {% capture featured_reason %}Start here because {{ item.reason }}.{% endcapture %}
+  {% include automation-card.html url=item.url title=item.title description=featured_reason %}
+{% endfor %}
+</div>
+
+<h2>All recipes in this category</h2>
+
+<p>This list updates on its own when a recipe is added here.</p>
+
+<div class="card-grid">
+{% for p in cat_pages %}
+  {% assign entry = category.recipes | where: "url", p.url | first %}
+  {% if entry %}
+    {% include automation-card.html url=p.url title=entry.title description=entry.description meta_label="Best for" meta_value=entry.best_for %}
+  {% else %}
+    {% include automation-card.html url=p.url title=p.title description=p.description %}
+  {% endif %}
+{% endfor %}
+</div>
+
+{% assign cat_articles = site.articles | where: "cta_category", page.category_key %}
+{% if cat_articles.size > 0 %}
+<h2>Related articles</h2>
 <ul>
-{% for item in category.start_here %}
-  <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a> - {{ item.reason }}</li>
+{% for a in cat_articles %}
+  <li><a href="{{ a.url | relative_url }}">{{ a.title }}</a></li>
 {% endfor %}
 </ul>
+{% endif %}
 
 <div class="category-intro">
   <h2>What to keep in control</h2>

@@ -19,6 +19,7 @@ faqs:
 products:
   - job: "Control connected speakers from a dashboard"
     body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. This depends on the platform's existing integration with each speaker brand; no additional hardware is needed beyond the speakers themselves."
+tags: [music, dashboards]
 ---
 
 # Add dashboard tiles for music playback controls

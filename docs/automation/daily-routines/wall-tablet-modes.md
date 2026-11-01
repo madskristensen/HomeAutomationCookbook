@@ -19,6 +19,7 @@ products:
     body: "Wall-mounted tablets. I use an Amazon Fire tablet in the hallway and a second tablet in the kitchen."
   - job: "Control the screen from the hub"
     body: "[Fully Kiosk Browser](https://www.fully-kiosk.com/en/) on each tablet, with its Remote Admin feature turned on. On Hubitat, I wrote [a small Fully Kiosk driver](https://github.com/madskristensen/hubitat-drivers/tree/main/drivers/fully-kiosk) for this, but other community drivers exist too."
+tags: [dashboards]
 ---
 
 # Manage wall tablets with home modes

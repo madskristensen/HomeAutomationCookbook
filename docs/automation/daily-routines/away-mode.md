@@ -25,6 +25,7 @@ products:
     body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Keep safe minimum and maximum temperatures at the thermostat."
   - job: "Control fixed lights"
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Physical paddles must keep working."
+tags: [presence, security, lighting]
 ---
 
 # Set away mode when everyone leaves

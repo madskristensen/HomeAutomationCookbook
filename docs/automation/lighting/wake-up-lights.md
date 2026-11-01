@@ -18,6 +18,7 @@ faqs:
 products:
   - job: "Gradually brighten the light"
     body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Confirm the switch or bulb supports a low enough minimum brightness and a smooth transition, not just stepped levels."
+tags: [lighting, morning]
 ---
 
 # Set up gradual wake-up lighting

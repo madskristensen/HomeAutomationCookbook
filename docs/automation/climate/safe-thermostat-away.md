@@ -6,6 +6,7 @@ title: Safe thermostat auto-away
 description: Save energy while the house is empty with a modest thermostat setback that still protects pets and pipes and respects manual holds.
 last_modified_at: 2026-10-05
 compact: true
+tags: [climate, presence, pets]
 ---
 
 # Safe thermostat auto-away for pets and pipes

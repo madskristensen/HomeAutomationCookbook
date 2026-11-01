@@ -19,6 +19,7 @@ products:
     body: "[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20). Use this for the humidity-based trigger, not for the fastest motion response."
   - job: "Switch the bathroom fan independently"
     body: "No personally verified recommendation yet. Confirm any smart switch used here is rated for the fan motor's load and that the physical wall switch keeps working."
+tags: [climate, bathroom]
 ---
 
 # Turn on the bathroom fan when a shower starts

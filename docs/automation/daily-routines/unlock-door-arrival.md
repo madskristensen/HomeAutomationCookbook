@@ -23,6 +23,7 @@ products:
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable."
   - job: "Restore heating and cooling"
     body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). The thermostat's safe limits remain authoritative."
+tags: [presence, security]
 ---
 
 # Prepare the house when someone arrives

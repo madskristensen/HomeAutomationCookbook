@@ -23,6 +23,7 @@ products:
     body: "Existing fixed lights with working wall controls. Lighting is supplemental. People must know the exits in darkness."
   - job: "Reach the household"
     body: "Alarm sound and practiced evacuation plan. A phone notification is not the primary warning."
+tags: [security, lighting]
 ---
 
 # Support a fire evacuation without delaying the alarm

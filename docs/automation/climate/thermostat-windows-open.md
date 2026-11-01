@@ -22,6 +22,7 @@ products:
     body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Keep safe limits and manual control at the thermostat."
   - job: "Detect an open window or door"
     body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Test every open and closed report before enabling HVAC control."
+tags: [climate, door-sensors]
 ---
 
 # Pause heating or cooling when a window stays open

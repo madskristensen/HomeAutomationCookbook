@@ -19,6 +19,7 @@ products:
     body: "Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Test whatever signal is available against real daily patterns before trusting it, since not every phone or platform behaves the same way."
   - job: "Robot vacuum with app control"
     body: "No personally verified recommendation yet. Confirm the vacuum supports remote start, reports errors, and can be sent back to its dock from automation before relying on this recipe."
+tags: [appliances, cleaning, presence]
 ---
 
 # Start the robot vacuum when everyone leaves

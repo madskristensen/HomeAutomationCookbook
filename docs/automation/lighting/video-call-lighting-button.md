@@ -23,6 +23,7 @@ products:
     body: "Any warm smart light, or a lamp on a smart plug, on the wall behind your chair."
   - job: "Pause the music"
     body: "A speaker the hub can pause and resume. I use a Sonos speaker in the office."
+tags: [lighting, buttons]
 ---
 
 # Video call lighting button

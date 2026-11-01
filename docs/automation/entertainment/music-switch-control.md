@@ -21,6 +21,7 @@ products:
     body: "No personally verified recommendation yet. Any smart button, wall switch, or remote that can trigger a platform automation will work."
   - job: "Play the music"
     body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use."
+tags: [music, buttons]
 ---
 
 # Play or pause music with a physical switch

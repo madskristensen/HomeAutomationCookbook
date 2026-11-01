@@ -17,6 +17,7 @@ faqs:
 products:
   - job: "Detect motion near the front entrance"
     body: "[Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20), or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) for Z-Wave Long Range. Confirm it is rated for the exposure it will face."
+tags: [notifications, security]
 ---
 
 # Get notified about entrance activity that may indicate a delivery

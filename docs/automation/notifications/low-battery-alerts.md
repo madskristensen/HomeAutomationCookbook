@@ -19,6 +19,7 @@ faqs:
 products:
   - job: "Detect low battery levels"
     body: "No personally verified recommendation yet. This depends on the platform reporting battery data for each device, not on any single piece of hardware."
+tags: [notifications, maintenance]
 ---
 
 # Get low battery alerts for smart home devices

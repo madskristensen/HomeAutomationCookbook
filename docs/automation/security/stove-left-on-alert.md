@@ -21,6 +21,7 @@ products:
     body: "Manufacturer-supported status for the exact appliance. Verify what each state means. Do not infer individual burner state from whole-appliance power."
   - job: "Shut off cooking equipment"
     body: "A person uses the appliance controls. No general-purpose smart plug or improvised relay is recommended."
+tags: [security, kitchen, appliances, notifications]
 ---
 
 # Get a stove reminder without pretending it is a safety system

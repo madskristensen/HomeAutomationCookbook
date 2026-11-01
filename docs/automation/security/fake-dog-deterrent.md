@@ -20,6 +20,7 @@ products:
     body: "[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20) for an indoor entry point, or the [Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20) or [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) if mounted outside."
   - job: "Play the barking sound on a speaker"
     body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. No specific model is required as long as it can play an audio file on command."
+tags: [security]
 ---
 
 # Play dog barking sounds as an intruder deterrent

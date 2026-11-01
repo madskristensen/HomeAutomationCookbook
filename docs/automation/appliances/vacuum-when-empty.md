@@ -19,6 +19,7 @@ products:
     body: "Use your platform's built-in presence feature (phone location or network connection) rather than a dedicated product. Test it against both departure and arrival for every household member before trusting it."
   - job: "Robot vacuum with remote dock command"
     body: "No personally verified recommendation yet. Confirm the vacuum accepts a return-to-dock command from automation, not only a manual app tap."
+tags: [appliances, cleaning, presence]
 ---
 
 # Run the vacuum only while the house stays empty

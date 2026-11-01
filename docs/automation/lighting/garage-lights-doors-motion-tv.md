@@ -23,6 +23,7 @@ products:
     body: "A smart plug with power metering on the TV. The [device guide](/getting-started/device-guide.html#products-i-have-used) lists the plugs I use to detect a TV."
   - job: "Light the garage"
     body: "Dimmable smart lights or a smart dimmer for the garage lights."
+tags: [lighting, garage, motion]
 ---
 
 # Garage lights that follow doors, motion, and the TV

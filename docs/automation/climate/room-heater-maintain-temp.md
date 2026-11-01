@@ -21,6 +21,7 @@ products:
     body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). I have used both. Keep safe limits and manual control at the thermostat."
   - job: "Add supplemental heat"
     body: "Manually operated equipment used exactly as instructed. Have wiring and equipment evaluated by a qualified professional where appropriate."
+tags: [climate, notifications]
 ---
 
 # Monitor a cold room without smart-plug heater control

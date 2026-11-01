@@ -19,6 +19,7 @@ faqs:
 products:
   - job: "Track and display the reminder"
     body: "No personally verified recommendation yet. This only needs a virtual switch or variable and a dashboard tile; no physical hardware is required."
+tags: [notifications, reminders, dashboards]
 ---
 
 # Set up a garbage day reminder tile

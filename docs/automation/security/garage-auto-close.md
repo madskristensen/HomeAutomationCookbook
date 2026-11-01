@@ -21,6 +21,7 @@ products:
     body: "Existing wall control and opener remote. Use only equipment approved for the opener and unattended operation."
   - job: "Detect an obstruction"
     body: "The opener's required, tested entrapment protection. Never replace or bypass it with hobby sensors."
+tags: [security, garage]
 ---
 
 # Close a garage safely after an open-door alert
