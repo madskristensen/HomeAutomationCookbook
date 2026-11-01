@@ -12,8 +12,14 @@ image: /assets/img/social/guides/choose-devices.png
 
 # Choose smart-home devices by radio
 
-{% include content-hero.html src="/assets/img/social/guides/choose-devices.svg" alt="Sensors, switches, and plugs chosen for a specific household job" %}
+{% include content-hero.html src="/assets/img/social/guides/choose-devices.svg" alt="Sensors, switches, plugs, and climate devices chosen for a specific household job" %}
 
+
+Do not start with a brand or a box of discounted devices. Start with one household job, write the rule in plain English, and identify the capabilities that rule needs.
+
+The goal is not to collect compatible gadgets. It is to buy the smallest amount of equipment that removes a repeated task or makes everyday life easier to manage.
+
+Amazon product links are affiliate links, and I earn from qualifying purchases. See the [disclosure](/disclosure.html) for details.
 
 <div class="dm" markdown="0">
 <p>Each job has two picks. One is Zigbee and one is Z-Wave. Buy the one your hub supports.</p>
@@ -44,6 +50,140 @@ image: /assets/img/social/guides/choose-devices.png
 @media (max-width:600px){.dm-pair{grid-template-columns:1fr}.dm-legend td:last-child,.dm-legend th:last-child{display:none}.dm-legend-notes{display:block}}
 .dm-legend-notes{display:none;font-size:.85rem;color:#5d6d75;padding-left:1.1rem}
 </style>
+
+## More gear I use
+
+These jobs do not fit the two-radio table above.
+
+### Bathroom multisensor
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Detect bathroom motion with humidity, temperature, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20) | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY/ref=nosim?tag=madsk0f-20) | Use it where the extra sensor readings are useful, not where the fastest motion response matters most. |
+
+### Household presence
+
+This one usually isn't a separate product. Most platforms already offer a presence feature through their own phone app, using the phone's location or its connection to the home Wi-Fi or network. I use a Ubiquiti network that integrates directly with Hubitat to set each family member's presence from their phone's network connection, so nobody has to install a separate app. If your platform has an equivalent built-in presence feature, or your network gear integrates with it, start there before buying anything dedicated to this job.
+
+### Climate
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Adjust heating and cooling | [ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20) | [Honeywell Home T6 Pro Z-Wave thermostat](https://www.amazon.com/dp/B0BHTQF8NL/ref=nosim?tag=madsk0f-20) | Someone should be able to change the temperature at the thermostat. |
+| Measure room temperature and humidity | [THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20) | [Zooz ZSE44 800LR Temperature/Humidity XS Sensor](https://www.amazon.com/dp/B0B3G9Z4LJ/ref=nosim?tag=madsk0f-20) | Placement matters more than the sensor. Keep it away from vents, drafts, and direct sun. |
+
+For a bathroom fan, reporting speed matters most. See [best humidity sensors for shower fan automation](/articles/best-humidity-sensors-shower-fan.html).
+
+### Power monitoring help
+
+For which device fits which appliance, see [best power-monitoring plugs for washer, dishwasher, and TV alerts](/articles/best-power-monitoring-plugs-appliance-alerts.html).
+
+### Garage door position
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Know whether a garage door is open | [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20) | [Ecolink Z-Wave Plus Garage Door Tilt Sensor](https://www.amazon.com/dp/B01MRZB0NT/ref=nosim?tag=madsk0f-20) | Use it for status and alerts before adding automatic closing. |
+
+### Vibration sensing
+
+| Job | Good enough | Never think about it | Guest-proof note |
+|---|---|---|---|
+| Detect appliance vibration (dryer, washer, garage door motor) | [THIRDREALITY Zigbee Smart Vibration Sensor](https://www.amazon.com/dp/B0C9DP249C/ref=nosim?tag=madsk0f-20) | [Aeotec SmartThings Multipurpose Sensor](https://www.amazon.com/dp/B095TPSQ3S/ref=nosim?tag=madsk0f-20) - a Zigbee door/window sensor with a built-in accelerometer for vibration and tilt, worth it if you also want the contact-sensor reading in the same spot. | Mount only on a cool, fixed exterior panel after testing surface temperature through a full cycle. Sensitivity usually needs adjusting to ignore normal household bumps. |
+
+## Start with the automation
+
+Write these six lines before buying:
+
+1. **Trigger:** What changes?
+2. **Conditions:** What must also be true?
+3. **Action:** What should happen?
+4. **Wait or timeout:** How long should the rule wait?
+5. **Stop condition:** What ends or reverses it?
+6. **Manual override:** What works when the hub does not?
+
+That list turns "I need a smart sensor" into a testable requirement such as "I need a sensor that reports motion quickly, reports unavailable separately, and works with my hub."
+
+## Choose the control before the sensor
+
+### Fixed lighting
+
+Prefer a wall switch or dimmer when the light serves a shared room. The familiar paddle remains useful to kids and guests. Check neutral-wire requirements, box depth, load type, minimum load, multi-way wiring, and local electrical requirements before buying.
+
+Use a smart bulb when color or per-bulb control matters and the fixture can remain powered. It is usually a poor fit where someone will keep turning off the ordinary wall switch.
+
+### Plug-in loads
+
+A smart plug is not a general-purpose way to automate every appliance. Check the appliance instructions and the plug's supported load type. Do not use a general-purpose plug to control portable heaters, cooking appliances, medical equipment, safety systems, or anything that should not restart when power returns.
+
+### Climate
+
+Keep manual temperature control and safe limits at the thermostat or purpose-built controller. Verify wiring, equipment compatibility, installer requirements, and what happens when a remote sensor or hub is unavailable.
+
+### Locks, doors, and safety equipment
+
+Use equipment approved for the exact job. Hobby motion, location, and contact sensors do not replace alarm listings, entrapment protection, appliance interlocks, or a person's safety check.
+
+## Choose the sensor for the human behavior
+
+| Job | Sensor type to consider | Main limitation |
+|---|---|---|
+| Detect someone entering | PIR motion | Can miss someone who remains still. |
+| Detect someone staying in a room | mmWave presence | Placement and sensitivity require careful tuning. |
+| Know whether a door or window moved | Contact sensor | Misalignment or stale data can look like a normal state. |
+| Detect water at one point | Leak sensor | Water can flow around the contacts. |
+| Measure room conditions | Temperature or humidity sensor | Placement may represent a draft, vent, or wall rather than the occupied area. |
+| Know garage-door position | Tilt or purpose-built position sensor | Position does not prove that the doorway is clear. |
+
+Read [PIR vs mmWave presence](/articles/pir-vs-mmwave-presence.html) before choosing occupancy sensors for bathrooms or home offices.
+
+## Verify compatibility
+
+Check the exact model, hardware revision, region, and firmware against the platform's current documentation. "Works with Zigbee," "supports Matter," or "compatible with Alexa" does not prove that your hub exposes every capability the recipe needs.
+
+Before buying several:
+
+- Pair one device.
+- Confirm every required state and command.
+- Confirm unavailable and low-battery behavior.
+- Measure response time in the intended location.
+- Restart the hub and device.
+- Disconnect the internet if local behavior matters.
+- Remove and re-pair it while you still remember the process.
+
+## Check physical installation
+
+- Measure wall boxes, fixture bases, clearances, cable access, and sensor mounting surfaces.
+- Check power, neutral, grounding, load, weather, temperature, and humidity requirements.
+- Follow local electrical and building requirements.
+- Use a qualified professional where the product or installation calls for one.
+- Confirm batteries are available and replaceable.
+- Keep labels, model numbers, manuals, and reset instructions.
+
+## Plan failure behavior
+
+The device is not ready until these states have an answer:
+
+| State | Safe response |
+|---|---|
+| Sensor unavailable | Stop trusting its last state and create a maintenance alert. |
+| Battery low | Notify before the device becomes silent. |
+| Hub restarting | Keep physical controls available. |
+| Internet unavailable | Preserve any behavior that was promised as local. |
+| Command sent but final state unknown | Report "not confirmed," not success. |
+| Conflicting sensors | Prefer the conservative state and ask for inspection. |
+
+## Avoid these buying shortcuts
+
+- Generic "best brand" lists without a specific job.
+- Hardcoded budgets that encourage buying a bundle before testing one room.
+- Assuming a protocol logo guarantees feature support.
+- Treating cloud voice control as the only physical control.
+- Choosing a product because it exposes more data than the automation needs.
+- Buying safety-related control equipment without checking approvals and instructions.
+
+## A good first purchase
+
+Choose one fast motion sensor and one wall-controlled light for a low-risk room. Build [lights on motion](/automation/lighting/lights-on-motion.html), keep the switch working, and observe it for a week. That small test teaches more than a whole-home shopping list.
 
 ## Next steps
 
