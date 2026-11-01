@@ -18,7 +18,7 @@ products:
   - job: "Track whether a window is open"
     body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Optional. Useful for skipping a notification about a window that is already open."
   - job: "Compare indoor and outdoor temperature"
-    body: "Many platforms already provide an outdoor reading through an existing weather integration, so a dedicated outdoor purchase may not be needed. For the indoor reading, see [temperature and humidity sensor gear](/getting-started/device-guide.html#climate) if the platform does not already have one placed well."
+    body: "Many platforms already provide an outdoor reading through an existing weather integration, so a dedicated outdoor purchase may not be needed. For the indoor reading, see a temperature and humidity sensor if the platform does not already have one placed well."
 tags: [climate, notifications, door-sensors]
 ---
 
