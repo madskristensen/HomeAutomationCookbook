@@ -6,4 +6,6 @@ description: Get laundry done alerts, fridge door warnings, a ready morning coff
 permalink: /automation/appliances/
 canonical_url: https://www.homeautomationcookbook.com/automation/appliances/
 keywords: appliance automation, washer notification, dryer notification, dishwasher notification, fridge door alert, robot vacuum automation
+redirect_from:
+  - /tags/appliances.html
 ---

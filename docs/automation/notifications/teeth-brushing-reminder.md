@@ -18,7 +18,7 @@ faqs:
     answer: Some chargers draw very little power, and some plugs cannot report that small amount. Test your own charger first. If the plug shows no change, try another plug or use a Wi-Fi smart toothbrush instead.
 products:
   - job: "Measure when the toothbrush starts charging"
-    body: "No personally verified recommendation yet. You need a smart plug with energy or power monitoring, not a basic on and off plug."
+    body: "[Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20). It is the power-monitoring plug on the [device guide](/getting-started/device-guide.html#power-monitoring). Test it with your own charger first."
 tags: [kids, bedtime, reminders, power-monitoring]
 ---
 
@@ -26,7 +26,7 @@ tags: [kids, bedtime, reminders, power-monitoring]
 
 {% include content-hero.html src="/assets/img/social/recipes/notifications/teeth-brushing-reminder.svg" alt="A toothbrush on its charger base plugged into a smart plug that reports when charging starts" %}
 
-Plug the toothbrush charger base into a smart plug that measures power. When the brush goes back on the base after brushing, it starts to charge. The plug sees that. If no charging happens by a set time, a reminder plays.
+Plug the toothbrush charger base into a smart plug that measures power, such as the Ezlo 800 Series Z-Wave smart plug. When the brush goes back on the base after brushing, it starts to charge. The plug sees that. If no charging happens by a set time, a reminder plays.
 
 **Best for:** Kids with an electric toothbrush that charges on a base.
 

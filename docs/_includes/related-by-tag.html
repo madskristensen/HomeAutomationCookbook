@@ -24,7 +24,12 @@
   {%- endif -%}{%- endfor -%}
   </ul>
   {%- assign tag_links = "" -%}
-  {%- for t in page.tags -%}{%- if site.data.tags[t] -%}{%- capture tl -%}<a href="{{ '/tags/' | append: t | append: '.html' | relative_url }}">{{ t }}</a>{%- endcapture -%}{%- assign tag_links = tag_links | append: tl | append: " " -%}{%- endif -%}{%- endfor -%}
+  {%- for t in page.tags -%}
+    {%- assign t_url = nil -%}{%- assign t_label = t -%}
+    {%- if site.data.automation_categories[t] -%}{%- assign t_url = '/automation/' | append: t | append: '/' -%}{%- assign t_label = site.data.automation_categories[t].heading -%}
+    {%- elsif site.data.tags[t] -%}{%- assign t_url = '/tags/' | append: t | append: '.html' -%}{%- endif -%}
+    {%- if t_url -%}{%- capture tl -%}<a href="{{ t_url | relative_url }}">{{ t_label }}</a>{%- endcapture -%}{%- assign tag_links = tag_links | append: tl | append: " " -%}{%- endif -%}
+  {%- endfor -%}
   {%- if tag_links != "" -%}<p>Browse by topic: {{ tag_links | strip }}</p>{%- endif -%}
 </nav>
 {%- endif -%}
