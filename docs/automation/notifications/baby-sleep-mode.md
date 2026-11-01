@@ -18,7 +18,7 @@ faqs:
     answer: No. It only shows the machine is on. Treat it as a sign that bedtime has started, not as a baby monitor.
 products:
   - job: "Sense the white noise machine"
-    body: "[Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20). It is the power-monitoring plug on the [device guide](/getting-started/device-guide.html#power-monitoring). Check that it sees your machine's draw first."
+    body: "[Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20). It is the power-monitoring plug on the [device guide](/getting-started/device-guide.html#power-monitoring). On a Zigbee hub, the cheaper [THIRDREALITY Zigbee Smart Plug with power monitoring](https://www.amazon.com/dp/B0BPY2KRHH/ref=nosim?tag=madsk0f-20) is the Zigbee alternative. It works with Homey, Home Assistant, Hubitat, SmartThings, and Echo models with a built-in Zigbee hub. Check that either plug sees your machine's draw first."
   - job: "Dim the lights"
     body: "Dimmable smart lights or dimmer switches in the nursery and nearby hallway."
   - job: "Start quiet mode by hand (optional)"
@@ -76,7 +76,7 @@ KEEP smoke, carbon monoxide, leak, and security alerts active</div>
 
 ## Setup notes
 
-1. Plug the white noise machine into the power-monitoring plug.
+1. Plug the white noise machine into the power-monitoring plug. Use the Ezlo 800 on a Z-Wave hub, or the THIRDREALITY plug on a Zigbee hub.
 2. Check the machine's on-draw. Turn it on and read the watts in your hub app. Turn it off and read again.
 3. Set a threshold between those two numbers. Some machines draw only a few watts, so test yours.
 4. Create a quiet mode in your hub. A mode, a virtual switch, or a scene all work.
