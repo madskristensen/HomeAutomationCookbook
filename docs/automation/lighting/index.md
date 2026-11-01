@@ -2,6 +2,7 @@
 layout: automation-category
 category_key: lighting
 redirect_from:
+  - /tags/lighting.html
   - /automation/contact/index.html
   - /automation/motion/index.html
 title: "Lighting automation: recipes and first steps"

@@ -2,6 +2,7 @@
 layout: automation-category
 category_key: notifications
 redirect_from:
+  - /tags/notifications.html
   - /automation/dashboards/index.html
   - /automation/misc/index.html
 title: Notification and alert automation recipes

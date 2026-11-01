@@ -6,4 +6,6 @@ description: Protect your home with alert-first recipes for fire, water leaks, g
 permalink: /automation/security/
 canonical_url: https://www.homeautomationcookbook.com/automation/security/
 keywords: safety automation, security notification, fire alert, water leak alert, garage door status, stove reminder
+redirect_from:
+  - /tags/security.html
 ---
