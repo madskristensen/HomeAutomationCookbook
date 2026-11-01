@@ -74,6 +74,8 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 
 On Hubitat? I wrote an app for this: [Away Lights](https://github.com/madskristensen/hubitat-drivers/tree/main/apps/away-lights). It turns a set of lights on and off during a time window while the hub is in Away mode.
 
+Want this by the hub? It is one page in the [printable recipe cards](/shop/), along with every other recipe on the site.
+
 ## Advanced features
 
 ### Staggered timing

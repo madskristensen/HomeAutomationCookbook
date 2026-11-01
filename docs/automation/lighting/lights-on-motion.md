@@ -72,6 +72,8 @@ Start with only the trigger and light action. Once that is reliable, add the day
 - **Evening:** Use the brightness that makes the room useful.
 - **Deep night:** Start at 10 to 20 percent and raise it only enough for safe navigation.
 
+Want this on your fridge? This recipe is in the [free 10 starter recipes PDF](#newsletter-signup-heading), one printable page with a QR code back here.
+
 ## Platform notes
 
 I have used Alexa, SmartThings, and Hubitat, but the exact sensor and light still have to expose the required trigger and command to that platform. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.

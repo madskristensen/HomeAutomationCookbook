@@ -73,6 +73,8 @@ Mount the sensor temporarily with tape or another reversible method. Watch its r
 
 Start the automation with a notification or observation mode when a false action would be disruptive. Use a forgiving timeout until normal household behavior proves the placement reliable.
 
+Once the sensors are placed, the [free 10 starter recipes PDF](#newsletter-signup-heading) has lights on with motion and lights off after motion ready to print.
+
 ## Failure modes
 
 - **The light turns on after someone reaches the switch:** Aim a PIR across the approach and move it closer to the entry path.

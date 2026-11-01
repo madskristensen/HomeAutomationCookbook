@@ -67,6 +67,8 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 4. Add a day-of-week condition if the wake-up schedule differs between weekdays and weekends.
 5. Add a simple way to skip the next run, such as a virtual switch or dashboard toggle, for days the schedule does not apply.
 
+Want this on your fridge? This recipe is in the [free 10 starter recipes PDF](#newsletter-signup-heading), one printable page with a QR code back here.
+
 ## Advanced features
 
 ### Color temperature shift

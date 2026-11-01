@@ -67,6 +67,8 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 4. Set a moderate volume, loud enough to be heard outside but not so loud it sounds obviously artificial or disturbs neighbors.
 5. Add a cooldown between triggers, such as 5 minutes, so continued motion in the same area does not replay the sound constantly.
 
+Want this on your fridge? This recipe is in the [free 10 starter recipes PDF](#newsletter-signup-heading), one printable page with a QR code back here.
+
 ## Advanced features
 
 ### Staggered multi-speaker playback

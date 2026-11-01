@@ -69,6 +69,8 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
 4. Test both automations by leaving the door open deliberately and confirming the timing and notification content are correct.
 5. If closing the door automatically is wanted, do not build it into this recipe; use [close a garage safely after an open-door alert](/automation/security/garage-auto-close.html) instead, which covers the required entrapment protection and warnings.
 
+Want this on your fridge? This recipe is in the [free 10 starter recipes PDF](#newsletter-signup-heading), one printable page with a QR code back here.
+
 ## Platform notes
 
 Keep this as an alert-only rule on every platform. An open-state notification does not prove the doorway is clear or make unattended closing safe. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.

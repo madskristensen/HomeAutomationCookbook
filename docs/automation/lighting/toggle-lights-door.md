@@ -87,6 +87,8 @@ See [recommended gear](/getting-started/device-guide.html#products-i-have-used) 
   </div>
 </div>
 
+Want this on your fridge? This recipe is in the [free 10 starter recipes PDF](#newsletter-signup-heading), one printable page with a QR code back here.
+
 ## Platform notes
 
 The reusable requirement is that the platform receives a reliable open or closed state and can command the light without disabling its physical control. See the [platform guides](/platforms/) for the broader fit and maintenance tradeoffs.
