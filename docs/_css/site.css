@@ -2192,3 +2192,12 @@ h1.has-article-meta {
 .newsletter-signup-form .btn { min-height: 44px; cursor: pointer; font: inherit; font-weight: 600; }
 .home-newsletter { max-width: 800px; margin: 4rem auto 0; }
 .home-newsletter .newsletter-signup { margin: 0; }
+
+/* Mobile overflow guards: media scales, wide tables and code scroll inside themselves. */
+img, svg, video, iframe { max-width: 100%; }
+img, video { height: auto; }
+.automation-diagram { display: block; margin: 1.5rem 0; }
+.automation-diagram img { display: block; width: 100%; height: auto; }
+@media (max-width: 600px) { .automation-diagram img { max-width: 360px; margin: 0 auto; } }
+main table { display: block; max-width: 100%; overflow-x: auto; }
+pre, .automation-example { max-width: 100%; overflow-x: auto; }

@@ -45,7 +45,7 @@ Nobody should have to fumble for a switch with a basket of laundry or explain th
 <div class="automation-example">IF entry motion is detected AND the room is dark
 THEN turn on the light</div>
 
-![Motion is detected, darkness is checked, and the light turns on while the wall switch remains available.](/assets/img/diagrams/motion-lighting-flow.svg){: .automation-diagram width="960" height="280" }
+<picture class="automation-diagram"><source media="(max-width: 600px)" srcset="/assets/img/diagrams/motion-lighting-flow-stacked.svg"><img src="/assets/img/diagrams/motion-lighting-flow.svg" alt="Motion is detected, darkness is checked, and the light turns on while the wall switch remains available." width="960" height="280" loading="lazy"></picture>
 
 
 
