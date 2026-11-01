@@ -1,8 +1,8 @@
 ---
 layout: automation
 date: 2025-11-30
-title: Fridge and freezer door alerts
-description: Save food when a fridge or freezer door is left ajar. Get an alert after a short delay, with a quicker one for the freezer and a check for missing data.
+title: Fridge door left open alarm with a door sensor
+description: Add a fridge door sensor and get an alarm when the fridge or freezer door is left open. A short delay avoids false alerts, with a quicker one for the freezer.
 keywords: fridge door alert, freezer door notification, refrigerator door left open, food spoilage prevention, door sensor fridge
 last_modified_at: 2026-09-24
 image: /assets/img/social/recipes/appliances/fridge-door-alert.png

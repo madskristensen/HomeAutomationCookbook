@@ -2,8 +2,8 @@
 cta_newsletter: "Want more ways to make an empty house look lived in? Get one short email a month with a seasonal recipe you can set up in an evening, plus a reader question answered and one device explained. No spam."
 layout: automation
 date: 2025-11-29
-title: Dog-bark intrusion deterrent
-description: Make an empty house sound guarded. Play a barking dog through a speaker when motion is detected while you are away, as an extra layer of deterrence.
+title: Fake barking dog alarm to scare off burglars
+description: Build a dog barking alarm with a motion sensor and speaker. A barking dog sound plays only while you are away, adding one more layer of security to an empty house.
 keywords: fake dog deterrent, dog barking security, motion triggered sound, intruder deterrent, smart home security
 last_modified_at: 2026-09-21
 image: /assets/img/social/recipes/security/fake-dog-deterrent.png
