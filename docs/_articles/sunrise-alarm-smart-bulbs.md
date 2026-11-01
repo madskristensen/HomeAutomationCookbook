@@ -43,7 +43,7 @@ Subtract the fade length from your wake time. For a 6:30 AM wake time and a 30 m
 
 ## If your platform has a built-in wake light
 
-Some lighting apps and voice assistants offer a wake-up or sunrise option. If yours does, it may be the quickest start. Check it on your own bulbs before you rely on it, since features differ by app and device.
+Bulb apps often have a sunrise or wake-up option. It is the quickest way to start.
 
 The wake-up lights recipe is in the [free 10 starter recipes PDF](#newsletter-signup-heading), one printable page you can keep by the bed.
 

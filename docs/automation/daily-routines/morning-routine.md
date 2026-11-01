@@ -11,7 +11,7 @@ image: /assets/img/social/recipes/daily-routines/morning-routine.png
 compact: true
 faqs:
   - question: Why not trigger the whole routine from bedroom motion?
-    answer: One person may get up briefly or wake earlier than everyone else. Use an intentional button, phrase, or alarm dismissal as the main trigger and keep motion limited to local path lighting.
+    answer: One person may get up briefly or wake earlier than everyone else. Use an intentional button or phrase as the main trigger and keep motion limited to local path lighting.
   - question: How should the routine handle different wake times?
     answer: Give each person or schedule its own trigger and room scope. Shared actions should wait until the household agrees the day has started.
   - question: Should the routine start a coffee maker automatically?
@@ -54,7 +54,7 @@ AND restore approved comfort settings
 IF a shared room is still unoccupied
 THEN leave its lights, blinds, and audio unchanged</div>
 
-- **Trigger:** A person intentionally presses the morning button, uses the morning phrase, or dismisses a verified wake alarm.
+- **Trigger:** A person intentionally presses the morning button or uses the morning phrase.
 - **Conditions:** The home is in Night mode, no Guest, Vacation, Away, or safety override is active, and the routine is enabled for that person or schedule.
 - **Action:** Change Night to Home, light only the needed route at a gentle level, and restore previously approved morning comfort settings.
 - **Wait / timeout:** Delay shared-room actions until someone enters that room or explicitly starts the shared routine.
@@ -121,7 +121,7 @@ Weather, calendar, or travel information can be a separate spoken request. Do no
 
 ### Why not trigger the whole routine from bedroom motion?
 
-One person may get up briefly or wake earlier than everyone else. Use an intentional button, phrase, or alarm dismissal as the main trigger and keep motion limited to local path lighting.
+One person may get up briefly or wake earlier than everyone else. Use an intentional button or phrase as the main trigger and keep motion limited to local path lighting.
 
 ### How should the routine handle different wake times?
 
