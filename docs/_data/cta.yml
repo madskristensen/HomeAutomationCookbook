@@ -3,21 +3,35 @@
 # wake-up-lights, lights-on-motion, lights-off-after-motion, toggle-lights-door, fake-dog-deterrent,
 # garage-door-notification, stove-left-on-alert, fridge-door-alert, away-mode, morning-routine.
 # Page front matter can override with cta_newsletter. Articles can set cta_category.
+# shop_card: per-topic line for the printable recipe cards promo. The cards are ONE set of all 61 recipes
+# (see /shop/). There are no per-category packs, so never imply the cards hold only this topic.
+# Page front matter can override with cta_shop.
 lighting:
+  shop_card: "Your lighting rules on paper, next to the rest. The printable recipe cards cover all 61 recipes on the site, one page each."
   label: lighting
   pdf_note: "Includes 4 lighting picks, like wake-up lights and lights on with motion."
 security:
+  shop_card: "Keep your safety checks on paper too. The printable recipe cards cover all 61 recipes on the site, from garage and leak alerts to everything else, one page each."
   label: security
   pdf_note: "Includes 3 security picks: the garage door alert, the fake dog deterrent, and the stove left on alert."
 climate:
+  shop_card: "Thermostat and window rules on paper, next to the rest. The printable recipe cards cover all 61 recipes on the site, one page each."
   label: climate
 appliances:
+  shop_card: "Laundry and kitchen alerts on paper, next to the rest. The printable recipe cards cover all 61 recipes on the site, one page each."
   label: appliance
   pdf_note: "Includes the fridge door left open alert."
 notifications:
+  shop_card: "Your alerts and reminders on paper, next to the rest. The printable recipe cards cover all 61 recipes on the site, one page each."
   label: notification
 daily-routines:
+  shop_card: "Morning, away, and bedtime routines on paper, next to the rest. The printable recipe cards cover all 61 recipes on the site, one page each."
   label: routine
   pdf_note: "Includes the away mode and morning routine recipes."
 entertainment:
+  shop_card: "Music and TV rules on paper, next to the rest. The printable recipe cards cover all 61 recipes on the site, one page each."
   label: music and TV
+family:
+  label: family routine
+  pdf_note: "Includes the morning routine recipe."
+  shop_card: "School mornings and bedtime on paper, next to the rest. The printable recipe cards cover all 61 recipes on the site, one page each."

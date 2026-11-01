@@ -12,11 +12,9 @@ or "buy" (starter guide buy box).
 {%- if page.cta_category -%}{%- assign promo_cat = page.cta_category -%}{%- elsif promo_url_head != "/automation/" -%}{%- assign promo_cat = nil -%}{%- endif -%}
 {%- assign promo_copy = site.data.cta[promo_cat] -%}
 {%- if promo_copy -%}
-  {%- assign promo_prefix = "/automation/" | append: promo_cat | append: "/" -%}
-  {%- assign promo_cat_count = site.pages | where: "layout", "automation" | where_exp: "p", "p.url contains promo_prefix" | size -%}
 {%- endif -%}
 {%- if promo_variant == "strip" -%}
-  {%- if promo_url_head == "/automation/" or page.layout == "automation" or page.layout == "automation-category" -%}
+  {%- if promo_url_head == "/automation/" or page.layout == "automation" or page.layout == "automation-category" or page.cta_category == "family" -%}
     {%- assign promo_cover = "/assets/img/guides/recipe-pdf-cover.jpg" -%}
     {%- assign promo_alt = "Cover of the printable home automation recipe cards PDF" -%}
     {%- assign promo_recipes = true -%}
@@ -37,7 +35,7 @@ or "buy" (starter guide buy box).
     {%- if page.cta_shop -%}
     <p>{{ page.cta_shop }}</p>
     {%- elsif promo_copy -%}
-    <p>Liked this recipe? The printable recipe cards include it, plus every {{ promo_copy.label }} recipe on the site ({{ promo_cat_count }} in all) and the rest of the collection. One page each, ready to keep by the hub.</p>
+    <p>{{ promo_copy.shop_card | default: "The printable recipe cards cover all 61 recipes on the site, one page each." }} Keep them by the hub.</p>
     {%- else -%}
     <p>Liked this recipe? Get all 61 as one-page printable cards. Keep them by the hub and set up your next one without hunting through the site.</p>
     {%- endif -%}
@@ -50,7 +48,7 @@ or "buy" (starter guide buy box).
     {%- if page.cta_shop -%}
     <p>{{ page.cta_shop }}</p>
     {%- elsif promo_copy -%}
-    <p><strong>Want this on paper?</strong> The printable recipe cards cover every {{ promo_copy.label }} recipe on the site ({{ promo_cat_count }} in all), one page each. New to this? There is a starter setup guide too.</p>
+    <p>{{ promo_copy.shop_card | default: "The printable recipe cards cover all 61 recipes on the site, one page each." }} New to this? There is a starter setup guide too.</p>
     {%- else -%}
     <p><strong>Skip the guesswork.</strong> Get a printable plan for your first smart home setup, plus one-page cards for proven automations you can set up quickly.</p>
     {%- endif -%}
