@@ -21,6 +21,7 @@ products:
     body: "A visible note or physical checklist. Only the person who loaded the machine sets it ready."
   - job: "Remind the household"
     body: "Evening phone reminder. The reminder never starts the appliance."
+tags: [appliances, kitchen, morning]
 ---
 
 # Prepare morning coffee with a deliberate ready step

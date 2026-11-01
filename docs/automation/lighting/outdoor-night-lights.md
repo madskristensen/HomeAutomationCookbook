@@ -21,6 +21,7 @@ products:
     body: "[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8/ref=nosim?tag=madsk0f-20). Use only with an outdoor-rated fixture and receptacle."
   - job: "Switch a fixed outdoor circuit"
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable. Confirm the switch and installation suit the circuit."
+tags: [lighting, outdoor]
 ---
 
 # Turn outdoor lights on at dusk

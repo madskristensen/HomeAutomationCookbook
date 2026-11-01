@@ -17,6 +17,7 @@ faqs:
 products:
   - job: "Detect an open refrigerator or freezer door"
     body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Confirm the manufacturer's operating temperature range before using one inside a freezer rather than a refrigerator."
+tags: [appliances, kitchen, notifications, door-sensors]
 ---
 
 # Get an alert when the fridge or freezer door is left open

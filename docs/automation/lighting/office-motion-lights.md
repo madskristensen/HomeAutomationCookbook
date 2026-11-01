@@ -23,6 +23,7 @@ products:
     body: "Phone presence from the UniFi network."
   - job: "Play the music"
     body: "A Sonos speaker in the office."
+tags: [lighting, motion]
 ---
 
 # Office lights that stay on while you work

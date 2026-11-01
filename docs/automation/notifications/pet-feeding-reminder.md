@@ -17,6 +17,7 @@ faqs:
 products:
   - job: "Log a feeding event"
     body: "No personally verified recommendation yet. A smart button or a contact sensor repurposed for this job works, but this specific use case is not directly matched by the door and window sensor jobs already covered."
+tags: [notifications, pets, reminders]
 ---
 
 # Set up a pet feeding reminder

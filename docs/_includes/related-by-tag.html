@@ -1,0 +1,31 @@
+{%- comment -%}Up to 4 recipes that share the most tags with this page, skipping any already linked in the content.{%- endcomment -%}
+{%- if page.tags -%}
+{%- assign rel_pool = site.pages | where_exp: "p", "p.tags" | where_exp: "p", "p.layout != 'redirect'" -%}
+{%- assign rel_out = "" -%}{%- assign rel_count = 0 -%}
+{%- for need in (1..3) reversed -%}
+  {%- for p in rel_pool -%}
+    {%- if rel_count >= 4 -%}{%- break -%}{%- endif -%}
+    {%- if p.url == page.url or p.tags == nil -%}{%- continue -%}{%- endif -%}
+    {%- if include.content contains p.url -%}{%- continue -%}{%- endif -%}
+    {%- capture rel_key -%}|{{ p.url }}|{%- endcapture -%}
+    {%- if rel_out contains rel_key -%}{%- continue -%}{%- endif -%}
+    {%- assign shared = 0 -%}
+    {%- for t in p.tags -%}{%- if page.tags contains t -%}{%- assign shared = shared | plus: 1 -%}{%- endif -%}{%- endfor -%}
+    {%- if shared >= need -%}{%- assign rel_out = rel_out | append: rel_key -%}{%- assign rel_count = rel_count | plus: 1 -%}{%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- if rel_count > 0 -%}
+<nav class="related-by-tag" aria-labelledby="related-by-tag-heading">
+  <h2 id="related-by-tag-heading">More recipes on the same topics</h2>
+  <ul>
+  {%- assign rel_urls = rel_out | split: "|" -%}
+  {%- for u in rel_urls -%}{%- if u != "" -%}{%- assign rp = rel_pool | where: "url", u | first -%}
+    <li><a href="{{ rp.url | relative_url }}">{{ rp.title }}</a></li>
+  {%- endif -%}{%- endfor -%}
+  </ul>
+  {%- assign tag_links = "" -%}
+  {%- for t in page.tags -%}{%- if site.data.tags[t] -%}{%- capture tl -%}<a href="{{ '/tags/' | append: t | append: '.html' | relative_url }}">{{ t }}</a>{%- endcapture -%}{%- assign tag_links = tag_links | append: tl | append: " " -%}{%- endif -%}{%- endfor -%}
+  {%- if tag_links != "" -%}<p>Browse by topic: {{ tag_links | strip }}</p>{%- endif -%}
+</nav>
+{%- endif -%}
+{%- endif -%}

@@ -21,6 +21,7 @@ products:
     body: "Manual main-water shutoff. Everyone responsible for the home should know the manual valve location."
   - job: "Reach the household"
     body: "Persistent phone notification to at least two adults. A local audible alert is useful when phones are muted or away."
+tags: [security, notifications, kitchen]
 ---
 
 # Get an immediate alert when water is detected

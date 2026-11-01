@@ -21,6 +21,7 @@ products:
     body: "Zooz ZEN15 Power Switch. I use the ZEN15's power readings to distinguish standby from the TV being on. Measure the TV's actual draw before setting thresholds."
   - job: "Dim the living room lights"
     body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Requires a dimmable fixture and a switch rated for the load."
+tags: [lighting, tv]
 ---
 
 # Dim lights when the TV turns on

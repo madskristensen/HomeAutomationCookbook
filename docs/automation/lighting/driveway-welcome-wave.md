@@ -23,6 +23,7 @@ products:
     body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). A door event confirms activity; it does not prove identity or unlock anything."
   - job: "Suggest that someone is approaching"
     body: "Use your platform's built-in presence feature, driven by phone location, only to open a short pending-arrival window."
+tags: [lighting, outdoor, presence]
 ---
 
 # Light the entry after a verified arrival

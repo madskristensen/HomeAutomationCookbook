@@ -21,6 +21,7 @@ products:
     body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. Choose a weatherproof or otherwise suitable model for the location."
   - job: "Trigger the scene"
     body: "No personally verified recommendation yet. Any button, voice command, or dashboard tile the platform can use to start an automation."
+tags: [music, outdoor]
 ---
 
 # Set up one-tap pool party mode

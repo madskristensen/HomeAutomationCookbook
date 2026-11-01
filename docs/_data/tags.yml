@@ -1,0 +1,48 @@
+# Tag pages exist only for tags used by 8 or more recipes. Categories stay the main navigation.
+notifications:
+  title: Notification recipes across the house
+  heading: Recipes that send an alert or reminder
+  description: Alerts and reminders from every room, from laundry to locks. Each recipe sends one clear message only when someone needs to act.
+  intro: >-
+    These recipes tell someone that something needs attention. They come from every part of the house,
+    not just the notifications category. Each one aims to send one clear message, then stay quiet.
+    Pick the problem you keep checking by hand and start there.
+lighting:
+  title: Lighting recipes from every room
+  heading: Recipes that turn lights on or off
+  description: Every recipe that changes a light, from motion lights to away mode and bedtime. Wall switches keep working in all of them.
+  intro: >-
+    These recipes change a light as part of the job. Some are pure lighting recipes. Others use light
+    as one step in a routine, like bedtime, away mode, or a TV scene. In every one, the wall switch
+    still works and a manual change wins.
+security:
+  title: Safety and security recipes
+  heading: Recipes that help keep the house safe
+  description: Recipes for leaks, locks, garage doors, the stove, and away mode. They add alerts and reminders but never replace a real alarm.
+  intro: >-
+    These recipes help you notice doors, leaks, locks, and the stove sooner. They add information and
+    reminders. They do not replace smoke alarms, locks, or a monitored system. Start with alert-only
+    versions, then add control only where the equipment is approved for it.
+appliances:
+  title: Appliance recipes for laundry and kitchen
+  heading: Recipes for washers, dishwashers, and more
+  description: Recipes that watch appliances like the washer, dishwasher, fridge, and freezer, and tell you when something is done or needs a look.
+  intro: >-
+    These recipes watch appliances instead of controlling them. Most use a power reading, a vibration
+    sensor, or a door sensor to notice when a cycle ends or a door stays open. Then they send one alert
+    to the person who needs it.
+presence:
+  title: Presence recipes for arriving and leaving
+  heading: Recipes that react when people come and go
+  description: Recipes that act when the house becomes empty or someone comes home, like away mode, arrival lights, and running the vacuum.
+  intro: >-
+    These recipes react to who is home. They run when the last person leaves or when someone arrives.
+    Presence signals can be wrong, so each recipe explains how to confirm the house is really empty
+    and what happens if someone comes back early.
+climate:
+  title: Climate recipes for comfort and air
+  heading: Recipes for heating, cooling, and fresh air
+  description: Recipes for thermostats, windows, fans, blinds, and air purifiers that keep rooms comfortable without fighting the people in them.
+  intro: >-
+    These recipes keep rooms comfortable. They pause heating when a window is open, run a fan after a
+    shower, and set safe limits for kids and pets. Each one keeps a manual way to change the setting.

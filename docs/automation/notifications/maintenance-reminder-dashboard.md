@@ -17,6 +17,7 @@ faqs:
 products:
   - job: "Track and display maintenance tasks"
     body: "No personally verified recommendation yet. This only needs virtual switches or variables and a dashboard; no physical hardware is required."
+tags: [notifications, maintenance, reminders, dashboards]
 ---
 
 # Build a home maintenance reminder dashboard

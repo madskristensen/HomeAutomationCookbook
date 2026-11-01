@@ -19,6 +19,7 @@ products:
     body: "[Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY/ref=nosim?tag=madsk0f-20). This is the monitor I use on the washer. Read power only, keep the relay on, and check the washer nameplate against the switch rating before connecting it."
   - job: "Clear the waiting-laundry state"
     body: "A manual dashboard or phone action. A manual reset is better than an unreliable door sensor."
+tags: [appliances, laundry, notifications, power-monitoring]
 ---
 
 # Get notified when the washer finishes

@@ -21,6 +21,7 @@ products:
     body: "Use your platform's built-in presence feature (phone location or network connection), a smart lock, or a garage door sensor; use whichever the household has already tested."
   - job: "Play the music"
     body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use."
+tags: [music, presence]
 ---
 
 # Play music when arriving home

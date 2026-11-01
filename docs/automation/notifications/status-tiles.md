@@ -20,6 +20,7 @@ faqs:
 products:
   - job: "Display persistent status information"
     body: "No personally verified recommendation yet. This only needs virtual switches or variables and a dashboard; no physical hardware is required."
+tags: [notifications, dashboards]
 ---
 
 # Use status tiles instead of notifications

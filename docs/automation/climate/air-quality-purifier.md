@@ -19,6 +19,7 @@ products:
     body: "[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20). Confirm the plug's current rating covers the purifier's startup draw, and keep the purifier's own physical switch usable."
   - job: "Measure indoor air quality"
     body: "No personally verified recommendation yet. I have not verified a specific air quality or PM2.5 sensor. Any sensor used here should report a stable, current reading before it drives the purifier."
+tags: [climate, air-quality]
 ---
 
 # Run the air purifier when indoor air quality drops

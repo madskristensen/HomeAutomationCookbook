@@ -21,6 +21,7 @@ products:
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Use the existing shower light switch as the trigger where possible."
   - job: "Play the music"
     body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. A waterproof or water-resistant model is worth considering for a bathroom, but no specific rating is required."
+tags: [music, bathroom]
 ---
 
 # Play music when a shower starts

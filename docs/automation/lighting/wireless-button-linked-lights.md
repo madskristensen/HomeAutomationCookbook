@@ -19,6 +19,7 @@ products:
     body: "[SONOFF SNZB-01P Zigbee wireless button](https://www.amazon.com/dp/B0CL9JTMWF/ref=nosim?tag=madsk0f-20). One button, with single, double, and long press. Confirm the hub you already use reports the presses you plan to use.\n\nFor several buttons on the wall, [Minoston MR40Z Z-Wave scene controller](https://www.amazon.com/dp/B09BQKD5FQ/ref=nosim?tag=madsk0f-20). Four buttons, battery powered, no new wiring. Confirm each press shows up before you build scenes on it."
   - job: "Control fixed lighting"
     body: "A smart wall switch or dimmer that keeps its paddle working locally. See [recommended gear](/getting-started/device-guide.html#lighting-control) for switches I have used."
+tags: [lighting, buttons]
 ---
 
 # Control lights with a wireless button or linked switch

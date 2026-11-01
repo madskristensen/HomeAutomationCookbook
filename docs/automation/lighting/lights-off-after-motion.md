@@ -23,6 +23,7 @@ products:
     body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep the physical paddle usable."
   - job: "Switch a fixed light on or off"
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable."
+tags: [lighting, motion]
 ---
 
 # Turn lights off after motion stops

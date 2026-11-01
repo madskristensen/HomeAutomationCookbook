@@ -17,6 +17,7 @@ faqs:
 products:
   - job: "Speak the reminder"
     body: "A Sonos speaker in the kitchen. On Hubitat, I use the community [Sonos Advanced Controller](https://community.hubitat.com/t/release-sonos-advanced-controller/130296), which adds the high-priority text-to-speech command."
+tags: [notifications, kids, school-morning, reminders]
 ---
 
 # Spoken school morning reminders

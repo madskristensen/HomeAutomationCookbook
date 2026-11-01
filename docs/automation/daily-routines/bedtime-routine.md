@@ -26,6 +26,7 @@ products:
     body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Respect manual holds, safety limits, and the open-window pause recipe."
   - job: "Report open doors or windows"
     body: "[SONOFF SenseGuard Gen2 Zigbee contact sensor](https://www.amazon.com/dp/B0GKFB3XCL/ref=nosim?tag=madsk0f-20). Report status first; do not treat a contact sensor as proof that a door is locked."
+tags: [bedtime, lighting, security]
 ---
 
 # Run a bedtime routine without surprising the household

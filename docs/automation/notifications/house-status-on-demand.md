@@ -21,6 +21,7 @@ products:
     body: "An outdoor air quality sensor and a weather service. I wrote [Hubitat drivers](https://github.com/madskristensen/hubitat-drivers) for PurpleAir air quality and Open-Meteo weather."
   - job: "Know the appliance status"
     body: "A way to report whether the dishwasher, dryer, and washer are running or ready. I use a generic appliance driver from the same repo."
+tags: [notifications, bedtime, security]
 ---
 
 # House status check on demand

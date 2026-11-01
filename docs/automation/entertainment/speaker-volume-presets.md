@@ -21,6 +21,7 @@ products:
     body: "No personally verified recommendation yet. Any platform that supports scenes or scripts can store a set of volume levels and apply them together."
   - job: "Play and adjust audio"
     body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use."
+tags: [music]
 ---
 
 # Use speaker volume presets

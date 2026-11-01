@@ -23,6 +23,7 @@ products:
     body: "Existing dimmable room or hallway light. Keep the normal switch usable."
   - job: "End quiet mode"
     body: "The same visible control. Automatic expiry may remind, but must not claim anyone woke up."
+tags: [notifications, kids, bedtime]
 ---
 
 # Set a nursery quiet mode without guessing whether a baby is asleep

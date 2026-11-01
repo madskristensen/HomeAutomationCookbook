@@ -21,6 +21,7 @@ products:
     body: "On Hubitat, I use the community [Sonos Advanced Controller](https://community.hubitat.com/t/release-sonos-advanced-controller/130296). It can load Sonos favorites and manage groups locally."
   - job: "Pick a station"
     body: "Virtual switches on the hub, one per station, plus a stop switch."
+tags: [music, buttons]
 ---
 
 # Whole-home music with favorite station switches

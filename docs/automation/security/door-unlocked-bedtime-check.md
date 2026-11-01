@@ -19,6 +19,7 @@ products:
     body: "[Kwikset HomeConnect 620 Z-Wave Long Range keypad lock](https://www.amazon.com/dp/B0DWGF32GD/ref=nosim?tag=madsk0f-20). This is the lock I use, and it has been reliable here. Confirm the hub reports locked, unlocked, jammed, and battery. Keep a physical key."
   - job: "Report door position"
     body: "A compatible contact sensor can report open or closed when an automatic lock command is being considered. It does not prove the lock is engaged."
+tags: [security, bedtime, notifications]
 ---
 
 # Alert when a door is left unlocked and check again at bedtime

@@ -21,6 +21,7 @@ products:
     body: "[Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20). Use the extra readings where they solve a real bathroom problem."
   - job: "Dim a fixed light"
     body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. The physical paddle must remain usable."
+tags: [lighting, bathroom, bedtime, motion]
 ---
 
 # Turn on a dim bathroom light at night

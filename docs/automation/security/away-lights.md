@@ -21,6 +21,7 @@ products:
     body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch."
   - job: "Control a plug-in light or appliance"
     body: "[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20). Works for a lamp plugged into an outlet rather than a wired fixture."
+tags: [security, lighting, presence]
 ---
 
 # Turn on away lights to look occupied

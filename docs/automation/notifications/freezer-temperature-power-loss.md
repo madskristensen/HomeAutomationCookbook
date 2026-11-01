@@ -19,6 +19,7 @@ products:
     body: "[THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20). I use this for the freezer alert. Its published accuracy band is 5°F to 122°F, so compare it with the freezer's own thermometer before you trust a threshold."
   - job: "Detect possible outbuilding power loss"
     body: "No personally verified recommendation yet. Use a mains-powered monitor that reports independently of the freezer load and cannot switch the freezer off."
+tags: [notifications, appliances, garage]
 ---
 
 # Alert when a freezer warms up or an outbuilding loses power
