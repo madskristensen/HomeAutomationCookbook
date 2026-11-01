@@ -1,5 +1,7 @@
 # Per-category CTA copy. Page front matter can override with cta_shop / cta_newsletter.
 # Articles can set cta_category to pick a cluster.
+# freebie: shown under every newsletter signup. The PDF is linked on /newsletter/thanks/.
+freebie: "Subscribe and get a free printable PDF of the 10 most popular recipes."
 lighting:
   label: lighting
   newsletter: "One short email a month with a seasonal recipe you can set up in an evening. Expect lighting ideas like this one, a reader question answered, and one device explained."

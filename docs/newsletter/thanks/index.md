@@ -11,6 +11,12 @@ noindex: true
 
 **One last step: check your inbox.** Open the email from Home Automation Cookbook and tap the confirm link. If it is not there in a few minutes, look in your spam or promotions folder.
 
+## Your free PDF
+
+Here are the 10 most popular recipes from the site, one printable page each.
+
+<p><a class="btn btn-primary" href="/dl-fc6c894ed160de47ad888dd4/hac-10-starter-recipes.pdf" download>Download the 10 starter recipes PDF</a></p>
+
 ## What to expect
 
 About once a month, you get one short email with:
