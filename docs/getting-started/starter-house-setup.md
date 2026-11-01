@@ -40,7 +40,7 @@ This list covers four rooms and the whole-house basics. Every product here is on
 | 1 | Motion sensor ([Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB/ref=nosim?tag=madsk0f-20)) | Hallway or laundry | [Lights on motion](/automation/lighting/lights-on-motion.html) |
 | 2 | Smart switch ([Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20)) | Same room | [Lights off after motion](/automation/lighting/lights-off-after-motion.html) |
 | 3 | Bathroom multisensor ([Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20)) | Bathroom | [Bathroom night-light](/automation/lighting/bathroom-night-light.html) |
-| 4 | Smart dimmer ([TP-Link Tapo S505D](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20)) | Bathroom or living room | [Bathroom night-light](/automation/lighting/bathroom-night-light.html) |
+| 4 | Smart dimmer ([UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN/ref=nosim?tag=madsk0f-20)) | Bathroom or living room | [Bathroom night-light](/automation/lighting/bathroom-night-light.html) |
 | 5 | Power-metering switch ([Zooz ZEN15](https://www.amazon.com/dp/B07578W7KY/ref=nosim?tag=madsk0f-20)) | Laundry | [Washer done alert](/automation/appliances/washer-done-notification.html) |
 | 6 | Vibration sensor ([THIRDREALITY Zigbee Vibration Sensor](https://www.amazon.com/dp/B0C9DP249C/ref=nosim?tag=madsk0f-20)) | Laundry | [Dryer done alert](/automation/appliances/dryer-done-notification.html) |
 | 7 | Leak sensor ([THIRDREALITY WL2](https://www.amazon.com/dp/B0GK19F6Z2/ref=nosim?tag=madsk0f-20)) | Water heater or under sink | [Water leak alerts](/automation/security/water-leak-response.html) |

@@ -16,7 +16,7 @@ faqs:
     answer: Yes, if it is mounted outside a covered porch or in an area exposed to weather. Standard indoor motion sensors are not designed for that exposure.
 products:
   - job: "Detect motion near the front entrance"
-    body: "[Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20), or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) for Z-Wave Long Range. Confirm it is rated for the exposure it will face."
+    body: "[Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20). It has a Z-Wave Long Range radio. Confirm it is rated for the exposure it will face."
 tags: [notifications, security]
 ---
 

@@ -16,7 +16,7 @@ faqs:
     answer: Each light should still have a familiar local control. A linked control adds convenience; it should not become the only way to use a room.
 products:
   - job: "Provide a physical input"
-    body: "[SONOFF SNZB-01P Zigbee wireless button](https://www.amazon.com/dp/B0CL9JTMWF/ref=nosim?tag=madsk0f-20). One button, with single, double, and long press. Confirm the hub you already use reports the presses you plan to use.\n\nFor several buttons on the wall, [Minoston MR40Z Z-Wave scene controller](https://www.amazon.com/dp/B09BQKD5FQ/ref=nosim?tag=madsk0f-20). Four buttons, battery powered, no new wiring. Confirm each press shows up before you build scenes on it."
+    body: "[SONOFF SNZB-01P Zigbee wireless button](https://www.amazon.com/dp/B0CL9JTMWF/ref=nosim?tag=madsk0f-20). One button, with single, double, and long press. Confirm the hub you already use reports the presses you plan to use.\n\nOn Z-Wave, [Zooz ZEN34 800LR Z-Wave Remote Switch](https://www.amazon.com/dp/B08TMWLY74/ref=nosim?tag=madsk0f-20). Two paddles with multi-tap, battery powered, no new wiring. Confirm each press shows up before you build scenes on it."
   - job: "Control fixed lighting"
     body: "A smart wall switch or dimmer that keeps its paddle working locally. See [recommended gear](/getting-started/device-guide.html#lighting-control) for switches I have used."
 tags: [lighting, buttons]

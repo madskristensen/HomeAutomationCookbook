@@ -18,7 +18,7 @@ products:
   - job: "Switch a fixed light on or off"
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Good for a wired fixture the household wants to keep as a simple on/off."
   - job: "Dim a fixed light"
-    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch."
+    body: "[UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN/ref=nosim?tag=madsk0f-20). Useful if a more natural, less bright evening look is preferred over a full-brightness on/off switch."
   - job: "Control a plug-in light or appliance"
     body: "[Minoston 800 Series Z-Wave plug](https://www.amazon.com/dp/B0CQX4JFV2/ref=nosim?tag=madsk0f-20). Works for a lamp plugged into an outlet rather than a wired fixture."
 tags: [security, lighting, presence]

@@ -18,7 +18,7 @@ faqs:
     answer: A doorbell button can send more than one signal for a single press. A short debounce window after the first trigger prevents multiple notifications for the same ring.
 products:
   - job: "Detect the doorbell press"
-    body: "[Ecolink Z-Wave Plus Door/Window Sensor (DWZWAVE2.5-ECO)](https://www.amazon.com/dp/B01N5HB4U5/ref=nosim?tag=madsk0f-20). The external screws are a non-powered dry contact, in parallel with the built-in magnet. Do not land the doorbell transformer's voltage on them. Use a relay so a press closes those terminals while the chime stays on its own wiring. Keep the magnet away from the sensor when the terminals are in use."
+    body: "A door/window sensor with external dry-contact terminals. The terminals are a non-powered dry contact, in parallel with the built-in magnet. Do not land the doorbell transformer's voltage on them. Use a relay so a press closes those terminals while the chime stays on its own wiring. Keep the magnet away from the sensor when the terminals are in use."
 tags: [notifications, security]
 ---
 

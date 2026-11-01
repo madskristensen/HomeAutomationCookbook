@@ -16,7 +16,7 @@ faqs:
     answer: No. Lighting is easy to reverse; access control is not. Keep keys, keypads, or a deliberate lock action separate from this recipe.
 products:
   - job: "Control plug-in exterior lighting"
-    body: "[Minoston Outdoor Smart Plug](https://www.amazon.com/dp/B07X52W1J8/ref=nosim?tag=madsk0f-20). Use only with a suitable outdoor receptacle, enclosure, and lighting load."
+    body: "[Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC/ref=nosim?tag=madsk0f-20). Use only with a suitable outdoor receptacle, enclosure, and lighting load."
   - job: "Switch a fixed entry light"
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). The wall paddle remains the normal control."
   - job: "Confirm entry-door activity"

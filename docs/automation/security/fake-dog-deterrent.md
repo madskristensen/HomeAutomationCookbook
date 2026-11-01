@@ -17,7 +17,7 @@ faqs:
     answer: Run it only in Away mode. You can further limit Away-mode playback to nighttime, but nighttime alone must never enable it while people are home.
 products:
   - job: "Detect fast entry motion"
-    body: "[Shelly BLU Motion ZB](https://www.amazon.com/dp/B0H4GD6GGK/ref=nosim?tag=madsk0f-20) for an indoor entry point, or the [Ecolink Z-Wave PIR Motion Detector, Pet Immune](https://www.amazon.com/dp/B01MQXXG0I/ref=nosim?tag=madsk0f-20) or [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) if mounted outside."
+    body: "[Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB/ref=nosim?tag=madsk0f-20) for an indoor entry point, or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) if mounted outside."
   - job: "Play the barking sound on a speaker"
     body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. No specific model is required as long as it can play an audio file on command."
 tags: [security]

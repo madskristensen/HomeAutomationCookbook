@@ -20,7 +20,7 @@ products:
   - job: "Start the routine"
     body: "A \"Good morning\" voice phrase or manual scene control. The trigger should be intentional and easy to cancel."
   - job: "Light the morning path"
-    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep every wall paddle working normally."
+    body: "[UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN/ref=nosim?tag=madsk0f-20). Verify hub compatibility. Keep every wall paddle working normally."
   - job: "Restore approved comfort"
     body: "[ecobee Smart Thermostat Enhanced](https://www.amazon.com/dp/B09XXTQPXC/ref=nosim?tag=madsk0f-20). Someone can always change the temperature at the thermostat."
 tags: [morning, lighting]

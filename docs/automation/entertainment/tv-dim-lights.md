@@ -18,9 +18,9 @@ faqs:
     answer: Yes, if the previous brightness is saved before dimming and restored once the TV has been off for a couple of minutes, rather than always returning to one fixed level.
 products:
   - job: "Detect the TV turning on"
-    body: "Zooz ZEN15 Power Switch. I use the ZEN15's power readings to distinguish standby from the TV being on. Measure the TV's actual draw before setting thresholds."
+    body: "[Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20). I use its power readings to tell standby from the TV being on. Measure the TV's actual draw before setting thresholds."
   - job: "Dim the living room lights"
-    body: "[TP-Link Tapo S505D Matter Smart Dimmer Switch](https://www.amazon.com/dp/B0C2B8SP3W/ref=nosim?tag=madsk0f-20). Requires a dimmable fixture and a switch rated for the load."
+    body: "[UltraPro Z-Wave Long Range Dimmer](https://www.amazon.com/dp/B0FX36Z8VN/ref=nosim?tag=madsk0f-20). Requires a dimmable fixture and a switch rated for the load."
 tags: [lighting, tv]
 ---
 
