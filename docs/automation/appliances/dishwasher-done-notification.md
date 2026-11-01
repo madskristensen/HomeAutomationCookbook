@@ -16,7 +16,7 @@ faqs:
     answer: No. Use any monitoring device only to observe, and keep its relay on. Do not remotely interrupt a wash or dry cycle.
 products:
   - job: "Observe dishwasher power or vibration"
-    body: "No personally verified recommendation yet. I have not verified a monitoring device rated for this appliance's load and startup current. Do not assume a general-purpose smart plug is suitable; a [vibration sensor](/getting-started/device-guide.html#vibration-sensing) may be a safer non-invasive alternative."
+    body: "No personally verified recommendation yet. I have not verified a monitoring device rated for this appliance's load and startup current. Do not assume a general-purpose smart plug is suitable; a vibration sensor may be a safer non-invasive alternative."
   - job: "Clear the waiting-dishes state"
     body: "A manual dashboard or phone action. A manual reset is simpler and more reliable than an unverified door sensor."
 tags: [appliances, kitchen, notifications, power-monitoring]
