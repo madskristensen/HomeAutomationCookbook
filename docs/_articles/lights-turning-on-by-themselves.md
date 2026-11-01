@@ -1,4 +1,5 @@
 ---
+cta_category: lighting
 layout: guide
 title: Lights turning on by themselves
 description: Stop a light from turning on by itself. Check what the sensor sees, power restore settings, duplicate rules, and direct device links, step by step.

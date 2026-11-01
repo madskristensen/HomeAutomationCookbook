@@ -1,4 +1,5 @@
 ---
+cta_category: notifications
 layout: guide
 title: Why smart devices go offline
 description: Get a sensor, plug, or bulb responding again. Check power, batteries, signal, and the hub in order before you replace anything.

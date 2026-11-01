@@ -1,4 +1,5 @@
 ---
+cta_category: lighting
 layout: guide
 title: Why motion lights turn off while you are still there
 description: Stop motion lights from turning off while you are still in the room. Check the timeout, sensor aim, and when to add a presence sensor.

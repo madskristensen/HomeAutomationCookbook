@@ -1,4 +1,5 @@
 ---
+cta_category: lighting
 layout: guide
 title: Smart bulbs vs. smart switches after a power outage
 description: Decide between smart bulbs, smart switches, wall modules, and no-neutral options, and choose what your lights should do when the power comes back.
