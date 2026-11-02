@@ -4,6 +4,8 @@
 {% endcomment %}
 <script>
 (function () {
+  var host = location.hostname;
+  if (host !== "homeautomationcookbook.com" && host !== "www.homeautomationcookbook.com") return;
   try {
     if (/[?&]notrack=1\b/.test(location.search)) localStorage.setItem("notrack", "1");
     if (localStorage.getItem("notrack") === "1") return;
