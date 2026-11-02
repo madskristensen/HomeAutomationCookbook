@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Smart home tips for light sleepers</title>
+  <desc id="desc">Sleep lightly? Use dim night lights, quiet alerts, and gentle wake-ups so your smart home stops waking you. Tips for heavy sleepers too.</desc>
+  <style>
+  @media (prefers-color-scheme: dark) {
+    rect[fill="#f8f9fa"] { fill: #14191c; }
+    rect[fill="#ffffff"], path[fill="#ffffff"] { fill: #1d2428; }
+    [fill="#eef2f3"] { fill: #293238; }
+    text[fill="#2c3e50"], circle[fill="#2c3e50"] { fill: #e7edef; }
+    text[fill="#5d6d75"], text[fill="#6b777c"] { fill: #b7c2c6; }
+    [stroke="#2c3e50"] { stroke: #d7e0e3; }
+    [stroke="#9db1b6"] { stroke: #72858c; }
+    [stroke="#e0e0e0"] { stroke: #3d494f; }
+  }
+</style>
+
+  <rect width="1200" height="630" fill="#f8f9fa"/>
+  <rect x="52" y="52" width="1096" height="526" rx="28" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  <rect x="108" y="88" width="190" height="43" rx="21" fill="#eef2f3"/>
+  <text x="131" y="116" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600">SLEEP GUIDE</text>
+  <text x="108" y="171" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="700">Smart home tips</text>
+  <text x="108" y="229" fill="#2c3e50" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="700">for light sleepers</text>
+  <text x="108" y="320" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">Dim night lights, quiet alerts, and gentle</text>
+  <text x="108" y="351" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">wake-ups so your smart home stops waking</text>
+  <text x="108" y="382" fill="#5d6d75" font-family="Segoe UI, Arial, sans-serif" font-size="22">you. Tips for heavy sleepers too.</text>
+  <g transform="translate(820 140)" fill="none" stroke="#2c3e50" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M150 20a120 120 0 1 0 120 150A95 95 0 0 1 150 20z" fill="#eef2f3"/><path d="M40 300h220" stroke="#9db1b6"/><circle cx="235" cy="60" r="8" fill="#2c3e50" stroke="none"/><circle cx="270" cy="110" r="5" fill="#2c3e50" stroke="none"/></g>
+
+  <text x="108" y="550" fill="#6b777c" font-family="Segoe UI, Arial, sans-serif" font-size="20">HOME AUTOMATION COOKBOOK</text>
+</svg>
