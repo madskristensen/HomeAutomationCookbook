@@ -114,3 +114,4 @@ I use SharpTools.io with Hubitat to display controls and status on wall-mounted 
 - [SmartThings home automation guide](/platforms/smartthings.html)
 - [Home Assistant technical-fit guide](/platforms/home-assistant.html)
 - [Browse platform-neutral recipes](/automation/)
+- [Start a Hubitat smart home](/articles/start-a-hubitat-smart-home.html)
