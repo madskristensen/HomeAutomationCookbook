@@ -2,9 +2,9 @@
 layout: guide
 redirect_from:
   - /tips/index.html
-title: Practical home automation tips
-description: Make automations easy for family and guests to understand, control, and recover when something fails, with small habits that pay off every day.
-last_modified_at: 2026-09-21
+title: How to improve your home automation skills
+description: Improve your home automation skills with everyday habits. Let wall switches win, name devices clearly, change one thing at a time, and keep a short record.
+last_modified_at: 2026-11-10
 image: /assets/img/social/guides/automation-tips.png
 ---
 
@@ -12,7 +12,7 @@ image: /assets/img/social/guides/automation-tips.png
 
 {% include content-hero.html src="/assets/img/social/guides/automation-tips.svg" alt="Practical home automation guidance for reliable routines and familiar controls" %}
 
-Most improvements come from removing surprises, not adding features. These patterns help the house take on repeated work without taking control away from the people who live there.
+To improve your home automation skills, practice a few reliable habits rather than adding more features. Let wall switches win, use the same gesture everywhere, change one thing at a time, and keep a short maintenance record.
 
 ## Let the physical control win
 
