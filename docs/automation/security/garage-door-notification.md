@@ -17,7 +17,7 @@ faqs:
     answer: Set up a separate automation per door, since each can have its own sensor, its own typical usage pattern, and its own appropriate delay before alerting.
 products:
   - job: "Know whether a garage door is open"
-    body: "[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). This is the Zigbee tilt sensor I use on my garage. It reads the door's angle, so it works on the moving panel without lining up a magnet with the frame. That is why a regular contact sensor is a poorer fit. It reports open and closed without replacing the opener. It reports door position only, not whether the doorway is clear. It needs a Zigbee hub. If your hub is Z-Wave only, the [device guide](/getting-started/device-guide.html#garage-door) lists the Ecolink Z-Wave tilt sensor."
+    body: "[THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). This is the Zigbee tilt sensor I use on my garage. It reads the door's angle, so it works on the moving panel without lining up a magnet with the frame. That is why a regular contact sensor is a poorer fit. It reports open and closed without replacing the opener. It reports door position only, not whether the doorway is clear. It needs a Zigbee hub. If your hub is Z-Wave only, use the [Ecolink Z-Wave tilt sensor](https://www.amazon.com/dp/B01MRZB0NT/ref=nosim?tag=madsk0f-20)."
 tags: [security, garage, notifications]
 ---
 
