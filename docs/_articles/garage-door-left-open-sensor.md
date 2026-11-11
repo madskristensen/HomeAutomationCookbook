@@ -27,7 +27,7 @@ Pick one that works with your hub or app. Check the listing for the radio type y
 
 ## What I'd buy
 
-This is the Zigbee tilt sensor I use on my garage: the [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). It reads the door's angle, so it works on the moving panel without lining up a magnet with the frame. That is why a regular contact sensor is a poorer fit. If your hub is Z-Wave only, the [device guide](/getting-started/device-guide.html#garage-door) lists the Ecolink Z-Wave tilt sensor.
+This is the Zigbee tilt sensor I use on my garage: the [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). It reads the door's angle, so it works on the moving panel without lining up a magnet with the frame. That is why a regular contact sensor is a poorer fit. If your hub is Z-Wave only, use the [Ecolink Z-Wave tilt sensor](https://www.amazon.com/dp/B01MRZB0NT/ref=nosim?tag=madsk0f-20).
 
 ## Three kinds of sensor
 
