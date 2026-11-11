@@ -4,7 +4,7 @@ date: 2025-11-30
 title: Welcome arrivals with path lighting
 description: Get a lit path from the driveway to the door after dark, while the lock and the lights you control by hand are left alone.
 keywords: arrival lighting, welcome home lights, entry light automation, outdoor arrival lights, verified presence lighting
-last_modified_at: 2026-09-21
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/lighting/driveway-welcome-wave.png
 compact: true
 faqs:

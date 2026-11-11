@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Automate an indoor air purifier
 description: Yes, an air quality monitor can run your purifier. Turn it on when the sensor shows a lasting drop, and off once the air clears.
 keywords: air quality automation, air purifier control, AQI sensor automation, PM2.5 automation, indoor air quality
-last_modified_at: 2026-09-21
+last_modified_at: 2026-11-02
 image: /assets/img/social/recipes/climate/air-quality-purifier.png
 compact: true
 faqs:

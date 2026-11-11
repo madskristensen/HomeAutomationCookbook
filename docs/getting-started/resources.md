@@ -4,7 +4,7 @@ redirect_from:
   - /resources/index.html
 title: Home automation resources
 description: Check how a device or platform really behaves with this short list of official documentation, helpful communities, and research tips.
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-25
 image: /assets/img/social/guides/automation-resources.png
 ---
 

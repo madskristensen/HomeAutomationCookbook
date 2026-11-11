@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Smart home morning routine and scenes
 description: Start the day with lights only where you need them. A morning routine begins when you choose and leaves everyone still sleeping undisturbed.
 keywords: good morning routine, morning lighting automation, quiet wake-up automation, smart home morning, family morning routine
-last_modified_at: 2026-09-21
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/daily-routines/morning-routine.png
 compact: true
 faqs:

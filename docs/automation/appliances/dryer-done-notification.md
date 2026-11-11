@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Get notified when the dryer finishes
 description: Get one alert when the dryer finishes so clothes do not sit and wrinkle. A vibration sensor spots the end of the cycle without touching dryer power.
 keywords: dryer finished alert, dryer vibration sensor, laundry notification, dryer automation, dryer done notification
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/appliances/dryer-done-notification.png
 compact: true
 faqs:

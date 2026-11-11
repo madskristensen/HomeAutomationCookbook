@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Away mode automation for security and energy savings
 description: Set your home to away mode automatically once everyone has left. Lights, climate, and security adjust to save energy and keep the house safe, and everyone is told.
 keywords: away mode automation, presence detection, leave home automation, location based automation, smart home away mode
-last_modified_at: 2026-10-25
+last_modified_at: 2026-10-27
 image: /assets/img/social/recipes/daily-routines/away-mode.png
 compact: true
 faqs:

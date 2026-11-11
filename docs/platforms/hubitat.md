@@ -2,7 +2,7 @@
 layout: guide
 title: Hubitat home automation guide
 description: Run reliable automations at home with Hubitat. Use its built-in apps and local rules while keeping physical switches and easy overrides.
-last_modified_at: 2026-09-14
+last_modified_at: 2026-11-05
 image: /assets/img/social/platform-hubitat.png
 ---
 

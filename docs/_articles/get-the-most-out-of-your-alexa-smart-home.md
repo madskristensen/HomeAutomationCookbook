@@ -3,7 +3,7 @@ layout: guide
 title: "Get the most out of your Alexa smart home"
 description: Make Alexa house control easier. Put each Echo in a room group, start routines from alarms and modes, use Away Lighting, and add a hub when routines run out.
 date: 2026-10-29
-last_modified_at: 2026-10-29
+last_modified_at: 2026-11-01
 image: /assets/img/social/platform-alexa.png
 ---
 

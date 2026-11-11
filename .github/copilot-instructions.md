@@ -83,6 +83,7 @@ Keep the recipe platform-neutral. Do not add platform-specific walkthroughs, cod
 - Hub, category, redirect, and navigation pages inherit from `layout: default` and remain undated. Category indexes use `layout: automation-category`.
 - Legal pages may show an explicit date in their content when the wording requires it.
 - Whenever a markdown file's content is edited, update its `last_modified_at` frontmatter field to today's date (if the page's layout uses that field per the rules above). Add the field if it's missing and the layout calls for it. Skip this for pages that stay undated (hub, category, redirect, navigation, `layout: default` pages).
+- A pull request check (`script/check-lastmod.py`, workflow Check last_modified_at) fails when a PR changes the body, `products`, or `faqs` of a page that has `last_modified_at` without updating that field. Title, description, tags, and other metadata changes do not require a bump. For a pure frontmatter or template sweep, add the `skip-lastmod-check` label on the pull request, or put `Skip-Lastmod-Check: true` in a commit message.
 
 # Navigation
 
