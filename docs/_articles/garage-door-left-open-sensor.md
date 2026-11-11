@@ -4,7 +4,7 @@ layout: guide
 title: "Garage door left open sensor: what to buy and where to mount it"
 description: Pick a garage door left open sensor that fits your door and hub, mount it where it reads open and closed reliably, and get an alert when it stays open.
 date: 2026-11-01
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-11
 image: /assets/img/social/guides/garage-door-left-open-sensor.png
 ---
 
@@ -24,6 +24,10 @@ To know when the garage door is left open, add a sensor that reports open and cl
 | Side door or other hinged door | Contact sensor | On the frame, magnet on the door |
 
 Pick one that works with your hub or app. Check the listing for the radio type your hub supports, such as Zigbee, Z-Wave, Matter, or Wi-Fi.
+
+## What I'd buy
+
+This is the Zigbee tilt sensor I use on my garage: the [THIRDREALITY Zigbee Smart Garage Door Tilt Sensor](https://www.amazon.com/dp/B0CZP2CJXF/ref=nosim?tag=madsk0f-20). It reads the door's angle, so it works on the moving panel without lining up a magnet with the frame. That is why a regular contact sensor is a poorer fit. If your hub is Z-Wave only, the [device guide](/getting-started/device-guide.html#garage-door) lists the Ecolink Z-Wave tilt sensor.
 
 ## Three kinds of sensor
 
