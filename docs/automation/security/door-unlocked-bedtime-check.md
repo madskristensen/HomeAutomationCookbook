@@ -4,7 +4,7 @@ date: 2026-09-24
 title: Alert when a door is left unlocked
 description: Go to bed knowing the doors are locked. See when an outside door is unlocked, get a bedtime lock check, and add auto-locking only with real feedback.
 keywords: door left unlocked alert, bedtime lock check, smart lock notification, unlocked door reminder, night lock automation
-last_modified_at: 2026-10-05
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/security/door-unlocked-bedtime-check.png
 compact: true
 faqs:

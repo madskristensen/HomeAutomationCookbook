@@ -7,7 +7,7 @@ date: 2025-11-28
 title: Turn lights on with motion sensors
 description: Walk into a lit room without reaching for the switch. Turn lights on with motion while the wall switch keeps working for everyone in the house.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/lighting/lights-on-motion.png
 compact: true
 faqs:

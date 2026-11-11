@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Dim lights when the TV turns on
 description: Get movie lighting automatically. Dim the living room lights when the TV turns on and bring them back afterward, using a power or status signal.
 keywords: TV lighting automation, dim lights TV, theater mode automation, movie lighting, automatic TV lights
-last_modified_at: 2026-09-21
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/entertainment/tv-dim-lights.png
 compact: true
 faqs:

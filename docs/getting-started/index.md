@@ -4,7 +4,7 @@ title: "Home automation guide: how to start a smart home"
 description: A practical home automation guide. Start with one household problem, pick a platform you can maintain, test one device, and keep the wall switches working.
 permalink: /getting-started/
 canonical_url: https://www.homeautomationcookbook.com/getting-started/
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-25
 image: /assets/img/social/guides/getting-started.png
 pdf_promo_card: true
 ---

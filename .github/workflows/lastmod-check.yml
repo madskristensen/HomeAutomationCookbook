@@ -1,0 +1,25 @@
+name: Check last_modified_at
+
+on:
+  pull_request:
+    paths:
+      - "docs/**/*.md"
+      - "script/check-lastmod.py"
+      - ".github/workflows/lastmod-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  lastmod:
+    name: last_modified_at
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Check last_modified_at on changed content pages
+        env:
+          PR_LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+        run: python3 script/check-lastmod.py --base ${{ github.event.pull_request.base.sha }} --head ${{ github.event.pull_request.head.sha }}

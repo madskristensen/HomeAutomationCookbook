@@ -4,7 +4,7 @@ date: 2025-11-30
 title: "Stove left on alarm: a cooking reminder that persists"
 description: A stove left on reminder that keeps alerting until someone checks the controls and clears it. Starts from a cooking timer or approved appliance status. A reminder, not a safety system.
 keywords: stove reminder, oven left on alert, cooking timer, appliance status notification, kitchen safety
-last_modified_at: 2026-09-21
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/security/stove-left-on-alert.png
 compact: true
 faqs:

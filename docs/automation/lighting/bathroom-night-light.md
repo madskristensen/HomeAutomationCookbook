@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Bathroom night-light automation
 description: Find the bathroom at night without a blinding light. Motion turns on a dim night light, and the wall switch still works if anything fails.
 keywords: bathroom night light, nighttime motion lighting, low brightness automation, smart bathroom lighting, motion sensor dimming, night mode lighting
-last_modified_at: 2026-10-19
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/lighting/bathroom-night-light.png
 compact: true
 faqs:

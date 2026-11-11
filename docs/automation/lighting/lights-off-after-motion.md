@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights off after motion stops
 description: Stop paying to light empty rooms. Turn lights off after motion stops, with a forgiving timeout that respects people sitting still and wall switches.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/lighting/lights-off-after-motion.png
 compact: true
 faqs:

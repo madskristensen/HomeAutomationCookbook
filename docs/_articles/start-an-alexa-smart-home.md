@@ -3,7 +3,7 @@ layout: guide
 title: "Start an Alexa smart home: a beginner's guide"
 description: Start Alexa home automation with an Echo you may already own. See which Echo models act as a smart home hub, what to buy first, and your first routine.
 date: 2026-10-27
-last_modified_at: 2026-10-27
+last_modified_at: 2026-11-01
 image: /assets/img/social/platform-alexa.png
 ---
 

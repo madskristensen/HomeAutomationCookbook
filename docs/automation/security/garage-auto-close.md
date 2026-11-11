@@ -4,7 +4,7 @@ date: 2025-11-30
 title: Close the garage door automatically if left open
 description: Close the garage door when it is left open, safely. Get an alert first, keep people in control, and auto close only with an opener built for it and entrapment protection.
 keywords: garage door left open, garage close alert, unattended garage closing, garage door safety, tilt sensor
-last_modified_at: 2026-09-21
+last_modified_at: 2026-10-27
 image: /assets/img/social/recipes/security/garage-auto-close.png
 compact: true
 faqs:

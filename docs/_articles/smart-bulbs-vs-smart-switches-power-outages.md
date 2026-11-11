@@ -4,7 +4,7 @@ layout: guide
 title: Smart bulbs vs. smart switches after a power outage
 description: Decide between smart bulbs, smart switches, wall modules, and no-neutral options, and choose what your lights should do when the power comes back.
 date: 2026-09-24
-last_modified_at: 2026-10-05
+last_modified_at: 2026-10-12
 image: /assets/img/social/guides/smart-bulbs-vs-smart-switches-power-outages.png
 ---
 

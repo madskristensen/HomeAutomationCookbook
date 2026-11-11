@@ -5,7 +5,7 @@ date: 2025-11-29
 title: Fake barking dog alarm to scare off burglars
 description: Build a dog barking alarm with a motion sensor and speaker. A barking dog sound plays only while you are away, adding one more layer of security to an empty house.
 keywords: fake dog deterrent, dog barking security, motion triggered sound, intruder deterrent, smart home security
-last_modified_at: 2026-09-21
+last_modified_at: 2026-11-01
 image: /assets/img/social/recipes/security/fake-dog-deterrent.png
 compact: true
 faqs:
