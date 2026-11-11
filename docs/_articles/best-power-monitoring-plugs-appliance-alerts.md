@@ -4,7 +4,7 @@ layout: guide
 title: Best power-monitoring plugs for washer, dishwasher, and TV alerts
 description: Pick a power-monitoring plug or switch for washer, dishwasher, and TV alerts that works locally with your hub, plus what to use for a 240V dryer.
 date: 2026-10-25
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-11
 image: /assets/img/social/guides/best-power-monitoring-plugs-appliance-alerts.png
 pdf_promo_card: true
 ---
@@ -21,7 +21,7 @@ This guide covers what to look for, then picks by appliance. Every product named
 
 | Appliance | What to use | Why |
 |---|---|---|
-| Washer (120V) | [Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY/ref=nosim?tag=madsk0f-20) | Heavy-duty relay built for motor loads. I use it on my washer. |
+| Washer (120V) | [Zooz ZEN15 Power Switch](https://www.getzooz.com/zooz-zen15-power-switch/) | Heavy-duty relay built for motor loads. I use it on my washer. |
 | TV or monitor | [Ezlo 800 Series Z-Wave smart plug](https://www.amazon.com/dp/B0GXW9HZRK/ref=nosim?tag=madsk0f-20) or the ZEN15 | Low, steady load. Any reliable metering plug can tell standby from on. |
 | Electric dryer (240V) | [THIRDREALITY Zigbee Smart Vibration Sensor](https://www.amazon.com/dp/B0C9DP249C/ref=nosim?tag=madsk0f-20) | A plug cannot go on a 240V dryer outlet. Sense vibration instead. |
 | Dishwasher | Check the rating first, or use a vibration sensor | Many are hardwired, and heating elements draw a lot. |
@@ -54,9 +54,9 @@ Chatty power reports can flood a mesh. A good driver lets you report on a watt c
 
 ### Washer: Zooz ZEN15 Power Switch
 
-[Zooz ZEN15 Power Switch](https://www.amazon.com/dp/B07578W7KY/ref=nosim?tag=madsk0f-20)
+[Zooz ZEN15 Power Switch](https://www.getzooz.com/zooz-zen15-power-switch/)
 
-This is the monitor on my washer. It is bulky, but it is built for heavier loads and motors, and it reports power reliably over Z-Wave. It is the long-standing community favorite for this job for the same reason.
+Sold by Zooz, not on Amazon. This is the monitor on my washer. It is bulky, but it is built for heavier loads and motors, and it reports power reliably over Z-Wave. It is the long-standing community favorite for this job for the same reason.
 
 Read power only. Keep the relay on. Check the washer nameplate against the ZEN15's rating before you plug in.
 

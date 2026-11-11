@@ -6,7 +6,7 @@ date: 2025-11-29
 title: Automate outdoor lights at dusk
 description: Have outdoor lights come on at sunset and turn off at a sensible hour, so nobody has to remember the switch and the lights do not burn all night.
 keywords: outdoor lights automation, sunset lights, dusk lighting, exterior lighting, holiday lights, smart outdoor lights
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-11
 image: /assets/img/social/recipes/lighting/outdoor-night-lights.png
 compact: true
 faqs:
@@ -18,7 +18,7 @@ faqs:
     answer: A local hub may continue running the schedule, but the outdoor switch or plug must remain easy to control manually.
 products:
   - job: "Control outdoor plug-in lighting"
-    body: "[Minoston 800 Series outdoor Z-Wave plug](https://www.amazon.com/dp/B0B7MLX1ZC/ref=nosim?tag=madsk0f-20). Use only with an outdoor-rated fixture and receptacle."
+    body: "[Zooz ZEN05 Outdoor Smart Plug](https://www.amazon.com/dp/B0BHF6MPNK/ref=nosim?tag=madsk0f-20). On/off only, no dimming. IP65 weatherproof housing. Needs a Z-Wave hub. Use only with an outdoor-rated fixture and receptacle."
   - job: "Switch a fixed outdoor circuit"
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). Keep the physical paddle usable. Confirm the switch and installation suit the circuit."
 tags: [lighting, outdoor]
