@@ -3,7 +3,7 @@ layout: guide
 title: Starter house setup guide
 description: Set up your first smart home with a clear plan. Pick one hub, buy about 10 devices, and go room by room with recipes that keep switches working.
 date: 2026-10-25
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-01
 image: /assets/img/social/guides/starter-house-setup.png
 ---
 
