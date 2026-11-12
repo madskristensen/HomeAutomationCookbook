@@ -4,7 +4,7 @@ date: 2026-09-24
 title: Control lights with a wireless button or linked switch
 description: Control several lights from one button, remote, or smart switch, while every room keeps a manual control that guests and family understand.
 keywords: wireless light button, smart light remote, one switch controls multiple lights, linked smart switches, scene controller
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-12
 image: /assets/img/social/recipes/lighting/wireless-button-linked-lights.png
 compact: true
 faqs:
@@ -16,7 +16,7 @@ faqs:
     answer: Each light should still have a familiar local control. A linked control adds convenience; it should not become the only way to use a room.
 products:
   - job: "Provide a physical input"
-    body: "[SONOFF SNZB-01P Zigbee wireless button](https://www.amazon.com/dp/B0CL9JTMWF/ref=nosim?tag=madsk0f-20). One button, with single, double, and long press. Confirm the hub you already use reports the presses you plan to use.\n\nOn Z-Wave, [Zooz ZEN34 800LR Z-Wave Remote Switch](https://www.amazon.com/dp/B08TMWLY74/ref=nosim?tag=madsk0f-20). Two paddles with multi-tap, battery powered, no new wiring. Confirm each press shows up before you build scenes on it."
+    body: "[SONOFF SNZB-01P Zigbee wireless button](https://www.amazon.com/dp/B0CL9JTMWF/ref=nosim?tag=madsk0f-20). One button, with single, double, and long press. Confirm the hub you already use reports the presses you plan to use.\n\nOn Z-Wave, [Zooz ZEN34 800LR Z-Wave Remote Switch](https://www.thesmartesthouse.com/products/zooz-z-wave-plus-700-series-remote-switch-zen34-battery-powered?sca_ref=12757918.GPRWSTNoUrpgR). Two paddles with multi-tap, battery powered, no new wiring. Confirm each press shows up before you build scenes on it."
   - job: "Control fixed lighting"
     body: "A smart wall switch or dimmer that keeps its paddle working locally. See [recommended gear](/getting-started/device-guide.html#lighting-control) for switches I have used."
 tags: [lighting, buttons]

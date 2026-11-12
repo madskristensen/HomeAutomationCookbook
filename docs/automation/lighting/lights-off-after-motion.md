@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights off after motion stops
 description: Stop paying to light empty rooms. Turn lights off after motion stops, with a forgiving timeout that respects people sitting still and wall switches.
 keywords: motion sensor lights off, automatic light shutoff, occupancy detection, smart lighting automation, turn off lights automatically
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-12
 image: /assets/img/social/recipes/lighting/lights-off-after-motion.png
 compact: true
 faqs:
@@ -61,7 +61,7 @@ THEN turn off the light</div>
 
 {% include product-list.html %}
 
-For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY/ref=nosim?tag=madsk0f-20) instead. It is not my first choice when the fastest motion response is the job.
+For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.thesmartesthouse.com/products/zooz-z-wave-plus-q-sensor-zse11-motion-temp-humidity-light?sca_ref=12757918.GPRWSTNoUrpgR) instead. It is not my first choice when the fastest motion response is the job.
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 

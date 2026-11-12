@@ -5,7 +5,7 @@ date: 2025-11-29
 title: Fake barking dog alarm to scare off burglars
 description: Build a dog barking alarm with a motion sensor and speaker. A barking dog sound plays only while you are away, adding one more layer of security to an empty house.
 keywords: fake dog deterrent, dog barking security, motion triggered sound, intruder deterrent, smart home security
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-12
 image: /assets/img/social/recipes/security/fake-dog-deterrent.png
 compact: true
 faqs:
@@ -17,7 +17,7 @@ faqs:
     answer: Run it only in Away mode. You can further limit Away-mode playback to nighttime, but nighttime alone must never enable it while people are home.
 products:
   - job: "Detect fast entry motion"
-    body: "[Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB/ref=nosim?tag=madsk0f-20) for an indoor entry point, or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20) if mounted outside."
+    body: "[Aeotec SmartThings Motion Sensor](https://www.amazon.com/dp/B095TZTGNB/ref=nosim?tag=madsk0f-20) for an indoor entry point, or the [Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.thesmartesthouse.com/products/zooz-800-series-z-wave-long-range-outdoor-motion-sensor-zse70-800lr-motion-temp-lux?sca_ref=12757918.GPRWSTNoUrpgR) if mounted outside."
   - job: "Play the barking sound on a speaker"
     body: "Any speaker the platform can control works, for example a Sonos speaker, which is what I use. No specific model is required as long as it can play an audio file on command."
 tags: [security]
