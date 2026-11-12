@@ -4,7 +4,7 @@ layout: guide
 title: Best humidity sensors for shower fan automation
 description: Find a humidity sensor fast enough to start the bathroom fan when the shower runs and stop it once the room dries, working locally with your hub.
 date: 2026-10-25
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-12
 image: /assets/img/social/guides/best-humidity-sensors-shower-fan.png
 pdf_promo_card: true
 ---
@@ -21,10 +21,10 @@ Most "best humidity sensor" lists rate accuracy and app polish. For this job, re
 
 | Setup | Pick | Why |
 |---|---|---|
-| Z-Wave, want fast and tunable | [Zooz ZSE44 800LR Temperature/Humidity XS Sensor](https://www.amazon.com/dp/B0B3G9Z4LJ/ref=nosim?tag=madsk0f-20) | Small, battery powered, and humidity reporting is configurable. |
+| Z-Wave, want fast and tunable | [Zooz ZSE44 800LR Temperature/Humidity XS Sensor](https://www.thesmartesthouse.com/products/zooz-z-wave-plus-700-series-xs-temperature-humidity-sensor-zse44?sca_ref=12757918.GPRWSTNoUrpgR) | Small, battery powered, and humidity reporting is configurable. |
 | Zigbee, low cost | [THIRDREALITY Zigbee Temperature and Humidity Sensor Lite](https://www.amazon.com/dp/B0D2NVJTS3/ref=nosim?tag=madsk0f-20) | Simple and inexpensive. Good to test the idea in one bathroom. |
 | One device for motion, humidity, and light | [Aeotec TriSensor 8](https://www.amazon.com/dp/B0D47WR1S2/ref=nosim?tag=madsk0f-20) | The sensor I use for the humidity trigger in my shower fan recipe. |
-| Z-Wave multisensor with more readings | [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY/ref=nosim?tag=madsk0f-20) | Motion, humidity, temperature, and light in one place. |
+| Z-Wave multisensor with more readings | [Zooz ZSE11 800LR Q Sensor](https://www.thesmartesthouse.com/products/zooz-z-wave-plus-q-sensor-zse11-motion-temp-humidity-light?sca_ref=12757918.GPRWSTNoUrpgR) | Motion, humidity, temperature, and light in one place. |
 | No hub at all | A humidity-sensing fan wall switch | Purpose-built, no automation to maintain. |
 
 Amazon product links on this page are affiliate links, and I earn from qualifying purchases. See the [disclosure](/disclosure.html) for details.
@@ -53,7 +53,7 @@ Faster reporting uses more battery. A sensor that reports often and runs a year 
 
 ### Zooz ZSE44: the fast, tunable Z-Wave pick
 
-[Zooz ZSE44 800LR Temperature/Humidity XS Sensor](https://www.amazon.com/dp/B0B3G9Z4LJ/ref=nosim?tag=madsk0f-20)
+[Zooz ZSE44 800LR Temperature/Humidity XS Sensor](https://www.thesmartesthouse.com/products/zooz-z-wave-plus-700-series-xs-temperature-humidity-sensor-zse44?sca_ref=12757918.GPRWSTNoUrpgR)
 
 It is small, so it is easy to mount high on a bathroom wall. Its humidity reporting threshold is configurable, which is what this job needs. Hubitat community users who have tried many sensors for a shower fan often land on this one for the same reason.
 
@@ -71,7 +71,7 @@ This is the sensor I use for the humidity trigger in my [shower fan recipe](/aut
 
 ### Zooz ZSE11 Q Sensor: a Z-Wave multisensor alternative
 
-[Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY/ref=nosim?tag=madsk0f-20)
+[Zooz ZSE11 800LR Q Sensor](https://www.thesmartesthouse.com/products/zooz-z-wave-plus-q-sensor-zse11-motion-temp-humidity-light?sca_ref=12757918.GPRWSTNoUrpgR)
 
 Similar idea to the TriSensor on Z-Wave Long Range. It works well if you want one device per bathroom covering motion and humidity.
 

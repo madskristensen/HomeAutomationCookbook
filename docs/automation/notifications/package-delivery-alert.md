@@ -4,7 +4,7 @@ date: 2025-11-30
 title: Front door motion alert for package deliveries
 description: Get a quick heads-up when someone or something moves near the front door, using an outdoor motion sensor, so you can check for a package.
 keywords: package delivery alert, delivery notification, outdoor motion sensor, front porch sensor, entrance activity detection
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-12
 image: /assets/img/social/recipes/notifications/package-delivery-alert.png
 compact: true
 faqs:
@@ -16,7 +16,7 @@ faqs:
     answer: Yes, if it is mounted outside a covered porch or in an area exposed to weather. Standard indoor motion sensors are not designed for that exposure.
 products:
   - job: "Detect motion near the front entrance"
-    body: "[Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.amazon.com/dp/B0DCL43CS2/ref=nosim?tag=madsk0f-20). It has a Z-Wave Long Range radio. Confirm it is rated for the exposure it will face."
+    body: "[Zooz ZSE70 Outdoor/Indoor Motion Sensor](https://www.thesmartesthouse.com/products/zooz-800-series-z-wave-long-range-outdoor-motion-sensor-zse70-800lr-motion-temp-lux?sca_ref=12757918.GPRWSTNoUrpgR). It has a Z-Wave Long Range radio. Confirm it is rated for the exposure it will face."
 tags: [notifications, security]
 ---
 

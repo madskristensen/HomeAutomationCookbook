@@ -7,7 +7,7 @@ date: 2025-11-28
 title: Turn lights on with motion sensors
 description: Walk into a lit room without reaching for the switch. Turn lights on with motion while the wall switch keeps working for everyone in the house.
 keywords: motion sensor lights, automatic lights, smart home lighting, motion detection, home automation, smart lights
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-12
 image: /assets/img/social/recipes/lighting/lights-on-motion.png
 compact: true
 faqs:
@@ -61,7 +61,7 @@ THEN turn on the light</div>
 
 {% include product-list.html %}
 
-For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.amazon.com/dp/B09GDL6BGY/ref=nosim?tag=madsk0f-20) instead. It is not my first choice when the fastest motion response is the job.
+For a bathroom that needs humidity, temperature, and light readings too, use the [Zooz ZSE11 800LR Q Sensor](https://www.thesmartesthouse.com/products/zooz-z-wave-plus-q-sensor-zse11-motion-temp-humidity-light?sca_ref=12757918.GPRWSTNoUrpgR) instead. It is not my first choice when the fastest motion response is the job.
 
 See [recommended gear](/getting-started/device-guide.html#products-i-have-used) for the job-first checklist. Amazon product links on this page are affiliate links, and I earn from qualifying purchases. Product recommendations and the affiliate relationship are explained in the [disclosure](/disclosure.html).
 
