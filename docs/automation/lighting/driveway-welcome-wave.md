@@ -4,7 +4,7 @@ date: 2025-11-30
 title: Welcome arrivals with path lighting
 description: Get a lit path from the driveway to the door after dark, while the lock and the lights you control by hand are left alone.
 keywords: arrival lighting, welcome home lights, entry light automation, outdoor arrival lights, verified presence lighting
-last_modified_at: 2026-11-11
+last_modified_at: 2026-11-12
 image: /assets/img/social/recipes/lighting/driveway-welcome-wave.png
 compact: true
 faqs:
@@ -16,7 +16,7 @@ faqs:
     answer: No. Lighting is easy to reverse; access control is not. Keep keys, keypads, or a deliberate lock action separate from this recipe.
 products:
   - job: "Control plug-in exterior lighting"
-    body: "[Zooz ZEN05 Outdoor Smart Plug](https://www.amazon.com/dp/B0BHF6MPNK/ref=nosim?tag=madsk0f-20). On/off only, no dimming. IP65 weatherproof housing. Needs a Z-Wave hub. Use only with a suitable outdoor receptacle, enclosure, and lighting load."
+    body: "[Zooz ZEN05 Outdoor Smart Plug](https://www.thesmartesthouse.com/products/zooz-700-series-z-wave-plus-outdoor-smart-plug-zen05?sca_ref=12757918.GPRWSTNoUrpgR). On/off only, no dimming. IP65 weatherproof housing. Needs a Z-Wave hub. Use only with a suitable outdoor receptacle, enclosure, and lighting load."
   - job: "Switch a fixed entry light"
     body: "[Leviton DG15S Zigbee switch](https://www.amazon.com/dp/B000U39QL6/ref=nosim?tag=madsk0f-20). The wall paddle remains the normal control."
   - job: "Confirm entry-door activity"

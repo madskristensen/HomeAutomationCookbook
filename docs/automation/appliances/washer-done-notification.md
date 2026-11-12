@@ -4,7 +4,7 @@ date: 2025-11-28
 title: Get notified when the washer finishes
 description: Never forget wet laundry in the washer. Get one reliable alert when the cycle ends, based on the washer's power pattern, without cutting its power.
 keywords: washer finished alert, laundry notification, washer power monitoring, washing machine automation, washer done notification
-last_modified_at: 2026-11-11
+last_modified_at: 2026-11-12
 image: /assets/img/social/recipes/appliances/washer-done-notification.png
 compact: true
 faqs:
@@ -16,7 +16,7 @@ faqs:
     answer: No. Use the device only for monitoring and keep its relay on. Do not remotely interrupt a washer cycle.
 products:
   - job: "Observe washer power"
-    body: "[Zooz ZEN15 Power Switch](https://www.getzooz.com/zooz-zen15-power-switch/). This is the monitor I use on the washer. Sold by Zooz, not on Amazon. Read power only, keep the relay on, and check the washer nameplate against the switch rating before connecting it."
+    body: "[Zooz ZEN15 Power Switch](https://www.thesmartesthouse.com/products/zooz-z-wave-plus-power-switch-for-heavy-duty-appliances-zen15?sca_ref=12757918.GPRWSTNoUrpgR). This is the monitor I use on the washer. Sold by Zooz, not on Amazon. Read power only, keep the relay on, and check the washer nameplate against the switch rating before connecting it."
   - job: "Clear the waiting-laundry state"
     body: "A manual dashboard or phone action. A manual reset is better than an unreliable door sensor."
 tags: [appliances, laundry, notifications, power-monitoring]
