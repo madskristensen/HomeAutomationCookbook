@@ -6,7 +6,7 @@ date: 2025-11-28
 title: Turn lights on when a door opens
 description: Light closets, pantries, and utility rooms the moment the door opens, using a door sensor, while the regular wall switch still works.
 keywords: door sensor automation, contact sensor lights, automatic closet lights, door activated lighting, smart door sensor
-last_modified_at: 2026-11-01
+last_modified_at: 2026-11-12
 image: /assets/img/social/recipes/lighting/toggle-lights-door.png
 compact: true
 faqs:
@@ -158,6 +158,7 @@ It can when the hub and devices support local automation. Regardless, the physic
 - [Turn lights on when you walk in](/automation/lighting/lights-on-motion.html)
 - [Turn lights off after motion stops](/automation/lighting/lights-off-after-motion.html)
 - [Disable automations when door is closed](/automation/lighting/disable-on-door-close.html)
+- [Closet and pantry lights that turn on when the door opens](/articles/closet-light-turns-on-when-door-opens.html)
 - [Lighting automations](/automation/lighting/)
 - [Motion sensor placement guide](/articles/motion-sensor-placement.html)
 - [PIR vs mmWave presence sensors](/articles/pir-vs-mmwave-presence.html)
