@@ -20,6 +20,7 @@ PAGES = [
   ["docs/_articles/garage-door-left-open-sensor.md", "garage-door-left-open-sensor", "Buyer's guide", "sensors", true],
   ["docs/_articles/do-fake-barking-dog-alarms-work.md", "do-fake-barking-dog-alarms-work", "Security guide", "checklist", true],
   ["docs/_articles/sunrise-alarm-smart-bulbs.md", "sunrise-alarm-smart-bulbs", "Lighting guide", "checklist", true],
+  ["docs/_articles/closet-light-turns-on-when-door-opens.md", "closet-light-turns-on-when-door-opens", "Lighting guide", "checklist", true],
   ["docs/getting-started/starter-house-setup.md", "starter-house-setup", "Starter plan", "floorplan", true],
   ["docs/getting-started/index.md", "getting-started", "Getting started", "path", true],
   ["docs/getting-started/philosophy.md", "home-automation-philosophy", "Design principles", "balance", true],
