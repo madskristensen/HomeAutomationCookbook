@@ -1,19 +1,19 @@
 ---
 layout: guide
-title: "Home automation guide: how to start a smart home"
-description: A practical home automation guide. Start with one household problem, pick a platform you can maintain, test one device, and keep the wall switches working.
+title: "How to start home automation: a simple beginner plan"
+description: Start home automation by picking one hub, then one room or one problem. Add a sensor, build a simple rule you can undo, and keep the wall switches working.
 permalink: /getting-started/
 canonical_url: https://www.homeautomationcookbook.com/getting-started/
-last_modified_at: 2026-10-25
+last_modified_at: 2026-11-17
 image: /assets/img/social/guides/getting-started.png
 pdf_promo_card: true
 ---
 
-# Getting started with home automation
+# How to start home automation: a simple beginner plan
 
 {% include content-hero.html src="/assets/img/social/guides/getting-started.svg" alt="A path from one household problem to a small, maintainable home automation" %}
 
-Start with one repeated household problem. Do not start with a shopping list.
+To start home automation, pick one hub you can maintain. Start with one room or one household problem, then add a sensor. Build a simple rule you can watch and undo.
 
 The first automation should be easy to observe, safe to undo, and understandable to someone who did not build it.
 
