@@ -2,8 +2,8 @@
 cta_newsletter: "This recipe is one of the 10, along with the fake dog deterrent and the stove left on alert."
 layout: automation
 date: 2025-11-29
-title: "Garage door left open alarm: get a phone alert"
-description: Get a garage door open alert on your phone when it stays open too long, plus a bedtime reminder. Works with a simple left open sensor. Alerts only, closing stays manual.
+title: Garage door left open alarm and alerts
+description: Get a phone alert when the garage door is left open too long, plus a bedtime check. A simple open-door alarm that alerts only; closing stays manual.
 keywords: garage door open alert, garage door left open alarm, garage door notification, garage door left open, garage door sensor, garage door automation, garage door alert
 last_modified_at: 2026-11-11
 image: /assets/img/social/recipes/security/garage-door-notification.png
