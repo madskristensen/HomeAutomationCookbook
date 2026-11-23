@@ -5,12 +5,13 @@ redirect_from:
   - /tags/lighting.html
   - /automation/contact/index.html
   - /automation/motion/index.html
-title: "Lighting automation: recipes and first steps"
-description: Lighting automation made practical. Lights that follow motion, doors, sunset, and wake times, with good first automations and switches that still work.
+title: "Lighting automation: what it is and where to start"
+description: Lighting automation means lights that follow motion, doors, or the time of day. Start with one room and one job, and keep the wall switches working.
 permalink: /automation/lighting/
 canonical_url: https://www.homeautomationcookbook.com/automation/lighting/
+last_modified_at: 2026-11-23
 keywords: smart lighting automation, motion sensor lights, automatic lighting, door sensor lights, outdoor lights, night light automation
-heading: Lighting automation
+heading: "Lighting automation: what it is and where to start"
 ---
 
 ## Good first lighting automations
