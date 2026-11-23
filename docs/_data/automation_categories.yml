@@ -231,10 +231,13 @@ entertainment:
 lighting:
   heading: Lighting automation
   intro: >-
-    Lighting automation means lights that turn on and off for you based on motion, doors,
-    the time of day, or a button press. Done well, you stop hunting for switches and stop
-    checking whether empty rooms were left lit. Every recipe here keeps the familiar wall
-    switch working, so the lights still behave when the automation does not.
+    Lighting automation means lights that turn on and off for you, based on motion, doors,
+    the time of day, or a button. Start with one room and one job. Try
+    <a href="/automation/lighting/lights-on-motion.html">lights on with motion</a>
+    in a hallway, bathroom, or closet, then
+    <a href="/automation/lighting/lights-off-after-motion.html">lights off after the room is empty</a>.
+    A <a href="/automation/lighting/bathroom-night-light.html">bathroom night light</a>
+    is another easy first recipe. Every recipe here keeps the wall switch working.
   callout: >-
     Day and night brightness for motion lights is already in the
     [Setup notes for lights on motion](/automation/lighting/lights-on-motion.html#setup-notes):
