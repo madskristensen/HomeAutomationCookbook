@@ -1,8 +1,8 @@
 ---
 cta_category: notifications
 layout: guide
-title: Why smart devices go offline
-description: Get a sensor, plug, or bulb responding again. Check power, batteries, signal, and the hub in order before you replace anything.
+title: Why smart home devices keep going offline, and how to fix it
+description: Find out why a smart sensor, plug, or bulb keeps going offline and get it working again. Check power, batteries, signal, and the hub in order before replacing it.
 date: 2026-10-26
 last_modified_at: 2026-11-01
 image: /assets/img/social/guides/why-smart-devices-go-offline.png
