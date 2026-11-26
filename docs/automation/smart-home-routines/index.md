@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Smart home routines: morning, overnight, and away"
-description: Smart home routine ideas for mornings, overnight, leaving, arriving, and guests. Each one links a plain-English recipe with switches that still work.
+title: "Smart home routines: how to set up morning, overnight, away"
+description: How to set up smart home routines for mornings, overnight, leaving, arriving, and guests. Pick one moment, follow a plain recipe, and keep the switches working.
 permalink: /automation/smart-home-routines/
 canonical_url: https://www.homeautomationcookbook.com/automation/smart-home-routines/
 last_modified_at: 2026-10-27

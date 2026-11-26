@@ -1,8 +1,8 @@
 ---
 layout: automation
 date: 2025-11-28
-title: Start the vacuum when everyone leaves
-description: Come home to clean floors. Start the robot vacuum only once everyone has left and only during the day, using a presence signal you have tested.
+title: Robot vacuum that starts when you leave the house
+description: Have the robot vacuum clean automatically when you leave the house. It starts only once everyone is gone, only during the day, using a presence signal you tested.
 keywords: robot vacuum automation, auto start vacuum, vacuum when away, presence detection vacuum, away mode cleaning
 last_modified_at: 2026-10-05
 image: /assets/img/social/recipes/appliances/robot-vacuum-auto-start.png

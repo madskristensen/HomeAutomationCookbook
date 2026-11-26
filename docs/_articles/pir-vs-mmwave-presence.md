@@ -3,7 +3,7 @@ cta_category: lighting
 layout: guide
 redirect_from:
   - /getting-started/pir-vs-mmwave-presence.html
-title: PIR vs mmWave presence sensors
+title: "PIR vs mmWave sensors: which keeps lights on when you sit still"
 description: "PIR vs mmWave: learn which sensor keeps lights on while you sit still in bathrooms, offices, and halls, and when to combine both for fewer false offs."
 date: 2026-08-30
 last_modified_at: 2026-10-19

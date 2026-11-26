@@ -4,7 +4,7 @@ date: 2025-11-30
 title: Auto close a garage door safely after an alert
 description: Close the garage door safely. Get an alert first, keep people in control, and close unattended only with equipment built for it and entrapment protection.
 keywords: garage door left open, garage close alert, unattended garage closing, garage door safety, tilt sensor
-last_modified_at: 2026-10-27
+last_modified_at: 2026-11-26
 image: /assets/img/social/recipes/security/garage-auto-close.png
 compact: true
 faqs:
@@ -123,6 +123,7 @@ No. It reports door position only. The opener's approved obstruction and entrapm
 - [Garage door notification](/automation/security/garage-door-notification.html)
 - [Set away mode when everyone leaves](/automation/daily-routines/away-mode.html)
 - [Low-battery alerts](/automation/notifications/low-battery-alerts.html)
+- [Garage door auto close: when it is safe and how to set it up](/articles/is-it-safe-to-auto-close-a-garage-door.html)
 
 {% include page-navigation.html
   left_url="/automation/security/"
